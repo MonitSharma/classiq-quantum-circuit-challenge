@@ -201,3 +201,11 @@ also negative. Its best clearing schedule was depth 1035 / 899 CX, and its
 best retain-all schedule was depth 1337 / 1023 CX; both passed exhaustive
 verification. Do not spend further time on ordering without changing the
 underlying multi-output synthesis representation.
+
+The first genuinely joint alternative-pair compiler is now in
+`src/shared_alternative_pair.py`. It can find very short local shared blocks,
+but replacing the best local block (terms 0 and 1) in the complete pair oracle
+produced verified depth 821 / 770 CX, worse than the existing 779 / 736 pair
+baseline. This confirms that the next scheduler must optimize interactions
+between multiple shared groups and phase/CNOT boundaries, not just one local
+pair at a time.

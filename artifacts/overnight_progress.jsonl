@@ -2,3 +2,5 @@
 {"experiment":"shared_pair_1_4_manual","terms":[1,4],"result":"incomplete; common subtree retention exceeded available six-ancilla scratch schedule","verified":false}
 {"experiment":"shared_xag_term_order_sweep","candidate":"artifacts/xag_rank_order_True.qasm","depth":1035,"cx":899,"width":18,"sha256":"91df03fdff9f76d28fbc4e4faccecb2a8685c9e40f851541aa0c96ceb6e714a0","verified":true,"result":"negative; term ordering alone does not approach 531 baseline"}
 {"experiment":"shared_xag_retain_all_order_sweep","candidate":"artifacts/xag_rank_order_False.qasm","depth":1337,"cx":1023,"width":18,"sha256":"b9fd16415c9b677194ed8c72f870593c800fb6ddfebc1b2a2bd3ce61c201226e","verified":true,"result":"negative"}
+{"experiment":"joint_alternative_pair_local","terms":[0,1],"local_depth":136,"local_cx":136,"result":"promising local component; not a full oracle"}
+{"experiment":"joint_alternative_pair_full","candidate":"artifacts/pair_shared_0_1.qasm","depth":821,"cx":770,"width":18,"sha256":"a74a00cd0a2ff5638a51ec0eebc98b94a85208dbb34fc3134514997cb586cf6f","verified":true,"result":"negative versus 779-depth pair baseline"}

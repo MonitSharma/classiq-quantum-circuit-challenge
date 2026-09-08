@@ -27,6 +27,24 @@ passed exhaustive verification. Term ordering alone is therefore closed as a
 route to the 531 baseline; the next change must improve the nonlinear
 representation or its pebbling transitions.
 
+## Joint alternative-pair pebbling (September 8, 2026)
+
+`src/shared_alternative_pair.py` searches factorized phase forms for two roots
+jointly, pebbles the union of their nonlinear nodes once, applies both phase
+terms while the shared values are live, and then clears the union. On the
+optimized `artifacts/pair_terms.json` basis, several local pair blocks were
+dramatically shorter than independently synthesized pairs; the best observed
+local block was terms `(0,1)` at depth 136 / 136 CX.
+
+However, replacing those two terms inside the complete ten-term oracle and
+then globally rebasing produced the exact candidate
+`artifacts/pair_shared_0_1.qasm` at depth **821** / **770 CX**. Exhaustive
+verification passed with zero ancilla leakage. The current pair baseline
+remains 779 / 736, so local joint-pair depth is not predictive of full-oracle
+depth. The next useful extension is a multi-group scheduler that optimizes
+the ordering and shared phase/CNOT boundaries across all groups, rather than
+independent replacement of one pair.
+
 Numbers below are historical observations unless explicitly marked verified. Most experimental artifacts remain in `artifacts/` for investigation; their existence does not establish validity. See the handoff for the four trusted milestones and the compiler-initialization bug.
 
 ## Boolean decomposition and reversible logic
