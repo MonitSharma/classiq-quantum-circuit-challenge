@@ -21,6 +21,7 @@ No candidate beat this result. No circuit was submitted to the external challeng
 - Direct dirty-input ESOP/MCX pair compilation passed exhaustive verification but measured 2156 depth / 1346 CX / width 18.
 - Exact 4096-term Walsh phase polynomial with GraySynth measured 8168 depth / 4094 CX / width 12; negative.
 - QROM-tree radius oracle passed exhaustive verification but measured 777 depth / 606 CX / width 18; negative.
+- GraySynth section-size sweep (`1,2,3,4,6,12`) reproduced 8168 depth / 4094 CX for every setting; negative.
 - Shared delta-stream schedule: 2183 depth / 1649 CX; negative.
 - Shared XAG, joint pair sharing, retained-factor schedules, quadrant-rank compilation, and direct quadrant phase controls: all correct where accepted, but substantially worse than 531.
 - PyZX extraction: 2655 depth / 3022 CX; negative.

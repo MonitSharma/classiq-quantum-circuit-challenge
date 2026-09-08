@@ -756,6 +756,10 @@ indeed produces all **4096** nonzero Walsh coefficients. The ancilla-free
 diagnostic measured **8168 depth / 4094 CX / width 12**, confirming that
 parity-network synthesis does not remove the phase-complexity bottleneck.
 
+A bounded sweep of all supported GraySynth section sizes (`1, 2, 3, 4, 6,
+12`) gave the same **8168 depth / 4094 CX** after exact U3/CX serialization;
+the measurements are in `artifacts/phase_polynomial_aam_sections.json`.
+
 ### QROM-tree radius lookup: verified negative result
 
 The previously unbenchmarked `src/qrom_tree.py` was run as a complete
