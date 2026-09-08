@@ -58,7 +58,9 @@ phase verification, so it is not included in any score or assignment.
 internal predicates and 40 unique cached y predicates, with zero repeats on
 either side. That provides no immediate scalar-predicate sharing opportunity.
 The explicit vector assessment is in `artifacts/vector_xag_metrics.json`;
-scalar sharing savings are zero, so vector-XAG synthesis was not started.
+scalar sharing savings are zero. A shared formula-derived graph was also
+tested and was worse: 46 x nodes versus 42 independently cached nodes, and
+45 y nodes versus 40. Vector-XAG synthesis was therefore not started.
 This is recorded as a search-limit result, not an impossibility proof.
 
 ## Comparison and next experiment
