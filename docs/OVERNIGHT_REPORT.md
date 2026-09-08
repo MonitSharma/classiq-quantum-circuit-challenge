@@ -19,6 +19,7 @@ No candidate beat this result. No circuit was submitted to the external challeng
 - Pebble-friendly chain-XAG synthesis: 29/30 factors solved, but only 5/10, 4/10, and 5/10 complete pairs compiled for the three tested bases; partial depth sums were 771, 744, and 793.
 - An 80-step actual-cost GL(10,2) search found no basis improvement: best scores were 779/736, 795/754, and 803/751.
 - Direct dirty-input ESOP/MCX pair compilation passed exhaustive verification but measured 2156 depth / 1346 CX / width 18.
+- Exact 4096-term Walsh phase polynomial with GraySynth measured 8168 depth / 4094 CX / width 12; negative.
 - Shared delta-stream schedule: 2183 depth / 1649 CX; negative.
 - Shared XAG, joint pair sharing, retained-factor schedules, quadrant-rank compilation, and direct quadrant phase controls: all correct where accepted, but substantially worse than 531.
 - PyZX extraction: 2655 depth / 3022 CX; negative.

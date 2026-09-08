@@ -746,3 +746,12 @@ MCX blocks, applying CZ, and composing the exact inverse compute sequence.
 The resulting standalone `artifacts/dirty_esop_pair.qasm` passed all 4096
 basis inputs with zero ancilla leakage, but measured **2156 depth / 1346 CX /
 width 18**, so MCX cost dominates and the approach is closed.
+
+### Exact Walsh phase polynomial with GraySynth: verified negative diagnostic
+
+`src/phase_polynomial_aam.py` generated the exact Walsh expansion of the
+12-variable Boolean phase and synthesized its 4095 nonconstant parity terms
+with Qiskit's GraySynth implementation. The odd 1097-pixel parity result
+indeed produces all **4096** nonzero Walsh coefficients. The ancilla-free
+diagnostic measured **8168 depth / 4094 CX / width 12**, confirming that
+parity-network synthesis does not remove the phase-complexity bottleneck.
