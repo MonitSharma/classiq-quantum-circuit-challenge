@@ -2,7 +2,7 @@
 
 ## State at handoff
 
-Updated September 8, 2026. The user wants the top rank, and most recently requested Markdown files containing everything tried, including failures, so a different chat/agent can continue. This is a research/optimization workspace, not a finished submission.
+Updated September 8, 2026. The user wants the top rank, and most recently requested Markdown files containing everything tried, including failures, so a different chat/agent can continue. This is a research/optimization workspace, not a finished rank-1 submission.
 
 Best (superseded, see the second continuation section below): `artifacts/full_mux.qasm`, depth **536**, CX **1020**, width **18**, generator seed **94**. The exhaustive verifier completed successfully on all 4096 clean-ancilla input basis states: maximum numerical error 1.4816382783292104e-14, ancilla error 0, accumulated discarded-amplitude bound 2.7656819215066786e-14, peak sparse support 64. Its report is `artifacts/full_mux.exhaustive.json`. SHA-256:
 
@@ -10,7 +10,7 @@ Best (superseded, see the second continuation section below): `artifacts/full_mu
 
 This is exhaustive numerical checking, not a symbolic proof. Since all basis columns are checked with one shared global phase, it also checks the action on superpositions by linearity, subject to numerical tolerance.
 
-No challenge entry has been submitted. No current official score/rank exists for our artifact. No matching best-circuit QMOD has been packaged. Do not claim rank 1.
+No challenge entry has been submitted. No current official score/rank exists for our artifact. The packaged deliverables are in `artifacts/531/`: `full_mux_531.qasm` plus its matching exhaustive report and `full_mux_531.qmod`. The QMOD is the logical oracle model; it is not expected to synthesize back to the exact pytket-optimized QASM. Do not claim rank 1.
 
 ## Challenge and scoring
 
@@ -78,7 +78,7 @@ Verify report hashes before relying on any row. The best circuit reduces baselin
 7. A new BDD analysis found an ordinary reduced ordered BDD with about 91 nonterminal cofactor states under order `x0,x1,x5,x2,x3,x4,y5,y4,y3,y2,y0,y1`. Naive reversible OBDD realizations exceeded six ancillas, so use this only to extract a few shared cofactors or threshold predicates; do not materialize the full BDD without a workspace/reversibility plan. No QASM or checked-in BDD artifact exists yet.
 8. Global PyZX/pytket rewriting remains an optional bounded diagnostic, not the main strategy. Any result must preserve qubit ordering, compile to exact U3/CX, and pass exhaustive verification after extraction/rebasing.
 9. For every improvement, write a new artifact, exhaustively verify the serialized file, and update these docs with hash, depth, CX, and generator settings.
-10. Build a matching QMOD and a clear final notebook/source explanation. Existing QMODs do not correspond to the 536-depth circuit.
+10. Keep the packaged `artifacts/531/` QASM/QMOD pair and add a clear final notebook/source explanation if submission packaging requires it. Treat the QMOD as the logical model and the verified QASM as the scored implementation.
 11. Recheck official rules and leaderboard in Safari. Arrange submission only once deliverables are concrete and user-facing required fields/actions are known. No submission has happened.
 
 ## Safe reproduction
@@ -154,3 +154,36 @@ architecture built from 6-control uniformly controlled rotations has a hard
 384-layer floor and needs about 684 CX for load plus unload alone, which already
 exceeds the leader's 655 CX. The next agent should attack that primitive, not
 the surrounding structure.
+
+## Packaged depth-531 deliverables
+
+The merged branch is now on `main`. The exact packaged QASM is
+`artifacts/531/full_mux_531.qasm`, with depth **531**, **1,020 CX**, width 18,
+and SHA-256
+`8f7e2617cf1435ea76cc70688544b4b0e3a8b5082d82293f98777d90d5a3fda6`.
+`artifacts/531/full_mux_531.exhaustive.json` was generated from that exact
+path and checked all 4,096 clean-ancilla basis inputs; maximum numerical error
+was `5.26e-14`, ancilla error was zero, and peak sparse support was 64.
+
+`artifacts/531/full_mux_531.qmod` is the companion Classiq-level `qperm`
+description of the same logo phase oracle. It is a synthesis model, not a
+gate-for-gate serialization of the optimized QASM. No submission has been
+made and no rank is claimed.
+
+## Future path
+
+The 531 result is a useful submission-ready baseline, but it is not close to
+the historical leader at depth 291. The measurements point away from more
+seed tuning or global peephole rewriting: the current architecture pays three
+large six-input uniformly controlled rotation stages, and the load/unload
+alone consumes roughly 684 CX. A serious improvement needs a new loading
+primitive or a representation that shares/interleaves the load, phase, and
+unload work.
+
+Prioritize a compact reversible QROM/phase primitive with dirty-input
+semantics, then integrate it into the existing radius/left-shape decomposition.
+Every candidate must be emitted under a new filename, rebased to exact
+`u3`/`cx`, and exhaustively verified with `qubits_initially_zero=False` in all
+reusable-subcircuit transpilation. Keep the 531 package immutable as the
+fallback submission artifact. Recheck the live leaderboard and challenge
+submission fields before submitting.

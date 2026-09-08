@@ -13,7 +13,11 @@ Handoff updated September 8, 2026 (Asia/Singapore), second continuation. Start w
   and a rebase to exact `u3`/`cx`
 - Original notebook: [classiq-challenge-baseline (1).ipynb](classiq-challenge-baseline%20%281%29.ipynb)
 
-The exact verified QASM SHA-256 is `8f7e2617cf1435ea76cc70688544b4b0e3a8b5082d82293f98777d90d5a3fda6` (the depth-536 predecessor is `93857f2dac80456feaf9c97ac464ee382eb532d8efe87e3622689103223683f0`). Existing QMOD files describe earlier experiments; **there is not yet a matching submission-ready QMOD for this best circuit**.
+Packaged submission artifacts are in [artifacts/531](artifacts/531):
+`full_mux_531.qasm`, its matching exhaustive report, and the companion
+`full_mux_531.qmod` logical oracle model.
+
+The exact verified QASM SHA-256 is `8f7e2617cf1435ea76cc70688544b4b0e3a8b5082d82293f98777d90d5a3fda6` (the depth-536 predecessor is `93857f2dac80456feaf9c97ac464ee382eb532d8efe87e3622689103223683f0`). The matching logical QMOD is packaged at `artifacts/531/full_mux_531.qmod`; it is not expected to synthesize back to the exact optimized QASM.
 
 ## Verify locally
 
