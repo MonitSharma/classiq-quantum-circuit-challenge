@@ -67,6 +67,11 @@ tested and was worse: 46 x nodes versus 42 independently cached nodes, and
 45 y nodes versus 40. Vector-XAG synthesis was therefore not started.
 This is recorded as a search-limit result, not an impossibility proof.
 
+A global ten-term phase-edge-sharing probe reduced the expression to 12
+GF(2)-cancelled edges, but its shared formula graph required 91 nonlinear
+nodes and scored 1591/1094. The QASM is exhaustively verified and is worse
+than the 840/798 hybrid.
+
 ## Comparison and next experiment
 
 | architecture | depth | CX |

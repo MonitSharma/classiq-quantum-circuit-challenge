@@ -1,0 +1,13 @@
+{
+  "nodes": 91,
+  "phase_edges": 12,
+  "actions": 320,
+  "depth": 1591,
+  "cx": 1094,
+  "width": 18,
+  "compute_actions": 160,
+  "uncompute_actions": 160,
+  "phase_actions": 12,
+  "max_live_ancillas": 6,
+  "status": "global edge-sharing probe"
+}

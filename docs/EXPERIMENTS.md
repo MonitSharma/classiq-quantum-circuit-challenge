@@ -222,6 +222,8 @@ The historical `xag_affine.qasm` diagnostic was rechecked and rejected for a
 phase mismatch; it is not a valid candidate.
 The shared formula-graph vector probe was also negative: 46 x and 45 y nodes,
 versus 42 and 40 in the independent cached graphs.
+The global ten-term phase-edge-sharing probe was also verified but scored
+1591/1094 with 91 nonlinear nodes, so it does not improve the hybrid.
 
 SDK login completed and native synthesis worked. These trials were real synthesis runs, not merely proposed code.
 
