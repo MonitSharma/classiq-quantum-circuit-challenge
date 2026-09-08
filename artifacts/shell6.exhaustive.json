@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/.claude/worktrees/classiq-quantum-challenge-a40f1f/artifacts/shell6.qasm",
+  "sha256": "2392f057a77fec8441e24366e8805f54ad8d700213536c41ecdf1bb041cc1517",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 615,
+  "cx_count": 1182,
+  "max_error": 1.632631937404121e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 7.243434145211836e-14,
+  "peak_sparse_support": 2048,
+  "elapsed_seconds": 247.71488094329834,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

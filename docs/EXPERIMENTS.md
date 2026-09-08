@@ -434,3 +434,115 @@ target.
 `verify.py` uses Qiskit Aer on random dense complex superpositions over all coordinates, compares the full output including ancillas, and maintains a shared global phase across tests. This is an independent simulation path, but probabilistic. It has now also passed on the current 536-depth best with five random dense states.
 
 A phase-only truth-table check that ignores relative phases or dirty ancillas is insufficient. Always verify the exact exported standalone circuit, not just its high-level Boolean formula or its behavior on a uniform input.
+
+## Session of September 8, 2026 (second continuation): bilinear-rank analysis
+
+### New structural facts about the target function
+
+Let `F[y][x] = logo(x,y)`.
+
+- `F` has exactly **11 distinct rows** and **11 distinct columns**, and its
+  **GF(2) rank is 10**. Script: analysis reproduced by transforming `MASK` in
+  `src/search.py`; the rank is computed by GF(2) elimination over the 64 row
+  vectors.
+- A rank-10 bilinear decomposition is explicit and geometric:
+  `f = sum_k u_k(x) v_k(y)` with the `v_k` the nested y-intervals
+  `G1..G5 = [17,21],[15,23],[13,25],[12,26],[11,27]` (D2 thermometer),
+  `H1..H4 = [39,43],[37,45],[36,46],[35,47]` (D1 thermometer) and
+  `K = [29,53]` (square rows); the `u_k` are the matching x annuli.
+- The 12-variable ANF of `f` has 886 terms (degrees 2..12), so direct
+  multi-controlled-Z expansion is hopeless.
+- **No Walsh coefficient of the phase function can ever be cancelled.** For a
+  parity phase term `S`, `4096 * f_hat(S) = sum_z f(z) chi_S(z)`, which is
+  congruent mod 2 to `|f| = 1097`, an odd number. Adding any integer multiple of
+  `2*pi` changes the coefficient by an even amount, so every one of the 4096
+  coefficients stays nonzero. An ancilla-free phase-polynomial oracle therefore
+  needs all 4096 parity terms; ancillas are mathematically required, not merely
+  convenient.
+
+### Why 6 clean ancillas are enough in principle
+
+A "load y features / phase from x / unload" round with `m` ancillas realises
+phase terms that are **linear in the ancillas**, hence rank at most `m`. Rank 10
+with 6 ancillas looks impossible, but a y-conditioned reversible transform of
+the x register doubles the reachable rank to `2m = 12`, because each stored bit
+then carries one x function per band.
+
+Such a transform exists and is cheap. Let `tau` flip `x0..x4` when
+`x5 AND y5`. On `x5 = 1` it is the reflection `x -> 95 - x`, which maps the D1
+centre 55 onto the D2 centre 40, so both disks share one centre and one annulus
+family; on `x5 = 0` it is the identity, so the square's x range `[2,26]` is
+pointwise fixed and the square term needs no band split.
+
+### `src/shell6.py` — comparator-free six-shell oracle (verified negative result)
+
+Ancillas hold six y features, all unions of two intervals:
+
+| wire | y feature | x table applied in reflected coordinates |
+|---|---|---|
+| 12 | `[11,27] u [35,47]` | `[38,42]` |
+| 13 | `[12,26] u [36,46]` | `{36,37,43,44}` |
+| 14 | `[13,25] u [37,45]` | `{35,45}` |
+| 15 | `[13,25] u [39,43]` | `{34,46}` |
+| 16 | `[29,53]` | `[2,26]` |
+| 17 | `[39,43]` | `[27,31] u [47,63]` (bar image) |
+
+The classical identity was checked over all 4096 points with zero mismatches
+before any circuit was built. The six x tables partition every x except
+`{0,1,32,33}` (exactly the states with `x1=x2=x3=x4=0`); the missing `-i` factor
+from `RZ(pi)` is restored by one negated-control `MCP(-pi/2)`, so the leftover
+phase stays global. The radius-7 and radius-8 shells do not fit into six
+ancillas and are supplied by two `pair_circuit` terms,
+`{33,47} x [15,23]` and `{32,48} x [17,21]`.
+
+Measured, per stage: lookup 128 depth / 342 CX, phase 128 / 302, `tau` 27 each
+way, `MCP` fix 33, corrections 97 and 71. Best over seeds 0..3 was
+**depth 615, CX 1182, width 18** (`artifacts/shell6.qasm`, seed 0). It passed
+exhaustive verification on all 4096 inputs with zero ancilla leakage, maximum
+error 1.63e-14, SHA
+`2392f057a77fec8441e24366e8805f54ad8d700213536c41ecdf1bb041cc1517`
+(`artifacts/shell6.exhaustive.json`), so the decomposition is confirmed correct.
+It is, however,
+worse than the depth-536 `full_mux` baseline: removing the Cuccaro comparator
+saves less than the two pair corrections plus `tau` cost. The architecture is
+recorded because it is comparator-free and is the natural host for a cheaper
+loading primitive, not because it is competitive as built.
+
+### The 384-layer barrier (the main conclusion)
+
+Every architecture in this family pays `3 x 128` layers: load, phase, unload.
+The 128 is not an artefact of the current code.
+
+- A UCR over 6 controls puts 64 rotations and 64 CNOTs on one target wire, so
+  that wire has 128 operations and the stage cannot be shallower, however many
+  outputs run in parallel.
+- Skipping zero Walsh angles cannot help, because the stage depth is the maximum
+  over its outputs. In the `full_mux` load, the Walsh supports are
+  `R0 = 64, R1 = 47, R2 = 40, A = 64, B = 64, V = 40`; in the phase stage
+  `S = 64, Bx = 40, O = 64`.
+- Re-basing does not help either. Ancilla features may be replaced by any
+  invertible GF(2) combination (a depth-few CNOT network converts back), but a
+  greedy search over all 63 combinations of `R0,R1,R2,A,B,V` shows the
+  combinations with Walsh support below 64 span only a 5-dimensional subspace,
+  so **every basis contains at least one Walsh-dense feature**. The same search
+  over the `shell6` features leaves the maximum at 64.
+- Classical loading is not cheaper here. A shared XAG for the six `full_mux`
+  features needs 44 AND nodes (45 for the `shell6` features); at roughly 6
+  layers per relative-phase Toffoli and the limited parallelism available with
+  no spare scratch, that is about 130 layers, i.e. no better than the UCR, which
+  is consistent with the earlier XAG attempts.
+
+Load plus unload alone is about 684 CX, which already exceeds the leader's
+reported 655 CX. Together with the 384-layer floor this is strong evidence that
+**the sub-300 leaders are not using 6-control uniformly controlled rotations at
+all.** Any further work in this workspace should target that primitive rather
+than the surrounding structure.
+
+### Global rewriting: bounded diagnostic completed
+
+pytket 2.18.1 was applied to `artifacts/full_mux.qasm` and rebased to exact
+`u3`/`cx`. `FullPeepholeOptimise` and `CliffordSimp` both give depth 531 with CX
+unchanged at 1020; `KAKDecomposition` gives 536. This closes the open question
+in `CURRENT_DESIGN.md`: global rewriting recovers about 1 percent and cannot
+approach the leader range, exactly as the 403-layer per-qubit serialisation
+bound predicted.

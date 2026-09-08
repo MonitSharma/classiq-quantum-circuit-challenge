@@ -4,7 +4,7 @@
 
 Updated September 8, 2026. The user wants the top rank, and most recently requested Markdown files containing everything tried, including failures, so a different chat/agent can continue. This is a research/optimization workspace, not a finished submission.
 
-Best: `artifacts/full_mux.qasm`, depth **536**, CX **1020**, width **18**, generator seed **94**. The exhaustive verifier completed successfully on all 4096 clean-ancilla input basis states: maximum numerical error 1.4816382783292104e-14, ancilla error 0, accumulated discarded-amplitude bound 2.7656819215066786e-14, peak sparse support 64. Its report is `artifacts/full_mux.exhaustive.json`. SHA-256:
+Best (superseded, see the second continuation section below): `artifacts/full_mux.qasm`, depth **536**, CX **1020**, width **18**, generator seed **94**. The exhaustive verifier completed successfully on all 4096 clean-ancilla input basis states: maximum numerical error 1.4816382783292104e-14, ancilla error 0, accumulated discarded-amplitude bound 2.7656819215066786e-14, peak sparse support 64. Its report is `artifacts/full_mux.exhaustive.json`. SHA-256:
 
 `93857f2dac80456feaf9c97ac464ee382eb532d8efe87e3622689103223683f0`
 
@@ -129,3 +129,28 @@ independent high-control phase cube, so removing arithmetic created a much
 larger unshared phase network. Do not treat direct threshold-conditioned phase
 cube enumeration as viable. A future attempt would need a shared shell/UCR or
 reusable folded-distance predicate before this branch is worth continuing.
+
+## Second continuation result (September 8, 2026)
+
+Leaderboard re-checked on the challenge page the same day: rank 1 Mateusz P.
+depth 291 / CX 655, rank 2 Dean B. 293 / 527, rank 5 Tushar P. 327 / 536, rank
+10 Adithya S. 395 / 514, 53 entries in total. Deadline September 30, 2026.
+Still no submission from this workspace.
+
+New verified best: `artifacts/tket_FullPeephole.qasm`, **depth 531, CX 1020,
+width 18**, SHA `8f7e2617cf1435ea76cc70688544b4b0e3a8b5082d82293f98777d90d5a3fda6`,
+report `artifacts/tket_FullPeephole.exhaustive.json`, all 4096 basis inputs,
+maximum error 5.26e-14, ancilla error 0. It is `artifacts/full_mux.qasm` after
+pytket `FullPeepholeOptimise` and a rebase to exact `u3`/`cx`; the depth-536
+predecessor remains verified and unchanged. This is a 1 percent gain and closes
+the global-rewriting question rather than opening a path.
+
+`src/shell6.py` / `artifacts/shell6.qasm` is a new comparator-free architecture
+built on a rank-10 bilinear decomposition plus an `x5 AND y5` conditional
+reflection. It scored depth 615 / CX 1182, i.e. worse than the baseline. See
+the September 8 second-continuation section of `docs/EXPERIMENTS.md` for the
+full analysis, including the argument that any load / phase / unload
+architecture built from 6-control uniformly controlled rotations has a hard
+384-layer floor and needs about 684 CX for load plus unload alone, which already
+exceeds the leader's 655 CX. The next agent should attack that primitive, not
+the surrounding structure.
