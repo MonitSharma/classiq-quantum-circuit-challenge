@@ -191,6 +191,17 @@ CX / width 18**, so it is correct but far worse than the protected 531-depth
 best. The bottleneck is per-edge recomputation. See
 `docs/PHASE_PEBBLE_REPORT.md` for the full result and next path.
 
+## Phase-edge retention search
+
+The pooled retention compiler in `src/phase_retention.py` completed the
+required greedy, beam-64/256/1024, and term-6/term-7 local-order searches.
+Term 7 improved from 728/683 to **202/223** depth/CX and term 6 from 563/502
+to **186/182**. The complete ten-term retained oracle, after 100 term-order
+permutations, was exhaustively verified at **1818/2070/18** (depth/CX/width).
+It remains above the protected 531-depth result; repeated affine phase
+rebasing and lack of cross-term XAG sharing are the next bottlenecks. Details
+are in `docs/PHASE_RETENTION_REPORT.md`.
+
 SDK login completed and native synthesis worked. These trials were real synthesis runs, not merely proposed code.
 
 - `classiq_search.py`: high-level QNum bitmask/formula expressions produced excessive width (observed 67 or 153), unsuitable for 18-qubit constraint.

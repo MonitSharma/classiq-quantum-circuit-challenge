@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/phase_retention_rank_mc_ordered.qasm",
+  "sha256": "3f69892a53237a36ea971cd77ca4ca14cce79f732aeb9e8bbf9d292c1a26cf2b",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 1818,
+  "cx_count": 2070,
+  "max_error": 6.686031847489553e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.2289056304781312e-13,
+  "peak_sparse_support": 1024,
+  "elapsed_seconds": 9.030654907226562,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}
