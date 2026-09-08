@@ -203,12 +203,13 @@ verification. Do not spend further time on ordering without changing the
 underlying multi-output synthesis representation.
 
 The first genuinely joint alternative-pair compiler is now in
-`src/shared_alternative_pair.py`. It can find very short local shared blocks,
-but replacing the best local block (terms 0 and 1) in the complete pair oracle
-produced verified depth 821 / 770 CX, worse than the existing 779 / 736 pair
-baseline. This confirms that the next scheduler must optimize interactions
-between multiple shared groups and phase/CNOT boundaries, not just one local
-pair at a time.
+`src/shared_alternative_pair.py`. On the optimized pair basis, its best local
+block for terms 0 and 1 was depth 136 / 136 CX, already worse than the
+independent two-term block at depth 91 / 102 CX. Replacing it in the complete
+pair oracle produced verified depth 821 / 770 CX, worse than the existing
+779 / 736 pair baseline. This local shared-pebbling construction is therefore
+closed; any future scheduler must change the global phase representation rather
+than merely retain common subtrees.
 
 Combining the two best local groups `(0,1)` and `(6,8)` was also tested. The
 full oracle scored verified depth 865 / 827 CX, so independently optimized

@@ -32,9 +32,9 @@ representation or its pebbling transitions.
 `src/shared_alternative_pair.py` searches factorized phase forms for two roots
 jointly, pebbles the union of their nonlinear nodes once, applies both phase
 terms while the shared values are live, and then clears the union. On the
-optimized `artifacts/pair_terms.json` basis, several local pair blocks were
-dramatically shorter than independently synthesized pairs; the best observed
-local block was terms `(0,1)` at depth 136 / 136 CX.
+optimized `artifacts/pair_terms.json` basis, the best observed local block was
+terms `(0,1)` at depth 136 / 136 CX, which is already worse than independently
+composing those two terms at depth 91 / 102 CX.
 
 However, replacing those two terms inside the complete ten-term oracle and
 then globally rebasing produced the exact candidate
