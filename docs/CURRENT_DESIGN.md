@@ -56,6 +56,61 @@ The left shapes and the split disk representation avoid unwanted XOR overlap. Th
 
 The lookup, left-phase lookup, and inverse lookup each cost roughly 128 depth. The comparator, guarded phase, folding, and final edge correction account for the rest. This explains why seed tuning alone may not reach below 291.
 
+The exported QASM makes this bottleneck more concrete. Counting all operations
+that touch each clean ancilla gives q15=403, q16=373, q17=337, q12=301,
+q13=261, and q14=236. Since operations on the same qubit serialize, the
+current gate multiset has a 403-layer per-qubit lower bound. This is not a
+lower bound on every possible circuit for the predicate: a new architecture may
+remove those operations. It is, however, strong evidence that modest gate
+reordering, seed changes, or local compiler cleanup cannot bridge the gap to a
+leaderboard depth around 291.
+
 Global circuit rewriting may cancel gates across stage boundaries, but can also increase depth or produce dense intermediate states that are expensive to verify. Compare final U3/CX depth, not just T count, abstract gate count, or a library's native gate depth.
+
+The strategic consequence is to prioritize architectural changes that reduce or
+share the three lookup/phase/uncompute stages. The row/column class decoder and
+the second-iteration mixed-support LUT decomposition are not primary directions:
+the former was empirically too deep, and the latter exhausted its structured
+support families while unrestricted SAT searches became unresolved before a
+quantum candidate existed. Global PyZX/pytket rewriting remains worth a bounded
+diagnostic, but it should not be expected to transform the current gate multiset
+from depth 536 to the leader range by reordering alone.
+
+A separate classical analysis found an ordinary reduced ordered BDD with about
+91 nonterminal cofactor states under variable order
+`x0,x1,x5,x2,x3,x4,y5,y4,y3,y2,y0,y1`. This suggests that some predicates may be
+shared across the three lookup stages. However, naive reversible OBDD
+realizations exceeded the six clean ancillas, so the actionable interpretation
+is to mine the BDD for a small number of reusable cofactors rather than to
+implement the full diagram. This is currently an analysis lead, not a verified
+quantum construction.
+
+The next concrete architectural hypothesis comes from the radius lookup. `y5`
+separates the D2 and D1 nonzero disk bands, so each radius bit can be written as
+`h0(y0..y4) XOR (y5 AND Delta_h(y0..y4))`. This replaces one six-control UCR
+table by two five-input tables plus a y5-controlled selection. For the three
+radius bits, the six tables could be loaded in parallel, potentially reducing
+the UCR portion from about 128 to about 64 layers.
+
+This is not yet a drop-in replacement: the six tables consume all six clean
+ancillas as two three-bit banks, while the existing design uses those same wires
+for the six simultaneous features `R0,R1,R2,A,B,V`. The Delta bank must be
+uncomputed before reuse, or the radius and left-shape feature groups must be
+sequenced. The first implementation should therefore measure an isolated
+radius load/select/unload circuit before changing the verified baseline.
+
+A stronger version should also replace the binary radius representation. The
+actual radius set is `{0,2,4,5,6,7}`, so use threshold/parity flags
+`V=[r>0]`, `L=[r>=4]`, `T=[r>=6]`, and `P=[r odd]`. After folding, the five
+possible distance classes use these flags as follows: `d<=2` uses V,
+`d in {3,4}` uses L, `d=5` uses `T OR P`, `d=6` uses T, and `d=7` uses
+`T AND P`. This may eliminate the Cuccaro-style comparator rather than merely
+shortening its input lookup.
+
+The bar lookup is also redundant in this representation: direct evaluation
+confirms `B = y5 AND T` for every y. A candidate can therefore form B
+transiently and avoid treating `R0,R1,R2,A,B,V` as six independent stored
+outputs. The phase implementation must still be synthesized and exhaustively
+verified; the threshold identities alone do not establish a depth improvement.
 
 Changing relative-phase components or helpers can invalidate an otherwise correct classical computation. Keep arbitrary input semantics in every compiler call, restore all temporary values before inverse lookup, and verify each exact exported circuit. No symbolic optimization should bypass numerical verification.

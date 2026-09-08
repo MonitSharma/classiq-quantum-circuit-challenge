@@ -210,9 +210,175 @@ The fixed-support sweep is reproducible with `src/search_lut_supports.py
 `--joint --k 4` or `--joint --k 5` and accepts the CEGAR batch/round/time
 parameters.
 
+## Second-iteration conclusion and architectural decision (September 8, 2026)
+
+The mixed-support LUT work should be treated as a completed negative direction,
+not as an invitation to run a larger generic Boolean-decomposition search. The
+structured support family was exhausted without a model, while the unrestricted
+Z3/PySAT formulations became computationally unresolved before producing a
+quantum candidate. This is not a proof that no arbitrary LUT factorization
+exists; it is strong enough evidence that extending the same SAT formulation is
+poorly aligned with the optimization objective and should not be the primary
+next step.
+
+The current exported baseline was also inspected directly, rather than only
+through `src/full_mux.py`. `artifacts/full_mux.qasm` is depth 536 with 1,020
+CX gates. Counting every serialized QASM operation touching each clean ancilla
+gives q15=403, q16=373, q17=337, q12=301, q13=261, and q14=236. Because
+operations sharing one qubit cannot occupy the same circuit layer, the current
+gate multiset has a per-qubit serialization lower bound of 403 layers. Thus a
+depth near 291 cannot come from merely reordering this work or making small
+compiler cancellations; it requires removing or replacing a substantial amount
+of ancilla-mediated computation. This does not prove that a sufficiently
+aggressive global rewrite could never remove enough gates, but it shows why
+PyZX, pytket, Qiskit seed changes, or local gate ordering should be treated as
+secondary cleanup experiments rather than the main route from 536 to the
+leaderboard range.
+
+Independent predicate checks point in the same direction:
+
+- The signed global Walsh spectrum has all 4,096 coefficients nonzero.
+- The Boolean ANF has 886 nonzero monomials and reaches degree 12.
+- The 64x64 truth-mask rank is 10 over GF(2), but the existing rank approach
+  already demonstrated that algebraic rank does not translate into a cheap
+  reversible schedule.
+- Row/column class compression is experimentally rejected: the best class
+  artifact remained depth 4,079, and the transposed layout was worse.
+
+The resulting decision is to stop treating direct Walsh/parity synthesis,
+plain rank factorization, row/column class decoding, and generic independent
+mixed-LUT decomposition as the primary directions. Future work should target a
+new architecture that reduces the three large lookup/phase/uncompute stages or
+shares their ancilla work more fundamentally. Global rewriting remains useful
+only as a bounded follow-up after an architectural change, with exact U3/CX
+serialization and exhaustive verification preserved.
+
+## Structured five-input radius lookup (September 8, 2026; next architectural hypothesis)
+
+Inspection of `src/radius.py` exposed a more targeted opportunity than a generic
+Boolean decomposition. The top y bit, `y5`, separates the two nonzero disk
+bands: the D2 rows occur in the lower `y5=0` band and the D1 rows in the upper
+`y5=1` band. It is not by itself a complete disk-membership flag, because many
+rows in each half have radius zero, but it is an exact family selector whenever
+the disk radius is nonzero.
+
+For any radius feature `h(y5,y0..y4)`, Shannon decomposition gives
+
+`h = h0(y0..y4) XOR (y5 AND Delta_h(y0..y4))`,
+
+where `Delta_h = h0 XOR h1`. Both `h0` and `Delta_h` are five-input Boolean
+tables. A five-control uniformly controlled rotation has 32 table positions
+instead of 64, so its Gray/UCR portion is expected to be about half the depth
+of the current six-control implementation (roughly 64 rather than 128 layers
+before selection and compiler effects).
+
+For the three radius bits, six five-input tables can be loaded in parallel:
+`h0,0`, `h0,1`, `h0,2` and `Delta_0`, `Delta_1`, `Delta_2`. The selected radius
+could then be formed with three y5-controlled toggles. This is a concrete,
+predicate-specific optimization hypothesis and has not appeared in the earlier
+experiment history.
+
+There is an important six-ancilla constraint. The six-table construction uses
+three ancillas for the h0 bank and three for the Delta bank, while `full_mux`
+normally needs all six clean ancillas simultaneously for `R0,R1,R2,A,B,V`.
+The Delta bank must therefore be uncomputed before those wires are reused, or
+the radius and left-shape feature groups must be scheduled sequentially. The
+selection toggles also share `y5`, so their cost is small but not literally
+zero-depth. A successful implementation must compare the added scheduling and
+uncompute depth against the savings from the shorter UCRs, preserve arbitrary
+input semantics, and exhaustively verify a new serialized QASM.
+
+This is now the preferred next implementation experiment because it attacks the
+dominant lookup architecture using known geometry, without assuming an
+unverified global decomposition. The first prototype should target the radius
+load/select/unload subcircuit in isolation, then test whether the saved ancilla
+and stage structure can be integrated with the A/B/V left-shape lookup.
+
+## Threshold radius encoding and comparator removal (September 8, 2026; strongest current hypothesis)
+
+Merely replacing a six-control radius lookup by a five-input Shannon split would
+save only one lookup's compute/uncompute cost, leaving an estimated depth near
+408. The more important opportunity is to stop storing the radius as a binary
+integer and remove the general-purpose reversible comparator that consumes it.
+
+The radius values actually used by the disk construction are only
+`{0,2,4,5,6,7}`; radius 8 is handled by the existing special correction. A
+useful representation is:
+
+| r | V=[r>0] | L=[r>=4] | T=[r>=6] | P=[r odd] |
+|---:|---:|---:|---:|---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 2 | 1 | 0 | 0 | 0 |
+| 4 | 1 | 1 | 0 | 0 |
+| 5 | 1 | 1 | 0 | 1 |
+| 6 | 1 | 1 | 1 | 0 |
+| 7 | 1 | 1 | 1 | 1 |
+
+After the existing x folding, classify the folded distance `d` by value. The
+predicate `d <= r` can then be expressed using the threshold features:
+
+- `d <= 2` uses `V`;
+- `d in {3,4}` uses `L`;
+- `d = 5` uses `T OR P`;
+- `d = 6` uses `T`;
+- `d = 7` uses `T AND P`.
+
+This could replace the three-step Cuccaro-style binary comparator with a small
+set of disjoint phase conditions over the folded-distance bits and `V,L,T,P`.
+It is a much more targeted use of the geometry than computing and comparing an
+arbitrary binary radius. The exact cost is still unknown: the five conditions
+must be synthesized with valid dirty-workspace semantics, and their relative
+phase/uncompute behavior must be checked. Removing the comparator does not
+remove the folding, equality guard, radius-eight correction, or all associated
+phase-control cost.
+
+There is also an exact output redundancy. Direct evaluation of `src/radius.py`
+confirms that the bar flag satisfies `B = y5 AND T` for all 64 y values. The
+current six loaded features `R0,R1,R2,A,B,V` therefore need not remain six
+independent stored variables. A future representation could load `A,V,L,T,P`
+and form the bar condition transiently from `y5` and `T`, potentially freeing a
+clean wire for selection or phase workspace. Likewise, `V` is the OR of the
+binary radius bits, although recomputing that OR is not automatically cheaper
+than loading `V` directly.
+
+The design principle is to optimize the representation for the consuming phase
+operations, not for semantic neatness. This threshold encoding, combined with
+the five-input y5 split, is the strongest current architectural experiment.
+The first prototype should compare complete serialized U3/CX depth and CX
+count against `full_mux`, not just the abstract deletion of the comparator.
+
+## BDD structure (September 8, 2026; analysis, not yet a circuit)
+
+An exhaustive ordinary-variable-order search found a surprisingly small reduced
+ordered binary decision diagram for the complete 12-bit predicate. The reported
+order is
+
+`x0,x1,x5,x2,x3,x4,y5,y4,y3,y2,y0,y1`
+
+with approximately 91 nonterminal cofactor states. The level widths were
+reported as approximately `2,4,7,11,15,10,11,14,10,4,2`, which indicates
+substantial classical sharing under this order. This is a useful new structural
+signal: the predicate has a compact decision representation even though its
+Walsh spectrum and ANF are dense.
+
+The result does not directly imply a compact reversible oracle. A straightforward
+reversible OBDD must retain enough live branch/cofactor information to uncompute
+the path, and the tested realizations exceeded the six clean-ancilla workspace.
+Random variable-order searches did not find a naive reversible OBDD that fits
+the workspace. No QASM, exhaustive-verification report, or checked-in BDD
+generator is currently associated with this result, so the state count and
+widths should be treated as an analysis finding rather than a verified circuit
+milestone.
+
+The correct follow-up is selective extraction, not full OBDD materialization:
+look for a few high-sharing BDD cofactors or threshold predicates that can be
+computed into existing ancillas and reused across the lookup/phase/uncompute
+stages. BDDs should therefore remain a source of candidate shared intermediates,
+but not the next primary implementation architecture.
+
 ## Ideas considered but not implemented or validated
 
-- PyZX/pytket global simplification of compute/phase/uncompute: packages installed; next concrete experiment.
+- PyZX/pytket global simplification of compute/phase/uncompute: packages installed; optional bounded diagnostic after an architectural change, not the primary search direction.
 - Fold/translate y before lookup to lower control count: likely savings compete with constant adders, region guards, and exceptional rows. No tested win.
 - Encode row classes and column thresholds into three ancillas each, then compare: possible parallel lookups, unresolved guard complexity.
 - Align disks with a conditional high-x transformation involving y5*x5 while preserving left shapes: only a hypothesis.
