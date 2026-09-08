@@ -228,3 +228,10 @@ the mathematics but rejects naive quadrant compilation as an optimization path.
 A specialized five-low-bit implementation with direct selector phase controls
 was also corrected and verified as `artifacts/quadrant_phase.qasm`, depth
 1394 / 1054 CX; it is likewise not competitive.
+
+A native Classiq model for the whole rank-factor oracle was generated as
+`artifacts/rank_formula_whole.qmod` using `experiments/rank_formula_whole.py`.
+Synthesis was attempted but stopped before the API task because the local
+macOS keychain returned `KeyringError: (-50, 'Unknown Error')`. No new login
+was attempted and no QASM was produced from this model; retry only after the
+user repairs or authorizes Classiq authentication.
