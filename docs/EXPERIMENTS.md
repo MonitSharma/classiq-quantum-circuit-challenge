@@ -755,3 +755,14 @@ with Qiskit's GraySynth implementation. The odd 1097-pixel parity result
 indeed produces all **4096** nonzero Walsh coefficients. The ancilla-free
 diagnostic measured **8168 depth / 4094 CX / width 12**, confirming that
 parity-network synthesis does not remove the phase-complexity bottleneck.
+
+### QROM-tree radius lookup: verified negative result
+
+The previously unbenchmarked `src/qrom_tree.py` was run as a complete
+radius-based oracle. Its isolated lookup measured 171 depth / 106 CX, but the
+complete `artifacts/radius_tree.qasm` measured **777 depth / 606 CX / width
+18**. Exhaustive verification checked all 4096 basis inputs, with zero
+ancilla leakage and SHA
+`9a0d5a2a6d2869ae82030cb50671efc3bb7faeb6641a29dcb524e1721a09cfd8`. The
+tree lookup is correct, but its surrounding radius/comparison and phase
+work dominate; the lookup-only number is not an oracle score.
