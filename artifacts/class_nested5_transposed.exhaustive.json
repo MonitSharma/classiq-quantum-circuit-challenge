@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/class_nested5_transposed.qasm",
+  "sha256": "ce7ebb17bb8ba4c665cd23e731687f39bf2dca432821d9c77133727688d10f32",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 6958,
+  "cx_count": 5648,
+  "max_error": 1.5035992683813036e-13,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 6.502368397694165e-13,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 16.273771047592163,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

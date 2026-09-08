@@ -1,0 +1,138 @@
+# Benchmark "experiments/logo" written by ABC on Tue Sep  8 07:04:10 2026
+.model experiments/logo
+.inputs x00 x01 x02 x03 x04 x05 x06 x07 x08 x09 x10 x11
+.outputs z0
+.names new_n22 new_n17 x08 x09 new_n16
+-111 1
+1-11 1
+.names new_n18 new_n21 new_n20 x07 new_n17
+--11 1
+11-1 1
+.names x00 new_n19 new_n18
+01 1
+.names x02 x03 new_n19
+00 1
+.names x02 x03 x04 new_n20
+111 1
+.names x05 x11 new_n21
+11 1
+.names new_n23 new_n24 x04 new_n21 new_n22
+--01 1
+01-1 1
+.names x00 x01 x02 x03 new_n23
+-0-1 1
+-110 1
+1-10 1
+.names x06 x07 new_n24
+11 1
+.names new_n26 new_n33 new_n37 new_n41 new_n25
+0000 1
+.names new_n22 new_n32 new_n28 x08 new_n26
+--10 1
+11-0 1
+.names new_n30 new_n29 new_n31 new_n28
+-10 1
+1-0 1
+.names x10 x11 new_n29
+00 1
+.names x06 x07 x09 x10 new_n30
+1111 1
+.names x00 x01 x02 x03 new_n31
+-001 1
+-1-0 1
+0-01 1
+.names x09 x10 x05 new_n32
+001 1
+.names new_n35 new_n34 x01 new_n19 new_n33
+-101 1
+0-01 1
+.names new_n24 x10 x08 x05 new_n34
+0011 1
+.names x05 x04 new_n36 new_n35
+-10 1
+1-0 1
+.names x08 x09 x10 new_n36
+011 1
+.names new_n36 x07 new_n38 new_n40 new_n37
+--10 1
+11-0 1
+.names new_n29 new_n39 new_n38
+11 1
+.names x06 x07 new_n39
+00 1
+.names x00 x01 x02 x03 new_n40
+--01 1
+--10 1
+00-1 1
+.names new_n42 x04 x09 new_n29 new_n41
+---0 0
+001- 0
+.names new_n24 new_n19 x08 new_n42
+-10 1
+0-0 1
+.names x05 new_n48 new_n44 x04 new_n43
+--11 1
+01-1 1
+.names new_n47 x08 new_n45 x09 new_n44
+--10 1
+00-0 1
+.names new_n46 x11 new_n45
+00 1
+.names x00 x01 x02 x03 new_n46
+0000 1
+.names x01 x00 x02 x03 new_n47
+--11 0
+11-1 0
+.names new_n49 new_n47 new_n48
+00 1
+.names x08 new_n24 x09 new_n49
+-10 1
+0-1 1
+.names new_n49 x00 new_n52 new_n20 new_n51
+--01 1
+01-1 1
+.names x05 x01 x09 new_n39 new_n52
+--01 0
+11-- 0
+.names new_n55 new_n29 new_n46 new_n54
+-11 1
+1-1 1
+.names x06 x07 x08 x11 new_n55
+0000 1
+.names x08 x07 x05 x11 new_n57
+--11 0
+11-- 0
+.names new_n24 new_n29 new_n36 new_n60 new_n59
+--11 1
+01-1 1
+.names x00 x01 x02 x03 new_n60
+1111 1
+.names new_n18 new_n39 new_n62 new_n32 new_n61
+--11 1
+11-1 1
+.names x08 x04 new_n24 new_n62
+-00 1
+0-0 1
+.names x04 x05 new_n36 new_n66 new_n65
+--00 1
+01-0 1
+.names x10 x09 x05 x11 new_n66
+-000 1
+0-00 1
+.names x09 new_n46 x11 new_n57 new_n68
+--10 1
+01-0 1
+.names x10 new_n68 new_n54 new_n59 new_n69
+-000 1
+0-00 1
+.names new_n51 new_n61 new_n69 new_n73 new_n70
+0011 1
+.names new_n16 new_n43 new_n25 new_n70 z0
+0011 1
+.names x05 new_n39 x08 x11 new_n72
+--00 0
+00-0 0
+.names x09 x10 new_n72 new_n65 new_n73
+---0 0
+111- 0
+.end
