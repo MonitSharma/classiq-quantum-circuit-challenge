@@ -722,3 +722,12 @@ factor prevented one pair. This does not beat the protected 531/1020 best and
 does not justify constructing a ten-term oracle. It establishes that minimum
 AND count without a reversible-cost or pebbling objective is the wrong
 optimization target for this architecture.
+
+`src/pebble_xag.py` was then used as a narrower follow-up. It synthesizes
+chain-shaped XAGs where each AND node depends only on the six inputs and the
+previous AND node, which is favorable to reversible recomputation. It solved
+29/30 factors, but `src/minmc_rank_pair.py` compiled only 5/10 complete pairs
+per basis. The partial pair-depth sums were 771, 744, and 793 for
+`pair_terms`, `rank_terms`, and `rank_mc_pareto_terms`, respectively, before
+missing terms were included. The chain restriction therefore does not provide
+a route below the protected 531-depth oracle.

@@ -1,0 +1,300 @@
+{
+  "pair_terms": [
+    {
+      "term_index": 0,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 83,
+      "x_cx": 59,
+      "y_depth": 82,
+      "y_cx": 80,
+      "parallel_compute_depth": 83,
+      "parallel_compute_cx": 139,
+      "pair_depth": 159,
+      "pair_cx": 215,
+      "width": 18
+    },
+    {
+      "term_index": 1,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 115,
+      "x_cx": 102,
+      "y_depth": 109,
+      "y_cx": 96,
+      "parallel_compute_depth": 115,
+      "parallel_compute_cx": 198,
+      "pair_depth": 129,
+      "pair_cx": 213,
+      "width": 18
+    },
+    {
+      "term_index": 2,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 95,
+      "x_cx": 77,
+      "y_depth": 81,
+      "y_cx": 70,
+      "parallel_compute_depth": 95,
+      "parallel_compute_cx": 147,
+      "pair_depth": 107,
+      "pair_cx": 167,
+      "width": 18
+    },
+    {
+      "term_index": 3,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 4,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 5,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 6,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 7,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 105,
+      "x_cx": 94,
+      "y_depth": 127,
+      "y_cx": 103,
+      "parallel_compute_depth": 127,
+      "parallel_compute_cx": 197,
+      "pair_depth": 185,
+      "pair_cx": 271,
+      "width": 18
+    },
+    {
+      "term_index": 8,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 85,
+      "x_cx": 65,
+      "y_depth": 108,
+      "y_cx": 109,
+      "parallel_compute_depth": 108,
+      "parallel_compute_cx": 174,
+      "pair_depth": 191,
+      "pair_cx": 245,
+      "width": 18
+    },
+    {
+      "term_index": 9,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    }
+  ],
+  "rank_terms": [
+    {
+      "term_index": 0,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 83,
+      "x_cx": 59,
+      "y_depth": 82,
+      "y_cx": 80,
+      "parallel_compute_depth": 83,
+      "parallel_compute_cx": 139,
+      "pair_depth": 159,
+      "pair_cx": 215,
+      "width": 18
+    },
+    {
+      "term_index": 1,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 2,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 95,
+      "x_cx": 77,
+      "y_depth": 105,
+      "y_cx": 100,
+      "parallel_compute_depth": 105,
+      "parallel_compute_cx": 177,
+      "pair_depth": 209,
+      "pair_cx": 273,
+      "width": 18
+    },
+    {
+      "term_index": 3,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 4,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 5,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 6,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 105,
+      "x_cx": 94,
+      "y_depth": 75,
+      "y_cx": 77,
+      "parallel_compute_depth": 105,
+      "parallel_compute_cx": 171,
+      "pair_depth": 185,
+      "pair_cx": 315,
+      "width": 18
+    },
+    {
+      "term_index": 7,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 8,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 99,
+      "x_cx": 93,
+      "y_depth": 108,
+      "y_cx": 109,
+      "parallel_compute_depth": 108,
+      "parallel_compute_cx": 202,
+      "pair_depth": 191,
+      "pair_cx": 273,
+      "width": 18
+    },
+    {
+      "term_index": 9,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    }
+  ],
+  "rank_mc_pareto_terms": [
+    {
+      "term_index": 0,
+      "x_solved": true,
+      "y_solved": false,
+      "error": "factor missing from bounded XAG cache"
+    },
+    {
+      "term_index": 1,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 83,
+      "x_cx": 59,
+      "y_depth": 82,
+      "y_cx": 80,
+      "parallel_compute_depth": 83,
+      "parallel_compute_cx": 139,
+      "pair_depth": 159,
+      "pair_cx": 215,
+      "width": 18
+    },
+    {
+      "term_index": 2,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 3,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 92,
+      "x_cx": 83,
+      "y_depth": 109,
+      "y_cx": 96,
+      "parallel_compute_depth": 109,
+      "parallel_compute_cx": 179,
+      "pair_depth": 179,
+      "pair_cx": 263,
+      "width": 18
+    },
+    {
+      "term_index": 4,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 5,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 85,
+      "x_cx": 65,
+      "y_depth": 103,
+      "y_cx": 81,
+      "parallel_compute_depth": 103,
+      "parallel_compute_cx": 146,
+      "pair_depth": 111,
+      "pair_cx": 153,
+      "width": 18
+    },
+    {
+      "term_index": 6,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 7,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 99,
+      "x_cx": 93,
+      "y_depth": 127,
+      "y_cx": 103,
+      "parallel_compute_depth": 127,
+      "parallel_compute_cx": 196,
+      "pair_depth": 135,
+      "pair_cx": 203,
+      "width": 18
+    },
+    {
+      "term_index": 8,
+      "x_solved": true,
+      "y_solved": true,
+      "error": "exact cleanup not pebbleable"
+    },
+    {
+      "term_index": 9,
+      "x_solved": true,
+      "y_solved": true,
+      "x_depth": 95,
+      "x_cx": 77,
+      "y_depth": 105,
+      "y_cx": 100,
+      "parallel_compute_depth": 105,
+      "parallel_compute_cx": 177,
+      "pair_depth": 209,
+      "pair_cx": 273,
+      "width": 18
+    }
+  ]
+}

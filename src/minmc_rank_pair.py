@@ -6,6 +6,7 @@ three-live-value reversible pebbling and scores exact standalone pairs.
 
 import json
 import heapq
+import argparse
 from functools import lru_cache
 from pathlib import Path
 
@@ -134,7 +135,11 @@ def score(circuit):
 
 
 def main():
-    cache = json.loads(Path("artifacts/minmc_factor_cache.json").read_text())["functions"]
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--cache", default="artifacts/minmc_factor_cache.json")
+    parser.add_argument("--output", default="artifacts/minmc_rank_pair_metrics.json")
+    args = parser.parse_args()
+    cache = json.loads(Path(args.cache).read_text())["functions"]
     bases = {name: json.loads(Path(f"artifacts/{name}.json").read_text())
              for name in ("pair_terms", "rank_terms", "rank_mc_pareto_terms")}
     results = {}
@@ -166,7 +171,7 @@ def main():
             rows.append(row)
             print(name, index, row, flush=True)
         results[name] = rows
-    Path("artifacts/minmc_rank_pair_metrics.json").write_text(json.dumps(results, indent=2))
+    Path(args.output).write_text(json.dumps(results, indent=2))
 
 
 if __name__ == "__main__":

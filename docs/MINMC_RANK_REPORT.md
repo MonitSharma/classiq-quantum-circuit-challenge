@@ -85,3 +85,12 @@ measured 139-depth block clears that local gate, but the failure rate and
 215-CX cost mean a ten-term oracle is not yet justified. Repeating the
 current formula/XAG backend, basis search, or generic global cleanup is not
 justified by these measurements.
+
+As a follow-up, `src/pebble_xag.py` searched a chain-restricted XAG family in
+which each AND node depends on the immediately preceding AND node. This is a
+more pebble-friendly dependency shape, but it is not expressive enough to
+solve the challenge cheaply: it solved 29/30 factors, while the corresponding
+pair compiler produced only 5/10 complete pairs in each basis. The measured
+partial pair-depth sums were 771 (`pair_terms`), 744 (`rank_terms`), and 793
+(`rank_mc_pareto_terms`) before counting missing terms. Consequently this
+route is also closed for the current 531-depth target.
