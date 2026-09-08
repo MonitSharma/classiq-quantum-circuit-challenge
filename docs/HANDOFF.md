@@ -219,3 +219,9 @@ A retained-x-bank schedule was also tested: it kept two complete x-side rank
 factors live while streaming their y-side factors. The best feasible group
 produced verified depth 892 / 783 CX, so complete-factor retention is not a
 useful route under six ancillas either.
+
+The quadrant-rank structural claim was reconstructed and verified: the four
+`(x5,y5)` quadrants have ranks 1, 2, 5, and 4, for 12 terms total. The exact
+selector-aware pair realization is `artifacts/quadrant_rank.qasm`, depth
+1057 / 952 CX, exhaustively verified with zero ancilla leakage. This confirms
+the mathematics but rejects naive quadrant compilation as an optimization path.

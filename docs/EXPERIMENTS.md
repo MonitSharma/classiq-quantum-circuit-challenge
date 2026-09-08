@@ -50,6 +50,20 @@ depth **865** / **827 CX** and passed exhaustive verification. Independently
 optimized shared groups therefore do not compose constructively; the next
 compiler must schedule the complete phase network globally.
 
+## Quadrant-specific rank decomposition (September 8, 2026)
+
+The quadrant-rank structural claim was independently reconstructed. The four
+quadrants `(x5,y5)` have exact GF(2) ranks **1, 2, 5, 4**, respectively, for a
+total of 12 rank-1 terms. The corrected source is `src/quadrant_rank.py` and
+checks the classical factorization pointwise before compilation.
+
+Compiling those selector-aware terms through the existing pair machinery gave
+`artifacts/quadrant_rank.qasm` at depth **1057** / **952 CX** / width 18. The
+serialized QASM passed exhaustive verification with zero ancilla leakage, so
+the decomposition is correct but its naive reversible realization is far worse
+than the 531-depth baseline. The rank structure needs a specialized quadrant
+loading/phase primitive to become useful.
+
 A different schedule retained two complete x-side rank factors in ancillas,
 streamed their y-side factors through one target ancilla, and uncomputed the x
 bank once. The best feasible group tested, `(0,3)`, produced a full verified
