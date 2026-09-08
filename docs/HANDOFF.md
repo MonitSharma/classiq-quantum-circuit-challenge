@@ -235,3 +235,7 @@ Synthesis was attempted but stopped before the API task because the local
 macOS keychain returned `KeyringError: (-50, 'Unknown Error')`. No new login
 was attempted and no QASM was produced from this model; retry only after the
 user repairs or authorizes Classiq authentication.
+
+PyZX extraction was also tested on the protected 531-depth QASM. Its supported
+extractor produced depth 2655 / 3022 CX after U3/CX rebasing, and sparse
+verification exceeded its support limit. It is not a replacement candidate.

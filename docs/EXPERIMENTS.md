@@ -71,6 +71,15 @@ uses actual inverse subcircuits and is exhaustively verified at depth **1394** /
 **1054 CX**. Direct selector controls therefore do not make sequential
 quadrant phase terms competitive.
 
+## PyZX extraction diagnostic (September 8, 2026)
+
+PyZX `full_reduce` followed by its supported `extract_circuit` routine was
+run on the protected depth-531 QASM. Extraction succeeded, but the result
+expanded to 5,788 native gates and rebased to depth **2655** / **3022 CX**.
+Its sparse exhaustive verifier exceeded the support limit, so it was not
+accepted as a candidate. PyZX extraction is closed as a useful optimization
+path for this circuit.
+
 A different schedule retained two complete x-side rank factors in ancillas,
 streamed their y-side factors through one target ancilla, and uncomputed the x
 bank once. The best feasible group tested, `(0,3)`, produced a full verified
