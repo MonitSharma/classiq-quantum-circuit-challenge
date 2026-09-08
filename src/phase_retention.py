@@ -200,15 +200,15 @@ def beam_schedule(graph, edges, width, max_steps=300):
     deps = dependencies(graph, nodes)
     full = (1 << len(edges)) - 1
     # state: (live frozenset, emitted mask), with path and structural cost.
-    beam = {(frozenset(), 0): (0, [])}
+    beam = {(frozenset(), 0): (0, 0, [])}
     best = None
     for _ in range(max_steps):
         next_states = {}
-        for (live, mask), (cost, path) in beam.items():
+        for (live, mask), (g, _, path) in beam.items():
             if mask == full:
                 try:
                     cleanup = move_plan(graph, live, set(), exact_empty=True)
-                    candidate = (cost + len(cleanup), path + cleanup)
+                    candidate = (g + len(cleanup), path + cleanup)
                     if best is None or candidate[0] < best[0]:
                         best = candidate
                 except ValueError:
@@ -218,17 +218,24 @@ def beam_schedule(graph, edges, width, max_steps=300):
                 new_live.add(node) if kind == "compute" else new_live.remove(node)
                 new_live = frozenset(new_live)
                 new_mask = mask | available_mask(edges, new_live)
-                new_cost = cost + 1
+                new_g = g + 1
                 remaining = len(edges) - new_mask.bit_count()
-                reuse = sum(1 for edge in edges if not edge_available(edge, new_live))
-                score = new_cost + 5 * remaining + 0.1 * len(new_live) + 0.01 * reuse
+                # Value only future reuse: emitted edges must not influence
+                # the heuristic.  Live endpoints with many remaining
+                # incident edges are worth retaining, weighted by the cost of
+                # recreating their ancestor closure.
+                remaining_edges = [edges[i] for i in range(len(edges)) if not (new_mask >> i) & 1]
+                reuse = sum(sum(1 for edge in remaining_edges if node in edge) for node in new_live)
+                ancestor_cost = sum(len(relevant_nodes(graph, [(node, -1)])) for node in new_live)
+                h = 5 * remaining + 0.1 * len(new_live) + 0.02 * ancestor_cost - 0.5 * reuse
+                f = new_g + h
                 key = (new_live, new_mask)
                 old = next_states.get(key)
-                if old is None or score < old[0]:
-                    next_states[key] = (score, path + [(kind, node)])
+                if old is None or f < old[1]:
+                    next_states[key] = (new_g, f, path + [(kind, node)])
         if not next_states:
             break
-        chosen = sorted(next_states.items(), key=lambda item: item[1][0])[:width]
+        chosen = sorted(next_states.items(), key=lambda item: item[1][1])[:width]
         beam = {key: value for key, value in chosen}
     if best is None:
         raise ValueError(f"beam-{width} found no complete schedule")

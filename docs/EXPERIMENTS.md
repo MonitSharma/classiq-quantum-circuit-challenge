@@ -202,6 +202,18 @@ It remains above the protected 531-depth result; repeated affine phase
 rebasing and lack of cross-term XAG sharing are the next bottlenecks. Details
 are in `docs/PHASE_RETENTION_REPORT.md`.
 
+## Hybrid portfolio and affine-frame assessment
+
+The complete portfolio compiler in `src/rank_portfolio.py` tested the existing
+pair, parallel-XAG, minMC, phase-pebble, and retention primitives on all ten
+Pareto terms, then compiled 500 random term orders. The best complete oracle
+was exhaustively verified at **840/798/18** (depth/CX/width). The affine-frame
+model and staged cost breakdown are in `src/affine_frame.py`,
+`src/phase_retention_affine.py`, and `artifacts/affine_frame_cost_breakdown.json`;
+no affine improvement is claimed yet. Cross-term inventory found 42 unique x
+and 40 unique y internal predicates with no duplicates. Full details are in
+`docs/HYBRID_AFFINE_REPORT.md`.
+
 SDK login completed and native synthesis worked. These trials were real synthesis runs, not merely proposed code.
 
 - `classiq_search.py`: high-level QNum bitmask/formula expressions produced excessive width (observed 67 or 153), unsuitable for 18-qubit constraint.
