@@ -195,3 +195,9 @@ retain a common factor across two rank terms exceeded the six-ancilla scratch
 schedule. The next implementation must therefore search reversible pebbling
 schedules explicitly rather than rely on global transpiler cancellation or
 naive common-subtree retention.
+
+A bounded actual-depth term-order sweep of the existing shared-XAG planner was
+also negative. Its best clearing schedule was depth 1035 / 899 CX, and its
+best retain-all schedule was depth 1337 / 1023 CX; both passed exhaustive
+verification. Do not spend further time on ordering without changing the
+underlying multi-output synthesis representation.

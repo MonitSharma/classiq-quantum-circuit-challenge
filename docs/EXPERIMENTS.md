@@ -19,6 +19,14 @@ is evidence that useful sharing requires an explicit reversible pebbling
 algorithm; factoring a common Boolean subtree alone is insufficient under the
 six-ancilla ceiling.
 
+A bounded order sweep over the existing shared-XAG planner was then scored by
+actual serialized depth. The best clearing schedule used term order
+`[5,2,0,9,7,3,8,4,1,6]` and reached depth **1035** / **899 CX**; the best
+retain-all schedule reached depth **1337** / **1023 CX**. Both exact QASM files
+passed exhaustive verification. Term ordering alone is therefore closed as a
+route to the 531 baseline; the next change must improve the nonlinear
+representation or its pebbling transitions.
+
 Numbers below are historical observations unless explicitly marked verified. Most experimental artifacts remain in `artifacts/` for investigation; their existence does not establish validity. See the handoff for the four trusted milestones and the compiler-initialization bug.
 
 ## Boolean decomposition and reversible logic
