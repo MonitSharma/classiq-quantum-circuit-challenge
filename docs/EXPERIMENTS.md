@@ -45,6 +45,11 @@ depth. The next useful extension is a multi-group scheduler that optimizes
 the ordering and shared phase/CNOT boundaries across all groups, rather than
 independent replacement of one pair.
 
+The two-group follow-up, combining local blocks `(0,1)` and `(6,8)`, reached
+depth **865** / **827 CX** and passed exhaustive verification. Independently
+optimized shared groups therefore do not compose constructively; the next
+compiler must schedule the complete phase network globally.
+
 Numbers below are historical observations unless explicitly marked verified. Most experimental artifacts remain in `artifacts/` for investigation; their existence does not establish validity. See the handoff for the four trusted milestones and the compiler-initialization bug.
 
 ## Boolean decomposition and reversible logic

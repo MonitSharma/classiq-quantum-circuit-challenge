@@ -209,3 +209,7 @@ produced verified depth 821 / 770 CX, worse than the existing 779 / 736 pair
 baseline. This confirms that the next scheduler must optimize interactions
 between multiple shared groups and phase/CNOT boundaries, not just one local
 pair at a time.
+
+Combining the two best local groups `(0,1)` and `(6,8)` was also tested. The
+full oracle scored verified depth 865 / 827 CX, so independently optimized
+shared groups do not compose constructively.
