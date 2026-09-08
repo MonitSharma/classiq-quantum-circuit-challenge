@@ -1,5 +1,24 @@
 # Experiment history and failure notes
 
+## Overnight shared-pair diagnostics (September 8, 2026)
+
+The first bounded experiment on the shared-XAG path was `src/global_pair_compile.py`.
+It selected the same locally best pair constructions used by `pair_search.py`,
+but composed their raw circuits before one global U3/CX transpilation. This
+tests whether independent pair-block boundaries were preventing cancellation.
+The exact exported candidate `artifacts/global_pair_raw.qasm` was exhaustively
+verified on all 4,096 inputs (zero ancilla leakage), but scored depth **844** /
+**781 CX**, versus the existing pair result of 779 / 736. Ordinary global
+composition is therefore a negative result and does not justify more of the
+same transpiler-only search.
+
+A manual two-term sharing prototype was also attempted on rank terms 1 and 4,
+which share the x-factor `(~x4 & x5)`. Retaining that factor live caused the
+remaining formula computation to exceed the available scratch schedule. This
+is evidence that useful sharing requires an explicit reversible pebbling
+algorithm; factoring a common Boolean subtree alone is insufficient under the
+six-ancilla ceiling.
+
 Numbers below are historical observations unless explicitly marked verified. Most experimental artifacts remain in `artifacts/` for investigation; their existence does not establish validity. See the handoff for the four trusted milestones and the compiler-initialization bug.
 
 ## Boolean decomposition and reversible logic

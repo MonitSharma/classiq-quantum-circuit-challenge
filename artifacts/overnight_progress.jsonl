@@ -1,0 +1,2 @@
+{"experiment":"global_pair_compile","source":"src/global_pair_compile.py","candidate":"artifacts/global_pair_raw.qasm","depth":844,"cx":781,"width":18,"sha256":"87e7cd590b97724a8e7f36009499504e2795043dae2b3ee776c430cfe504b68c","verified":true,"result":"negative; worse than 779-depth pair baseline"}
+{"experiment":"shared_pair_1_4_manual","terms":[1,4],"result":"incomplete; common subtree retention exceeded available six-ancilla scratch schedule","verified":false}

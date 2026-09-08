@@ -187,3 +187,11 @@ Every candidate must be emitted under a new filename, rebased to exact
 reusable-subcircuit transpilation. Keep the 531 package immutable as the
 fallback submission artifact. Recheck the live leaderboard and challenge
 submission fields before submitting.
+
+The first overnight shared-XAG diagnostic was negative: composing raw
+pair/XAG blocks before one global transpilation produced the verified
+`artifacts/global_pair_raw.qasm` at depth 844 / 781 CX. A manual attempt to
+retain a common factor across two rank terms exceeded the six-ancilla scratch
+schedule. The next implementation must therefore search reversible pebbling
+schedules explicitly rather than rely on global transpiler cancellation or
+naive common-subtree retention.
