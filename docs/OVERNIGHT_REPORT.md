@@ -15,6 +15,10 @@ No candidate beat this result. No circuit was submitted to the external challeng
 ## Experiments completed
 
 - Actual compiled pair-basis search, including a fresh 60-step seed: no improvement; trusted pair result remained 779/736.
+- Bounded exact Z3 min-MC XAG synthesis: 29/30 unique factors independently verified; the three-ancilla side compiler produced only one complete Pareto pair at 139/215.
+- Pebble-friendly chain-XAG synthesis: 29/30 factors solved, but only 5/10, 4/10, and 5/10 complete pairs compiled for the three tested bases; partial depth sums were 771, 744, and 793.
+- An 80-step actual-cost GL(10,2) search found no basis improvement: best scores were 779/736, 795/754, and 803/751.
+- Direct dirty-input ESOP/MCX pair compilation passed exhaustive verification but measured 2156 depth / 1346 CX / width 18.
 - Shared delta-stream schedule: 2183 depth / 1649 CX; negative.
 - Shared XAG, joint pair sharing, retained-factor schedules, quadrant-rank compilation, and direct quadrant phase controls: all correct where accepted, but substantially worse than 531.
 - PyZX extraction: 2655 depth / 3022 CX; negative.
@@ -27,6 +31,6 @@ Detailed machine-readable results are in `artifacts/overnight_progress.jsonl`.
 
 ## Interpretation
 
-The evidence rules out more algebraic-basis tuning, generic global cleanup, direct BDD evaluation, and the current independently synthesized pair/XAG compiler as the next high-value move. The remaining credible route is a genuinely new reversible primitive: a multi-output dirty-ancilla/QROM or phase synthesis method that removes repeated load/unload work while explicitly optimizing ancilla lifetime and serialized depth.
+The evidence rules out more algebraic-basis tuning, generic global cleanup, direct BDD evaluation, and the current independently synthesized pair/XAG compiler as the next high-value move. The remaining credible route is a genuinely new reversible primitive: a multi-output dirty-ancilla/QROM or phase synthesis method that removes repeated load/unload work while explicitly optimizing ancilla lifetime and serialized depth. The native Classiq synthesis attempt remains blocked by `KeyringError (-50, 'Unknown Error')`; no credentials were changed or repeatedly retried.
 
 The overnight agent should therefore stop recycling the rejected architectures, preserve the 531 fallback, and only accept a new result after exact U3/CX serialization plus exhaustive verification and SHA matching.
