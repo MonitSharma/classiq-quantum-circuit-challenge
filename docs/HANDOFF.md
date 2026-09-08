@@ -239,3 +239,9 @@ user repairs or authorizes Classiq authentication.
 PyZX extraction was also tested on the protected 531-depth QASM. Its supported
 extractor produced depth 2655 / 3022 CX after U3/CX rebasing, and sparse
 verification exceeded its support limit. It is not a replacement candidate.
+
+An actual compiled-depth rank-basis search was run for 60 mutations using
+`src/actual_pair_basis_search.py`. It found no improvement over the 779 / 736
+pair baseline; the best accepted transient state was 783 / 724 CX and several
+mutations were uncompilable. Basis search scored on the real serialized
+circuit is therefore also closed as a route to the 531 baseline.

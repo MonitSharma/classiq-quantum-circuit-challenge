@@ -80,6 +80,15 @@ Its sparse exhaustive verifier exceeded the support limit, so it was not
 accepted as a candidate. PyZX extraction is closed as a useful optimization
 path for this circuit.
 
+## Actual compiled rank-basis search (September 8, 2026)
+
+`src/actual_pair_basis_search.py` performed 60 rank-basis mutations starting
+from `artifacts/pair_terms.json`, scoring each complete serialized U3/CX
+oracle rather than a sum of local pair costs. Several mutations were
+uncompilable; the best accepted transient state was depth 783 / 724 CX. No
+candidate improved the trusted 779 / 736 pair baseline, so this closes the
+remaining GL-basis proxy concern without producing a better circuit.
+
 A different schedule retained two complete x-side rank factors in ancillas,
 streamed their y-side factors through one target ancilla, and uncomputed the x
 bank once. The best feasible group tested, `(0,3)`, produced a full verified
