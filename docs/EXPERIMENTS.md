@@ -771,6 +771,13 @@ ancilla leakage and SHA
 tree lookup is correct, but its surrounding radius/comparison and phase
 work dominate; the lookup-only number is not an oracle score.
 
+An attempted mixed feature schedule used the already-live `A` indicator as a
+dirty scratch wire while computing `V` with the ordinary clean-target
+`smart_compute` recursion. It was rejected immediately: exhaustive testing
+of the 64 y states produced a wrong `V` value at `y=35`. Ordinary reversible
+recursion cannot treat a live predicate as a clean scratch target; a valid
+dirty-ancilla route needs a dedicated dirty-target identity.
+
 ### Berkeley ABC AIG diagnostic: negative classical lower-level route
 
 The built `experiments/abc/abc` binary was run on the exact 12-input logo

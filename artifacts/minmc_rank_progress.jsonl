@@ -10,3 +10,4 @@
 {"experiment":"qrom_tree_radius_oracle","source":"src/qrom_tree.py","candidate":"artifacts/radius_tree.qasm","depth":777,"cx":606,"width":18,"sha256":"9a0d5a2a6d2869ae82030cb50671efc3bb7faeb6641a29dcb524e1721a09cfd8","verified":true,"result":"negative; surrounding radius/phase work dominates"}
 {"experiment":"walsh_gray_section_sweep","source":"qiskit.synthesis.synth_cnot_phase_aam","sections":[1,2,3,4,6,12],"all_scores":[8168,4094],"result":"no section-size improvement after U3/CX serialization"}
 {"experiment":"abc_aig_diagnostic","source":"experiments/abc/abc","flows":{"dc2":{"and":224,"level":22},"rewrite_refactor_balance":{"and":247,"level":17},"syn2":{"and":247,"level":19}},"result":"negative; no compact reversible computation graph"}
+{"experiment":"dirty_feature_scratch_probe","status":"rejected","counterexample":"y=35","reason":"ordinary clean-target recursion used live A as dirty scratch and produced incorrect V"}
