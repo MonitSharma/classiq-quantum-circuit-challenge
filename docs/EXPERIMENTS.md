@@ -506,6 +506,33 @@ within width 18 but produced depth **3,949,563** and **2,581,968 CX**. This is
 decisively negative; the candidate is retained as a diagnostic and was not
 exhaustively verified.
 
+## Side-separated minimum-MC rank compiler (September 9, 2026)
+
+The requested experiment began with `src/rank_factor_inventory.py`. It restored
+the supplied `rank_mc_pareto_terms.json` only after exact reconstruction of the
+64x64 target, and produced `artifacts/rank_factor_inventory.json` containing 30
+deduplicated scalar functions across `pair_terms`, `rank_terms`, and the Pareto
+rank basis.
+
+`src/parallel_rank_pair.py` tested the existing formula backend with separate
+three-wire x/y banks. It fit only a small minority of factor-side computations;
+most required more than two scratch wires, so it cannot compile a ten-term
+rank oracle.
+
+`src/parallel_rank_pair_xag.py` then used the repository XAG graph and a strict
+three-live-node reversible pebbling schedule, pinning one root node to the
+side's output wire. The surviving pairs demonstrate real side parallelism:
+for example, a Pareto pair measured 50 pair depth / 65 CX after U3/CX
+serialization, and an independent sparse simulation checked all 4096 basis
+inputs with exact input preservation, zero ancilla leakage, and global phase 1.
+But the backend could produce valid three-slot pairs for only 2/10 `pair_terms`,
+1/10 `rank_terms`, and 2/10 Pareto terms. Therefore the strict local compiler
+fails the full-factor prerequisite and the full rank oracle was not attempted.
+The binding issue is not x/y parallelism; it is the lack of a genuine
+minimum-MC representation and reversible schedule that fits one output plus
+two scratch wires for the difficult six-variable factors. Metrics are in
+`artifacts/parallel_rank_pair_xag_metrics.json`.
+
 ## Ideas considered but not implemented or validated
 
 - PyZX/pytket global simplification of compute/phase/uncompute: packages installed; optional bounded diagnostic after an architectural change, not the primary search direction.

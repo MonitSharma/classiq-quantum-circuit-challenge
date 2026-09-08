@@ -1,0 +1,3 @@
+{"experiment":"rank_factor_inventory","source":"src/rank_factor_inventory.py","unique_functions":30,"status":"completed"}
+{"experiment":"side_separated_formula_pair_probe","source":"src/parallel_rank_pair.py","status":"failed_gate","reason":"existing formula backend exceeds two scratch ancillas for most factor functions"}
+{"experiment":"side_separated_xag_pair_probe","source":"src/parallel_rank_pair_xag.py","status":"failed_gate","valid_pairs":{"pair_terms":2,"rank_terms":1,"rank_mc_pareto_terms":2},"best_pair_depth":50,"best_pair_cx":65,"width":18,"local_verification":"one surviving pair exhaustive sparse basis check passed"}
