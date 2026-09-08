@@ -23,6 +23,10 @@ The hybrid QASM was exhaustively verified over all 4096 coordinate inputs,
 with zero ancilla leakage. Its verification SHA is
 `fb881799e506d62590f4351fcee179b5cab3edf3d86e23b507477fa3a7932d30`.
 
+A second 500-trial search varied compiler assignment and term order jointly.
+Its best verified result was 1027/1043, so mixed assignment did not improve
+the fixed multi-objective portfolio hybrid.
+
 ## Retention correction
 
 The beam search now stores true accumulated transition cost `g` separately
