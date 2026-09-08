@@ -245,3 +245,35 @@ An actual compiled-depth rank-basis search was run for 60 mutations using
 pair baseline; the best accepted transient state was 783 / 724 CX and several
 mutations were uncompilable. Basis search scored on the real serialized
 circuit is therefore also closed as a route to the 531 baseline.
+
+## Later continuation results (September 9, 2026)
+
+The following additional experiments are now committed on `main` and must be
+treated as measured evidence rather than open TODOs:
+
+- `src/minmc_xag.py`: bounded Z3 XAG synthesis solved 29/30 unique scalar
+  factors with independent truth-table verification. `src/minmc_rank_pair.py`
+  produced only one complete three-ancilla Pareto pair, depth 139 / 215 CX.
+- `src/pebble_xag.py`: a chain-shaped, pebble-friendly SAT family solved
+  29/30 factors but produced only 5/10, 4/10, and 5/10 complete pairs for the
+  three tested bases; partial depth sums were 771, 744, and 793.
+- `src/gl10_actual_search.py`: 80 actual-cost GL(10,2) steps from each basis
+  found no improvement over 779 / 736; the best alternative scores were
+  795 / 754 and 803 / 751.
+- `src/dirty_esop_pair.py`: direct ESOP/relative-phase MCX computation passed
+  exhaustive verification but measured 2156 / 1346 CX / width 18.
+- `src/phase_polynomial_aam.py`: exact Walsh GraySynth measured 8168 / 4094
+  CX / width 12; all 4096 Walsh coefficients are nonzero. All section sizes
+  1, 2, 3, 4, 6, and 12 gave the same result.
+- `src/qrom_tree.py`: the complete verified radius-tree oracle measured 777 /
+  606 CX / width 18; its lookup-only depth of 171 is not a complete score.
+- Berkeley ABC AIG flows remained at 224--247 AND nodes and levels 17--22,
+  exposing no compact reversible graph.
+
+None of these candidates beat the protected `artifacts/531/full_mux_531.qasm`
+(531 / 1020 / 18). The next genuinely new work must share a multi-output
+phase/QROM computation while optimizing dirty-ancilla lifetime directly; do
+not repeat basis search, direct ESOP, dense Walsh synthesis, generic cleanup,
+or the current independent pair compiler. Native Classiq synthesis remains
+blocked by the documented macOS keychain `KeyringError (-50)`; do not retry
+without a real authentication/environment change.
