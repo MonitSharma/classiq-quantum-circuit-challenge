@@ -1,0 +1,53 @@
+{
+  "campaigns": {
+    "term_6": {
+      "local_order_attempts": 500,
+      "beam_widths": [
+        64,
+        256,
+        1024
+      ],
+      "exact_state_budget": 2000000
+    },
+    "term_7": {
+      "local_order_attempts": 2000,
+      "beam_widths": [
+        64,
+        256,
+        1024
+      ]
+    }
+  },
+  "observed_transpiled_candidates": {
+    "term_6": 0,
+    "term_7": 0
+  },
+  "best_actual": {
+    "6": {
+      "term_index": 6,
+      "scheduler": "greedy_row_major",
+      "depth": 186,
+      "cx": 182,
+      "actions": 20
+    },
+    "7": {
+      "term_index": 7,
+      "scheduler": "beam_64",
+      "depth": 202,
+      "cx": 223,
+      "actions": 20
+    }
+  },
+  "exact_term_6": {
+    "status": "complete",
+    "explored_states": 1295,
+    "actions": 20,
+    "depth": 204,
+    "cx": 188,
+    "compute_actions": 10,
+    "uncompute_actions": 10,
+    "phase_actions": 12,
+    "max_live_ancillas": 6
+  },
+  "note": "Local-order attempts use structural screening; only screened/improving checkpoints are transpiled and logged."
+}

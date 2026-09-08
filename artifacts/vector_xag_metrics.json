@@ -1,0 +1,11 @@
+{
+  "basis": "rank_mc_pareto_terms",
+  "vector_x_outputs": 10,
+  "vector_y_outputs": 10,
+  "x_unique_internal_predicates": 42,
+  "y_unique_internal_predicates": 40,
+  "x_shared_predicate_savings": 0,
+  "y_shared_predicate_savings": 0,
+  "status": "no_scalar_cross_term_sharing_found",
+  "next_step": "search alternative XAG representations jointly if affine-frame optimization produces enough headroom"
+}

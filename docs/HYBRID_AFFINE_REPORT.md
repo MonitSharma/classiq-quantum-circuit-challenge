@@ -35,6 +35,11 @@ Term 6 reached 194/200 and term 7 reached 202/223 depth/CX across beam widths
 64, 256, and 1024. The selected retained complete oracle, after 100 term
 orders, was 1818/2070; it remains inferior to the hybrid portfolio.
 
+The corrected global term-6 search over `(live_nodes, emitted_edge_mask)`
+completed after 1,295 states, producing 204/188 with 10 compute and 10
+uncompute actions. Campaign details are in
+`artifacts/retention_search_diagnostics.json`.
+
 ## Affine-frame stage
 
 `src/affine_frame.py` implements an exact six-bit affine parity-frame model
@@ -50,9 +55,9 @@ validated; therefore no affine improvement is claimed. The generated
 `artifacts/cross_term_predicate_inventory.json` contains 42 unique cached x
 internal predicates and 40 unique cached y predicates, with zero repeats on
 either side. That provides no immediate scalar-predicate sharing opportunity.
-Vector-XAG synthesis was not started because the measured inventory contains
-no repeated predicates and the hybrid remains 309 depth above the protected
-best; this is recorded as a search-limit result, not an impossibility proof.
+The explicit vector assessment is in `artifacts/vector_xag_metrics.json`;
+scalar sharing savings are zero, so vector-XAG synthesis was not started.
+This is recorded as a search-limit result, not an impossibility proof.
 
 ## Comparison and next experiment
 

@@ -242,6 +242,42 @@ def beam_schedule(graph, edges, width, max_steps=300):
     return best[1]
 
 
+def exact_retention_schedule(graph, edges, *, max_states=2_000_000):
+    """Breadth-first global search over ``(live, emitted-edge-mask)``.
+
+    Every transition is one reversible pebble toggle.  Newly available
+    commuting phase edges are folded into the state immediately, so this is a
+    true global search rather than a sequence of independent move searches.
+    """
+    nodes = relevant_nodes(graph, edges)
+    deps = dependencies(graph, nodes)
+    full = (1 << len(edges)) - 1
+    start = (frozenset(), available_mask(edges, frozenset()))
+    queue = deque([start])
+    parent = {start: None}
+    action_for = {}
+    while queue:
+        state = queue.popleft()
+        live, mask = state
+        if live == frozenset() and mask == full:
+            actions = []
+            while parent[state] is not None:
+                actions.append(action_for[state]); state = parent[state]
+            return actions[::-1], len(parent), "complete"
+        if len(parent) >= max_states:
+            return None, len(parent), "state_limit"
+        for action in legal_actions(graph, live, nodes, deps):
+            next_live = set(live)
+            next_live.add(action[1]) if action[0] == "compute" else next_live.remove(action[1])
+            next_live = frozenset(next_live)
+            next_state = (next_live, mask | available_mask(edges, next_live))
+            if next_state not in parent:
+                parent[next_state] = state
+                action_for[next_state] = action
+                queue.append(next_state)
+    return None, len(parent), "exhausted"
+
+
 def score(q):
     out = transpile(q, basis_gates=["u3", "cx"], qubits_initially_zero=False, optimization_level=3)
     return out.depth(), out.count_ops().get("cx", 0)

@@ -202,6 +202,11 @@ It remains above the protected 531-depth result; repeated affine phase
 rebasing and lack of cross-term XAG sharing are the next bottlenecks. Details
 are in `docs/PHASE_RETENTION_REPORT.md`.
 
+The retention beam now separates true path cost `g` from heuristic `h`, and a
+global term-6 `(live, emitted-mask)` search completed in 1,295 states at
+204/188. Search diagnostics are recorded in
+`artifacts/retention_search_diagnostics.json`.
+
 ## Hybrid portfolio and affine-frame assessment
 
 The complete portfolio compiler in `src/rank_portfolio.py` tested the existing
