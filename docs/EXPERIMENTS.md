@@ -50,6 +50,12 @@ depth **865** / **827 CX** and passed exhaustive verification. Independently
 optimized shared groups therefore do not compose constructively; the next
 compiler must schedule the complete phase network globally.
 
+A different schedule retained two complete x-side rank factors in ancillas,
+streamed their y-side factors through one target ancilla, and uncomputed the x
+bank once. The best feasible group tested, `(0,3)`, produced a full verified
+oracle at depth **892** / **783 CX**. Reusing complete factors across terms is
+therefore also negative under the six-ancilla budget.
+
 Numbers below are historical observations unless explicitly marked verified. Most experimental artifacts remain in `artifacts/` for investigation; their existence does not establish validity. See the handoff for the four trusted milestones and the compiler-initialization bug.
 
 ## Boolean decomposition and reversible logic

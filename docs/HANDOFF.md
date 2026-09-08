@@ -214,3 +214,8 @@ than merely retain common subtrees.
 Combining the two best local groups `(0,1)` and `(6,8)` was also tested. The
 full oracle scored verified depth 865 / 827 CX, so independently optimized
 shared groups do not compose constructively.
+
+A retained-x-bank schedule was also tested: it kept two complete x-side rank
+factors live while streaming their y-side factors. The best feasible group
+produced verified depth 892 / 783 CX, so complete-factor retention is not a
+useful route under six ancillas either.
