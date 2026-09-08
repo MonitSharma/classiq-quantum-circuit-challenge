@@ -225,3 +225,6 @@ The quadrant-rank structural claim was reconstructed and verified: the four
 selector-aware pair realization is `artifacts/quadrant_rank.qasm`, depth
 1057 / 952 CX, exhaustively verified with zero ancilla leakage. This confirms
 the mathematics but rejects naive quadrant compilation as an optimization path.
+A specialized five-low-bit implementation with direct selector phase controls
+was also corrected and verified as `artifacts/quadrant_phase.qasm`, depth
+1394 / 1054 CX; it is likewise not competitive.

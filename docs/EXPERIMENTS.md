@@ -64,6 +64,13 @@ the decomposition is correct but its naive reversible realization is far worse
 than the 531-depth baseline. The rank structure needs a specialized quadrant
 loading/phase primitive to become useful.
 
+A specialized follow-up, `src/quadrant_phase.py`, computed each factor only
+on the five low bits and used `x5`/`y5` as direct phase controls. Its first
+prototype had an invalid repeated-compute uncompute; the corrected version
+uses actual inverse subcircuits and is exhaustively verified at depth **1394** /
+**1054 CX**. Direct selector controls therefore do not make sequential
+quadrant phase terms competitive.
+
 A different schedule retained two complete x-side rank factors in ancillas,
 streamed their y-side factors through one target ancilla, and uncomputed the x
 bank once. The best feasible group tested, `(0,3)`, produced a full verified
