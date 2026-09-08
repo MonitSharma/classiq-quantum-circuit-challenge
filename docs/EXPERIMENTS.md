@@ -90,6 +90,126 @@ SDK login completed and native synthesis worked. These trials were real synthesi
 - `classiq_lookup.py`: native `CArray` table indexed by a 6-bit QNum, 3-bit radius output, max-width 12. Synthesized lookup alone was depth 614 / CX 350, worse than custom lookup. Its one context Hadamard call was stripped before scoring.
 - `nested_formula.qmod`, `nested_bits_formula.qmod`, `rank_whole.qmod`, and `lookup.qmod` are experimental models. **None is the companion QMOD for `full_mux.qasm`.**
 
+## Mixed-variable 6-LUT decomposition (September 8, 2026; active branch)
+
+The next architecture searches for
+`logo(x,y) = G(h0(z_S0), ..., hk(z_Sk))`, where each feature is an arbitrary
+Boolean function of at most six of the twelve coordinate bits. The fixed-
+support feasibility checker is `src/lut_decomposition.py`; it uses Z3 with an
+explicit upper truth table `G`, so each candidate support tuple is tested over
+all 4096 inputs. `src/lut_mux_oracle.py` is the corresponding parallel-UCR
+emitter for a future satisfying model.
+
+`solve_joint_z3` in the same module is the arbitrary-support formulation: Z3
+chooses six increasing bit positions for every feature and its 64-entry LUT
+at the same time, with complete-domain counterexamples added incrementally.
+Feature-support rows are lexicographically ordered to remove feature-
+permutation symmetry, and candidate models are canonicalized under LUT output
+complement/codebook symmetry before scoring. This is more faithful to the
+intended search than sampling fixed supports, but significantly more expensive.
+`solve_joint_z3_array` is an equivalent array-indexed encoding using
+`Select(table, code)` rather than a 64-way selector expansion; it reduced the
+runtime of the same 20-round probe from about 23/37 seconds to about 11/21
+seconds for k=4/k=5. A deeper k=4 run reached `unknown` at round 16 with
+4,030 pairs and no model. Both joint encodings also enforce the necessary
+condition that all 12 essential input bits occur in the union of the supports.
+A deeper k=5 CLI run reached `unknown` at round 15 with 3,780 pairs and no
+model; this is likewise a solver performance result, not an infeasibility
+claim.
+Using a 25-pair refinement batch, a k=5 run reached 30 rounds and 760 pairs
+in 8.5 seconds with no model. Extending the same run to 300 rounds reached
+`unknown` only at round 109 with 2,735 pairs after 144 seconds; no model was
+found. Smaller batches therefore improve progress, but have not yet produced
+an exact decomposition.
+A five-seed repeat of the 60-round, 25-pair-batch k=5 configuration reached
+the round limit for every seed (1,510 pairs each), with no timeout and no
+model. This is repeatability evidence, not a proof over the unsampled support
+space.
+`solve_joint_z3_bool` is a pure-Boolean one-hot support/LUT encoding. Its
+300-round k=5 probe reached `unknown` at round 133 with 3,335 pairs and no
+model, modestly deeper than the array encoding but still not convergent. It
+now also enforces lexicographic order between feature-support rows; the same
+seed/configuration after that symmetry break reached `unknown` at round 124
+with 3,110 pairs and no model.
+With a one-collision-per-round batch, pure-Boolean runs for both k=4 and k=5
+completed all 1,000 rounds and 1,010 accumulated pairs without timeout or
+model (about 172 seconds for k=4 and 209 seconds for k=5). These are the
+deepest stable bounded runs; they still do not prove infeasibility over the
+full support space.
+Because the exhaustive ABC-family combinations used distinct support rows, an
+additional 100 random five-row multisets (allowing repeated supports) were
+checked with fixed-support CEGAR; all 100 were UNSAT with no timeout or model.
+PySAT is installed and `solve_joint_pysat` provides the same one-hot CEGAR
+encoding through an incremental native SAT solver, including lexicographic
+feature-row symmetry breaking. Its corrected/vectorized k=5 run completed
+2,000 one-collision rounds and 2,010 pairs without timeout or model in about
+140 seconds. The CLI selects it with `--encoding pysat`.
+`solve_joint_pysat_direct` also encodes all 4,096 inputs at once with explicit
+G and six-level LUT mux trees. The resulting k=4 logo CNF had 1,198,062
+variables and 5,219,037 clauses; a 1M-conflict decision remained unresolved
+and was stopped, so it is not an UNSAT result. The same direct encoding passed
+an exact synthetic parity regression and returned SAT with a verified model.
+The corresponding k=5 direct CNF has 1,546,864 variables and 6,950,256
+clauses; a bounded decision returned `unknown` without a model.
+PySAT now also accepts a conflict budget and reports `unknown` cleanly. A
+larger-batch k=5 run with 100 collisions per round returned `unknown` at round
+46 with 4,620 pairs under a 5,000-conflict budget.
+The PySAT encoding also passed an end-to-end synthetic regression: it recovered
+an exact four-feature decomposition of a known 12-bit parity predicate, and
+the returned supports/tables/G matched all 4,096 inputs. This validates the
+support-selection, LUT, collision, and G reconstruction clauses independently
+of the logo search.
+As an out-of-scope diagnostic at the six-ancilla ceiling, a native-SAT k=6
+run reached its 200-round limit with 5,010 pairs and no model. This does not
+replace the required k=4/k=5 search, but indicates the difficulty is not
+limited to the smaller feature counts.
+The direct form is exposed with `--direct` in the search CLI.
+
+Initial classical screening has not found a model yet:
+
+- 25 structured/random four-feature support tuples returned UNSAT using the
+  direct all-4096-input Z3 encoding.
+- An additional 10 random four-feature tuples returned UNSAT under the
+  incremental CEGAR encoding, with 20 rounds and up to 3 seconds per solver
+  check. A previous 60-tuple bounded CEGAR screen produced 36 UNSAT results
+  and 24 round-limit results; it found no model.
+- Three structured five-feature tuples returned UNSAT using the direct
+  encoding. A subsequent eight-tuple random five-feature CEGAR screen found
+  six UNSAT results and two `unknown` timeouts; it found no model.
+- Parsing the existing ABC map yields 13 distinct six-input supports. The
+  reproducible driver `src/search_lut_supports.py` exhaustively tested all 715
+  four-support combinations and all 1,287 five-support combinations from this
+  family. Every one returned UNSAT; there were no `unknown` results and no
+  model in either sweep.
+- These are support-level results, not a proof that all four- or five-LUT
+  decompositions are impossible. The `unknown` results and the unsampled
+  support space remain pending.
+- A separate 100-tuple random arbitrary-support five-LUT screen produced 75
+  UNSAT results, 24 solver timeouts (`unknown`), and one CEGAR round limit; it
+  found no model. This is additional screening evidence only.
+- The first joint arbitrary-support trials reached `unknown` after three
+  refinement rounds for k=4 (3,008 accumulated pairs) and four rounds for k=5
+  (7,622 pairs), with no model. These are performance limits, not UNSAT
+  results.
+- With smaller 100-pair refinement batches, 20-round joint runs for both k=4
+  and k=5 reached their round limit with 2,020 accumulated pairs and no model.
+  This improved progress through the search but still did not establish
+  infeasibility.
+- An extended symmetry-broken k=4 run reached `unknown` at round 47 with 4,720
+  accumulated pairs and no model. It remains a timeout/performance result.
+- `src/lut_mux_oracle.py` now contains the exact parallel-UCR
+  load/phase/unload emitter, but no satisfying model has yet been found, so
+  no quantum logo candidate has been emitted from this branch.
+- The independent ABC 6-LUT mapping of `experiments/logo.bench` reports 57
+  mapped nodes over four levels. This is useful context for the search, but
+  it is not an equivalence proof against the restricted independent-feature
+  architecture and is not a QASM score.
+
+The fixed-support sweep is reproducible with `src/search_lut_supports.py
+--k 4` or `--k 5`; the unrestricted array-indexed search is exposed with
+`--joint --k 4` or `--joint --k 5` and accepts the CEGAR batch/round/time
+parameters.
+
 ## Ideas considered but not implemented or validated
 
 - PyZX/pytket global simplification of compute/phase/uncompute: packages installed; next concrete experiment.

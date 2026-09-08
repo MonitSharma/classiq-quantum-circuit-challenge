@@ -59,6 +59,7 @@ Verify report hashes before relying on any row. The best circuit reduces baselin
 - Workspace: `/Users/monitsharma/Downloads/classiq`.
 - `.venv` Python 3.13. Use its Python, not the system interpreter.
 - Installed: Qiskit 2.5.2, Qiskit Aer 0.17.2, Classiq 1.29, NumPy, SciPy, SymPy, PyEDA 0.29.
+- Also installed: PySAT `python-sat` 1.9.dev15 for the native incremental SAT decomposition search.
 - Newly installed and **not yet tried**: PyZX 0.10.6 and pytket 2.18.1. Installation completed successfully immediately before documentation.
 - `experiments/abc/abc` is a built Berkeley ABC binary, cloned from its official repository. Build used `make -j4 ABC_USE_NO_READLINE=1`.
 - PyEDA installation needed `CFLAGS=-Wno-incompatible-function-pointer-types`.
@@ -69,11 +70,12 @@ Verify report hashes before relying on any row. The best circuit reduces baselin
 ## Next useful work
 
 1. Preserve the current QASM and confirm its report hash. The independent dense verifier has now also passed on `full_mux` (5 random dense states; report `artifacts/full_mux.verification.json`).
-2. Try global PyZX and pytket rewrites of the best circuit, since local Qiskit optimization may miss cancellations across lookup/phase/uncompute. Packages are installed; no optimization script for them exists yet. Preserve qubit ordering and compile outputs to U3/CX before scoring. Check correctness after extraction/rebasing.
-3. Seek architectural reductions: three separate approximately 128-depth multiplexor stages dominate the current design. Simple seed search has diminishing returns. See `CURRENT_DESIGN.md` for the construction and alternatives.
-4. For every improvement, write a new artifact, exhaustively verify the serialized file, and update these docs with hash, depth, CX, and generator settings.
-5. Build a matching QMOD and a clear final notebook/source explanation. Existing QMODs do not correspond to the 536-depth circuit.
-6. Recheck official rules and leaderboard in Safari. Arrange submission only once deliverables are concrete and user-facing required fields/actions are known. No submission has happened.
+2. The active mixed-variable LUT branch is implemented in `src/lut_decomposition.py`, `src/lut_mux_oracle.py`, and `src/search_lut_supports.py`. It exhaustively rejected all 715 four-LUT and 1,287 five-LUT combinations formed from the 13 six-input supports extracted from `experiments/logo.bench`. A separate 100-tuple random five-LUT screen found 75 UNSAT, 24 unknown, and one round-limit result; 100 additional repeated-support multisets were all UNSAT. `solve_joint_z3`, `solve_joint_z3_array`, `solve_joint_z3_bool`, and native `solve_joint_pysat` now choose arbitrary supports and LUT tables jointly with symmetry breaking; the strongest canonicalized native-SAT k=5 run completed 2,000 one-collision rounds and 2,010 pairs without a model, while a conflict-budgeted larger-batch run reached unknown at round 46. The direct all-4096-input k=4 SAT CNF (1.2M variables, 5.2M clauses) was unresolved under a 1M-conflict budget; k=5 is 1.55M variables and 6.95M clauses. The synthetic parity regression passed. This still does not cover arbitrary support tuples conclusively, so do not generalize it to all decompositions.
+3. Try global PyZX and pytket rewrites of the best circuit, since local Qiskit optimization may miss cancellations across lookup/phase/uncompute. Packages are installed; no optimization script for them exists yet. Preserve qubit ordering and compile outputs to U3/CX before scoring. Check correctness after extraction/rebasing.
+4. Seek architectural reductions: three separate approximately 128-depth multiplexor stages dominate the current design. Simple seed search has diminishing returns. See `CURRENT_DESIGN.md` for the construction and alternatives.
+5. For every improvement, write a new artifact, exhaustively verify the serialized file, and update these docs with hash, depth, CX, and generator settings.
+6. Build a matching QMOD and a clear final notebook/source explanation. Existing QMODs do not correspond to the 536-depth circuit.
+7. Recheck official rules and leaderboard in Safari. Arrange submission only once deliverables are concrete and user-facing required fields/actions are known. No submission has happened.
 
 ## Safe reproduction
 
