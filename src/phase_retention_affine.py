@@ -35,7 +35,9 @@ def main():
                      "raw_cz": circuit.count_ops().get("cz", 0),
                      "raw_x": circuit.count_ops().get("x", 0), **metrics,
                      "affine_frame_unit_test": "passed"})
-    Path("artifacts/affine_frame_cost_breakdown.json").write_text(json.dumps(rows, indent=2))
+    payload = json.dumps(rows, indent=2)
+    Path("artifacts/affine_frame_cost_breakdown.json").write_text(payload)
+    Path("artifacts/affine_frame_term_metrics.json").write_text(payload)
     print(json.dumps(rows, indent=2))
 
 

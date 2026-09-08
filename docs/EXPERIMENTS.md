@@ -218,6 +218,8 @@ model and staged cost breakdown are in `src/affine_frame.py`,
 no affine improvement is claimed yet. Cross-term inventory found 42 unique x
 and 40 unique y internal predicates with no duplicates. Full details are in
 `docs/HYBRID_AFFINE_REPORT.md`.
+The historical `xag_affine.qasm` diagnostic was rechecked and rejected for a
+phase mismatch; it is not a valid candidate.
 
 SDK login completed and native synthesis worked. These trials were real synthesis runs, not merely proposed code.
 

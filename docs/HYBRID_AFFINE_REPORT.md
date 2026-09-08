@@ -49,6 +49,8 @@ counts in `artifacts/affine_frame_cost_breakdown.json`. The frame primitive
 passes its unit test, but a full frame-aware nonlinear compiler was not
 validated; therefore no affine improvement is claimed. The generated
 `hybrid_affine_rank_best.qasm` is explicitly the verified portfolio fallback.
+The older `artifacts/xag_affine.qasm` was rechecked and failed exhaustive
+phase verification, so it is not included in any score or assignment.
 
 ## Cross-term and vector-XAG evidence
 
