@@ -385,6 +385,48 @@ but not the next primary implementation architecture.
 - Alternative radius flags V, L=(r>=4), T=(r>=6), P=odd. Then r>=5 is T OR P, r>=7 is T AND P; for the current table, bar-y flag equals y5 AND T. Could reduce lookup duplication but needs a new reversible phase/comparator design.
 - More control-order seed search alone is unlikely to bridge the remaining 245 depth to the observed leader.
 
+## Five-input Shannon split prototype (September 8, 2026; verified negative)
+
+`src/shell_mux.py` implements the first concrete shell-architecture test. It
+uses `h=h0 XOR (y5 AND (h0 XOR h1))` for each radius bit, loads the three
+`h0` values into q12..q14, loads deltas into q15..q17, selects with Toffolis,
+and clears the delta bank before reusing it for A/B/V. All transpilation uses
+`qubits_initially_zero=False`.
+
+The initial CNOT-only selection was invalid and is retained as
+`artifacts/shell_mux_candidate0.qasm`; it failed with phase error 2. The
+corrected `artifacts/shell_mux_candidate1.qasm` passed exhaustive verification:
+depth 969, CX 1244, width 18, SHA
+`6c5a35313c2f26509426fde8bbf6195fb61da742cf86576f7677fbc0c699dfa4`.
+Seeds 1..7 measured depths 949, 965, 957, 965, 961, 969, 959. This simple
+split is therefore closed as a negative direction; the next useful experiment
+is a threshold-shell phase that removes the binary comparator.
+
+## Comparator-free threshold shell prototype (September 8, 2026; verified negative)
+
+`src/threshold_shell.py` implemented the next experiment rather than merely
+shortening the radius loader. It loaded `V,L,T,P,E`, folded x, emitted the
+distance-shell phase conditions, integrated the D2 radius-eight case, unloaded
+the threshold features, and then applied the left-shape phase using direct
+`A XOR V` and `B XOR V` tables. The binary radius comparator and separate
+radius-eight correction were removed from this candidate.
+
+The serialized candidate passed exhaustive verification on all 4096 inputs with
+zero ancilla leakage:
+
+| Artifact | Depth | CX | Width | SHA |
+|---|---:|---:|---:|---|
+| `artifacts/threshold_shell_candidate1.qasm` | 4437 | 3854 | 18 | `4eb6fc7fe03909714c8f135bc3512e260768c6ffdf8a8decc69282d810f3b7e6` |
+
+This is a strong negative result for the naive implementation, not for the
+threshold idea itself. The prototype replaced one shared arithmetic comparator
+with dozens of separately synthesized high-control phase cubes. The comparator
+cost disappeared, but the unshared shell phase network became dramatically
+more expensive. The operation-specific representation therefore needs a shared
+shell/UCR construction or a reusable folded-distance predicate; direct
+enumeration of threshold-conditioned phase cubes is closed as a route to the
+target.
+
 ## Verification tools
 
 `exhaustive_verify.py` parses the saved QASM and sparsely simulates every clean-ancilla basis input together. It tracks coordinate mapping, diagonal phase, ancilla leakage, and a numerical discarded-amplitude bound. It aborts if sparse support exceeds 2048; a more mixing optimizer may require a blocked dense verifier instead. The current best peaks at support 64.

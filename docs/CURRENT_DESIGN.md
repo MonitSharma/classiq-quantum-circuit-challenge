@@ -113,4 +113,19 @@ transiently and avoid treating `R0,R1,R2,A,B,V` as six independent stored
 outputs. The phase implementation must still be synthesized and exhaustively
 verified; the threshold identities alone do not establish a depth improvement.
 
+The first complete comparator-free implementation was tested in
+`src/threshold_shell.py`. It was correct but scored depth 4437 / CX 3854 because
+it emitted each threshold-conditioned distance shell as an independent
+high-control phase cube. This demonstrates that deleting arithmetic is not
+enough: the shell phase must itself be shared or implemented as a compact UCR
+network. The verified artifact is recorded in `docs/EXPERIMENTS.md`; the
+depth-536 baseline remains the trusted reference.
+
+The first split-loader prototype is a verified negative result. `src/shell_mux.py`
+and `artifacts/shell_mux_candidate1.qasm` implement the five-input Shannon
+radius load with Toffoli selection and delta cleanup. The exact candidate is
+depth 969, CX 1244, width 18, SHA
+`6c5a35313c2f26509426fde8bbf6195fb61da742cf86576f7677fbc0c699dfa4`.
+The trusted `full_mux` baseline remains unchanged.
+
 Changing relative-phase components or helpers can invalidate an otherwise correct classical computation. Keep arbitrary input semantics in every compiler call, restore all temporary values before inverse lookup, and verify each exact exported circuit. No symbolic optimization should bypass numerical verification.

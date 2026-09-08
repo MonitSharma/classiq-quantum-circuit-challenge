@@ -100,3 +100,32 @@ OPENBLAS_NUM_THREADS=1 .venv/bin/python src/exhaustive_verify.py artifacts/full_
 ```
 
 Transpiler heuristics/version changes can alter the result; the saved verified QASM is the reference, not an expectation of byte-identical rebuilding. Running `src/full_mux.py` directly searches 200 seeds and overwrites its output as improvements are found.
+
+## Latest continuation result (September 8, 2026)
+
+The first shell-mux implementation was completed in `src/shell_mux.py`. It
+loads radius bits with a five-input y5 Shannon split, selects with Toffolis,
+clears the delta bank, and reuses those wires for the existing A/B/V phase
+construction. The initial CNOT-only selection was invalid and is retained as
+`artifacts/shell_mux_candidate0.qasm`; it failed with phase error 2. The
+corrected `artifacts/shell_mux_candidate1.qasm` passed exhaustive verification
+on all 4096 inputs: depth 969, CX 1244, width 18, SHA
+`6c5a35313c2f26509426fde8bbf6195fb61da742cf86576f7677fbc0c699dfa4`.
+Seeds 1..7 measured 949, 965, 957, 965, 961, 969, 959, so this straightforward
+split is closed as a negative direction. The baseline remains unchanged at
+depth 536 / CX 1020 with SHA
+`93857f2dac80456feaf9c97ac464ee382eb532d8efe87e3622689103223683f0`.
+The next highest-value experiment is a genuine threshold-shell phase replacing
+the binary comparator, with exact exported-QASM verification.
+
+That experiment has now been completed as `src/threshold_shell.py`. The
+verified `artifacts/threshold_shell_candidate1.qasm` uses `V,L,T,P,E`, direct
+`A XOR V`/`B XOR V` loading, explicit radius-eight handling, and no binary
+comparator. It passed all 4096 exhaustive inputs with zero ancilla leakage, but
+scored depth 4437 / CX 3854 / width 18, SHA
+`4eb6fc7fe03909714c8f135bc3512e260768c6ffdf8a8decc69282d810f3b7e6`.
+The failure is architectural: each shell condition was emitted as an
+independent high-control phase cube, so removing arithmetic created a much
+larger unshared phase network. Do not treat direct threshold-conditioned phase
+cube enumeration as viable. A future attempt would need a shared shell/UCR or
+reusable folded-distance predicate before this branch is worth continuing.
