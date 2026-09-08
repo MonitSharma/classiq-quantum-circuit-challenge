@@ -778,6 +778,18 @@ of the 64 y states produced a wrong `V` value at `y=35`. Ordinary reversible
 recursion cannot treat a live predicate as a clean scratch target; a valid
 dirty-ancilla route needs a dedicated dirty-target identity.
 
+### Hybrid direct-A load: verified negative depth result
+
+`src/hybrid_a_mux.py` replaced only the simple square-row feature `A` with a
+formula-based compute into q15, using q16 plus q12..q14 as temporary clean
+workspace and restoring it before the radius lookup. The other features and
+the phase identity remained unchanged. Across eight seeds, the best
+`artifacts/hybrid_a_mux.qasm` measured **643 depth / 981 CX / width 18** and
+passed all 4096 basis inputs with zero ancilla leakage (SHA
+`12782997ceaafc2dd4f4bc7aa375dac0f8dbff3b1d5779acf3716267c9eddc2f`). The
+lower CX count does not compensate for the added depth, so this hybrid is not
+a submission improvement.
+
 ### Berkeley ABC AIG diagnostic: negative classical lower-level route
 
 The built `experiments/abc/abc` binary was run on the exact 12-input logo

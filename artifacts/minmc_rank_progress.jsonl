@@ -11,3 +11,4 @@
 {"experiment":"walsh_gray_section_sweep","source":"qiskit.synthesis.synth_cnot_phase_aam","sections":[1,2,3,4,6,12],"all_scores":[8168,4094],"result":"no section-size improvement after U3/CX serialization"}
 {"experiment":"abc_aig_diagnostic","source":"experiments/abc/abc","flows":{"dc2":{"and":224,"level":22},"rewrite_refactor_balance":{"and":247,"level":17},"syn2":{"and":247,"level":19}},"result":"negative; no compact reversible computation graph"}
 {"experiment":"dirty_feature_scratch_probe","status":"rejected","counterexample":"y=35","reason":"ordinary clean-target recursion used live A as dirty scratch and produced incorrect V"}
+{"experiment":"hybrid_direct_A_mux","source":"src/hybrid_a_mux.py","candidate":"artifacts/hybrid_a_mux.qasm","depth":643,"cx":981,"width":18,"sha256":"12782997ceaafc2dd4f4bc7aa375dac0f8dbff3b1d5779acf3716267c9eddc2f","verified":true,"seeds":8,"result":"negative on depth; lower CX but direct-A serialization dominates"}

@@ -23,6 +23,7 @@ No candidate beat this result. No circuit was submitted to the external challeng
 - QROM-tree radius oracle passed exhaustive verification but measured 777 depth / 606 CX / width 18; negative.
 - GraySynth section-size sweep (`1,2,3,4,6,12`) reproduced 8168 depth / 4094 CX for every setting; negative.
 - Berkeley ABC AIG flows remained at 224–247 AND nodes and levels 17–22; no compact reversible computation graph was exposed.
+- Hybrid direct-A loading passed exhaustive verification but measured 643 depth / 981 CX / width 18; negative on depth.
 - Shared delta-stream schedule: 2183 depth / 1649 CX; negative.
 - Shared XAG, joint pair sharing, retained-factor schedules, quadrant-rank compilation, and direct quadrant phase controls: all correct where accepted, but substantially worse than 531.
 - PyZX extraction: 2655 depth / 3022 CX; negative.
