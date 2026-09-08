@@ -86,6 +86,14 @@ measured 139-depth block clears that local gate, but the failure rate and
 current formula/XAG backend, basis search, or generic global cleanup is not
 justified by these measurements.
 
+Finally, `src/gl10_actual_search.py` ran an 80-step bounded GL(10,2)
+transvection search from each of the three known ten-term bases, compiling
+and serializing every candidate before scoring it. The best scores were
+779/736 for `pair_terms`, 795/754 for `rank_terms`, and 803/751 for
+`rank_mc_pareto_terms` (depth/CX). No candidate improved the trusted
+779-depth pair baseline, so the basis lever is closed under this search
+budget.
+
 As a follow-up, `src/pebble_xag.py` searched a chain-restricted XAG family in
 which each AND node depends on the immediately preceding AND node. This is a
 more pebble-friendly dependency shape, but it is not expressive enough to

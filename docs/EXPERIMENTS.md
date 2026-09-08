@@ -731,3 +731,9 @@ per basis. The partial pair-depth sums were 771, 744, and 793 for
 `pair_terms`, `rank_terms`, and `rank_mc_pareto_terms`, respectively, before
 missing terms were included. The chain restriction therefore does not provide
 a route below the protected 531-depth oracle.
+
+`src/gl10_actual_search.py` then performed an 80-step GL(10,2) transvection
+search from each known ten-term basis, compiling and serializing each
+candidate before scoring it. Best results were 779/736 for `pair_terms`,
+795/754 for `rank_terms`, and 803/751 for `rank_mc_pareto_terms`; no candidate
+improved the trusted 779-depth pair baseline.
