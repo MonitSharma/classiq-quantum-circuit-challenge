@@ -770,3 +770,12 @@ ancilla leakage and SHA
 `9a0d5a2a6d2869ae82030cb50671efc3bb7faeb6641a29dcb524e1721a09cfd8`. The
 tree lookup is correct, but its surrounding radius/comparison and phase
 work dominate; the lookup-only number is not an oracle score.
+
+### Berkeley ABC AIG diagnostic: negative classical lower-level route
+
+The built `experiments/abc/abc` binary was run on the exact 12-input logo
+benchmark. Its `dc2` flow reached 224 AND nodes at level 22; the balanced
+rewrite/refactor flow remained at 247 nodes and level 17, and `syn2` remained
+at 247 nodes and level 19. These are classical AIG measurements, not quantum
+scores, but they show that ABC does not expose a compact hidden computation
+graph suitable for the six-clean-ancilla reversible compiler.
