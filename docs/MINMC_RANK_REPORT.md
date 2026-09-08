@@ -2,10 +2,10 @@
 
 ## Conclusion
 
-The side-separated rank hypothesis was tested through its single-pair gate. The
-x and y computations do schedule concurrently, but the available repository
-XAG backend cannot produce valid one-output-plus-two-scratch schedules for most
-factor functions. The full rank oracle was therefore not attempted.
+The side-separated rank hypothesis was tested through its single-pair gate. A
+new bounded exact XOR-AND backend solved and independently verified 29 of the
+30 deduplicated factors, but the resulting three-ancilla pebbling gate still
+fails for most factors. The full rank oracle was therefore not attempted.
 
 ## Backend and inventory
 
@@ -14,10 +14,14 @@ exact target and recorded 30 deduplicated six-variable functions in
 `artifacts/rank_factor_inventory.json`. The supplied Pareto factorization was
 restored only after this exact check.
 
-The backend used for the reversible probe was the existing formula-derived
-XAG graph (`src/xag.py`) with bounded pebbling. A genuine external
-`xag_minmc_resynthesis` or exact SAT minimum-MC backend was not available in
-the installed environment, so no minimum-MC claim is made.
+The new scalar backend is `src/minmc_xag.py`: a bounded Z3 search over XAGs
+whose AND inputs and output are arbitrary XORs of constants, six inputs, and
+earlier AND nodes. It searched 0..6 AND nodes with a 15-second solver timeout
+per bound and wrote `artifacts/minmc_factor_cache.json`. Independent integer
+truth-table evaluation verified every returned model: **29/30** unique
+functions solved; the unresolved function is truth table `17997355542380544`.
+This is a bounded exact result, not a proof that the unresolved function needs
+more than six ANDs.
 
 ## Reversible and parallel results
 
@@ -43,6 +47,15 @@ The strict XAG probe produced usable pairs for only 2/10 `pair_terms`, 1/10
 be assembled from this backend, no complete rank-oracle depth/CX/width exists
 for this experiment.
 
+The genuine bounded-minMC models were then compiled by
+`src/minmc_rank_pair.py` using the same explicit three-live-value pebbling
+constraint. Only one complete Pareto pair was pebbleable: term 7 measured
+x **69 depth / 65 CX**, y **55 / 47**, parallel compute **69 / 112**, and the
+full compute–CZ–uncompute block **139 depth / 215 CX**, width 18. The other
+available models failed the exact two-scratch cleanup search; one pair was
+also unavailable because it used the unresolved factor above. Thus minimum
+AND count alone did not translate into a cheaper reversible circuit.
+
 ## Comparison and bottleneck
 
 | reference | depth | CX | width |
@@ -65,7 +78,10 @@ The surviving pair was locally exhaustively checked; it was not a complete
 challenge oracle.
 
 The genuinely different next step is to integrate a real six-variable
-minimum-MC/XAG database or bounded exact SAT synthesis, then rerun the same
-side-separated compiler. Repeating the current formula/XAG backend, basis
-search, or generic global cleanup is not justified by these measurements.
-
+minimum-MC/XAG database or improve the bounded SAT models with a reversible
+cost objective and a pebble-aware synthesis constraint. The immediate
+decision gate is to find a single complete pair below roughly 450 depth; the
+measured 139-depth block clears that local gate, but the failure rate and
+215-CX cost mean a ten-term oracle is not yet justified. Repeating the
+current formula/XAG backend, basis search, or generic global cleanup is not
+justified by these measurements.

@@ -1,3 +1,5 @@
 {"experiment":"rank_factor_inventory","source":"src/rank_factor_inventory.py","unique_functions":30,"status":"completed"}
 {"experiment":"side_separated_formula_pair_probe","source":"src/parallel_rank_pair.py","status":"failed_gate","reason":"existing formula backend exceeds two scratch ancillas for most factor functions"}
 {"experiment":"side_separated_xag_pair_probe","source":"src/parallel_rank_pair_xag.py","status":"failed_gate","valid_pairs":{"pair_terms":2,"rank_terms":1,"rank_mc_pareto_terms":2},"best_pair_depth":50,"best_pair_cx":65,"width":18,"local_verification":"one surviving pair exhaustive sparse basis check passed"}
+{"experiment":"bounded_exact_minmc_xag","source":"src/minmc_xag.py","backend":"z3_bounded_xag","unique_functions":30,"solved":29,"max_and":6,"timeout_ms_per_bound":15000,"independent_verification":"all returned models passed"}
+{"experiment":"bounded_minmc_side_pair_probe","source":"src/minmc_rank_pair.py","status":"failed_gate","complete_pairs":{"pair_terms":0,"rank_terms":0,"rank_mc_pareto_terms":1},"best_pair_depth":139,"best_pair_cx":215,"width":18,"unresolved_truth_table":17997355542380544}

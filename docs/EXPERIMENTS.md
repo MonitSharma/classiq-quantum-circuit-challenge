@@ -703,3 +703,22 @@ unchanged at 1020; `KAKDecomposition` gives 536. This closes the open question
 in `CURRENT_DESIGN.md`: global rewriting recovers about 1 percent and cannot
 approach the leader range, exactly as the 403-layer per-qubit serialisation
 bound predicted.
+
+### Bounded exact min-MC XAG probe: verified negative gate result
+
+`src/minmc_xag.py` searched exact six-variable XOR-AND representations with
+Z3, testing 0 through 6 AND nodes and allowing arbitrary affine inputs at
+each node and at the output. Of 30 deduplicated rank-factor functions,
+29 models were returned and independently verified by integer truth-table
+evaluation; one timed out within the configured bounded search. The cache is
+`artifacts/minmc_factor_cache.json`.
+
+`src/minmc_rank_pair.py` mapped those models into the existing explicit
+three-live-value reversible pebble schedule, with disjoint x/y banks and
+`qubits_initially_zero=False` in every transpilation. Only one complete
+Pareto pair survived cleanup: 139 depth / 215 CX / width 18. Most models
+were not pebbleable with one output plus two scratch wires, and the unresolved
+factor prevented one pair. This does not beat the protected 531/1020 best and
+does not justify constructing a ten-term oracle. It establishes that minimum
+AND count without a reversible-cost or pebbling objective is the wrong
+optimization target for this architecture.
