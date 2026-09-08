@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/phase_pebble_rank_mc.qasm",
+  "sha256": "a0a57e782d707b64d4c5c667445582fc5efa85c76651f986bd028a808eb9bd30",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 3163,
+  "cx_count": 3318,
+  "max_error": 1.020607539499009e-13,
+  "ancilla_error": 3.724318388574864e-15,
+  "discarded_amplitude_bound": 1.5186062018058893e-13,
+  "peak_sparse_support": 512,
+  "elapsed_seconds": 6.654309988021851,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

@@ -178,6 +178,19 @@ The gain comes from parallel depth, even though the new best uses more CX gates 
 
 ## Classiq synthesis experiments
 
+## Phase-aware dynamic six-ancilla compiler
+
+`src/phase_pebble_rank.py` tested the requested architecture in which rank
+factor roots are expanded into GF(2)-cancelled phase edges and nonlinear XAG
+nodes are dynamically computed from one shared pool of six clean ancillas.
+All 30 rows across `pair_terms`, `rank_terms`, and `rank_mc_pareto_terms` were
+feasible; exact pair metrics are recorded in
+`artifacts/phase_pebble_pair_metrics.json`. The complete independent-edge
+`rank_mc_pareto_terms` oracle was exhaustively verified at **depth 3163 / 3318
+CX / width 18**, so it is correct but far worse than the protected 531-depth
+best. The bottleneck is per-edge recomputation. See
+`docs/PHASE_PEBBLE_REPORT.md` for the full result and next path.
+
 SDK login completed and native synthesis worked. These trials were real synthesis runs, not merely proposed code.
 
 - `classiq_search.py`: high-level QNum bitmask/formula expressions produced excessive width (observed 67 or 153), unsuitable for 18-qubit constraint.
