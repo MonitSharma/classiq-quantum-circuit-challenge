@@ -1,3 +1,6 @@
+import os
+# Avoid the broken macOS Keychain backend in Classiq 1.29.
+os.environ.setdefault('CLASSIQ_TEXT_ONLY', 'true')
 from classiq import *
 from classiq.qmod.symbolic import pi
 @qperm

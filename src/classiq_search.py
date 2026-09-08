@@ -1,4 +1,8 @@
 import sys, json, re, os
+# macOS Keychain currently fails with Classiq 1.29 (-50, "Unknown Error").
+# Use the SDK's file-backed text-only authentication by default; callers can
+# still override this explicitly with CLASSIQ_TEXT_ONLY=false/true.
+os.environ.setdefault('CLASSIQ_TEXT_ONLY', 'true')
 from pathlib import Path
 import classiq
 from classiq import *
