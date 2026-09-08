@@ -471,6 +471,41 @@ computed into existing ancillas and reused across the lookup/phase/uncompute
 stages. BDDs should therefore remain a source of candidate shared intermediates,
 but not the next primary implementation architecture.
 
+### Cofactor inventory (September 9, 2026)
+
+`src/bdd_cofactor_mine.py` reconstructs the exact target truth table under the
+documented order and enumerates the reachable reduced-BDD nodes. It found 109
+reachable nonterminal nodes and 109 distinct nonconstant cofactor functions,
+matching the previously reported approximately-91 state count only up to the
+different node-count convention used by the analysis. The inventory is saved
+at `artifacts/bdd_cofactor_inventory.json` with each node's exact 4096-point
+truth mask, support, and population.
+
+This is an analysis milestone, not a circuit result. The next implementation
+should select a small set of these masks with shared support and test whether
+they can replace repeated feature loads under six clean ancillas. The node
+inventory itself does not justify a depth claim.
+
+`src/bdd_cofactor_score.py` then scored 64 cofactors with support size at most
+six using exact compute/phase/uncompute circuits. The cheapest nontrivial
+cofactors cost 11 depth / 5 CX, while the most complex six-input cofactors
+cost 216 depth / 137 CX. This confirms that the BDD exposes cheap local
+predicates, but it does not yet show that their phase contributions can be
+shared globally; no full-oracle QASM was generated or accepted.
+
+`src/bdd_reversible.py` tested the direct Shannon recurrence
+`f = lo XOR (variable AND (lo XOR hi))` with exact Toffolis and five scratch
+ancillas beside the output ancilla. It exhausted the six-clean-ancilla budget
+before reaching the root, so no QASM was emitted. This closes the naive direct
+BDD evaluator; a viable BDD route would need dirty-input pebbling or a more
+aggressive multi-output schedule.
+
+`src/bdd_dirty_reversible.py` implemented the corrected dirty-target sequence
+(`aux ^= delta`, controlled use, uncompute, correction controlled use). It fit
+within width 18 but produced depth **3,949,563** and **2,581,968 CX**. This is
+decisively negative; the candidate is retained as a diagnostic and was not
+exhaustively verified.
+
 ## Ideas considered but not implemented or validated
 
 - PyZX/pytket global simplification of compute/phase/uncompute: packages installed; optional bounded diagnostic after an architectural change, not the primary search direction.
