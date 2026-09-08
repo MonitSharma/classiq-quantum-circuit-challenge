@@ -790,6 +790,14 @@ passed all 4096 basis inputs with zero ancilla leakage (SHA
 lower CX count does not compensate for the added depth, so this hybrid is not
 a submission improvement.
 
+The stronger two-feature variant `src/hybrid_ab_mux.py` directly computed both
+`A` and `B` with clean scratch before loading only `R0..R2,V` by UCR. It also
+passed all 4096 basis inputs, but its best of eight seeds measured **737 depth
+/ 913 CX / width 18**, SHA
+`ca7c59ea8d99503a28e64cee5a0a6f86b89e1755184fe73d74ea339b853a9b74`. Direct
+compute/uncompute and the changed ancilla critical path outweighed the two
+removed loads; simple-feature replacement is therefore closed.
+
 ### Berkeley ABC AIG diagnostic: negative classical lower-level route
 
 The built `experiments/abc/abc` binary was run on the exact 12-input logo
