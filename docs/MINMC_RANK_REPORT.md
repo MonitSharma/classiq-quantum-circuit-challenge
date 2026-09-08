@@ -94,6 +94,13 @@ and serializing every candidate before scoring it. The best scores were
 779-depth pair baseline, so the basis lever is closed under this search
 budget.
 
+The remaining dirty-workspace prototype, `src/dirty_esop_pair.py`, computes
+each ESOP factor directly into clean output wires using relative-phase MCX
+blocks, then applies the exact inverse. It is correct on all 4096 basis
+inputs, but the complete pair oracle measures **2156 depth / 1346 CX / width
+18**. Avoiding the clean-pebble failure through direct ESOP therefore does
+not provide a competitive primitive.
+
 As a follow-up, `src/pebble_xag.py` searched a chain-restricted XAG family in
 which each AND node depends on the immediately preceding AND node. This is a
 more pebble-friendly dependency shape, but it is not expressive enough to

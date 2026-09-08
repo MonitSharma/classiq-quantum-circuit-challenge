@@ -737,3 +737,12 @@ search from each known ten-term basis, compiling and serializing each
 candidate before scoring it. Best results were 779/736 for `pair_terms`,
 795/754 for `rank_terms`, and 803/751 for `rank_mc_pareto_terms`; no candidate
 improved the trusted 779-depth pair baseline.
+
+### Dirty-input ESOP pair compiler: verified negative result
+
+`src/dirty_esop_pair.py` tested the remaining dirty-workspace idea by
+computing each six-variable ESOP directly into q12 and q13 with relative-phase
+MCX blocks, applying CZ, and composing the exact inverse compute sequence.
+The resulting standalone `artifacts/dirty_esop_pair.qasm` passed all 4096
+basis inputs with zero ancilla leakage, but measured **2156 depth / 1346 CX /
+width 18**, so MCX cost dominates and the approach is closed.
