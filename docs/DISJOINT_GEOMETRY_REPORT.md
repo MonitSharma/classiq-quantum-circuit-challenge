@@ -138,3 +138,16 @@ with zero ancilla leakage. Its SHA-256 is
 This is a genuine improvement over 708, but remains above 531 and the
 historical leaderboard range. The remaining gap is still the near-additive
 serialization of the 277-layer rectangle block and 385-layer disk block.
+
+## Bounded post-processing
+
+The 659-depth candidate was passed through the existing safe post-processing
+pipeline. `pytket.CliffordSimp` followed by Qiskit U3/CX lowering produced
+`artifacts/disjoint_postprocessed_649.qasm` at **649 depth / 727 CX / width
+18**. `ThreeQubitSquash` reached the same depth and the other tested cleanup
+passes did not improve it. The 649 candidate passed exhaustive verification
+on all 4096 inputs with zero ancilla leakage; its SHA-256 is
+`d752c2972c16210417ef683e8ce2a5afd4501df2158829592e31dbd7911f1265`.
+
+This is the current best result in the disjoint branch, but it is still not a
+leaderboard-level or protected-531 improvement.

@@ -888,3 +888,9 @@ measured 277/236 depth/CX and the complete verified oracle measured
 `34b34ef926b5e7ff2748334033801a1c569f1a6009bbe31b9ebb86a8583f7007`.
 This supersedes 708 as the best disjoint-geometry candidate, but remains
 above the protected 531 result.
+
+Safe post-processing of that genuinely new candidate reached a verified
+**649/727/18** using pytket `CliffordSimp` followed by Qiskit U3/CX lowering.
+The exact artifact is `artifacts/disjoint_postprocessed_649.qasm`, SHA
+`d752c2972c16210417ef683e8ce2a5afd4501df2158829592e31dbd7911f1265`.
+Other bounded cleanup passes did not beat 649.

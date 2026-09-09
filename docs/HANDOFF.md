@@ -202,6 +202,11 @@ A bounded GL(2,2) basis search found a better shared rectangle representation,
 This is the current best result in the disjoint branch, but it remains above
 the protected 531-depth artifact.
 
+Safe post-processing of the 659 candidate produced the current disjoint-branch
+best, `artifacts/disjoint_postprocessed_649.qasm`, at **649/727/18**. It was
+exhaustively verified with zero ancilla leakage and SHA
+`d752c2972c16210417ef683e8ce2a5afd4501df2158829592e31dbd7911f1265`.
+
 The 531 result is a useful submission-ready baseline, but it is not close to
 the historical leader at depth 291. The measurements point away from more
 seed tuning or global peephole rewriting: the current architecture pays three
