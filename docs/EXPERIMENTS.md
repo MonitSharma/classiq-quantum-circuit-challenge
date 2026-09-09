@@ -1161,12 +1161,12 @@ the recursive evaluator is not viable.
 
 An exhaustive single-shear screen followed by all 870 nonsingular two-shear
 compositions, then 24,240 nonsingular three-shear compositions, found a better
-encoding. Two successive one-shear extensions around that winner produced
-matrix rows `(1,23,21,8,17,32)` and **527 depth / 968 CX / 18 qubits**.
+encoding. Three successive one-shear extensions around that winner produced
+matrix rows `(9,23,21,8,17,32)` and **527 depth / 950 CX / 18 qubits**.
 The exact QASM is `artifacts/528/full_mux_feature_linear_528.qasm`, SHA-256
-`06ac6dfde14352fb368a6211ddd949917f813e016864483c5680e413a3fc4e66`.
+`f83b8695497cca51d13b29e90d6eff184d5cb6def7619511caca79f794192309`.
 Exhaustive verification covered all 4096 inputs with maximum error
-`1.55e-14` and zero ancilla leakage; five dense full-support checks passed
-with maximum error `6.32e-16`. The matching logical QMOD is stored beside the
+`1.46e-14` and zero ancilla leakage; five dense full-support checks passed
+with maximum error `6.11e-16`. The matching logical QMOD is stored beside the
 QASM. This is now the protected local best, although it remains far above the
 leaderboard target.

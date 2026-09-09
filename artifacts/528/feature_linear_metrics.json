@@ -1,11 +1,11 @@
 {
   "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/528/full_mux_feature_linear_528.qasm",
-  "sha256": "06ac6dfde14352fb368a6211ddd949917f813e016864483c5680e413a3fc4e66",
+  "sha256": "f83b8695497cca51d13b29e90d6eff184d5cb6def7619511caca79f794192309",
   "depth": 527,
-  "cx": 968,
+  "cx": 950,
   "width": 18,
   "matrix_rows": [
-    1,
+    9,
     23,
     21,
     8,

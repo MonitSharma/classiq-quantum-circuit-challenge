@@ -515,13 +515,13 @@ verified 530/531 package.
 
 The affine feature search was extended from single shears to all 870
 nonsingular two-shear compositions and 24,240 nonsingular three-shear
-compositions at the winning physical assignment. Two successive one-shear
-extensions around that winner, with matrix rows `(1,23,21,8,17,32)`, produced
+compositions at the winning physical assignment. Three successive one-shear
+extensions around that winner, with matrix rows `(9,23,21,8,17,32)`, produced
 the current verified best:
 
 ```text
-depth 527 / CX 968 / width 18
-SHA 06ac6dfde14352fb368a6211ddd949917f813e016864483c5680e413a3fc4e66
+depth 527 / CX 950 / width 18
+SHA f83b8695497cca51d13b29e90d6eff184d5cb6def7619511caca79f794192309
 ```
 
 `artifacts/528/full_mux_feature_linear_528.qasm` passed exhaustive verification
