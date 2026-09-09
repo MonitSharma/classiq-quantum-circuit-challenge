@@ -1192,6 +1192,12 @@ native `rz/sx/x/cx` intermediate-basis pipeline followed by exact U3/CX
 lowering reached at best 525/950, so it does not replace the accepted 524
 artifact.
 
+An assignment-aware post-processing screen then evaluated all 720 physical
+feature assignments by raw score and ran pytket on the 30 strongest raw
+candidates. Every raw 527/950 tie in that set post-processed to **524/950**;
+no assignment improved the accepted result. Thus the critical-wire imbalance
+does not expose a remaining assignment-only lever.
+
 ## Sparse-Walsh multiplexer experiment (September 10, 2026)
 
 The UCR implementation was changed to visit only nonzero Walsh vertices and
