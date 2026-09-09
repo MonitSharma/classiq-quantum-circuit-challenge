@@ -1,0 +1,18 @@
+{
+  "x_retained": [
+    15
+  ],
+  "phase_edges": 8,
+  "compute": 10,
+  "uncompute": 10,
+  "max_live": 6,
+  "representation": "bounded_low_and_xag",
+  "term_index": 0,
+  "depth": 222,
+  "cx": 225,
+  "width": 18,
+  "qasm": "artifacts/direct_product_retention_term0_exact_development.qasm",
+  "status": "exhaustively_verified_product_term",
+  "exhaustive_report": "artifacts/direct_product_retention_term0_exact_development.exhaustive.json",
+  "sha256": "c28b2438136f89d1348c054b51c66dd6d85f96f8365a2ef2f849ab90575c4ff2"
+}

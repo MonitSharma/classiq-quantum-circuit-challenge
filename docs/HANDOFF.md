@@ -672,3 +672,43 @@ This is not an impossibility proof because it uses the existing formula/XAG
 representation and a bounded planner state budget. It does show that the
 original rank basis cannot directly support the planned 3+3 prototype; future
 work needs a new multi-output or phase/state synthesis primitive.
+
+The follow-up synchronized three-term rank batch is exact but not complete:
+`src/rank_batch_ucr.py` and `artifacts/rank_batch_ucr_012_development.qasm`
+implement terms `(0,1,2)` from `rank_terms` at **257/535/18**, with an
+exhaustive product-phase report and zero ancilla leakage.  Since ten terms need
+multiple serialized batches, this does not improve the protected 524-depth
+oracle.  A separate exact phase-state retention probe for one product term is
+`src/direct_product_retention.py`; its checked term-0 artifact is
+`artifacts/direct_product_retention_term0_exact_development.qasm` at
+**222/225/18**.  Neither artifact is a complete logo oracle or submission
+candidate.
+
+For rank term 0, a retained-product pilot kept the nonlinear x-root live while
+streaming eight y-side phase edges. The first 162-depth RCCX version was
+invalid because relative phases did not cancel and pooled temporaries were not
+forced to an exact retained set; it remains only as
+`artifacts/direct_product_retention_term0_development.qasm`.
+
+The corrected exact-CCX version is
+`artifacts/direct_product_retention_term0_exact_v2_development.qasm`, at
+**508/407/18**. It passed `src/verify_product_term.py` on all 4096 inputs for
+the standalone target `(-1)^(a_0(x)b_0(y))`, with maximum error `5.73e-15`
+and zero ancilla leakage. SHA-256:
+`4847944094e71f419e4574ee689cdcb535f39a014c0729b760b7b185815faca5`.
+This is a correctness baseline, not a complete-logo improvement. Exact
+cleanup eliminated the apparent 162-depth advantage, so a useful future
+phase/state construction must prove relative-phase cancellation locally.
+
+`src/rank_batch_ucr.py` then implemented a genuine 3+3 rank batch for terms
+`(0,1,2)`: synchronized x/y UCR loads, three parallel CZ couplings, and exact
+inverse cleanup. The new partial-oracle artifact
+`artifacts/rank_batch_ucr_012_development.qasm` measures **257/535/18** and
+passed `src/verify_product_term.py` on all 4096 inputs for the XOR of the three
+rank products, with maximum error `1.27e-14` and ancilla leakage
+`2.18e-15`. SHA-256:
+`cdb69043c2f87599b203881d40377332e2066ad4d99a49d5c8fdb43a7a395410`.
+A seed screen over seeds 0--7 kept depth fixed at 257, with CX counts from
+511 to 555. Thus the UCR batch validates the parallel architecture but does
+not by itself meet the full-logo target; reducing the ~128-layer bank loads or
+sharing them across rank batches remains necessary.

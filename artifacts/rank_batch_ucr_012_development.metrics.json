@@ -1,0 +1,13 @@
+{
+  "indices": [
+    0,
+    1,
+    2
+  ],
+  "basis": "rank_terms",
+  "seed": 20260909,
+  "depth": 257,
+  "cx": 535,
+  "width": 18,
+  "qasm": "artifacts/rank_batch_ucr_012_development.qasm"
+}

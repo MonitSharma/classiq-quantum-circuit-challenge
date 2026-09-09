@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/direct_product_retention_term0_exact_development.qasm",
+  "sha256": "c28b2438136f89d1348c054b51c66dd6d85f96f8365a2ef2f849ab90575c4ff2",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 222,
+  "cx_count": 225,
+  "max_error": 2.8787131373669184e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.2114498682488452e-14,
+  "peak_sparse_support": 128,
+  "elapsed_seconds": 0.43178272247314453,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

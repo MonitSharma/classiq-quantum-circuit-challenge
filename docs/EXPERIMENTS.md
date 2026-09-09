@@ -141,6 +141,78 @@ original basis cannot be passed directly to the proposed 3+3 prototype, so a
 new multi-output or phase/state synthesis primitive is required before a full
 rank-batching oracle is attempted.
 
+## Development phase-state and rank-batch probes (September 9, 2026)
+
+Two bounded probes were checked against the exact serialized product semantics.
+The synchronized three-term rank batch in `src/rank_batch_ucr.py` computes three
+x-side factors and three y-side factors in disjoint three-wire banks, applies
+three CZ phase edges, and clears both banks.  The selected batch `(0, 1, 2)`
+from `rank_terms` is exact on all 4,096 coordinate inputs at **257 depth / 535
+CX / 18 qubits**, with zero ancilla leakage.  Its report and SHA-matched QASM
+are `artifacts/rank_batch_ucr_012_development.product.exhaustive.json` and
+`artifacts/rank_batch_ucr_012_development.qasm`.  It is not a complete oracle:
+ten rank terms would require multiple serialized batches, so this does not
+replace the protected 524-depth circuit.
+
+The phase-state retention probe in `src/direct_product_retention.py` retains
+one x product factor while streaming y phase edges.  The exact compute version
+for rank term 0 is exhaustively checked at **222 depth / 225 CX / 18 qubits**
+with zero ancilla leakage; the matching report is
+`artifacts/direct_product_retention_term0_exact_development.exhaustive.json`.
+This is a single-term primitive only.  The lower 162-depth development variant
+was not accepted because it predates the exact relative-phase check and is not
+used as a claimed result.
+
+## Development branch retained-product pilot (September 9, 2026)
+
+For rank term 0, a retained-product schedule kept the nonlinear x-root live
+while streaming the eight y-side phase edges. The first 162-depth version used
+RCCX toggles and a pooled planner that allowed unrelated temporaries to remain
+live between edges. It failed the full-logo verifier, as expected for a
+partial term, and also failed the product-term verifier due to an actual
+relative-phase error. It is retained as
+`artifacts/direct_product_retention_term0_development.qasm` only as a failed
+diagnostic.
+
+The schedule was tightened to require the exact retained live set after each
+edge and to use exact CCX toggles. The resulting standalone term circuit is
+`artifacts/direct_product_retention_term0_exact_v2_development.qasm`, with
+depth **508**, **407 CX**, and width 18. It passed the new
+`src/verify_product_term.py` exhaustive check on all 4096 inputs for the
+mathematical target `(-1)^(a_0(x)b_0(y))`, with maximum error
+`5.73e-15` and zero ancilla leakage. Its SHA-256 is
+`4847944094e71f419e4574ee689cdcb535f39a014c0729b760b7b185815faca5`.
+This is a correctness baseline, not a full-logo improvement; exact cleanup
+removes the apparent low-depth advantage.
+
+## Development branch three-term UCR batch (September 9, 2026)
+
+`src/rank_batch_ucr.py` implements the proposed 3+3 architecture directly:
+three synchronized x-side UCR loads, three synchronized y-side UCR loads,
+three parallel CZ couplings, and exact inverse UCR cleanup. For rank terms
+`(0,1,2)`, the serialized standalone batch
+`artifacts/rank_batch_ucr_012_development.qasm` measures **257 depth / 535 CX /
+18 qubits**. A seed screen over seeds 0--7 kept depth fixed at 257 (CX range
+511--555), indicating that the UCR schedule depth is structural rather than
+an ordering accident.
+
+The candidate passed `src/verify_product_term.py` against the XOR of those
+three rank products on all 4096 inputs, with maximum error `1.27e-14` and
+ancilla leakage `2.18e-15`. Its SHA-256 is
+`cdb69043c2f87599b203881d40377332e2066ad4d99a49d5c8fdb43a7a395410`.
+This validates the batch architecture as a partial oracle, but four such
+batches would exceed the target. The next useful improvement must reduce the
+per-bank load depth below the UCR ~128-layer regime or combine batches without
+repeating full load/unload stages.
+
+An ESOP alternative, `src/rank_batch_esop_dirty.py`, used the other five
+ancillas as dirty scratch while loading each of the three outputs. It compiled
+to **672 depth / 433 CX**, but failed the three-term exhaustive phase check
+with error 2. The retained-output relative phases do not cancel across the
+multi-output load sequence. Its artifact is retained as
+`artifacts/rank_batch_esop_dirty_012_development.qasm` only as a negative
+diagnostic.
+
 ## Boolean decomposition and reversible logic
 
 | Files | Approach | Outcome / limitation |
