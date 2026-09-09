@@ -1839,3 +1839,18 @@ operations. This is a negative result for ordinary small exact peepholes, not
 for reachable-subspace resynthesis. See
 `artifacts/524/full_mux_feature_linear_tket_524.strict_window_pilot.json` and
 `src/strict_window_pilot.py`.
+## DAG and semantic-window preparation (September 9, 2026)
+
+`src/dag_window_resynthesis.py` now inventories dependency-closed slabs rather
+than serialized gate ranges. Within the 3--6-wire, 12--50-layer bounded search,
+19 candidates were recovered; two late candidates remain serialized-interleaved
+while having no dependency crossing inside the selected active wires. This
+demonstrates that the rejected textual windows were not the whole DAG search,
+but the inventory is analysis-only and has not yet produced a replacement.
+
+`src/semantic_window.py` emits exact 64-state mappings for `(R0,R1)`, `(R1,R2)`,
+`(A,B)`, and `(A,B,V)` from `|y>|0...0>`. `src/semantic_cost.py` measures strict
+Walsh references at 128/128, 109/110, 128/128, and 128/172 depth/CX. BQSKit
+1.2.1 is installed in the project `.venv`; its 8-qubit, 64-state QSearch
+smoke test at max layer 2 exceeded a 60-second bound. No semantic numerical
+candidate or score improvement exists yet.

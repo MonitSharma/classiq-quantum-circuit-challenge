@@ -1,0 +1,372 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/524/full_mux_feature_linear_tket_524.qasm",
+  "sha256": "7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147",
+  "width": 18,
+  "depth": 524,
+  "cx_count": 950,
+  "dag_gate_count": 1773,
+  "critical_gate_count": 580,
+  "max_active_qubits": 6,
+  "candidate_count": 19,
+  "top_windows": [
+    {
+      "seed_gate": 0,
+      "start": 0,
+      "end": 33,
+      "causal_depth": 34,
+      "active_qubits": [
+        4
+      ],
+      "gate_count": 1,
+      "cx_count": 0,
+      "serialized_first": 0,
+      "serialized_last": 0,
+      "serialized_interleaved": false,
+      "critical_seed": false,
+      "score": 34.0
+    },
+    {
+      "seed_gate": 980,
+      "start": 266,
+      "end": 285,
+      "causal_depth": 20,
+      "active_qubits": [
+        4,
+        5,
+        13
+      ],
+      "gate_count": 7,
+      "cx_count": 4,
+      "serialized_first": 974,
+      "serialized_last": 980,
+      "serialized_interleaved": false,
+      "critical_seed": false,
+      "score": 33.333333333333336
+    },
+    {
+      "seed_gate": 1680,
+      "start": 471,
+      "end": 483,
+      "causal_depth": 13,
+      "active_qubits": [
+        4,
+        12,
+        16,
+        17
+      ],
+      "gate_count": 14,
+      "cx_count": 7,
+      "serialized_first": 1676,
+      "serialized_last": 1703,
+      "serialized_interleaved": true,
+      "critical_seed": true,
+      "score": 26.0
+    },
+    {
+      "seed_gate": 0,
+      "start": 0,
+      "end": 21,
+      "causal_depth": 22,
+      "active_qubits": [
+        4
+      ],
+      "gate_count": 1,
+      "cx_count": 0,
+      "serialized_first": 0,
+      "serialized_last": 0,
+      "serialized_interleaved": false,
+      "critical_seed": false,
+      "score": 22.0
+    },
+    {
+      "seed_gate": 987,
+      "start": 271,
+      "end": 283,
+      "causal_depth": 13,
+      "active_qubits": [
+        1,
+        2,
+        12,
+        14,
+        15
+      ],
+      "gate_count": 13,
+      "cx_count": 7,
+      "serialized_first": 983,
+      "serialized_last": 995,
+      "serialized_interleaved": false,
+      "critical_seed": true,
+      "score": 20.8
+    },
+    {
+      "seed_gate": 1001,
+      "start": 285,
+      "end": 297,
+      "causal_depth": 13,
+      "active_qubits": [
+        2,
+        4,
+        5,
+        13,
+        14
+      ],
+      "gate_count": 13,
+      "cx_count": 7,
+      "serialized_first": 997,
+      "serialized_last": 1009,
+      "serialized_interleaved": false,
+      "critical_seed": true,
+      "score": 20.8
+    },
+    {
+      "seed_gate": 1022,
+      "start": 304,
+      "end": 316,
+      "causal_depth": 13,
+      "active_qubits": [
+        1,
+        2,
+        12,
+        14,
+        15
+      ],
+      "gate_count": 14,
+      "cx_count": 7,
+      "serialized_first": 1018,
+      "serialized_last": 1031,
+      "serialized_interleaved": false,
+      "critical_seed": true,
+      "score": 20.8
+    },
+    {
+      "seed_gate": 994,
+      "start": 278,
+      "end": 290,
+      "causal_depth": 13,
+      "active_qubits": [
+        2,
+        5,
+        13,
+        14,
+        15
+      ],
+      "gate_count": 13,
+      "cx_count": 6,
+      "serialized_first": 990,
+      "serialized_last": 1002,
+      "serialized_interleaved": false,
+      "critical_seed": true,
+      "score": 18.2
+    },
+    {
+      "seed_gate": 1694,
+      "start": 485,
+      "end": 497,
+      "causal_depth": 13,
+      "active_qubits": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "gate_count": 13,
+      "cx_count": 6,
+      "serialized_first": 1690,
+      "serialized_last": 1702,
+      "serialized_interleaved": false,
+      "critical_seed": true,
+      "score": 18.2
+    },
+    {
+      "seed_gate": 1764,
+      "start": 511,
+      "end": 523,
+      "causal_depth": 13,
+      "active_qubits": [
+        9,
+        10,
+        11,
+        15,
+        16
+      ],
+      "gate_count": 14,
+      "cx_count": 6,
+      "serialized_first": 1758,
+      "serialized_last": 1771,
+      "serialized_interleaved": false,
+      "critical_seed": true,
+      "score": 18.2
+    },
+    {
+      "seed_gate": 980,
+      "start": 268,
+      "end": 280,
+      "causal_depth": 13,
+      "active_qubits": [
+        4,
+        5,
+        13
+      ],
+      "gate_count": 5,
+      "cx_count": 3,
+      "serialized_first": 976,
+      "serialized_last": 980,
+      "serialized_interleaved": false,
+      "critical_seed": false,
+      "score": 17.333333333333332
+    },
+    {
+      "seed_gate": 1008,
+      "start": 292,
+      "end": 304,
+      "causal_depth": 13,
+      "active_qubits": [
+        2,
+        4,
+        5,
+        11,
+        13,
+        14
+      ],
+      "gate_count": 15,
+      "cx_count": 7,
+      "serialized_first": 1004,
+      "serialized_last": 1018,
+      "serialized_interleaved": false,
+      "critical_seed": true,
+      "score": 17.333333333333332
+    },
+    {
+      "seed_gate": 1624,
+      "start": 456,
+      "end": 468,
+      "causal_depth": 13,
+      "active_qubits": [
+        3,
+        5,
+        12
+      ],
+      "gate_count": 6,
+      "cx_count": 3,
+      "serialized_first": 1620,
+      "serialized_last": 1625,
+      "serialized_interleaved": false,
+      "critical_seed": false,
+      "score": 17.333333333333332
+    },
+    {
+      "seed_gate": 1701,
+      "start": 492,
+      "end": 504,
+      "causal_depth": 13,
+      "active_qubits": [
+        1,
+        2,
+        3,
+        4,
+        12,
+        17
+      ],
+      "gate_count": 13,
+      "cx_count": 7,
+      "serialized_first": 1697,
+      "serialized_last": 1710,
+      "serialized_interleaved": true,
+      "critical_seed": true,
+      "score": 17.333333333333332
+    },
+    {
+      "seed_gate": 1750,
+      "start": 512,
+      "end": 523,
+      "causal_depth": 12,
+      "active_qubits": [
+        6,
+        7,
+        8,
+        13,
+        14
+      ],
+      "gate_count": 12,
+      "cx_count": 5,
+      "serialized_first": 1744,
+      "serialized_last": 1755,
+      "serialized_interleaved": false,
+      "critical_seed": false,
+      "score": 14.4
+    },
+    {
+      "seed_gate": 0,
+      "start": 0,
+      "end": 13,
+      "causal_depth": 14,
+      "active_qubits": [
+        4
+      ],
+      "gate_count": 1,
+      "cx_count": 0,
+      "serialized_first": 0,
+      "serialized_last": 0,
+      "serialized_interleaved": false,
+      "critical_seed": false,
+      "score": 14.0
+    },
+    {
+      "seed_gate": 1764,
+      "start": 513,
+      "end": 523,
+      "causal_depth": 11,
+      "active_qubits": [
+        9,
+        10,
+        11,
+        15,
+        16
+      ],
+      "gate_count": 12,
+      "cx_count": 5,
+      "serialized_first": 1760,
+      "serialized_last": 1771,
+      "serialized_interleaved": false,
+      "critical_seed": true,
+      "score": 13.2
+    },
+    {
+      "seed_gate": 1750,
+      "start": 514,
+      "end": 523,
+      "causal_depth": 10,
+      "active_qubits": [
+        7,
+        8,
+        13,
+        14
+      ],
+      "gate_count": 10,
+      "cx_count": 4,
+      "serialized_first": 1746,
+      "serialized_last": 1755,
+      "serialized_interleaved": false,
+      "critical_seed": false,
+      "score": 12.5
+    },
+    {
+      "seed_gate": 0,
+      "start": 0,
+      "end": 8,
+      "causal_depth": 9,
+      "active_qubits": [
+        4
+      ],
+      "gate_count": 1,
+      "cx_count": 0,
+      "serialized_first": 0,
+      "serialized_last": 0,
+      "serialized_interleaved": false,
+      "critical_seed": false,
+      "score": 9.0
+    }
+  ],
+  "status": "inventory_only_no_replacement_synthesized"
+}
