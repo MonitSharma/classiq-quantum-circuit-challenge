@@ -1230,6 +1230,21 @@ accepted as an oracle artifact; the result is retained only as a bounded
 negative diagnostic against replacing the three synchronized lookup stages
 with a dense full Walsh phase polynomial.
 
+## Random complete GL(6,2) output-frame screen (September 10, 2026)
+
+To test beyond the structured shear family, 100 distinct random nonsingular
+6-by-6 GF(2) output matrices were compiled through the complete affine-feature
+oracle at the fixed winning assignment and routing seeds. The best raw result
+was **538 depth / 1,014 CX / 18 qubits**, with matrix rows
+`(51,32,47,9,48,36)`. A second raw 538-depth matrix was also checked through
+the global pytket pass; the two post-processed results were **533/1006** and
+**527/1028**, respectively. Neither improves the accepted 524/950 artifact.
+
+The full bounded screen is recorded in `artifacts/random_affine_screen.json`
+and `artifacts/random_affine_screen_post.json`. This is evidence that the
+remaining gain is not likely to come from an unstructured output-frame choice;
+a new reversible loading or phase primitive is still required.
+
 Alternative pytket compositions on the exact accepted 524-depth QASM,
 including `FullPeepholeOptimise`, `CliffordSimp`, `ContextSimp`,
 `RemoveRedundancies`, and `OptimisePhaseGadgets` in both orderings, all

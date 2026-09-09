@@ -565,6 +565,14 @@ the cost alone closes dense full-Walsh synthesis as a replacement for the
 three synchronized lookup stages. Additional pytket pass compositions and
 ordering variants all reproduced 524/950 and found no post-processing gain.
 
+A further screen compiled 100 random nonsingular GL(6,2) output frames through
+the complete affine-feature oracle. The best raw result was 538/1014; the two
+raw 538-depth winners post-processed to 533/1006 and 527/1028. Neither beats
+the accepted 524/950 artifact. Results are in
+`artifacts/random_affine_screen.json` and
+`artifacts/random_affine_screen_post.json`; arbitrary dense output frames are
+not the next justified lever.
+
 The sparse-Walsh UCR experiment is also closed. It was exact over all 4096
 inputs and reduced CX to 949, but its variable-length paths serialized the
 outputs to **563 depth / 949 CX / 18 qubits**. Retain it only as a negative
