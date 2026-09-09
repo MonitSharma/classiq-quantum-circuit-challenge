@@ -1138,3 +1138,13 @@ All explored methods and their dispositions are consolidated in
 `docs/EXPERIMENTS.md`. The protected verified 524/950 artifact and original
 notebook are retained; no experimental artifact is promoted without complete
 verification.
+## Coordinate-recoding diagnostic (September 10, 2026)
+
+The proposed QFT-based conditional low-5-bit recentering was implemented in
+`src/qft_recenter.py`. The exact transform was checked on all 64 y inputs and
+compiled standalone to **81 depth / 58 CX / 18 qubits** with
+`qubits_initially_zero=False`. Because this exceeds the agreed `<50-depth`
+go/no-go threshold, close the coordinate-recoding/staircase architecture
+without attempting the larger 11x11 in-place class transform. The artifact and
+metrics are `artifacts/qft_recenter.qasm` and
+`artifacts/qft_recenter_metrics.json`.

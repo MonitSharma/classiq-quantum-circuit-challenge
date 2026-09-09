@@ -1968,3 +1968,12 @@ ancilla restoration, phase behavior, width, and `u3,cx` scoring remain binding.
 Competition mode now requires a new experiment to produce a complete verified
 QASM or directly enable one with a credible path to removing hundreds of
 layers. The protected 524/950 QASM and original notebook remain unchanged.
+## QFT coordinate-recoding diagnostic (September 10, 2026)
+
+An exact QFT-based conditional modular adder was tested as the cheap first
+diagnostic for the proposed coordinate-class/staircase architecture. It
+implements `low5 -> low5 - (19 if y5=0 else 9) mod 32`, verifies all 64 basis
+inputs, and compiles to **81 depth / 58 CX / 18 qubits** in `u3,cx`. This fails
+the agreed `<50-depth` threshold, so the full 11x11 coordinate recoding is
+closed without further implementation. See `src/qft_recenter.py` and
+`artifacts/qft_recenter_metrics.json`.
