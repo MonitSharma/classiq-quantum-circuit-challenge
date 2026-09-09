@@ -1013,6 +1013,22 @@ bounded 8-qubit StateSystem QSearch smoke test (64 states, max layer 2) hit its
 claimed; the next run should use a deliberately small ansatz or specialized
 state-system objective.
 
+## Subspace-quotiented shared-XAG search (September 9, 2026)
+
+The high-degree ANF screen has been implemented in
+`src/semantic_subspace_xag.py`. For each target, monomials of degree at least
+five are extracted and ranked over GF(2); the selected pairs have rank 2 and
+the `(A,B,V)` triple has rank 3, giving analytic shared-AND lower bounds of 4
+and 5 respectively. This upgrades the earlier timeout-through-3 result, but
+only for the stated affine-AND XAG model.
+
+The same script searches canonical GF(2) spans rather than affine-expression
+syntax. At the 4/5-AND minima it reached the second node layer and hit a
+5,000-state cap for all tested groups. The report is
+`artifacts/semantic_discrete/subspace_xag_results.json`; all search statuses
+are bounded `state_limit`, not impossibility proofs. No native RCCX schedule
+or full-oracle candidate exists yet.
+
 ## Discrete shared-XAG screen (September 9, 2026)
 
 `src/multioutput_minmc.py` implements the proposed 64-bit truth-signature

@@ -1855,6 +1855,16 @@ Walsh references at 128/128, 109/110, 128/128, and 128/172 depth/CX. BQSKit
 smoke test at max layer 2 exceeded a 60-second bound. No semantic numerical
 candidate or score improvement exists yet.
 
+## Subspace-quotiented shared-XAG search (September 9, 2026)
+
+`src/semantic_subspace_xag.py` extracts the degree-5-and-higher ANF component
+and uses its GF(2) rank to establish lower bounds within the affine-AND XAG
+model. The tested pairs have rank 2 and lower bound 4 shared ANDs; `(A,B,V)`
+has rank 3 and lower bound 5. A canonical-span search at exactly those minima
+reached layer two before hitting 5,000 states for every group. The report is
+`artifacts/semantic_discrete/subspace_xag_results.json`. These are bounded
+search results, not claims that the minimum circuits do or do not exist.
+
 ## Discrete shared-XAG screen (September 9, 2026)
 
 The first custom multi-output solver, `src/multioutput_minmc.py`, represents
