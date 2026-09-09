@@ -106,6 +106,18 @@ schedule the endpoint functions with shared nonlinear nodes and dirty-ancilla
 lifetime management. Do not claim that vector-XAG or affine-frame optimization
 has already been implemented.
 
+## Persistent parity-frame pilot
+
+The new `persistent_parity.py` core represents arbitrary 18-wire affine frames,
+extracts CX/X circuits into frames, synthesizes general GF(2) transitions, and
+passes exhaustive transition tests. A diagnostic on pair terms 5, 9, 4, and 2
+shows linear-preparation transition sums of 29/24, 16/8, 11/0, and 15/8
+(depth/CX), versus old prepare/restore accounting of 36/26, 22/8, 16/0, and
+18/8. This confirms a real linear-frame opportunity, particularly for terms 5
+and 9. It is not yet an end-to-end nonlinear oracle compiler: RCCX changes the
+semantic signal basis, so live nonlinear signals still need to be represented
+in the frame state before a persistent candidate can be accepted.
+
 Generated artifacts:
 
 - `src/extract_global_endpoints.py`
@@ -123,6 +135,8 @@ Generated artifacts:
 - `src/pair_variants.py`
 - `src/pair_variant_joint_search.py`
 - `src/pair_variant_boundary_dp.py`
+- `src/persistent_parity.py`
+- `src/persistent_parity_pilot.py`
 - `artifacts/global_12_edge_endpoints.json`
 - `artifacts/global_12_edge_identity_check.json`
 - `artifacts/global_endpoint_inventory.json`
@@ -135,3 +149,4 @@ Generated artifacts:
 - `artifacts/pair_variant_inventory.json`
 - `artifacts/pair_variant_dp_search.json`
 - `artifacts/pair_variant_boundary_costs.json`
+- `artifacts/persistent_parity_pilot.json`
