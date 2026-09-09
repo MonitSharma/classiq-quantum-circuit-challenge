@@ -1064,3 +1064,15 @@ the corrected 1,000-state sample reached 21 direction tests with no witness.
 Its report is `artifacts/semantic_discrete/r1_r2_completion_fixed.json`.
 This supersedes the interpretation of the earlier zero-test report. The
 sample is not a lower bound and no native candidate exists yet.
+
+## Suspended direction: semantic shared-XAG synthesis (September 9, 2026)
+
+Suspend this line for the competition objective. The sequence from semantic
+care-state mappings through BQSKit, shared-XAG lower bounds, subspace search,
+and corrected target completion produced no native circuit candidate and no
+improvement over the protected **524 depth / 950 CX** oracle. This does not
+prove that four-AND `(R1,R2)` or five-AND triple constructions are impossible;
+it means further solver engineering is not currently justified. Preserve the
+lower-bound reports and completion code as research evidence, but do not spend
+additional optimization time on this branch unless a new lowering architecture
+appears.

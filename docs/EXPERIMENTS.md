@@ -1895,3 +1895,13 @@ run reached 9 direction tests in 321 states, and a 1,000-state sample reached
 21 direction tests without finding a witness. The corrected report is
 `artifacts/semantic_discrete/r1_r2_completion_fixed.json`; no impossibility
 claim follows.
+
+## Suspended direction: semantic shared-XAG synthesis (September 9, 2026)
+
+Close the current semantic shared-XAG line for competition work. The corrected
+completion search now executes the intended rank-2 direction tests, but the
+1,086-extension sample found no witness and no native circuit or score
+improvement exists. This is not an impossibility proof for the minimum AND
+counts. Keep the analytic lower bounds, subspace search, and completion tools,
+but return the optimization focus to architectures that can directly attack
+the protected 524/950 baseline.
