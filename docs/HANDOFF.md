@@ -585,3 +585,10 @@ radius comparator, then cleared `R0,R1,R2,V` afterward. The exact candidate is
 `artifacts/early_uncompute_ab.qasm` (SHA
 `b179123b316a18964d911fb894674656c36c811ded6151d4a9975b0324584a25`). This
 does not improve the protected 524/950 result.
+
+The left-shape x phase was also rewritten as eight direct ESOP-controlled
+phase cubes, removing the three-target x-UCR. The exact candidate measured
+**795/1049/18**, passed all 4096 inputs with zero ancilla leakage, and is at
+`artifacts/direct_left_phase.qasm` (SHA
+`e84248ff0ece3b8b6f7a83d9ea962b1ed4b1654afd88adbe58c9bfee9c80a70e`). This
+phase-only replacement is worse than the synchronized x-UCR.

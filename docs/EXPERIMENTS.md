@@ -1263,3 +1263,15 @@ qubits**, at `artifacts/early_uncompute_ab.qasm` (SHA
 Exhaustive verification passed all 4096 inputs with zero ancilla leakage. The
 extra boundary and partial-UCR serialization outweigh the possible overlap,
 so feature-lifetime scheduling is not an improvement over 524/950.
+
+## Direct ESOP left-phase replacement (September 10, 2026)
+
+The three-target x-multiplexer was replaced by the logically equivalent
+diagonal phase `A*Square(x) XOR B*Bar(x)`, emitted as eight ESOP-controlled
+phase cubes (four for each x interval). The best of eight seeds was
+**795 depth / 1,049 CX / 18 qubits** at
+`artifacts/direct_left_phase.qasm` (SHA
+`e84248ff0ece3b8b6f7a83d9ea962b1ed4b1654afd88adbe58c9bfee9c80a70e`). It
+passed exhaustive verification on all 4096 inputs with zero ancilla leakage.
+The high-control phase cubes are much more expensive than the synchronized
+x-UCR, so direct ESOP phase emission is closed.
