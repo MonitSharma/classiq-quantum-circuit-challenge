@@ -1,18 +1,27 @@
 {
   "5": {
-    "status": "infeasible_prototype",
-    "error": "frames have different spans"
+    "status": "component_candidate_not_full_oracle",
+    "depth": 449,
+    "cx": 605,
+    "width": 18,
+    "path": "artifacts/persistent_pair_5.qasm"
   },
   "9": {
-    "status": "infeasible_prototype",
-    "error": "frames have different spans"
+    "status": "component_candidate_not_full_oracle",
+    "depth": 415,
+    "cx": 491,
+    "width": 18,
+    "path": "artifacts/persistent_pair_9.qasm"
   },
   "4": {
     "status": "infeasible_prototype",
-    "error": "frames have different spans"
+    "error": "ancilla budget exhausted (pop from empty list)"
   },
   "2": {
-    "status": "infeasible_prototype",
-    "error": "frames have different spans"
+    "status": "component_candidate_not_full_oracle",
+    "depth": 67,
+    "cx": 49,
+    "width": 18,
+    "path": "artifacts/persistent_pair_2.qasm"
   }
 }

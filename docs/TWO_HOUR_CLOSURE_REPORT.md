@@ -132,6 +132,17 @@ signal through a frame transition. This is recorded as an implementation
 blocker, not as a circuit result; the next version must make live-node rebinding
 part of the transition invariant.
 
+The next semantic-frame revision fixed two implementation issues: live-node
+wires are now excluded from temporary allocation, and every transition requires
+exact (not merely FULL-quotiented) control and target truth tables before RCCX.
+Three of four pilot pair paths now compile as internally consistent phase
+components (terms 5, 9, and 2 at 449/605, 415/491, and 67/49 depth/CX,
+respectively). They are not standalone logo oracles and are not a new verified
+submission; exhaustive logo verification correctly rejects each component.
+Term 4 still exhausts the six-ancilla budget. The prototype therefore remains
+research evidence only, while the verified records remain 531/1020/18 and
+753/742/18.
+
 The time-limited semantic XAG model-bank pilot enumerated one model at k and
 one at k+1 for 12 representative functions, independently verified every
 returned model, and found zero predicates reused across different outputs.
