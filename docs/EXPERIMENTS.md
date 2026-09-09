@@ -1468,3 +1468,9 @@ artifact is `artifacts/rank_batch_exact_esop_012_development.qasm`, SHA
 `ec84910237b1ef9fae762ab21af832bd09db9947375ffa19ccd743d2b55fb49b`.
 This closes exact per-cube MCX loading as a depth improvement over the
 257-depth UCR batch.
+
+Global pytket `FullPeepholeOptimise` and `CliffordSimp` rewrites were applied
+to the verified UCR batch. Both preserved the three-term product semantics but
+returned exactly **257 depth / 535 CX**; their serialized outputs share SHA
+`332524c727f4c0dd5491cd6524656e3d09f798a1f242955f83d712246e15bed6`. This
+closes compiler-only post-processing for this batch.
