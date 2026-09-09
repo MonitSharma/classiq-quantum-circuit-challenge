@@ -132,6 +132,12 @@ signal through a frame transition. This is recorded as an implementation
 blocker, not as a circuit result; the next version must make live-node rebinding
 part of the transition invariant.
 
+The time-limited semantic XAG model-bank pilot enumerated one model at k and
+one at k+1 for 12 representative functions, independently verified every
+returned model, and found zero predicates reused across different outputs.
+This is a bounded negative pilot only; the full 42-function pair/endpoint
+bank and union-selection compiler remain future work.
+
 Generated artifacts:
 
 - `src/extract_global_endpoints.py`
@@ -152,6 +158,7 @@ Generated artifacts:
 - `src/persistent_parity.py`
 - `src/persistent_parity_pilot.py`
 - `src/semantic_frame.py`
+- `src/xag_model_bank.py`
 - `artifacts/global_12_edge_endpoints.json`
 - `artifacts/global_12_edge_identity_check.json`
 - `artifacts/global_endpoint_inventory.json`

@@ -2,6 +2,7 @@
   "current_best_verified": {"path": "artifacts/753/pair_boundary_753.qasm", "depth": 753, "cx": 742, "width": 18},
   "persistent_parity_core": "implemented_and_unit_tested",
   "persistent_parity_pilot": {"terms": [5, 9, 4, 2], "status": "span_aware_hybrid_attempted", "end_to_end": false, "all_terms_infeasible": true},
+  "xag_model_bank": {"status": "bounded_pilot", "functions": 12, "models_per_function": "k_and_k_plus_1", "shared_predicates": 0, "full_bank_pending": true},
   "variant_search": {"status": "complete", "best_depth": 755, "best_cx": 734},
   "endpoint_stars": {"status": "complete", "best_depth": 819, "best_cx": 773},
   "next_architecture": "persistent frame with live nonlinear semantic signals plus joint endpoint XAG sharing"
