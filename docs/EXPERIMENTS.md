@@ -1854,3 +1854,14 @@ Walsh references at 128/128, 109/110, 128/128, and 128/172 depth/CX. BQSKit
 1.2.1 is installed in the project `.venv`; its 8-qubit, 64-state QSearch
 smoke test at max layer 2 exceeded a 60-second bound. No semantic numerical
 candidate or score improvement exists yet.
+
+## Discrete shared-XAG screen (September 9, 2026)
+
+The first custom multi-output solver, `src/multioutput_minmc.py`, represents
+all 64 y-input rows as one machine-word truth signature and searches shared
+affine-AND nodes for pairs/triples. The shallow report is
+`artifacts/semantic_discrete/joint_xag_results.json`. No model was returned
+through three shared AND nodes for `(R0,R1)`, `(R1,R2)`, `(A,B)`, or `(A,B,V)`
+under 1-second-per-bound limits. Because each bound timed out or remained
+unresolved, this is not an impossibility result and does not justify native
+RCCX lowering yet. The protected baseline remains 524/950.

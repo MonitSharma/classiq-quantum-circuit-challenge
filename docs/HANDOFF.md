@@ -1012,3 +1012,16 @@ bounded 8-qubit StateSystem QSearch smoke test (64 states, max layer 2) hit its
 60-second stop bound. Therefore no numerical semantic candidate is being
 claimed; the next run should use a deliberately small ansatz or specialized
 state-system objective.
+
+## Discrete shared-XAG screen (September 9, 2026)
+
+`src/multioutput_minmc.py` implements the proposed 64-bit truth-signature
+shared-XAG model: each AND node has affine inputs over the six y bits and all
+earlier nodes, while every requested feature is an affine output of the shared
+node set. The shallow screen is recorded in
+`artifacts/semantic_discrete/joint_xag_results.json`. For `(R0,R1)`, `(R1,R2)`,
+`(A,B)`, and `(A,B,V)`, no model was returned through three shared AND nodes
+with 1-second-per-bound limits. These are solver `unknown_or_above_bound`
+results, not lower bounds; no reversible candidate was produced and no full
+oracle score changed. The next escalation, if justified, is a heuristic
+bit-parallel beam search rather than a blind increase in Z3 timeout.
