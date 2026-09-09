@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/threshold_phase_ucr_ucr_corrected_candidate.qasm",
+  "sha256": "4a6deced9376fd428c177174b695e5c8473f6acf2953f8e8138c4d6879a45845",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 969,
+  "cx_count": 1338,
+  "max_error": 2.001921759818483e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 2.2098360013665627e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 14.337541103363037,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

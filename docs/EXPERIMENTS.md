@@ -1335,3 +1335,13 @@ scores **1265 depth / 1460 CX / 18 qubits**, with zero ancilla leakage. This
 is far worse than the protected 524/950/18 circuit. The direct exact-MCZ
 threshold replacement is closed; it would need a new shared phase-gadget or
 QROM compiler to become competitive.
+
+The follow-up replaced the exact feature cubes with synchronized UCR phase
+blocks and synthesized the x-only zero-branch correction as a six-qubit
+diagonal. It is a second independently verified implementation of the same
+identity: `artifacts/threshold_phase_ucr_ucr_corrected_candidate.qasm`, SHA
+`4a6deced9376fd428c177174b695e5c8473f6acf2953f8e8138c4d6879a45845`, scores
+**969 depth / 1338 CX / 18 qubits**, with all 4096 inputs checked and zero
+ancilla leakage. This is a large improvement over 1265/1460 but remains
+negative against 524/950; the correction does not make the architecture
+leaderboard-competitive.

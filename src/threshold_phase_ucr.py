@@ -19,7 +19,9 @@ import hashlib
 import json
 from pathlib import Path
 
+import numpy as np
 from qiskit import QuantumCircuit, qasm2, transpile
+from qiskit.circuit.library import DiagonalGate
 
 from full_mux import multiplexer
 from mcz import phase_cube
@@ -198,6 +200,64 @@ def build(seed: int = 94) -> QuantumCircuit:
                      seed_transpiler=seed)
 
 
+def build_ucr_corrected(seed: int = 94) -> QuantumCircuit:
+    """Bare-UCR phase-gadget pilot with its exact x-only branch correction."""
+    a = truth(range(29, 54))
+    b = truth(range(39, 44))
+    v = truth(y for y in range(64) if radius(y) > 0)
+    lookup = multiplexer(R + [a, b, v], list(range(12, 18)),
+                         list(range(6, 12)), "y", seed)
+    q = lookup.copy()
+    xs, xb = truth(range(2, 27)), truth(range(27, 49))
+    xo = FULL ^ xs ^ xb
+    q.cx(17, 15); q.cx(17, 16)
+    q.compose(multiplexer([xs, xb, xo], [15, 16, 17], list(range(6)),
+                          "z", seed + 10000), inplace=True)
+    q.z(17); q.cx(17, 16); q.cx(17, 15)
+
+    fold = QuantumCircuit(18)
+    for k in range(4): fold.cx(11, k)
+    fold.x(3)
+    for k in range(3): fold.cx(3, k)
+    fold.x(3)
+    q.compose(fold, inplace=True)
+    q.cx(11, 4); q.x(4)
+    tables = phase_tables(coefficient_masks())
+
+    # Direct feature phases. Their UCR zero branch contributes -pi/2 per
+    # active table entry; T and Q are each used twice around dirty compute.
+    q.compose(multiplexer([tables[0], tables[1], tables[3]], [17, 14, 12],
+                          list(range(6)), "z", seed + 500), inplace=True)
+    q.compose(multiplexer([tables[2]], [17], list(range(6)), "z",
+                          seed + 600), inplace=True)
+    q.ccx(14, 13, 17)
+    q.compose(multiplexer([tables[2]], [17], list(range(6)), "z",
+                          seed + 601), inplace=True)
+    q.ccx(14, 13, 17)
+    q.compose(multiplexer([tables[4]], [17], list(range(6)), "z",
+                          seed + 700), inplace=True)
+    q.mcx([12, 13, 14], 17, mode="noancilla")
+    q.compose(multiplexer([tables[4]], [17], list(range(6)), "z",
+                          seed + 701), inplace=True)
+    q.mcx([12, 13, 14], 17, mode="noancilla")
+
+    # Cancel the branch phase. The table index is the post-fold/guarded x.
+    h = [((tables[0] >> x) & 1) + ((tables[1] >> x) & 1)
+         + ((tables[3] >> x) & 1)
+         + 2 * ((tables[2] >> x) & 1)
+         + 2 * ((tables[4] >> x) & 1) for x in range(64)]
+    q.append(DiagonalGate([np.exp(1j * np.pi * z / 2) for z in h]),
+                          list(range(6)))
+
+    q.x(4); q.cx(11, 4)
+    q.compose(fold.inverse(), inplace=True)
+    q.compose(lookup.inverse(), inplace=True)
+    q.compose(pair_circuit(truth([32, 48]), truth(range(17, 22))), inplace=True)
+    return transpile(q, basis_gates=["u3", "cx"],
+                     qubits_initially_zero=False, optimization_level=3,
+                     seed_transpiler=seed)
+
+
 def main() -> None:
     masks = coefficient_masks()
     print("masks", masks)
@@ -208,6 +268,26 @@ def main() -> None:
         print(seed, score, flush=True)
         if best is None or score < best[0]:
             best = (score, circuit)
+    ucr_best = ((10**9, 10**9), None)
+    for seed in range(2):
+        circuit = build_ucr_corrected(seed)
+        print("ucr_corrected", seed, (circuit.depth(),
+              circuit.count_ops().get("cx", 0)), flush=True)
+        if seed == 0 or (circuit.depth(), circuit.count_ops().get("cx", 0)) < ucr_best[0]:
+            ucr_best = ((circuit.depth(), circuit.count_ops().get("cx", 0)), circuit)
+    ucr_out = ROOT / "artifacts/threshold_phase_ucr_ucr_corrected_candidate.qasm"
+    assert ucr_best[1] is not None
+    ucr_out.write_text(qasm2.dumps(ucr_best[1]))
+    ucr_metrics = {
+        "qasm": str(ucr_out), "depth": ucr_best[0][0],
+        "cx": ucr_best[0][1], "width": ucr_best[1].num_qubits,
+        "sha256": hashlib.sha256(ucr_out.read_bytes()).hexdigest(),
+        "status": "pending_exhaustive_verification",
+        "representation": "UCR feature phases plus exact x-only branch correction",
+    }
+    (ROOT / "artifacts/threshold_phase_ucr_ucr_corrected_candidate.metrics.json").write_text(
+        json.dumps(ucr_metrics, indent=2) + "\n")
+    print(json.dumps(ucr_metrics, indent=2))
     assert best is not None
     out = ROOT / "artifacts/threshold_phase_ucr_candidate.qasm"
     out.write_text(qasm2.dumps(best[1]))

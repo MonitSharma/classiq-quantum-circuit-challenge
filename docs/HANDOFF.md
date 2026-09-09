@@ -636,3 +636,13 @@ This is a verified negative result against the protected
 `artifacts/524/full_mux_feature_linear_tket_524.qasm` at 524/950/18. The
 direct threshold-phase replacement is closed; only a new shared
 phase-gadget/QROM compiler would justify revisiting it.
+
+An exact branch-corrected UCR variant was also measured. It uses synchronized
+UCR feature phases and a six-qubit diagonal to cancel each UCR's x-dependent
+zero branch, with exact compute/phase/uncompute for the two nonlinear feature
+terms. The serialized artifact is
+`artifacts/threshold_phase_ucr_ucr_corrected_candidate.qasm`, SHA
+`4a6deced9376fd428c177174b695e5c8473f6acf2953f8e8138c4d6879a45845`, at
+**969/1338/18**. Exhaustive verification covered all 4096 inputs with zero
+ancilla leakage. It is better than the 1265/1460 exact-MCZ pilot but still
+well above the protected 524/950 result, so this representation is closed.
