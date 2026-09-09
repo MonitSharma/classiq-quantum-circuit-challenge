@@ -423,6 +423,14 @@ the protected 531/1020/18. The matching optimized artifact is
 `4baad4c76a20db8e92ea7e2f2f68a0d8d9041e570d33275903bf38e3c228e39b`.
 The sixth-lookup removal alone is closed.
 
+A targeted direct-`B(y)` replacement was also exact but negative: the bar was
+computed reversibly into q16 while the remaining five features used the UCR
+loader. The candidate measured **634 depth / 968 CX / 18 qubits**, passed all
+4096 basis inputs with zero ancilla leakage, and is retained at
+`artifacts/hybrid_b_mux.qasm` with SHA
+`a9be69b2cdf4172a547982108e94a26d28520a0cccb88130e20dd9d341877331`.
+Single-feature substitution does not remove the loader bottleneck.
+
 The follow-up independent y/x routing search tested 4,096 seed pairs and
 reached a verified **537/921/18** after pytket. Artifact:
 `artifacts/full_mux_derive_v_independent_best_tket.qasm`, SHA

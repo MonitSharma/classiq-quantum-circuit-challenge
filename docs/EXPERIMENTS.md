@@ -870,6 +870,15 @@ passed all 4096 basis inputs, but its best of eight seeds measured **737 depth
 compute/uncompute and the changed ancilla critical path outweighed the two
 removed loads; simple-feature replacement is therefore closed.
 
+The same bounded test was run for the simple bar feature `B`: direct
+reversible computation of `B(y)` into q16, followed by the existing UCR load
+for `R0,R1,R2,A,V`, was exact but measured **634 depth / 968 CX / 18 qubits**.
+The serialized candidate is `artifacts/hybrid_b_mux.qasm`, with matching
+exhaustive report and SHA `a9be69b2cdf4172a547982108e94a26d28520a0cccb88130e20dd9d341877331`.
+It passed all 4096 inputs with zero ancilla leakage, but is far above 524;
+replacing one simple feature independently is therefore closed as a useful
+lever.
+
 ### Berkeley ABC AIG diagnostic: negative classical lower-level route
 
 The built `experiments/abc/abc` binary was run on the exact 12-input logo
