@@ -118,3 +118,19 @@ The artifact is `artifacts/vector_dirty_frame_search.json`. The next serious
 implementation must restore disjoint physical controls and synthesize the
 dirty affine frame explicitly; the current probe is useful only as a search
 diagnostic.
+
+## Local-coordinate fallback
+
+The fallback in `src/local_y_distance.py` normalizes the low five y bits by
+subtracting 19 when `y5=0` and 9 when `y5=1`, modulo 32, while preserving
+`y5`. The transform was independently replayed on all 64 y inputs. With
+three clean scratch ancillas and v-chain MCX synthesis, the exact serialized
+transform measured **274 depth / 151 CX / width 18**. The no-ancilla reference
+was 425/247.
+
+This is not competitive as a complete disk architecture: the coordinate
+transform must be inverted after phase marking, so the transform pair alone is
+approximately 548 depth before radius loading or x-phase logic. The result is
+therefore closed as a standalone fallback. Artifacts are
+`artifacts/local_y_distance.qasm` and
+`artifacts/local_y_distance_metrics.json`.

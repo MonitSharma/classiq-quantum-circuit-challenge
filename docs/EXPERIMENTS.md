@@ -942,3 +942,10 @@ control-span restriction was relaxed, this is not a circuit or correctness
 result; it only indicates that a simple final linear frame is not immediately
 exposed by the natural ABC graph. The diagnostic is in
 `artifacts/vector_dirty_frame_search.json`.
+
+The local-coordinate fallback was then implemented. It translates low5 y by
+19 in the lower half and 9 in the upper half, modulo 32, preserving y5. The
+64-input mapping check passed. With three clean v-chain scratch ancillas, the
+exact U3/CX transform measured **274/151/18**; the no-ancilla version was
+425/247/18. Since the transform must be inverted, its pair is already about
+548 depth before disk radius logic, so this fallback is closed.

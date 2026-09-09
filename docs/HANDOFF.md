@@ -358,3 +358,9 @@ therefore produced no physical candidate; see
 `artifacts/vector_dirty_frame_search.json`. Any continuation must implement
 the affine frame and dirty controls explicitly before treating this direction
 as a score.
+
+The local-coordinate fallback is also closed: the verified transform-only
+artifact `artifacts/local_y_distance.qasm` measured 274/151/18 with three
+clean scratch ancillas and passed all 64 y-input checks. Its inverse is needed
+for a full oracle, making the transform pair about 548 depth before radius and
+x-phase logic.

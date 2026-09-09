@@ -96,10 +96,8 @@ def main() -> None:
                     # with a dirty-control construction that keeps target and
                     # controls disjoint.
                     available = cached_basis(tuple(base + list(wires)))
-                    # Keep the control-span predicate as metadata for the
-                    # candidate, but allow the abstract search to propose the
-                    # node.  This exposes endgame linear dependencies before
-                    # the separate dirty-control synthesis gate.
+                    if not in_basis(left, available) or not in_basis(right, available):
+                        continue
                     updated = list(wires)
                     updated[target] ^= node_truth[node]
                     updated = tuple(sorted(updated))
