@@ -342,3 +342,12 @@ not repeat basis search, direct ESOP, dense Walsh synthesis, generic cleanup,
 or the current independent pair compiler. Native Classiq synthesis remains
 blocked by the documented macOS keychain `KeyringError (-50)`; do not retry
 without a real authentication/environment change.
+
+The joint y-feature loader continuation has now also closed the naive
+clean-output schedule. The natural ABC network parses exactly into 56
+affine-plus-AND nodes, but none of 64 screened affine output bases allows all
+five outputs to fit with five or fewer live product nodes while reserving one
+clean output accumulator. This is recorded in
+`artifacts/vector_feature_reversible_schedule.json`. The next justified work
+is dirty-output pebbling, output-frame synthesis, or controlled recomputation;
+do not interpret this bounded clean-pebble result as an impossibility proof.

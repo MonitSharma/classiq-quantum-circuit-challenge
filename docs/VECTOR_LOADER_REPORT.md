@@ -83,3 +83,23 @@ verified before it can affect the protected 531 result.
 The protected complete-oracle result remains **531 depth / 1,020 CX / 18
 qubits** at `artifacts/531/full_mux_531.qasm`. No leaderboard submission or
 QMOD upload was performed by this experiment.
+
+## Clean-pebble feasibility result
+
+The ABC network was parsed into 56 affine-plus-AND product nodes by
+`src/vector_reversible_pebble.py`, and its output truth tables were reproduced
+exactly. A bounded reversible planner was then run on the natural network and
+all 64 screened affine output bases. The planner permits at most six live
+product nodes. Reserving one clean output accumulator leaves at most five
+product pebbles.
+
+No screened basis allowed all five outputs to fit with five or fewer live
+product pebbles. In the natural basis, `A` alone requires all six live pebbles
+under this schedule, while `R0`, `R1`, `R2`, and `B` do not close within the
+bounded six-pebble search. The complete scan is recorded in
+`artifacts/vector_feature_reversible_schedule.json`.
+
+This closes the naive clean-output schedule, not the entire vector-loader
+direction. The next compiler must use dirty output wires, output-frame
+transforms, recomputation, or a different shared representation; simply
+reserving one clean target per output cannot exploit the ABC sharing.

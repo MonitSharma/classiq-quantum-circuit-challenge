@@ -924,3 +924,13 @@ depth / 3822 CX / width 18**. It is loader-only and intentionally not a
 complete oracle. This confirms that the cross-output sharing must be converted
 through a reversible pebbling schedule; the ANF/ABC results alone do not
 justify integration. The complete 531-depth artifact remains unchanged.
+
+The ABC networks were then parsed into affine-plus-AND graphs and screened
+with the existing bounded clean-pebble planner. Across all 64 screened affine
+output bases, **zero** bases allowed all five outputs to fit with five or fewer
+live product nodes, which is the maximum available after reserving one clean
+output accumulator. In the natural basis, even `A` requires six live pebbles;
+the remaining outputs did not close under the bounded six-pebble search. This
+is a feasibility result for the naive schedule, not an impossibility proof for
+dirty-output or output-frame synthesis. Details are in
+`artifacts/vector_feature_reversible_schedule.json`.

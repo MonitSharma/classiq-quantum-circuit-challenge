@@ -1,0 +1,1674 @@
+{
+  "basis_networks": 64,
+  "clean_workspace_limit": 6,
+  "target_accumulator_reservation": 1,
+  "screened_with_max_states": 100000,
+  "all_outputs_fit_with_five_or_fewer": 0,
+  "records": [
+    {
+      "source": "artifacts/vector_basis_000.bench",
+      "product_nodes": 56,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 34
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 30
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 9
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_001.bench",
+      "product_nodes": 76,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": 6,
+          "toggle_count": 48
+        },
+        "A": {
+          "pebbles": 5,
+          "toggle_count": 25
+        },
+        "B": {
+          "pebbles": 6,
+          "toggle_count": 28
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_002.bench",
+      "product_nodes": 70,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_003.bench",
+      "product_nodes": 78,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 26
+        },
+        "B": {
+          "pebbles": 6,
+          "toggle_count": 20
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_004.bench",
+      "product_nodes": 64,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_005.bench",
+      "product_nodes": 86,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 6,
+          "toggle_count": 32
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_006.bench",
+      "product_nodes": 87,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_007.bench",
+      "product_nodes": 92,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_008.bench",
+      "product_nodes": 52,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 16
+        },
+        "B": {
+          "pebbles": 4,
+          "toggle_count": 8
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_009.bench",
+      "product_nodes": 77,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 42
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 6,
+          "toggle_count": 28
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_010.bench",
+      "product_nodes": 48,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 22
+        },
+        "B": {
+          "pebbles": 6,
+          "toggle_count": 34
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_011.bench",
+      "product_nodes": 69,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 34
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 22
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_012.bench",
+      "product_nodes": 77,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 62
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_013.bench",
+      "product_nodes": 72,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 48
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_014.bench",
+      "product_nodes": 74,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_015.bench",
+      "product_nodes": 66,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 25
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_016.bench",
+      "product_nodes": 67,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_017.bench",
+      "product_nodes": 70,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_018.bench",
+      "product_nodes": 71,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 44
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_019.bench",
+      "product_nodes": 70,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 70
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 17
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_020.bench",
+      "product_nodes": 67,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 22
+        },
+        "B": {
+          "pebbles": 6,
+          "toggle_count": 26
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_021.bench",
+      "product_nodes": 78,
+      "outputs": {
+        "R0": {
+          "pebbles": 6,
+          "toggle_count": 24
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 38
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 9
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_022.bench",
+      "product_nodes": 81,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_023.bench",
+      "product_nodes": 85,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 13
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_024.bench",
+      "product_nodes": 55,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 40
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 30
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_025.bench",
+      "product_nodes": 77,
+      "outputs": {
+        "R0": {
+          "pebbles": 6,
+          "toggle_count": 40
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 9
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_026.bench",
+      "product_nodes": 60,
+      "outputs": {
+        "R0": {
+          "pebbles": 6,
+          "toggle_count": 30
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": 6,
+          "toggle_count": 30
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 9
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_027.bench",
+      "product_nodes": 56,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 9
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_028.bench",
+      "product_nodes": 87,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_029.bench",
+      "product_nodes": 78,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 34
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 7
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_030.bench",
+      "product_nodes": 79,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 40
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_031.bench",
+      "product_nodes": 55,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 9
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_032.bench",
+      "product_nodes": 80,
+      "outputs": {
+        "R0": {
+          "pebbles": 6,
+          "toggle_count": 42
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 40
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_033.bench",
+      "product_nodes": 53,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 13
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_034.bench",
+      "product_nodes": 59,
+      "outputs": {
+        "R0": {
+          "pebbles": 6,
+          "toggle_count": 30
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": 6,
+          "toggle_count": 30
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_035.bench",
+      "product_nodes": 55,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 6,
+          "toggle_count": 10
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_036.bench",
+      "product_nodes": 77,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 4,
+          "toggle_count": 14
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_037.bench",
+      "product_nodes": 55,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 40
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 30
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_038.bench",
+      "product_nodes": 76,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 42
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 4,
+          "toggle_count": 14
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_039.bench",
+      "product_nodes": 54,
+      "outputs": {
+        "R0": {
+          "pebbles": 6,
+          "toggle_count": 30
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": 6,
+          "toggle_count": 30
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 9
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_040.bench",
+      "product_nodes": 51,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 18
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 9
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_041.bench",
+      "product_nodes": 68,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 40
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 9
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_042.bench",
+      "product_nodes": 53,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_043.bench",
+      "product_nodes": 64,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 9
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_044.bench",
+      "product_nodes": 75,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 32
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_045.bench",
+      "product_nodes": 79,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 40
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_046.bench",
+      "product_nodes": 65,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 4,
+          "toggle_count": 14
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_047.bench",
+      "product_nodes": 80,
+      "outputs": {
+        "R0": {
+          "pebbles": 6,
+          "toggle_count": 42
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 40
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_048.bench",
+      "product_nodes": 87,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 4,
+          "toggle_count": 14
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_049.bench",
+      "product_nodes": 65,
+      "outputs": {
+        "R0": {
+          "pebbles": 6,
+          "toggle_count": 30
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": 6,
+          "toggle_count": 30
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 9
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_050.bench",
+      "product_nodes": 93,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 9
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_051.bench",
+      "product_nodes": 88,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_052.bench",
+      "product_nodes": 72,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 46
+        },
+        "R2": {
+          "pebbles": 6,
+          "toggle_count": 46
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_053.bench",
+      "product_nodes": 52,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 6,
+          "toggle_count": 14
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_054.bench",
+      "product_nodes": 67,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 32
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 4,
+          "toggle_count": 24
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_055.bench",
+      "product_nodes": 54,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 40
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_056.bench",
+      "product_nodes": 57,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 4,
+          "toggle_count": 12
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_057.bench",
+      "product_nodes": 76,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 28
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 38
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_058.bench",
+      "product_nodes": 92,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_059.bench",
+      "product_nodes": 57,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": 6,
+          "toggle_count": 32
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "B": {
+          "pebbles": 5,
+          "toggle_count": 21
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_060.bench",
+      "product_nodes": 78,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 5,
+          "toggle_count": 27
+        },
+        "B": {
+          "pebbles": 6,
+          "toggle_count": 30
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_061.bench",
+      "product_nodes": 91,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "A": {
+          "pebbles": 5,
+          "toggle_count": 25
+        },
+        "B": {
+          "pebbles": 6,
+          "toggle_count": 28
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_062.bench",
+      "product_nodes": 78,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": 6,
+          "toggle_count": 36
+        },
+        "A": {
+          "pebbles": 5,
+          "toggle_count": 25
+        },
+        "B": {
+          "pebbles": 6,
+          "toggle_count": 28
+        }
+      }
+    },
+    {
+      "source": "artifacts/vector_basis_063.bench",
+      "product_nodes": 76,
+      "outputs": {
+        "R0": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R1": {
+          "pebbles": null,
+          "toggle_count": null
+        },
+        "R2": {
+          "pebbles": 6,
+          "toggle_count": 48
+        },
+        "A": {
+          "pebbles": 6,
+          "toggle_count": 30
+        },
+        "B": {
+          "pebbles": null,
+          "toggle_count": null
+        }
+      }
+    }
+  ],
+  "note": "A clean output target would leave at most five graph pebbles; this is a feasibility screen, not a complete loader compiler."
+}
