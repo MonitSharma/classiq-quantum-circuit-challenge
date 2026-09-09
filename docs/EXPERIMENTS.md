@@ -1316,3 +1316,22 @@ qubits** (`artifacts/shared_vector_shannon_rp_loader.qasm`, SHA
 `7752f0c9f9beb1ec9f8b9970310c253f9fa641d56a86ef0c2282a2426c362f0f`). The
 depth remains far above 128, so relative phase alone does not rescue the
 shared Shannon representation.
+
+## Comparator-free threshold phase pilot (September 10, 2026)
+
+`src/threshold_phase_ucr.py` tested a new representation on the existing
+six-output loader. After the trusted fold and exact disk guard, every relevant
+folded-x row is an affine parity of `V=[r>0]`, `L=[r>=4]`, `T=[r>=6]`,
+`P=r&1`, `Q=T&P`, and the already-loaded `B=y5&T`. All 16 guarded folded-x
+rows have a representation with no constant term.
+
+The first quantum pilot used bare multiplexed RZ blocks and was rejected
+because a non-partitioned UCR contributes an x-dependent zero-branch phase.
+The corrected exact version uses MCZ/ESOP phase cubes and exact dirty
+compute/phase/uncompute for `T` and `Q`. It passed exhaustive verification;
+`artifacts/threshold_phase_ucr_candidate.qasm` has SHA
+`5bfb917963e8a237bae9d4db7c3eb8b4000ff0307f0395299a86f425d2dd23b3` and
+scores **1265 depth / 1460 CX / 18 qubits**, with zero ancilla leakage. This
+is far worse than the protected 524/950/18 circuit. The direct exact-MCZ
+threshold replacement is closed; it would need a new shared phase-gadget or
+QROM compiler to become competitive.

@@ -619,3 +619,20 @@ The relative-phase action/reset variant reduced the same loader to
 y inputs. It is stored at `artifacts/shared_vector_shannon_rp_loader.qasm`
 with its metrics/check files, but remains far above the UCR loader depth and
 was not integrated.
+
+## Comparator-free threshold phase pilot (September 10, 2026)
+
+`src/threshold_phase_ucr.py` found a valid classical identity for the folded
+disk region: on the exact disk guard, each relevant folded-x row is an affine
+parity of the loaded features `V,L,T,P,Q,B`, where `L=[r>=4]`, `T=[r>=6]`,
+`P=r&1`, `Q=T&P`, and `B=y5&T`. The exact reversible implementation used
+MCZ/ESOP phase cubes and exact dirty compute/phase/uncompute for `T` and `Q`.
+
+It passed all 4096 basis inputs with zero ancilla leakage, but scored **1265
+depth / 1460 CX / 18 qubits**. The artifact is
+`artifacts/threshold_phase_ucr_candidate.qasm`, SHA
+`5bfb917963e8a237bae9d4db7c3eb8b4000ff0307f0395299a86f425d2dd23b3`.
+This is a verified negative result against the protected
+`artifacts/524/full_mux_feature_linear_tket_524.qasm` at 524/950/18. The
+direct threshold-phase replacement is closed; only a new shared
+phase-gadget/QROM compiler would justify revisiting it.
