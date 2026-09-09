@@ -1,0 +1,22 @@
+{
+  "source": "artifacts/732/ancilla_assignment_732.qasm",
+  "pass": "clifford_simp",
+  "depth": 718,
+  "cx": 729,
+  "width": 18,
+  "qasm": "artifacts/718/tket_ancilla_assignment_718.qasm",
+  "candidates": [
+    {
+      "pass": "full_peephole",
+      "depth": 719,
+      "cx": 729,
+      "width": 18
+    },
+    {
+      "pass": "clifford_simp",
+      "depth": 718,
+      "cx": 729,
+      "width": 18
+    }
+  ]
+}

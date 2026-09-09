@@ -158,6 +158,14 @@ rank-family best, while the 531/1020/18 circuit remains the overall depth
 record in the repository. The next target remains shared persistent frames
 or a joint compiler that can reduce serialization below 732.
 
+As a bounded post-pass, pytket `CliffordSimp` applied to the exact 732 QASM
+reduced the serialized depth further to **718/729** depth/CX without changing
+width. The exact U3/CX output in `artifacts/718/tket_ancilla_assignment_718.qasm`
+passes exhaustive verification on all 4096 inputs with zero ancilla leakage.
+`FullPeepholeOptimise` reached 719/729; a second pass composition did not
+improve 718. This is a verified compiler result, not a new Boolean
+decomposition; the overall 531/1020/18 circuit remains shallower.
+
 Post-732 assignment diagnostics found no further improvement in 1,200
 coordinated two-/three-block mutations, 1,200 independent random restarts,
 or a focused 500-trial search on the most influential adjacent boundary.
@@ -224,3 +232,5 @@ Generated artifacts:
 - `artifacts/739/ancilla_assignment_739.qasm`
 - `src/ancilla_assignment_descent.py`
 - `artifacts/732/ancilla_assignment_732.qasm`
+- `src/tket_global_optimize.py`
+- `artifacts/718/tket_ancilla_assignment_718.qasm`
