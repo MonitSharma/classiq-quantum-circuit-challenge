@@ -23,7 +23,7 @@ from pair_search import pair_circuit
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSIGNMENT = (12, 15, 14, 16, 17, 13)
-MATRIX = (1, 6, 4, 40, 16, 32)
+MATRIX = (1, 23, 4, 8, 16, 32)
 Y_ORDERS_SEED = 94
 X_ORDERS_SEED = 10094
 TRANSPILE_SEED = 94

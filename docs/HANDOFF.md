@@ -514,12 +514,13 @@ verified 530/531 package.
 ## Structured two-shear continuation (September 10, 2026)
 
 The affine feature search was extended from single shears to all 870
-nonsingular two-shear compositions at the winning physical assignment. Matrix
-rows `(1,6,4,40,16,32)` produced the current verified best:
+nonsingular two-shear compositions and 24,240 nonsingular three-shear
+compositions at the winning physical assignment. Matrix rows
+`(1,23,4,8,16,32)` produced the current verified best:
 
 ```text
-depth 528 / CX 1018 / width 18
-SHA c788334594f6b9dfa283c02ef12e78804a1ace4abef3c3e20f29ae2d0c13af2c
+depth 528 / CX 998 / width 18
+SHA fa0154bcbea010797ade444e428f40d4ccd140e53e457115c03677e1ee8c7e78
 ```
 
 `artifacts/528/full_mux_feature_linear_528.qasm` passed exhaustive verification

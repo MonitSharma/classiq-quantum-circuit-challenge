@@ -1160,12 +1160,13 @@ the recursive evaluator is not viable.
 ## Structured two-shear continuation (September 10, 2026)
 
 An exhaustive single-shear screen followed by all 870 nonsingular two-shear
-compositions at the established feature assignment found a better encoding.
-Matrix rows `(1,6,4,40,16,32)` produced **528 depth / 1018 CX / 18 qubits**.
+compositions, then 24,240 nonsingular three-shear compositions, found a better
+encoding. Matrix rows `(1,23,4,8,16,32)` produced **528 depth / 998 CX / 18
+qubits**.
 The exact QASM is `artifacts/528/full_mux_feature_linear_528.qasm`, SHA-256
-`c788334594f6b9dfa283c02ef12e78804a1ace4abef3c3e20f29ae2d0c13af2c`.
+`fa0154bcbea010797ade444e428f40d4ccd140e53e457115c03677e1ee8c7e78`.
 Exhaustive verification covered all 4096 inputs with maximum error
-`1.45e-14` and zero ancilla leakage; five dense full-support checks passed
-with maximum error `5.55e-16`. The matching logical QMOD is stored beside the
+`1.51e-14` and zero ancilla leakage; five dense full-support checks passed
+with maximum error `5.52e-16`. The matching logical QMOD is stored beside the
 QASM. This is now the protected local best, although it remains far above the
 leaderboard target.
