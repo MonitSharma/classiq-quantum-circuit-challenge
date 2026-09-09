@@ -23,7 +23,7 @@ from pair_search import pair_circuit
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSIGNMENT = (12, 15, 14, 16, 17, 13)
-MATRIX = (1, 6, 2, 8, 16, 32)
+MATRIX = (1, 6, 4, 40, 16, 32)
 Y_ORDERS_SEED = 94
 X_ORDERS_SEED = 10094
 TRANSPILE_SEED = 94
@@ -132,7 +132,7 @@ def build() -> QuantumCircuit:
 
 def main() -> None:
     circuit = build()
-    out = ROOT / "artifacts/529/full_mux_feature_linear_529.qasm"
+    out = ROOT / "artifacts/528/full_mux_feature_linear_528.qasm"
     out.parent.mkdir(exist_ok=True)
     out.write_text(qasm2.dumps(circuit))
     sha = hashlib.sha256(out.read_bytes()).hexdigest()

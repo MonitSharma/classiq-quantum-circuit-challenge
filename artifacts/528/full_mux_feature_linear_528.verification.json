@@ -1,0 +1,12 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/528/full_mux_feature_linear_528.qasm",
+  "sha256": "c788334594f6b9dfa283c02ef12e78804a1ace4abef3c3e20f29ae2d0c13af2c",
+  "width": 18,
+  "depth": 528,
+  "cx_count": 1018,
+  "random_dense_states": 5,
+  "max_error": 5.551934990473911e-16,
+  "ancilla_error": 6.934167517434717e-17,
+  "normalization_error": 1.7541523789077473e-14,
+  "verification": "Dense random inputs supported on all 4096 coordinates; probabilistic numerical check, not exhaustive operator proof"
+}

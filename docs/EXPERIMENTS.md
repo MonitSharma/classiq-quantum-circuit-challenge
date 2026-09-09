@@ -1156,3 +1156,16 @@ The direct dirty-workspace BDD evaluator was also run against the documented
 and was therefore rejected as a complete-oracle architecture. The cheap BDD
 cofactors remain useful only as possible future shared predicates; materializing
 the recursive evaluator is not viable.
+
+## Structured two-shear continuation (September 10, 2026)
+
+An exhaustive single-shear screen followed by all 870 nonsingular two-shear
+compositions at the established feature assignment found a better encoding.
+Matrix rows `(1,6,4,40,16,32)` produced **528 depth / 1018 CX / 18 qubits**.
+The exact QASM is `artifacts/528/full_mux_feature_linear_528.qasm`, SHA-256
+`c788334594f6b9dfa283c02ef12e78804a1ace4abef3c3e20f29ae2d0c13af2c`.
+Exhaustive verification covered all 4096 inputs with maximum error
+`1.45e-14` and zero ancilla leakage; five dense full-support checks passed
+with maximum error `5.55e-16`. The matching logical QMOD is stored beside the
+QASM. This is now the protected local best, although it remains far above the
+leaderboard target.

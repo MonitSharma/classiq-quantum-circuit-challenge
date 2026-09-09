@@ -510,3 +510,19 @@ result measured **3,949,563 depth / 2,581,968 CX / 18 qubits**, so direct BDD
 materialization is closed. The current justified research target remains a new
 shared phase/QROM primitive; no existing candidate is promoted over the
 verified 530/531 package.
+
+## Structured two-shear continuation (September 10, 2026)
+
+The affine feature search was extended from single shears to all 870
+nonsingular two-shear compositions at the winning physical assignment. Matrix
+rows `(1,6,4,40,16,32)` produced the current verified best:
+
+```text
+depth 528 / CX 1018 / width 18
+SHA c788334594f6b9dfa283c02ef12e78804a1ace4abef3c3e20f29ae2d0c13af2c
+```
+
+`artifacts/528/full_mux_feature_linear_528.qasm` passed exhaustive verification
+on all 4096 inputs and five dense full-support checks. The matching logical
+QMOD and both reports are packaged under `artifacts/528/`. This is still a
+local improvement only; rank 1 requires replacing the UCR-based primitive.
