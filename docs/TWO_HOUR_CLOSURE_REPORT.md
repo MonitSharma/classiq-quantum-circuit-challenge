@@ -188,6 +188,16 @@ and endpoint-y each showed 0% semantic union saving. This is evidence against
 easy sharing in the sampled model space, not a proof against a longer-timeout
 joint XAG search.
 
+A true shared-XAG persistent compiler was then implemented in
+`src/persistent_global.py`. It retains nonlinear nodes across term boundaries,
+uses exact semantic-frame transitions, and enforces all 12 input values plus
+live-node values and clean unused ancillas. The fixed order produced a fully
+verified oracle at **1838 depth / 1524 CX / width 18**, with zero ancilla
+leakage over all 4096 inputs. This is substantially worse than the 718/729
+register-assignment result: persistent transitions are currently more
+expensive than the saved recomputation. The result is a valid negative
+architecture measurement, not a submission candidate.
+
 Generated artifacts:
 
 - `src/extract_global_endpoints.py`
@@ -232,5 +242,8 @@ Generated artifacts:
 - `artifacts/739/ancilla_assignment_739.qasm`
 - `src/ancilla_assignment_descent.py`
 - `artifacts/732/ancilla_assignment_732.qasm`
+- `src/persistent_global.py`
+- `artifacts/persistent_global.qasm`
+- `artifacts/persistent_global.exhaustive.json`
 - `src/tket_global_optimize.py`
 - `artifacts/718/tket_ancilla_assignment_718.qasm`
