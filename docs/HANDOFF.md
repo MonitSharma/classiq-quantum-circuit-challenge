@@ -1087,3 +1087,15 @@ invalid project configuration. Therefore no EPFL oracle synthesis or score
 was run; do not confuse the unrelated package installation attempt with the
 reversible Caterpillar tool. A compatible Python/toolchain environment would
 be required before this becomes an actionable bounded campaign.
+
+## EPFL compatibility attempt (September 10, 2026)
+
+One disposable Python 3.12.9 environment was created at
+`/private/tmp/epfl.uDo5uH`; the project `.venv` was not changed. Current
+Tweedledum source built successfully there as version 1.2.0. RevKit `develop`
+cloned successfully but its unmodified build failed first on undeclared
+`pybind11`, then again after installing `pybind11` and `setuptools`; no RevKit
+module was installed. Mockturtle and Caterpillar remained C++ source trees,
+and no executable RevKit/Caterpillar oracle flow was available. Under the
+one-attempt stop rule, close this environment line as blocked; do not patch
+upstream build systems or continue platform-specific troubleshooting.

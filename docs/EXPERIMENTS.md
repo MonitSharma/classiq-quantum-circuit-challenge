@@ -1914,3 +1914,12 @@ text-retrieval software and was removed. Tweedledum 1.1.1 fails its source
 build on Python 3.13 during metadata generation. No EPFL reversible synthesis
 run or circuit score exists, so this direction is environment-blocked rather
 than experimentally closed.
+
+## EPFL compatibility attempt (September 10, 2026)
+
+A disposable Python 3.12.9 environment was created outside the repository.
+Current Tweedledum source built successfully as 1.2.0. RevKit `develop` did
+not build after two clean retries with its undeclared `pybind11` and
+`setuptools` prerequisites, so no RevKit module or full EPFL oracle flow was
+available. The project Python 3.13 environment and protected QASM were not
+modified. Close this as environment-blocked under the agreed stop rule.
