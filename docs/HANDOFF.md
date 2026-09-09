@@ -189,6 +189,11 @@ interval rectangles and bounded direct/hybrid radius loading were worse. Do
 not continue generic ordering or seed search here; a useful follow-up would
 need shared/interleaved rectangle phase loading.
 
+That bounded follow-up was run: neither rectangle fit the existing reversible
+pair compiler in a three-ancilla bank, and a two-output rectangle multiplexer
+scored 384/372 alone and 767/863 with the disk block. The disjoint route is
+closed unless a new shared phase primitive is developed.
+
 The 531 result is a useful submission-ready baseline, but it is not close to
 the historical leader at depth 291. The measurements point away from more
 seed tuning or global peephole rewriting: the current architecture pays three

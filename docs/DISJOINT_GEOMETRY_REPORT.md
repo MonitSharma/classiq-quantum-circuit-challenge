@@ -107,3 +107,14 @@ complete result is above 600, and pair-based rectangle synthesis is already
 better than the bounded direct alternative, this direction is closed under
 the stated decision gate. The next improvement would need interleaved/shared
 rectangle phase loading, not more component-order or generic seed search.
+
+## Interleaving follow-up
+
+The remaining interleaving hypothesis was tested directly. The pair compiler
+could not synthesize either rectangle with only three clean ancillas, so A and
+B' cannot be placed in separate three-ancilla banks and run concurrently.
+A two-output rectangle multiplexer using q15/q16 measured **384/372** by
+itself; composed with the 385-depth disk block it measured **767/863**.
+Thus the available workspace does not expose a useful overlap under these
+implementations. The route is closed unless a new shared reversible phase
+primitive is introduced.

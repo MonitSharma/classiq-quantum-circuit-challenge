@@ -19,6 +19,12 @@ worse. This closes the disjoint-component architecture as a negative result
 against the protected 531 depth, while identifying shared/interleaved phase
 loading as the only remaining meaningful follow-up.
 
+The bounded interleaving follow-up was also negative. The pair compiler could
+not realize either rectangle with only three clean ancillas, preventing two
+independent rectangle banks. A two-output rectangle multiplexer measured
+384/372 depth/CX alone and 767/863 when composed with the disk block. No
+further ordering or seed search is justified for this architecture.
+
 ## Overnight shared-pair diagnostics (September 8, 2026)
 
 The first bounded experiment on the shared-XAG path was `src/global_pair_compile.py`.
