@@ -200,3 +200,12 @@ phase operation; it is not itself a complete logo oracle.
 The serialized loader followed by its exact inverse reduced to identity under
 U3/CX transpilation (depth 0 / CX 0), confirming the intended phase
 cancellation.
+
+## Complete integration result
+
+The direct loader was integrated into the original phase/correction skeleton
+by deriving `V = R1 OR R2` in q17 and reversing the loader afterward. Eight
+routing seeds were measured; the best serialized complete candidate was
+**3243 depth / 1965 CX / width 18** and passed exhaustive verification on all
+4096 inputs. This is a negative result: dirty direct-target loading is not a
+useful replacement for the six-output UCR stage in the complete oracle.

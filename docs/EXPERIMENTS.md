@@ -1003,3 +1003,12 @@ integrated into the protected 531 architecture.
 Composing the serialized loader with its exact inverse and transpiling the pair
 reduced to identity (depth 0 / CX 0), confirming cancellation of the internal
 relative phases in the intended sandwich.
+
+The required complete-oracle integration was then run in
+`src/vector_loader_oracle.py`, replacing the six-output UCR load with the
+direct five-output loader, deriving `V = R1 OR R2`, and retaining the original
+phase/correction logic. Eight routing seeds were tested; the best exact
+candidate was **3243/1965/18**, exhaustively verified on all 4096 inputs.
+The large regression shows that a loader-only score is not predictive here:
+the direct MCX schedule serializes heavily through dirty output targets and
+does not belong in the complete architecture.

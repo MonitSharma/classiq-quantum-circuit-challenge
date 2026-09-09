@@ -399,3 +399,10 @@ oracle; it has not been integrated into the protected 531 circuit.
 The serialized loader followed by its exact inverse reduced to identity under
 U3/CX transpilation (depth 0 / CX 0), confirming cancellation of the internal
 relative phases.
+
+The required complete integration was also run in `src/vector_loader_oracle.py`:
+the direct five-output loader plus derived `V` was composed with the original
+phase/correction logic. Eight seeds produced a best **3243/1965/18** candidate
+at `artifacts/vector_loader_oracle_candidate.qasm`; it passed exhaustive
+verification but is decisively worse. The loader-only improvement therefore
+does not transfer to the complete oracle and this integration route is closed.
