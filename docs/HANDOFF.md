@@ -1137,7 +1137,10 @@ parallel-UCR pattern is already exploited in the implementation.
 All explored methods and their dispositions are consolidated in
 `docs/EXPERIMENTS.md`. The protected verified 524/950 artifact and original
 notebook are retained; no experimental artifact is promoted without complete
-verification.
+verification. In particular, do not reopen Tweedledum PKRM/optimum
+phase-ESOP, GUOQ/QUESO, Synthetiq, BQSKit local windows, further XAG search,
+Classiq-native synthesis, or coordinate coding. These are closed outcomes,
+not pending installation or tuning tasks.
 ## Coordinate-recoding diagnostic (September 10, 2026)
 
 The proposed QFT-based conditional low-5-bit recentering was implemented in

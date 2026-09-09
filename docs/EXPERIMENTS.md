@@ -1957,17 +1957,21 @@ compiler-research loops without a complete-circuit path:
 | Threshold, Shannon, row-class, vector, sparse-Walsh, and direct-output loaders | Verified prototypes ranged roughly **4437–969** depth or failed integration | Closed |
 | Conditional-clean/factored cofactor and XAG | Best local branch **713/445**; `PG` and remainder ablations **323/249** and **459/248** | Closed |
 | Finite-size Lupanov | Verified q=1,p=7 candidate **20432/11260** | Closed |
-| Exact/DAG windows and BQSKit StateSystem | Strict windows gave no gain; BQSKit 8-qubit search exceeded 60 seconds | Suspended/closed |
+| Exact/DAG windows, Synthetiq, and BQSKit StateSystem | Strict windows gave no gain; the BQSKit 8-qubit StateSystem search exceeded 60 seconds; no local-synthesis result could plausibly remove the roughly 300-layer gap | **Closed for the competition objective** |
 | Semantic shared-XAG/subspace/completion | Analytic lower bounds: pairs ≥4 shared ANDs, `(A,B,V)` ≥5; no native candidate | Suspended |
 | EPFL RevKit/Caterpillar stack | Tweedledum 1.2.0 built in isolated Python 3.12; RevKit failed unmodified build | Environment-blocked/closed |
+| Tweedledum PKRM / optimum phase-ESOP | The exposed synthesis emits PKRM cubes as multi-controlled-Z operations; this is the same direct ESOP/MCZ cost regime already measured as noncompetitive | **Closed; do not reinstall or retry** |
 | GUOQ/QUESO | No overall depth objective in the available objectives | Closed |
-| Fresh Classiq-native models | Direct arithmetic required **82 qubits**; row-class and low-rank models returned no fresh QASM in bounded waits | Closed |
+| Fresh Classiq-native models | Direct arithmetic required **82 qubits**; row-class and low-rank models returned no fresh QASM in bounded waits | **Closed; do not run more models** |
 
 The challenge audit found no useful verifier loophole: inputs, coordinates,
 ancilla restoration, phase behavior, width, and `u3,cx` scoring remain binding.
 Competition mode now requires a new experiment to produce a complete verified
 QASM or directly enable one with a credible path to removing hundreds of
-layers. The protected 524/950 QASM and original notebook remain unchanged.
+layers. Do not prescribe another Tweedledum PKRM, GUOQ/QUESO, Synthetiq,
+BQSKit-window, XAG, Classiq-native, or coordinate-coding campaign: each is
+explicitly closed above. The protected 524/950 QASM and original notebook
+remain unchanged.
 ## QFT coordinate-recoding diagnostic (September 10, 2026)
 
 An exact QFT-based conditional modular adder was tested as the cheap first
