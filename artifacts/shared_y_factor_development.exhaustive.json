@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/shared_y_factor_development.qasm",
+  "sha256": "d18d1530e7615e64fab0bdd1a2a13e32e685a005966fd6b6f1c4f31d78eb4f29",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 2242,
+  "cx_count": 1624,
+  "max_error": 5.6190804663070684e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.6870433641298088e-13,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 6.257005929946899,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

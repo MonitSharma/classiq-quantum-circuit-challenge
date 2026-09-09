@@ -1499,6 +1499,31 @@ zero ancilla leakage. SHA-256:
 This is slightly worse than the 1725-depth phase-only result, so MCZ helper
 selection is not the missing improvement.
 
+## Development branch phase-rank basis search (September 9, 2026)
+
+An elementary GF(2) basis search scored complete serialized direct phase-only
+circuits after each mutation. The best of 100 steps kept depth at **1725** but
+reduced CX count from 1235 to **1225**. The candidate
+`artifacts/phase_rank_basis_best_development.qasm` passed the complete logo
+verifier on all 4096 inputs with zero ancilla leakage; SHA-256:
+`f6d52201ba8f066b388d2a25d94a1348b6b14625f024263de53c3fb4a06c5542`.
+The search data is `artifacts/phase_rank_basis_search_development.json`.
+Basis choice changes cube sharing and CX count but did not change the depth
+regime, so this is a verified near-miss rather than a replacement for 524.
+
+## Development branch grouped phase-sharing pilot (September 9, 2026)
+
+The 69 direct bilinear phase cubes contain 23 distinct y-side ESOP cubes.
+`src/shared_y_phase_grouped.py` computes one y-cube into q17, synthesizes all
+associated x-side phase cubes with a shared q17 control, then uncomputes q17.
+This reduces the naive grouped-y implementation from 4100 depth to a verified
+**2242 depth / 1624 CX / 18 qubits**. The complete candidate
+`artifacts/shared_y_phase_grouped_development.qasm` passed all 4096 logo inputs
+with zero ancilla leakage; SHA-256:
+`d18d1530e7615e64fab0bdd1a2a13e32e685a005966fd6b6f1c4f31d78eb4f29`.
+It remains above both the protected 524-depth oracle and the 1725-depth global
+phase-only candidate, so local y-group sharing is insufficient.
+
 ## Standalone retained-product verification (September 9, 2026)
 
 Two separately generated term-0 retained-product diagnostics were checked

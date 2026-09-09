@@ -1,0 +1,8 @@
+{
+  "depth": 4349,
+  "cx": 2582,
+  "width": 18,
+  "phase_cubes": 69,
+  "distinct_x_cubes": 26,
+  "qasm": "artifacts/shared_x_phase_development.qasm"
+}
