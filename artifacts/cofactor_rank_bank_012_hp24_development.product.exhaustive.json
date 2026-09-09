@@ -1,0 +1,11 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/cofactor_rank_bank_012_hp24_development.qasm",
+  "sha256": "ed81bf69e55db8fc72bfa168c9a5b7aeecd2ac4f9049425fbfc79053109f654a",
+  "basis_inputs_checked": 4096,
+  "depth": 1611,
+  "cx_count": 1895,
+  "width": 18,
+  "max_error": 1.1406292171041281e-14,
+  "ancilla_error": 0.0,
+  "verification": "Exhaustive product-term phase verification"
+}

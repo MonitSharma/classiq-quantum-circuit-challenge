@@ -877,3 +877,12 @@ passed exhaustive verification over all 4096 logo inputs with maximum error
 passed with maximum error `4.89e-16`. This is the full-problem score, and it
 is decisively worse than the protected 524/950 oracle. The cofactor
 temporary-product route is closed in this form.
+
+The final bounded cofactor check used explicit exact HP24 no-ancilla MCX
+lowering in `src/cofactor_rank_bank_hp24.py`. Its verified three-term product
+candidate `artifacts/cofactor_rank_bank_012_hp24_development.qasm` measures
+**1611/1895/18**, SHA
+`ed81bf69e55db8fc72bfa168c9a5b7aeecd2ac4f9049425fbfc79053109f654a`.
+All 4096 product inputs passed with zero ancilla leakage, but the result is
+worse than both the ordinary cofactor control and the 257/535 UCR batch.
+Explicit HP24 lowering does not rescue the cofactor architecture.

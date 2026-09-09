@@ -1624,6 +1624,20 @@ stream and the protected 524/950 oracle. It is retained as a bounded negative
 diagnostic; no partition search or relative-phase extension is justified for
 this exact transition primitive.
 
+## Explicit HP24 cofactor lowering (September 10, 2026)
+
+The remaining bounded cofactor check replaced `qrom_tree.emit()`'s generic
+high-control fallback and relative-phase three-control leaf with explicit
+exact HP24 no-ancilla MCX synthesis in `src/cofactor_rank_bank_hp24.py`.
+The three-term clean bank candidate
+`artifacts/cofactor_rank_bank_012_hp24_development.qasm` measures **1611 depth
+/ 1895 CX / 18 qubits**, SHA
+`ed81bf69e55db8fc72bfa168c9a5b7aeecd2ac4f9049425fbfc79053109f654a`.
+It passed the standalone three-term product verifier over all 4096 inputs with
+maximum error `1.14e-14` and zero ancilla leakage, but is worse than the
+existing cofactor control and the 257/535 UCR batch. Explicit HP24 lowering
+therefore does not rescue the cofactor architecture.
+
 ## Cofactor temporary-product phase pilot (September 10, 2026)
 
 The next phase/state-duality test avoided a second live y bank. In
