@@ -1,0 +1,531 @@
+[
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      1
+    ],
+    "assignment": [
+      "pair_circuit",
+      "parallel_rank_pair_xag",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 859,
+    "cx": 809,
+    "width": 18,
+    "delta_depth": 0,
+    "delta_cx": 9
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      0
+    ],
+    "assignment": [
+      "phase_retention",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 860,
+    "cx": 786,
+    "width": 18,
+    "delta_depth": 1,
+    "delta_cx": -14
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      5
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "parallel_rank_pair_xag",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 864,
+    "cx": 817,
+    "width": 18,
+    "delta_depth": 5,
+    "delta_cx": 17
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      0
+    ],
+    "assignment": [
+      "phase_pebble",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 882,
+    "cx": 836,
+    "width": 18,
+    "delta_depth": 23,
+    "delta_cx": 36
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      6
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_retention",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 912,
+    "cx": 874,
+    "width": 18,
+    "delta_depth": 53,
+    "delta_cx": 74
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      9
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_retention"
+    ],
+    "depth": 924,
+    "cx": 906,
+    "width": 18,
+    "delta_depth": 65,
+    "delta_cx": 106
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      7
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "minmc_rank_pair",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 926,
+    "cx": 950,
+    "width": 18,
+    "delta_depth": 67,
+    "delta_cx": 150
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      5
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_retention",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 934,
+    "cx": 892,
+    "width": 18,
+    "delta_depth": 75,
+    "delta_cx": 92
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      1
+    ],
+    "assignment": [
+      "pair_circuit",
+      "phase_retention",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 954,
+    "cx": 921,
+    "width": 18,
+    "delta_depth": 95,
+    "delta_cx": 121
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      5
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_pebble",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 967,
+    "cx": 930,
+    "width": 18,
+    "delta_depth": 108,
+    "delta_cx": 130
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      3
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_retention",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 968,
+    "cx": 944,
+    "width": 18,
+    "delta_depth": 109,
+    "delta_cx": 144
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      8
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_retention",
+      "pair_circuit"
+    ],
+    "depth": 982,
+    "cx": 946,
+    "width": 18,
+    "delta_depth": 123,
+    "delta_cx": 146
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      4
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_pebble",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 990,
+    "cx": 1022,
+    "width": 18,
+    "delta_depth": 131,
+    "delta_cx": 222
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      7
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_retention",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 993,
+    "cx": 958,
+    "width": 18,
+    "delta_depth": 134,
+    "delta_cx": 158
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      2
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "phase_retention",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 1026,
+    "cx": 1005,
+    "width": 18,
+    "delta_depth": 167,
+    "delta_cx": 205
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      8
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_pebble",
+      "pair_circuit"
+    ],
+    "depth": 1028,
+    "cx": 1006,
+    "width": 18,
+    "delta_depth": 169,
+    "delta_cx": 206
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      9
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_pebble"
+    ],
+    "depth": 1030,
+    "cx": 982,
+    "width": 18,
+    "delta_depth": 171,
+    "delta_cx": 182
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      1
+    ],
+    "assignment": [
+      "pair_circuit",
+      "phase_pebble",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 1045,
+    "cx": 991,
+    "width": 18,
+    "delta_depth": 186,
+    "delta_cx": 191
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      4
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_retention",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 1076,
+    "cx": 1058,
+    "width": 18,
+    "delta_depth": 217,
+    "delta_cx": 258
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      3
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_pebble",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 1076,
+    "cx": 1060,
+    "width": 18,
+    "delta_depth": 217,
+    "delta_cx": 260
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      2
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "phase_pebble",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 1096,
+    "cx": 1091,
+    "width": 18,
+    "delta_depth": 237,
+    "delta_cx": 291
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      6
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_pebble",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 1283,
+    "cx": 1194,
+    "width": 18,
+    "delta_depth": 424,
+    "delta_cx": 394
+  },
+  {
+    "basis": "rank_mc_pareto_terms",
+    "changed_terms": [
+      7
+    ],
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "phase_pebble",
+      "pair_circuit",
+      "pair_circuit"
+    ],
+    "depth": 1516,
+    "cx": 1418,
+    "width": 18,
+    "delta_depth": 657,
+    "delta_cx": 618
+  }
+]

@@ -1,0 +1,106 @@
+# Scalar closure and global endpoint experiment
+
+This run was performed on `main` at `8f6740a`. The protected 531-depth QASM
+was not modified. All complete candidates below use serialized `u3`/`cx`
+QASM, width 18, and `qubits_initially_zero=False` during scoring.
+
+## Results
+
+The best verified rank-family result is now
+`artifacts/756/pair_boundary_756.qasm`: **depth 756 / 747 CX / width 18**.
+It is the existing `pair_terms` pair compiler with a boundary-aware order
+`[9,7,1,2,0,6,3,8,4,5]`. Exhaustive verification checked all 4096 inputs,
+with zero ancilla leakage; QASM SHA-256 is
+`fce0c6f5067d659ada0aac47bfbfe7bd2f1e514c1402a774f898f72fb39e0657`.
+
+The protected overall best remains `artifacts/531/full_mux_531.qasm` at
+531 / 1020 / 18, SHA
+`8f7e2617cf1435ea76cc70688544b4b0e3a8b5082d82293f98777d90d5a3fda6`.
+
+Current all-pair baselines, freshly compiled from the three stored bases, are:
+
+| basis | depth | CX |
+|---|---:|---:|
+| `pair_terms` | 779 | 736 |
+| `rank_terms` | 842 | 781 |
+| `rank_mc_pareto_terms` | 859 | 800 |
+
+The older 795/754 and 803/751 values are therefore historical measurements,
+not reproducible current baselines under this invocation.
+
+The Pareto portfolio closure tested 23 one-term and 237 two-term substitutions.
+Its best two-substitution result was 853 / 795, so substitutions did not beat
+the pair basis. Boundary-aware ordering did improve the pair basis from 779 to
+756. A 50-order control was also included for each basis.
+
+## Global 12-edge identity
+
+Extraction produced 12 surviving phase edges, 11 unique x endpoint functions,
+and 11 unique y endpoint functions. The exact endpoint pairs are stored in
+`artifacts/global_12_edge_endpoints.json`; each row contains 64-bit integer
+truth tables and source-node provenance. The direct identity check covered all
+4096 `(x,y)` inputs and found zero mismatches.
+
+Endpoint truth-table pairs, in edge order, are:
+
+| edge | x truth table | y truth table |
+|---:|---:|---:|
+| 0 | 134217724 | 17329834319396470784 |
+| 1 | 134217724 | 17311836971370283008 |
+| 2 | 132199093370880 | 134219776 |
+| 3 | 281479271677952 | 4063232 |
+| 4 | 140746078289920 | 251688960 |
+| 5 | 281466386776064 | 268433408 |
+| 6 | 2025493932409880576 | 123626338648064 |
+| 7 | 3689348814741910320 | 17042430230528 |
+| 8 | 922337203685477580 | 17042430230528 |
+| 9 | 1154047404513689600 | 70437463654400 |
+| 10 | 279223176896970752 | 264398186741760 |
+| 11 | 105604655874048 | 67112960 |
+
+The endpoint inventory reports 9/11 x functions and 9/11 y functions present
+in the existing bounded min-AND cache. Endpoint degrees are 5 or 6; the full
+inventory is in `artifacts/global_endpoint_inventory.json`.
+
+Compiling the 12 edges independently with `pair_circuit` produced a verified
+**819 / 773 / 18** candidate. This is a substantial improvement over the
+1591-depth formula-graph probe, but it does not beat 756 or 531.
+
+The endpoint interaction matrix has GF(2) rank **10**. Its derived rank-10
+factorization is exactly reconstructed over all 4096 inputs and compiled to a
+verified **854 / 789 / 18** candidate. The factorization therefore did not
+improve the direct 12-edge construction.
+
+## Decision
+
+The cheap scalar neighborhood is not completely useless: ordering alone found
+a verified 756-depth improvement. However, scalar block substitution remains
+far from 531 and cannot plausibly approach the leaderboard's approximately
+291-depth range.
+
+The 12-edge representation is mathematically sound and materially better than
+its original implementation, but independently recompiling its endpoints is
+still not competitive. The data justifies a future joint endpoint compiler,
+especially because the endpoint inventory is not identical to the old scalar
+factor inventory. The next serious architecture should jointly synthesize and
+schedule the endpoint functions with shared nonlinear nodes and dirty-ancilla
+lifetime management. Do not claim that vector-XAG or affine-frame optimization
+has already been implemented.
+
+Generated artifacts:
+
+- `src/extract_global_endpoints.py`
+- `src/global_endpoint_pair_oracle.py`
+- `src/global_endpoint_matrix.py`
+- `src/global_endpoint_inventory.py`
+- `src/global_endpoint_rank_oracle.py`
+- `src/anchored_rank_search.py`
+- `src/rank_boundary_search.py`
+- `artifacts/global_12_edge_endpoints.json`
+- `artifacts/global_12_edge_identity_check.json`
+- `artifacts/global_endpoint_inventory.json`
+- `artifacts/global_endpoint_matrix.json`
+- `artifacts/global_endpoint_rank_terms.json`
+- `artifacts/global_endpoint_pair_best.qasm`
+- `artifacts/global_endpoint_rank_best.qasm`
+- `artifacts/756/pair_boundary_756.qasm`

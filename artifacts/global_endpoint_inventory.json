@@ -1,0 +1,182 @@
+{
+  "x": [
+    {
+      "truth_table": 134217724,
+      "weight": 25,
+      "degree": 6,
+      "anf_terms": 32,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 5
+    },
+    {
+      "truth_table": 105604655874048,
+      "weight": 4,
+      "degree": 5,
+      "anf_terms": 8,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 4
+    },
+    {
+      "truth_table": 132199093370880,
+      "weight": 8,
+      "degree": 5,
+      "anf_terms": 8,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 4
+    },
+    {
+      "truth_table": 140746078289920,
+      "weight": 2,
+      "degree": 5,
+      "anf_terms": 14,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 4
+    },
+    {
+      "truth_table": 281466386776064,
+      "weight": 15,
+      "degree": 6,
+      "anf_terms": 30,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 5
+    },
+    {
+      "truth_table": 281479271677952,
+      "weight": 2,
+      "degree": 5,
+      "anf_terms": 16,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 4
+    },
+    {
+      "truth_table": 279223176896970752,
+      "weight": 5,
+      "degree": 6,
+      "anf_terms": 8,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 5
+    },
+    {
+      "truth_table": 922337203685477580,
+      "weight": 30,
+      "degree": 5,
+      "anf_terms": 2,
+      "in_minmc_cache": false,
+      "minmc_and_nodes": null
+    },
+    {
+      "truth_table": 1154047404513689600,
+      "weight": 2,
+      "degree": 5,
+      "anf_terms": 8,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 4
+    },
+    {
+      "truth_table": 2025493932409880576,
+      "weight": 6,
+      "degree": 5,
+      "anf_terms": 4,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 4
+    },
+    {
+      "truth_table": 3689348814741910320,
+      "weight": 30,
+      "degree": 5,
+      "anf_terms": 30,
+      "in_minmc_cache": false,
+      "minmc_and_nodes": null
+    }
+  ],
+  "y": [
+    {
+      "truth_table": 4063232,
+      "weight": 5,
+      "degree": 6,
+      "anf_terms": 24,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 5
+    },
+    {
+      "truth_table": 67112960,
+      "weight": 2,
+      "degree": 5,
+      "anf_terms": 16,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 4
+    },
+    {
+      "truth_table": 134219776,
+      "weight": 2,
+      "degree": 5,
+      "anf_terms": 4,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 4
+    },
+    {
+      "truth_table": 251688960,
+      "weight": 8,
+      "degree": 5,
+      "anf_terms": 8,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 4
+    },
+    {
+      "truth_table": 268433408,
+      "weight": 17,
+      "degree": 6,
+      "anf_terms": 12,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 6
+    },
+    {
+      "truth_table": 17042430230528,
+      "weight": 5,
+      "degree": 6,
+      "anf_terms": 8,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 5
+    },
+    {
+      "truth_table": 70437463654400,
+      "weight": 2,
+      "degree": 5,
+      "anf_terms": 12,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 4
+    },
+    {
+      "truth_table": 123626338648064,
+      "weight": 6,
+      "degree": 5,
+      "anf_terms": 4,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 4
+    },
+    {
+      "truth_table": 264398186741760,
+      "weight": 8,
+      "degree": 5,
+      "anf_terms": 6,
+      "in_minmc_cache": true,
+      "minmc_and_nodes": 4
+    },
+    {
+      "truth_table": 17311836971370283008,
+      "weight": 8,
+      "degree": 5,
+      "anf_terms": 7,
+      "in_minmc_cache": false,
+      "minmc_and_nodes": null
+    },
+    {
+      "truth_table": 17329834319396470784,
+      "weight": 22,
+      "degree": 5,
+      "anf_terms": 5,
+      "in_minmc_cache": false,
+      "minmc_and_nodes": null
+    }
+  ]
+}

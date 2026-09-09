@@ -1,0 +1,117 @@
+{
+  "edges": [
+    {
+      "index": 0,
+      "x_truth_table": 134217724,
+      "y_truth_table": 17329834319396470784,
+      "x_source_node": 16,
+      "y_source_node": 103
+    },
+    {
+      "index": 1,
+      "x_truth_table": 134217724,
+      "y_truth_table": 17311836971370283008,
+      "x_source_node": 16,
+      "y_source_node": 108
+    },
+    {
+      "index": 2,
+      "x_truth_table": 132199093370880,
+      "y_truth_table": 134219776,
+      "x_source_node": 20,
+      "y_source_node": 111
+    },
+    {
+      "index": 3,
+      "x_truth_table": 281479271677952,
+      "y_truth_table": 4063232,
+      "x_source_node": 24,
+      "y_source_node": 116
+    },
+    {
+      "index": 4,
+      "x_truth_table": 140746078289920,
+      "y_truth_table": 251688960,
+      "x_source_node": 28,
+      "y_source_node": 119
+    },
+    {
+      "index": 5,
+      "x_truth_table": 281466386776064,
+      "y_truth_table": 268433408,
+      "x_source_node": 32,
+      "y_source_node": 124
+    },
+    {
+      "index": 6,
+      "x_truth_table": 2025493932409880576,
+      "y_truth_table": 123626338648064,
+      "x_source_node": 36,
+      "y_source_node": 127
+    },
+    {
+      "index": 7,
+      "x_truth_table": 3689348814741910320,
+      "y_truth_table": 17042430230528,
+      "x_source_node": 40,
+      "y_source_node": 131
+    },
+    {
+      "index": 8,
+      "x_truth_table": 922337203685477580,
+      "y_truth_table": 17042430230528,
+      "x_source_node": 44,
+      "y_source_node": 131
+    },
+    {
+      "index": 9,
+      "x_truth_table": 1154047404513689600,
+      "y_truth_table": 70437463654400,
+      "x_source_node": 48,
+      "y_source_node": 135
+    },
+    {
+      "index": 10,
+      "x_truth_table": 279223176896970752,
+      "y_truth_table": 264398186741760,
+      "x_source_node": 54,
+      "y_source_node": 139
+    },
+    {
+      "index": 11,
+      "x_truth_table": 105604655874048,
+      "y_truth_table": 67112960,
+      "x_source_node": 57,
+      "y_source_node": 144
+    }
+  ],
+  "unique_x_functions": [
+    134217724,
+    105604655874048,
+    132199093370880,
+    140746078289920,
+    281466386776064,
+    281479271677952,
+    279223176896970752,
+    922337203685477580,
+    1154047404513689600,
+    2025493932409880576,
+    3689348814741910320
+  ],
+  "unique_y_functions": [
+    4063232,
+    67112960,
+    134219776,
+    251688960,
+    268433408,
+    17042430230528,
+    70437463654400,
+    123626338648064,
+    264398186741760,
+    17311836971370283008,
+    17329834319396470784
+  ],
+  "constant": false,
+  "inputs_checked": 4096,
+  "mismatches": []
+}
