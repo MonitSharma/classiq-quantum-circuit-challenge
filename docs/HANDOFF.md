@@ -468,3 +468,17 @@ The five-output `V = R1 OR R2` architecture was also remapped over all 120
 feature assignments using its best known y/x routing seeds. Its best verified
 result was **539/918/18**, so assignment remapping does not rescue that
 branch. The next work should attack the UCR/multiplexer primitive itself.
+
+## Final fallback checks (September 9, 2026)
+
+The prescribed local-coordinate fallback was revisited with relative-phase
+controlled arithmetic. The 64-input mapping remained exact, but the serialized
+transform measured **302/181/18**, worse than the exact 274/151/18 transform.
+Because the transform must be computed and uncomputed around the phase, this
+does not justify integration.
+
+The documented 109-node BDD was also evaluated with dirty input workspace. The
+result measured **3,949,563 depth / 2,581,968 CX / 18 qubits**, so direct BDD
+materialization is closed. The current justified research target remains a new
+shared phase/QROM primitive; no existing candidate is promoted over the
+verified 530/531 package.

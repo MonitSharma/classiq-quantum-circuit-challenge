@@ -1097,3 +1097,19 @@ five-output `V = R1 OR R2` architecture tested all 120 assignments with its
 best known y/x routing seeds. The best candidate was **539/918/18**, and it
 passed exhaustive verification; it remains worse than the 530 full-mux
 candidate. This branch is closed.
+
+## Final fallback checks: local-coordinate and BDD routes (September 9, 2026)
+
+The local-coordinate fallback was revisited with relative-phase multi-controlled
+flips. The transform still maps the low five y bits to the center-relative
+coordinate, preserves y5, and passed the 64-input classical mapping check.
+However, the exact serialized U3/CX score was **302 depth / 181 CX / 18
+qubits**, worse than the existing exact transform at **274 / 151 / 18**. Since
+the transform must be inverted around the phase operation, neither version can
+be competitive before radius logic is added; this branch remains closed.
+
+The direct dirty-workspace BDD evaluator was also run against the documented
+109-node order. It produced **3,949,563 depth / 2,581,968 CX / 18 qubits**
+and was therefore rejected as a complete-oracle architecture. The cheap BDD
+cofactors remain useful only as possible future shared predicates; materializing
+the recursive evaluator is not viable.
