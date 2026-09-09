@@ -469,6 +469,13 @@ feature assignments using its best known y/x routing seeds. Its best verified
 result was **539/918/18**, so assignment remapping does not rescue that
 branch. The next work should attack the UCR/multiplexer primitive itself.
 
+An independent-control-order screen then tested 101 complete candidates with
+arbitrary six-bit permutations for each y-loader and x-phase output, rather
+than the cyclic orders used by `multiplexer()`. The winning feature assignment
+again measured **530/1020/18**, and none of the 100 arbitrary-order candidates
+improved it. This rules out control-order scheduling as the main remaining
+lever; a future improvement must replace or share the UCR primitive itself.
+
 ## Final fallback checks (September 9, 2026)
 
 The prescribed local-coordinate fallback was revisited with relative-phase

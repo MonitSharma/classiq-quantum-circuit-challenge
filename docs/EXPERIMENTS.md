@@ -1098,6 +1098,15 @@ best known y/x routing seeds. The best candidate was **539/918/18**, and it
 passed exhaustive verification; it remains worse than the 530 full-mux
 candidate. This branch is closed.
 
+An additional bounded schedule test removed the multiplexer implementation's
+cyclic-order restriction. It evaluated 101 complete candidates using arbitrary
+independent permutations of the six controls for every y-loader output and
+every x-phase output, while preserving the winning feature-to-ancilla mapping.
+The seed-94 schedule reproduced **530/1020/18**; none of the 100 arbitrary
+schedule candidates improved it. This closes control-order scheduling as a
+standalone lever: the remaining gap requires a different loading/phase
+primitive, not a rearrangement of the same UCR gate multiset.
+
 ## Final fallback checks: local-coordinate and BDD routes (September 9, 2026)
 
 The local-coordinate fallback was revisited with relative-phase multi-controlled
