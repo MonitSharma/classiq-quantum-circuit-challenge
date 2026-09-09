@@ -41,6 +41,12 @@ its greedy rollout scored 775/744 and did not improve the local-search result.
 For the 753 order, raw high-level global compilation scored 755/742, versus
 753/742 for independently lowered blocks, so raw composition did not help.
 
+Six-variant exposure retained six variants for eight terms, two for term 5,
+and three for term 9. Joint variant/order local search evaluated 468 states and
+scored 755/735. The K=4 variant boundary DP evaluated 18,944 states; its best
+actual candidate scored 756/734. No non-isolated-optimal variant improved the
+verified 753-depth result.
+
 ## Global 12-edge identity
 
 Extraction produced 12 surviving phase edges, 11 unique x endpoint functions,
@@ -114,6 +120,9 @@ Generated artifacts:
 - `src/pair_raw_global_comparison.py`
 - `src/global_endpoint_star_search.py`
 - `src/current_critical_path.py`
+- `src/pair_variants.py`
+- `src/pair_variant_joint_search.py`
+- `src/pair_variant_boundary_dp.py`
 - `artifacts/global_12_edge_endpoints.json`
 - `artifacts/global_12_edge_identity_check.json`
 - `artifacts/global_endpoint_inventory.json`
@@ -123,3 +132,6 @@ Generated artifacts:
 - `artifacts/global_endpoint_rank_best.qasm`
 - `artifacts/756/pair_boundary_756.qasm`
 - `artifacts/753/pair_boundary_753.qasm`
+- `artifacts/pair_variant_inventory.json`
+- `artifacts/pair_variant_dp_search.json`
+- `artifacts/pair_variant_boundary_costs.json`
