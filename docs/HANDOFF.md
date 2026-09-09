@@ -428,3 +428,9 @@ reached a verified **537/921/18** after pytket. Artifact:
 `artifacts/full_mux_derive_v_independent_best_tket.qasm`, SHA
 `5b1878c951599e594ef404d219c46f4a1fdd412ee50a516d6c16ff53e5f44146`.
 This is a strong CX near-miss but still does not improve depth 531.
+
+Relative-phase Toffolis for the temporary V derivation were also safe under
+full verification. A 1,024-pair screen reached **535/918/18** after pytket;
+artifact `artifacts/full_mux_derive_v_rp_or_best_tket.qasm`, SHA
+`a7ef23f038c2f4f1b6309899025283b32656d17fcd142f21618c9aeb013769f2`. This is
+four layers above 531, so it is a near-miss rather than a replacement.

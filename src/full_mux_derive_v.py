@@ -48,7 +48,7 @@ def multiplexer(tables, outputs, controls, axis, seed=0):
     return q
 
 
-def build(seed=0, x_seed=None):
+def build(seed=0, x_seed=None, relative_or=False):
     a = truth(range(29, 54))
     b = truth(range(39, 44))
     lookup = multiplexer(R + [a, b], list(range(12, 17)),
@@ -58,7 +58,7 @@ def build(seed=0, x_seed=None):
     # q17 is clean after the five-output lookup.
     q.cx(13, 17)
     q.cx(14, 17)
-    q.ccx(13, 14, 17)
+    (q.rccx if relative_or else q.ccx)(13, 14, 17)
 
     xs = truth(range(2, 27))
     xb = truth(range(27, 49))
@@ -99,7 +99,7 @@ def build(seed=0, x_seed=None):
     q.compose(fold.inverse(), inplace=True)
 
     # Clear V, then reverse the five-output lookup.
-    q.ccx(13, 14, 17)
+    (q.rccx if relative_or else q.ccx)(13, 14, 17)
     q.cx(14, 17)
     q.cx(13, 17)
     q.compose(lookup.inverse(), inplace=True)

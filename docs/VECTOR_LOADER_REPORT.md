@@ -213,6 +213,10 @@ An independent 4,096-pair y/x routing search reached 537/921 after pytket;
 its verified artifact is
 `artifacts/full_mux_derive_v_independent_best_tket.qasm`, SHA
 `5b1878c951599e594ef404d219c46f4a1fdd412ee50a516d6c16ff53e5f44146`.
+Using relative-phase Toffolis for the temporary OR and screening 1,024 more
+independent seed pairs reached verified **535/918/18**. The artifact is
+`artifacts/full_mux_derive_v_rp_or_best_tket.qasm`, SHA
+`a7ef23f038c2f4f1b6309899025283b32656d17fcd142f21618c9aeb013769f2`.
 
 ## Complete integration result
 

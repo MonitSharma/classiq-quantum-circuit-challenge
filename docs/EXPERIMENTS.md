@@ -1047,3 +1047,13 @@ matching artifact is `artifacts/full_mux_derive_v_independent_best_tket.qasm`,
 SHA `5b1878c951599e594ef404d219c46f4a1fdd412ee50a516d6c16ff53e5f44146`.
 This closes the cheap routing-search opportunity while confirming a strong CX
 near-miss.
+
+## Relative-phase V derivation (September 9, 2026)
+
+The reversible `V = R1 OR R2` step was then tested with relative-phase
+Toffolis in the five-output architecture. A 1,024-pair independent routing
+screen found raw **540/918** and pytket **535/918** at
+`artifacts/full_mux_derive_v_rp_or_best_tket.qasm`. The candidate passed all
+4096-input exhaustive verification; SHA
+`a7ef23f038c2f4f1b6309899025283b32656d17fcd142f21618c9aeb013769f2`.
+It is CX-efficient but remains four depth layers above the protected 531.
