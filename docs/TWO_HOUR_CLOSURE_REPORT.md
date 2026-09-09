@@ -28,10 +28,12 @@ Current all-pair baselines, freshly compiled from the three stored bases, are:
 The older 795/754 and 803/751 values are therefore historical measurements,
 not reproducible current baselines under this invocation.
 
-The Pareto portfolio closure tested 23 one-term and 237 two-term substitutions.
-Its best two-substitution result was 853 / 795, so substitutions did not beat
-the pair basis. Boundary-aware ordering did improve the pair basis from 779 to
-756. A 50-order control was also included for each basis.
+The basis-matched portfolio closure tested 12/64 substitutions for
+`pair_terms`, 11/54 for `rank_terms`, and 13/75 for
+`rank_mc_pareto_terms` (one-term/two-term counts). The best substitution was
+775 / 749 on `pair_terms`; the best two-term Pareto substitution was 853 / 795.
+Neither beat the boundary-ordered 756 result. A 50-order control was also
+included for each basis.
 
 ## Global 12-edge identity
 

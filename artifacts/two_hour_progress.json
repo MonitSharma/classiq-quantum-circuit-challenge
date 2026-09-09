@@ -1,0 +1,21 @@
+{
+  "phase": "completed",
+  "scalar_baselines": {
+    "pair_terms": {"depth": 779, "cx": 736},
+    "rank_terms": {"depth": 842, "cx": 781},
+    "rank_mc_pareto_terms": {"depth": 859, "cx": 800}
+  },
+  "best_verified_rank_family": {
+    "path": "artifacts/756/pair_boundary_756.qasm",
+    "depth": 756,
+    "cx": 747,
+    "width": 18,
+    "sha256": "fce0c6f5067d659ada0aac47bfbfe7bd2f1e514c1402a774f898f72fb39e0657"
+  },
+  "endpoint_extraction": {"edges": 12, "unique_x": 11, "unique_y": 11, "identity_mismatches": 0},
+  "endpoint_pair_score": {"depth": 819, "cx": 773},
+  "endpoint_matrix_rank": 10,
+  "endpoint_rank_score": {"depth": 854, "cx": 789},
+  "beats_779": true,
+  "beats_531": false
+}
