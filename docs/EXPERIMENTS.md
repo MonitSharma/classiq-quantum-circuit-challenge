@@ -1725,3 +1725,23 @@ fails the local 30--50 depth viability gate by a wide margin. The negative
 result is specifically against independent ESOP phase-cube lowering. A final
 bounded follow-up would need representation-level factoring of the residual
 truth table; full nine-branch integration is not justified before that test.
+
+## Cofactor representation and selector scan (September 10, 2026)
+
+The branch-3 ESOP profile contains 11 cubes and 67 literals. Its residual
+control-size histogram is `{2:1, 5:1, 6:4, 7:4, 8:1}`. It has 12 cube
+containment relationships; the most frequent literal pair occurs in 10 cubes,
+and the aggregate repeated-pair score is 155. This confirms that the 904-depth
+result is dominated by representation lowering rather than a lack of Boolean
+structure.
+
+All `C(12,3)=220`, `C(12,4)=495`, and `C(12,5)=792` selector sets were then
+screened classically. The full structural scan is
+`artifacts/conditionally_clean_selector_scan.json`; it records nonzero
+branches, ESOP cubes/literals, control histograms, containment, and repeated
+literal-pair signatures. By raw ESOP size, the best four-bit selector is
+`(x5,y2,y4,y5)` with 11 nonzero branches and 68 total cubes; the tested
+`(x5,y3,y4,y5)` selector has 9 branches and 70 total cubes. Rank alone is
+therefore not a sufficient selector criterion. These are prescreening results,
+not native-depth results; the next experiment must factor the branch truth
+table before compiling the Pareto winners.

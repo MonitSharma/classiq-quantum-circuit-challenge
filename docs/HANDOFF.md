@@ -919,3 +919,12 @@ The workspace mechanism is therefore valid, but independent ESOP phase-cube
 lowering is far too deep. Do not integrate all branches yet. The next and
 only justified follow-up is to factor the residual truth table before quantum
 lowering; if that remains above the local cutoff, close this direction too.
+
+The branch-3 profile has 11 cubes, 67 literals, 12 containment relationships,
+and a most-common literal pair appearing 10 times. A classical scan of all
+220 three-bit, 495 four-bit, and 792 five-bit selector sets is recorded in
+`artifacts/conditionally_clean_selector_scan.json`. The best four-bit split by
+raw total ESOP cubes is `(x5,y2,y4,y5)` at 68 cubes across 11 branches,
+slightly ahead of the tested `(x5,y3,y4,y5)` split at 70 cubes across 9
+branches. This scan only ranks representations structurally; it does not
+replace exact native U3/CX scoring.

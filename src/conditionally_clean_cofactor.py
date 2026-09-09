@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import itertools
 import json
+from collections import Counter
 from pathlib import Path
 
 import numpy as np
@@ -130,6 +131,78 @@ def analyze_selector(selector_bits):
     }
 
 
+def esop_for_table(table):
+    table_int = sum(int(v) << i for i, v in enumerate(table))
+    return esop(table_int, int(np.log2(len(table))))
+
+
+def representation_profile(table):
+    cubes = esop_for_table(table)
+    supports = [mask.bit_count() for mask, _ in cubes]
+    support_counter = Counter(mask for mask, _ in cubes)
+    repeated_literals = sum(max(0, count - 1) for count in support_counter.values())
+    containment_pairs = 0
+    for left, _ in cubes:
+        for right, _ in cubes:
+            if left != right and left & right == left:
+                containment_pairs += 1
+    common_pairs = Counter()
+    for mask, _ in cubes:
+        literals = [i for i in range(mask.bit_length()) if mask >> i & 1]
+        for pair in itertools.combinations(literals, 2):
+            common_pairs[pair] += 1
+    return {
+        "esop_cubes": len(cubes),
+        "esop_literals": int(sum(supports)),
+        "control_histogram": dict(sorted(Counter(supports).items())),
+        "max_control": max(supports, default=0),
+        "repeated_literal_cubes": repeated_literals,
+        "containment_pairs": containment_pairs // 2,
+        "common_literal_pairs": int(sum(count - 1 for count in common_pairs.values() if count > 1)),
+        "max_common_pair_frequency": max(common_pairs.values(), default=0),
+        "ones": int(table.sum()),
+        **anf_stats(table),
+    }
+
+
+def selector_signature(selector_bits):
+    coordinates = residual_coordinates(selector_bits)
+    branches = []
+    for assignment in range(1 << len(selector_bits)):
+        table = cofactor_table(selector_bits, assignment, coordinates)
+        if not np.any(table):
+            continue
+        profile = representation_profile(table)
+        profile["assignment"] = assignment
+        branches.append(profile)
+    totals = {
+        "selector_bits": list(selector_bits),
+        "selector_size": len(selector_bits),
+        "nonzero_branches": len(branches),
+        "residual_variables": len(coordinates),
+        "sum_esop_cubes": sum(b["esop_cubes"] for b in branches),
+        "sum_esop_literals": sum(b["esop_literals"] for b in branches),
+        "sum_containment_pairs": sum(b["containment_pairs"] for b in branches),
+        "sum_common_literal_pairs": sum(b["common_literal_pairs"] for b in branches),
+        "max_branch_cubes": max((b["esop_cubes"] for b in branches), default=0),
+        "max_branch_controls": max((b["max_control"] for b in branches), default=0),
+        "branches": branches,
+    }
+    # Lower is better for the first terms; the last terms reward factorable
+    # repeated structure without pretending this is a native-depth score.
+    totals["classical_factor_score"] = (
+        totals["sum_esop_literals"]
+        - 4 * totals["sum_containment_pairs"]
+        - 2 * totals["sum_common_literal_pairs"]
+    )
+    return totals
+
+
+def all_selector_sets(size):
+    wires = tuple(("x", i) for i in range(6)) + tuple(("y", i) for i in range(6))
+    return itertools.combinations(wires, size)
+
+
 def _mcx_exact(q, controls, target, borrowed=()):
     controls = list(controls)
     if not controls:
@@ -242,6 +315,9 @@ def main():
     parser.add_argument("--output", default="artifacts/conditionally_clean_screen.json")
     parser.add_argument("--compile-assignment", type=int)
     parser.add_argument("--conditional-clean", action="store_true")
+    parser.add_argument("--profile-assignment", type=int)
+    parser.add_argument("--scan-selector-size", type=int, action="append")
+    parser.add_argument("--scan-output", default="artifacts/conditionally_clean_selector_scan.json")
     args = parser.parse_args()
     selectors = [
         (("x", 5), ("y", 5)),
@@ -265,6 +341,25 @@ def main():
         output = Path(f"artifacts/conditionally_clean_branch_{args.compile_assignment}_{suffix}.qasm")
         output.write_text(qasm2.dumps(circuit))
         print({"output": str(output), "depth": circuit.depth(), "cx": circuit.count_ops().get("cx", 0), **metadata})
+    if args.profile_assignment is not None:
+        selector = selectors[2]
+        coordinates = residual_coordinates(selector)
+        table = cofactor_table(selector, args.profile_assignment, coordinates)
+        print(json.dumps({"selector": selector, "assignment": args.profile_assignment, **representation_profile(table)}, indent=2))
+    if args.scan_selector_size:
+        scan = []
+        for size in args.scan_selector_size:
+            for selector in all_selector_sets(size):
+                scan.append(selector_signature(selector))
+            print("scanned selector size", size, "count", sum(1 for _ in all_selector_sets(size)), flush=True)
+        scan.sort(key=lambda item: (item["classical_factor_score"], item["sum_esop_cubes"], item["nonzero_branches"]))
+        scan_path = Path(args.scan_output)
+        scan_path.parent.mkdir(parents=True, exist_ok=True)
+        scan_path.write_text(json.dumps(scan, indent=2) + "\n")
+        print("top selector signatures:")
+        for item in scan[:10]:
+            print(item["selector_bits"], item["classical_factor_score"], item["sum_esop_cubes"], item["nonzero_branches"])
+        print(scan_path)
     print(path)
 
 
