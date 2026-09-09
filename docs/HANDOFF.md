@@ -928,3 +928,12 @@ raw total ESOP cubes is `(x5,y2,y4,y5)` at 68 cubes across 11 branches,
 slightly ahead of the tested `(x5,y3,y4,y5)` split at 70 cubes across 9
 branches. This scan only ranks representations structurally; it does not
 replace exact native U3/CX scoring.
+
+The first targeted factorization used the signed factor
+`(x4=0) AND (y2=1)` and an exact bounded six-variable XAG for its residual.
+The branch-3 factored candidate scored **713/445/18**, SHA
+`611c3f8a51595fbca49102b6f6c4728ea6c96b7966834e417308669b4a7fef1c`, and
+passed branch-specific exhaustive verification with zero ancilla leakage. This
+improves on 904/522, but remains above the local viability gate. Do not build
+all branches yet; the next checkpoint is another factor/XAG representation or
+another rank-4 branch, not full selector traversal.

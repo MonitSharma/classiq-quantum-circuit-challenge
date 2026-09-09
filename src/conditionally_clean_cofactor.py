@@ -310,12 +310,161 @@ def compile_local_branch(selector_bits, selector_assignment: int, conditional_cl
     ), {"selector_assignment": selector_assignment, "cubes": len(cubes)}
 
 
+def _xor_and_segment(left, right, signal_wire, target):
+    """Compute target ^= affine(left) & affine(right) over GF(2)."""
+    segment = QuantumCircuit(18)
+    left = set(left)
+    right = set(right)
+    singles = set()
+    pairs = set()
+    for a in left:
+        for b in right:
+            if a == 0 and b == 0:
+                segment.x(target)
+            elif a == 0:
+                singles.symmetric_difference_update([b])
+            elif b == 0:
+                singles.symmetric_difference_update([a])
+            elif a == b:
+                singles.symmetric_difference_update([a])
+            else:
+                pair = tuple(sorted((a, b)))
+                if pair in pairs:
+                    pairs.remove(pair)
+                else:
+                    pairs.add(pair)
+    for signal in sorted(singles):
+        segment.cx(signal_wire(signal), target)
+    for a, b in sorted(pairs):
+        segment.rccx(signal_wire(a), signal_wire(b), target)
+    return segment
+
+
+def compile_factored_branch(selector_bits, selector_assignment: int):
+    """Compile branch 3 as P*G XOR R using a bounded six-variable XAG."""
+    if selector_bits != (("x", 5), ("y", 3), ("y", 4), ("y", 5)) or selector_assignment != 3:
+        raise ValueError("the first factored pilot is fixed to selector A, assignment 3")
+    coordinates = residual_coordinates(selector_bits)
+    table = cofactor_table(selector_bits, selector_assignment, coordinates)
+    cubes = esop_for_table(table)
+
+    # P is x4=0 AND y2=1.  Seven ESOP cubes contain this signed pair.  After
+    # removing P, the exact residual G uses six variables; the remainder R
+    # contains six marked inputs and has four ESOP cubes.
+    p_indices = (4, 7)
+    p_values = (0, 1)
+    remaining = [i for i in range(8) if i not in p_indices]
+    g = 0
+    for mask, value in cubes:
+        if not all(mask >> i & 1 and ((value >> i) & 1) == wanted
+                   for i, wanted in zip(p_indices, p_values)):
+            continue
+        rem_mask = rem_value = 0
+        for new_i, old_i in enumerate(remaining):
+            if mask >> old_i & 1:
+                rem_mask |= 1 << new_i
+            if value >> old_i & 1:
+                rem_value |= 1 << new_i
+        for assignment in range(64):
+            if (assignment & rem_mask) == (rem_value & rem_mask):
+                g ^= 1 << assignment
+    expanded = 0
+    for assignment in range(256):
+        if ((assignment >> 4) & 1) == 0 and ((assignment >> 7) & 1) == 1:
+            g_index = sum(((assignment >> old_i) & 1) << new_i
+                          for new_i, old_i in enumerate(remaining))
+            expanded |= ((g >> g_index) & 1) << assignment
+    remainder = sum(int(v) << i for i, v in enumerate(table)) ^ expanded
+    remainder_cubes = esop(remainder, 8)
+
+    # Exact six-variable XAG returned by minmc_xag.py for G.  The sixth
+    # bounded node is affine (AND with constant one) and is folded into the
+    # output, leaving five nonlinear nodes for q13..q17.
+    xag_nodes = [
+        ((0, 1, 3), (2,)),
+        ((3,), (2, 3, 4, 7)),
+        ((1, 7, 8), (1, 4, 5)),
+        ((1, 3, 6, 9), (0, 1, 2, 8, 9)),
+        ((3, 4), (6, 10)),
+    ]
+    output_signals = {3, 4, 6, 10, 11}
+    input_wires = [coordinates[i] for i in remaining]
+    input_wires = [wire if kind == "x" else 6 + wire for kind, wire in input_wires]
+    node_wires = {7: 13, 8: 14, 9: 15, 10: 16, 11: 17}
+
+    def signal_wire(signal):
+        if 1 <= signal <= 6:
+            return input_wires[signal - 1]
+        if signal in node_wires:
+            return node_wires[signal]
+        raise ValueError(f"unsupported signal {signal}")
+
+    q = QuantumCircuit(18)
+    selector_wires = [wire if kind == "x" else 6 + wire for kind, wire in selector_bits]
+    desired = [(selector_assignment >> i) & 1 for i in range(len(selector_bits))]
+    negative_selector = [wire for wire, value in zip(selector_wires, desired) if not value]
+    _toggle_target(q, selector_wires, 12, negative_selector)
+    for wire, value in zip(selector_wires, desired):
+        if value:
+            q.cx(12, wire)
+    # Keep the first factored pilot on the exact no-ancilla phase reference;
+    # the XAG reduction is the variable being measured here.
+    borrowed = ()
+
+    segments = []
+    for node_index, (left, right) in enumerate(xag_nodes):
+        segment = _xor_and_segment(left, right, signal_wire, 13 + node_index)
+        q.compose(segment, inplace=True)
+        segments.append(segment)
+    for signal in sorted(output_signals - {11}):
+        q.cx(signal_wire(signal), 17)
+
+    residual_wires = [wire if kind == "x" else 6 + wire for kind, wire in coordinates]
+    _phase_cube(q, [12, residual_wires[4], residual_wires[7], 17], [residual_wires[4]], borrowed)
+
+    for signal in sorted(output_signals - {11}):
+        q.cx(signal_wire(signal), 17)
+    for segment in reversed(segments):
+        q.compose(segment.inverse(), inplace=True)
+
+    # The XAG workspace is clean again, so the exceptional remainder can use
+    # the ordinary ancillas in addition to the conditionally-clean selectors.
+    # The exceptional cubes are few but wide; use the exact no-ancilla
+    # reference decomposition here until a dedicated dirty-MCZ lowering is
+    # available for this control count.
+    remainder_borrowed = ()
+    for mask, value in remainder_cubes:
+        controls = [12]
+        negative = []
+        for i, wire in enumerate(residual_wires):
+            if mask >> i & 1:
+                controls.append(wire)
+                if not (value >> i & 1):
+                    negative.append(wire)
+        _phase_cube(q, controls, negative, remainder_borrowed)
+    for wire, value in reversed(list(zip(selector_wires, desired))):
+        if value:
+            q.cx(12, wire)
+    _toggle_target(q, selector_wires, 12, negative_selector)
+    out = transpile(q, basis_gates=["u3", "cx"], qubits_initially_zero=False,
+                    optimization_level=3, seed_transpiler=0)
+    return out, {
+        "selector_assignment": selector_assignment,
+        "factor": "x4=0 AND y2=1",
+        "g_ones": int(g.bit_count()),
+        "remainder_ones": int(remainder.bit_count()),
+        "remainder_cubes": len(remainder_cubes),
+        "xag_and_nodes": len(xag_nodes),
+    }
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", default="artifacts/conditionally_clean_screen.json")
     parser.add_argument("--compile-assignment", type=int)
     parser.add_argument("--conditional-clean", action="store_true")
     parser.add_argument("--profile-assignment", type=int)
+    parser.add_argument("--factored", action="store_true")
     parser.add_argument("--scan-selector-size", type=int, action="append")
     parser.add_argument("--scan-output", default="artifacts/conditionally_clean_selector_scan.json")
     args = parser.parse_args()
@@ -334,10 +483,14 @@ def main():
         print(item["selector_bits"], item["nonzero_branches"], item["residual_variables"], ranks)
     if args.compile_assignment is not None:
         selector = selectors[2]
-        circuit, metadata = compile_local_branch(
-            selector, args.compile_assignment, args.conditional_clean
-        )
-        suffix = "borrowed" if args.conditional_clean else "safe"
+        if args.factored:
+            circuit, metadata = compile_factored_branch(selector, args.compile_assignment)
+            suffix = "factored"
+        else:
+            circuit, metadata = compile_local_branch(
+                selector, args.compile_assignment, args.conditional_clean
+            )
+            suffix = "borrowed" if args.conditional_clean else "safe"
         output = Path(f"artifacts/conditionally_clean_branch_{args.compile_assignment}_{suffix}.qasm")
         output.write_text(qasm2.dumps(circuit))
         print({"output": str(output), "depth": circuit.depth(), "cx": circuit.count_ops().get("cx", 0), **metadata})

@@ -1745,3 +1745,24 @@ literal-pair signatures. By raw ESOP size, the best four-bit selector is
 therefore not a sufficient selector criterion. These are prescreening results,
 not native-depth results; the next experiment must factor the branch truth
 table before compiling the Pareto winners.
+
+## Dominant-pair factored XAG pilot (September 10, 2026)
+
+The branch-3 profile's most frequent support pair is `(x4,y2)`. Its useful
+signed factor is `P = (x4=0) AND (y2=1)`, which occurs in seven exact cubes;
+the remaining polarity variants are retained in an explicit remainder rather
+than being incorrectly treated as the same signed cube. Removing `P` gives a
+six-variable residual `G` with 49 marked inputs. The bounded `minmc_xag.py`
+solver found an exact six-node XAG for `G`; one node is affine and folds into
+the output, so the reversible pilot uses five nonlinear nodes. The exceptional
+remainder has six marked inputs and four ESOP cubes.
+
+The resulting local branch candidate
+`artifacts/conditionally_clean_branch_3_factored.qasm` measures **713 depth /
+445 CX / 18 qubits**, SHA
+`611c3f8a51595fbca49102b6f6c4728ea6c96b7966834e417308669b4a7fef1c`. It
+passed the branch-specific exhaustive verifier with maximum error `7.16e-15`,
+zero ancilla leakage, and matching SHA. This is a 21% depth and 15% CX
+reduction against the 904/522 independent-ESOP candidate, confirming that
+representation-level factoring is the correct lever. It is still far above
+the 30--50 local viability gate, so full branch integration remains deferred.
