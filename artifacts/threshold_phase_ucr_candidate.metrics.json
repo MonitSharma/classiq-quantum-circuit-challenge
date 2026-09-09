@@ -70,5 +70,8 @@
     4,
     16
   ],
-  "status": "pending_exhaustive_verification"
+  "status": "exhaustively_verified",
+  "exhaustive_report": "artifacts/threshold_phase_ucr_candidate.exhaustive.json",
+  "max_error": 1.6314707514697836e-14,
+  "ancilla_error": 0.0
 }
