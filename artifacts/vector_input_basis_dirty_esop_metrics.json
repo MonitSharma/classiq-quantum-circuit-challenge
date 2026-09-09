@@ -1,0 +1,22 @@
+{
+  "input_matrix_rows": [
+    1,
+    2,
+    4,
+    40,
+    16,
+    48
+  ],
+  "input_offset": 16,
+  "unique_monomials": 26,
+  "depth": 1996,
+  "cx": 1130,
+  "width": 18,
+  "basis": [
+    "u3",
+    "cx"
+  ],
+  "qubits_initially_zero": false,
+  "classical_inputs_verified": 0,
+  "note": "Loader-only exact dirty-ancilla ESOP diagnostic; exhaustive QASM verification required before use."
+}

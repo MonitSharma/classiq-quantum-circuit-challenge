@@ -378,3 +378,12 @@ The best new structural result is an affine y-input basis with rows
 linear mapping passes all 64 y-input checks and measures 1973/1136/18. This
 is an intermediate loader improvement, not a complete-oracle result; it still
 does not justify integration into the 531 architecture.
+
+The next dirty-output test used the five feature output wires as restored dirty
+ancillas for MCX synthesis. The ordinary exact version measured 1996/1130/18,
+worse than the 1973/1136 clean-output loader. Relative-phase compute/fanout/
+uncompute reduced the loader-only score to **1560/874/18** in
+`artifacts/vector_input_basis_dirty_rp_loader.qasm`; all 64 y inputs were
+independently statevector-verified with exact outputs, restored y and q17, and
+one shared global phase. This is not a complete logo oracle and has not been
+integrated into the protected 531 artifact.

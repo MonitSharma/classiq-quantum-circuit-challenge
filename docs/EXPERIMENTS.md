@@ -965,3 +965,22 @@ better irreversible representation: 48 ABC AND nodes at level 6, versus
 offset 16. Its exact input-basis shared-ESOP loader passed all 64 input
 replays and measured **1973/1136/18**, improving 2505/1453 but remaining far
 above the protected complete oracle. The input-basis loader was not integrated.
+
+## Relative-phase dirty-output loader (September 9, 2026)
+
+The next test replaced the no-ancilla MCX gates in the 26-monomial
+input-basis loader with exact dirty-ancilla synthesis, temporarily using the
+five output wires and restoring them. The ordinary exact dirty construction
+measured **1996/1130/18** and was worse than the clean-output reference
+1973/1136/18. A Qiskit three-control wrapper was avoided because its installed
+version exposes a malformed four-qubit definition for a five-qubit dirty
+gate; the direct synthesis API was used instead.
+
+Allowing relative phase inside each compute/fanout/uncompute sandwich was a
+much better loader primitive. The candidate
+`artifacts/vector_input_basis_dirty_rp_loader.qasm` measured **1560/874/18**.
+An independent statevector check of all 64 y inputs found one output basis
+state per input, exact feature bits, restored y and q17, and one shared global
+phase. This is still loader-only: it has not been composed with the x-phase
+oracle, and therefore is not a complete challenge score. The protected
+complete oracle remains `artifacts/531/full_mux_531.qasm` at 531/1020/18.

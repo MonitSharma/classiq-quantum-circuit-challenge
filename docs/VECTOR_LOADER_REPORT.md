@@ -172,3 +172,17 @@ Artifacts:
 - `artifacts/vector_input_basis_search.json`
 - `artifacts/vector_input_basis_esop_loader.qasm`
 - `artifacts/vector_input_basis_esop_metrics.json`
+
+## Relative-phase dirty-output continuation
+
+The input-basis loader was also rebuilt with exact dirty-ancilla MCX
+synthesis, using the five feature output wires as restored dirty work space.
+The ordinary exact version measured 1996 depth / 1130 CX / width 18, so it did
+not improve the 1973/1136 clean-output loader. A relative-phase
+compute/fanout/uncompute version measured **1560 depth / 874 CX / width 18** at
+`artifacts/vector_input_basis_dirty_rp_loader.qasm`.
+
+All 64 y basis inputs were independently simulated: the y register and q17
+returned to their inputs/zero, the five feature outputs were exact, and every
+case had the same global phase. This remains a loader-only diagnostic and is
+not a replacement for the verified complete 531-depth oracle.
