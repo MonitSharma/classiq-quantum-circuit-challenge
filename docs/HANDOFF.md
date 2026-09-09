@@ -844,6 +844,15 @@ ancilla leakage. This is phase-safe but slower than the 257/535 UCR batch;
 direct y ESOP phase cubes remain the bottleneck. A shared phase-gadget
 compiler is required before extending this formulation beyond three terms.
 
+The exact two-live-pair vector continuation was also tested in
+`src/exact_vector_stream.py`. It kept two x/y factor pairs live in q12..q15,
+used q16,q17 as clean transition scratch, and streamed five consecutive
+two-term groups. The complete verified scores were **2948/1702** for
+`pair_terms`, **2774/1601** for `rank_terms`, and **2716/1576** for
+`rank_mc_pareto_terms`, all at width 18 with zero ancilla leakage. This exact
+vector stream is a negative result; the current path does not justify a
+relative-phase extension without changing the transition representation.
+
 The exact one-live-pair stream requested in the next research plan was then
 implemented in `src/exact_stream.py`. It uses phase-free MCX transitions between
 factor states, scores all zero/term edges in native `u3`/`cx`, and solves the

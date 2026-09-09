@@ -1603,6 +1603,27 @@ above the protected 524/950 oracle. Exact one-live-pair streaming is therefore
 closed; a relative-phase ledger on the same one-pair transition primitive is
 not justified by this baseline.
 
+## Exact two-live-pair vector stream (September 10, 2026)
+
+The next stateful variant kept two x/y factor pairs live in q12..q15 and used
+q16,q17 as explicitly clean transition scratch. Five consecutive two-term
+groups were streamed with two parallel CZ gates per state. Exact native edge
+costs and a Held--Karp ordering were evaluated for all three current bases.
+
+The complete candidates were all exhaustively verified with zero ancilla
+leakage:
+
+| Basis | Depth | CX | SHA |
+|---|---:|---:|---|
+| `pair_terms` | **2948** | **1702** | `1b89f2629fa55458f7fb6ed5504f01f8dde6ee9f35114727c9007250d3b1bb8b` |
+| `rank_terms` | **2774** | **1601** | `0a9645c3da51b5d035da0ec60296337137ec06e3dbc13d22ff974f2a5fdd8677` |
+| `rank_mc_pareto_terms` | **2716** | **1576** | `9192b7837d911385b2db0b6968a52e2727a8c2970c70acab301095345cd42720` |
+
+This fixed two-term grouping is decisively worse than both the exact one-pair
+stream and the protected 524/950 oracle. It is retained as a bounded negative
+diagnostic; no partition search or relative-phase extension is justified for
+this exact transition primitive.
+
 ## Cofactor temporary-product phase pilot (September 10, 2026)
 
 The next phase/state-duality test avoided a second live y bank. In
