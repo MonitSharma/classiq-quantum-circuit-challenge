@@ -118,6 +118,13 @@ and 9. It is not yet an end-to-end nonlinear oracle compiler: RCCX changes the
 semantic signal basis, so live nonlinear signals still need to be represented
 in the frame state before a persistent candidate can be accepted.
 
+A truth-table-backed semantic-frame prototype was also attempted. Its general
+transition core passes random exact tests on 18-dimensional function spans,
+but the first end-to-end pair construction failed to preserve a live nonlinear
+signal through a frame transition. This is recorded as an implementation
+blocker, not as a circuit result; the next version must make live-node rebinding
+part of the transition invariant.
+
 Generated artifacts:
 
 - `src/extract_global_endpoints.py`
@@ -137,6 +144,7 @@ Generated artifacts:
 - `src/pair_variant_boundary_dp.py`
 - `src/persistent_parity.py`
 - `src/persistent_parity_pilot.py`
+- `src/semantic_frame.py`
 - `artifacts/global_12_edge_endpoints.json`
 - `artifacts/global_12_edge_identity_check.json`
 - `artifacts/global_endpoint_inventory.json`
