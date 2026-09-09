@@ -1041,3 +1041,13 @@ with 1-second-per-bound limits. These are solver `unknown_or_above_bound`
 results, not lower bounds; no reversible candidate was produced and no full
 oracle score changed. The next escalation, if justified, is a heuristic
 bit-parallel beam search rather than a blind increase in Z3 timeout.
+## Exact-completion candidate search (September 9, 2026)
+
+`src/semantic_xag_completion.py` implements provenance-tracked Gaussian
+completion for target quotient directions, while enumerating first and second
+AND extensions one span at a time. The first bounded `(R1,R2)` run examined
+all 651 first-node extensions and 424,445 second-node extensions in 10 seconds,
+but reached zero late completion tests before the time bound. Its report is
+`artifacts/semantic_discrete/r1_r2_completion.json`. This is a frontier
+management result, not evidence against a four-AND witness; the next change
+must target-direct the second-node enumeration before invoking completion.

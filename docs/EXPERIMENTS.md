@@ -1875,3 +1875,12 @@ through three shared AND nodes for `(R0,R1)`, `(R1,R2)`, `(A,B)`, or `(A,B,V)`
 under 1-second-per-bound limits. Because each bound timed out or remained
 unresolved, this is not an impossibility result and does not justify native
 RCCX lowering yet. The protected baseline remains 524/950.
+## Exact-completion candidate search (September 9, 2026)
+
+The candidate-mode completion oracle in `src/semantic_xag_completion.py` uses
+provenance-aware GF(2) elimination to solve the final target directions. The
+first `(R1,R2)` run enumerated 651 first extensions and 424,445 second
+extensions in a 10-second bound, but reached no completion tests. The report is
+`artifacts/semantic_discrete/r1_r2_completion.json`. This confirms that the
+second-node frontier, not the late completion oracle, is the remaining search
+bottleneck. No four-AND witness or native circuit has been produced.
