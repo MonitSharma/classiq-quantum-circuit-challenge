@@ -899,5 +899,6 @@ A shared five-output y-loader diagnostic was also attempted. Its initial
 525-depth measurement was invalid because the live-feature RZ phase retained
 an x-dependent zero-branch phase; it was discarded before artifact creation.
 Adding the original parity-reference cancellation restored correctness but
-measured 541/949, with bounded cleanup at 536/947, so it does not beat the
-protected 531 circuit.
+measured 541/913 after a bounded loader/phase seed sweep, with bounded cleanup
+at 536/947. Independent loader/phase and routing-seed trials found no lower
+depth, so it does not beat the protected 531 circuit.

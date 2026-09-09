@@ -209,9 +209,10 @@ exhaustively verified with zero ancilla leakage and SHA
 
 A five-output shared y-loader diagnostic briefly measured 525, but exhaustive
 verification rejected it because its live-feature RZ phase had an
-x-dependent zero-branch phase. The corrected parity-reference version was
-exact at 541/949 (536/947 after bounded cleanup), so it is not an improvement
-over the protected 531 artifact and no invalid QASM was retained.
+x-dependent zero-branch phase. The corrected parity-reference version reached
+541/913 after a bounded loader/phase seed sweep (536/947 after bounded
+cleanup), so it is not an improvement over the protected 531 artifact and no
+invalid QASM was retained.
 
 The 531 result is a useful submission-ready baseline, but it is not close to
 the historical leader at depth 291. The measurements point away from more

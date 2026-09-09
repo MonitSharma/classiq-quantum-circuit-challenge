@@ -161,6 +161,8 @@ x-dependent zero-branch phase and was not an exact oracle. It was not saved as
 a candidate.
 
 The corrected construction uses q17 as the parity reference, mirroring the
-original 531 phase cancellation. It is exact, but measured **541/949/18**
-(best of eight loader/phase seeds); bounded pytket cleanup reached **536/947**.
-It therefore does not improve the protected 531 result and is not a new best.
+original 531 phase cancellation. It is exact, but measured **541/913/18**
+after a bounded 64-seed loader sweep; independent loader/phase seed trials
+and routing-seed trials found no lower depth. Bounded pytket cleanup reached
+**536/947**. It therefore does not improve the protected 531 result and is not
+a new best.
