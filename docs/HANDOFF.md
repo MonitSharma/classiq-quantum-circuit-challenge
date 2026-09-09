@@ -757,6 +757,41 @@ verifier on all 4096 inputs with zero ancilla leakage. SHA-256:
 Unshared direct bilinear phase expansion is therefore closed; future work
 must share phase cubes globally or use a different multi-output representation.
 
+The exact-MCZ serialization of the same 69-cube phase-only construction was
+also checked at **1734/1235/18**, SHA
+`af295b60cd6f48c8eebde5fd05d6539556bbdb40f14c547b13beeda727759f32`; it
+passed all 4096 inputs but is slightly deeper than 1725/1235 and is closed.
+
+The same global cube-sharing recursion was rerun with `mcz.best_mcz` replacing
+the older phase-cube primitive. The best of eight seeds was **1734/1235/18**
+and passed complete exhaustive verification with zero ancilla leakage. SHA:
+`af295b60cd6f48c8eebde5fd05d6539556bbdb40f14c547b13beeda727759f32`.
+This is slightly worse than the 1725-depth phase-only result; MCZ helper
+selection is not the missing improvement.
+
+An elementary GF(2) basis search scored complete serialized direct phase-only
+circuits after each mutation. The best of 100 steps kept depth at **1725** but
+reduced CX count from 1235 to **1225**. The candidate
+`artifacts/phase_rank_basis_best_development.qasm` passed the complete logo
+verifier on all 4096 inputs with zero ancilla leakage; SHA-256:
+`f6d52201ba8f066b388d2a25d94a1348b6b14625f024263de53c3fb4a06c5542`.
+Search data is in `artifacts/phase_rank_basis_search_development.json`.
+Basis choice changes cube sharing and CX count but not the depth regime; this
+is a verified near-miss, not a replacement for the 524-depth oracle.
+
+## Development branch grouped phase-sharing pilot (September 9, 2026)
+
+The 69 direct bilinear phase cubes contain 23 distinct y-side ESOP cubes.
+`src/shared_y_phase_grouped.py` computes one y-cube into q17, synthesizes all
+associated x-side phase cubes with a shared q17 control, then uncomputes q17.
+This reduces the naive grouped-y implementation from 4100 depth to a verified
+**2242/1624/18**. The complete candidate
+`artifacts/shared_y_phase_grouped_development.qasm` passed all 4096 logo inputs
+with zero ancilla leakage; SHA-256:
+`d18d1530e7615e64fab0bdd1a2a13e32e685a005966fd6b6f1c4f31d78eb4f29`.
+It remains above both the protected 524-depth oracle and the 1725-depth global
+phase-only candidate, so local y-group sharing is insufficient.
+
 ## Phase/state-duality applicability review (September 9, 2026)
 
 The referenced Amy--Ross phase/state-duality paper studies both relative-phase
