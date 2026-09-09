@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/persistent_pair_9.qasm",
+  "sha256": "b60b66266adf342427ccc2c0910ac41000610fbb34cb3b65712c8deb44cf5e5b",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 463,
+  "cx_count": 540,
+  "max_error": 2.960883838797243e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.0387887047949846e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 0.1803140640258789,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

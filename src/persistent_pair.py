@@ -3,7 +3,7 @@ from pathlib import Path
 import json
 from qiskit import QuantumCircuit, qasm2, transpile
 from xag import make_graph, linear
-from xag import phase_forms
+from xag_phase import phase_many
 from semantic_frame import FULL, synthesize_transition, apply_circuit, rank
 
 INPUT_TT=[sum(1<<i for i in range(4096) if i>>b&1) for b in range(12)]
@@ -13,7 +13,7 @@ def form_tt(g, form):
     for v in form:value ^= FULL if v==-1 else g.tt[v]
     return value
 
-def target_rows(current, desired, positions):
+def target_rows(current, desired, positions, storage_positions=None):
     rows=[None]*18
     source_rank=qrank(current)
     for index,value in enumerate(desired):
@@ -24,9 +24,12 @@ def target_rows(current, desired, positions):
     basis=[]; current_rank=source_rank; selected=[value for value in rows if value is not None]
     for value in current:
         if qrank(selected+[value])>qrank(selected):basis.append(value);selected.append(value)
-    for i in range(18):
+    fill_positions = range(18) if storage_positions is None else sorted(storage_positions)
+    for i in fill_positions:
         if rows[i] is None and basis:
             rows[i]=basis.pop(0)
+    if basis:
+        raise ValueError("target frame needs more non-clean storage wires")
     for i in range(18):
         if rows[i] is None:rows[i]=0
     if qrank(rows)!=current_rank:raise ValueError("target frame lost semantic span")
@@ -62,21 +65,28 @@ def compile_pair(x,y,forms,path):
         if missing_inputs or missing_live: raise ValueError(f"semantic span lost before step {step} node {node}: inputs={missing_inputs} live={missing_live}")
         a,b=g.nodes[node]; at,bt=form_tt(g,a),form_tt(g,b)
         if node in live: target=wire[node]; target_value=g.tt[node]
-        else: target=free.pop(0); target_value=0
+        else:
+            if not free:
+                raise ValueError(f"ancilla budget exhausted at step {step} node {node}; live={sorted(live)} zero_slots={[i for i,v in enumerate(current) if v==0]} wire={wire} path={path}")
+            target=free.pop(0); target_value=0
         # Keep every live nonlinear signal on its assigned wire.  Only unused
         # wires are eligible as temporary parity pivots, so later uncomputes
         # retain their semantic targets.
         best=None; last_error=None
         protected_slots={wire[n] for n in live}
-        for p in range(18):
+        # Keep unused ancillas clean.  Controls are affine forms of the input
+        # wires, so selecting input pivots is sufficient and prevents a
+        # temporary ancilla from becoming a dirty parity carrier.
+        for p in range(12):
             if p==target or p in protected_slots:continue
-            for r in range(18):
+            for r in range(12):
                 if r in (p,target) or r in protected_slots:continue
                 try:
                     fixed={p:at,r:bt,target:target_value}
                     for live_node in live:
                         if live_node!=node: fixed[wire[live_node]]=g.tt[live_node]
-                    desired=target_rows(current,list(fixed.values()),list(fixed.keys()))
+                    storage=set(range(12))|protected_slots|{p,r,target}
+                    desired=target_rows(current,list(fixed.values()),list(fixed.keys()),storage)
                     post=desired[:]; post[target]=target_value ^ (at&bt)
                     after_live=set(live)
                     if node in after_live:after_live.remove(node)
@@ -145,7 +155,9 @@ def compile_pair(x,y,forms,path):
     except ValueError as error: raise ValueError(f"final frame: {error}")
     q.compose(tr,inplace=True);compute.compose(tr,inplace=True)
     selected_forms=tuple(frozenset(f) for f in forms)
-    phase_forms(q, selected_forms[0], selected_forms[1], wire={v:v for v in range(12)}|{node:slot for node,slot in wire.items()})
+    phase_many(q, selected_forms,
+               wire={v:v for v in range(12)}|{node:slot for node,slot in wire.items()},
+               free=[slot for slot in range(12,18) if slot not in wire.values()])
     q.compose(compute.inverse(),inplace=True)
     return transpile(q,basis_gates=["u3","cx"],optimization_level=3,qubits_initially_zero=False)
 

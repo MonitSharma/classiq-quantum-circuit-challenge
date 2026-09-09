@@ -139,9 +139,15 @@ Three of four pilot pair paths now compile as internally consistent phase
 components (terms 5, 9, and 2 at 449/605, 415/491, and 67/49 depth/CX,
 respectively). They are not standalone logo oracles and are not a new verified
 submission; exhaustive logo verification correctly rejects each component.
-Term 4 still exhausts the six-ancilla budget. The prototype therefore remains
-research evidence only, while the verified records remain 531/1020/18 and
-753/742/18.
+The clean-ancilla allocation invariant then fixed the term-4 failure. All four
+pilot components now pass exhaustive verification against their individual
+pair masks, with metrics 137/102, 455/612, 463/540, and 95/96 depth/CX for
+terms 4, 5, 9, and 2. These are verified phase components, not standalone
+logo oracles. A direct composition using the inventory's independent block
+variants measured 1439 depth / 1704 CX, so the components cannot simply be
+spliced into the 753 construction; its boundary-optimized variants and
+cross-block scheduling must be rebuilt jointly. The verified submission
+records therefore remain 531/1020/18 and 753/742/18.
 
 The time-limited semantic XAG model-bank pilot enumerated one model at k and
 one at k+1 for 12 representative functions, independently verified every
@@ -190,3 +196,9 @@ Generated artifacts:
 - `artifacts/pair_variant_dp_search.json`
 - `artifacts/pair_variant_boundary_costs.json`
 - `artifacts/persistent_parity_pilot.json`
+- `src/persistent_pair.py`
+- `artifacts/persistent_pair_pilot.json`
+- `artifacts/persistent_pair_2.qasm`
+- `artifacts/persistent_pair_4.qasm`
+- `artifacts/persistent_pair_5.qasm`
+- `artifacts/persistent_pair_9.qasm`
