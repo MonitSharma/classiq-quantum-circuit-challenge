@@ -1,0 +1,12 @@
+{
+  "indices": [0, 1, 2],
+  "basis": "rank_terms",
+  "variant": "cross_dirty_exact_ccx",
+  "depth": 501,
+  "cx": 359,
+  "width": 18,
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/cofactor_rank_bank_012_cross_dirty_exact_development.qasm",
+  "verification": "failed",
+  "phase_error": 1.9999999999999996,
+  "ancilla_error": 0.0
+}

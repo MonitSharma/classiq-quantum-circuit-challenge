@@ -1,0 +1,11 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/cofactor_rank_bank_012_clean_development.qasm",
+  "sha256": "f1f619b1077985bd5b4ad05835ddb564ff533142a3eb5378f58a4eb1f65f0e6b",
+  "basis_inputs_checked": 4096,
+  "depth": 1330,
+  "cx_count": 767,
+  "width": 18,
+  "max_error": 1.1990537163298416e-14,
+  "ancilla_error": 0.0,
+  "verification": "Exhaustive product-term phase verification"
+}

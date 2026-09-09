@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/cofactor_full_rank_phase_development.qasm",
+  "sha256": "ed6d6168559f968e29905468f2ef59ecc1bc30c740a2850c26c43916baaa1422",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 1685,
+  "cx_count": 1026,
+  "max_error": 2.6047687195762517e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.2826598238850533e-13,
+  "peak_sparse_support": 512,
+  "elapsed_seconds": 9.076715230941772,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

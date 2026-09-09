@@ -1,0 +1,17 @@
+{
+  "indices": [
+    0,
+    1,
+    2
+  ],
+  "basis": "rank_terms",
+  "variant": "clean",
+  "depth": 1330,
+  "cx": 767,
+  "width": 18,
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/cofactor_rank_bank_012_clean_development.qasm",
+  "x_tree_score": 203,
+  "y_tree_score": 158,
+  "x_raw_depth": 24,
+  "y_raw_depth": 21
+}

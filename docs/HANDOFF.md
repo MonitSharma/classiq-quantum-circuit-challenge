@@ -816,3 +816,46 @@ measures **162/173/18**, SHA
 maximum error `2.93e-15` and zero ancilla leakage over all 4096 inputs. This
 is a valid component diagnostic, not a complete logo candidate; the exact
 reproducible retention builder's term-0 artifact remains 508/407.
+
+## Cofactor-bank continuation (September 10, 2026)
+
+The first implementation of the proposed cofactor direction is
+`src/cofactor_rank_bank.py`. It adapts the existing Shannon/Davio tree emitter
+to a three-output rank bank for terms `(0,1,2)`, with three CZ phase couplings
+and inverse cleanup. The exact clean-workspace control is
+`artifacts/cofactor_rank_bank_012_clean_development.qasm` at **1330/767/18**;
+its SHA is `f1f619b1077985bd5b4ad05835ddb564ff533142a3eb5378f58a4eb1f65f0e6b`.
+The standalone product verifier checked all 4096 inputs with maximum error
+`1.20e-14` and zero ancilla leakage.
+
+The cross-bank dirty-workspace variant appeared to reach **309/205/18**, but
+failed the exact three-term phase check with error 2. Replacing relative-phase
+Toffolis by exact CCX still failed at **501/359/18**. These are invalid
+diagnostics: the recursive cofactor program does not preserve its branch/frame
+invariant when the live output bank is borrowed as scratch. The clean control
+is far above the existing 257-depth UCR batch, so no rank-basis search is
+justified yet. The next meaningful compiler work must make the dirty or
+conditionally-clean invariant explicit rather than treating any available
+ancilla as interchangeable scratch.
+
+The phase/state-duality follow-up is `src/cofactor_product_phase.py`. It
+computes the three x factors with the cofactor bank, applies the y factors
+directly as phase ESOPs controlled by the live x outputs, and then uncomputes
+the x bank. The exact standalone three-term product candidate is
+`artifacts/cofactor_product_phase_012_development.qasm`, **484/290/18**, SHA
+`66e27f13d5b28455b4d721e80eff95712328d4a96e8d12fff65f22df4dfa4512`. It
+passed all 4096 product-phase checks with maximum error `1.10e-14` and zero
+ancilla leakage. This is phase-safe but slower than the 257/535 UCR batch;
+direct y ESOP phase cubes remain the bottleneck. A shared phase-gadget
+compiler is required before extending this formulation beyond three terms.
+
+The complete integration was then tested in `src/cofactor_full_oracle.py`,
+using groups `(0,1,2)`, `(3,4,5)`, `(6,7,8)`, and `(9,)`. The exact standalone
+logo candidate is `artifacts/cofactor_full_rank_phase_development.qasm` at
+**1685/1026/18**, SHA
+`ed6d6168559f968e29905468f2ef59ecc1bc30c740a2850c26c43916baaa1422`. It
+passed exhaustive verification over all 4096 logo inputs with maximum error
+`2.60e-14` and zero ancilla leakage; five dense full-support checks also
+passed with maximum error `4.89e-16`. This is the full-problem score, and it
+is decisively worse than the protected 524/950 oracle. The cofactor
+temporary-product route is closed in this form.

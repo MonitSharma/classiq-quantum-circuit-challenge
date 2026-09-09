@@ -1,0 +1,12 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/cofactor_full_rank_phase_development.qasm",
+  "sha256": "ed6d6168559f968e29905468f2ef59ecc1bc30c740a2850c26c43916baaa1422",
+  "width": 18,
+  "depth": 1685,
+  "cx_count": 1026,
+  "random_dense_states": 5,
+  "max_error": 4.888474147543369e-16,
+  "ancilla_error": 1.1253209074603399e-16,
+  "normalization_error": 9.547918011776346e-15,
+  "verification": "Dense random inputs supported on all 4096 coordinates; probabilistic numerical check, not exhaustive operator proof"
+}
