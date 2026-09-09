@@ -19,7 +19,7 @@ No agent may overwrite that package or replace it with an unverified result.
 
 | Agent | Workspace | Exclusive research scope | Artifact prefix |
 |---|---|---|---|
-| Codex | `/Users/monitsharma/Downloads/classiq` (`main`) | Direct bilinear phase synthesis, repeated-cube sharing, and integration into a complete oracle | `codex_` |
+| Codex | `/Users/monitsharma/Downloads/classiq` (`main`) | Integration, exhaustive verification, score comparison, documentation, and submission packaging; direct phase/QROM experiments are now closed | `codex_` |
 | Claude | `/Users/monitsharma/Downloads/classiq/.claude/worktrees/classiq-quantum-challenge-a40f1f` | A genuinely independent reversible decision-diagram/cofactor compiler; do not use rank/pair terms, direct phase-cube expansion, or ordinary UCR loading as the primary construction | `claude_` |
 
 The two agents must not run the same search with different seeds, duplicate a
@@ -47,8 +47,9 @@ QASM hash and verification report path.
 
 | Experiment | Owner | Prefix | Status |
 |---|---|---|---|
-| Direct phase/QROM sharing and integration | Codex | `codex_` | active |
-| Independent reversible cofactor compiler | Claude | `claude_` | available |
+| Direct phase/QROM sharing | Codex | `codex_` | closed; best complete result 1725/1225 |
+| Integration and verification of incoming candidates | Codex | `codex_` | active |
+| Independent reversible cofactor compiler | Claude | `claude_` | active; only optimization lease |
 
 ## Merge protocol
 
