@@ -91,7 +91,7 @@ def elementary_matrices() -> list[tuple[int, ...]]:
             if target == control:
                 continue
             row = list(identity)
-            row[target] ^= 1 << control
+            row[target] ^= row[control]
             matrices.add(tuple(row))
     return sorted(matrices)
 
@@ -100,7 +100,7 @@ def random_matrix(rng: random.Random) -> tuple[int, ...]:
     rows = [1 << i for i in range(5)]
     for _ in range(rng.randint(2, 14)):
         target, control = rng.sample(range(5), 2)
-        rows[target] ^= 1 << control
+        rows[target] ^= rows[control]
     return tuple(rows)
 
 

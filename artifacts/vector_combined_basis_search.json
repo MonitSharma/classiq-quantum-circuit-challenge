@@ -1,0 +1,1082 @@
+{
+  "input_matrix_rows": [
+    1,
+    2,
+    4,
+    40,
+    16,
+    48
+  ],
+  "input_offset": 16,
+  "encodings_scored": 8192,
+  "abc_candidates": 64,
+  "natural_output_basis": {
+    "matrix_rows": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "offset": 0,
+    "anf_union": 26,
+    "anf_terms": 50,
+    "max_degree": 6
+  },
+  "best_by_anf": {
+    "matrix_rows": [
+      1,
+      6,
+      4,
+      8,
+      16
+    ],
+    "offset": 0,
+    "anf_union": 26,
+    "anf_terms": 45,
+    "max_degree": 6
+  },
+  "best_by_abc": {
+    "matrix_rows": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "offset": 0,
+    "anf_union": 26,
+    "anf_terms": 50,
+    "max_degree": 6,
+    "abc_and": 48,
+    "abc_level": 6,
+    "abc_returncode": 0
+  },
+  "candidates": [
+    {
+      "matrix_rows": [
+        1,
+        6,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 45,
+      "max_degree": 6,
+      "abc_and": 53,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        9,
+        2,
+        6,
+        17,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 46,
+      "max_degree": 6,
+      "abc_and": 62,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        16,
+        10,
+        4,
+        8,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 48,
+      "max_degree": 6,
+      "abc_and": 54,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        24,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 49,
+      "max_degree": 6,
+      "abc_and": 53,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        2,
+        5,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 49,
+      "max_degree": 6,
+      "abc_and": 54,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 50,
+      "max_degree": 6,
+      "abc_and": 48,
+      "abc_level": 6,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 50,
+      "max_degree": 6,
+      "abc_and": 53,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        7,
+        20,
+        9,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 50,
+      "max_degree": 6,
+      "abc_and": 60,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        9,
+        2,
+        4,
+        24,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 50,
+      "max_degree": 6,
+      "abc_and": 60,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        4,
+        7,
+        14,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 50,
+      "max_degree": 6,
+      "abc_and": 58,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        6,
+        9,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 51,
+      "max_degree": 6,
+      "abc_and": 70,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        20,
+        9,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 51,
+      "max_degree": 6,
+      "abc_and": 62,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        6,
+        4,
+        14,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 51,
+      "max_degree": 6,
+      "abc_and": 71,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        20,
+        4,
+        8,
+        22
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 51,
+      "max_degree": 6,
+      "abc_and": 52,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        20,
+        22,
+        8,
+        4
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 51,
+      "max_degree": 6,
+      "abc_and": 52,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        2,
+        9,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 51,
+      "max_degree": 6,
+      "abc_and": 57,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        9,
+        2,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 51,
+      "max_degree": 6,
+      "abc_and": 57,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        20,
+        2,
+        6,
+        8,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 51,
+      "max_degree": 6,
+      "abc_and": 51,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        20,
+        23,
+        21,
+        8,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 51,
+      "max_degree": 6,
+      "abc_and": 59,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        21,
+        2,
+        4,
+        24,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 51,
+      "max_degree": 6,
+      "abc_and": 52,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        21,
+        6,
+        4,
+        16,
+        28
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 51,
+      "max_degree": 6,
+      "abc_and": 55,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        23,
+        1,
+        21,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 51,
+      "max_degree": 6,
+      "abc_and": 53,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        3,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 52,
+      "max_degree": 6,
+      "abc_and": 51,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        3,
+        4,
+        9,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 52,
+      "max_degree": 6,
+      "abc_and": 66,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        6,
+        4,
+        10,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 52,
+      "max_degree": 6,
+      "abc_and": 65,
+      "abc_level": 10,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        4,
+        6,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 52,
+      "max_degree": 6,
+      "abc_and": 65,
+      "abc_level": 10,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        26,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 52,
+      "max_degree": 6,
+      "abc_and": 64,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        16,
+        14,
+        4,
+        12,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 52,
+      "max_degree": 6,
+      "abc_and": 62,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        21,
+        2,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 52,
+      "max_degree": 6,
+      "abc_and": 50,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        25,
+        2,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 52,
+      "max_degree": 6,
+      "abc_and": 55,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        5,
+        24,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 53,
+      "max_degree": 6,
+      "abc_and": 55,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        6,
+        3,
+        8,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 53,
+      "max_degree": 6,
+      "abc_and": 64,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 53,
+      "max_degree": 6,
+      "abc_and": 59,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        4,
+        2,
+        13,
+        1,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 53,
+      "max_degree": 6,
+      "abc_and": 58,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        5,
+        2,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 53,
+      "max_degree": 6,
+      "abc_and": 47,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        5,
+        2,
+        4,
+        8,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 53,
+      "max_degree": 6,
+      "abc_and": 53,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        5,
+        6,
+        4,
+        8,
+        24
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 53,
+      "max_degree": 6,
+      "abc_and": 53,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        21,
+        8,
+        20,
+        2,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 53,
+      "max_degree": 6,
+      "abc_and": 49,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        5,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 54,
+      "max_degree": 6,
+      "abc_and": 54,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        18,
+        5,
+        24,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 54,
+      "max_degree": 6,
+      "abc_and": 58,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        19,
+        21,
+        9,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 54,
+      "max_degree": 6,
+      "abc_and": 72,
+      "abc_level": 10,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        30,
+        4,
+        9,
+        25
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 54,
+      "max_degree": 6,
+      "abc_and": 70,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        7,
+        2,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 54,
+      "max_degree": 6,
+      "abc_and": 53,
+      "abc_level": 6,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        7,
+        17,
+        28,
+        24,
+        1
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 54,
+      "max_degree": 6,
+      "abc_and": 67,
+      "abc_level": 10,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        9,
+        2,
+        30,
+        22,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 54,
+      "max_degree": 6,
+      "abc_and": 69,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        31,
+        4,
+        28,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 54,
+      "max_degree": 6,
+      "abc_and": 55,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        23,
+        22,
+        4,
+        8,
+        20
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 54,
+      "max_degree": 6,
+      "abc_and": 54,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        25,
+        14,
+        16,
+        24,
+        20
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 54,
+      "max_degree": 6,
+      "abc_and": 66,
+      "abc_level": 10,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        24
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 55,
+      "max_degree": 6,
+      "abc_and": 55,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        12,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 55,
+      "max_degree": 6,
+      "abc_and": 69,
+      "abc_level": 10,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        5,
+        30,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 55,
+      "max_degree": 6,
+      "abc_and": 62,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        3,
+        22,
+        30,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 55,
+      "max_degree": 6,
+      "abc_and": 61,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        22,
+        8,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 55,
+      "max_degree": 6,
+      "abc_and": 63,
+      "abc_level": 10,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        5,
+        6,
+        4,
+        8,
+        25
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 55,
+      "max_degree": 6,
+      "abc_and": 74,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        8,
+        18,
+        4,
+        13,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 55,
+      "max_degree": 6,
+      "abc_and": 54,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        2,
+        7,
+        12,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 55,
+      "max_degree": 6,
+      "abc_and": 60,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        20,
+        30,
+        4,
+        13,
+        1
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 55,
+      "max_degree": 6,
+      "abc_and": 61,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        24,
+        2,
+        4,
+        16,
+        19
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 55,
+      "max_degree": 6,
+      "abc_and": 52,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        22
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 56,
+      "max_degree": 6,
+      "abc_and": 54,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        9,
+        15,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 56,
+      "max_degree": 6,
+      "abc_and": 74,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        4,
+        8,
+        18,
+        24
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 56,
+      "max_degree": 6,
+      "abc_and": 52,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        9,
+        6,
+        5,
+        25
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 56,
+      "max_degree": 6,
+      "abc_and": 71,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        12,
+        20,
+        22,
+        4
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 56,
+      "max_degree": 6,
+      "abc_and": 64,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        18,
+        4,
+        12,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 26,
+      "anf_terms": 56,
+      "max_degree": 6,
+      "abc_and": 60,
+      "abc_level": 7,
+      "abc_returncode": 0
+    }
+  ],
+  "note": "Exact input/output affine maps; ABC scores are irreversible screening only."
+}

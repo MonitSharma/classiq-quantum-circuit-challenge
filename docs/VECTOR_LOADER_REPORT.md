@@ -47,9 +47,9 @@ networks are retained as `.bench` files under `artifacts/`.
 `src/vector_feature_basis_search.py` scored **8,192 affine output encodings**
 from 256 invertible matrices and all 32 affine offsets per matrix, then
 compiled 64 distinct encodings through ABC. The best ABC screening result was
-**48 AND nodes at logic depth 10**. The natural basis remains preferable on
-logic depth (8 versus 10), while the 48-node result may still be useful if a
-reversible schedule can exploit its sharing. The basis search is recorded in
+**46 AND nodes at logic depth 7**. This is a valid output-basis improvement in
+node count, but the best y-input basis below remains better on the depth proxy
+(48/6). The basis search is recorded in
 `artifacts/vector_feature_basis_search.json`.
 
 These are irreversible network metrics. They are not quantum depth or CX
@@ -74,7 +74,7 @@ pebbling, not merely finding a smaller irreversible AIG.
 
 The vector function has enough sharing to justify implementing a reversible
 pebbling compiler. The next experiment should convert the natural-basis ABC
-network (and then the 48-node basis candidate) into affine-plus-AND nodes,
+network (and then the valid basis candidates) into affine-plus-AND nodes,
 schedule them over `q12..q17`, and preserve exact output bits while clearing
 the scratch. A loader-only serialized score below roughly 128 depth would be
 interesting; the complete oracle must still be integrated and exhaustively
@@ -152,3 +152,23 @@ was rejected because it illegally reused output wires as scratch.
 
 This loader-only result is far above the protected complete-oracle depth 531,
 so the naive shared-ESOP fallback is closed and was not integrated.
+
+## Affine y-input basis search
+
+An additional search changed the six y input coordinates before loading. The
+best sampled map is represented by rows `(1, 2, 4, 40, 16, 48)` with affine
+offset `16`; its pre/post linear cost is four CNOTs by the matrix proxy. Scoring
+16,384 affine input encodings found a joint ABC network of **48 AND nodes at
+logic depth 6**, improving the natural 56/8 network.
+
+The corresponding exact shared-ESOP loader uses 26 unique monomials and
+includes the reversible input-basis transform. It passed all 64 input replays
+and serialized to **1973 depth / 1136 CX / width 18**. This is a genuine
+loader improvement over 2505/1453, but remains far above the complete 531
+oracle and was not integrated.
+
+Artifacts:
+
+- `artifacts/vector_input_basis_search.json`
+- `artifacts/vector_input_basis_esop_loader.qasm`
+- `artifacts/vector_input_basis_esop_metrics.json`

@@ -225,9 +225,10 @@ The next architectural experiment is now represented by
 `docs/VECTOR_LOADER_REPORT.md`. The exact y-feature vector
 `(R0,R1,R2,A,B)` has 10 distinct output codewords, 36 unique ANF monomials,
 and 14 shared ANF monomials. ABC's best natural-basis multi-output flow used
-56 AND nodes at logic depth 8; an affine output-basis screen found a 48-node
-network at depth 10 but no irreversible-depth improvement. These figures are
-logic inventories, not quantum scores.
+56 AND nodes at logic depth 8; a corrected invertible affine output-basis
+screen found a 46-node network at depth 7. The y-input basis search below is
+better on the depth proxy at 48/6. These figures are logic inventories, not
+quantum scores.
 
 The serialized exact minterm loader reference is
 `artifacts/vector_loader_best.qasm` at **7463/3822/18**. It is intentionally a
@@ -370,3 +371,10 @@ The vector-ESOP fallback is also closed. The corrected shared ANF loader uses
 serializes to 2505/1453/18. The earlier 1354/840 measurement was invalid due
 to reusing output wires as scratch; retain only
 `artifacts/vector_esop_loader.qasm` and its metrics as the valid result.
+
+The best new structural result is an affine y-input basis with rows
+`(1,2,4,40,16,48)` and offset 16. It reduces the joint ABC inventory to
+48 AND nodes at level 6. The exact shared-ESOP loader with reversible pre/post
+linear mapping passes all 64 y-input checks and measures 1973/1136/18. This
+is an intermediate loader improvement, not a complete-oracle result; it still
+does not justify integration into the 531 architecture.

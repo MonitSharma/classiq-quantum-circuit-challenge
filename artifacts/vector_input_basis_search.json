@@ -1,0 +1,1208 @@
+{
+  "matrices": 256,
+  "affine_input_encodings_scored": 16384,
+  "abc_candidates": 64,
+  "natural_basis": {
+    "matrix_rows": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "offset": 0,
+    "anf_union": 36,
+    "anf_terms": 64,
+    "max_degree": 6,
+    "cnot_pre_post_proxy": 0
+  },
+  "best_by_anf": {
+    "matrix_rows": [
+      1,
+      2,
+      4,
+      40,
+      16,
+      48
+    ],
+    "offset": 16,
+    "anf_union": 26,
+    "anf_terms": 50,
+    "max_degree": 6,
+    "cnot_pre_post_proxy": 4
+  },
+  "best_by_abc": {
+    "matrix_rows": [
+      1,
+      2,
+      4,
+      40,
+      16,
+      48
+    ],
+    "offset": 16,
+    "anf_union": 26,
+    "anf_terms": 50,
+    "max_degree": 6,
+    "cnot_pre_post_proxy": 4,
+    "abc_and": 48,
+    "abc_level": 6,
+    "abc_returncode": 0
+  },
+  "candidates": [
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 16,
+      "anf_union": 26,
+      "anf_terms": 50,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 48,
+      "abc_level": 6,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 17,
+      "anf_union": 27,
+      "anf_terms": 56,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 46,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 16,
+      "anf_union": 28,
+      "anf_terms": 55,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 46,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 17,
+      "anf_union": 28,
+      "anf_terms": 61,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 48,
+      "abc_level": 6,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        46,
+        36,
+        8,
+        16,
+        40
+      ],
+      "offset": 22,
+      "anf_union": 29,
+      "anf_terms": 65,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 10,
+      "abc_and": 61,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        2,
+        4,
+        8,
+        16,
+        40
+      ],
+      "offset": 16,
+      "anf_union": 29,
+      "anf_terms": 67,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 63,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        24,
+        40
+      ],
+      "offset": 0,
+      "anf_union": 30,
+      "anf_terms": 59,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 58,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 0,
+      "anf_union": 30,
+      "anf_terms": 61,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 56,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 1,
+      "anf_union": 30,
+      "anf_terms": 63,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 51,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        32
+      ],
+      "offset": 48,
+      "anf_union": 30,
+      "anf_terms": 67,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 2,
+      "abc_and": 53,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        24,
+        40
+      ],
+      "offset": 16,
+      "anf_union": 30,
+      "anf_terms": 69,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 56,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        2,
+        4,
+        8,
+        16,
+        40
+      ],
+      "offset": 17,
+      "anf_union": 30,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 59,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        46,
+        36,
+        8,
+        16,
+        40
+      ],
+      "offset": 23,
+      "anf_union": 30,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 10,
+      "abc_and": 61,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 18,
+      "anf_union": 31,
+      "anf_terms": 59,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 59,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        6,
+        4,
+        32,
+        56,
+        40
+      ],
+      "offset": 18,
+      "anf_union": 31,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 8,
+      "abc_and": 61,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 20,
+      "anf_union": 32,
+      "anf_terms": 62,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 49,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 19,
+      "anf_union": 32,
+      "anf_terms": 62,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 53,
+      "abc_level": 6,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        19,
+        20,
+        40,
+        16,
+        32
+      ],
+      "offset": 2,
+      "anf_union": 32,
+      "anf_terms": 65,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 8,
+      "abc_and": 53,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        6,
+        4,
+        32,
+        56,
+        40
+      ],
+      "offset": 16,
+      "anf_union": 32,
+      "anf_terms": 67,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 8,
+      "abc_and": 59,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        32
+      ],
+      "offset": 0,
+      "anf_union": 32,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 2,
+      "abc_and": 55,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        46,
+        36,
+        8,
+        16,
+        40
+      ],
+      "offset": 20,
+      "anf_union": 32,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 10,
+      "abc_and": 62,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        32
+      ],
+      "offset": 49,
+      "anf_union": 32,
+      "anf_terms": 80,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 2,
+      "abc_and": 53,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 22,
+      "anf_union": 33,
+      "anf_terms": 65,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 49,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 18,
+      "anf_union": 33,
+      "anf_terms": 65,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 53,
+      "abc_level": 6,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 19,
+      "anf_union": 33,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 59,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        2,
+        4,
+        8,
+        16,
+        40
+      ],
+      "offset": 0,
+      "anf_union": 33,
+      "anf_terms": 71,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 63,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 0,
+      "anf_union": 33,
+      "anf_terms": 71,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 51,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 20,
+      "anf_union": 33,
+      "anf_terms": 71,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 46,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        4,
+        40,
+        16,
+        32
+      ],
+      "offset": 50,
+      "anf_union": 33,
+      "anf_terms": 73,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 53,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        24,
+        40
+      ],
+      "offset": 1,
+      "anf_union": 33,
+      "anf_terms": 74,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 56,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 1,
+      "anf_union": 33,
+      "anf_terms": 75,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 57,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        46,
+        36,
+        8,
+        16,
+        40
+      ],
+      "offset": 21,
+      "anf_union": 33,
+      "anf_terms": 76,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 10,
+      "abc_and": 62,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        24,
+        40
+      ],
+      "offset": 17,
+      "anf_union": 33,
+      "anf_terms": 79,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 56,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 21,
+      "anf_union": 34,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 46,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        23,
+        50,
+        3,
+        16,
+        48,
+        40
+      ],
+      "offset": 8,
+      "anf_union": 34,
+      "anf_terms": 69,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 16,
+      "abc_and": 72,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        32
+      ],
+      "offset": 16,
+      "anf_union": 34,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 2,
+      "abc_and": 58,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        46,
+        36,
+        8,
+        16,
+        40
+      ],
+      "offset": 18,
+      "anf_union": 34,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 10,
+      "abc_and": 60,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        4,
+        40,
+        16,
+        32
+      ],
+      "offset": 2,
+      "anf_union": 34,
+      "anf_terms": 71,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 50,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        23,
+        50,
+        3,
+        16,
+        48,
+        40
+      ],
+      "offset": 10,
+      "anf_union": 34,
+      "anf_terms": 71,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 16,
+      "abc_and": 68,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        4,
+        40,
+        16,
+        32
+      ],
+      "offset": 48,
+      "anf_union": 34,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 49,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        19,
+        20,
+        40,
+        16,
+        32
+      ],
+      "offset": 18,
+      "anf_union": 34,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 8,
+      "abc_and": 55,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        2,
+        4,
+        8,
+        16,
+        40
+      ],
+      "offset": 18,
+      "anf_union": 34,
+      "anf_terms": 74,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 60,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        6,
+        8,
+        16,
+        40
+      ],
+      "offset": 20,
+      "anf_union": 34,
+      "anf_terms": 74,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 64,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        6,
+        4,
+        32,
+        56,
+        40
+      ],
+      "offset": 26,
+      "anf_union": 34,
+      "anf_terms": 75,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 8,
+      "abc_and": 58,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        6,
+        8,
+        16,
+        40
+      ],
+      "offset": 16,
+      "anf_union": 34,
+      "anf_terms": 76,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 69,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        46,
+        36,
+        8,
+        16,
+        40
+      ],
+      "offset": 31,
+      "anf_union": 34,
+      "anf_terms": 76,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 10,
+      "abc_and": 60,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 21,
+      "anf_union": 34,
+      "anf_terms": 77,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 49,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 22,
+      "anf_union": 34,
+      "anf_terms": 77,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 46,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        6,
+        4,
+        32,
+        56,
+        40
+      ],
+      "offset": 17,
+      "anf_union": 34,
+      "anf_terms": 77,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 8,
+      "abc_and": 59,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        6,
+        8,
+        16,
+        40
+      ],
+      "offset": 18,
+      "anf_union": 34,
+      "anf_terms": 79,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 71,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        6,
+        8,
+        16,
+        40
+      ],
+      "offset": 22,
+      "anf_union": 34,
+      "anf_terms": 79,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 71,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        6,
+        4,
+        32,
+        56,
+        40
+      ],
+      "offset": 24,
+      "anf_union": 34,
+      "anf_terms": 79,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 8,
+      "abc_and": 60,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        32
+      ],
+      "offset": 1,
+      "anf_union": 34,
+      "anf_terms": 82,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 2,
+      "abc_and": 55,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        20,
+        48
+      ],
+      "offset": 0,
+      "anf_union": 35,
+      "anf_terms": 56,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 64,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 2,
+      "anf_union": 35,
+      "anf_terms": 69,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 60,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 23,
+      "anf_union": 35,
+      "anf_terms": 69,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 46,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        19,
+        20,
+        40,
+        16,
+        32
+      ],
+      "offset": 50,
+      "anf_union": 35,
+      "anf_terms": 69,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 8,
+      "abc_and": 52,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        24,
+        32
+      ],
+      "offset": 16,
+      "anf_union": 35,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 2,
+      "abc_and": 63,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        24,
+        40
+      ],
+      "offset": 2,
+      "anf_union": 35,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 58,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        4,
+        40,
+        16,
+        48
+      ],
+      "offset": 3,
+      "anf_union": 35,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 55,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        49,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "offset": 17,
+      "anf_union": 35,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 55,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        23,
+        50,
+        3,
+        16,
+        48,
+        40
+      ],
+      "offset": 12,
+      "anf_union": 35,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 16,
+      "abc_and": 66,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        4,
+        40,
+        16,
+        32
+      ],
+      "offset": 18,
+      "anf_union": 35,
+      "anf_terms": 73,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 4,
+      "abc_and": 50,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        8,
+        2,
+        4,
+        25,
+        24,
+        32
+      ],
+      "offset": 16,
+      "anf_union": 35,
+      "anf_terms": 74,
+      "max_degree": 6,
+      "cnot_pre_post_proxy": 6,
+      "abc_and": 64,
+      "abc_level": 7,
+      "abc_returncode": 0
+    }
+  ],
+  "note": "Irreversible screening only; pre/post linear synthesis and reversible loading remain to be compiled."
+}

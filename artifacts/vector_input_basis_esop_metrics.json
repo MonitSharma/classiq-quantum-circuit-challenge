@@ -1,0 +1,22 @@
+{
+  "input_matrix_rows": [
+    1,
+    2,
+    4,
+    40,
+    16,
+    48
+  ],
+  "input_offset": 16,
+  "unique_monomials": 26,
+  "depth": 1973,
+  "cx": 1136,
+  "width": 18,
+  "basis": [
+    "u3",
+    "cx"
+  ],
+  "qubits_initially_zero": false,
+  "classical_inputs_verified": 64,
+  "note": "Loader-only input-basis ESOP fallback; not integrated into the logo oracle."
+}

@@ -915,9 +915,10 @@ The new reversible-loading experiment began with the exact vector function
 codewords, 36 unique ANF monomials, and 14 monomials shared by at least two
 outputs. Three ABC multi-output flows produced a best natural-basis network of
 56 AND nodes at logic depth 8. An affine output-basis screen scored 8,192
-encodings and compiled 64 of them through ABC; its best node-count result was
-48 AND nodes at logic depth 10, so it did not improve the natural basis on the
-irreversible depth proxy.
+encodings and compiled 64 of them through ABC; after correcting the matrix
+generator to guarantee invertibility, its best result was **46 AND nodes at
+logic depth 7**. The y-input basis search below remains better on the depth
+proxy at 48/6.
 
 The exact minterm reversible reference was serialized and scored at **7463
 depth / 3822 CX / width 18**. It is loader-only and intentionally not a
@@ -957,3 +958,10 @@ measured **2505/1453/18** as a loader-only circuit. A prior 1354/840 result
 was rejected because q15/q16, which are output wires, had been used as if they
 were clean scratch. The corrected ESOP loader is therefore closed and was not
 integrated into the complete oracle.
+
+An affine basis search over the six y input bits then found a materially
+better irreversible representation: 48 ABC AND nodes at level 6, versus
+56/8 in the natural basis. The best map used rows `(1,2,4,40,16,48)` and
+offset 16. Its exact input-basis shared-ESOP loader passed all 64 input
+replays and measured **1973/1136/18**, improving 2505/1453 but remaining far
+above the protected complete oracle. The input-basis loader was not integrated.
