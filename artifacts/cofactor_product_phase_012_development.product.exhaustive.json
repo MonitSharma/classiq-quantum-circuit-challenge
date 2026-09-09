@@ -1,0 +1,11 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/cofactor_product_phase_012_development.qasm",
+  "sha256": "66e27f13d5b28455b4d721e80eff95712328d4a96e8d12fff65f22df4dfa4512",
+  "basis_inputs_checked": 4096,
+  "depth": 484,
+  "cx_count": 290,
+  "width": 18,
+  "max_error": 1.1000736031809911e-14,
+  "ancilla_error": 0.0,
+  "verification": "Exhaustive product-term phase verification"
+}

@@ -832,3 +832,14 @@ is far above the existing 257-depth UCR batch, so no rank-basis search is
 justified yet. The next meaningful compiler work must make the dirty or
 conditionally-clean invariant explicit rather than treating any available
 ancilla as interchangeable scratch.
+
+The phase/state-duality follow-up is `src/cofactor_product_phase.py`. It
+computes the three x factors with the cofactor bank, applies the y factors
+directly as phase ESOPs controlled by the live x outputs, and then uncomputes
+the x bank. The exact standalone three-term product candidate is
+`artifacts/cofactor_product_phase_012_development.qasm`, **484/290/18**, SHA
+`66e27f13d5b28455b4d721e80eff95712328d4a96e8d12fff65f22df4dfa4512`. It
+passed all 4096 product-phase checks with maximum error `1.10e-14` and zero
+ancilla leakage. This is phase-safe but slower than the 257/535 UCR batch;
+direct y ESOP phase cubes remain the bottleneck. A shared phase-gadget
+compiler is required before extending this formulation beyond three terms.

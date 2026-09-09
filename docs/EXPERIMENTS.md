@@ -1576,3 +1576,21 @@ This pilot does not justify a rank-basis search. A useful continuation needs
 an explicit conditionally-clean or dirty-frame invariant in the cofactor
 compiler, with verification after every bank and phase boundary; ordinary
 borrowed-output substitution is closed.
+
+## Cofactor temporary-product phase pilot (September 10, 2026)
+
+The next phase/state-duality test avoided a second live y bank. In
+`src/cofactor_product_phase.py`, the x factors for terms `(0,1,2)` are loaded
+with the cofactor bank, each y factor is emitted directly as an ESOP phase
+conditioned on its live x output, and the x bank is uncomputed afterward. The
+three cofactor scratch wires are restored before every phase cube.
+
+The exact candidate `artifacts/cofactor_product_phase_012_development.qasm`
+measures **484 depth / 290 CX / 18 qubits**, SHA
+`66e27f13d5b28455b4d721e80eff95712328d4a96e8d12fff65f22df4dfa4512`. Its
+product-phase verifier checked all 4096 inputs with maximum error
+`1.10e-14` and zero ancilla leakage. The result is a useful phase-safe
+control, but it is worse than the existing 257/535 three-term UCR batch; the
+cofactor bank's 20-layer raw compute is outweighed by direct high-control y
+phase cubes. Scaling this exact formulation to all ten terms is therefore not
+justified without a shared phase-gadget compiler.
