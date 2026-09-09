@@ -1542,3 +1542,37 @@ to the verified UCR batch. Both preserved the three-term product semantics but
 returned exactly **257 depth / 535 CX**; their serialized outputs share SHA
 `332524c727f4c0dd5491cd6524656e3d09f798a1f242955f83d712246e15bed6`. This
 closes compiler-only post-processing for this batch.
+
+## Cofactor/Shannon three-output rank-bank pilot (September 10, 2026)
+
+The generic Shannon/Davio cofactor emitter in `src/qrom_tree.py` was adapted
+to the three rank factors `(0,1,2)` in `src/cofactor_rank_bank.py`. It shares
+cofactor branches within each six-input, three-output bank and then applies
+three CZ phase couplings before exact inverse cleanup. This is a bank-level
+control experiment, not a complete logo oracle.
+
+The clean-workspace control is exact but not competitive:
+`artifacts/cofactor_rank_bank_012_clean_development.qasm` measures **1330
+depth / 767 CX / 18 qubits**, SHA
+`f1f619b1077985bd5b4ad05835ddb564ff533142a3eb5378f58a4eb1f65f0e6b`. Its
+product-phase verifier checked all 4096 `(x,y)` inputs, with maximum error
+`1.20e-14` and zero ancilla leakage. The two abstract cofactor tree scores
+were 203 and 158 for the x and y banks; the serialized cost is dominated by
+exact bank interactions and cleanup.
+
+Offering the other bank's live output wires as scratch produced an apparently
+promising **309 / 205 / 18** candidate at
+`artifacts/cofactor_rank_bank_012_cross_dirty_development.qasm`, but exhaustive
+product verification failed with phase error 2. Replacing every RCCX in the
+tree emitter with exact CCX did not repair the dirty semantics: the resulting
+`artifacts/cofactor_rank_bank_012_cross_dirty_exact_development.qasm` measured
+**501 / 359 / 18** and also failed with phase error 2. These failures show that
+the recursive Shannon/Davio program assumes more than a merely available
+dirty wire; its branch/frame invariant is not preserved when a live output
+bank is used as scratch. The files are retained as invalid diagnostics, not
+candidate improvements.
+
+This pilot does not justify a rank-basis search. A useful continuation needs
+an explicit conditionally-clean or dirty-frame invariant in the cofactor
+compiler, with verification after every bank and phase boundary; ordinary
+borrowed-output substitution is closed.

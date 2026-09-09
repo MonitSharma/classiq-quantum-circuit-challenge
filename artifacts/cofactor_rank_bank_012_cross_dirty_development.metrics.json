@@ -1,0 +1,20 @@
+{
+  "indices": [
+    0,
+    1,
+    2
+  ],
+  "basis": "rank_terms",
+  "variant": "cross_dirty",
+  "depth": 309,
+  "cx": 205,
+  "width": 18,
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/cofactor_rank_bank_012_cross_dirty_development.qasm",
+  "x_tree_score": 56,
+  "y_tree_score": 47,
+  "x_raw_depth": 20,
+  "y_raw_depth": 18,
+  "verification": "failed",
+  "phase_error": 2.0000000000000004,
+  "ancilla_error": 0.0
+}
