@@ -1,0 +1,23 @@
+{
+  "basis": "rank_mc_pareto_terms",
+  "order": [
+    6,
+    0,
+    2,
+    8,
+    7,
+    5,
+    1,
+    9,
+    3,
+    4
+  ],
+  "edge_path_score": {
+    "depth": 1398,
+    "cx": 1448
+  },
+  "depth": 1303,
+  "cx": 1455,
+  "width": 18,
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/exact_stream_rank_mc_pareto_terms_development.qasm"
+}

@@ -1577,6 +1577,32 @@ an explicit conditionally-clean or dirty-frame invariant in the cofactor
 compiler, with verification after every bank and phase boundary; ordinary
 borrowed-output substitution is closed.
 
+## Exact one-live-pair transition stream (September 10, 2026)
+
+The proposed stateful stream was implemented in `src/exact_stream.py`. Unlike
+the historical `src/stream.py`, it uses exact-control transitions
+`q12 ^= a_i XOR a_j` and `q13 ^= b_i XOR b_j`, keeps one live factor pair,
+applies one CZ per rank term, and returns to zero with one final transition.
+Every transition was compiled with explicit clean scratch and
+`qubits_initially_zero=False`. All unordered edges among zero plus the ten
+terms were scored in native `u3`/`cx` form, then a Held--Karp path search chose
+the complete order.
+
+The three complete candidates all passed exhaustive verification over 4096
+logo inputs with zero ancilla leakage:
+
+| Basis | Native order (zero-based term indices) | Depth | CX | SHA |
+|---|---|---:|---:|---|
+| `pair_terms` | `9,5,3,6,7,8,0,2,1,4` | **1227** | **1361** | `f44158faeac79cd6623b893d78fa00a505471f96ca90040be81229f1ce2cd3d1` |
+| `rank_terms` | `7,6,8,9,5,3,4,1,2,0` | **1267** | **1322** | `ae80e69fb962422f9b81b4b650742d51ab9e04c58e9641b0c0d865d69299913a` |
+| `rank_mc_pareto_terms` | `6,0,2,8,7,5,1,9,3,4` | **1303** | **1455** | `dd7c71425f88f96ec24363e21f54b2494039943cff929c74862d8a73cfb261ff` |
+
+The best exact stream also passed five dense full-support checks with maximum
+error `5.69e-16`. This is decisively above the proposed 400-depth cutoff and
+above the protected 524/950 oracle. Exact one-live-pair streaming is therefore
+closed; a relative-phase ledger on the same one-pair transition primitive is
+not justified by this baseline.
+
 ## Cofactor temporary-product phase pilot (September 10, 2026)
 
 The next phase/state-duality test avoided a second live y bank. In

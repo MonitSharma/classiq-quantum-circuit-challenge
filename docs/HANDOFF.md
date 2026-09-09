@@ -844,6 +844,20 @@ ancilla leakage. This is phase-safe but slower than the 257/535 UCR batch;
 direct y ESOP phase cubes remain the bottleneck. A shared phase-gadget
 compiler is required before extending this formulation beyond three terms.
 
+The exact one-live-pair stream requested in the next research plan was then
+implemented in `src/exact_stream.py`. It uses phase-free MCX transitions between
+factor states, scores all zero/term edges in native `u3`/`cx`, and solves the
+term order with Held--Karp. The best complete verified result is the
+`pair_terms` candidate `artifacts/exact_stream_pair_terms_development.qasm` at
+**1227/1361/18**, SHA
+`f44158faeac79cd6623b893d78fa00a505471f96ca90040be81229f1ce2cd3d1`.
+The corresponding `rank_terms` and `rank_mc_pareto_terms` candidates score
+1267/1322 and 1303/1455. All three passed exhaustive 4096-input verification
+with zero ancilla leakage; the best pair candidate also passed five dense
+full-support states. Exact one-pair streaming is therefore closed by the
+400-depth cutoff. The historical stream's full reverse cleanup was not the
+only issue: exact native transition costs and repeated factor deltas dominate.
+
 The complete integration was then tested in `src/cofactor_full_oracle.py`,
 using groups `(0,1,2)`, `(3,4,5)`, `(6,7,8)`, and `(9,)`. The exact standalone
 logo candidate is `artifacts/cofactor_full_rank_phase_development.qasm` at
