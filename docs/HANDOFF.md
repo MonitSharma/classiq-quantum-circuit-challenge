@@ -937,3 +937,11 @@ passed branch-specific exhaustive verification with zero ancilla leakage. This
 improves on 904/522, but remains above the local viability gate. Do not build
 all branches yet; the next checkpoint is another factor/XAG representation or
 another rank-4 branch, not full selector traversal.
+
+The factored pilot was ablated into `P*G` and `R`: **323/249** and **459/248**
+respectively, both exact under their extracted predicates. A bounded complete
+8-variable XAG search found no solution through two AND nodes and timed out
+(`unknown`) at three and four nodes with 5-second budgets. The search artifact
+is `artifacts/branch3_xag8_search.json`; this is a bounded diagnostic, not a
+proof that no larger XAG exists. The next work should target a native decoder
+or multi-level lowering; do not integrate all cofactor branches yet.

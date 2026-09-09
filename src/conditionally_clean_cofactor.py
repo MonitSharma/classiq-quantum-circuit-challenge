@@ -340,10 +340,12 @@ def _xor_and_segment(left, right, signal_wire, target):
     return segment
 
 
-def compile_factored_branch(selector_bits, selector_assignment: int):
+def compile_factored_branch(selector_bits, selector_assignment: int, component="full"):
     """Compile branch 3 as P*G XOR R using a bounded six-variable XAG."""
     if selector_bits != (("x", 5), ("y", 3), ("y", 4), ("y", 5)) or selector_assignment != 3:
         raise ValueError("the first factored pilot is fixed to selector A, assignment 3")
+    if component not in {"full", "pg", "r"}:
+        raise ValueError("component must be full, pg, or r")
     coordinates = residual_coordinates(selector_bits)
     table = cofactor_table(selector_bits, selector_assignment, coordinates)
     cubes = esop_for_table(table)
@@ -411,37 +413,37 @@ def compile_factored_branch(selector_bits, selector_assignment: int):
     # the XAG reduction is the variable being measured here.
     borrowed = ()
 
-    segments = []
-    for node_index, (left, right) in enumerate(xag_nodes):
-        segment = _xor_and_segment(left, right, signal_wire, 13 + node_index)
-        q.compose(segment, inplace=True)
-        segments.append(segment)
-    for signal in sorted(output_signals - {11}):
-        q.cx(signal_wire(signal), 17)
-
     residual_wires = [wire if kind == "x" else 6 + wire for kind, wire in coordinates]
-    _phase_cube(q, [12, residual_wires[4], residual_wires[7], 17], [residual_wires[4]], borrowed)
-
-    for signal in sorted(output_signals - {11}):
-        q.cx(signal_wire(signal), 17)
-    for segment in reversed(segments):
-        q.compose(segment.inverse(), inplace=True)
+    segments = []
+    if component in {"full", "pg"}:
+        for node_index, (left, right) in enumerate(xag_nodes):
+            segment = _xor_and_segment(left, right, signal_wire, 13 + node_index)
+            q.compose(segment, inplace=True)
+            segments.append(segment)
+        for signal in sorted(output_signals - {11}):
+            q.cx(signal_wire(signal), 17)
+        _phase_cube(q, [12, residual_wires[4], residual_wires[7], 17], [residual_wires[4]], borrowed)
+        for signal in sorted(output_signals - {11}):
+            q.cx(signal_wire(signal), 17)
+        for segment in reversed(segments):
+            q.compose(segment.inverse(), inplace=True)
 
     # The XAG workspace is clean again, so the exceptional remainder can use
     # the ordinary ancillas in addition to the conditionally-clean selectors.
     # The exceptional cubes are few but wide; use the exact no-ancilla
     # reference decomposition here until a dedicated dirty-MCZ lowering is
     # available for this control count.
-    remainder_borrowed = ()
-    for mask, value in remainder_cubes:
-        controls = [12]
-        negative = []
-        for i, wire in enumerate(residual_wires):
-            if mask >> i & 1:
-                controls.append(wire)
-                if not (value >> i & 1):
-                    negative.append(wire)
-        _phase_cube(q, controls, negative, remainder_borrowed)
+    if component in {"full", "r"}:
+        remainder_borrowed = ()
+        for mask, value in remainder_cubes:
+            controls = [12]
+            negative = []
+            for i, wire in enumerate(residual_wires):
+                if mask >> i & 1:
+                    controls.append(wire)
+                    if not (value >> i & 1):
+                        negative.append(wire)
+            _phase_cube(q, controls, negative, remainder_borrowed)
     for wire, value in reversed(list(zip(selector_wires, desired))):
         if value:
             q.cx(12, wire)
@@ -450,6 +452,7 @@ def compile_factored_branch(selector_bits, selector_assignment: int):
                     optimization_level=3, seed_transpiler=0)
     return out, {
         "selector_assignment": selector_assignment,
+        "component": component,
         "factor": "x4=0 AND y2=1",
         "g_ones": int(g.bit_count()),
         "remainder_ones": int(remainder.bit_count()),
@@ -465,6 +468,7 @@ def main():
     parser.add_argument("--conditional-clean", action="store_true")
     parser.add_argument("--profile-assignment", type=int)
     parser.add_argument("--factored", action="store_true")
+    parser.add_argument("--factored-component", choices=["full", "pg", "r"], default="full")
     parser.add_argument("--scan-selector-size", type=int, action="append")
     parser.add_argument("--scan-output", default="artifacts/conditionally_clean_selector_scan.json")
     args = parser.parse_args()
@@ -484,8 +488,10 @@ def main():
     if args.compile_assignment is not None:
         selector = selectors[2]
         if args.factored:
-            circuit, metadata = compile_factored_branch(selector, args.compile_assignment)
-            suffix = "factored"
+            circuit, metadata = compile_factored_branch(
+                selector, args.compile_assignment, args.factored_component
+            )
+            suffix = "factored" if args.factored_component == "full" else f"factored_{args.factored_component}"
         else:
             circuit, metadata = compile_local_branch(
                 selector, args.compile_assignment, args.conditional_clean

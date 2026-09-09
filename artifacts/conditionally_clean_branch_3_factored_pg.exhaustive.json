@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/conditionally_clean_branch_3_factored_pg.qasm",
+  "sha256": "68ee508854f96d5a28a79ffc368434ca268f5d87e0d8ea3a35a03535ddc84088",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 323,
+  "cx_count": 249,
+  "max_error": 2.975418419039454e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 8.716942632622654e-15,
+  "peak_sparse_support": 16,
+  "elapsed_seconds": 0.14093422889709473,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

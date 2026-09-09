@@ -1766,3 +1766,22 @@ zero ancilla leakage, and matching SHA. This is a 21% depth and 15% CX
 reduction against the 904/522 independent-ESOP candidate, confirming that
 representation-level factoring is the correct lever. It is still far above
 the 30--50 local viability gate, so full branch integration remains deferred.
+
+## Factored-component ablations and whole-branch XAG screen (September 10, 2026)
+
+The 713-depth factored pilot was decomposed using the same selector and exact
+branch verifier. The common-factor/XAG component `P*G` measured **323 depth /
+249 CX**, while the exceptional remainder `R` measured **459 depth / 248 CX**.
+Both passed their exact extracted-predicate checks with zero ancilla leakage;
+their matching QASM hashes are recorded in the exhaustive reports beside
+`artifacts/conditionally_clean_branch_3_factored_pg.qasm` and
+`artifacts/conditionally_clean_branch_3_factored_r.qasm`. The remainder is
+therefore a major cost center, but the factor/XAG plumbing is also too deep for
+the target.
+
+The bounded exact eight-variable XAG search in `src/xag8_bounded.py` proved
+unsatisfiable through two AND nodes, then returned `unknown` at three and four
+nodes under 5-second solver budgets. It produced no candidate and is not an
+impossibility result. This closes the cheap whole-branch XAG screen; a larger
+search is not justified until the native lowering is redesigned or a stronger
+XAG/decoder backend is selected.
