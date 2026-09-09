@@ -1,13 +1,14 @@
 # Classiq challenge optimization workspace
 
-The objective is to reach rank 1 in the [Classiq challenge](https://www.classiq.io/challenge). Work is unfinished: the best locally verified circuit has **depth 531, 1,020 CX gates, and 18 qubits**. The last observed leader had depth 291. Nothing has been submitted, and no rank has been obtained or guaranteed.
+The objective is to reach rank 1 in the [Classiq challenge](https://www.classiq.io/challenge). Work is unfinished: the best locally verified circuit has **depth 524, 950 CX gates, and 18 qubits**. As of September 9, 2026 the leader is Daksh S. at depth 197 / 475 CX; see docs/REASSESSMENT_2026-09-09.md. Nothing has been submitted, and no rank has been obtained or guaranteed.
 
 Handoff updated September 8, 2026 (Asia/Singapore), second continuation. Start with [the handoff](docs/HANDOFF.md), then read [the experiment history](docs/EXPERIMENTS.md) and [the current design](docs/CURRENT_DESIGN.md). [AGENTS.md](AGENTS.md) records essential correctness constraints for a new agent.
 
 ## Best artifact
 
-- Circuit: [artifacts/tket_FullPeephole.qasm](artifacts/tket_FullPeephole.qasm) — depth 531, CX 1020
-- Exhaustive verification: [artifacts/tket_FullPeephole.exhaustive.json](artifacts/tket_FullPeephole.exhaustive.json)
+- Circuit: [artifacts/524/full_mux_feature_linear_tket_524.qasm](artifacts/524/full_mux_feature_linear_tket_524.qasm) — depth 524, CX 950
+- Exhaustive verification: [artifacts/524/full_mux_feature_linear_tket_524.exhaustive.json](artifacts/524/full_mux_feature_linear_tket_524.exhaustive.json)
+- Superseded predecessor: [artifacts/tket_FullPeephole.qasm](artifacts/tket_FullPeephole.qasm) — depth 531, CX 1020
 - Provenance: [src/full_mux.py](src/full_mux.py) seed 94 (depth 536, still verified as
   [artifacts/full_mux.qasm](artifacts/full_mux.qasm)), then pytket `FullPeepholeOptimise`
   and a rebase to exact `u3`/`cx`
