@@ -1148,3 +1148,19 @@ go/no-go threshold, close the coordinate-recoding/staircase architecture
 without attempting the larger 11x11 in-place class transform. The artifact and
 metrics are `artifacts/qft_recenter.qasm` and
 `artifacts/qft_recenter_metrics.json`.
+## Hard closure of internal architecture invention (September 10, 2026)
+
+The QFT recenter result is a hard closure, not an invitation to seek a better
+implementation of the same idea. Its exact 81-depth forward transform would
+require an approximately 162-depth forward/inverse pair before any logo phase
+logic, leaving no credible path to sub-200 depth. Together with the completed
+UCR, row-class, rank/cofactor, XAG/shared-XAG, ESOP, conditional-clean,
+Lupanov, state-system, exact/semantic-window, retained-predicate,
+coordinate-transform, QFT, Classiq-native, and external reversible-synthesis
+experiments, the evidence rules out incremental compiler improvements as the
+explanation for the missing ~300 layers.
+
+Stop active internal architecture invention. The verified 524/950 artifact is
+the submission fallback; remaining work should be limited to explicit
+submission and external investigation of the structural technique used by
+competitive solutions.

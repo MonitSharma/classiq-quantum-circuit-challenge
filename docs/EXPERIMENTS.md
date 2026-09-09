@@ -1977,3 +1977,17 @@ inputs, and compiles to **81 depth / 58 CX / 18 qubits** in `u3,cx`. This fails
 the agreed `<50-depth` threshold, so the full 11x11 coordinate recoding is
 closed without further implementation. See `src/qft_recenter.py` and
 `artifacts/qft_recenter_metrics.json`.
+## Hard closure: internal architecture invention (September 10, 2026)
+
+The coordinate-recoding proposal is closed decisively. Although the QFT
+recenter is exact, its 81-depth forward/inverse pair costs about 162 depth
+before the logo predicate, so it cannot plausibly reach the sub-200 target.
+The broader campaign has now exercised UCR/multiplexors, row classes, rank and
+cofactor factorizations, XAG/shared-XAG, ESOP/Walsh/BDD, conditional-clean and
+Lupanov constructions, state-system and exact/semantic windows, retained
+predicates, coordinate transforms, QFT recentering, Classiq-native synthesis,
+and external reversible-synthesis stacks. None changed the order of magnitude.
+
+This is a hard stop on internal architecture invention, not a request for
+another compiler variant. Retain 524/950 as the fallback and focus only on
+submission or external structural intelligence.
