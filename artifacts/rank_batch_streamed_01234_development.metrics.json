@@ -1,0 +1,13 @@
+{
+  "indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "depth": 753,
+  "cx": 781,
+  "width": 18,
+  "qasm": "artifacts/rank_batch_streamed_01234_development.qasm"
+}

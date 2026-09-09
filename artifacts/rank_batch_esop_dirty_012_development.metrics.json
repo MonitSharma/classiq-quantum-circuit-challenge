@@ -1,0 +1,11 @@
+{
+  "indices": [
+    0,
+    1,
+    2
+  ],
+  "depth": 672,
+  "cx": 433,
+  "width": 18,
+  "qasm": "artifacts/rank_batch_esop_dirty_012_development.qasm"
+}

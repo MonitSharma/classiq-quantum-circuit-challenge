@@ -719,3 +719,19 @@ failed the three-term exhaustive phase check with error 2, demonstrating that
 the retained-output relative phases do not cancel across this multi-output
 sequence. The artifact `artifacts/rank_batch_esop_dirty_012_development.qasm`
 is a negative diagnostic only.
+
+A five-factor streamed-bank variant in `src/rank_batch_streamed.py` loaded
+five x-factors once with UCR and streamed each y-factor through the remaining
+ancilla using the retained x-bank as dirty scratch. It measured **753/781/18**
+but failed the five-term exhaustive product check with phase error 2. The
+current relative-phase predicate loader therefore cannot safely stream a
+factor across a live bank; exact phase-safe loading remains necessary.
+
+An exact no-ancilla MCX ESOP implementation in
+`src/rank_batch_exact_esop.py` was also tested for terms `(0,1,2)`. It passed
+the standalone three-term product verifier on all 4096 inputs, with maximum
+error `1.21e-14` and zero ancilla leakage, but serialized to **1431/823/18**.
+The artifact is `artifacts/rank_batch_exact_esop_012_development.qasm`, SHA
+`ec84910237b1ef9fae762ab21af832bd09db9947375ffa19ccd743d2b55fb49b`.
+This closes exact per-cube MCX loading as a depth improvement over the
+257-depth UCR batch.

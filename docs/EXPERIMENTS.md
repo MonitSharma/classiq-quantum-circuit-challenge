@@ -213,6 +213,14 @@ multi-output load sequence. Its artifact is retained as
 `artifacts/rank_batch_esop_dirty_012_development.qasm` only as a negative
 diagnostic.
 
+A five-factor streamed-bank variant was also tested in
+`src/rank_batch_streamed.py`: five x-factors were loaded once with UCR, and
+each y-factor was loaded into the remaining ancilla using the retained x-bank
+as dirty scratch. The candidate measured **753 depth / 781 CX**, but failed
+the five-term exhaustive product check with phase error 2. Thus the current
+relative-phase predicate loader cannot safely stream a factor across a live
+bank; exact phase-safe loading is still required.
+
 ## Boolean decomposition and reversible logic
 
 | Files | Approach | Outcome / limitation |
@@ -1449,3 +1457,14 @@ left-shape phase. The exact serialized result is
 inputs with maximum error `1.89e-14` and zero ancilla leakage. This improves
 the 969-depth branch-corrected pilot but remains negative against the
 protected 524/950 result; the threshold-feature encoding is closed.
+
+## Development branch exact rank-batch ESOP diagnostic (September 9, 2026)
+
+`src/rank_batch_exact_esop.py` tested an exact no-ancilla MCX implementation
+of the three-term rank batch `(0,1,2)`. It passed the standalone three-term
+product verifier on all 4096 inputs, with maximum error `1.21e-14` and zero
+ancilla leakage, but serialized to **1431 depth / 823 CX / 18 qubits**. The
+artifact is `artifacts/rank_batch_exact_esop_012_development.qasm`, SHA
+`ec84910237b1ef9fae762ab21af832bd09db9947375ffa19ccd743d2b55fb49b`.
+This closes exact per-cube MCX loading as a depth improvement over the
+257-depth UCR batch.
