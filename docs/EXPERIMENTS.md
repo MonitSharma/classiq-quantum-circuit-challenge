@@ -902,3 +902,8 @@ Adding the original parity-reference cancellation restored correctness but
 measured 541/913 after a bounded loader/phase seed sweep, with bounded cleanup
 at 536/947. Independent loader/phase and routing-seed trials found no lower
 depth, so it does not beat the protected 531 circuit.
+
+The separate-disk five-input lookup alternative was also checked. Two guarded
+blocks produced an exact C XOR D oracle at **482/562/18**, SHA
+`ce807f224c92be7e46825d107c48af78c518c9a574a21b6b250851659894dd30`.
+It is worse than the shared 385/491 disk block and is closed.

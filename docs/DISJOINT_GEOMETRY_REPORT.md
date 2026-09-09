@@ -152,6 +152,16 @@ on all 4096 inputs with zero ancilla leakage; its SHA-256 is
 This is the current best result in the disjoint branch, but it is still not a
 leaderboard-level or protected-531 improvement.
 
+## Separate-disk diagnostic
+
+The two-disk alternative was implemented with separate five-input radius
+lookups, one guarded by `y5=0` and one by `y5=1`, reusing q12--q14. The exact
+C XOR D candidate measured **482/562/18** and passed exhaustive verification
+with zero ancilla leakage; its SHA-256 was
+`ce807f224c92be7e46825d107c48af78c518c9a574a21b6b250851659894dd30`.
+This is substantially worse than the shared disk block at 385/491, so the
+separate-disk branch is closed.
+
 ## Shared five-output y-loader diagnostic
 
 A new attempt combined `R0,R1,R2,A_y,B_y` into one five-output y multiplexer

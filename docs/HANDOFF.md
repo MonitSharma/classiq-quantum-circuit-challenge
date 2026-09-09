@@ -214,6 +214,11 @@ x-dependent zero-branch phase. The corrected parity-reference version reached
 cleanup), so it is not an improvement over the protected 531 artifact and no
 invalid QASM was retained.
 
+The separate-disk five-input lookup alternative was also tested and exactly
+verified, but scored 482/562/18 for C XOR D (SHA
+`ce807f224c92be7e46825d107c48af78c518c9a574a21b6b250851659894dd30`). It is
+worse than the shared disk block and is closed.
+
 The 531 result is a useful submission-ready baseline, but it is not close to
 the historical leader at depth 291. The measurements point away from more
 seed tuning or global peephole rewriting: the current architecture pays three
