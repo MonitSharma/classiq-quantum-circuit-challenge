@@ -945,3 +945,14 @@ respectively, both exact under their extracted predicates. A bounded complete
 is `artifacts/branch3_xag8_search.json`; this is a bounded diagnostic, not a
 proof that no larger XAG exists. The next work should target a native decoder
 or multi-level lowering; do not integrate all cofactor branches yet.
+
+## Closed direction: conditional-clean cofactor/XAG (September 10, 2026)
+
+Close this implementation line for the competition objective. The mechanism
+itself is correct, but the exact ablations are **323/249** for `PG`, **459/248**
+for `R`, and **713/445** for the complete branch. Neither component is a small
+nuisance term relative to the sub-190 target, and the bounded whole-branch XAG
+search returned no small candidate. Keep the verified artifacts as evidence,
+but do not spend further optimization time on this representation. The
+protected fallback remains `artifacts/524/full_mux_feature_linear_tket_524.qasm`
+at **524/950/18**.

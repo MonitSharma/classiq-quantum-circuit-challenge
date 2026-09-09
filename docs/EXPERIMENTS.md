@@ -1785,3 +1785,16 @@ nodes under 5-second solver budgets. It produced no candidate and is not an
 impossibility result. This closes the cheap whole-branch XAG screen; a larger
 search is not justified until the native lowering is redesigned or a stronger
 XAG/decoder backend is selected.
+
+## Conditional-clean cofactor/XAG branch closure (September 10, 2026)
+
+The conditional-clean mechanism is verified and reusable, but this specific
+cofactor/XAG implementation line is now closed for the competition objective.
+The decisive exact ablations are **D(PG)=323**, **D(R)=459**, and
+**D(PG XOR R)=713**, all far above the complete-oracle target below 190. The
+bounded whole-branch XAG search provided no positive signal: it found no model
+through two AND nodes and returned `unknown` at three and four nodes. That is
+not a lower-bound proof, but it does not justify more time on this lowering
+architecture. Preserve the diagnostics as a valid negative result and do not
+integrate all selector branches. The protected baseline remains
+`artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524/950/18**.
