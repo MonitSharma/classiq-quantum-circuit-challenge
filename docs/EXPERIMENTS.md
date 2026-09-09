@@ -1170,3 +1170,18 @@ Exhaustive verification covered all 4096 inputs with maximum error
 with maximum error `6.11e-16`. The matching logical QMOD is stored beside the
 QASM. This is now the protected local best, although it remains far above the
 leaderboard target.
+
+## Pytket post-processing of the 527 candidate (September 10, 2026)
+
+`pytket.FullPeepholeOptimise` and `CliffordSimp` were each applied to the
+verified 527/950 QASM, followed by exact U3/CX lowering with
+`qubits_initially_zero=False`. Both passes reached **524 depth / 950 CX / 18
+qubits**; 100 final Qiskit transpiler seeds did not improve that result.
+
+The exact accepted artifact is
+`artifacts/524/full_mux_feature_linear_tket_524.qasm`, SHA-256
+`7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147`.
+Exhaustive verification covered all 4096 inputs with maximum error
+`1.11e-13` and ancilla error `1.84e-14`, both below the verifier threshold.
+Five dense checks also passed with maximum error `3.98e-15`. This is the
+current local best and is packaged with a logical QMOD companion.

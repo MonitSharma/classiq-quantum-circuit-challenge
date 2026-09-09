@@ -528,3 +528,17 @@ SHA f83b8695497cca51d13b29e90d6eff184d5cb6def7619511caca79f794192309
 on all 4096 inputs and five dense full-support checks. The matching logical
 QMOD and both reports are packaged under `artifacts/528/`. This is still a
 local improvement only; rank 1 requires replacing the UCR-based primitive.
+
+## Verified 524-depth pytket post-processing result (September 10, 2026)
+
+Pytket `FullPeepholeOptimise` and `CliffordSimp` were applied to the verified
+527/950 QASM. Both produced **524 depth / 950 CX / 18 qubits** after exact
+U3/CX lowering; a 100-seed final transpiler screen found no further change.
+
+The accepted artifact is
+`artifacts/524/full_mux_feature_linear_tket_524.qasm` with SHA
+`7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147`.
+It passed all 4096-input exhaustive checks and five dense full-support checks,
+with matching reports and a logical QMOD under `artifacts/524/`. The verifier
+reported numerical errors of `1.11e-13` exhaustive and `3.98e-15` dense, with
+ancilla leakage below `2e-14`. This supersedes the raw 527-depth serialization.
