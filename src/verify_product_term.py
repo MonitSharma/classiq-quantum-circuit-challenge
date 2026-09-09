@@ -103,7 +103,7 @@ def verify(path, x_table, y_table=None):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 4:
+    if len(sys.argv) == 4 and not Path(sys.argv[2]).exists():
         verify(sys.argv[1], int(sys.argv[2]), int(sys.argv[3]))
     else:
         source = json.loads(Path(sys.argv[2]).read_text())

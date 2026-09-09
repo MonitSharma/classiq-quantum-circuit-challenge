@@ -1,0 +1,15 @@
+{
+  "x_retained": [
+    15
+  ],
+  "phase_edges": 8,
+  "compute": 10,
+  "uncompute": 10,
+  "max_live": 6,
+  "representation": "bounded_low_and_xag",
+  "term_index": 0,
+  "depth": 162,
+  "cx": 173,
+  "width": 18,
+  "qasm": "artifacts/direct_product_retention_term0_development.qasm"
+}

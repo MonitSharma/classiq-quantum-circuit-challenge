@@ -1469,6 +1469,35 @@ artifact is `artifacts/rank_batch_exact_esop_012_development.qasm`, SHA
 This closes exact per-cube MCX loading as a depth improvement over the
 257-depth UCR batch.
 
+## Development branch direct bilinear phase synthesis (September 9, 2026)
+
+The existing diagonal phase-cube compiler was applied directly to rank-factor
+ESOP products, without materializing either factor. Individual rank terms were
+correct and relatively small: term 0 measured **66/52**, term 1 **199/119**,
+and term 2 **251/162**; each passed exhaustive product-term verification.
+
+The complete rank-10 expansion reduced to 69 diagonal cubes. A 20-seed search
+found a best complete candidate at **1725 depth / 1235 CX / 18 qubits**. The
+candidate `artifacts/rank_phase_only_full_development.qasm` passed the complete
+logo verifier on all 4096 inputs with zero ancilla leakage; SHA-256:
+`f4ed4e259eb477fcfd72bf721937963c00270624924ab6bc14e05766b639d882`.
+This closes unshared direct bilinear phase expansion. The remaining
+opportunity is global sharing of phase cubes or a different multi-output
+representation; per-term phase synthesis alone is insufficient.
+
+## Standalone retained-product verification (September 9, 2026)
+
+Two separately generated term-0 retained-product diagnostics were checked
+directly with `src/verify_product_term.py` over all 4096 `(x,y)` inputs. The
+phase-retention variant `artifacts/direct_product_retention_term0_development.qasm`
+is exact at **162 depth / 173 CX / 18 qubits**, with maximum error
+`2.93e-15` and zero ancilla leakage (SHA
+`636e9f66f5d6a4af275a9335919275f6b1c21d4e7a10ef658733f1a453649f4d`). A
+standard exact-control comparison is exact at **243/243/18**. These are
+single-product components only; they do not constitute a complete logo
+oracle, and the current reproducible exact-retention builder remains the
+separate 508/407 term-0 baseline.
+
 Global pytket `FullPeepholeOptimise` and `CliffordSimp` rewrites were applied
 to the verified UCR batch. Both preserved the three-term product semantics but
 returned exactly **257 depth / 535 CX**; their serialized outputs share SHA

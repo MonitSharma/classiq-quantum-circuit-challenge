@@ -741,3 +741,38 @@ applied to the verified UCR batch. Both preserved the three-term semantics
 but returned exactly **257/535/18**; their serialized outputs share SHA
 `332524c727f4c0dd5491cd6524656e3d09f798a1f242955f83d712246e15bed6`.
 Compiler-only post-processing is therefore closed for this batch.
+
+## Development branch direct bilinear phase synthesis (September 9, 2026)
+
+The diagonal phase-cube compiler was applied directly to rank-factor ESOP
+products, without materializing either factor. Individual rank terms measured
+**66/52**, **199/119**, and **251/162** for terms 0, 1, and 2 respectively;
+each passed exhaustive product-term verification.
+
+The complete rank-10 expansion reduced to 69 diagonal cubes. A 20-seed search
+found a best complete candidate at **1725/1235/18**. The candidate
+`artifacts/rank_phase_only_full_development.qasm` passed the complete logo
+verifier on all 4096 inputs with zero ancilla leakage. SHA-256:
+`f4ed4e259eb477fcfd72bf721937963c00270624924ab6bc14e05766b639d882`.
+Unshared direct bilinear phase expansion is therefore closed; future work
+must share phase cubes globally or use a different multi-output representation.
+
+## Phase/state-duality applicability review (September 9, 2026)
+
+The referenced Amy--Ross phase/state-duality paper studies both relative-phase
+circuits and measurement-assisted temporary logical-AND constructions. The
+measurement-assisted portion cannot be directly used for this challenge: the
+deliverable is a standalone unitary `u3`/`cx` QASM oracle with arbitrary inputs
+preserved and all ancillas restored. Only the unitary relative-phase part is
+applicable, and the repository's retained-product and multi-output experiments
+show that relative phases must be proven to cancel across every intervening
+operation. No paper construction is imported as a candidate without an
+explicit unitary realization and exhaustive verification.
+
+A separately generated retained-product term-0 variant was subsequently
+verified as a standalone product phase: `artifacts/direct_product_retention_term0_development.qasm`
+measures **162/173/18**, SHA
+`636e9f66f5d6a4af275a9335919275f6b1c21d4e7a10ef658733f1a453649f4d`, with
+maximum error `2.93e-15` and zero ancilla leakage over all 4096 inputs. This
+is a valid component diagnostic, not a complete logo candidate; the exact
+reproducible retention builder's term-0 artifact remains 508/407.
