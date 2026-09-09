@@ -198,6 +198,15 @@ register-assignment result: persistent transitions are currently more
 expensive than the saved recomputation. The result is a valid negative
 architecture measurement, not a submission candidate.
 
+## Classiq model-only boundary
+
+The native Classiq model generator was exercised locally for
+`rank_formula_whole` with text-only mode enabled. Native synthesis was not
+run: it would upload the QMOD to the external Classiq service, and that upload
+was explicitly declined. Therefore this experiment produced no new circuit
+depth, CX, or width result and must not be interpreted as a synthesis result.
+No QMOD was uploaded to Classiq in this iteration.
+
 Generated artifacts:
 
 - `src/extract_global_endpoints.py`
