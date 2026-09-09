@@ -457,3 +457,9 @@ random-state report also passed. Reproduction is in
 
 The protected 531/QMOD package remains unchanged. No Classiq upload was made
 by this experiment.
+
+The follow-up independent-routing screen tested 2,048 combinations over the
+eight strongest assignments, with separate y-loader, x-phase, and transpiler
+seeds. It did not improve 530; its best was 530/1022. A six-order radius
+comparator schedule screen also found no improvement over 530/1020. These
+are bounded negative results, not reasons to reopen generic seed searches.

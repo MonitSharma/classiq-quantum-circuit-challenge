@@ -22,12 +22,20 @@ from radius import R, radius, truth
 FEATURES = tuple(range(12, 18))
 
 
-def build(assignment, seed=94):
+def build(assignment, seed=94, *, y_seed=None, x_seed=None,
+          transpile_seed=None):
+    """Build one assignment with optionally independent routing seeds."""
+    if y_seed is None:
+        y_seed = seed
+    if x_seed is None:
+        x_seed = seed + 10000
+    if transpile_seed is None:
+        transpile_seed = seed
     r0, r1, r2, a, b, v = assignment
     lookup = multiplexer(
         R + [truth(range(29, 54)), truth(range(39, 44)),
              truth(y for y in range(64) if radius(y) > 0)],
-        list(assignment), list(range(6, 12)), "y", seed
+        list(assignment), list(range(6, 12)), "y", y_seed
     )
     q = lookup.copy()
     xs, xb = truth(range(2, 27)), truth(range(27, 49))
@@ -35,7 +43,7 @@ def build(assignment, seed=94):
     q.cx(v, a)
     q.cx(v, b)
     q.compose(multiplexer([xs, xb, xo], [a, b, v], list(range(6)), "z",
-                          seed + 10000), inplace=True)
+                          x_seed), inplace=True)
     q.z(v)
     q.cx(v, b)
     q.cx(v, a)
@@ -69,7 +77,7 @@ def build(assignment, seed=94):
     q.compose(pair_circuit(truth([32, 48]), truth(range(17, 22))), inplace=True)
     return transpile(q, basis_gates=["u3", "cx"],
                      qubits_initially_zero=False, optimization_level=3,
-                     seed_transpiler=seed)
+                     seed_transpiler=transpile_seed)
 
 
 def search():
