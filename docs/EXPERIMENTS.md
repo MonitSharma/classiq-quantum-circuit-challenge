@@ -1932,3 +1932,12 @@ The native synthesis request then failed with an expired token; the API also
 reported a minimum width of 39 qubits against the requested width 18. No QASM
 or score was produced, and authentication was not debugged under the agreed
 stop rule.
+
+## Classiq-native campaign closure (September 10, 2026)
+
+After local reauthentication, the direct arithmetic model reached the API and
+was rejected at 82 minimum qubits against max width 18. One bounded row-class
+request and one bounded whole-low-rank request did not return fresh QASM
+exports; existing QASM files were not counted as results. No native score
+improvement exists. Close Classiq-native architectural synthesis under the
+agreed stop rule and retain 524/950 as the protected baseline.

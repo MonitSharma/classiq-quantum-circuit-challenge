@@ -1113,3 +1113,15 @@ token and the API reported that the arithmetic model requires at least 39
 qubits despite `max_width=18`. Per the stop rule, authentication was not
 debugged and no QASM or score was produced. This is a blocked/invalid direct
 model attempt, not a negative result against all Classiq-native synthesis.
+
+## Classiq-native campaign closure (September 10, 2026)
+
+The refreshed credentials allowed API requests. The direct arithmetic union
+model was rejected by the Classiq API at **82 minimum qubits** versus the
+18-qubit constraint, so it cannot be a competition candidate. The natural
+row-class and whole low-rank formula requests created/updated their QMOD
+inputs, but neither returned a new exported QASM within the bounded wait;
+their pre-existing QASM files were not treated as fresh results. Thus this
+campaign produced no score-bearing circuit. Per the agreed stopping rule, do
+not continue Classiq authentication or synthesis debugging. The protected
+verified baseline remains **524 depth / 950 CX / 18 qubits**.
