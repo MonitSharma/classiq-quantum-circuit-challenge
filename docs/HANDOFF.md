@@ -434,3 +434,26 @@ full verification. A 1,024-pair screen reached **535/918/18** after pytket;
 artifact `artifacts/full_mux_derive_v_rp_or_best_tket.qasm`, SHA
 `a7ef23f038c2f4f1b6309899025283b32656d17fcd142f21618c9aeb013769f2`. This is
 four layers above 531, so it is a near-miss rather than a replacement.
+
+## Feature assignment improvement (September 9, 2026)
+
+An exhaustive permutation search over the six physical feature wires in the
+full-mux skeleton found a verified new best:
+
+`artifacts/530/full_mux_feature_permuted_530.qasm`
+
+It measures **530 depth / 1,020 CX / 18 qubits**, improving the protected 531
+depth by one layer without changing CX count. The assignment is
+`R0->q12, R1->q15, R2->q14, A->q16, B->q17, V->q13`. The phase-cube target and
+V control were remapped explicitly; hard-coded-wire variants with lower raw
+scores failed phase verification and were discarded.
+
+The exact QASM SHA-256 is
+`7f9676b2d372d9ca5eb31889bf9f3af1d6fc4a678bd9b782f6e67ef707938156`.
+`artifacts/530/full_mux_feature_permuted_530.exhaustive.json` records all 4096
+basis inputs, maximum error `1.52e-14`, and zero ancilla leakage. The dense
+random-state report also passed. Reproduction is in
+`src/feature_ancilla_permutation.py`.
+
+The protected 531/QMOD package remains unchanged. No Classiq upload was made
+by this experiment.

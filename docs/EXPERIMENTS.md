@@ -1057,3 +1057,32 @@ screen found raw **540/918** and pytket **535/918** at
 4096-input exhaustive verification; SHA
 `a7ef23f038c2f4f1b6309899025283b32656d17fcd142f21618c9aeb013769f2`.
 It is CX-efficient but remains four depth layers above the protected 531.
+
+## Feature-to-ancilla assignment search (September 9, 2026)
+
+The six logical y features in the full-mux skeleton were remapped over all
+720 permutations of physical wires q12..q17. The comparator and phase cube
+were remapped semantically as well: the third radius output remains the
+carry/phase target, and V remains the phase-control feature. Every candidate
+used `qubits_initially_zero=False`, optimization level 3, seed 94, and the
+same downstream construction as the protected 531 circuit.
+
+The best serialized candidate is `artifacts/530/full_mux_feature_permuted_530.qasm`:
+
+| candidate | depth | CX | width |
+|---|---:|---:|---:|
+| protected 531 | 531 | 1020 | 18 |
+| feature permutation | **530** | **1020** | **18** |
+
+The winning assignment is `R0->q12, R1->q15, R2->q14, A->q16, B->q17,
+V->q13`. The exact QASM SHA-256 is
+`7f9676b2d372d9ca5eb31889bf9f3af1d6fc4a678bd9b782f6e67ef707938156`.
+Exhaustive verification checked all 4096 clean-ancilla basis inputs, with
+maximum error `1.52e-14` and zero ancilla leakage. Five dense random-state
+checks also passed. Search metadata and metrics are in
+`artifacts/530/feature_permutation_search.json` and
+`artifacts/530/feature_permutation_metrics.json`.
+
+This is a genuine one-layer improvement but remains far above the current
+leaderboard range. The reproducible search is
+`src/feature_ancilla_permutation.py`.

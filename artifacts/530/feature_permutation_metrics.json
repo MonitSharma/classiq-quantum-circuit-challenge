@@ -1,0 +1,18 @@
+{
+  "candidate": "full_mux_feature_permuted_530.qasm",
+  "depth": 530,
+  "cx_count": 1020,
+  "width": 18,
+  "assignment_logical_to_physical": {
+    "R0": 12,
+    "R1": 15,
+    "R2": 14,
+    "A": 16,
+    "B": 17,
+    "V": 13
+  },
+  "sha256": "7f9676b2d372d9ca5eb31889bf9f3af1d6fc4a678bd9b782f6e67ef707938156",
+  "exhaustive_report": "full_mux_feature_permuted_530.exhaustive.json",
+  "dense_report": "full_mux_feature_permuted_530.verification.json",
+  "status": "exhaustively verified on all 4096 clean-ancilla basis inputs; zero ancilla leakage"
+}
