@@ -1076,3 +1076,14 @@ it means further solver engineering is not currently justified. Preserve the
 lower-bound reports and completion code as research evidence, but do not spend
 additional optimization time on this branch unless a new lowering architecture
 appears.
+## EPFL oracle-synthesis stack check (September 9, 2026)
+
+The proposed mature-flow experiment was checked before any circuit work. The
+project `.venv` has no RevKit, Mockturtle, Caterpillar, or Tweedledum module.
+PyPI has no `revkit` distribution. The available PyPI `caterpillar` name is an
+unrelated text-retrieval package and was removed. Tweedledum 1.1.1 is source
+only here and fails its Python 3.13 build during metadata generation due to an
+invalid project configuration. Therefore no EPFL oracle synthesis or score
+was run; do not confuse the unrelated package installation attempt with the
+reversible Caterpillar tool. A compatible Python/toolchain environment would
+be required before this becomes an actionable bounded campaign.

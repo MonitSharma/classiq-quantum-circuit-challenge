@@ -1905,3 +1905,12 @@ improvement exists. This is not an impossibility proof for the minimum AND
 counts. Keep the analytic lower bounds, subspace search, and completion tools,
 but return the optimization focus to architectures that can directly attack
 the protected 524/950 baseline.
+## EPFL oracle-synthesis stack check (September 9, 2026)
+
+The mature-flow proposal was checked before integration. RevKit, Mockturtle,
+Caterpillar, and Tweedledum are absent from the current environment; `revkit`
+has no PyPI distribution. The PyPI package named `caterpillar` is unrelated
+text-retrieval software and was removed. Tweedledum 1.1.1 fails its source
+build on Python 3.13 during metadata generation. No EPFL reversible synthesis
+run or circuit score exists, so this direction is environment-blocked rather
+than experimentally closed.
