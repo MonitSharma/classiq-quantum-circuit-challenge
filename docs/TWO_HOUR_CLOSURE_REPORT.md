@@ -146,8 +146,16 @@ terms 4, 5, 9, and 2. These are verified phase components, not standalone
 logo oracles. A direct composition using the inventory's independent block
 variants measured 1439 depth / 1704 CX, so the components cannot simply be
 spliced into the 753 construction; its boundary-optimized variants and
-cross-block scheduling must be rebuilt jointly. The verified submission
-records therefore remain 531/1020/18 and 753/742/18.
+cross-block scheduling must be rebuilt jointly. A clean-ancilla register
+assignment search then found a verified depth improvement without changing
+the Boolean decomposition: independently permuting q12--q17 at each pair
+boundary reduced the fixed-order oracle from 753/742 to **739/743** depth/CX
+(width 18). The candidate is `artifacts/739/ancilla_assignment_739.qasm`;
+exhaustive verification covers all 4096 basis inputs with zero ancilla
+leakage. This is now the verified rank-family best, while the 531/1020/18
+circuit remains the overall depth record in the repository. The next target
+remains shared persistent frames or a joint compiler that can reduce
+serialization below 739.
 
 The time-limited semantic XAG model-bank pilot enumerated one model at k and
 one at k+1 for 12 representative functions, independently verified every
@@ -202,3 +210,5 @@ Generated artifacts:
 - `artifacts/persistent_pair_4.qasm`
 - `artifacts/persistent_pair_5.qasm`
 - `artifacts/persistent_pair_9.qasm`
+- `src/ancilla_assignment_search.py`
+- `artifacts/739/ancilla_assignment_739.qasm`
