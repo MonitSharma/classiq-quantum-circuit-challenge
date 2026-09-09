@@ -1822,3 +1822,20 @@ constant-optimized implementation is large; it shows that the literal
 rich-width construction does not instantiate competitively at `n=8,m=10`.
 Do not integrate the nine branches. The protected complete baseline remains
 `artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524/950/18**.
+## Exact depth-window pilot (September 9, 2026)
+
+The protected baseline was scheduled with an ASAP/ALAP analysis. Its input
+SHA is `7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147`;
+the schedule confirms **524 depth / 950 CX**, with 580 zero-slack gates. The
+largest CNOT+diagonal run is layers 127--257, but it spans 14 qubits and is
+not a small local synthesis target. The complete profile is in
+`artifacts/524/full_mux_feature_linear_tket_524.window_profile.json`.
+
+A strict exact-unitary splice pilot then tested the first contiguous late
+3-wire windows. Layers 483--487 and 498--504 gave no change: both local and
+global scores remained 524 depth / 950 CX. Two larger late windows were
+rejected because their serialized gate ranges were interleaved with unrelated
+operations. This is a negative result for ordinary small exact peepholes, not
+for reachable-subspace resynthesis. See
+`artifacts/524/full_mux_feature_linear_tket_524.strict_window_pilot.json` and
+`src/strict_window_pilot.py`.
