@@ -1884,3 +1884,14 @@ extensions in a 10-second bound, but reached no completion tests. The report is
 `artifacts/semantic_discrete/r1_r2_completion.json`. This confirms that the
 second-node frontier, not the late completion oracle, is the remaining search
 bottleneck. No four-AND witness or native circuit has been produced.
+
+## Completion-gate correction (September 9, 2026)
+
+The first completion implementation incorrectly expected two nonzero vectors
+from a rank-2 target quotient; there are three. The corrected
+`src/semantic_xag_completion.py` separates quotient bases from directions and
+records actual AND products rather than only quotient representatives. A smoke
+run reached 9 direction tests in 321 states, and a 1,000-state sample reached
+21 direction tests without finding a witness. The corrected report is
+`artifacts/semantic_discrete/r1_r2_completion_fixed.json`; no impossibility
+claim follows.

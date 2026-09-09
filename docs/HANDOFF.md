@@ -1051,3 +1051,16 @@ but reached zero late completion tests before the time bound. Its report is
 `artifacts/semantic_discrete/r1_r2_completion.json`. This is a frontier
 management result, not evidence against a four-AND witness; the next change
 must target-direct the second-node enumeration before invoking completion.
+
+## Completion-gate correction (September 9, 2026)
+
+The earlier completion report had a real quotient bug: a rank-2 quotient has
+three nonzero directions, not two, so `len(directions) != 2` rejected every
+ordinary pair state before completion. `src/semantic_xag_completion.py` now
+separates quotient basis from nonzero directions, preserves each actual
+`f & g` product and its affine correction, and exposes bounded smoke limits.
+The regression tested 321 second-node states and reached 9 direction tests;
+the corrected 1,000-state sample reached 21 direction tests with no witness.
+Its report is `artifacts/semantic_discrete/r1_r2_completion_fixed.json`.
+This supersedes the interpretation of the earlier zero-test report. The
+sample is not a lower bound and no native candidate exists yet.

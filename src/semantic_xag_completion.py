@@ -78,7 +78,7 @@ def product_extensions(key):
     return products
 
 
-def target_directions(targets, key):
+def target_quotient_basis(targets, key):
     basis = as_basis(key)
     quotient = {}
     for target in targets:
@@ -89,7 +89,11 @@ def target_directions(targets, key):
                 if row & (1 << pivot):
                     quotient[p] = row ^ residual
             quotient[pivot] = residual
-    rows = list(quotient.values())
+    return list(quotient.values())
+
+
+def nonzero_directions(quotient_basis):
+    rows = list(quotient_basis)
     directions = []
     for mask in range(1, 1 << len(rows)):
         value = 0
@@ -138,11 +142,14 @@ def find_product_in_coset(key, direction):
                 if coeff >> (len(basis_rows) + j) & 1:
                     g ^= row
             if g:
-                return {"left": f, "right": g, "signature": direction}
+                actual = f & g
+                return {"left": f, "right": g, "actual_product": actual,
+                        "quotient_direction": direction,
+                        "affine_correction": actual ^ direction}
     return None
 
 
-def search_pair(names, timeout_seconds=60.0, max_first=10000):
+def search_pair(names, timeout_seconds=60.0, max_first=10000, max_second=None):
     started = time.time()
     targets = [FEATURES[name] for name in names]
     s0 = initial_key()
@@ -156,19 +163,17 @@ def search_pair(names, timeout_seconds=60.0, max_first=10000):
         for a2, witness2 in product_extensions(s1).items():
             counters["second_extensions"] += 1
             s2 = canonical(insert(as_basis(s1), a2))
-            directions = target_directions(targets, s2)
-            if len(directions) != 2:
+            quotient_basis = target_quotient_basis(targets, s2)
+            if len(quotient_basis) != 2:
                 continue
+            directions = nonzero_directions(quotient_basis)
             for direction in directions:
                 counters["direction_tests"] += 1
                 a3 = find_product_in_coset(s2, direction)
                 if not a3:
                     continue
-                s3 = canonical(insert(as_basis(s2), a3["signature"]))
-                remaining = [x for x in directions if reduce_value(x, as_basis(s3))]
-                if len(remaining) != 1:
-                    # Recompute the residual target quotient after a3.
-                    remaining = target_directions(targets, s3)
+                s3 = canonical(insert(as_basis(s2), a3["actual_product"]))
+                remaining = nonzero_directions(target_quotient_basis(targets, s3))
                 if len(remaining) != 1:
                     continue
                 a4 = find_product_in_coset(s3, remaining[0])
@@ -181,6 +186,9 @@ def search_pair(names, timeout_seconds=60.0, max_first=10000):
                             "elapsed_seconds": time.time() - started}
             if counters["second_extensions"] % 1000 == 0:
                 print("progress", counters, flush=True)
+            if max_second is not None and counters["second_extensions"] >= max_second:
+                return {"status": "smoke_limit", "features": list(names),
+                        "counters": counters, "elapsed_seconds": time.time() - started}
             if time.time() - started > timeout_seconds:
                 break
     return {"status": "timeout_or_no_witness", "features": list(names),
@@ -192,8 +200,10 @@ def main():
     parser.add_argument("--features", nargs=2, default=["R1", "R2"])
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--timeout", type=float, default=60.0)
+    parser.add_argument("--max-first", type=int, default=10000)
+    parser.add_argument("--max-second", type=int)
     args = parser.parse_args()
-    result = search_pair(args.features, args.timeout)
+    result = search_pair(args.features, args.timeout, args.max_first, args.max_second)
     args.output.write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result, indent=2))
 
