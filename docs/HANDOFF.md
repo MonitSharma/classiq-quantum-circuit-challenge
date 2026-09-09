@@ -613,3 +613,9 @@ loader. It passed a sparse exact check over all 64 y inputs, but serialized to
 `src/shared_vector_shannon.py`; the QASM, metrics, and 64-input check are under
 `artifacts/shared_vector_shannon_loader*`. This shared cofactor representation
 is not a viable complete-oracle primitive.
+
+The relative-phase action/reset variant reduced the same loader to
+**1646/933/18** while preserving exact output bits and q17 cleanup on all 64
+y inputs. It is stored at `artifacts/shared_vector_shannon_rp_loader.qasm`
+with its metrics/check files, but remains far above the UCR loader depth and
+was not integrated.

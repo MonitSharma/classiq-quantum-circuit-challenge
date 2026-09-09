@@ -1308,3 +1308,11 @@ CX / 18 qubits**. A sparse basis-state check covered all 64 y inputs, exact
 worse than the 128-layer synchronized UCR loader, so the first genuinely
 shared Shannon compiler is closed as a loader primitive. Source and artifacts:
 `src/shared_vector_shannon.py` and `artifacts/shared_vector_shannon_loader*`.
+
+A relative-phase version of the same compiler used dirty-output
+`synth_mcx_n_dirty_i15` action/reset blocks. It passed the same 64-input exact
+bit-and-cleanup check and reduced the loader to **1,646 depth / 933 CX / 18
+qubits** (`artifacts/shared_vector_shannon_rp_loader.qasm`, SHA
+`7752f0c9f9beb1ec9f8b9970310c253f9fa641d56a86ef0c2282a2426c362f0f`). The
+depth remains far above 128, so relative phase alone does not rescue the
+shared Shannon representation.
