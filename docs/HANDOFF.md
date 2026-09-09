@@ -414,3 +414,11 @@ ancilla leakage. This is substantially better than the direct-target
 integration but remains above 531; the next work must reduce the remaining
 phase/correction and loader serialization rather than repeat the same frame
 screen.
+
+The independent `V = R1 OR R2` control experiment replaced the six-output UCR
+with a five-output UCR plus an exact reversible OR. Its best verified score was
+545/945/18 over 32 seeds; pytket lowering reached 540/945, still worse than
+the protected 531/1020/18. The matching optimized artifact is
+`artifacts/full_mux_derive_v_tket.qasm`, SHA
+`4baad4c76a20db8e92ea7e2f2f68a0d8d9041e570d33275903bf38e3c228e39b`.
+The sixth-lookup removal alone is closed.

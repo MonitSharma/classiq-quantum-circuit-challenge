@@ -201,6 +201,15 @@ The serialized loader followed by its exact inverse reduced to identity under
 U3/CX transpilation (depth 0 / CX 0), confirming the intended phase
 cancellation.
 
+As a separate control experiment, deriving `V = R1 OR R2` after a five-output
+UCR lookup was tested in the original architecture. The best of 32 seeds was
+**545 depth / 945 CX / width 18**; exhaustive verification passed. Pytket
+peephole lowering reached 540/945, still above the protected 531 result. The
+sixth-lookup removal alone is therefore not sufficient.
+The matching optimized QASM is
+`artifacts/full_mux_derive_v_tket.qasm`, SHA
+`4baad4c76a20db8e92ea7e2f2f68a0d8d9041e570d33275903bf38e3c228e39b`.
+
 ## Complete integration result
 
 The direct loader was integrated into the original phase/correction skeleton

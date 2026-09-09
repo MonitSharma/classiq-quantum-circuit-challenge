@@ -1027,3 +1027,16 @@ reduced the exact candidate to **2032/1425/18** across eight routing seeds;
 seed 1 was best and all 4096 inputs passed exhaustive verification. This is a
 substantial structural improvement over the 3243/1965 direct-target
 integration, but remains negative against the protected 531 oracle.
+
+## Derive V instead of loading a sixth UCR (September 9, 2026)
+
+The brief's high-value `V = R1 OR R2` suggestion was tested directly in the
+original architecture. The six-output y lookup was replaced by a five-output
+lookup for `R0,R1,R2,A,B`, followed by an exact reversible OR into q17. Across
+32 routing seeds the best complete candidate was **545/945/18** and passed
+exhaustive verification. Safe pytket peephole lowering reduced that same
+candidate to **540/945/18**, SHA
+`4baad4c76a20db8e92ea7e2f2f68a0d8d9041e570d33275903bf38e3c228e39b` at
+`artifacts/full_mux_derive_v_tket.qasm`; the optimized file also passed all
+4096-input exhaustive verification. It remains worse than the protected
+531/1020/18.
