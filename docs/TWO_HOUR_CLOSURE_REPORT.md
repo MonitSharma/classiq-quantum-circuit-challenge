@@ -118,6 +118,13 @@ and 9. It is not yet an end-to-end nonlinear oracle compiler: RCCX changes the
 semantic signal basis, so live nonlinear signals still need to be represented
 in the frame state before a persistent candidate can be accepted.
 
+The span-aware hybrid fallback was then attempted on all four pilot terms. All
+four were rejected as `infeasible_prototype` with the same frame-span failure;
+there is no accepted persistent pair QASM or end-to-end depth claim. The
+negative result is useful: preserving only total affine rank is insufficient,
+and canonical fallback must retain the full input/live semantic span through
+every nonlinear uncompute.
+
 A truth-table-backed semantic-frame prototype was also attempted. Its general
 transition core passes random exact tests on 18-dimensional function spans,
 but the first end-to-end pair construction failed to preserve a live nonlinear

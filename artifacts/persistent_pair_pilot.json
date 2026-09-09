@@ -1,0 +1,18 @@
+{
+  "5": {
+    "status": "infeasible_prototype",
+    "error": "frames have different spans"
+  },
+  "9": {
+    "status": "infeasible_prototype",
+    "error": "frames have different spans"
+  },
+  "4": {
+    "status": "infeasible_prototype",
+    "error": "frames have different spans"
+  },
+  "2": {
+    "status": "infeasible_prototype",
+    "error": "frames have different spans"
+  }
+}
