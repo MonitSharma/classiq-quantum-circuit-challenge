@@ -599,3 +599,10 @@ known map reached **530/978/18** and the best random map reached 536/1020;
 none improved 524/950. The results are recorded in
 `artifacts/complete_input_basis_screen.json`; input-coordinate changes alone
 are closed as the next lever.
+
+All 64 affine offsets for the winning six-feature matrix were also compiled;
+raw results were 527/950 or 529/950, and every tied offset lowered to exactly
+524/950/18 under pytket. The results are in
+`artifacts/complete_affine_offset_screen.json` and
+`artifacts/complete_affine_offset_post.json`. The complete affine frame is now
+bounded-closed; further progress requires a new reversible primitive.

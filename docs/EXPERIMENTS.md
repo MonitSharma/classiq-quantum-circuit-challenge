@@ -1286,3 +1286,13 @@ screen of 40 additional random nonsingular input frames found no improvement;
 the best random frame measured 536/1020. This confirms that input-coordinate
 changes alone do not improve the accepted 524/950 circuit. Results are in
 `artifacts/complete_input_basis_screen.json`.
+
+## Complete affine output offsets (September 10, 2026)
+
+The winning six-feature matrix was extended to the full affine family
+`G = M F XOR c`. All 64 offsets were compiled. Raw scores were either
+**527/950** or **529/950**; the tied offsets were then passed through global
+pytket peephole lowering and every one remained **524/950/18**. The complete
+screens are `artifacts/complete_affine_offset_screen.json` and
+`artifacts/complete_affine_offset_post.json`. The affine output-frame family
+therefore provides no further improvement.

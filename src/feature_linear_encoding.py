@@ -27,6 +27,7 @@ MATRIX = (9, 23, 21, 8, 17, 32)
 Y_ORDERS_SEED = 94
 X_ORDERS_SEED = 10094
 TRANSPILE_SEED = 94
+OFFSET = 0
 
 
 def inverse_matrix(rows: tuple[int, ...], n: int = 6) -> tuple[int, ...]:
@@ -64,7 +65,7 @@ def encoded_tables() -> list[int]:
         truth(range(39, 44)),
         truth(y for y in range(64) if radius(y) > 0),
     ]
-    return [
+    tables = [
         __import__("functools").reduce(
             int.__xor__,
             (features[i] for i in range(6) if row & (1 << i)),
@@ -72,6 +73,9 @@ def encoded_tables() -> list[int]:
         )
         for row in MATRIX
     ]
+    full = (1 << 64) - 1
+    return [table ^ (full if (OFFSET >> i) & 1 else 0)
+            for i, table in enumerate(tables)]
 
 
 def build() -> QuantumCircuit:
@@ -80,6 +84,9 @@ def build() -> QuantumCircuit:
     lookup = multiplexer(tables, list(ASSIGNMENT), list(range(6, 12)), "y",
                          Y_ORDERS_SEED)
     q = lookup.copy()
+    for i, wire in enumerate(ASSIGNMENT):
+        if (OFFSET >> i) & 1:
+            q.x(wire)
 
     inverse = inverse_matrix(MATRIX)
     for control, target in matrix_ops(inverse):
@@ -123,6 +130,9 @@ def build() -> QuantumCircuit:
 
     for control, target in reversed(matrix_ops(inverse)):
         q.cx(ASSIGNMENT[control], ASSIGNMENT[target])
+    for i, wire in enumerate(ASSIGNMENT):
+        if (OFFSET >> i) & 1:
+            q.x(wire)
     q.compose(lookup.inverse(), inplace=True)
     q.compose(pair_circuit(truth([32, 48]), truth(range(17, 22))), inplace=True)
     return transpile(q, basis_gates=["u3", "cx"],
