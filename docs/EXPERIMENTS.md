@@ -1673,3 +1673,22 @@ This is the required full-problem score for the architecture, and it is far
 worse than the protected 524/950 oracle. The cofactor temporary-product route
 is therefore closed in this form; further work would need a fundamentally
 shared phase-gadget primitive rather than more term grouping.
+
+## Architecture closure decision (September 10, 2026)
+
+The following branches are now closed as primary optimization directions:
+
+1. **Stateful factor streaming:** exact one-live-pair streaming bottoms out at
+   1227/1361/18 across the tested bases.
+2. **Multi-live-factor streaming:** exact two-live-pair streaming bottoms out
+   at 2716/1576/18 in the tested grouping.
+3. **Shannon/cofactor materialization:** clean cofactor banks and explicit
+   HP24 lowering remain far above the protected circuit; dirty variants fail
+   exact phase verification.
+
+These closures are architectural, not claims that no conceivable relative-
+phase or conditionally-clean construction could work. However, the measured
+gaps are large enough that incremental variants of these same representations
+are not justified. The protected complete baseline remains
+`artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524 depth / 950 CX /
+18 qubits**, with its matching exhaustive and dense verification reports.

@@ -886,3 +886,14 @@ candidate `artifacts/cofactor_rank_bank_012_hp24_development.qasm` measures
 All 4096 product inputs passed with zero ancilla leakage, but the result is
 worse than both the ordinary cofactor control and the 257/535 UCR batch.
 Explicit HP24 lowering does not rescue the cofactor architecture.
+
+## Closed architecture branches (September 10, 2026)
+
+Stateful factor streaming, multi-live-factor streaming, and Shannon/cofactor
+materialization are now closed as primary routes. Exact one-pair streaming
+bottomed out at 1227/1361/18; exact two-pair streaming at 2716/1576/18; and
+the cofactor/HP24 experiments remained far above the protected result or failed
+exact phase checks. Do not reopen these with incremental seed or helper changes.
+The protected fallback remains
+`artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524/950/18**, with
+matching exhaustive and dense verification.
