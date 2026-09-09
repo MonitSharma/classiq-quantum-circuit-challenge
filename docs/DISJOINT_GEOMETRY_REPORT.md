@@ -118,3 +118,23 @@ itself; composed with the 385-depth disk block it measured **767/863**.
 Thus the available workspace does not expose a useful overlap under these
 implementations. The route is closed unless a new shared reversible phase
 primitive is introduced.
+
+## Rank-2 rectangle basis follow-up
+
+The rectangle union has rank two, so its six equivalent GL(2,2) bases were
+scored by actual serialized cost. The best basis was
+
+```text
+A_x * (A_y XOR B_y) XOR (A_x XOR B_x) * B_y
+```
+
+Its rectangle block measured **277/236**, improving on the original
+independent rectangle composition. Composed with the seed-2 disk block, the
+complete candidate `artifacts/disjoint_shared_rectangle_candidate.qasm`
+measured **659 depth / 727 CX / width 18** and passed exhaustive verification
+with zero ancilla leakage. Its SHA-256 is
+`34b34ef926b5e7ff2748334033801a1c569f1a6009bbe31b9ebb86a8583f7007`.
+
+This is a genuine improvement over 708, but remains above 531 and the
+historical leaderboard range. The remaining gap is still the near-additive
+serialization of the 277-layer rectangle block and 385-layer disk block.

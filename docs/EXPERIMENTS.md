@@ -878,3 +878,13 @@ rewrite/refactor flow remained at 247 nodes and level 17, and `syn2` remained
 at 247 nodes and level 19. These are classical AIG measurements, not quantum
 scores, but they show that ABC does not expose a compact hidden computation
 graph suitable for the six-clean-ancilla reversible compiler.
+
+### Rank-2 rectangle basis follow-up
+
+A bounded GL(2,2) search over the rank-2 rectangle union found the equivalent
+representation `A_x*(A_y XOR B_y) XOR (A_x XOR B_x)*B_y`. The rectangle block
+measured 277/236 depth/CX and the complete verified oracle measured
+**659/727/18**, SHA
+`34b34ef926b5e7ff2748334033801a1c569f1a6009bbe31b9ebb86a8583f7007`.
+This supersedes 708 as the best disjoint-geometry candidate, but remains
+above the protected 531 result.

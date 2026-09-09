@@ -194,6 +194,14 @@ pair compiler in a three-ancilla bank, and a two-output rectangle multiplexer
 scored 384/372 alone and 767/863 with the disk block. The disjoint route is
 closed unless a new shared phase primitive is developed.
 
+A bounded GL(2,2) basis search found a better shared rectangle representation,
+`A_x*(A_y XOR B_y) XOR (A_x XOR B_x)*B_y`. It reduces the rectangle block to
+277/236 and the complete verified candidate to **659/727/18** at
+`artifacts/disjoint_shared_rectangle_candidate.qasm`, SHA
+`34b34ef926b5e7ff2748334033801a1c569f1a6009bbe31b9ebb86a8583f7007`.
+This is the current best result in the disjoint branch, but it remains above
+the protected 531-depth artifact.
+
 The 531 result is a useful submission-ready baseline, but it is not close to
 the historical leader at depth 291. The measurements point away from more
 seed tuning or global peephole rewriting: the current architecture pays three
