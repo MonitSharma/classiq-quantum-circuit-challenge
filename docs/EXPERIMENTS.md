@@ -1923,3 +1923,12 @@ not build after two clean retries with its undeclared `pybind11` and
 `setuptools` prerequisites, so no RevKit module or full EPFL oracle flow was
 available. The project Python 3.13 environment and protected QASM were not
 modified. Close this as environment-blocked under the agreed stop rule.
+## Classiq-native direct geometry attempt (September 10, 2026)
+
+`src/classiq_direct_geometry.py` created a fresh QMOD using the four direct
+arithmetic shape inequalities and one union predicate. The union correction is
+important because independent phase marks would cancel on overlapping shapes.
+The native synthesis request then failed with an expired token; the API also
+reported a minimum width of 39 qubits against the requested width 18. No QASM
+or score was produced, and authentication was not debugged under the agreed
+stop rule.
