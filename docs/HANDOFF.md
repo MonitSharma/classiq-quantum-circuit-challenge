@@ -592,3 +592,10 @@ phase cubes, removing the three-target x-UCR. The exact candidate measured
 `artifacts/direct_left_phase.qasm` (SHA
 `e84248ff0ece3b8b6f7a83d9ea962b1ed4b1654afd88adbe58c9bfee9c80a70e`). This
 phase-only replacement is worse than the synchronized x-UCR.
+
+A complete y-input coordinate-frame screen then wrapped the affine-feature
+oracle in 40 random nonsingular GL(6,2) maps plus the known low-cost map. The
+known map reached **530/978/18** and the best random map reached 536/1020;
+none improved 524/950. The results are recorded in
+`artifacts/complete_input_basis_screen.json`; input-coordinate changes alone
+are closed as the next lever.

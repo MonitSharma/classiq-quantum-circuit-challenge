@@ -1275,3 +1275,14 @@ phase cubes (four for each x interval). The best of eight seeds was
 passed exhaustive verification on all 4096 inputs with zero ancilla leakage.
 The high-control phase cubes are much more expensive than the synchronized
 x-UCR, so direct ESOP phase emission is closed.
+
+## Complete y-input coordinate-frame screen (September 10, 2026)
+
+The affine-feature oracle was wrapped in an invertible linear transformation
+of the six y input bits, with every lookup table rewritten through the inverse
+map and the input frame restored afterward. The known low-cost input basis
+`(1,2,4,40,16,48)` measured **530 depth / 978 CX / 18 qubits**. A bounded
+screen of 40 additional random nonsingular input frames found no improvement;
+the best random frame measured 536/1020. This confirms that input-coordinate
+changes alone do not improve the accepted 524/950 circuit. Results are in
+`artifacts/complete_input_basis_screen.json`.
