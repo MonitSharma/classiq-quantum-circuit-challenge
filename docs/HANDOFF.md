@@ -172,6 +172,23 @@ made and no rank is claimed.
 
 ## Future path
 
+### Disjoint geometry architecture (September 9, 2026)
+
+The exact rewrite into pairwise-disjoint A, B', C, and D was exhaustively
+checked and implemented. Standalone A and B' phase blocks measured 160/122 and
+161/145 depth/CX. A disk-only block using only R0/R1/R2, with V derived as
+R1 OR R2 and a free q16 phase helper, measured 385/491/18. The best complete
+three-component composition was `artifacts/disjoint_geometry_708.qasm`,
+708/752/18, order disk -> B' -> A, exhaustively verified with zero ancilla
+leakage and SHA
+`e6bf58e1782a484168da7eafbbdedd8652004e3fd18ff5c450e9365e1c9f3c3c`.
+
+This is a verified negative result against the protected 531-depth artifact:
+the two rectangle blocks serialize to roughly 321 additional layers. Direct
+interval rectangles and bounded direct/hybrid radius loading were worse. Do
+not continue generic ordering or seed search here; a useful follow-up would
+need shared/interleaved rectangle phase loading.
+
 The 531 result is a useful submission-ready baseline, but it is not close to
 the historical leader at depth 291. The measurements point away from more
 seed tuning or global peephole rewriting: the current architecture pays three

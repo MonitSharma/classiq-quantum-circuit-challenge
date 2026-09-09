@@ -1,5 +1,24 @@
 # Experiment history and failure notes
 
+## Disjoint geometry architecture (September 9, 2026)
+
+The exact geometric rewrite `A XOR B' XOR C XOR D` was checked over all 4096
+points with zero mismatches and pairwise overlap counts all zero. A and B'
+were compiled as standalone pair phase blocks at 160/122 and 161/145 depth/CX.
+The disk-only C XOR D block loads only R0/R1/R2, derives V as R1 OR R2, uses a
+free q16 phase helper, and measures 385/491/18. Its exact QASM is
+`artifacts/disk_only_mux.qasm` and its exhaustive report has SHA
+`46be9e4d583017db29cc18da2c3023658aa67d4394fa1063e2ebd286866e8bf5`.
+
+Composing the three blocks in all six orders produced the verified best
+`artifacts/disjoint_geometry_708.qasm` at **708 depth / 752 CX / width 18**,
+order disk, B_prime, A, SHA
+`e6bf58e1782a484168da7eafbbdedd8652004e3fd18ff5c450e9365e1c9f3c3c`.
+Direct interval rectangles and bounded direct/hybrid radius-bit loading were
+worse. This closes the disjoint-component architecture as a negative result
+against the protected 531 depth, while identifying shared/interleaved phase
+loading as the only remaining meaningful follow-up.
+
 ## Overnight shared-pair diagnostics (September 8, 2026)
 
 The first bounded experiment on the shared-XAG path was `src/global_pair_compile.py`.
