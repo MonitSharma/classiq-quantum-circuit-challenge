@@ -712,3 +712,10 @@ A seed screen over seeds 0--7 kept depth fixed at 257, with CX counts from
 511 to 555. Thus the UCR batch validates the parallel architecture but does
 not by itself meet the full-logo target; reducing the ~128-layer bank loads or
 sharing them across rank batches remains necessary.
+
+An ESOP alternative in `src/rank_batch_esop_dirty.py` used the other five
+ancillas as dirty scratch for each output. It compiled to **672/433/18** but
+failed the three-term exhaustive phase check with error 2, demonstrating that
+the retained-output relative phases do not cancel across this multi-output
+sequence. The artifact `artifacts/rank_batch_esop_dirty_012_development.qasm`
+is a negative diagnostic only.
