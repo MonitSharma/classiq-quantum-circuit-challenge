@@ -351,3 +351,10 @@ clean output accumulator. This is recorded in
 `artifacts/vector_feature_reversible_schedule.json`. The next justified work
 is dirty-output pebbling, output-frame synthesis, or controlled recomputation;
 do not interpret this bounded clean-pebble result as an impossibility proof.
+
+The follow-up optimistic dirty-frame span probe covered only 3/5 outputs in
+its best 12-toggle abstract state. It relaxed disjoint-control constraints and
+therefore produced no physical candidate; see
+`artifacts/vector_dirty_frame_search.json`. Any continuation must implement
+the affine frame and dirty controls explicitly before treating this direction
+as a score.

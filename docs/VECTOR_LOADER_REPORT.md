@@ -103,3 +103,18 @@ This closes the naive clean-output schedule, not the entire vector-loader
 direction. The next compiler must use dirty output wires, output-frame
 transforms, recomputation, or a different shared representation; simply
 reserving one clean target per output cannot exploit the ABC sharing.
+
+## Dirty-frame span probe
+
+`src/vector_dirty_frame_search.py` performs an optimistic abstract search in
+which all six ancilla wires may hold arbitrary Boolean frame values. It asks
+whether toggled shared product nodes can make the five feature functions lie in
+the final six-wire linear span. The best bounded run covered only **3 of 5**
+outputs after 12 abstract toggles. It did not produce a gate circuit, and its
+control-span checks were relaxed to expose possible endgame dependencies, so
+the result is not a reversible score or an impossibility proof.
+
+The artifact is `artifacts/vector_dirty_frame_search.json`. The next serious
+implementation must restore disjoint physical controls and synthesize the
+dirty affine frame explicitly; the current probe is useful only as a search
+diagnostic.

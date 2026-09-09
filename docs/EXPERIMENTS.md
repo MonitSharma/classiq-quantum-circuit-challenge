@@ -934,3 +934,11 @@ the remaining outputs did not close under the bounded six-pebble search. This
 is a feasibility result for the naive schedule, not an impossibility proof for
 dirty-output or output-frame synthesis. Details are in
 `artifacts/vector_feature_reversible_schedule.json`.
+
+An optimistic dirty-frame span probe then allowed all six ancilla wires to
+carry Boolean frame values and searched shared-node toggles. Its best bounded
+state covered only 3/5 feature outputs after 12 abstract toggles. Because the
+control-span restriction was relaxed, this is not a circuit or correctness
+result; it only indicates that a simple final linear frame is not immediately
+exposed by the natural ABC graph. The diagnostic is in
+`artifacts/vector_dirty_frame_search.json`.
