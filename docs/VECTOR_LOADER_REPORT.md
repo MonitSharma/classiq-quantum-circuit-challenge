@@ -134,3 +134,21 @@ approximately 548 depth before radius loading or x-phase logic. The result is
 therefore closed as a standalone fallback. Artifacts are
 `artifacts/local_y_distance.qasm` and
 `artifacts/local_y_distance_metrics.json`.
+
+## Shared vector-ESOP fallback
+
+The ANF monomials were also compiled as a shared multi-output ESOP in
+`src/vector_esop_loader.py`. Each of the 36 unique monomials is computed into
+q17, fanned out to its output mask, and uncomputed. The raw construction was
+independently replayed on all 64 y inputs, checking exact output bits and
+`q17=0`.
+
+Because q15 and q16 are output wires, they are not used as clean scratch. All
+degree-3-and-higher monomials therefore use exact no-ancilla MCX synthesis.
+The serialized result is **2505 depth / 1453 CX / width 18**, recorded in
+`artifacts/vector_esop_loader.qasm` and
+`artifacts/vector_esop_loader_metrics.json`. An earlier 1354/840 measurement
+was rejected because it illegally reused output wires as scratch.
+
+This loader-only result is far above the protected complete-oracle depth 531,
+so the naive shared-ESOP fallback is closed and was not integrated.

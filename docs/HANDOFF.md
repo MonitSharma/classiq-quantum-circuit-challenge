@@ -364,3 +364,9 @@ artifact `artifacts/local_y_distance.qasm` measured 274/151/18 with three
 clean scratch ancillas and passed all 64 y-input checks. Its inverse is needed
 for a full oracle, making the transform pair about 548 depth before radius and
 x-phase logic.
+
+The vector-ESOP fallback is also closed. The corrected shared ANF loader uses
+36 unique monomials, passes all 64 y-input checks with q17 restored, and
+serializes to 2505/1453/18. The earlier 1354/840 measurement was invalid due
+to reusing output wires as scratch; retain only
+`artifacts/vector_esop_loader.qasm` and its metrics as the valid result.

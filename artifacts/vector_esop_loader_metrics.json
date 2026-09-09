@@ -1,0 +1,28 @@
+{
+  "kind": "shared_vector_anf_esop",
+  "outputs": [
+    "R0",
+    "R1",
+    "R2",
+    "A",
+    "B"
+  ],
+  "unique_monomials": 36,
+  "output_mask_histogram": {
+    "1": 22,
+    "2": 4,
+    "3": 7,
+    "4": 2,
+    "5": 1
+  },
+  "depth": 2505,
+  "cx": 1453,
+  "width": 18,
+  "basis": [
+    "u3",
+    "cx"
+  ],
+  "qubits_initially_zero": false,
+  "loader_truth_rows": 64,
+  "note": "Loader-only shared ESOP fallback; not integrated into the logo oracle."
+}

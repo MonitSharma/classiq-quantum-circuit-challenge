@@ -949,3 +949,11 @@ The local-coordinate fallback was then implemented. It translates low5 y by
 exact U3/CX transform measured **274/151/18**; the no-ancilla version was
 425/247/18. Since the transform must be inverted, its pair is already about
 548 depth before disk radius logic, so this fallback is closed.
+
+The shared vector-ESOP fallback was then implemented using the 36 unique ANF
+monomials and output masks. Its raw construction passed an independent 64-row
+classical replay with q17 restored to zero. After exact U3/CX serialization it
+measured **2505/1453/18** as a loader-only circuit. A prior 1354/840 result
+was rejected because q15/q16, which are output wires, had been used as if they
+were clean scratch. The corrected ESOP loader is therefore closed and was not
+integrated into the complete oracle.
