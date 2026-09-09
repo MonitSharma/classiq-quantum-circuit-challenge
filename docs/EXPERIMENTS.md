@@ -1210,3 +1210,19 @@ candidate measured **563 depth / 949 CX / 18 qubits**. The CX reduction is not
 worth the depth increase, so this primitive is closed for the current
 architecture. Source and metrics are in `src/sparse_mux_feature_encoding.py`
 and `artifacts/sparse/`.
+
+## Direct Walsh phase synthesis and pass-composition closure (September 10, 2026)
+
+The direct 12-variable Walsh/GraySynth diagnostic used all **4,096 Walsh
+terms**. Its raw exact-basis serialization was **8,168 depth / 4,094 CX / 12
+qubits**, already far beyond the protected 524-depth oracle. The exported
+phase convention did not pass the logo verifier (phase error 2), so it was not
+accepted as an oracle artifact; the result is retained only as a bounded
+negative diagnostic against replacing the three synchronized lookup stages
+with a dense full Walsh phase polynomial.
+
+Alternative pytket compositions on the exact accepted 524-depth QASM,
+including `FullPeepholeOptimise`, `CliffordSimp`, `ContextSimp`,
+`RemoveRedundancies`, and `OptimisePhaseGadgets` in both orderings, all
+lowered to the same **524 / 950 / 18** score. No post-processing improvement
+was found.

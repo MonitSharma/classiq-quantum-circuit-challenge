@@ -550,6 +550,13 @@ All 720 feature assignments were also screened by raw score, and pytket was
 run on the 30 strongest. Every raw 527/950 tie post-processed to 524/950, so
 physical assignment is not the remaining post-processing lever.
 
+A direct 12-variable Walsh/GraySynth diagnostic used all 4,096 Walsh terms and
+serialized to 8,168 depth / 4,094 CX / 12 qubits before verification. Its
+phase convention failed the logo verifier, so it is not an accepted artifact;
+the cost alone closes dense full-Walsh synthesis as a replacement for the
+three synchronized lookup stages. Additional pytket pass compositions and
+ordering variants all reproduced 524/950 and found no post-processing gain.
+
 The sparse-Walsh UCR experiment is also closed. It was exact over all 4096
 inputs and reduced CX to 949, but its variable-length paths serialized the
 outputs to **563 depth / 949 CX / 18 qubits**. Retain it only as a negative
