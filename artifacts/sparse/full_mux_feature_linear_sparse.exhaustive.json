@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/sparse/full_mux_feature_linear_sparse.qasm",
+  "sha256": "f48f805a87518dd84a86d1e8979fd6e6bf6ca07dbdc03297ae7d338a0eb6dfc1",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 563,
+  "cx_count": 949,
+  "max_error": 1.476262683328914e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 2.4423369150761e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 7.662935972213745,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

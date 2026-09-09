@@ -545,3 +545,8 @@ ancilla leakage below `2e-14`. This supersedes the raw 527-depth serialization.
 Repeated pytket pass compositions and a bounded native `rz/sx/x/cx` intermediate
 basis screen did not improve 524/950; the latter reached 525/950 at best. The
 accepted 524 artifact remains unchanged.
+
+The sparse-Walsh UCR experiment is also closed. It was exact over all 4096
+inputs and reduced CX to 949, but its variable-length paths serialized the
+outputs to **563 depth / 949 CX / 18 qubits**. Retain it only as a negative
+primitive result; the dense synchronized UCR remains superior at 524/950.

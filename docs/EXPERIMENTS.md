@@ -1191,3 +1191,16 @@ Repeated pytket pass compositions (`FullPeepholeOptimise`, `CliffordSimp`,
 native `rz/sx/x/cx` intermediate-basis pipeline followed by exact U3/CX
 lowering reached at best 525/950, so it does not replace the accepted 524
 artifact.
+
+## Sparse-Walsh multiplexer experiment (September 10, 2026)
+
+The UCR implementation was changed to visit only nonzero Walsh vertices and
+close the resulting Hamming walk, rather than emitting all 64 Gray-cycle
+edges per output. The sparse walk was checked against dense UCR behavior and
+the complete oracle passed exhaustive verification on all 4096 inputs with
+zero ancilla leakage. However, interleaving the variable-length output paths
+destroyed the synchronized parallelism of the dense construction: the exact
+candidate measured **563 depth / 949 CX / 18 qubits**. The CX reduction is not
+worth the depth increase, so this primitive is closed for the current
+architecture. Source and metrics are in `src/sparse_mux_feature_encoding.py`
+and `artifacts/sparse/`.

@@ -1,0 +1,11 @@
+{
+  "qasm": "artifacts/sparse/full_mux_feature_linear_sparse.qasm",
+  "sha256": "f48f805a87518dd84a86d1e8979fd6e6bf6ca07dbdc03297ae7d338a0eb6dfc1",
+  "depth": 563,
+  "cx": 949,
+  "width": 18,
+  "basis_inputs_checked": 4096,
+  "ancilla_error": 0.0,
+  "status": "exact_but_negative",
+  "note": "Sparse Walsh paths reduce CX slightly but destroy synchronized output parallelism."
+}
