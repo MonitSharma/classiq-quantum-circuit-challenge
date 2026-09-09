@@ -463,3 +463,8 @@ eight strongest assignments, with separate y-loader, x-phase, and transpiler
 seeds. It did not improve 530; its best was 530/1022. A six-order radius
 comparator schedule screen also found no improvement over 530/1020. These
 are bounded negative results, not reasons to reopen generic seed searches.
+
+The five-output `V = R1 OR R2` architecture was also remapped over all 120
+feature assignments using its best known y/x routing seeds. Its best verified
+result was **539/918/18**, so assignment remapping does not rescue that
+branch. The next work should attack the UCR/multiplexer primitive itself.

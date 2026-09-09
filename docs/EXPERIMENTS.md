@@ -1091,3 +1091,9 @@ The follow-up independent-routing screen tested 2,048 combinations over the
 eight strongest assignments, with separate y-loader, x-phase, and transpiler
 seeds. It did not improve 530; its best was 530/1022. A six-order radius
 comparator schedule screen also found no improvement over 530/1020.
+
+Applying the same semantic feature-wire permutation search to the
+five-output `V = R1 OR R2` architecture tested all 120 assignments with its
+best known y/x routing seeds. The best candidate was **539/918/18**, and it
+passed exhaustive verification; it remains worse than the 530 full-mux
+candidate. This branch is closed.
