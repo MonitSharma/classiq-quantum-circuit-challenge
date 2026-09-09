@@ -646,3 +646,12 @@ terms. The serialized artifact is
 **969/1338/18**. Exhaustive verification covered all 4096 inputs with zero
 ancilla leakage. It is better than the 1265/1460 exact-MCZ pilot but still
 well above the protected 524/950 result, so this representation is closed.
+
+A six-output threshold encoding was then tested: `[V,L,T,P,A,B]`, with only
+`Q=T&P` computed transiently into dirty `V`. It removes the binary-radius
+comparator while retaining the existing left-shape logic. The candidate
+`artifacts/threshold_feature_oracle_candidate.qasm` is exhaustively verified
+on all 4096 inputs at **781/1318/18**, SHA
+`0ccd69c5bd92478aa9df35d27546f0839e3e7894242b1545609fd1da5a5adea4`, with
+zero ancilla leakage. It improves the 969-depth pilot but does not improve
+the protected 524/950 circuit, so this encoding is also closed.

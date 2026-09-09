@@ -1345,3 +1345,16 @@ identity: `artifacts/threshold_phase_ucr_ucr_corrected_candidate.qasm`, SHA
 ancilla leakage. This is a large improvement over 1265/1460 but remains
 negative against 524/950; the correction does not make the architecture
 leaderboard-competitive.
+
+## Threshold-feature six-output encoding (September 10, 2026)
+
+The next encoding loaded `[V,L,T,P,A,B]` directly, leaving `T` and `P` as
+ordinary outputs and computing only `Q=T&P` transiently into dirty `V`. This
+removes the binary radius outputs and comparator while preserving the existing
+left-shape phase. The exact serialized result is
+`artifacts/threshold_feature_oracle_candidate.qasm`, SHA
+`0ccd69c5bd92478aa9df35d27546f0839e3e7894242b1545609fd1da5a5adea4`, at
+**781 depth / 1318 CX / 18 qubits**. Exhaustive verification covered all 4096
+inputs with maximum error `1.89e-14` and zero ancilla leakage. This improves
+the 969-depth branch-corrected pilot but remains negative against the
+protected 524/950 result; the threshold-feature encoding is closed.

@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/threshold_feature_oracle_candidate.qasm",
+  "sha256": "0ccd69c5bd92478aa9df35d27546f0839e3e7894242b1545609fd1da5a5adea4",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 781,
+  "cx_count": 1318,
+  "max_error": 1.891269077226769e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 2.4614757792008824e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 13.501157283782959,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

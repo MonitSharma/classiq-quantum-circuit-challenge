@@ -1,0 +1,19 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/threshold_feature_oracle_candidate.qasm",
+  "depth": 781,
+  "cx": 1318,
+  "width": 18,
+  "sha256": "0ccd69c5bd92478aa9df35d27546f0839e3e7894242b1545609fd1da5a5adea4",
+  "status": "exhaustively_verified",
+  "exhaustive_report": "artifacts/threshold_feature_oracle_candidate.exhaustive.json",
+  "max_error": 1.891269077226769e-14,
+  "ancilla_error": 0.0,
+  "encoding": [
+    "V",
+    "L",
+    "T",
+    "P",
+    "A",
+    "B"
+  ]
+}
