@@ -158,6 +158,15 @@ rank-family best, while the 531/1020/18 circuit remains the overall depth
 record in the repository. The next target remains shared persistent frames
 or a joint compiler that can reduce serialization below 732.
 
+Post-732 assignment diagnostics found no further improvement in 1,200
+coordinated two-/three-block mutations, 1,200 independent random restarts,
+or a focused 500-trial search on the most influential adjacent boundary.
+The verified circuit's largest wire occupancies are q14=328, q12=263,
+q16=255, q13=251, q17=179, and q15=168 touches; final wire completion
+spans layers 718--731. This indicates a distributed dependency chain rather
+than one removable hot-wire tail, strengthening the case for changing the
+nonlinear schedule itself.
+
 The time-limited semantic XAG model-bank pilot enumerated one model at k and
 one at k+1 for 12 representative functions, independently verified every
 returned model, and found zero predicates reused across different outputs.
