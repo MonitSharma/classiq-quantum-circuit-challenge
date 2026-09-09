@@ -907,3 +907,20 @@ The separate-disk five-input lookup alternative was also checked. Two guarded
 blocks produced an exact C XOR D oracle at **482/562/18**, SHA
 `ce807f224c92be7e46825d107c48af78c518c9a574a21b6b250851659894dd30`.
 It is worse than the shared 385/491 disk block and is closed.
+
+## Joint five-output y-feature loader (September 9, 2026)
+
+The new reversible-loading experiment began with the exact vector function
+`y -> (R0,R1,R2,A,B)`. Its 64-row truth table has 10 distinct output
+codewords, 36 unique ANF monomials, and 14 monomials shared by at least two
+outputs. Three ABC multi-output flows produced a best natural-basis network of
+56 AND nodes at logic depth 8. An affine output-basis screen scored 8,192
+encodings and compiled 64 of them through ABC; its best node-count result was
+48 AND nodes at logic depth 10, so it did not improve the natural basis on the
+irreversible depth proxy.
+
+The exact minterm reversible reference was serialized and scored at **7463
+depth / 3822 CX / width 18**. It is loader-only and intentionally not a
+complete oracle. This confirms that the cross-output sharing must be converted
+through a reversible pebbling schedule; the ANF/ABC results alone do not
+justify integration. The complete 531-depth artifact remains unchanged.

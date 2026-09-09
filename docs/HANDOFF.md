@@ -219,6 +219,24 @@ verified, but scored 482/562/18 for C XOR D (SHA
 `ce807f224c92be7e46825d107c48af78c518c9a574a21b6b250851659894dd30`). It is
 worse than the shared disk block and is closed.
 
+## Joint five-output loader continuation (September 9, 2026)
+
+The next architectural experiment is now represented by
+`docs/VECTOR_LOADER_REPORT.md`. The exact y-feature vector
+`(R0,R1,R2,A,B)` has 10 distinct output codewords, 36 unique ANF monomials,
+and 14 shared ANF monomials. ABC's best natural-basis multi-output flow used
+56 AND nodes at logic depth 8; an affine output-basis screen found a 48-node
+network at depth 10 but no irreversible-depth improvement. These figures are
+logic inventories, not quantum scores.
+
+The serialized exact minterm loader reference is
+`artifacts/vector_loader_best.qasm` at **7463/3822/18**. It is intentionally a
+loader-only upper baseline and is not a complete oracle. The required next
+step is a reversible affine-plus-AND pebbling compiler over q12..q17, followed
+by loader-only verification and then integration into the corrected 536/947
+architecture. The protected complete oracle remains 531/1020/18 and is not
+modified by this work.
+
 The 531 result is a useful submission-ready baseline, but it is not close to
 the historical leader at depth 291. The measurements point away from more
 seed tuning or global peephole rewriting: the current architecture pays three
