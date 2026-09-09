@@ -1692,3 +1692,36 @@ gaps are large enough that incremental variants of these same representations
 are not justified. The protected complete baseline remains
 `artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524 depth / 950 CX /
 18 qubits**, with its matching exhaustive and dense verification reports.
+
+## Conditionally-clean cofactor screening (September 10, 2026)
+
+The proposed selector splits were regenerated directly from `search.logo` in
+`src/conditionally_clean_cofactor.py`. The results match the independent
+truth-table analysis: selectors `(x5,y5)`, `(x5,y4,y5)`, `(x5,y3,y4,y5)`, and
+`(x5,y2,y3,y4,y5)` produce respectively 4, 6, 9, and 16 nonzero branches;
+their residual rank profiles are recorded in
+`artifacts/conditionally_clean_screen.json`.
+
+The first quantum test used the hardest rank-4 branch of the four-bit split,
+assignment `x5=1,y3=1,y4=0,y5=0`. A conservative reference compiler that uses
+no borrowed selector workspace produced
+`artifacts/conditionally_clean_branch_3_safe.qasm` at **946 depth / 518 CX /
+18 qubits**. The branch-specific exhaustive report is
+`artifacts/conditionally_clean_branch_3_safe.exhaustive.json`, SHA
+`e1d5e0aac10a66540bef161651df590a9357fba18774f59f50ff1438688adcdd`.
+
+The first conditionally-clean implementation then normalized the selector
+wires only under the branch flag and used Qiskit's dirty-ancilla MCX chain for
+the residual ESOP phase cubes. The serialized candidate
+`artifacts/conditionally_clean_branch_3_borrowed.qasm` measures **904 depth /
+522 CX / 18 qubits**, SHA
+`70c32ab29c4fd7d9af61fcf21fb2d59ef0bece7fec3fe2c9193b80a379785a0c`. It
+passed the branch-specific exhaustive check with zero ancilla leakage and
+maximum error `7.06e-15`; this check targets only the selected cofactor, not
+the complete logo oracle.
+
+This is an exact and safe implementation of the workspace mechanism, but it
+fails the local 30--50 depth viability gate by a wide margin. The negative
+result is specifically against independent ESOP phase-cube lowering. A final
+bounded follow-up would need representation-level factoring of the residual
+truth table; full nine-branch integration is not justified before that test.

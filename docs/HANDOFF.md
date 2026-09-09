@@ -897,3 +897,25 @@ exact phase checks. Do not reopen these with incremental seed or helper changes.
 The protected fallback remains
 `artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524/950/18**, with
 matching exhaustive and dense verification.
+
+## Conditionally-clean cofactor pilot (September 10, 2026)
+
+`src/conditionally_clean_cofactor.py` regenerated the proposed selector
+profiles from the authoritative logo predicate. The four-bit split
+`(x5,y3,y4,y5)` has nine nonzero branches with ranks
+`4,2,1,3,2,4,2,4,1`; the complete screen is in
+`artifacts/conditionally_clean_screen.json`.
+
+The hardest rank-4 branch, assignment 3 (`x5=1,y3=1,y4=0,y5=0`), was compiled
+both conservatively and with selector wires borrowed as dirty ancillas. The
+safe reference scored **946/518/18**. The conditionally-clean candidate
+`artifacts/conditionally_clean_branch_3_borrowed.qasm` scored **904/522/18**,
+SHA `70c32ab29c4fd7d9af61fcf21fb2d59ef0bece7fec3fe2c9193b80a379785a0c`, and
+passed a branch-specific exhaustive check with zero ancilla leakage. The
+candidate marks only that cofactor; its report must not be mistaken for a
+complete-logo verification.
+
+The workspace mechanism is therefore valid, but independent ESOP phase-cube
+lowering is far too deep. Do not integrate all branches yet. The next and
+only justified follow-up is to factor the residual truth table before quantum
+lowering; if that remains above the local cutoff, close this direction too.
