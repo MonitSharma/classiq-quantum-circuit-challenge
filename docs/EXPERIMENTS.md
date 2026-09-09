@@ -894,3 +894,10 @@ Safe post-processing of that genuinely new candidate reached a verified
 The exact artifact is `artifacts/disjoint_postprocessed_649.qasm`, SHA
 `d752c2972c16210417ef683e8ce2a5afd4501df2158829592e31dbd7911f1265`.
 Other bounded cleanup passes did not beat 649.
+
+A shared five-output y-loader diagnostic was also attempted. Its initial
+525-depth measurement was invalid because the live-feature RZ phase retained
+an x-dependent zero-branch phase; it was discarded before artifact creation.
+Adding the original parity-reference cancellation restored correctness but
+measured 541/949, with bounded cleanup at 536/947, so it does not beat the
+protected 531 circuit.

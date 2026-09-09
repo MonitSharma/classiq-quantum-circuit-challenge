@@ -207,6 +207,12 @@ best, `artifacts/disjoint_postprocessed_649.qasm`, at **649/727/18**. It was
 exhaustively verified with zero ancilla leakage and SHA
 `d752c2972c16210417ef683e8ce2a5afd4501df2158829592e31dbd7911f1265`.
 
+A five-output shared y-loader diagnostic briefly measured 525, but exhaustive
+verification rejected it because its live-feature RZ phase had an
+x-dependent zero-branch phase. The corrected parity-reference version was
+exact at 541/949 (536/947 after bounded cleanup), so it is not an improvement
+over the protected 531 artifact and no invalid QASM was retained.
+
 The 531 result is a useful submission-ready baseline, but it is not close to
 the historical leader at depth 291. The measurements point away from more
 seed tuning or global peephole rewriting: the current architecture pays three

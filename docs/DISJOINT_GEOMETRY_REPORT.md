@@ -151,3 +151,16 @@ on all 4096 inputs with zero ancilla leakage; its SHA-256 is
 
 This is the current best result in the disjoint branch, but it is still not a
 leaderboard-level or protected-531 improvement.
+
+## Shared five-output y-loader diagnostic
+
+A new attempt combined `R0,R1,R2,A_y,B_y` into one five-output y multiplexer
+and applied the rectangle x phase while those outputs were live. The first
+525-depth measurement was rejected: a live-feature RZ multiplexer has an
+x-dependent zero-branch phase and was not an exact oracle. It was not saved as
+a candidate.
+
+The corrected construction uses q17 as the parity reference, mirroring the
+original 531 phase cancellation. It is exact, but measured **541/949/18**
+(best of eight loader/phase seeds); bounded pytket cleanup reached **536/947**.
+It therefore does not improve the protected 531 result and is not a new best.
