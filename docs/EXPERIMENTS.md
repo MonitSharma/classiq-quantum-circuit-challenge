@@ -1511,6 +1511,11 @@ The search data is `artifacts/phase_rank_basis_search_development.json`.
 Basis choice changes cube sharing and CX count but did not change the depth
 regime, so this is a verified near-miss rather than a replacement for 524.
 
+An additional 100-step annealing variant was exhaustively checked at
+**1770/1243/18** (SHA
+`a75ec65fa04e2948171cf5e92e64b415cdcd1269a5ec07735196afad5e8beb7b`). It is
+deeper than the 1725/1225 basis result and is closed.
+
 ## Development branch grouped phase-sharing pilot (September 9, 2026)
 
 The 69 direct bilinear phase cubes contain 23 distinct y-side ESOP cubes.
