@@ -1185,3 +1185,9 @@ Exhaustive verification covered all 4096 inputs with maximum error
 `1.11e-13` and ancilla error `1.84e-14`, both below the verifier threshold.
 Five dense checks also passed with maximum error `3.98e-15`. This is the
 current local best and is packaged with a logical QMOD companion.
+
+Repeated pytket pass compositions (`FullPeepholeOptimise`, `CliffordSimp`,
+`RemoveRedundancies`, and `PeepholeOptimise2Q`) all remained at 524/950. A
+native `rz/sx/x/cx` intermediate-basis pipeline followed by exact U3/CX
+lowering reached at best 525/950, so it does not replace the accepted 524
+artifact.

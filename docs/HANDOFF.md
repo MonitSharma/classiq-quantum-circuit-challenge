@@ -542,3 +542,6 @@ It passed all 4096-input exhaustive checks and five dense full-support checks,
 with matching reports and a logical QMOD under `artifacts/524/`. The verifier
 reported numerical errors of `1.11e-13` exhaustive and `3.98e-15` dense, with
 ancilla leakage below `2e-14`. This supersedes the raw 527-depth serialization.
+Repeated pytket pass compositions and a bounded native `rz/sx/x/cx` intermediate
+basis screen did not improve 524/950; the latter reached 525/950 at best. The
+accepted 524 artifact remains unchanged.
