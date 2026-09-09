@@ -387,3 +387,15 @@ uncompute reduced the loader-only score to **1560/874/18** in
 independently statevector-verified with exact outputs, restored y and q17, and
 one shared global phase. This is not a complete logo oracle and has not been
 integrated into the protected 531 artifact.
+
+The subsequent direct-output schedule toggles feature accumulators in place for
+each shared cube and uses the other output wires as restored dirty ancillas.
+It measures **1478/823/18** in
+`artifacts/vector_input_basis_direct_target_loader.qasm`, improving the
+1560/874 relative-phase q17 loader. All 64 y inputs were statevector-verified
+for exact output bits, restored y and q17. It has four internal relative-phase
+classes and is therefore only a loader/inverse primitive, not a standalone
+oracle; it has not been integrated into the protected 531 circuit.
+The serialized loader followed by its exact inverse reduced to identity under
+U3/CX transpilation (depth 0 / CX 0), confirming cancellation of the internal
+relative phases.

@@ -186,3 +186,17 @@ All 64 y basis inputs were independently simulated: the y register and q17
 returned to their inputs/zero, the five feature outputs were exact, and every
 case had the same global phase. This remains a loader-only diagnostic and is
 not a replacement for the verified complete 531-depth oracle.
+
+## Direct output-accumulator continuation
+
+The strongest loader diagnostic so far toggles output accumulators directly
+for each shared ANF cube, using the other output wires as restored dirty
+ancillas for relative-phase MCX synthesis. It measures **1478 depth / 823 CX /
+18 qubits** at `artifacts/vector_input_basis_direct_target_loader.qasm`.
+All 64 y inputs were checked for exact feature bits, restored y and q17, and
+single-basis-state output. Four relative-phase classes remain, so the
+construction is intended only for exact inverse pairing around a diagonal
+phase operation; it is not itself a complete logo oracle.
+The serialized loader followed by its exact inverse reduced to identity under
+U3/CX transpilation (depth 0 / CX 0), confirming the intended phase
+cancellation.

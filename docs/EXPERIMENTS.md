@@ -984,3 +984,22 @@ state per input, exact feature bits, restored y and q17, and one shared global
 phase. This is still loader-only: it has not been composed with the x-phase
 oracle, and therefore is not a complete challenge score. The protected
 complete oracle remains `artifacts/531/full_mux_531.qasm` at 531/1020/18.
+
+## Direct output-accumulator loader (September 9, 2026)
+
+A more direct reversible schedule was tested after the dirty q17 loader. Each
+shared ANF cube toggles its feature output wires directly; the other output
+wires are restored dirty ancillas for the target MCX. This removes the q17
+compute/fanout/uncompute sandwich. The exact serialized candidate
+`artifacts/vector_input_basis_direct_target_loader.qasm` measures
+**1478/823/18**, better than the 1560/874 relative-phase loader.
+
+All 64 y inputs map to exact feature bits, restore y and q17, and pass the
+independent statevector check. The four observed relative-phase classes are
+intentional: this primitive is valid for a complete loader/inverse sandwich,
+not as a standalone phase oracle. It remains loader-only and has not been
+integrated into the protected 531 architecture.
+
+Composing the serialized loader with its exact inverse and transpiling the pair
+reduced to identity (depth 0 / CX 0), confirming cancellation of the internal
+relative phases in the intended sandwich.
