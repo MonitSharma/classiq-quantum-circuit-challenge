@@ -843,3 +843,14 @@ passed all 4096 product-phase checks with maximum error `1.10e-14` and zero
 ancilla leakage. This is phase-safe but slower than the 257/535 UCR batch;
 direct y ESOP phase cubes remain the bottleneck. A shared phase-gadget
 compiler is required before extending this formulation beyond three terms.
+
+The complete integration was then tested in `src/cofactor_full_oracle.py`,
+using groups `(0,1,2)`, `(3,4,5)`, `(6,7,8)`, and `(9,)`. The exact standalone
+logo candidate is `artifacts/cofactor_full_rank_phase_development.qasm` at
+**1685/1026/18**, SHA
+`ed6d6168559f968e29905468f2ef59ecc1bc30c740a2850c26c43916baaa1422`. It
+passed exhaustive verification over all 4096 logo inputs with maximum error
+`2.60e-14` and zero ancilla leakage; five dense full-support checks also
+passed with maximum error `4.89e-16`. This is the full-problem score, and it
+is decisively worse than the protected 524/950 oracle. The cofactor
+temporary-product route is closed in this form.

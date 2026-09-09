@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "indices": [
+        0,
+        1,
+        2
+      ],
+      "tree_score": 56,
+      "raw_depth": 54
+    },
+    {
+      "indices": [
+        3,
+        4,
+        5
+      ],
+      "tree_score": 63,
+      "raw_depth": 90
+    },
+    {
+      "indices": [
+        6,
+        7,
+        8
+      ],
+      "tree_score": 55,
+      "raw_depth": 52
+    },
+    {
+      "indices": [
+        9
+      ],
+      "tree_score": 34,
+      "raw_depth": 28
+    }
+  ],
+  "depth": 1685,
+  "cx": 1026,
+  "width": 18,
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/cofactor_full_rank_phase_development.qasm"
+}

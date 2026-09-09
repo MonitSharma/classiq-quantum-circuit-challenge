@@ -1594,3 +1594,21 @@ control, but it is worse than the existing 257/535 three-term UCR batch; the
 cofactor bank's 20-layer raw compute is outweighed by direct high-control y
 phase cubes. Scaling this exact formulation to all ten terms is therefore not
 justified without a shared phase-gadget compiler.
+
+## Complete cofactor phase integration (September 10, 2026)
+
+The three-term phase pilot was integrated across all ten rank terms using
+groups `(0,1,2)`, `(3,4,5)`, `(6,7,8)`, and `(9,)` in
+`src/cofactor_full_oracle.py`. Each group restores all six ancillas before the
+next group. The complete standalone candidate is
+`artifacts/cofactor_full_rank_phase_development.qasm` at **1685 depth / 1026
+CX / 18 qubits**, SHA
+`ed6d6168559f968e29905468f2ef59ecc1bc30c740a2850c26c43916baaa1422`.
+
+The exact serialized QASM passed exhaustive verification on all 4096 logo
+inputs with maximum error `2.60e-14`, zero ancilla leakage, and matching SHA.
+Five dense full-support states also passed with maximum error `4.89e-16`.
+This is the required full-problem score for the architecture, and it is far
+worse than the protected 524/950 oracle. The cofactor temporary-product route
+is therefore closed in this form; further work would need a fundamentally
+shared phase-gadget primitive rather than more term grouping.
