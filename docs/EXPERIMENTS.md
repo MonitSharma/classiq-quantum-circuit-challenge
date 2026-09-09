@@ -1040,3 +1040,10 @@ candidate to **540/945/18**, SHA
 `artifacts/full_mux_derive_v_tket.qasm`; the optimized file also passed all
 4096-input exhaustive verification. It remains worse than the protected
 531/1020/18.
+
+An additional 4,096-pair independent routing search (separate y and x seeds)
+found raw 542/921 and pytket **537/921**, with all 4096 inputs verified. The
+matching artifact is `artifacts/full_mux_derive_v_independent_best_tket.qasm`,
+SHA `5b1878c951599e594ef404d219c46f4a1fdd412ee50a516d6c16ff53e5f44146`.
+This closes the cheap routing-search opportunity while confirming a strong CX
+near-miss.

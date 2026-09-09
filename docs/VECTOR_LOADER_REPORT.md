@@ -209,6 +209,10 @@ sixth-lookup removal alone is therefore not sufficient.
 The matching optimized QASM is
 `artifacts/full_mux_derive_v_tket.qasm`, SHA
 `4baad4c76a20db8e92ea7e2f2f68a0d8d9041e570d33275903bf38e3c228e39b`.
+An independent 4,096-pair y/x routing search reached 537/921 after pytket;
+its verified artifact is
+`artifacts/full_mux_derive_v_independent_best_tket.qasm`, SHA
+`5b1878c951599e594ef404d219c46f4a1fdd412ee50a516d6c16ff53e5f44146`.
 
 ## Complete integration result
 

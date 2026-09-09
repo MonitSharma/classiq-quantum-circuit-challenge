@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/full_mux_derive_v_independent_best_tket.qasm",
+  "sha256": "5b1878c951599e594ef404d219c46f4a1fdd412ee50a516d6c16ff53e5f44146",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 537,
+  "cx_count": 921,
+  "max_error": 1.2842628108227117e-13,
+  "ancilla_error": 1.7679729864600616e-14,
+  "discarded_amplitude_bound": 1.2808055303988366e-13,
+  "peak_sparse_support": 32,
+  "elapsed_seconds": 6.015625953674316,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

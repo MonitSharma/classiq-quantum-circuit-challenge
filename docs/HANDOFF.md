@@ -422,3 +422,9 @@ the protected 531/1020/18. The matching optimized artifact is
 `artifacts/full_mux_derive_v_tket.qasm`, SHA
 `4baad4c76a20db8e92ea7e2f2f68a0d8d9041e570d33275903bf38e3c228e39b`.
 The sixth-lookup removal alone is closed.
+
+The follow-up independent y/x routing search tested 4,096 seed pairs and
+reached a verified **537/921/18** after pytket. Artifact:
+`artifacts/full_mux_derive_v_independent_best_tket.qasm`, SHA
+`5b1878c951599e594ef404d219c46f4a1fdd412ee50a516d6c16ff53e5f44146`.
+This is a strong CX near-miss but still does not improve depth 531.

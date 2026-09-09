@@ -48,7 +48,7 @@ def multiplexer(tables, outputs, controls, axis, seed=0):
     return q
 
 
-def build(seed=0):
+def build(seed=0, x_seed=None):
     a = truth(range(29, 54))
     b = truth(range(39, 44))
     lookup = multiplexer(R + [a, b], list(range(12, 17)),
@@ -66,7 +66,7 @@ def build(seed=0):
     q.cx(17, 15)
     q.cx(17, 16)
     left = multiplexer([xs, xb, xo], [15, 16, 17], list(range(6)),
-                       "z", seed + 10000)
+                       "z", seed + 10000 if x_seed is None else x_seed)
     q.compose(left, inplace=True)
     q.z(17)
     q.cx(17, 16)
