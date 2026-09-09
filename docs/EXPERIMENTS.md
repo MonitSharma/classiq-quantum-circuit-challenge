@@ -1012,3 +1012,18 @@ candidate was **3243/1965/18**, exhaustively verified on all 4096 inputs.
 The large regression shows that a loader-only score is not predictive here:
 the direct MCX schedule serializes heavily through dirty output targets and
 does not belong in the complete architecture.
+
+## Persistent output-frame loader (September 9, 2026)
+
+The output-frame scheduler from the research brief was implemented. It keeps
+`f = M p` for the five feature outputs, changes the invertible frame between
+cubes, and selects frames so each nonlinear cube toggles one physical target.
+The deterministic 2,000-sample-per-cube scheduler produced
+`artifacts/vector_output_frame_loader.qasm` at **871/553/18**, with all 64 y
+inputs verified and four internal relative-phase classes.
+
+Replacing the direct loader in the complete integration with this frame loader
+reduced the exact candidate to **2032/1425/18** across eight routing seeds;
+seed 1 was best and all 4096 inputs passed exhaustive verification. This is a
+substantial structural improvement over the 3243/1965 direct-target
+integration, but remains negative against the protected 531 oracle.

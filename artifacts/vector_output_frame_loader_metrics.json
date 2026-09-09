@@ -1,0 +1,25 @@
+{
+  "frame_seed": 1234,
+  "frame_samples_per_cube": 2000,
+  "input_matrix_rows": [
+    1,
+    2,
+    4,
+    40,
+    16,
+    48
+  ],
+  "input_offset": 16,
+  "depth": 871,
+  "cx": 553,
+  "width": 18,
+  "basis": [
+    "u3",
+    "cx"
+  ],
+  "qubits_initially_zero": false,
+  "classical_inputs_verified": 64,
+  "relative_phase_classes": 4,
+  "verification": "All 64 y inputs mapped to exact features with y and q17 restored.",
+  "note": "Loader-only persistent output-frame diagnostic; complete-oracle integration required."
+}

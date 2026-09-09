@@ -209,3 +209,16 @@ routing seeds were measured; the best serialized complete candidate was
 **3243 depth / 1965 CX / width 18** and passed exhaustive verification on all
 4096 inputs. This is a negative result: dirty direct-target loading is not a
 useful replacement for the six-output UCR stage in the complete oracle.
+
+## Persistent output-frame loader
+
+The output-frame scheduler maintains `f = M p` on the five feature wires and
+changes M between shared ANF cubes so each cube uses one physical target when
+possible. With deterministic seed 1234 and 2,000 frame completions sampled per
+cube, the serialized loader measured **871 depth / 553 CX / width 18** and
+passed all 64 y-input checks.
+
+The complete integration measured **2032 depth / 1425 CX / width 18** over
+eight routing seeds; seed 1 was best and exhaustive verification covered all
+4096 inputs with zero ancilla leakage. This is an improvement over the direct
+loader integration but not over the protected 531 oracle.

@@ -406,3 +406,11 @@ phase/correction logic. Eight seeds produced a best **3243/1965/18** candidate
 at `artifacts/vector_loader_oracle_candidate.qasm`; it passed exhaustive
 verification but is decisively worse. The loader-only improvement therefore
 does not transfer to the complete oracle and this integration route is closed.
+
+The persistent output-frame scheduler is the strongest vector result so far.
+It produces an exact loader at **871/553/18** and the complete integration at
+**2032/1425/18** (seed 1), with exhaustive 4096-input verification and zero
+ancilla leakage. This is substantially better than the direct-target
+integration but remains above 531; the next work must reduce the remaining
+phase/correction and loader serialization rather than repeat the same frame
+screen.

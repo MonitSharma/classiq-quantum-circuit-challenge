@@ -1,7 +1,7 @@
 """Integrate the direct five-output y loader into the full oracle skeleton.
 
 This is an apples-to-apples diagnostic against ``full_mux``.  It loads
-R0,R1,R2,A,B with the direct output-accumulator loader, derives V=R1 OR R2
+R0,R1,R2,A,B with the persistent output-frame loader, derives V=R1 OR R2
 into q17, then reuses the original left-shape and disk-correction logic.
 The relative-phase loader is deliberately checked by the complete oracle
 verifier; no loader-only phase assumption is accepted here.
@@ -15,7 +15,7 @@ from full_mux import multiplexer
 from mcz import phase_cube
 from pair_search import pair_circuit
 from radius import radius, truth
-from vector_input_basis_direct_target_loader import build as build_loader
+from vector_output_frame_loader import build as build_loader
 
 
 def build(seed: int = 0):
