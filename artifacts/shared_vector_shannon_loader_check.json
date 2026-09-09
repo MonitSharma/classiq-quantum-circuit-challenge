@@ -1,0 +1,9 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/shared_vector_shannon_loader.qasm",
+  "sha256": "58c3b25d121444438a6e21a40ccca9df3a9ca71519a45c93f7a42c6a2c47279d",
+  "inputs_checked": 64,
+  "features": ["R0", "R1", "R2", "A", "B"],
+  "scratch_q17_zero": true,
+  "input_bits_preserved": true,
+  "verification": "Sparse basis-state check of all 64 y inputs; exact output bits and clean q17."
+}

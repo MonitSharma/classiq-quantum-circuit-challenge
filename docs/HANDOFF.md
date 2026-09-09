@@ -606,3 +606,10 @@ raw results were 527/950 or 529/950, and every tied offset lowered to exactly
 `artifacts/complete_affine_offset_screen.json` and
 `artifacts/complete_affine_offset_post.json`. The complete affine frame is now
 bounded-closed; further progress requires a new reversible primitive.
+
+A new shared Shannon/Davio vector compiler was implemented for the five-output
+loader. It passed a sparse exact check over all 64 y inputs, but serialized to
+**2385/1336/18**, far worse than the 128-layer UCR loader. The source is
+`src/shared_vector_shannon.py`; the QASM, metrics, and 64-input check are under
+`artifacts/shared_vector_shannon_loader*`. This shared cofactor representation
+is not a viable complete-oracle primitive.

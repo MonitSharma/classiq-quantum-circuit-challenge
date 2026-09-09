@@ -1296,3 +1296,15 @@ pytket peephole lowering and every one remained **524/950/18**. The complete
 screens are `artifacts/complete_affine_offset_screen.json` and
 `artifacts/complete_affine_offset_post.json`. The affine output-frame family
 therefore provides no further improvement.
+
+## Shared Shannon vector loader (September 10, 2026)
+
+A new loader compiler recursively represented the five-output function as
+`f0 XOR y_i*(f0 XOR f1)`, selecting variable splits by an explicit shared
+cofactor cost model. It emitted common branches once and used the five output
+wires as targets. The exact serialized loader measured **2,385 depth / 1,336
+CX / 18 qubits**. A sparse basis-state check covered all 64 y inputs, exact
+`(R0,R1,R2,A,B)` output bits, preserved inputs, and clean q17. This is far
+worse than the 128-layer synchronized UCR loader, so the first genuinely
+shared Shannon compiler is closed as a loader primitive. Source and artifacts:
+`src/shared_vector_shannon.py` and `artifacts/shared_vector_shannon_loader*`.
