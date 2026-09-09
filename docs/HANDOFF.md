@@ -655,3 +655,20 @@ on all 4096 inputs at **781/1318/18**, SHA
 `0ccd69c5bd92478aa9df35d27546f0839e3e7894242b1545609fd1da5a5adea4`, with
 zero ancilla leakage. It improves the 969-depth pilot but does not improve
 the protected 524/950 circuit, so this encoding is also closed.
+
+## Development branch joint-rank feasibility diagnostic (September 9, 2026)
+
+The proposed three-term rank batch was tested against the exact XAG pebble
+planner. No pair or triple from `rank_terms`, `pair_terms`, or
+`rank_mc_pareto_terms` was jointly feasible with three live ancillas on each
+side. At a four-ancilla limit, many pairs were feasible, but no triples were
+feasible. The reproducible scan is `src/joint_rank_feasibility.py`, with output
+in `artifacts/joint_rank_feasibility_development.json`.
+
+A bounded elementary rank-basis mutation screen tested 40 mutated bases and
+480 sampled pairs under the three-ancilla limit, finding no feasible pair. Its
+diagnostic output is `artifacts/joint_rank_basis_search_development.json`.
+This is not an impossibility proof because it uses the existing formula/XAG
+representation and a bounded planner state budget. It does show that the
+original rank basis cannot directly support the planned 3+3 prototype; future
+work needs a new multi-output or phase/state synthesis primitive.

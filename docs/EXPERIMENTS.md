@@ -122,6 +122,25 @@ therefore also negative under the six-ancilla budget.
 
 Numbers below are historical observations unless explicitly marked verified. Most experimental artifacts remain in `artifacts/` for investigation; their existence does not establish validity. See the handoff for the four trusted milestones and the compiler-initialization bug.
 
+## Development branch joint-rank feasibility diagnostic (September 9, 2026)
+
+The proposed three-term, 3+3-ancilla rank batch was tested against the
+repository's exact XAG pebble planner. No pair or triple from any of
+`rank_terms`, `pair_terms`, or `rank_mc_pareto_terms` was jointly feasible with
+three live ancillas on each side. At a four-ancilla limit, many pairs were
+feasible, but no triples were feasible. The reproducible scan is
+`src/joint_rank_feasibility.py`, with output in
+`artifacts/joint_rank_feasibility_development.json`.
+
+A bounded elementary rank-basis mutation screen then tested 40 mutated bases
+and 480 sampled pairs under the three-ancilla limit. It found no feasible pair;
+the diagnostic output is `artifacts/joint_rank_basis_search_development.json`.
+This is not an impossibility proof: the screen uses the existing formula/XAG
+representation and a bounded planner state budget. It does establish that the
+original basis cannot be passed directly to the proposed 3+3 prototype, so a
+new multi-output or phase/state synthesis primitive is required before a full
+rank-batching oracle is attempted.
+
 ## Boolean decomposition and reversible logic
 
 | Files | Approach | Outcome / limitation |
