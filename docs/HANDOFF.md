@@ -577,3 +577,11 @@ The sparse-Walsh UCR experiment is also closed. It was exact over all 4096
 inputs and reduced CX to 949, but its variable-length paths serialized the
 outputs to **563 depth / 949 CX / 18 qubits**. Retain it only as a negative
 primitive result; the dense synchronized UCR remains superior at 524/950.
+
+An early-lifetime schedule was also tested: after the left-shape phase it
+uncomputed `A` and `B` with an interleaved two-output inverse UCR before the
+radius comparator, then cleared `R0,R1,R2,V` afterward. The exact candidate is
+**653/1010/18**, with all 4096 inputs verified and zero ancilla leakage, at
+`artifacts/early_uncompute_ab.qasm` (SHA
+`b179123b316a18964d911fb894674656c36c811ded6151d4a9975b0324584a25`). This
+does not improve the protected 524/950 result.

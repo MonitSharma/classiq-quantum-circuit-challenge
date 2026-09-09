@@ -1250,3 +1250,16 @@ including `FullPeepholeOptimise`, `CliffordSimp`, `ContextSimp`,
 `RemoveRedundancies`, and `OptimisePhaseGadgets` in both orderings, all
 lowered to the same **524 / 950 / 18** score. No post-processing improvement
 was found.
+
+## Early feature uncompute schedule (September 10, 2026)
+
+The complete raw full-mux schedule was rearranged so that `A` and `B` were
+uncomputed immediately after the left-shape phase, before the radius fold and
+comparator. Their two-output inverse UCR was interleaved to preserve the
+parallel structure, and the remaining `R0,R1,R2,V` inverse was delayed until
+after the comparator. The best of eight seeds was **653 depth / 1,010 CX / 18
+qubits**, at `artifacts/early_uncompute_ab.qasm` (SHA
+`b179123b316a18964d911fb894674656c36c811ded6151d4a9975b0324584a25`).
+Exhaustive verification passed all 4096 inputs with zero ancilla leakage. The
+extra boundary and partial-UCR serialization outweigh the possible overlap,
+so feature-lifetime scheduling is not an improvement over 524/950.
