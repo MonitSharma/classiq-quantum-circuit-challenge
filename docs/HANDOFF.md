@@ -956,3 +956,15 @@ search returned no small candidate. Keep the verified artifacts as evidence,
 but do not spend further optimization time on this representation. The
 protected fallback remains `artifacts/524/full_mux_feature_linear_tket_524.qasm`
 at **524/950/18**.
+
+## Closed direction: finite-size Lupanov/rich-width branch (September 10, 2026)
+
+The bounded `src/lupanov_branch.py` pilot instantiated the smallest directly
+valid rich-width parameterization for the eight-variable branch (`q=1,p=7`)
+with ten workspace wires. After compute--Z--uncompute, the exact candidate
+scored **20432/11260/18**, SHA
+`f91ad1511021a2f045be32df47b45a7ba127fa5eef414fb4e72b1e6bcbbed80a`, and
+passed all 256 residual-input checks. This is far above the stop threshold;
+close the finite-size Lupanov implementation for this challenge. The result is
+a finite-constant diagnostic, not a lower-bound proof against the paper's
+asymptotic construction.

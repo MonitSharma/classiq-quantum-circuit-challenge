@@ -1798,3 +1798,27 @@ not a lower-bound proof, but it does not justify more time on this lowering
 architecture. Preserve the diagnostics as a valid negative result and do not
 integrate all selector branches. The protected baseline remains
 `artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524/950/18**.
+
+## Finite-size Lupanov branch pilot (September 10, 2026)
+
+The proposed rich-width experiment was implemented in
+`src/lupanov_branch.py` using the literal finite-size `q=1`, `p=7` instance
+of the Nie--Zi/Lupanov decomposition. The resource audit matters: with only
+10 effective workspace wires, the explicit rich-function bound already rules
+out `q=2`; the smallest directly valid parameterization therefore iterates
+128 seven-bit prefix cofactors. The Boolean output was converted to the
+competition phase oracle by compute--Z--uncompute.
+
+The exact serialized candidate
+`artifacts/lupanov_branch_q1.qasm` measures **20432 depth / 11260 CX / 18
+qubits**, SHA
+`f91ad1511021a2f045be32df47b45a7ba127fa5eef414fb4e72b1e6bcbbed80a`. Its
+local eight-input exhaustive verifier checked all 256 residual inputs with
+maximum error `1.61e-13` and ancilla error `5.78e-15`.
+
+This is a decisive negative finite-size result under the proposed cutoff. It
+does not contradict the asymptotic theorem or prove that every possible
+constant-optimized implementation is large; it shows that the literal
+rich-width construction does not instantiate competitively at `n=8,m=10`.
+Do not integrate the nine branches. The protected complete baseline remains
+`artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524/950/18**.

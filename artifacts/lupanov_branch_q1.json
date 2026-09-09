@@ -1,0 +1,13 @@
+{
+  "q": 1,
+  "p": 7,
+  "workspace": 10,
+  "depth": 20432,
+  "cx_count": 11260,
+  "sha256": "f91ad1511021a2f045be32df47b45a7ba127fa5eef414fb4e72b1e6bcbbed80a",
+  "verification": {
+    "max_error": 1.611539884212743e-13,
+    "ancilla_error": 5.778337598948605e-15,
+    "inputs_checked": 256
+  }
+}
