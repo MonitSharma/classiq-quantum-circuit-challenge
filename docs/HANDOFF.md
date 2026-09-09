@@ -757,6 +757,18 @@ verifier on all 4096 inputs with zero ancilla leakage. SHA-256:
 Unshared direct bilinear phase expansion is therefore closed; future work
 must share phase cubes globally or use a different multi-output representation.
 
+The exact-MCZ serialization of the same 69-cube phase-only construction was
+also checked at **1734/1235/18**, SHA
+`af295b60cd6f48c8eebde5fd05d6539556bbdb40f14c547b13beeda727759f32`; it
+passed all 4096 inputs but is slightly deeper than 1725/1235 and is closed.
+
+The same global cube-sharing recursion was rerun with `mcz.best_mcz` replacing
+the older phase-cube primitive. The best of eight seeds was **1734/1235/18**
+and passed complete exhaustive verification with zero ancilla leakage. SHA:
+`af295b60cd6f48c8eebde5fd05d6539556bbdb40f14c547b13beeda727759f32`.
+This is slightly worse than the 1725-depth phase-only result; MCZ helper
+selection is not the missing improvement.
+
 ## Phase/state-duality applicability review (September 9, 2026)
 
 The referenced Amy--Ross phase/state-duality paper studies both relative-phase

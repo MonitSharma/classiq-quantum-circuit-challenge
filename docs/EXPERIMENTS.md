@@ -1485,6 +1485,20 @@ This closes unshared direct bilinear phase expansion. The remaining
 opportunity is global sharing of phase cubes or a different multi-output
 representation; per-term phase synthesis alone is insufficient.
 
+An exact-MCZ serialization of the same 69-cube phase-only construction was
+also checked at **1734/1235/18** (SHA
+`af295b60cd6f48c8eebde5fd05d6539556bbdb40f14c547b13beeda727759f32`). It
+passed all 4096 inputs but is slightly deeper than the 1725/1235 version, so
+the MCZ replacement is closed as well.
+
+The same global cube-sharing recursion was rerun with `mcz.best_mcz` replacing
+the older phase-cube primitive. The best of eight seeds was **1734 depth /
+1235 CX / 18 qubits**, and it passed complete exhaustive verification with
+zero ancilla leakage. SHA-256:
+`af295b60cd6f48c8eebde5fd05d6539556bbdb40f14c547b13beeda727759f32`.
+This is slightly worse than the 1725-depth phase-only result, so MCZ helper
+selection is not the missing improvement.
+
 ## Standalone retained-product verification (September 9, 2026)
 
 Two separately generated term-0 retained-product diagnostics were checked
