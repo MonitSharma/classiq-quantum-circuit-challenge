@@ -1098,6 +1098,40 @@ best known y/x routing seeds. The best candidate was **539/918/18**, and it
 passed exhaustive verification; it remains worse than the 530 full-mux
 candidate. This branch is closed.
 
+## Affine six-feature loader encoding (September 10, 2026)
+
+The six loaded features `(R0,R1,R2,A,B,V)` were jointly changed by an
+invertible GF(2) output encoding before the y multiplexer. The circuit decodes
+the features before the existing left-phase/comparator logic and reverses that
+decode before applying the inverse loader. This preserves the original
+compute/phase/uncompute semantics; the encoded loader is not treated as an
+independent oracle.
+
+The best bounded screen used matrix rows `(1,6,2,8,16,32)`, i.e. one shear
+between the first two radius features, with the established physical feature
+assignment `R0->q12, R1->q15, R2->q14, A->q16, B->q17, V->q13`. The exact
+serialized candidate is:
+
+| candidate | depth | CX | width |
+|---|---:|---:|---:|
+| previous verified best | 530 | 1020 | 18 |
+| affine six-feature encoding | **529** | 1036 | **18** |
+
+`artifacts/529/full_mux_feature_linear_529.qasm` passed exhaustive checking of
+all 4096 clean-ancilla basis inputs: maximum error `1.59e-14`, zero ancilla
+leakage, and matching SHA-256
+`9d07529b678b046085fa5c0a32b4774e04cb6ba3650e779e4200609e133bc477`.
+Five dense full-support checks also passed with maximum error `6.38e-16`.
+The logical companion is
+`artifacts/529/full_mux_feature_linear_529.qmod`; as with the earlier QMODs,
+it describes the logical oracle and is not a gate-for-gate serialization of
+the optimized QASM.
+
+This is a genuine local improvement in the primary challenge metric, but it
+is still far from the observed leaderboard range. The source is
+`src/feature_linear_encoding.py`. The extra CX cost is accepted because depth
+is the challenge's primary ranking field.
+
 An additional bounded schedule test removed the multiplexer implementation's
 cyclic-order restriction. It evaluated 101 complete candidates using arbitrary
 independent permutations of the six controls for every y-loader output and

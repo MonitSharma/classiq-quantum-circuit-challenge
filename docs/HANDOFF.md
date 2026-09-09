@@ -469,6 +469,27 @@ feature assignments using its best known y/x routing seeds. Its best verified
 result was **539/918/18**, so assignment remapping does not rescue that
 branch. The next work should attack the UCR/multiplexer primitive itself.
 
+## Verified 529-depth affine feature encoding (September 10, 2026)
+
+An invertible GF(2) encoding of all six y features was tested in the complete
+oracle, with exact decode before the existing phase logic and reverse decode
+before loader uncompute. Matrix rows `(1,6,2,8,16,32)` produced the first
+verified improvement after the 530-depth feature-wire search:
+
+```text
+depth 529 / CX 1036 / width 18
+SHA 9d07529b678b046085fa5c0a32b4774e04cb6ba3650e779e4200609e133bc477
+```
+
+The QASM is `artifacts/529/full_mux_feature_linear_529.qasm`, with matching
+exhaustive and dense reports and a logical QMOD companion. Exhaustive
+verification covered all 4096 inputs with zero ancilla leakage; the dense
+verification covered five arbitrary full-support states. This supersedes the
+530-depth circuit as the local best, but does not approach rank 1. The source
+is `src/feature_linear_encoding.py`; the next optimization should search
+structured affine encodings and, more importantly, seek a primitive that
+removes the three UCR load/phase/unload stages.
+
 An independent-control-order screen then tested 101 complete candidates with
 arbitrary six-bit permutations for each y-loader and x-phase output, rather
 than the cyclic orders used by `multiplexer()`. The winning feature assignment
