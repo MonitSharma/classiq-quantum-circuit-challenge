@@ -1,17 +1,17 @@
 # Scalar closure and global endpoint experiment
 
-This run was performed on `main` at `8f6740a`. The protected 531-depth QASM
+This run was performed on current `main`. The protected 531-depth QASM
 was not modified. All complete candidates below use serialized `u3`/`cx`
 QASM, width 18, and `qubits_initially_zero=False` during scoring.
 
 ## Results
 
 The best verified rank-family result is now
-`artifacts/756/pair_boundary_756.qasm`: **depth 756 / 747 CX / width 18**.
-It is the existing `pair_terms` pair compiler with a boundary-aware order
-`[9,7,1,2,0,6,3,8,4,5]`. Exhaustive verification checked all 4096 inputs,
+`artifacts/753/pair_boundary_753.qasm`: **depth 753 / 742 CX / width 18**.
+It is the existing `pair_terms` pair compiler with a local-search order
+`[9,7,1,2,5,4,8,0,6,3]`. Exhaustive verification checked all 4096 inputs,
 with zero ancilla leakage; QASM SHA-256 is
-`fce0c6f5067d659ada0aac47bfbfe7bd2f1e514c1402a774f898f72fb39e0657`.
+`df0be59c2b41a2b5138578bdc321555fea46a13628289429198ee0b2c2992a89`.
 
 The protected overall best remains `artifacts/531/full_mux_531.qasm` at
 531 / 1020 / 18, SHA
@@ -32,8 +32,14 @@ The basis-matched portfolio closure tested 12/64 substitutions for
 `pair_terms`, 11/54 for `rank_terms`, and 13/75 for
 `rank_mc_pareto_terms` (one-term/two-term counts). The best substitution was
 775 / 749 on `pair_terms`; the best two-term Pareto substitution was 853 / 795.
-Neither beat the boundary-ordered 756 result. A 50-order control was also
+Neither beat the boundary-ordered result. A 50-order control was also
 included for each basis.
+
+The local-order neighborhood evaluated 855 unique permutations and improved
+756 to 753. All 720 ordered triples were measured for second-order context;
+its greedy rollout scored 775/744 and did not improve the local-search result.
+For the 753 order, raw high-level global compilation scored 755/742, versus
+753/742 for independently lowered blocks, so raw composition did not help.
 
 ## Global 12-edge identity
 
@@ -73,10 +79,15 @@ factorization is exactly reconstructed over all 4096 inputs and compiled to a
 verified **854 / 789 / 18** candidate. The factorization therefore did not
 improve the direct 12-edge construction.
 
+Selective star merges were negative: shared-x scored 832/785, shared-y
+834/822, and both stars 852/797, versus 819/773 without merging. Simple
+critical-path accounting shows the 753 circuit is dominated by ancilla wires
+q16/q15/q14/q13/q17/q12, with 366/313/210/204/195/181 touched operations.
+
 ## Decision
 
 The cheap scalar neighborhood is not completely useless: ordering alone found
-a verified 756-depth improvement. However, scalar block substitution remains
+a verified 753-depth improvement. However, scalar block substitution remains
 far from 531 and cannot plausibly approach the leaderboard's approximately
 291-depth range.
 
@@ -98,6 +109,11 @@ Generated artifacts:
 - `src/global_endpoint_rank_oracle.py`
 - `src/anchored_rank_search.py`
 - `src/rank_boundary_search.py`
+- `src/pair_756_local_search.py`
+- `src/pair_triple_boundary_search.py`
+- `src/pair_raw_global_comparison.py`
+- `src/global_endpoint_star_search.py`
+- `src/current_critical_path.py`
 - `artifacts/global_12_edge_endpoints.json`
 - `artifacts/global_12_edge_identity_check.json`
 - `artifacts/global_endpoint_inventory.json`
@@ -106,3 +122,4 @@ Generated artifacts:
 - `artifacts/global_endpoint_pair_best.qasm`
 - `artifacts/global_endpoint_rank_best.qasm`
 - `artifacts/756/pair_boundary_756.qasm`
+- `artifacts/753/pair_boundary_753.qasm`
