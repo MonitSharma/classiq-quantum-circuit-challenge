@@ -31,24 +31,24 @@ def enumerate_models(target, count, max_models=1, timeout_ms=200):
 
 def main():
     cache=json.loads(Path("artifacts/minmc_factor_cache.json").read_text())["functions"]
-    families={"pair_terms":json.loads(Path("artifacts/pair_terms.json").read_text()),"endpoints":[(x,y) for x,y in []]}
     endpoint=json.loads(Path("artifacts/global_endpoint_inventory.json").read_text())
-    families["endpoints"]=[(x["truth_table"],y["truth_table"]) for x in endpoint["x"] for y in []]
     targets={}
     pair=json.loads(Path("artifacts/pair_terms.json").read_text())
     for x,y in pair:targets[str(x)]=x;targets[str(y)]=y
     for side in ("x","y"):
         for row in endpoint[side]:targets[str(row["truth_table"])]=row["truth_table"]
-    # This is a bounded pilot; resume by increasing this cap after the first
-    # completed bank rather than letting one invocation exceed its time box.
-    targets=dict(list(targets.items())[:12])
-    result={};started=time.time()
+    output=Path("artifacts/xag_model_bank.json")
+    previous=json.loads(output.read_text()).get("functions",{}) if output.exists() else {}
+    result=dict(previous);started=time.time();batch=0
     for key,target in targets.items():
+        if key in result:continue
+        if batch>=12:break
         spec=cache.get(key);k=int(spec["and_count"]) if spec else 5;entry={"target":target,"known_and_count":k,"models":[]}
         for count in (k,k+1):
-            models,status=enumerate_models(target,count,max_models=2,timeout_ms=750)
+            models,status=enumerate_models(target,count,max_models=1,timeout_ms=200)
             entry["models"].append({"and_count":count,"status":status,"xags":models})
         result[key]=entry
+        batch+=1
     predicate_users=defaultdict(set)
     for key,entry in result.items():
         for batch in entry["models"]:
@@ -61,7 +61,7 @@ def main():
                     signals.append(left&right)
                 for signal in signals[13:]:predicate_users[signal].add(key)
     shared={str(tt):sorted(users) for tt,users in predicate_users.items() if len(users)>1}
-    Path("artifacts/xag_model_bank.json").write_text(json.dumps({"elapsed_seconds":time.time()-started,"functions":result},indent=2))
+    Path("artifacts/xag_model_bank.json").write_text(json.dumps({"elapsed_seconds":time.time()-started,"functions":result,"processed_this_batch":batch,"total_targets":len(targets)},indent=2))
     Path("artifacts/xag_shared_predicates.json").write_text(json.dumps({"shared_predicates":shared,"count":len(shared)},indent=2))
     print(json.dumps({"functions":len(result),"shared_predicates":len(shared),"elapsed_seconds":time.time()-started},indent=2))
 if __name__=="__main__":main()

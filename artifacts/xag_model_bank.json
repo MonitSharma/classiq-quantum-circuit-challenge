@@ -1,5 +1,5 @@
 {
-  "elapsed_seconds": 19.19551682472229,
+  "elapsed_seconds": 1.7152907848358154,
   "functions": {
     "132199093370880": {
       "target": 132199093370880,
@@ -485,6 +485,557 @@
           "xags": []
         }
       ]
+    },
+    "279223176896970752": {
+      "target": 279223176896970752,
+      "known_and_count": 5,
+      "models": [
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 6,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "264398186741760": {
+      "target": 264398186741760,
+      "known_and_count": 4,
+      "models": [
+        {
+          "and_count": 4,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "871446527896190976": {
+      "target": 871446527896190976,
+      "known_and_count": 4,
+      "models": [
+        {
+          "and_count": 4,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "70437463654400": {
+      "target": 70437463654400,
+      "known_and_count": 4,
+      "models": [
+        {
+          "and_count": 4,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "2025493932409880576": {
+      "target": 2025493932409880576,
+      "known_and_count": 4,
+      "models": [
+        {
+          "and_count": 4,
+          "status": "sat_limit",
+          "xags": [
+            {
+              "and_nodes": [
+                {
+                  "left": [
+                    1,
+                    2
+                  ],
+                  "right": [
+                    2,
+                    5
+                  ]
+                },
+                {
+                  "left": [
+                    1,
+                    2,
+                    3,
+                    5
+                  ],
+                  "right": [
+                    0,
+                    1,
+                    7
+                  ]
+                },
+                {
+                  "left": [
+                    5,
+                    8
+                  ],
+                  "right": [
+                    1,
+                    2,
+                    3,
+                    6
+                  ]
+                },
+                {
+                  "left": [
+                    1,
+                    7,
+                    8,
+                    9
+                  ],
+                  "right": [
+                    1,
+                    2,
+                    3,
+                    7,
+                    9
+                  ]
+                }
+              ],
+              "output": [
+                1,
+                2,
+                3,
+                7,
+                9,
+                10
+              ],
+              "and_count": 4
+            }
+          ]
+        },
+        {
+          "and_count": 5,
+          "status": "sat_limit",
+          "xags": [
+            {
+              "and_nodes": [
+                {
+                  "left": [
+                    3,
+                    5
+                  ],
+                  "right": [
+                    1,
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "left": [
+                    5
+                  ],
+                  "right": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "left": [
+                    0,
+                    2,
+                    3,
+                    5,
+                    6,
+                    7
+                  ],
+                  "right": [
+                    1,
+                    3,
+                    6
+                  ]
+                },
+                {
+                  "left": [
+                    0,
+                    6,
+                    8
+                  ],
+                  "right": [
+                    8
+                  ]
+                },
+                {
+                  "left": [
+                    0,
+                    1,
+                    3,
+                    6,
+                    9
+                  ],
+                  "right": [
+                    0,
+                    2,
+                    3,
+                    5,
+                    6,
+                    10
+                  ]
+                }
+              ],
+              "output": [
+                0,
+                2,
+                3,
+                5,
+                6,
+                11
+              ],
+              "and_count": 5
+            }
+          ]
+        }
+      ]
+    },
+    "53188874993664": {
+      "target": 53188874993664,
+      "known_and_count": 4,
+      "models": [
+        {
+          "and_count": 4,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "4611686018293170176": {
+      "target": 4611686018293170176,
+      "known_and_count": 5,
+      "models": [
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 6,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "17042430230528": {
+      "target": 17042430230528,
+      "known_and_count": 5,
+      "models": [
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 6,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "140746078289920": {
+      "target": 140746078289920,
+      "known_and_count": 4,
+      "models": [
+        {
+          "and_count": 4,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 5,
+          "status": "sat_limit",
+          "xags": [
+            {
+              "and_nodes": [
+                {
+                  "left": [
+                    2,
+                    4,
+                    5,
+                    6
+                  ],
+                  "right": [
+                    3,
+                    4,
+                    6
+                  ]
+                },
+                {
+                  "left": [
+                    0,
+                    1,
+                    4
+                  ],
+                  "right": [
+                    1,
+                    2,
+                    4,
+                    5
+                  ]
+                },
+                {
+                  "left": [
+                    0,
+                    2
+                  ],
+                  "right": [
+                    0,
+                    1,
+                    2,
+                    4,
+                    5
+                  ]
+                },
+                {
+                  "left": [
+                    1,
+                    5
+                  ],
+                  "right": [
+                    0,
+                    1,
+                    5,
+                    7
+                  ]
+                },
+                {
+                  "left": [
+                    2,
+                    8,
+                    9
+                  ],
+                  "right": [
+                    5,
+                    10
+                  ]
+                }
+              ],
+              "output": [
+                5,
+                10,
+                11
+              ],
+              "and_count": 5
+            }
+          ]
+        }
+      ]
+    },
+    "922337203685477580": {
+      "target": 922337203685477580,
+      "known_and_count": 5,
+      "models": [
+        {
+          "and_count": 5,
+          "status": "sat_limit",
+          "xags": [
+            {
+              "and_nodes": [
+                {
+                  "left": [
+                    0,
+                    4,
+                    5
+                  ],
+                  "right": [
+                    0,
+                    4,
+                    6
+                  ]
+                },
+                {
+                  "left": [
+                    3
+                  ],
+                  "right": [
+                    0,
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "left": [
+                    2,
+                    3,
+                    5,
+                    6,
+                    8
+                  ],
+                  "right": [
+                    0,
+                    5,
+                    8
+                  ]
+                },
+                {
+                  "left": [
+                    2,
+                    3,
+                    6,
+                    8,
+                    9
+                  ],
+                  "right": [
+                    6,
+                    7,
+                    8,
+                    9
+                  ]
+                },
+                {
+                  "left": [
+                    0,
+                    2,
+                    5,
+                    8,
+                    10
+                  ],
+                  "right": [
+                    0,
+                    8,
+                    10
+                  ]
+                }
+              ],
+              "output": [
+                0,
+                5,
+                11
+              ],
+              "and_count": 5
+            }
+          ]
+        },
+        {
+          "and_count": 6,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "1154047404513689600": {
+      "target": 1154047404513689600,
+      "known_and_count": 4,
+      "models": [
+        {
+          "and_count": 4,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "3689348814741910320": {
+      "target": 3689348814741910320,
+      "known_and_count": 5,
+      "models": [
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 6,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "67112960": {
+      "target": 67112960,
+      "known_and_count": 4,
+      "models": [
+        {
+          "and_count": 4,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "123626338648064": {
+      "target": 123626338648064,
+      "known_and_count": 4,
+      "models": [
+        {
+          "and_count": 4,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "17311836971370283008": {
+      "target": 17311836971370283008,
+      "known_and_count": 5,
+      "models": [
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 6,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
+    },
+    "17329834319396470784": {
+      "target": 17329834319396470784,
+      "known_and_count": 5,
+      "models": [
+        {
+          "and_count": 5,
+          "status": "unknown",
+          "xags": []
+        },
+        {
+          "and_count": 6,
+          "status": "unknown",
+          "xags": []
+        }
+      ]
     }
-  }
+  },
+  "processed_this_batch": {
+    "and_count": 6,
+    "status": "unknown",
+    "xags": []
+  },
+  "total_targets": 28
 }

@@ -135,8 +135,15 @@ part of the transition invariant.
 The time-limited semantic XAG model-bank pilot enumerated one model at k and
 one at k+1 for 12 representative functions, independently verified every
 returned model, and found zero predicates reused across different outputs.
-This is a bounded negative pilot only; the full 42-function pair/endpoint
-bank and union-selection compiler remain future work.
+This is a bounded negative pilot only; the initial run covered 12 functions.
+
+The resumable bank has since covered all 28 unique pair/endpoint functions
+present after deduplication. The k/k+1 queries returned UNKNOWN for many
+functions under the short timeout, so only successfully returned models were
+eligible for union selection. Among those models, pair-x, pair-y, endpoint-x,
+and endpoint-y each showed 0% semantic union saving. This is evidence against
+easy sharing in the sampled model space, not a proof against a longer-timeout
+joint XAG search.
 
 Generated artifacts:
 

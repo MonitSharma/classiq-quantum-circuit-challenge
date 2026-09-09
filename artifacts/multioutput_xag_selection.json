@@ -1,0 +1,75 @@
+{
+  "pair_x": {
+    "outputs": 10,
+    "selected_models": 3,
+    "missing_models": [
+      "134217724",
+      "279223176896970752",
+      "871446527896190976",
+      "105604655874048",
+      "281479271677952",
+      "281466386776064",
+      "4611686018293170176"
+    ],
+    "independent_and_nodes": 12,
+    "union_and_nodes": 12,
+    "absolute_saving": 0,
+    "percent_saving": 0.0
+  },
+  "pair_y": {
+    "outputs": 10,
+    "selected_models": 1,
+    "missing_models": [
+      "184576000",
+      "4063232",
+      "53188874993664",
+      "251688960",
+      "268433408",
+      "264398186741760",
+      "17042430230528",
+      "18014397972611072",
+      "70437463654400"
+    ],
+    "independent_and_nodes": 5,
+    "union_and_nodes": 5,
+    "absolute_saving": 0,
+    "percent_saving": 0.0
+  },
+  "endpoint_x": {
+    "outputs": 11,
+    "selected_models": 4,
+    "missing_models": [
+      "3689348814741910320",
+      "134217724",
+      "279223176896970752",
+      "105604655874048",
+      "281479271677952",
+      "281466386776064",
+      "1154047404513689600"
+    ],
+    "independent_and_nodes": 18,
+    "union_and_nodes": 18,
+    "absolute_saving": 0,
+    "percent_saving": 0.0
+  },
+  "endpoint_y": {
+    "outputs": 11,
+    "selected_models": 1,
+    "missing_models": [
+      "17311836971370283008",
+      "4063232",
+      "67112960",
+      "251688960",
+      "17329834319396470784",
+      "268433408",
+      "123626338648064",
+      "17042430230528",
+      "264398186741760",
+      "70437463654400"
+    ],
+    "independent_and_nodes": 5,
+    "union_and_nodes": 5,
+    "absolute_saving": 0,
+    "percent_saving": 0.0
+  }
+}
