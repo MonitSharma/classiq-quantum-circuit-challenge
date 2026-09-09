@@ -150,12 +150,13 @@ cross-block scheduling must be rebuilt jointly. A clean-ancilla register
 assignment search then found a verified depth improvement without changing
 the Boolean decomposition: independently permuting q12--q17 at each pair
 boundary reduced the fixed-order oracle from 753/742 to **739/743** depth/CX
-(width 18). The candidate is `artifacts/739/ancilla_assignment_739.qasm`;
-exhaustive verification covers all 4096 basis inputs with zero ancilla
-leakage. This is now the verified rank-family best, while the 531/1020/18
-circuit remains the overall depth record in the repository. The next target
-remains shared persistent frames or a joint compiler that can reduce
-serialization below 739.
+(width 18). A deterministic single-swap descent from that assignment then
+reached **732/729** depth/CX. The candidate is
+`artifacts/732/ancilla_assignment_732.qasm`; exhaustive verification covers
+all 4096 basis inputs with zero ancilla leakage. This is now the verified
+rank-family best, while the 531/1020/18 circuit remains the overall depth
+record in the repository. The next target remains shared persistent frames
+or a joint compiler that can reduce serialization below 732.
 
 The time-limited semantic XAG model-bank pilot enumerated one model at k and
 one at k+1 for 12 representative functions, independently verified every
@@ -212,3 +213,5 @@ Generated artifacts:
 - `artifacts/persistent_pair_9.qasm`
 - `src/ancilla_assignment_search.py`
 - `artifacts/739/ancilla_assignment_739.qasm`
+- `src/ancilla_assignment_descent.py`
+- `artifacts/732/ancilla_assignment_732.qasm`
