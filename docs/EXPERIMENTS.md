@@ -1941,3 +1941,30 @@ request and one bounded whole-low-rank request did not return fresh QASM
 exports; existing QASM files were not counted as results. No native score
 improvement exists. Close Classiq-native architectural synthesis under the
 agreed stop rule and retain 524/950 as the protected baseline.
+## Consolidated method index and final closure (September 10, 2026)
+
+This index records the methods attempted so future work does not repeat
+compiler-research loops without a complete-circuit path:
+
+| Method family | Result | Disposition |
+|---|---|---|
+| Six-feature UCR load/phase/unload | Protected **524 depth / 950 CX / 18 qubits**; q16 touched 405 gates, including 206 CXs, with 394 critical gates | **Closed architecture** |
+| Pytket, PyZX, peephole, rebasing, scheduling, seed/order/permutation screens | Only 524-to-530-scale movement; no hundreds-layer reduction | Closed |
+| Disjoint/shared geometry and rectangle/disk decompositions | Best complete result about **708/752**; interleaving and pair-bank alternatives worse | Closed |
+| Rank/cofactor/product banks and HP24 lowering | Correct candidates remained far above baseline; complete cofactor integration was not competitive | Closed |
+| Streaming, persistent frames, phase-aware pebbling, retained products | Correct lifetime machinery, but depth remained far above target | Closed |
+| BDD, ESOP, Walsh, phase-polynomial, GraySynth | Classical simplification did not yield a competitive reversible/native circuit | Closed |
+| Threshold, Shannon, row-class, vector, sparse-Walsh, and direct-output loaders | Verified prototypes ranged roughly **4437–969** depth or failed integration | Closed |
+| Conditional-clean/factored cofactor and XAG | Best local branch **713/445**; `PG` and remainder ablations **323/249** and **459/248** | Closed |
+| Finite-size Lupanov | Verified q=1,p=7 candidate **20432/11260** | Closed |
+| Exact/DAG windows and BQSKit StateSystem | Strict windows gave no gain; BQSKit 8-qubit search exceeded 60 seconds | Suspended/closed |
+| Semantic shared-XAG/subspace/completion | Analytic lower bounds: pairs ≥4 shared ANDs, `(A,B,V)` ≥5; no native candidate | Suspended |
+| EPFL RevKit/Caterpillar stack | Tweedledum 1.2.0 built in isolated Python 3.12; RevKit failed unmodified build | Environment-blocked/closed |
+| GUOQ/QUESO | No overall depth objective in the available objectives | Closed |
+| Fresh Classiq-native models | Direct arithmetic required **82 qubits**; row-class and low-rank models returned no fresh QASM in bounded waits | Closed |
+
+The challenge audit found no useful verifier loophole: inputs, coordinates,
+ancilla restoration, phase behavior, width, and `u3,cx` scoring remain binding.
+Competition mode now requires a new experiment to produce a complete verified
+QASM or directly enable one with a credible path to removing hundreds of
+layers. The protected 524/950 QASM and original notebook remain unchanged.

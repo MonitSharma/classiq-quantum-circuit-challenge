@@ -1,6 +1,10 @@
-# Current best circuit: parallel lookup and shared disk comparison
+# Protected baseline: parallel lookup and shared disk comparison
 
-Implementation: `src/full_mux.py`, importing `radius.py`, `mcz.py`, and `pair_search.py`. The saved best uses seed 94 and has depth 536, 1020 CX, 18 qubits. This document explains the implementation; exhaustive numerical verification of the exported QASM is recorded separately.
+Implementation: `src/full_mux.py` / `src/feature_linear_encoding.py`, importing
+the radius, phase-cube, and pair helpers. The protected post-processed artifact
+is `artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524 depth / 950
+CX / 18 qubits**, with matching exhaustive verification. This architecture is
+now closed for competition optimization; this document explains the fallback.
 
 ## Register layout
 
@@ -8,10 +12,12 @@ Implementation: `src/full_mux.py`, importing `radius.py`, `mcz.py`, and `pair_se
 |---|---|
 | 0..5 | x, little endian |
 | 6..11 | y, little endian |
-| 12..14 | 3-bit radius R, then temporary comparator carries |
-| 15 | A: y in 29..53 (square rows) |
-| 16 | B: y in 39..43 (bar rows) |
-| 17 | V: radius(y) > 0 |
+| 12 | R0 in the protected affine feature assignment |
+| 13 | V: radius(y) > 0 |
+| 14 | R2 in the protected affine feature assignment |
+| 15 | R1 in the protected affine feature assignment |
+| 16 | A: y in 29..53 (square rows) |
+| 17 | B: y in 39..43 (bar rows) |
 
 All six ancillas start and end at zero.
 
@@ -53,6 +59,17 @@ This replaces separately synthesized square and bar circuits with one approximat
 The left shapes and the split disk representation avoid unwanted XOR overlap. The full Boolean specification is checked independently by `logo` during verification.
 
 ## Optimization opportunities and hazards
+
+### Formal closure of this architecture
+
+The six-feature UCR load/phase/unload design is no longer an active
+optimization direction. Profiling the protected QASM finds q16 (feature `A`)
+touching **405 gates**, including **206 CX gates**, and carrying **394 of 580
+critical gates**. It is serialized through the y-feature multiplexer, x-side
+phase logic, and inverse y-feature multiplexer. The parallel-UCR opportunity is
+already exploited; further compiler, permutation, or local cleanup cannot
+remove the architecture's dominant load/unload cost. A materially different
+abstraction would be required to approach sub-200 depth.
 
 The lookup, left-phase lookup, and inverse lookup each cost roughly 128 depth. The comparator, guarded phase, folding, and final edge correction account for the rest. This explains why seed tuning alone may not reach below 291.
 

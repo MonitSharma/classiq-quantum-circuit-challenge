@@ -2,7 +2,7 @@
 
 ## State at handoff
 
-Updated September 8, 2026. The user wants the top rank, and most recently requested Markdown files containing everything tried, including failures, so a different chat/agent can continue. This is a research/optimization workspace, not a finished rank-1 submission.
+Updated September 10, 2026. The user wants the top rank, and the workspace now records the full experiment history, including failures. This is a research/optimization workspace, not a finished rank-1 submission.
 
 Best (superseded, see the second continuation section below): `artifacts/full_mux.qasm`, depth **536**, CX **1020**, width **18**, generator seed **94**. The exhaustive verifier completed successfully on all 4096 clean-ancilla input basis states: maximum numerical error 1.4816382783292104e-14, ancilla error 0, accumulated discarded-amplitude bound 2.7656819215066786e-14, peak sparse support 64. Its report is `artifacts/full_mux.exhaustive.json`. SHA-256:
 
@@ -1125,3 +1125,16 @@ their pre-existing QASM files were not treated as fresh results. Thus this
 campaign produced no score-bearing circuit. Per the agreed stopping rule, do
 not continue Classiq authentication or synthesis debugging. The protected
 verified baseline remains **524 depth / 950 CX / 18 qubits**.
+## Final strategic status (September 10, 2026)
+
+The six-feature UCR architecture is formally closed, not merely the current
+best. The protected 524 QASM places feature `A` on q16; that wire touches 405
+gates, including 206 CXs, and carries 394 of the 580 critical gates. Its
+activity spans the y-load, x-phase, and inverse y-load, explaining why local
+compiler changes stay near 524 rather than approaching 200. The published
+parallel-UCR pattern is already exploited in the implementation.
+
+All explored methods and their dispositions are consolidated in
+`docs/EXPERIMENTS.md`. The protected verified 524/950 artifact and original
+notebook are retained; no experimental artifact is promoted without complete
+verification.
