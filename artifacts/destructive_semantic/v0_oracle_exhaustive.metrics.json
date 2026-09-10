@@ -1,0 +1,14 @@
+{
+  "candidate": "artifacts/destructive_classifier_v0.qasm",
+  "sha256": "4f684dd7aea6173236d6fea6e16bbfd4e26c198ad932c8b90ccc602d636e3e38",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 21392,
+  "cx_count": 15462,
+  "max_error": 1.909400277660696e-13,
+  "ancilla_error": 2.998116114569966e-15,
+  "discarded_amplitude_bound": 5.2277211994020516e-12,
+  "peak_sparse_support": 1024,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+  "note": "Correctness baseline only; this is the input-preserving v0 architecture, not a destructive-search result."
+}

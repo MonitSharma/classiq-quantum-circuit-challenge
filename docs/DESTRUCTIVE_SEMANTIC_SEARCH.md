@@ -286,6 +286,14 @@ candidate compiled to forward depth 155 and 128 CX gates; the last three-gate
 continuation then plateaued. Its compact extension record is in
 `artifacts/destructive_semantic/direct_wire_seed2024_residual501.metrics.json`.
 
+As a correctness baseline, the existing input-preserving v0 oracle was also
+run through exhaustive verification on all 4,096 clean-ancilla basis inputs.
+It passed with SHA-256
+`4f684dd7aea6173236d6fea6e16bbfd4e26c198ad932c8b90ccc602d636e3e38`, depth
+21,392, and 15,462 CX gates. The copied report is
+`artifacts/destructive_semantic/v0_oracle_exhaustive.metrics.json`; this does
+not validate any incomplete destructive-search candidate.
+
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
 It did not reach affine completion and is weaker than the targeted seed-1

@@ -196,6 +196,10 @@ A further continuation reached mismatch 501 with a 56-RCCX circuit at depth
 155 / 128 CX; the next three-gate probe plateaued, and no exact classifier was
 found.
 
+The existing input-preserving v0 oracle separately passed exhaustive
+verification for all 4,096 inputs at depth 21,392 / 15,462 CX. This is a
+correctness baseline only and does not establish a destructive classifier.
+
 A cold seed-42 triple-RCCX beam reached residual 531 at estimated depth 77
 after four layers; it did not reach affine completion and is weaker than the
 targeted seed-1 basin.
