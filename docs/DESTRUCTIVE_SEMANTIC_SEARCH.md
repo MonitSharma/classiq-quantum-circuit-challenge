@@ -193,6 +193,12 @@ versus the shallower depth-88 control. The hints are therefore useful for
 diversity but not currently the preferred depth objective. Evidence is in
 `artifacts/destructive_semantic/guided_double_b16x10_p4.metrics.json`.
 
+The seed-94 control did not approach seed 1 in residual, but it produced the
+shallowest measured point so far: affine residual 531 at compiled depth 81 and
+48 CX gates. It is retained as a shallow Pareto candidate, not as a
+classifier. Its exact gate history is in
+`artifacts/destructive_semantic/double_seed94_b32x8_p4_depth81.json`.
+
 A wider seed-1 beam (64 states) found a stronger depth-screening point at
 residual 403. Its 16-RCCX history compiled to forward depth 90 and 46 CX
 gates, improving the depth-91 Pareto point while reducing CX count. The

@@ -151,3 +151,7 @@ The next seed-1 beam layer reduced the residual to 359, with compiled forward
 depth 107 and 56 CX gates. This is a lower-residual but deeper Pareto point;
 the depth-84/residual-379 candidate remains the shallow frontier point. Both
 still fail midpoint classification and are not verified oracles.
+
+Seed 94 produced a shallow Pareto point with affine residual 531, compiled
+forward depth 81, and 48 CX gates. It is shallower but less accurate than the
+seed-1 candidates and remains an incomplete classifier.
