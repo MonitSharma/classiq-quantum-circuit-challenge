@@ -28,7 +28,7 @@
       812,
       127
     ],
-    "nonlinear_live_width_estimate": 5096,
+    "nonlinear_live_width_estimate": 892,
     "max_fanout": 742,
     "truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1"
   }

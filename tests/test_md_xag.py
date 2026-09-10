@@ -15,6 +15,16 @@ class MDXAGTests(unittest.TestCase):
         self.assertEqual(metrics["multiplicative_depth"], 1)
         self.assertEqual(metrics["and_count"], 1)
 
+    def test_live_width_uses_last_use(self):
+        graph = XAG(
+            [
+                AndNode(1 << 1, 1 << 2),
+                AndNode(1 << 3, 1 << 4),
+            ],
+            1 << 14,
+        )
+        self.assertEqual(graph.live_width(), 1)
+
     def test_balanced_anf_is_exact_and_depth_four(self):
         graph = build_balanced_anf_xag()
         self.assertEqual(graph.evaluate(), logo_truth_table())

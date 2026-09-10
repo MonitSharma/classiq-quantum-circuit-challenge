@@ -1,0 +1,71 @@
+{
+  "seed": 20260910,
+  "trials": 129,
+  "mutation_family": "invertible elementary row XOR, swaps, and complements",
+  "target_truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1",
+  "best": {
+    "trial": 0,
+    "rows": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "offset": 0,
+    "metrics": {
+      "exact": true,
+      "and_count": 5096,
+      "multiplicative_depth": 4,
+      "and_layer_widths": [
+        2767,
+        1390,
+        812,
+        127
+      ],
+      "nonlinear_live_width_estimate": 892,
+      "max_fanout": 742,
+      "truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1"
+    }
+  },
+  "identity": {
+    "trial": 0,
+    "rows": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "offset": 0,
+    "metrics": {
+      "exact": true,
+      "and_count": 5096,
+      "multiplicative_depth": 4,
+      "and_layer_widths": [
+        2767,
+        1390,
+        812,
+        127
+      ],
+      "nonlinear_live_width_estimate": 892,
+      "max_fanout": 742,
+      "truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1"
+    }
+  },
+  "distinct_metric_keys": 127
+}

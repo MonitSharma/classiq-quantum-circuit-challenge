@@ -105,13 +105,16 @@ class XAG:
         end = len(self.and_nodes) + 1 + N_INPUTS
         for index in mask_indices(self.output_affine_mask):
             last_use[index] = max(last_use[index], end)
-        live = 0
+        live_signals: set[int] = set()
         peak = 0
-        for signal_id in range(1 + N_INPUTS, self.signal_count):
-            live += 1
-            peak = max(peak, live)
-            if last_use[signal_id] <= signal_id:
-                live -= 1
+        first_node = 1 + N_INPUTS
+        for signal_id in range(first_node, self.signal_count):
+            live_signals = {
+                live for live in live_signals if last_use[live] >= signal_id
+            }
+            if last_use[signal_id]:
+                live_signals.add(signal_id)
+            peak = max(peak, len(live_signals))
         return peak
 
     def metrics(self, target: int | None = None) -> dict:
@@ -166,17 +169,21 @@ def anf_coefficients(values: list[int]) -> list[int]:
     return coefficients
 
 
-def logo_anf() -> tuple[list[int], dict[int, int]]:
-    values = [
-        int(logo(point & 63, (point >> 6) & 63))
-        for point in range(N_POINTS)
-    ]
+def anf_for_values(values: list[int]) -> tuple[list[int], dict[int, int]]:
     coefficients = anf_coefficients(values)
     by_degree: dict[int, int] = {}
     for mask, coefficient in enumerate(coefficients):
         if coefficient:
             by_degree[mask.bit_count()] = by_degree.get(mask.bit_count(), 0) + 1
     return coefficients, by_degree
+
+
+def logo_anf() -> tuple[list[int], dict[int, int]]:
+    values = [
+        int(logo(point & 63, (point >> 6) & 63))
+        for point in range(N_POINTS)
+    ]
+    return anf_for_values(values)
 
 
 def _balanced_product(signals: list[int], nodes: list[AndNode]) -> int:
@@ -193,8 +200,11 @@ def _balanced_product(signals: list[int], nodes: list[AndNode]) -> int:
     return current[0]
 
 
-def build_balanced_anf_xag() -> XAG:
-    coefficients, _ = logo_anf()
+def build_balanced_anf_xag(values: list[int] | None = None) -> XAG:
+    if values is None:
+        coefficients, _ = logo_anf()
+    else:
+        coefficients, _ = anf_for_values(values)
     nodes: list[AndNode] = []
     output_mask = 0
     for monomial, coefficient in enumerate(coefficients):

@@ -1,0 +1,15 @@
+{
+  "source": "https://github.com/lsils/mockturtle",
+  "commit": "0886ebfdd101ce1110daf3d60b96d72edd3143ea",
+  "truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1",
+  "seed": "artifacts/multiplicative_depth/seeds/shared_rank.xag",
+  "seed_exact": true,
+  "seed_and_count": 97,
+  "seed_multiplicative_depth": 6,
+  "pipelines": [
+    {"name": "xag_balance", "exact": true, "and_count": 81, "multiplicative_depth": 6, "nonlinear_live_width": 13, "and_layer_widths": [26, 22, 14, 12, 6, 1]},
+    {"name": "xag_balance -> xag_balance", "exact": true, "and_count": 81, "multiplicative_depth": 6, "nonlinear_live_width": 16, "and_layer_widths": [26, 22, 14, 12, 6, 1]},
+    {"name": "xag_algebraic_depth_rewriting", "exact": false, "and_count": 95, "multiplicative_depth": 4},
+    {"name": "xag_balance -> xag_algebraic_depth_rewriting", "exact": false, "and_count": 88, "multiplicative_depth": 5}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/md_optimized_affine_stream.qasm",
+  "sha256": "684807b50fa521d0615568620d561b266fc25ccb8f3946bce8e4fc4f9cffbe12",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 2742,
+  "cx_count": 2810,
+  "max_error": 5.201735509288909e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.0728869241341433e-13,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 2.312140941619873,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

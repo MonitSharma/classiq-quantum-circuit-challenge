@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/md_rank_stream_pytket.qasm",
+  "sha256": "436613fe2ce1ecf74a7b10eac00188237e7e656a3dc860d8c5a6adf53737038d",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 1031,
+  "cx_count": 903,
+  "max_error": 1.0489379425370973e-14,
+  "ancilla_error": 7.217082723512491e-15,
+  "discarded_amplitude_bound": 2.355982833270789e-13,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 1.7796390056610107,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}
