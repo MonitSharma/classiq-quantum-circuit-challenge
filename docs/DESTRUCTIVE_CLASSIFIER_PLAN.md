@@ -155,3 +155,8 @@ still fail midpoint classification and are not verified oracles.
 Seed 94 produced a shallow Pareto point with affine residual 531, compiled
 forward depth 81, and 48 CX gates. It is shallower but less accurate than the
 seed-1 candidates and remains an incomplete classifier.
+
+An unrestored affine-control prefix was also implemented and semantically
+validated. Its seed-1 four-layer control reached residual 647 at compiled depth
+26, so it was not competitive in the short run; it remains an optional
+all-wires-writable move rather than the main search primitive.

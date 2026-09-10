@@ -32,6 +32,7 @@ TARGET_WIRE = 12
 # three CXs; two wire-disjoint RCCXs remain depth 7.
 RCCX_ESTIMATED_DEPTH = 7
 BIAFFINE_RCCX_ESTIMATED_DEPTH = 9
+FORWARD_BIAFFINE_ESTIMATED_DEPTH = 8
 PROXY_ORDER = 2
 FULL_PROXY_SHORTLIST_MULTIPLIER = 32
 
@@ -116,6 +117,20 @@ def apply_biaffine_semantic(
     out[target] ^= (wires[a] ^ wires[mix_a]) & (
         wires[b] ^ wires[mix_b]
     )
+    return tuple(out)
+
+
+def apply_forward_biaffine_semantic(
+    wires: tuple[int, ...], a: int, mix_a: int, b: int, mix_b: int,
+    target: int,
+) -> tuple[int, ...]:
+    """Apply an uncomputed two-control affine prefix plus RCCX."""
+    if len({a, mix_a, b, mix_b, target}) != 5:
+        raise ValueError("forward biaffine RCCX wires must be distinct")
+    out = list(wires)
+    out[a] ^= wires[mix_a]
+    out[b] ^= wires[mix_b]
+    out[target] ^= out[a] & out[b]
     return tuple(out)
 
 
@@ -364,6 +379,29 @@ def apply_biaffine_rccx_state(
                  max(state.estimated_depth, end), residual, combo)
 
 
+def apply_forward_biaffine_state(
+    state: State, a: int, mix_a: int, b: int, mix_b: int, target: int
+) -> State | None:
+    """Apply CX(mix_a,a), CX(mix_b,b), RCCX(a,b,target) without restore."""
+    wires = apply_forward_biaffine_semantic(
+        state.wires, a, mix_a, b, mix_b, target
+    )
+    if wires == state.wires:
+        return None
+    arrivals = list(state.arrivals)
+    start = max(arrivals[a], arrivals[mix_a], arrivals[b],
+                arrivals[mix_b], arrivals[target])
+    end = start + FORWARD_BIAFFINE_ESTIMATED_DEPTH
+    for wire in (a, mix_a, b, mix_b, target):
+        arrivals[wire] = end
+    residual, combo = affine_distance_proxy(wires, max_order=PROXY_ORDER)
+    gates = state.gates + (
+        ("forward_biaffine", a, mix_a, b, mix_b, target),
+    )
+    return State(wires, tuple(arrivals), gates,
+                 max(state.estimated_depth, end), residual, combo)
+
+
 def complete_affine(state: State, target_wire: int = TARGET_WIRE) -> State | None:
     solution = affine_span_solution(state.wires)
     if solution is None:
@@ -402,6 +440,12 @@ def build_circuit(gates: tuple[tuple, ...]) -> QuantumCircuit:
             q.rccx(a, b, target)
             q.cx(mix_b, b)
             q.cx(mix_a, a)
+            continue
+        if kind == "forward_biaffine":
+            _, a, mix_a, b, mix_b, target = gate
+            q.cx(mix_a, a)
+            q.cx(mix_b, b)
+            q.rccx(a, b, target)
             continue
         _, a, b, target = gate
         if kind == "x":
@@ -601,6 +645,36 @@ def proposal_biaffine_operations(
             for _, _, a, mix_a, b, mix_b, target in proposals[:limit]]
 
 
+def proposal_forward_biaffine_operations(
+    state: State, preserve_inputs: bool, limit: int, rng: random.Random,
+    guided_hints: bool = False,
+):
+    """Rank destructive affine-prefix RCCX proposals by the proxy."""
+    base = proposal_gates(state, preserve_inputs, max(limit, 32), rng,
+                         guided_hints=guided_hints)
+    proposals = []
+    for a, b, target in base:
+        for mix_a in range(N_WIRES):
+            if mix_a in (a, b, target):
+                continue
+            for mix_b in range(N_WIRES):
+                if mix_b in (a, mix_a, b, target):
+                    continue
+                wires = apply_forward_biaffine_semantic(
+                    state.wires, a, mix_a, b, mix_b, target
+                )
+                if wires == state.wires:
+                    continue
+                heuristic, _ = affine_distance_proxy(
+                    wires, max_order=PROXY_ORDER
+                )
+                proposals.append((heuristic, rng.random(), a, mix_a, b,
+                                  mix_b, target))
+    proposals.sort()
+    return [(a, mix_a, b, mix_b, target)
+            for _, _, a, mix_a, b, mix_b, target in proposals[:limit]]
+
+
 def proposal_double_operations(
     state: State, preserve_inputs: bool, limit: int, rng: random.Random,
     guided_hints: bool = False,
@@ -654,7 +728,7 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
            affine_controls: bool = False, full_proxy_proposals: bool = False,
            resume: Path | None = None, biaffine_controls: bool = False,
            double_rccx: bool = False, pareto_beam: bool = False,
-           guided_hints: bool = False):
+           guided_hints: bool = False, forward_affine_controls: bool = False):
     rng = random.Random(seed)
     start_layer = 0
     if resume is None:
@@ -675,7 +749,7 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
     for layer in range(start_layer + 1, layers + 1):
         children: dict[str, State] = {}
         for state in beam:
-            if (affine_controls or biaffine_controls) and max_parallel == 1:
+            if (affine_controls or biaffine_controls or forward_affine_controls) and max_parallel == 1:
                 operations = []
                 if affine_controls:
                     operations.extend(
@@ -689,6 +763,13 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
                             state, preserve_inputs, proposal_limit, rng,
                             guided_hints)
                     )
+                if forward_affine_controls:
+                    operations.extend(
+                        ("forward_biaffine", op)
+                        for op in proposal_forward_biaffine_operations(
+                            state, preserve_inputs, proposal_limit, rng,
+                            guided_hints)
+                    )
                 operations.extend(("plain", op) for op in proposal_gates(
                     state, preserve_inputs, proposal_limit, rng,
                     full_proxy_proposals, guided_hints))
@@ -697,6 +778,8 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
                         child = apply_affine_rccx_state(state, *operation)
                     elif kind == "biaffine":
                         child = apply_biaffine_rccx_state(state, *operation)
+                    elif kind == "forward_biaffine":
+                        child = apply_forward_biaffine_state(state, *operation)
                     else:
                         child = apply_rccx_state(state, *operation)
                     if child is None:
@@ -801,6 +884,11 @@ def main() -> None:
         action="store_true",
         help="add proposal candidates near lifted rank-factor truth tables",
     )
+    parser.add_argument(
+        "--forward-affine-controls",
+        action="store_true",
+        help="allow destructive affine-control prefixes without restoration",
+    )
     parser.add_argument("--proxy-order", type=int, choices=[2, 3], default=2)
     parser.add_argument("--out", default="artifacts/destructive_semantic")
     args = parser.parse_args()
@@ -819,7 +907,7 @@ def main() -> None:
         out / "checkpoints", args.proposal_limit, args.max_parallel,
         args.exact_top, args.affine_controls, args.full_proxy_proposals,
         args.resume, args.biaffine_controls, args.double_rccx,
-        args.pareto_beam, args.guided_hints)
+        args.pareto_beam, args.guided_hints, args.forward_affine_controls)
     payload = {
         "seed": args.seed,
         "beam_width": args.beam,
@@ -835,6 +923,7 @@ def main() -> None:
         "double_rccx": args.double_rccx,
         "pareto_beam": args.pareto_beam,
         "guided_hints": args.guided_hints,
+        "forward_affine_controls": args.forward_affine_controls,
         "proxy_order": args.proxy_order,
         "completed_layer": completed_layer,
         "target_marked_states": TARGET.bit_count(),

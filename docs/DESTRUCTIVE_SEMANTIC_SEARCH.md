@@ -199,6 +199,15 @@ shallowest measured point so far: affine residual 531 at compiled depth 81 and
 classifier. Its exact gate history is in
 `artifacts/destructive_semantic/double_seed94_b32x8_p4_depth81.json`.
 
+An optional `--forward-affine-controls` move now explores the destructive
+prefix `CX(mix_a,a); CX(mix_b,b); RCCX(a,b,t)` without restoring the controls.
+Its semantic implementation was checked against the decomposed sequence, and
+it obeys the all-wires-writable model. A seed-1 beam-16 four-layer control
+reached affine residual 647 at compiled depth 26 and 15 CX gates, so this move
+was not competitive in the short test. It remains available for mixed future
+searches. Evidence is in
+`artifacts/destructive_semantic/forward_affine_b16x4_p4.metrics.json`.
+
 A wider seed-1 beam (64 states) found a stronger depth-screening point at
 residual 403. Its 16-RCCX history compiled to forward depth 90 and 46 CX
 gates, improving the depth-91 Pareto point while reducing CX count. The
