@@ -1,0 +1,22 @@
+{
+  "experiment": "final targeted continuation of direct-wire seed-2024 basin",
+  "seed": 6060,
+  "base_artifact": "direct_wire_seed2024_extended.metrics.json",
+  "additional_gates": [
+    ["rccx", 0, 13, 11],
+    ["rccx", 2, 14, 13],
+    ["rccx", 0, 13, 11]
+  ],
+  "direct_target": true,
+  "target_wire": 11,
+  "direct_target_wire_mismatches": 501,
+  "exact_affine_distance": 501,
+  "compiled_forward_depth": 155,
+  "compiled_forward_cx": 128,
+  "gate_count": 56,
+  "target_marked_states": 1097,
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "semantic_hash": "8360fe824ef3bd8351192f4035c023ad",
+  "note": "Improves the direct-target frontier from 505 to 501 mismatches; the appended three-gate continuation then plateaued."
+}

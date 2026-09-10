@@ -281,6 +281,11 @@ q11 mismatch further to 513. The resulting 44-RCCX circuit compiled to forward
 depth 113 and 106 CX gates. It remains incomplete; its full history is in
 `artifacts/destructive_semantic/direct_wire_seed2024_extended.metrics.json`.
 
+A further continuation reduced the mismatch to 501 on q11. The 56-RCCX
+candidate compiled to forward depth 155 and 128 CX gates; the last three-gate
+continuation then plateaued. Its compact extension record is in
+`artifacts/destructive_semantic/direct_wire_seed2024_residual501.metrics.json`.
+
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
 It did not reach affine completion and is weaker than the targeted seed-1

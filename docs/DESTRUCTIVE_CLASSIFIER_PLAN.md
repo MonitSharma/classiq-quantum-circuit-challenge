@@ -192,6 +192,10 @@ Extending that direct-target history reduced the mismatch to 513; the 44-RCCX
 candidate compiled to depth 113 / 106 CX, but still has no exact classifier or
 oracle verification.
 
+A further continuation reached mismatch 501 with a 56-RCCX circuit at depth
+155 / 128 CX; the next three-gate probe plateaued, and no exact classifier was
+found.
+
 A cold seed-42 triple-RCCX beam reached residual 531 at estimated depth 77
 after four layers; it did not reach affine completion and is weaker than the
 targeted seed-1 basin.
