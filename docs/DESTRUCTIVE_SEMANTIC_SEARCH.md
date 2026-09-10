@@ -251,6 +251,12 @@ residual-359/depth-107 frontier point, and direct target-wire replay still had
 `artifacts/destructive_semantic/targeted_triple_residual349.json` and is not a
 complete classifier or phase oracle.
 
+A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
+4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
+It did not reach affine completion and is weaker than the targeted seed-1
+basin. Its exact gate history and metrics are preserved in
+`artifacts/destructive_semantic/triple_seed42_b16x4_p4.metrics.json`.
+
 A wider seed-1 beam (64 states) found a stronger depth-screening point at
 residual 403. Its 16-RCCX history compiled to forward depth 90 and 46 CX
 gates, improving the depth-91 Pareto point while reducing CX count. The

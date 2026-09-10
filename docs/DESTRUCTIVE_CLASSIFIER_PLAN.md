@@ -170,6 +170,10 @@ A further targeted continuation reached exact affine residual 349, but its
 29-RCCX circuit compiled to forward depth 149 and 83 CX gates. No affine
 completion or complete phase-oracle verification has been reached.
 
+A cold seed-42 triple-RCCX beam reached residual 531 at estimated depth 77
+after four layers; it did not reach affine completion and is weaker than the
+targeted seed-1 basin.
+
 Seed 42 produced a substantially stronger shallow point: affine residual 447
 at compiled forward depth 59 with 32 CX gates. It dominates the seed-94
 shallow candidate, but remains incomplete and unverified.
