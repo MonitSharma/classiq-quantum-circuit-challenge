@@ -610,3 +610,17 @@ were proven unsatisfiable; the three-node model remained unknown after a
 60-second bounded solve. Thus there is no confirmed low-AND completion yet.
 The probe is recorded in
 `artifacts/destructive_semantic/high_order_affine_xag_probe.metrics.json`.
+
+## Reordered continuation
+
+The next correction was tested in both orders. Applying
+`q12 ^= q2q3q11q14` before `q11 ^= q5q8q10q12` reaches affine residual 323;
+the reverse order reaches the same residual semantically, but the native
+schedule is deeper. The reordered four-block chain uses q17 for the new
+q12 correction and preserves q13 for the independent earlier correction.
+It restores both clean ancillas over all 4,096 inputs and compiles to
+forward depth 109 / 72 CX with `qubits_initially_zero=False` in the required
+U3/CX basis. It is a promising incomplete classifier candidate, not a
+verified phase oracle. The builder and metrics are
+`src/high_order_affine_reordered_chain.py` and
+`artifacts/destructive_semantic/high_order_affine_reordered_chain.metrics.json`.
