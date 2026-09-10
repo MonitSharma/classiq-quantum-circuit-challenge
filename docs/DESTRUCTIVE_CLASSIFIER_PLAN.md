@@ -1,0 +1,74 @@
+# Destructive Reversible Classifier Plan
+
+## Objective
+
+Develop a new phase-oracle architecture based on a reversible classifier
+
+\[
+O_f = C^\dagger Z_t C,
+\]
+
+where the forward circuit `C` may overwrite all 12 coordinate wires and all 6
+clean ancillas. On the subspace with ancillas initially zero, only one output
+wire `t` is constrained: it must equal the exact logo predicate `f(x,y)`.
+All other midpoint wires are unrestricted garbage, provided `C` is a
+reversible monomial circuit and `C^dagger` restores every input and ancilla.
+
+## Why this is different
+
+The protected `full_mux` architecture preserves the coordinate registers while
+loading six y-features, applies phase logic, and uncomputes the features. This
+plan treats the entire 18-wire register as reversible workspace during the
+forward computation. It therefore searches for a shallow reversible embedding
+of one Boolean output instead of a clean compute/phase/uncompute realization of
+six named features.
+
+Relative-phase Toffoli and Peres-style primitives are permitted inside `C`.
+Their intermediate phases need not cancel locally: the exact inverse `C^dagger`
+is used, so the whole conjugation cancels the midpoint phase ledger. This claim
+must still be checked by exhaustive verification of the serialized oracle.
+
+## Correctness contract
+
+For every 12-bit coordinate basis state `|x,y>` with q[12:18] initially zero,
+
+```text
+C |x,y,0^6> = exp(i phi(x,y)) |g(x,y)>
+```
+
+with `g_t(x,y) = logo(x,y)`.
+
+Then `C^dagger Z_t C` applies exactly the required shared-sign phase and
+restores q[0:18]. Inputs remain arbitrary at the oracle boundary; only the six
+ancillas start clean.
+
+## Milestones and stop rules
+
+1. Reproduce the 1,097 marked states and the exact coordinate convention.
+2. Build a classical reversible-embedding model with all 18 wires writable.
+3. Search or construct candidate forward classifiers and score serialized
+   U3/CX depth of `C`.
+4. Treat forward depth <= 110 as promising; forward depth <= 94 is the direct
+   threshold for a nominal complete depth below 190 before cancellation.
+5. Emit every candidate under a new filename. Never overwrite the protected
+   `artifacts/524` files.
+6. For a complete candidate, construct `C^dagger Z C`, serialize standalone in
+   U3/CX, and run `src/exhaustive_verify.py` with arbitrary-input semantics.
+
+## Initial implementation direction
+
+Start with a destructive XAG/register-allocation prototype rather than
+reusing `src/full_mux.py`. Use the existing exact `logo` truth table and
+relative-phase-safe primitives, but allow logical inputs to be retired and
+their physical wires to hold nonlinear state. The first prototype may be a
+forward-classifier diagnostic; it is not a score-bearing oracle until the
+conjugated circuit passes exhaustive verification.
+
+## Evidence and limitations
+
+Reversible embedding with don't-care garbage is a known synthesis problem, but
+optimal embedding is hard in general. The extra garbage freedom is therefore a
+search opportunity, not a proof that a shallow classifier exists. The target
+leaderboard value is treated as unverified context; no rank or submission claim
+is made by this plan.
+

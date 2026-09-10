@@ -1,0 +1,16 @@
+{
+  "candidate": "/Users/monitsharma/Downloads/classiq-development/artifacts/destructive_classifier_v0.qasm",
+  "sha256": "4f684dd7aea6173236d6fea6e16bbfd4e26c198ad932c8b90ccc602d636e3e38",
+  "classifier_depth": 10641,
+  "classifier_cx": 7736,
+  "oracle_depth": 21392,
+  "oracle_cx": 15462,
+  "width": 18,
+  "basis": [
+    "u3",
+    "cx"
+  ],
+  "qubits_initially_zero": false,
+  "status": "pending_exhaustive_verification",
+  "note": "v0 preserves inputs; destructive allocation is not implemented yet"
+}
