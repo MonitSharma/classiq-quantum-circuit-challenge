@@ -97,3 +97,9 @@ Affine-control RCCX sandwiches were also tested. The macro
 residual 609 at estimated depth 51, worse than the plain destructive run's
 residual 539 at a comparable layer budget. The macro is retained as an
 available primitive, but this proposal ranking is not currently competitive.
+
+Seed diversity was screened separately. With beam 64 and 24 proposals, seed 1
+reached residual 487 and seed 94 reached 499 after 16 layers; the stronger
+beam-128 seed-1 run reached residual 553 by layer 9 before memory pressure.
+Neither beat the seed-524 residual 473 trajectory. Simple tie-breaking seed
+variation is therefore not the next lever.
