@@ -1241,6 +1241,10 @@ Exhaustive verification covered all 4,096 inputs with max error
 completion currently measured, though it remains noncompetitive; the protected
 fallback is unchanged.
 
+## Latest destructive thirteenth complete-oracle order improvement (September 10, 2026)
+
+A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete `C† Z C` oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves13.py`; the exact serialized QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves13.qasm` with SHA256 `feda8f0cacdd35d6670b4eb703590cbe8a4e93992b43f6adbac40e1301a0cefc`. It measures **3,467/2,917** for the forward classifier and **6,854/5,753** for the complete oracle. Its matching exhaustive report checks all 4,096 inputs with max error `8.898318069658582e-14`, zero ancilla error, discarded-amplitude bound `9.493200925461926e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
+
 ## Latest destructive twelfth complete-oracle order improvement (September 10, 2026)
 
 A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete `C† Z C` oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves12.py`; the exact serialized QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves12.qasm` with SHA256 `a7afb0a8af0e4a9eacd056cbd1b7509bc439b6bb6391ddd94c56fc517f289620`. It measures **3,483/2,928** for the forward classifier and **6,887/5,775** for the complete oracle. Its matching exhaustive report checks all 4,096 inputs with max error `9.129949267455418e-14`, zero ancilla error, discarded-amplitude bound `9.400057039485976e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
