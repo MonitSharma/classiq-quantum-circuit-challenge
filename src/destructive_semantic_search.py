@@ -26,7 +26,10 @@ N_INPUTS = 4096
 N_WIRES = 18
 ALL_ONES = (1 << N_INPUTS) - 1
 TARGET_WIRE = 12
-RCCX_ESTIMATED_DEPTH = 4
+# Calibrated with Qiskit 2.5.2, basis_gates=["u3", "cx"],
+# qubits_initially_zero=False, optimization_level=3: one RCCX is depth 7,
+# three CXs; two wire-disjoint RCCXs remain depth 7.
+RCCX_ESTIMATED_DEPTH = 7
 
 
 def input_truth_tables() -> tuple[int, ...]:

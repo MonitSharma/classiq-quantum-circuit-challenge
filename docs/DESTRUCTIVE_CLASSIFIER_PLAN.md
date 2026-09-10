@@ -86,3 +86,8 @@ complete oracle has been found yet.
 Layer checkpoints are retained under `artifacts/destructive_semantic/`. The
 next implementation task is to reduce state memory and add disjoint RCCX layer
 generation before increasing the beam.
+
+The matching preserve-inputs ablation reached residual 575 under the same
+beam-128, 48-proposal, 16-layer configuration. The calibrated destructive run
+reached residual 473 at estimated forward depth 70 before its next expansion
+hit the memory boundary. Neither run reached affine completion.

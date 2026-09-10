@@ -44,6 +44,10 @@ The main target is affine completion at low forward depth. A forward depth at
 or below 110 is promising; at or below 94 gives a nominal `2d+1 < 190`
 conjugated-oracle budget before global compiler cancellation.
 
+The native primitive calibration measured one RCCX at depth 7 and 3 CX in the
+current U3/CX basis; two disjoint RCCXs also occupy depth 7. The search uses
+that calibrated depth as its heuristic cost.
+
 ## Verification boundary
 
 An affine-completed classifier is not yet a valid competition oracle. For every
@@ -68,3 +72,8 @@ before the next expansion exceeded the current memory budget. The best saved
 state had residual 501 and estimated forward depth 36, and its gate history
 used original coordinate wires as RCCX targets. This is evidence that the
 destructive semantics are active, not a complete classifier or oracle.
+
+The matching preserve-inputs ablation reached residual 575, versus residual
+473 for the calibrated destructive run. This confirms a measurable benefit from
+allowing coordinate wires to be overwritten. Neither run reached affine
+completion.
