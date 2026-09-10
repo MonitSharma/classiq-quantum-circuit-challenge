@@ -1,0 +1,14 @@
+{
+  "qasm": "artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves4.qasm",
+  "sha256": "7c6fbac3aba8d0a78288baf4a4bdf6c6d3ffa1b244ad9dd1f2482e33ea603423",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 7204,
+  "cx_count": 5989,
+  "max_error": 8.754479906318383e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.0089062559388834e-12,
+  "peak_sparse_support": 128,
+  "elapsed_seconds": 27.56932306289673,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}
