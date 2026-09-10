@@ -678,3 +678,11 @@ descendants, and exact-rescored 32 leaders at each layer. No exact leader
 improved residual 323. This is a bounded negative result rather than an
 optimality proof; its scope is recorded in
 `artifacts/destructive_semantic/residual323_affine_beam.metrics.json`.
+
+As a separate structural check, the repository's recursive 12-variable
+formula decomposer was applied directly to the 1,097-state logo truth table.
+It did not return a formula within a 20-second bounded probe, while the
+preserved exact row-factor classifier is depth 6,531. This route is therefore
+not competitive with the current destructive frontier; the bounded result is
+recorded in
+`artifacts/destructive_semantic/full12_formula_probe.metrics.json`.

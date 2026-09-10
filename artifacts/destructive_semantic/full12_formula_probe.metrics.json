@@ -1,0 +1,12 @@
+{
+  "experiment": "direct 12-variable recursive formula probe",
+  "target_marked_states": 1097,
+  "input_variables": 12,
+  "timeout_seconds": 20,
+  "result": "no formula returned before timeout",
+  "comparison": {
+    "exact_row_factor_classifier_depth": 6531,
+    "current_incomplete_destructive_depth": 102
+  },
+  "status": "bounded probe abandoned; recursive formula route is not currently competitive"
+}
