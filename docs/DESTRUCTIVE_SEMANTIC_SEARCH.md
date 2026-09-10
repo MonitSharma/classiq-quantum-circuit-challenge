@@ -539,3 +539,10 @@ search over all 3-control combinations stayed at residual 513; together with
 the earlier exhaustive one-step cubic scan, this gives no evidence that cubic
 target updates are the missing primitive. The compact result is in
 `artifacts/destructive_semantic/cubic_direct_target_repeated.metrics.json`.
+
+A broader degree scan found one five-control monomial that changes q11 and
+improves the direct residual from 513 to 509:
+`W[11] ^= W[0]W[2]W[7]W[8]W[14]`. Its exact U3/CX lowering, however, raises the
+forward depth from 113 to 179 (140 CX), so the semantic improvement is not
+competitive. This is recorded as a native rejection in
+`artifacts/destructive_semantic/degree5_direct_target_control.metrics.json`.
