@@ -904,6 +904,20 @@ completion currently measured, though still noncompetitive.
  strongest verified destructive completion, but remains noncompetitive and does
  not establish rank 1.
 
+ An eleventh insertion/reversal search, initialized from the prior moves order,
+ reduced the forward classifier to **3,496 / 2,934** and the complete oracle
+ to **6,913 / 5,787** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_moves11.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves11.qasm`
+ with SHA256
+ `00dbd7b93e909b967fad523ed3a02fb964a433af79c41e2f4cadf92a30237a69`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `9.013698285441724e-14`, zero ancilla error, discarded-amplitude bound
+ `9.479042934698458e-13`, and peak sparse support 128. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
  A tenth insertion/reversal search, initialized from the prior moves order,
  reduced the forward classifier to **3,550 / 2,975** and the complete oracle
  to **7,017 / 5,869** depth/CX. The frozen source is
