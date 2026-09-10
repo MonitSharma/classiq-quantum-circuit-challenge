@@ -1187,3 +1187,10 @@ insertion/reversal moves using seed `20260914`. The pre-peephole oracle reached
 `b2406cb5ab5ddebae2b81a4ef42fd270b71881fab4d5e5f9549fc030bb552fb8`. The
 matching exhaustive report covers all 4,096 inputs with maximum error
 `9.271857944426466e-14` and ancilla error `7.400714895795043e-15`.
+
+One further 200-move continuation with seed `20260915` reached 6,410/6,193
+before rewriting and **6,398/6,189** after pytket. The exact promoted QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`e6bf3c3b5607532d0f975337c0610db15419a44419ae15bb308f2ffe078214ee`. Its
+matching exhaustive report covers all 4,096 inputs with maximum error
+`7.919825282338308e-14` and ancilla error `6.80267858982627e-15`.
