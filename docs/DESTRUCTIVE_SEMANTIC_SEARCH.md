@@ -156,9 +156,10 @@ The layer-6 checkpoint was resumed to layer 10 with the same deterministic
 configuration. The best state improved to exact affine residual 581 at layer 9
 (18 RCCXs in its retained history); its serialized forward circuit measured
 depth 88 and 52 CX gates. This crosses the nominal forward-depth screening
-threshold, but it is not a classifier: the target wire still mismatches 581
-of 4,096 inputs, so no phase oracle was constructed or verified. Evidence is
-in `artifacts/destructive_semantic/double_resume_b16x10_p4.metrics.json`.
+threshold, but it is not a classifier: its best affine-span residual is 581,
+and no phase oracle was constructed or verified. Direct replay of the selected
+physical target is a separate check performed by the classifier verifier.
+Evidence is in `artifacts/destructive_semantic/double_resume_b16x10_p4.metrics.json`.
 
 The optional `--pareto-beam` selector now retains residual/depth
 non-dominated states before filling the beam by the normal score. This is the
@@ -173,8 +174,8 @@ reached residual 447 at layer 6 and residual 429 at layer 10. The retained
 20-RCCX history compiled to forward depth 92 and 58 CX gates; extending it to
 layer 14 did not lower the residual. This is the current best heuristic result
 and falls inside the nominal depth-94 screening range, but it remains
-incomplete: 429 midpoint inputs mismatch and no conjugated oracle was built or
-verified. Evidence is in
+incomplete: its best affine-span residual is 429 and no conjugated oracle was
+built or verified. Evidence is in
 `artifacts/destructive_semantic/double_seed1_b16x10_p4.metrics.json`.
 
 The same seed-1 beam also retained a depth-favorable Pareto state with
@@ -195,15 +196,17 @@ diversity but not currently the preferred depth objective. Evidence is in
 A wider seed-1 beam (64 states) found a stronger depth-screening point at
 residual 403. Its 16-RCCX history compiled to forward depth 90 and 46 CX
 gates, improving the depth-91 Pareto point while reducing CX count. The
-midpoint target still mismatches 403 inputs, so this remains a heuristic
-candidate only. Its exact gate history and semantic hash are preserved in
+the affine-span residual is 403, so this remains a heuristic candidate only.
+Direct target-wire replay is separately recorded by the verifier. Its exact
+gate history and semantic hash are preserved in
 `artifacts/destructive_semantic/double_seed1_b64x8_p4_depth90.json`.
 
 Resuming the beam-64 seed-1 checkpoint for one additional layer produced a
 stronger candidate: residual 379 with compiled forward depth 84 and 48 CX
 gates. This dominates the earlier depth-90 point while retaining the same
-residual quality. The target still mismatches 379 inputs, so this is not yet a
-classifier or phase oracle. Its exact gate history is preserved in
+residual quality. Its affine-span residual is 379, while direct target-wire
+replay still fails, so this is not yet a classifier or phase oracle. Its exact
+gate history is preserved in
 `artifacts/destructive_semantic/double_seed1_b64x9_p4_depth84.json`.
 
 One further layer of the same beam reduced the residual to 359. The

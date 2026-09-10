@@ -15,5 +15,6 @@
   "target_marked_states": 1097,
   "classifier_complete": false,
   "oracle_exhaustively_verified": false,
-  "note": "Forward depth is promising only as a heuristic measurement; midpoint target still mismatches 581 of 4096 inputs."
+  "direct_target_wire_mismatches": 1089,
+  "note": "The residual is affine-span distance, not direct target-wire mismatch; direct q12 replay mismatches 1089 inputs."
 }

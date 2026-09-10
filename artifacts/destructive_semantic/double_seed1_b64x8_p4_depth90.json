@@ -12,6 +12,7 @@
   "compiled_forward_depth": 90,
   "compiled_forward_cx": 46,
   "target_marked_states": 1097,
+  "direct_target_wire_mismatches": 1147,
   "semantic_hash": "60b86f514cb110a42e18bc1210dad872",
   "classifier_complete": false,
   "oracle_exhaustively_verified": false,

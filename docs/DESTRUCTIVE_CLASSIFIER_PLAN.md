@@ -119,8 +119,8 @@ affine completion or complete phase oracle has been found.
 
 Resuming that beam through layer 10 improved the residual to 581. The retained
 18-RCCX history compiled to forward depth 88 and 52 CX gates, which is a
- promising screening depth but not a valid classifier: 581 midpoint inputs
- still mismatch, and no complete phase oracle was constructed or verified.
+promising screening depth but not a valid classifier: its best affine-span
+residual is 581, and no complete phase oracle was constructed or verified.
 
 Lifted rank-factor truth tables were added as optional semantic proposal hints.
 The guided beam also reached residual 581, but its selected circuit compiled
@@ -128,23 +128,24 @@ to depth 99 and 58 CX gates, so the hints currently improve exploration rather
 than the depth objective.
 
 Seed 1 with the double-RCCX move set reached residual 429 at layer 10. Its
-20-RCCX history compiled to forward depth 92 and 58 CX gates, but 429 midpoint
-inputs still mismatch. This is a strong heuristic screening result, not a
-complete classifier or verified phase oracle.
+20-RCCX history compiled to forward depth 92 and 58 CX gates, but its best
+affine-span residual is 429. This is a strong heuristic screening result, not
+a complete classifier or verified phase oracle.
 
 The wider seed-1 beam also retained a Pareto candidate with residual 383 and
 compiled forward depth 91 (58 CX gates). The residual-379 state was deeper at
 112, so the residual-383 candidate is the better depth-screening point. Both
-remain incomplete midpoint classifiers.
+ remain incomplete affine-span approximations, not midpoint classifiers.
 
 A seed-1 beam of 64 states found a depth-90 candidate with residual 403 and
 46 CX gates. This improves the current depth/residual Pareto point, but 403
-midpoint inputs still mismatch and no complete oracle has been verified.
+the affine-span residual remains nonzero and no complete oracle has been
+verified.
 
 Resuming the seed-1 beam one additional layer produced residual 379 at
 compiled forward depth 84 with 48 CX gates. This is the current best
-depth/residual heuristic point, but 379 midpoint inputs still mismatch and no
-complete phase oracle has been constructed or verified.
+depth/residual heuristic point, but the affine-span residual remains 379 and
+no complete phase oracle has been constructed or verified.
 
 The next seed-1 beam layer reduced the residual to 359, with compiled forward
 depth 107 and 56 CX gates. This is a lower-residual but deeper Pareto point;
