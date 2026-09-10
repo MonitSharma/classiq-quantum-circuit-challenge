@@ -1217,3 +1217,11 @@ pytket. The exact promoted QASM is
 `907880ee29d873b3d95b52126a75f3508053b854454cb1f54e55d615e210528f`. Its
 matching exhaustive report covers all 4,096 inputs with maximum error
 `8.093769516197772e-14` and ancilla error `7.591599188635633e-15`.
+
+A seventh deterministic continuation with 300 insertion/reversal moves and
+seed `20260919` reached 6,239/5,953 before rewriting and **6,227/5,949**
+after pytket. The exact promoted QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`efc8b22722fe779ec03b5e51eb46e46819fe15bf7cc1800019a15eaaac3d444f`. Its
+matching exhaustive report covers all 4,096 inputs with maximum error
+`7.596400363095238e-14` and ancilla error `8.24059487550783e-15`.
