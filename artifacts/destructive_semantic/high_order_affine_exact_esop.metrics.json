@@ -25,7 +25,8 @@
   "transpilation": {
     "basis_gates": ["u3", "cx"],
     "qubits_initially_zero": false,
-    "optimization_level": 3
+    "optimization_level": 3,
+    "seed_transpiler": 0
   },
   "classifier_complete": true,
   "oracle_exhaustively_verified": true,
