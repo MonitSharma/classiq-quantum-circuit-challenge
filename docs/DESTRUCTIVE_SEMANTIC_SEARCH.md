@@ -744,3 +744,11 @@ continuation above the promising depth screen. It is retained for future
 factor-sharing work in
 `src/high_order_affine_signed_mixed_six_control.py` and
 `artifacts/destructive_semantic/high_order_affine_signed_mixed_six_control.metrics.json`.
+
+Reordering the six-control signed correction before the positive q12 update
+improves the signed-path residual to 287, with native forward depth 114 / 85
+CX. Exhaustive partition screening found no lower-depth lowering for this
+control set. It remains above the promising depth screen but is the strongest
+signed semantic Pareto point; the builder and metrics are
+`src/high_order_affine_signed_reordered.py` and
+`artifacts/destructive_semantic/high_order_affine_signed_reordered.metrics.json`.
