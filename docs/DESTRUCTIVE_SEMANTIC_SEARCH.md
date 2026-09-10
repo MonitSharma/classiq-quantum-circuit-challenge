@@ -1284,3 +1284,13 @@ gates. This is functionally exact on the reachable classifier states but not
 competitive with the protected 6,152/5,889 oracle, so it was not promoted.
 Metrics are in
 `artifacts/destructive_semantic/saved_prefix_esop_completion.metrics.json`.
+
+## Exact-distance frontier continuation (September 11, 2026)
+
+To test whether proxy ranking was hiding an affine solution, the low-depth
+residual-359 frontier was continued for six layers with a beam of 16 and
+exact meet-in-the-middle affine-distance scoring on every selected child.
+The best residual moved only to **355**, while estimated forward depth grew
+from 140 to 161; no state entered the affine span. The retained history is
+recorded in
+`artifacts/destructive_semantic/exact_distance_continuation_seed20260929.metrics.json`.
