@@ -200,6 +200,11 @@ The existing input-preserving v0 oracle separately passed exhaustive
 verification for all 4,096 inputs at depth 21,392 / 15,462 CX. This is a
 correctness baseline only and does not establish a destructive classifier.
 
+An exact ten-row-factor input-preserving classifier was also constructed and
+exhaustively verified through its conjugated oracle at depth 13,064 / 7,476
+CX. It is retained as a correctness baseline, not as a destructive-search
+candidate.
+
 A cold seed-42 triple-RCCX beam reached residual 531 at estimated depth 77
 after four layers; it did not reach affine completion and is weaker than the
 targeted seed-1 basin.

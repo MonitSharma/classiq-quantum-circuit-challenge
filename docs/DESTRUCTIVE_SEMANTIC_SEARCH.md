@@ -294,6 +294,16 @@ It passed with SHA-256
 `artifacts/destructive_semantic/v0_oracle_exhaustive.metrics.json`; this does
 not validate any incomplete destructive-search candidate.
 
+An exact row-factor classifier baseline was then constructed from ten row
+terms using no-ancilla MCX predicate synthesis. Its forward classifier
+compiled to depth 6,531 / 3,739 CX, and its conjugated oracle compiled to
+depth 13,064 / 7,476 CX. The serialized oracle passed exhaustive verification
+on all 4,096 inputs with zero ancilla leakage. The QASM and matching metrics
+are in `artifacts/destructive_semantic/row_factor_classifier.qasm`,
+`artifacts/destructive_semantic/row_factor_oracle.qasm`, and
+`artifacts/destructive_semantic/row_factor_verified.metrics.json`. This is an
+exact correctness baseline, not a destructive-search result.
+
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
 It did not reach affine completion and is weaker than the targeted seed-1
