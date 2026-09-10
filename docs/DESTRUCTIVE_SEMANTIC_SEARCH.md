@@ -411,6 +411,17 @@ The corresponding minimum slot counts are
 provided by six clean ancillas, so it is a structural bound and not yet a
 classifier implementation.
 
+Using two history wires in addition to the six freed input wires gives an
+8-bit reversible branching register. For the order
+`q10,q5,q11,q4,q9,q8,q3,q1,q0,q2,q7,q6`, the first six inputs load 64 distinct
+states; the remaining six controlled transitions require at most 126 tagged
+states, within the 256-state capacity. The final residual slots can be
+assigned output-bit parity 0/1 (77/49 slots), so this is an exact semantic
+embedding model. A straightforward permutation completion has 554 adjacent
+state transpositions before native decomposition, and no QASM has yet been
+claimed. Measurements are in
+`artifacts/destructive_semantic/reversible_width256_slot_machine.metrics.json`.
+
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
 It did not reach affine completion and is weaker than the targeted seed-1
