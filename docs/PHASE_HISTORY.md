@@ -206,6 +206,17 @@ depth 905 / 795 CX (SHA
 `3a1d1d9b5b10ce6ad68124393858e0b458cbf62007363dc5411b4a6abaaa901a`). These
 are validation records for an older route, not new candidates.
 
+## Protected-circuit native retranspilation control
+
+To check whether the current best was an artifact of one transpiler seed,
+`src/search_protected_retranspile.py` reserialized the protected QASM with 48
+deterministic seeds, always using `qubits_initially_zero=False`. Every run
+produced depth 524 / 950 CX. The selected fresh output was exhaustively
+verified on all 4096 inputs and had the exact protected SHA
+`7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147`; the
+files were byte-identical. This closes native seed variation as a source of
+an immediate improvement without touching the protected artifact.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary
