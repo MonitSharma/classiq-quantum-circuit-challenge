@@ -709,3 +709,9 @@ below 323. This closes the shallow persistent-CX escape around the current
 state, but does not rule out deeper linear/nonlinear schedules. Measurements
 are in
 `artifacts/destructive_semantic/residual323_persistent_cx_screens.metrics.json`.
+
+Finally, a higher-degree all-target screen evaluated 132,163 degree-3
+through degree-6 monomial updates, including writes to q13 and q17. The only
+seven proxy hits were equivalent residual-315 six-control corrections already
+identified; none improved below 315. The exact hit list is recorded in
+`artifacts/destructive_semantic/residual323_all_target_high_order_screen.metrics.json`.
