@@ -38,6 +38,8 @@ def _replay(circuit):
             wires[qubits[2]] ^= wires[qubits[0]] & wires[qubits[1]]
         elif operation.name == "rcccx":
             wires[qubits[3]] ^= wires[qubits[0]] & wires[qubits[1]] & wires[qubits[2]]
+        elif operation.name == "cx":
+            wires[qubits[1]] ^= wires[qubits[0]]
         elif operation.name.startswith("mcx"):
             controls = qubits[:-1]
             target = qubits[-1]
@@ -92,6 +94,10 @@ def exact_esop_terms():
             else:
                 negative |= 1 << bit
         sop_cubes.append((positive, negative))
+    # Espresso exposes its cover as a set; sort it before intersection
+    # enumeration so Gaussian pivot choices and the generated classifier are
+    # reproducible across runs.
+    sop_cubes.sort()
 
     terms = []
     seen = set()
@@ -151,9 +157,12 @@ def build_exact_classifier():
             MCXGate(len(controls), ctrl_state=control_state),
             controls + [12],
         )
+    # The ESOP establishes logo = q11 XOR q12. Complete that affine relation
+    # onto the physical phase target before claiming a classifier.
+    circuit.cx(11, 12)
 
     wires = _replay(circuit)
-    if wires[11] ^ wires[12] != TARGET:
+    if wires[12] != TARGET:
         raise AssertionError("exact ESOP classifier replay failed")
     metrics = dict(metrics)
     metrics.update({
@@ -175,9 +184,18 @@ def build_exact_classifier():
     return circuit, metrics
 
 
+def build_oracle():
+    classifier, metrics = build_exact_classifier()
+    oracle = classifier.copy()
+    oracle.z(12)
+    oracle.compose(classifier.inverse(), inplace=True)
+    return oracle, metrics
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--out-qasm", type=Path)
+    parser.add_argument("--out-oracle-qasm", type=Path)
     parser.add_argument("--out-metrics", type=Path)
     args = parser.parse_args()
     with warnings.catch_warnings():
@@ -188,6 +206,7 @@ def main() -> None:
             basis_gates=["u3", "cx"],
             qubits_initially_zero=False,
             optimization_level=3,
+            seed_transpiler=0,
         )
     metrics.update({
         "compiled_forward_depth": compiled.depth(),
@@ -202,6 +221,24 @@ def main() -> None:
         args.out_qasm.parent.mkdir(parents=True, exist_ok=True)
         args.out_qasm.write_text(qasm2.dumps(compiled))
         metrics["qasm_sha256"] = hashlib.sha256(args.out_qasm.read_bytes()).hexdigest()
+    if args.out_oracle_qasm is not None:
+        oracle, _ = build_oracle()
+        oracle_compiled = transpile(
+            oracle,
+            basis_gates=["u3", "cx"],
+            qubits_initially_zero=False,
+            optimization_level=3,
+            seed_transpiler=0,
+        )
+        args.out_oracle_qasm.parent.mkdir(parents=True, exist_ok=True)
+        args.out_oracle_qasm.write_text(qasm2.dumps(oracle_compiled))
+        metrics.update({
+            "oracle_depth": oracle_compiled.depth(),
+            "oracle_cx": oracle_compiled.count_ops().get("cx", 0),
+            "oracle_qasm_sha256": hashlib.sha256(
+                args.out_oracle_qasm.read_bytes()
+            ).hexdigest(),
+        })
     if args.out_metrics is not None:
         args.out_metrics.parent.mkdir(parents=True, exist_ok=True)
         args.out_metrics.write_text(json.dumps(metrics, indent=2) + "\n")

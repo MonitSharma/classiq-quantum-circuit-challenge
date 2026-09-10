@@ -805,11 +805,20 @@ incomplete classifier. The builder and metrics are
 
 An exact-completion branch was also constructed to separate correctness from
 the depth frontier. Espresso reduced the v6 residual to a 51-cube SOP; the
-SOP intersections span an exact 85-term ESOP over the reachable 15-wire chart.
-Applying those terms as MCX corrections makes q11 XOR q12 equal the logo for
-all 4,096 inputs. The complete classifier compiles to depth 9,665 / 6,646 CX
-in the required U3/CX basis, so it is a correctness artifact and not a
-competitive candidate. Its builder and metrics are
+SOP intersections span an exact 84-term ESOP over the reachable 15-wire chart.
+Applying those terms as MCX corrections and a final `CX(q11,q12)` makes q12
+equal the logo for all 4,096 inputs. The complete classifier compiles to depth
+9,558 / 6,545 CX in the required U3/CX basis, so it is a correctness artifact
+and not a competitive candidate. Its builder and metrics are
 `src/high_order_affine_exact_esop.py` and
 `artifacts/destructive_semantic/high_order_affine_exact_esop.metrics.json`.
-The corresponding phase oracle has not yet been exhaustively verified.
+
+After adding the required affine-completion CX and regenerating the full
+`C†ZC`, the existing exhaustive verifier passed all 4,096 clean-ancilla
+inputs with zero leakage within numerical tolerance and a shared global phase.
+The deterministic serialized oracle was depth 18,756 / 12,812 CX; its
+temporary validation QASM SHA256 was
+`f3271a54ab2f33bf8b213f90b8b9c3d31221f319c92005298f94d80c8d946ef5`. The
+source now exposes `build_oracle()` and `--out-oracle-qasm` so this exact
+correctness artifact can be regenerated; it remains far outside the depth
+objective and makes no leaderboard claim.
