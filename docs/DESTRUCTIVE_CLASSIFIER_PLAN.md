@@ -174,6 +174,10 @@ A beam-16 divergent double-RCCX continuation seeded from that residual-349
 state stayed at residual 349 after four layers, including exact scoring of
 eight leaders; the local basin therefore needs a different move family.
 
+A four-layer forward-affine-control continuation likewise stayed at residual
+349, confirming that this affine-prefix variant does not escape the basin in
+the tested window.
+
 A cold seed-42 triple-RCCX beam reached residual 531 at estimated depth 77
 after four layers; it did not reach affine completion and is weaker than the
 targeted seed-1 basin.

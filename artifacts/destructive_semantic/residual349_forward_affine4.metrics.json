@@ -1,0 +1,22 @@
+{
+  "experiment": "forward-affine-control continuation from residual-349 state",
+  "seed": 1001,
+  "beam_width": 16,
+  "layers": 4,
+  "proposal_limit": 4,
+  "proxy_order": 3,
+  "forward_affine_controls": true,
+  "pareto_beam": true,
+  "exact_top": 8,
+  "base_residual": 349,
+  "residual": 349,
+  "exact_affine_distance": 349,
+  "estimated_forward_depth": 196,
+  "target_marked_states": 1097,
+  "affine_solution": null,
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "elapsed_seconds": 225.41496992111206,
+  "semantic_hash": "f76a68c1e942d07a13503b86ac9b28d6",
+  "note": "Destructive forward-affine controls did not escape the residual-349 basin in four layers."
+}
