@@ -359,6 +359,14 @@ candidate oracle and no QASM was generated. The result is preserved as
 `artifacts/destructive_semantic/nonabelian_l16_initial.metrics.json`; the
 prototype remains a research direction rather than a correctness result.
 
+The non-Abelian direction now also has a Z3 hard-constraint probe in
+`src/nonabelian_z3_synth.py`. A four-instruction one-pass schedule over bits
+0--3 was proven unsatisfiable in 1.411 seconds. The full 12-instruction
+schedule under the residual-oriented variable order reached the 60-second
+solver timeout, so it is recorded as unknown rather than treated as an
+impossibility result. Measurements are in
+`artifacts/destructive_semantic/nonabelian_z3_bounded.metrics.json`.
+
 The target was also converted into an exact layered residual-function
 branching program using variable order
 `q0,q1,q2,q3,q4,q5,q11,q8,q6,q7,q9,q10`. The layer state counts are
