@@ -1382,3 +1382,9 @@ A matched mixed screen added all 2,448 RCCX moves to the 2,448 Fredkin moves
 **827, 759, 703** through three layers, so the extra primitive did not escape
 the shallow basin. The result is recorded in
 `artifacts/destructive_semantic/fredkin_mixed_screen_seed20261005.metrics.json`.
+
+A deeper beam-32 continuation (five layers, 4,896 proposals per state) reached
+**827, 759, 703, 647, 639** exact residuals. It still did not approach the
+known residual-447 destructive frontier or enter the affine span, so the mixed
+Fredkin/RCCX family is closed at this bounded depth. The result is recorded in
+`artifacts/destructive_semantic/fredkin_mixed_screen_seed20261006.metrics.json`.

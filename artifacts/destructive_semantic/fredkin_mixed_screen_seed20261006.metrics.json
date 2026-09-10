@@ -1,0 +1,18 @@
+{
+  "experiment": "mixed destructive Fredkin/RCCX semantic beam screen",
+  "seed": 20261006,
+  "beam_width": 32,
+  "layers": 5,
+  "move_count": 4896,
+  "target_marked_states": 1097,
+  "exact_residual_by_layer": [827, 759, 703, 647, 639],
+  "estimated_forward_depth_by_layer": [9, 18, 27, 36, 45],
+  "best_moves": [
+    ["fredkin", 10, 11, 15],
+    ["fredkin", 5, 11, 12],
+    ["fredkin", 12, 9, 13],
+    ["fredkin", 8, 13, 16],
+    ["rccx", 4, 16, 11]
+  ],
+  "status": "verified semantic negative; no affine completion or QASM candidate"
+}
