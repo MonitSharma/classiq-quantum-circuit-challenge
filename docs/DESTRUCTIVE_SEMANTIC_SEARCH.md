@@ -151,3 +151,11 @@ compiled to forward depth 59 and 34 CX gates. This is the best current
 destructive-search heuristic result, but it still has no affine completion.
 Compact evidence is in
 `artifacts/destructive_semantic/double_b16x6_p4.metrics.json`.
+
+The layer-6 checkpoint was resumed to layer 10 with the same deterministic
+configuration. The best state improved to exact affine residual 581 at layer 9
+(18 RCCXs in its retained history); its serialized forward circuit measured
+depth 88 and 52 CX gates. This crosses the nominal forward-depth screening
+threshold, but it is not a classifier: the target wire still mismatches 581
+of 4,096 inputs, so no phase oracle was constructed or verified. Evidence is
+in `artifacts/destructive_semantic/double_resume_b16x10_p4.metrics.json`.

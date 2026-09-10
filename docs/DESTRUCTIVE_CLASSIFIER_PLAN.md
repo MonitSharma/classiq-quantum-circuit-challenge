@@ -116,3 +116,8 @@ pairs. A beam-16, six-layer run reached residual 593 after 12 RCCXs at
 estimated depth 77; the serialized forward circuit measured depth 59 and 34
 CX gates. This is the best current destructive-search heuristic result, but no
 affine completion or complete phase oracle has been found.
+
+Resuming that beam through layer 10 improved the residual to 581. The retained
+18-RCCX history compiled to forward depth 88 and 52 CX gates, which is a
+promising screening depth but not a valid classifier: 581 midpoint inputs
+still mismatch, and no complete phase oracle was constructed or verified.
