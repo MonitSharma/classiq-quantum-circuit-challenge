@@ -304,6 +304,13 @@ are in `artifacts/destructive_semantic/row_factor_classifier.qasm`,
 `artifacts/destructive_semantic/row_factor_verified.metrics.json`. This is an
 exact correctness baseline, not a destructive-search result.
 
+A direct-target triple-RCCX control was also run from seed 2024 (beam 16,
+four layers, proposal limit 4). It reached 589 mismatches on its best
+physical wire at estimated depth 63 after 12 RCCXs. This is weaker than the
+existing direct-target residual-501 frontier and remains an incomplete
+classifier; its exact history is recorded in
+`artifacts/destructive_semantic/direct_triple_seed2024_b16x4_p4.metrics.json`.
+
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
 It did not reach affine completion and is weaker than the targeted seed-1
