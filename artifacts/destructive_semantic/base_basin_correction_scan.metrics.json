@@ -1,0 +1,40 @@
+{
+  "experiment": "preserved-base high-order correction basin scan",
+  "scope": "seven preserved double-RCCX base artifacts with exact affine residual at most 447",
+  "results": [
+    {
+      "base": "double_seed1_b64x10_p4_residual359.json",
+      "base_depth": 107,
+      "base_residual": 359,
+      "best_one_step_residual": 331,
+      "correction": [12, [2, 3, 4, 11]]
+    },
+    {
+      "base": "double_seed1_b32x10_p4_pareto_depth91.json",
+      "base_depth": 91,
+      "base_residual": 383,
+      "best_one_step_residual": 347,
+      "correction": [11, [2, 3, 4, 8, 17]]
+    },
+    {
+      "base": "double_seed1_b64x9_p4_depth84.json",
+      "base_depth": 84,
+      "base_residual": 379,
+      "best_one_step_residual": 335,
+      "correction": [15, [2, 3, 4, 11]]
+    },
+    {
+      "base": "double_seed42_b16x6_p4_depth59.json",
+      "base_depth": 59,
+      "base_residual": 447,
+      "best_one_step_residual": 387,
+      "correction": [12, [2, 3, 4, 11]]
+    }
+  ],
+  "current_best_reference": {
+    "candidate": "high_order_affine_fused_tail",
+    "compiled_forward_depth": 102,
+    "corrected_affine_residual": 323
+  },
+  "status": "no alternative preserved base currently beats the depth-102/residual-323 frontier"
+}

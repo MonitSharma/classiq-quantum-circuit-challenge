@@ -694,3 +694,10 @@ factor can be computed once and reused, but the exact two-workspace lowering
 still compiles to depth 160 / 117 CX. It is therefore a semantic insight and
 native rejection, recorded in
 `artifacts/destructive_semantic/residual323_greedy_esop.metrics.json`.
+
+A comparison scan over the preserved double-RCCX bases found no better
+starting basin for the native objective. The best alternative one-step
+semantic result is residual 331 from a depth-107 base; the current fused
+candidate remains depth 102 with residual 323. The representative basin
+measurements are in
+`artifacts/destructive_semantic/base_basin_correction_scan.metrics.json`.
