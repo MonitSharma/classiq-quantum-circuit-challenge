@@ -727,3 +727,12 @@ the residual-323 depth-102 candidate, but it gives a lower-depth basis for
 further signed-control search. The builder and metrics are
 `src/high_order_affine_signed_controls.py` and
 `artifacts/destructive_semantic/high_order_affine_signed_controls.metrics.json`.
+
+A mixed signed/positive chain improves the depth/residual tradeoff further:
+the five-control signed correction followed by
+`q12 ^= q2q3q4q11` gives exact affine residual 331 at forward depth 92 / 60
+CX. Both clean ancillas are restored over all 4,096 inputs. This crosses the
+nominal sub-190 forward-depth screen but is still not an exact classifier or
+verified phase oracle. The builder and metrics are
+`src/high_order_affine_signed_mixed.py` and
+`artifacts/destructive_semantic/high_order_affine_signed_mixed.metrics.json`.
