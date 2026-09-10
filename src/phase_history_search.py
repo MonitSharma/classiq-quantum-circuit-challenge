@@ -10,6 +10,7 @@ points, followed by the exact inverse trajectory, implement the target phase.
 from __future__ import annotations
 
 import argparse
+from functools import lru_cache
 import hashlib
 import json
 import pickle
@@ -38,6 +39,26 @@ def truth_table_hash(value: int) -> str:
     return hashlib.blake2b(
         value.to_bytes((N_INPUTS + 7) // 8, "little"), digest_size=12
     ).hexdigest()
+
+
+@lru_cache(maxsize=1)
+def rank_product_hints() -> tuple[int, ...]:
+    """Load the exact ten product truth tables from the rank decomposition."""
+    path = Path(__file__).resolve().parents[1] / "artifacts" / "rank_terms.json"
+    if not path.exists():
+        return ()
+    terms = json.loads(path.read_text())
+
+    def lift(table: int, side: str) -> int:
+        value = 0
+        for y in range(64):
+            for x in range(64):
+                coordinate = x if side == "x" else y
+                if (table >> coordinate) & 1:
+                    value |= 1 << (y * 64 + x)
+        return value
+
+    return tuple(lift(x, "x") & lift(y, "y") for x, y in terms)
 
 
 @dataclass(frozen=True)
@@ -351,9 +372,19 @@ def history_score(state: HistoryState) -> tuple:
         for signal in state.basis.signals
         if signal.step >= 0
     )
+    hints = rank_product_hints()
+    hint_coverage = sum(state.basis.solve(hint) is not None for hint in hints)
+    best_hint = min(
+        (signal.value ^ hint).bit_count()
+        for signal in state.basis.signals
+        if signal.step >= 0
+        for hint in hints
+    ) if hints else 0
     return (
         0 if state.basis.solve(TARGET) is not None else 1,
+        -hint_coverage,
         greedy.bit_count(),
+        best_hint,
         best_single,
         remainder.bit_count(),
         -state.basis.rank,
@@ -368,6 +399,7 @@ def history_proposals(
 ) -> list[Gate]:
     """Generate bounded RCCX proposals using history-aware cheap filters."""
     target_remainder = state.basis.remainder(TARGET)
+    hints = rank_product_hints()
     proposals = []
     for a in range(N_WIRES):
         for b in range(a + 1, N_WIRES):
@@ -387,7 +419,10 @@ def history_proposals(
                     continue
                 distance = (target_remainder ^ new_value).bit_count()
                 direct = (TARGET ^ new_value).bit_count()
-                proposals.append((novelty, min(distance, direct), rng.random(),
+                hint_distance = min(
+                    (new_value ^ hint).bit_count() for hint in hints
+                ) if hints else 0
+                proposals.append((novelty, hint_distance, min(distance, direct), rng.random(),
                                   ("rccx", a, b, target)))
     if include_rc3x:
         for a in range(N_WIRES):
@@ -405,10 +440,13 @@ def history_proposals(
                             continue
                         distance = (target_remainder ^ new_value).bit_count()
                         direct = (TARGET ^ new_value).bit_count()
-                        proposals.append((novelty, min(distance, direct), rng.random(),
+                        hint_distance = min(
+                            (new_value ^ hint).bit_count() for hint in hints
+                        ) if hints else 0
+                        proposals.append((novelty, hint_distance, min(distance, direct), rng.random(),
                                           ("rc3x", a, b, c, target)))
     proposals.sort()
-    return [gate for _, _, _, gate in proposals[:limit]]
+    return [gate for _, _, _, _, gate in proposals[:limit]]
 
 
 def history_layer_proposals(

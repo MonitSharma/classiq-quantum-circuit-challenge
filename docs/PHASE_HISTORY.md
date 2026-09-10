@@ -103,6 +103,12 @@ nonconstant terms. A future multiplicative-depth/XAG tool should consume this
 structure as proposal guidance while the phase-history engine remains the
 actual oracle-construction path.
 
+The exact ten rank-decomposition product truth tables are also used as
+structural hints in the beam score. The first bounded RCCX/RC3X hinted run
+found zero of those products exactly in the historical span, so proximity to
+known products alone is insufficient; the result is retained under
+`artifacts/phase_history/hinted_seed505_b8_l4/`.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary
