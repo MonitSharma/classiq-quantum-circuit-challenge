@@ -2002,6 +2002,20 @@ Exhaustive verification covered all 4,096 inputs with max error
 `1.204108528388714e-13`, ancilla error `5.711331530985915e-15`, and
 discarded-amplitude bound `1.852274578072021e-12`. This remains noncompetitive
 but is the strongest exact destructive completion measured so far.
+
+## Destructive two-clean-wire ESOP continuation (September 10, 2026)
+
+After q17’s last use, its retained computations were inverted so q13 and q17
+were both clean. The two-clean-ancilla `synth_mcx_2_clean_kg24` lowering
+measured **4,857/3,950** forward depth/CX and **9,622/7,808** for the complete
+oracle. The verified QASM is
+`artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_oracle.qasm`
+with SHA256
+`6385d6c8ab16886b0e664567da36c9d42945e2780ef3be4f3339f8249d0320c4`.
+Exhaustive verification covered all 4,096 inputs with max error
+`9.740914858222903e-14`, zero ancilla error, and discarded-amplitude bound
+`1.412328984831398e-12`. This is the strongest exact destructive completion
+measured so far, but remains noncompetitive.
 ## QFT coordinate-recoding diagnostic (September 10, 2026)
 
 An exact QFT-based conditional modular adder was tested as the cheap first

@@ -851,3 +851,16 @@ Exhaustive verification covered all 4,096 inputs with max error
 discarded-amplitude bound `1.852274578072021e-12`. This is still a
 noncompetitive correctness artifact, but it is the strongest exact
 destructive completion measured so far.
+
+Finally, q17’s retained computations were inverted after their last use,
+leaving both q13 and q17 clean. The two-clean-ancilla
+`synth_mcx_2_clean_kg24` lowering reduced the exact classifier to **4,857 /
+3,950** and the complete oracle to **9,622 / 7,808** depth/CX. The verified
+candidate is `src/high_order_affine_exact_esop_clean2.py` with QASM
+`artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_oracle.qasm`
+and SHA256
+`6385d6c8ab16886b0e664567da36c9d42945e2780ef3be4f3339f8249d0320c4`.
+Exhaustive verification covered all 4,096 inputs with max error
+`9.740914858222903e-14`, zero ancilla error, and discarded-amplitude bound
+`1.412328984831398e-12`. This is the strongest exact destructive completion
+currently measured, but remains noncompetitive.
