@@ -349,6 +349,13 @@ still useful as a structural target for a transition synthesis that exploits
 state-local controls. Measurements are in
 `artifacts/destructive_semantic/residual_state_code_naive.metrics.json`.
 
+Transition analysis shows why a local overwrite needs explicit garbage: the
+maximum fixed-bit fan-in by layer is
+`1,1,1,2,4,9,2,3,5,5,3,2`, requiring up to four distinguishing garbage bits
+for an injective local embedding. These exact counts are in
+`artifacts/destructive_semantic/residual_transition_fanin.metrics.json` and
+rule out the simpler one-consumed-bit transition construction.
+
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
 It did not reach affine completion and is weaker than the targeted seed-1
