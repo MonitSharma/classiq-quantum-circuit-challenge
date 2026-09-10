@@ -1,0 +1,66 @@
+# Phase-history synthesis
+
+This branch explores the phase oracle directly. The required action is
+
+\[
+|x,y,0^6\rangle \mapsto (-1)^{logo(x,y)}|x,y,0^6\rangle,
+\]
+
+not necessarily computation of `logo(x,y)` into a final classical wire.
+
+## Construction
+
+If a reversible forward trajectory `G` temporarily places Boolean function
+`W` on a physical wire, a `Z` at that point contributes
+`(-1)^W`. After the complete trajectory is reversed, the computational state
+is restored and the phase remains. Therefore the target is sufficient if
+
+`TARGET ∈ span_GF(2)({W_j^(t)} ∪ {1})`.
+
+`src/phase_history_search.py` stores each 4096-bit truth table as a Python
+integer, maintains an incremental GF(2) basis, and retains provenance for each
+independent signal. The exact decomposition is back-solved before any circuit
+is constructed. Duplicate truth tables do not increase rank; their occurrence
+locations are retained for later tap scheduling.
+
+`src/build_phase_history_oracle.py` emits the forward primitive sequence, the
+selected historical `Z` taps, and the exact inverse sequence. Boolean history
+membership is only a necessary construction step: every serialized candidate
+must still pass `src/exhaustive_verify.py`.
+
+## Initial trajectory audit
+
+The audit replayed the preserved destructive histories without judging them by
+their old final-state affine residual. Ranks include the constant-one signal.
+The fused-tail history was reconstructed from its builder and includes its
+four RC3X operations.
+
+| History | Primitive gates | Forward depth | Forward CX | Unique signals | Historical rank | Logo in span? |
+|---|---:|---:|---:|---:|---:|---|
+| seed 42, depth-59 candidate | 12 RCCX | 59 | 32 | 25 | 23 | No |
+| seed 42, depth-73 candidate | 18 RCCX | 73 | 46 | 31 | 25 | No |
+| seed 1, depth-84 candidate | 18 RCCX | 84 | 48 | 31 | 28 | No |
+| fused-tail candidate | 20 RCCX + 4 RC3X | 102 | 72 | 32 | 30 | No |
+
+Reports are in
+`artifacts/phase_history/existing_trajectory_audit/`. These negative results
+are expected: they validate the new exact machinery and show that the first
+shallow basins do not already contain a solution.
+
+## Verification status
+
+The incremental basis, nonlinear history identity, duplicate handling,
+complement/global-phase handling, full 4096-point semantic replay, and a
+three-qubit forward/Z-tap/inverse quantum round trip are covered by
+`tests/test_phase_history.py`.
+
+No full-logo phase-history candidate has yet entered the exact historical span.
+The protected baseline remains untouched at depth 524, 950 CX, SHA
+`7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147`.
+
+## Next experiment
+
+The next search should use cumulative-history membership as its primary
+objective, generate wire-disjoint RCCX layers with bounded proposal counts,
+and track actual `u3`/`cx` depth for promising forward trajectories. It must
+preserve checkpoints and write new artifacts under `artifacts/phase_history/`.

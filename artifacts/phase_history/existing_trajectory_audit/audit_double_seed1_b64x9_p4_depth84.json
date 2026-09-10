@@ -1,0 +1,15 @@
+{
+  "primitive_count": 18,
+  "historical_unique_signals": 31,
+  "historical_rank": 28,
+  "target_marked_states": 1097,
+  "target_in_history_span": false,
+  "target_reconstructed_exactly": false,
+  "complement_reconstructed_exactly": false,
+  "tap_count": 0,
+  "final_semantic_hash": "319a221eb01b3d578ebdbf358501db9f",
+  "gate_kinds": {
+    "rccx": 18
+  },
+  "provenance": null
+}
