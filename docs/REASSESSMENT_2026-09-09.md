@@ -1,5 +1,7 @@
 # Reassessment: why 524 is stuck, and what 197 must look like
 
+Qualification from the [subsequent research review](RESEARCH_REVIEW_2026-09-09.md): this document's deductions about the leader's architecture, CX as a binding scoring constraint, and the necessity of a particular sweep structure are hypotheses or overstatements, not proofs. Depth is the primary score. The new review supplies exact scope for the UCR and feature-coding obstructions, including a 405-layer bound for reordering the current fixed gate multiset. Read that review before treating the conclusions below as exclusions of other architectures.
+
 Written September 9, 2026. Nothing in this document supersedes a verified
 artifact. The protected best remains
 `artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524 depth / 950 CX /

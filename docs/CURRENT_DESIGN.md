@@ -1,6 +1,6 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
-Implementation: `src/full_mux.py` / `src/feature_linear_encoding.py`, importing
+ Implementation: `src/full_mux.py` / `src/feature_linear_encoding.py`, importing
 the radius, phase-cube, and pair helpers. The protected post-processed artifact
 is `artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524 depth / 950
 CX / 18 qubits**, with matching exhaustive verification. This architecture is

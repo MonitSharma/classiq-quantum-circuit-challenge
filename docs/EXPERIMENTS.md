@@ -1,5 +1,7 @@
 # Experiment history and failure notes
 
+Latest research-only diagnostics: [literature and repository review](RESEARCH_REVIEW_2026-09-09.md), reproduced by `src/research_structure_audit.py`. The protected **524/950/18** artifact has a fixed-gate per-wire depth bound of 405. Row coding with retained y5 needs only three additional bits in principle (7/6 conditional classes), but a shared code depending only on low5 y needs at least five bits (18 ordered row-pair classes). Removing x0 leaves an exact 45-pixel, rank-9 correction. These are classical analysis results, not new circuit scores; no old searches were rerun.
+
 ## Disjoint geometry architecture (September 9, 2026)
 
 The exact geometric rewrite `A XOR B' XOR C XOR D` was checked over all 4096

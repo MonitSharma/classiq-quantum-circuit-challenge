@@ -1,6 +1,6 @@
 # Classiq challenge optimization workspace
 
-The objective is to reach rank 1 in the [Classiq challenge](https://www.classiq.io/challenge). Work is unfinished: the protected best locally verified circuit has **depth 524, 950 CX gates, and 18 qubits**. As of September 9, 2026 the leader was Daksh S. at depth 197 / 475 CX; see docs/REASSESSMENT_2026-09-09.md. Nothing has been submitted, and no rank-1 claim is made.
+The objective is to reach rank 1 in the [Classiq challenge](https://www.classiq.io/challenge). Work is unfinished: the protected best locally verified circuit has **depth 524, 950 CX gates, and 18 qubits**. As of September 9, 2026 the leader was Daksh S. at depth 197 / 475 CX; see docs/REASSESSMENT_2026-09-09.md. Nothing has been submitted, and no rank-1 claim is made. See the [research review](docs/RESEARCH_REVIEW_2026-09-09.md) for the repository audit and prior experiments.
 
 Handoff updated September 10, 2026 (Asia/Singapore). Start with [the handoff](docs/HANDOFF.md), then read [the experiment history](docs/EXPERIMENTS.md) and [the current design](docs/CURRENT_DESIGN.md). [AGENTS.md](AGENTS.md) records essential correctness constraints for a new agent.
 
@@ -31,6 +31,6 @@ OPENBLAS_NUM_THREADS=1 .venv/bin/python src/exhaustive_verify.py artifacts/524/f
 OPENBLAS_NUM_THREADS=1 .venv/bin/python src/verify.py artifacts/524/full_mux_feature_linear_tket_524.qasm 5
 ```
 
-The first command was completed successfully on all 4,096 basis inputs. Neither command submits anything.
+The packaged reports record successful exhaustive checking on all 4,096 inputs and dense random-state checks. Neither command submits anything.
 
 Do not assume every QASM under `artifacts/` is valid. Several older experimental circuits were invalid because of a compiler initialization assumption. Read the handoff before reusing them.
