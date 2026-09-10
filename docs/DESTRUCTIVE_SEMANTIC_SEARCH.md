@@ -1336,3 +1336,20 @@ corrections with one-dirty-ancilla MCX blocks produced a forward circuit of
 **2,449/1,380** depth/CX, so the semantic improvement is not native-depth
 competitive and was not promoted. Metrics are in
 `artifacts/destructive_semantic/no_uncompute_v6_greedy_factor_chain.metrics.json`.
+
+## Global phase-edge retention (September 11, 2026)
+
+The next structural hypothesis was tested directly: combine all ten rank-factor
+products into one dependency graph and retain dirty intermediates across phase
+edges and across products, instead of clearing the six-ancilla pool after every
+factor. The combined graph had 91 nonlinear nodes and 87 GF(2)-surviving phase
+edges. The best bounded schedule (greedy shared-edge order) used 211 compute and
+211 uncompute actions with six live ancillas.
+
+The serialized U3/CX candidate measured **3,164/3,232** at width 18 and passed
+the exhaustive verifier on all 4,096 clean-ancilla inputs (maximum error
+`9.95e-14`, zero ancilla leakage). This is a verified negative result against
+the protected 524/950 oracle: global lifetime retention alone does not remove
+enough nonlinear work. The QASM was not promoted or retained in the repository;
+the exact SHA is recorded in
+`artifacts/destructive_semantic/global_phase_retention.metrics.json`.
