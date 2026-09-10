@@ -243,6 +243,14 @@ depth 125 and 65 CX gates, so it is a lower-residual but deeper frontier point.
 The compact continuation record is in
 `artifacts/destructive_semantic/double_seed1_targeted_triple_residual355.json`.
 
+A further targeted continuation reduced the exact affine residual to 349. The
+29-RCCX history compiled to forward depth 149 and 83 CX gates, with affine
+combination `(11,17)`. This is lower residual but materially deeper than the
+residual-359/depth-107 frontier point, and direct target-wire replay still had
+1057 mismatches. It is recorded in
+`artifacts/destructive_semantic/targeted_triple_residual349.json` and is not a
+complete classifier or phase oracle.
+
 A wider seed-1 beam (64 states) found a stronger depth-screening point at
 residual 403. Its 16-RCCX history compiled to forward depth 90 and 46 CX
 gates, improving the depth-91 Pareto point while reducing CX count. The

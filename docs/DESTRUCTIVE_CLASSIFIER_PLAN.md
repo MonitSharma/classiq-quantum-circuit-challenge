@@ -166,6 +166,10 @@ seed-1 control reached residual 575 at compiled depth 53; a local probe around
 the residual-359 basin reached residual 355, so it is retained for targeted
 continuations but is not the default search path.
 
+A further targeted continuation reached exact affine residual 349, but its
+29-RCCX circuit compiled to forward depth 149 and 83 CX gates. No affine
+completion or complete phase-oracle verification has been reached.
+
 Seed 42 produced a substantially stronger shallow point: affine residual 447
 at compiled forward depth 59 with 32 CX gates. It dominates the seed-94
 shallow candidate, but remains incomplete and unverified.
