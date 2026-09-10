@@ -217,6 +217,16 @@ verified on all 4096 inputs and had the exact protected SHA
 files were byte-identical. This closes native seed variation as a source of
 an immediate improvement without touching the protected artifact.
 
+## Six-way parallel higher-order beam diagnostic
+
+The capped search at
+`artifacts/phase_history/search_seed1001_b8_l8_p6/` explicitly allowed up to
+six wire-disjoint nonlinear proposals per layer, including RC3X and affine
+macros. With beam 8, proposal limit 16, and eight layers, it reached estimated
+forward depth 84 and historical rank 22, but exact target membership remained
+false; product- and factor-hint coverage were both zero. The checkpointed
+frontier is retained as a reproducible negative diagnostic, not as an oracle.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary
