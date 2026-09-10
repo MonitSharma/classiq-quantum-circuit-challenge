@@ -658,7 +658,8 @@ tested and remained depth 102 / 72 CX.
 Additional residual-323 screens found no shorter continuation: all single
 monomial updates through five controls, all ordered pairs of target-wire
 RCCX updates, and all pairs of affine forms built from up to three current
-wires failed to improve the residual. A deterministic sample of 300,000
+wires failed to improve the residual. An exhaustive 4,710-pair degree-five
+continuation also found no improvement. A deterministic sample of 300,000
 three-affine-form products also found no improvement. These are semantic
 pruning results, not a proof of optimality; the exact scopes and the one
 six-control exception are recorded in

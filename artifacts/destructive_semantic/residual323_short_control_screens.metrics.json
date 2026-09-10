@@ -17,6 +17,10 @@
       "scope": "all 210 single RCCX choices for each of two target wires, two ordered steps",
       "improvement_below_323": false
     },
+    "two_degree5_target_corrections": {
+      "scope": "all 4710 ordered pairs of degree-five monomials targeting q11 or q12",
+      "improvement_below_323": false
+    },
     "two_affine_form_product": {
       "scope": "all pairs of XOR forms of up to three current wires, with complements",
       "improvement_below_323": false
