@@ -1,0 +1,13 @@
+qperm logo_phase_oracle(const x: qnum<6>, const y: qnum<6>) {
+  control (((((((x >= 2) & (x <= 26)) & (y >= 29)) & (y <= 53)) | ((((x >= 26) & (x <= 49)) & (y >= 39)) & (y <= 43))) | ((((x - 55) ** 2) + ((y - 41) ** 2)) <= 42)) | ((((x - 40) ** 2) + ((y - 19) ** 2)) <= 72)) {
+    phase (pi);
+  }
+}
+
+qfunc main(output x: qnum<6>, output y: qnum<6>) {
+  allocate(x);
+  allocate(y);
+  hadamard_transform(x);
+  hadamard_transform(y);
+  logo_phase_oracle(x, y);
+}

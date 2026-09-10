@@ -1,0 +1,23 @@
+{
+  "basis": "pair_terms",
+  "order": [
+    9,
+    5,
+    3,
+    6,
+    7,
+    8,
+    0,
+    2,
+    1,
+    4
+  ],
+  "edge_path_score": {
+    "depth": 1372,
+    "cx": 1375
+  },
+  "depth": 1227,
+  "cx": 1361,
+  "width": 18,
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/exact_stream_pair_terms_development.qasm"
+}

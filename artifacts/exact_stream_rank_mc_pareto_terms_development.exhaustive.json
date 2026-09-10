@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/exact_stream_rank_mc_pareto_terms_development.qasm",
+  "sha256": "dd7c71425f88f96ec24363e21f54b2494039943cff929c74862d8a73cfb261ff",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 1303,
+  "cx_count": 1455,
+  "max_error": 2.2512428297064565e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 2.1840078975321947e-13,
+  "peak_sparse_support": 256,
+  "elapsed_seconds": 10.329731225967407,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

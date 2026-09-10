@@ -1,0 +1,14 @@
+{
+  "indices": [
+    0,
+    1,
+    2
+  ],
+  "basis": "rank_terms",
+  "x_tree_score": 203,
+  "y_tree_score": 158,
+  "depth": 1611,
+  "cx": 1895,
+  "width": 18,
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/cofactor_rank_bank_012_hp24_development.qasm"
+}

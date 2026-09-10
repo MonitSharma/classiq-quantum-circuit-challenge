@@ -2,7 +2,7 @@
 
 ## State at handoff
 
-Updated September 8, 2026. The user wants the top rank, and most recently requested Markdown files containing everything tried, including failures, so a different chat/agent can continue. This is a research/optimization workspace, not a finished rank-1 submission.
+Updated September 10, 2026. The user wants the top rank, and the workspace now records the full experiment history, including failures. This is a research/optimization workspace, not a finished rank-1 submission.
 
 Best (superseded, see the second continuation section below): `artifacts/full_mux.qasm`, depth **536**, CX **1020**, width **18**, generator seed **94**. The exhaustive verifier completed successfully on all 4096 clean-ancilla input basis states: maximum numerical error 1.4816382783292104e-14, ancilla error 0, accumulated discarded-amplitude bound 2.7656819215066786e-14, peak sparse support 64. Its report is `artifacts/full_mux.exhaustive.json`. SHA-256:
 
@@ -849,6 +849,29 @@ ancilla leakage. This is phase-safe but slower than the 257/535 UCR batch;
 direct y ESOP phase cubes remain the bottleneck. A shared phase-gadget
 compiler is required before extending this formulation beyond three terms.
 
+The exact two-live-pair vector continuation was also tested in
+`src/exact_vector_stream.py`. It kept two x/y factor pairs live in q12..q15,
+used q16,q17 as clean transition scratch, and streamed five consecutive
+two-term groups. The complete verified scores were **2948/1702** for
+`pair_terms`, **2774/1601** for `rank_terms`, and **2716/1576** for
+`rank_mc_pareto_terms`, all at width 18 with zero ancilla leakage. This exact
+vector stream is a negative result; the current path does not justify a
+relative-phase extension without changing the transition representation.
+
+The exact one-live-pair stream requested in the next research plan was then
+implemented in `src/exact_stream.py`. It uses phase-free MCX transitions between
+factor states, scores all zero/term edges in native `u3`/`cx`, and solves the
+term order with Held--Karp. The best complete verified result is the
+`pair_terms` candidate `artifacts/exact_stream_pair_terms_development.qasm` at
+**1227/1361/18**, SHA
+`f44158faeac79cd6623b893d78fa00a505471f96ca90040be81229f1ce2cd3d1`.
+The corresponding `rank_terms` and `rank_mc_pareto_terms` candidates score
+1267/1322 and 1303/1455. All three passed exhaustive 4096-input verification
+with zero ancilla leakage; the best pair candidate also passed five dense
+full-support states. Exact one-pair streaming is therefore closed by the
+400-depth cutoff. The historical stream's full reverse cleanup was not the
+only issue: exact native transition costs and repeated factor deltas dominate.
+
 The complete integration was then tested in `src/cofactor_full_oracle.py`,
 using groups `(0,1,2)`, `(3,4,5)`, `(6,7,8)`, and `(9,)`. The exact standalone
 logo candidate is `artifacts/cofactor_full_rank_phase_development.qasm` at
@@ -859,3 +882,293 @@ passed exhaustive verification over all 4096 logo inputs with maximum error
 passed with maximum error `4.89e-16`. This is the full-problem score, and it
 is decisively worse than the protected 524/950 oracle. The cofactor
 temporary-product route is closed in this form.
+
+The final bounded cofactor check used explicit exact HP24 no-ancilla MCX
+lowering in `src/cofactor_rank_bank_hp24.py`. Its verified three-term product
+candidate `artifacts/cofactor_rank_bank_012_hp24_development.qasm` measures
+**1611/1895/18**, SHA
+`ed81bf69e55db8fc72bfa168c9a5b7aeecd2ac4f9049425fbfc79053109f654a`.
+All 4096 product inputs passed with zero ancilla leakage, but the result is
+worse than both the ordinary cofactor control and the 257/535 UCR batch.
+Explicit HP24 lowering does not rescue the cofactor architecture.
+
+## Closed architecture branches (September 10, 2026)
+
+Stateful factor streaming, multi-live-factor streaming, and Shannon/cofactor
+materialization are now closed as primary routes. Exact one-pair streaming
+bottomed out at 1227/1361/18; exact two-pair streaming at 2716/1576/18; and
+the cofactor/HP24 experiments remained far above the protected result or failed
+exact phase checks. Do not reopen these with incremental seed or helper changes.
+The protected fallback remains
+`artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524/950/18**, with
+matching exhaustive and dense verification.
+
+## Conditionally-clean cofactor pilot (September 10, 2026)
+
+`src/conditionally_clean_cofactor.py` regenerated the proposed selector
+profiles from the authoritative logo predicate. The four-bit split
+`(x5,y3,y4,y5)` has nine nonzero branches with ranks
+`4,2,1,3,2,4,2,4,1`; the complete screen is in
+`artifacts/conditionally_clean_screen.json`.
+
+The hardest rank-4 branch, assignment 3 (`x5=1,y3=1,y4=0,y5=0`), was compiled
+both conservatively and with selector wires borrowed as dirty ancillas. The
+safe reference scored **946/518/18**. The conditionally-clean candidate
+`artifacts/conditionally_clean_branch_3_borrowed.qasm` scored **904/522/18**,
+SHA `70c32ab29c4fd7d9af61fcf21fb2d59ef0bece7fec3fe2c9193b80a379785a0c`, and
+passed a branch-specific exhaustive check with zero ancilla leakage. The
+candidate marks only that cofactor; its report must not be mistaken for a
+complete-logo verification.
+
+The workspace mechanism is therefore valid, but independent ESOP phase-cube
+lowering is far too deep. Do not integrate all branches yet. The next and
+only justified follow-up is to factor the residual truth table before quantum
+lowering; if that remains above the local cutoff, close this direction too.
+
+The branch-3 profile has 11 cubes, 67 literals, 12 containment relationships,
+and a most-common literal pair appearing 10 times. A classical scan of all
+220 three-bit, 495 four-bit, and 792 five-bit selector sets is recorded in
+`artifacts/conditionally_clean_selector_scan.json`. The best four-bit split by
+raw total ESOP cubes is `(x5,y2,y4,y5)` at 68 cubes across 11 branches,
+slightly ahead of the tested `(x5,y3,y4,y5)` split at 70 cubes across 9
+branches. This scan only ranks representations structurally; it does not
+replace exact native U3/CX scoring.
+
+The first targeted factorization used the signed factor
+`(x4=0) AND (y2=1)` and an exact bounded six-variable XAG for its residual.
+The branch-3 factored candidate scored **713/445/18**, SHA
+`611c3f8a51595fbca49102b6f6c4728ea6c96b7966834e417308669b4a7fef1c`, and
+passed branch-specific exhaustive verification with zero ancilla leakage. This
+improves on 904/522, but remains above the local viability gate. Do not build
+all branches yet; the next checkpoint is another factor/XAG representation or
+another rank-4 branch, not full selector traversal.
+
+The factored pilot was ablated into `P*G` and `R`: **323/249** and **459/248**
+respectively, both exact under their extracted predicates. A bounded complete
+8-variable XAG search found no solution through two AND nodes and timed out
+(`unknown`) at three and four nodes with 5-second budgets. The search artifact
+is `artifacts/branch3_xag8_search.json`; this is a bounded diagnostic, not a
+proof that no larger XAG exists. The next work should target a native decoder
+or multi-level lowering; do not integrate all cofactor branches yet.
+
+## Closed direction: conditional-clean cofactor/XAG (September 10, 2026)
+
+Close this implementation line for the competition objective. The mechanism
+itself is correct, but the exact ablations are **323/249** for `PG`, **459/248**
+for `R`, and **713/445** for the complete branch. Neither component is a small
+nuisance term relative to the sub-190 target, and the bounded whole-branch XAG
+search returned no small candidate. Keep the verified artifacts as evidence,
+but do not spend further optimization time on this representation. The
+protected fallback remains `artifacts/524/full_mux_feature_linear_tket_524.qasm`
+at **524/950/18**.
+
+## Closed direction: finite-size Lupanov/rich-width branch (September 10, 2026)
+
+The bounded `src/lupanov_branch.py` pilot instantiated the smallest directly
+valid rich-width parameterization for the eight-variable branch (`q=1,p=7`)
+with ten workspace wires. After compute--Z--uncompute, the exact candidate
+scored **20432/11260/18**, SHA
+`f91ad1511021a2f045be32df47b45a7ba127fa5eef414fb4e72b1e6bcbbed80a`, and
+passed all 256 residual-input checks. This is far above the stop threshold;
+close the finite-size Lupanov implementation for this challenge. The result is
+a finite-constant diagnostic, not a lower-bound proof against the paper's
+asymptotic construction.
+## Depth-window resynthesis pilot (September 9, 2026)
+
+The protected 524 QASM was profiled without modifying it. The exact input SHA
+is `7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147`; the
+profile reports **524 depth / 950 CX / 18 qubits**, 580 zero-slack gates, and
+U3-family counts of 213 diagonal, 610 general, plus 950 CX gates. The largest
+ASAP-layer CNOT+diagonal region spans layers 127--257 but touches 14 wires, so
+it is not a small exact-unitary peephole. The profile and candidate ranking are
+in `artifacts/524/full_mux_feature_linear_tket_524.window_profile.json` and
+were generated by `src/window_profile.py`.
+
+The first strict exact-unitary pilot tested the tractable late pockets. The
+contiguous 3-wire windows at layers 483--487 and 498--504 reproduced at the
+same local depth/CX and left the full circuit at **524/950**. The larger
+apparent 473--482 and 473--487 pockets were interleaved with unrelated gates
+in serialized order and were rejected rather than unsafely spliced. The full
+measurement is `artifacts/524/full_mux_feature_linear_tket_524.strict_window_pilot.json`;
+the pilot is implemented in `src/strict_window_pilot.py`.
+
+This closes only the first ordinary exact-window peephole test, not care-set
+resynthesis. The next justified step is to select dependency-aligned boundaries
+where the six clean ancillas are zero/classical and resynthesize on reachable
+states; preserve the 524 artifact as the protected baseline.
+## DAG and semantic-window preparation (September 9, 2026)
+
+The bounded dependency-DAG inventory is in
+`artifacts/524/dag_window_inventory.json`, generated by
+`src/dag_window_resynthesis.py`. It confirms the protected SHA and 524/950
+score, recovers 19 small causal candidates within the 3--6-wire budget, and
+finds late candidates whose selected gates are serialized-interleaved (for
+example layers 471--483 and 492--504) without an internal dependency crossing.
+This supports DAG extraction as a real distinction from textual contiguity,
+but no replacement has been synthesized or scored yet.
+
+The semantic care-state mappings for 64 legal inputs are in
+`artifacts/524/semantic_window_mappings.json`; selected blocks are `(R0,R1)`,
+`(R1,R2)`, `(A,B)`, and `(A,B,V)`. Strict Walsh reference costs are recorded in
+`artifacts/524/semantic_pair_results.json`: the pair/triple references measure
+128/128, 109/110, 128/128, and 128/172 depth/CX respectively. BQSKit 1.2.1 was
+installed in the project virtual environment and imported successfully, but a
+bounded 8-qubit StateSystem QSearch smoke test (64 states, max layer 2) hit its
+60-second stop bound. Therefore no numerical semantic candidate is being
+claimed; the next run should use a deliberately small ansatz or specialized
+state-system objective.
+
+## Subspace-quotiented shared-XAG search (September 9, 2026)
+
+The high-degree ANF screen has been implemented in
+`src/semantic_subspace_xag.py`. For each target, monomials of degree at least
+five are extracted and ranked over GF(2); the selected pairs have rank 2 and
+the `(A,B,V)` triple has rank 3, giving analytic shared-AND lower bounds of 4
+and 5 respectively. This upgrades the earlier timeout-through-3 result, but
+only for the stated affine-AND XAG model.
+
+The same script searches canonical GF(2) spans rather than affine-expression
+syntax. At the 4/5-AND minima it reached the second node layer and hit a
+5,000-state cap for all tested groups. The report is
+`artifacts/semantic_discrete/subspace_xag_results.json`; all search statuses
+are bounded `state_limit`, not impossibility proofs. No native RCCX schedule
+or full-oracle candidate exists yet.
+
+## Discrete shared-XAG screen (September 9, 2026)
+
+`src/multioutput_minmc.py` implements the proposed 64-bit truth-signature
+shared-XAG model: each AND node has affine inputs over the six y bits and all
+earlier nodes, while every requested feature is an affine output of the shared
+node set. The shallow screen is recorded in
+`artifacts/semantic_discrete/joint_xag_results.json`. For `(R0,R1)`, `(R1,R2)`,
+`(A,B)`, and `(A,B,V)`, no model was returned through three shared AND nodes
+with 1-second-per-bound limits. These are solver `unknown_or_above_bound`
+results, not lower bounds; no reversible candidate was produced and no full
+oracle score changed. The next escalation, if justified, is a heuristic
+bit-parallel beam search rather than a blind increase in Z3 timeout.
+## Exact-completion candidate search (September 9, 2026)
+
+`src/semantic_xag_completion.py` implements provenance-tracked Gaussian
+completion for target quotient directions, while enumerating first and second
+AND extensions one span at a time. The first bounded `(R1,R2)` run examined
+all 651 first-node extensions and 424,445 second-node extensions in 10 seconds,
+but reached zero late completion tests before the time bound. Its report is
+`artifacts/semantic_discrete/r1_r2_completion.json`. This is a frontier
+management result, not evidence against a four-AND witness; the next change
+must target-direct the second-node enumeration before invoking completion.
+
+## Completion-gate correction (September 9, 2026)
+
+The earlier completion report had a real quotient bug: a rank-2 quotient has
+three nonzero directions, not two, so `len(directions) != 2` rejected every
+ordinary pair state before completion. `src/semantic_xag_completion.py` now
+separates quotient basis from nonzero directions, preserves each actual
+`f & g` product and its affine correction, and exposes bounded smoke limits.
+The regression tested 321 second-node states and reached 9 direction tests;
+the corrected 1,000-state sample reached 21 direction tests with no witness.
+Its report is `artifacts/semantic_discrete/r1_r2_completion_fixed.json`.
+This supersedes the interpretation of the earlier zero-test report. The
+sample is not a lower bound and no native candidate exists yet.
+
+## Suspended direction: semantic shared-XAG synthesis (September 9, 2026)
+
+Suspend this line for the competition objective. The sequence from semantic
+care-state mappings through BQSKit, shared-XAG lower bounds, subspace search,
+and corrected target completion produced no native circuit candidate and no
+improvement over the protected **524 depth / 950 CX** oracle. This does not
+prove that four-AND `(R1,R2)` or five-AND triple constructions are impossible;
+it means further solver engineering is not currently justified. Preserve the
+lower-bound reports and completion code as research evidence, but do not spend
+additional optimization time on this branch unless a new lowering architecture
+appears.
+## EPFL oracle-synthesis stack check (September 9, 2026)
+
+The proposed mature-flow experiment was checked before any circuit work. The
+project `.venv` has no RevKit, Mockturtle, Caterpillar, or Tweedledum module.
+PyPI has no `revkit` distribution. The available PyPI `caterpillar` name is an
+unrelated text-retrieval package and was removed. Tweedledum 1.1.1 is source
+only here and fails its Python 3.13 build during metadata generation due to an
+invalid project configuration. Therefore no EPFL oracle synthesis or score
+was run; do not confuse the unrelated package installation attempt with the
+reversible Caterpillar tool. A compatible Python/toolchain environment would
+be required before this becomes an actionable bounded campaign.
+
+## EPFL compatibility attempt (September 10, 2026)
+
+One disposable Python 3.12.9 environment was created at
+`/private/tmp/epfl.uDo5uH`; the project `.venv` was not changed. Current
+Tweedledum source built successfully there as version 1.2.0. RevKit `develop`
+cloned successfully but its unmodified build failed first on undeclared
+`pybind11`, then again after installing `pybind11` and `setuptools`; no RevKit
+module was installed. Mockturtle and Caterpillar remained C++ source trees,
+and no executable RevKit/Caterpillar oracle flow was available. Under the
+one-attempt stop rule, close this environment line as blocked; do not patch
+upstream build systems or continue platform-specific troubleshooting.
+## Classiq-native full-function attempt (September 10, 2026)
+
+The fresh direct-arithmetic geometry model is preserved as
+`artifacts/classiq_direct_geometry.qmod`, generated by
+`src/classiq_direct_geometry.py`. The model gives Classiq the four exact shape
+inequalities and phase-marks their union; an initial draft that phase-marked
+the four shapes independently was corrected because the square/bar boundary
+overlap would otherwise cancel.
+
+The first native synthesis request failed immediately with an expired Classiq
+token and the API reported that the arithmetic model requires at least 39
+qubits despite `max_width=18`. Per the stop rule, authentication was not
+debugged and no QASM or score was produced. This is a blocked/invalid direct
+model attempt, not a negative result against all Classiq-native synthesis.
+
+## Classiq-native campaign closure (September 10, 2026)
+
+The refreshed credentials allowed API requests. The direct arithmetic union
+model was rejected by the Classiq API at **82 minimum qubits** versus the
+18-qubit constraint, so it cannot be a competition candidate. The natural
+row-class and whole low-rank formula requests created/updated their QMOD
+inputs, but neither returned a new exported QASM within the bounded wait;
+their pre-existing QASM files were not treated as fresh results. Thus this
+campaign produced no score-bearing circuit. Per the agreed stopping rule, do
+not continue Classiq authentication or synthesis debugging. The protected
+verified baseline remains **524 depth / 950 CX / 18 qubits**.
+## Final strategic status (September 10, 2026)
+
+The six-feature UCR architecture is formally closed, not merely the current
+best. The protected 524 QASM places feature `A` on q16; that wire touches 405
+gates, including 206 CXs, and carries 394 of the 580 critical gates. Its
+activity spans the y-load, x-phase, and inverse y-load, explaining why local
+compiler changes stay near 524 rather than approaching 200. The published
+parallel-UCR pattern is already exploited in the implementation.
+
+All explored methods and their dispositions are consolidated in
+`docs/EXPERIMENTS.md`. The protected verified 524/950 artifact and original
+notebook are retained; no experimental artifact is promoted without complete
+verification. In particular, do not reopen Tweedledum PKRM/optimum
+phase-ESOP, GUOQ/QUESO, Synthetiq, BQSKit local windows, further XAG search,
+Classiq-native synthesis, or coordinate coding. These are closed outcomes,
+not pending installation or tuning tasks.
+## Coordinate-recoding diagnostic (September 10, 2026)
+
+The proposed QFT-based conditional low-5-bit recentering was implemented in
+`src/qft_recenter.py`. The exact transform was checked on all 64 y inputs and
+compiled standalone to **81 depth / 58 CX / 18 qubits** with
+`qubits_initially_zero=False`. Because this exceeds the agreed `<50-depth`
+go/no-go threshold, close the coordinate-recoding/staircase architecture
+without attempting the larger 11x11 in-place class transform. The artifact and
+metrics are `artifacts/qft_recenter.qasm` and
+`artifacts/qft_recenter_metrics.json`.
+## Hard closure of internal architecture invention (September 10, 2026)
+
+The QFT recenter result is a hard closure, not an invitation to seek a better
+implementation of the same idea. Its exact 81-depth forward transform would
+require an approximately 162-depth forward/inverse pair before any logo phase
+logic, leaving no credible path to sub-200 depth. Together with the completed
+UCR, row-class, rank/cofactor, XAG/shared-XAG, ESOP, conditional-clean,
+Lupanov, state-system, exact/semantic-window, retained-predicate,
+coordinate-transform, QFT, Classiq-native, and external reversible-synthesis
+experiments, the evidence rules out incremental compiler improvements as the
+explanation for the missing ~300 layers.
+
+Stop active internal architecture invention. The verified 524/950 artifact is
+the submission fallback; remaining work should be limited to explicit
+submission and external investigation of the structural technique used by
+competitive solutions.
