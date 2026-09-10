@@ -30,37 +30,38 @@ def target_table() -> tuple[int, ...]:
 
 def residual_program(order: tuple[int, ...] = DEFAULT_ORDER) -> dict:
     values = target_table()
-    layers: list[dict[tuple[int, ...], int]] = [{values: 0}]
+    layers: list[dict[tuple[int, ...], int]] = []
+    for consumed in range(len(order) + 1):
+        remaining = order[consumed:]
+        layer: dict[tuple[int, ...], int] = {}
+        for prefix in range(1 << consumed):
+            table = []
+            for suffix in range(1 << len(remaining)):
+                full_index = 0
+                for offset, coordinate_bit in enumerate(order[:consumed]):
+                    full_index |= ((prefix >> offset) & 1) << coordinate_bit
+                for offset, coordinate_bit in enumerate(remaining):
+                    full_index |= ((suffix >> offset) & 1) << coordinate_bit
+                table.append(values[full_index])
+            key = tuple(table)
+            if key not in layer:
+                layer[key] = len(layer)
+        layers.append(layer)
+
     transitions: list[list[list[int]]] = []
-    for position, bit in enumerate(order):
-        current = layers[-1]
-        next_layer: dict[tuple[int, ...], int] = {}
+    for consumed in range(len(order)):
+        current = layers[consumed]
+        next_layer = layers[consumed + 1]
         layer_transitions: list[list[int]] = []
-        remaining = order[position + 1:]
-        for table, state_id in sorted(current.items(), key=lambda item: item[1]):
-            children: list[int] = []
+        for table in sorted(current, key=current.get):
+            children = []
             for bit_value in (0, 1):
-                child_values = []
-                for remaining_index in range(1 << len(remaining)):
-                    full_index = (bit_value << bit)
-                    for offset, remaining_bit in enumerate(remaining):
-                        full_index |= (
-                            ((remaining_index >> offset) & 1) << remaining_bit
-                        )
-                    # The table's index is over the variables not yet
-                    # consumed, in the order in which they are consumed.
-                    table_index = 0
-                    for offset, table_bit in enumerate(order[position:]):
-                        full_value = (full_index >> table_bit) & 1
-                        table_index |= full_value << offset
-                    child_values.append(table[table_index])
-                child = tuple(child_values)
-                if child not in next_layer:
-                    next_layer[child] = len(next_layer)
+                # The consumed bit is offset zero in the table index.
+                child = tuple(table[bit_value + 2 * suffix]
+                              for suffix in range(1 << (len(order) - consumed - 1)))
                 children.append(next_layer[child])
             layer_transitions.append(children)
         transitions.append(layer_transitions)
-        layers.append(next_layer)
 
     max_fanin_by_layer = []
     for layer in transitions:

@@ -370,8 +370,8 @@ impossibility result. Measurements are in
 The target was also converted into an exact layered residual-function
 branching program using variable order
 `q0,q1,q2,q3,q4,q5,q11,q8,q6,q7,q9,q10`. The layer state counts are
-`1,2,4,8,13,15,11,17,18,13,7,4,2`, with 1,097 marked inputs and a maximum
-of 18 distinct residual functions. This is a structural diagnostic rather
+`1,2,4,8,13,15,11,12,19,19,10,4,2`, with 1,097 marked inputs and a maximum
+of 19 distinct residual functions. This is a structural diagnostic rather
 than a reversible circuit: residual states can merge, so a future destructive
 embedding must carry enough garbage to make each transition injective. The
 reproducible extractor is `src/residual_branching_program.py`, with compact
@@ -389,10 +389,18 @@ state-local controls. Measurements are in
 
 Transition analysis shows why a local overwrite needs explicit garbage: the
 maximum fixed-bit fan-in by layer is
-`1,1,1,2,4,9,2,3,5,5,3,2`, requiring up to four distinguishing garbage bits
+`1,1,1,2,4,9,6,3,2,4,4,2`, requiring up to four distinguishing garbage bits
 for an injective local embedding. These exact counts are in
 `artifacts/destructive_semantic/residual_transition_fanin.metrics.json` and
 rule out the simpler one-consumed-bit transition construction.
+
+A 1,000-order random structural search, using the corrected extractor, found
+the order `q10,q9,q7,q11,q5,q8,q6,q0,q1,q2,q4,q3`. It keeps the maximum
+residual width at 19 while reducing maximum fixed-bit fan-in from 9 to 5 and
+the peak distinguishing-garbage requirement from four bits to three. This is
+an improved target for the future local-permutation synthesis, not yet a
+classifier circuit. Measurements are in
+`artifacts/destructive_semantic/residual_order_search.metrics.json`.
 
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
