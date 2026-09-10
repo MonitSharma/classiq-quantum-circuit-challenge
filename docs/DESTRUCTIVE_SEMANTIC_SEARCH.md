@@ -566,3 +566,14 @@ improvement over the previous 113-depth direct-wire candidate, although it is
 still incomplete and has no exhaustive phase-oracle verification. The
 reproducible builder is `src/high_order_affine_correction.py`; measurements
 are in `artifacts/destructive_semantic/high_order_affine_correction.metrics.json`.
+
+The clean workspace can be reused for a three-block chain. Adding the two
+four-control corrections
+`q12 ^= q7q8q10q11` and `q11 ^= q5q8q10q12` after the first five-control
+correction reduces the affine residual further to 339. The exact semantic
+chain restores q17 over all 4,096 inputs and compiles to forward depth 109 /
+70 CX, crossing the promising depth screen while remaining incomplete. A
+fourth correction lowers the residual to 323 but raises depth to 138, so the
+three-block chain is the current depth/residual Pareto point. Its reproducible
+builder is `src/high_order_affine_chain.py`; measurements are in
+`artifacts/destructive_semantic/high_order_affine_chain.metrics.json`.

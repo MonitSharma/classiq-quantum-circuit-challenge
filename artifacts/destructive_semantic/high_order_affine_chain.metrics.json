@@ -1,0 +1,22 @@
+{
+  "experiment": "three-block clean-ancilla high-order affine chain",
+  "base_artifact": "double_seed42_b16x6_p4_depth59.json",
+  "base_affine_residual": 447,
+  "base_affine_combo": [11, 12],
+  "corrections": [
+    {"target": 12, "controls": [2, 3, 4, 8, 11], "control_count": 5},
+    {"target": 12, "controls": [7, 8, 10, 11], "control_count": 4},
+    {"target": 11, "controls": [5, 8, 10, 12], "control_count": 4}
+  ],
+  "clean_ancilla": 17,
+  "clean_ancilla_restored": true,
+  "corrected_affine_residual": 339,
+  "corrected_affine_combo": [11, 12],
+  "semantic_inputs_checked": 4096,
+  "compiled_forward_depth": 109,
+  "compiled_forward_cx": 70,
+  "transpilation": {"basis_gates": ["u3", "cx"], "qubits_initially_zero": false, "optimization_level": 3},
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "status": "best depth-screened incomplete classifier candidate"
+}
