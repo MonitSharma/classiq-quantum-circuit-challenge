@@ -74,6 +74,20 @@ def residual_program(order: tuple[int, ...] = DEFAULT_ORDER) -> dict:
             fixed_bit_fanins.append(max(counts.values(), default=1))
         max_fanin_by_layer.append(max(fixed_bit_fanins, default=1))
 
+    reachable_slot_counts = [1]
+    slot_mass = {0: 1}
+    for layer in transitions:
+        next_mass: dict[int, int] = {}
+        for bit_value in (0, 1):
+            contributions: dict[int, int] = {}
+            for state, count in slot_mass.items():
+                child = layer[state][bit_value]
+                contributions[child] = contributions.get(child, 0) + count
+            for child, count in contributions.items():
+                next_mass[child] = max(next_mass.get(child, 0), count)
+        slot_mass = next_mass
+        reachable_slot_counts.append(sum(slot_mass.values()))
+
     return {
         "variable_order": list(order),
         "marked_states": sum(target_table()),
@@ -85,6 +99,8 @@ def residual_program(order: tuple[int, ...] = DEFAULT_ORDER) -> dict:
             math.ceil(math.log2(value)) if value > 1 else 0
             for value in max_fanin_by_layer
         ],
+        "minimum_reversible_slot_counts": reachable_slot_counts,
+        "maximum_reversible_slots": max(reachable_slot_counts),
         "terminal_values": [
             list(table)[0] for table in layers[-1]
         ],
@@ -103,7 +119,9 @@ def main() -> None:
         key: result[key]
         for key in ("variable_order", "marked_states", "layer_state_counts",
                     "max_layer_states", "max_fanin_by_layer",
-                    "minimum_distinguishing_garbage_bits")
+                    "minimum_distinguishing_garbage_bits",
+                    "minimum_reversible_slot_counts",
+                    "maximum_reversible_slots")
     }, indent=2))
     if args.out is not None:
         args.out.parent.mkdir(parents=True, exist_ok=True)

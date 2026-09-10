@@ -402,6 +402,15 @@ an improved target for the future local-permutation synthesis, not yet a
 classifier circuit. Measurements are in
 `artifacts/destructive_semantic/residual_order_search.metrics.json`.
 
+A second local search optimized the reversible slot recurrence rather than
+fan-in alone. Its best order is
+`q10,q5,q11,q4,q9,q8,q3,q1,q0,q2,q7,q6`, with layer residual widths
+`1,2,4,7,12,16,21,29,35,23,6,4,2` and a peak of 85 tagged internal slots.
+The corresponding minimum slot counts are
+`1,2,4,7,13,20,31,45,63,73,77,81,85`. This is below the previous 216-slot estimate but still above the 64 states
+provided by six clean ancillas, so it is a structural bound and not yet a
+classifier implementation.
+
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
 It did not reach affine completion and is weaker than the targeted seed-1
