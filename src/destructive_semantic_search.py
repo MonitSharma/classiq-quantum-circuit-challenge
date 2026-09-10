@@ -237,6 +237,38 @@ def apply_rccx_layer_state(
     return child
 
 
+def apply_affine_rccx_state(
+    state: State, a: int, mix: int, b: int, target: int
+) -> State | None:
+    """Apply CX(mix,a), RCCX(a,b,target), CX(mix,a).
+
+    Semantically this toggles the target by `(W[a] XOR W[mix]) AND W[b]`
+    while restoring wire `a`. The complete sandwich is reversible and can use
+    an original coordinate wire as any role.
+    """
+    if len({a, mix, b, target}) != 4:
+        raise ValueError("affine RCCX wires must be distinct")
+    term = (state.wires[a] ^ state.wires[mix]) & state.wires[b]
+    if not term:
+        return None
+    wires = list(state.wires)
+    wires[target] ^= term
+    arrivals = list(state.arrivals)
+    pre_end = max(arrivals[mix], arrivals[a]) + 1
+    arrivals[a] = pre_end
+    rccx_end = max(arrivals[a], arrivals[b], arrivals[target]) + RCCX_ESTIMATED_DEPTH
+    arrivals[a] = rccx_end + 1
+    arrivals[target] = rccx_end
+    residual, combo = affine_distance_proxy(tuple(wires))
+    gates = state.gates + (
+        ("cx", mix, a, -1),
+        ("rccx", a, b, target),
+        ("cx", mix, a, -1),
+    )
+    return State(tuple(wires), tuple(arrivals), gates,
+                 max(state.estimated_depth, rccx_end + 1), residual, combo)
+
+
 def complete_affine(state: State, target_wire: int = TARGET_WIRE) -> State | None:
     solution = affine_span_solution(state.wires)
     if solution is None:
@@ -332,6 +364,32 @@ def proposal_layers(
     return layers[:limit]
 
 
+def proposal_affine_operations(
+    state: State, preserve_inputs: bool, limit: int, rng: random.Random
+):
+    """Rank affine-control RCCX sandwiches using the cheap residual proxy."""
+    base = proposal_gates(state, preserve_inputs, max(limit, 32), rng)
+    proposals = []
+    for a, b, target in base:
+        for mix in range(N_WIRES):
+            if mix in (a, b, target):
+                continue
+            term = (state.wires[a] ^ state.wires[mix]) & state.wires[b]
+            if not term:
+                continue
+            new_value = state.wires[target] ^ term
+            direct = (TARGET ^ new_value).bit_count()
+            pair_hint = min(
+                (TARGET ^ new_value ^ state.wires[i]).bit_count()
+                for i in range(N_WIRES) if i != target
+            )
+            proposals.append((min(direct, pair_hint), rng.random(),
+                              a, mix, b, target))
+    proposals.sort()
+    return [(a, mix, b, target)
+            for _, _, a, mix, b, target in proposals[:limit]]
+
+
 def refine_exact_leaders(states: list[State], count: int) -> list[State]:
     """Replace the proxy residual on the leading states with exact distance."""
     if count <= 0:
@@ -351,22 +409,41 @@ def refine_exact_leaders(states: list[State], count: int) -> list[State]:
 
 def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
            checkpoint_dir: Path | None = None, proposal_limit: int = 128,
-           max_parallel: int = 1, exact_top: int = 0):
+           max_parallel: int = 1, exact_top: int = 0,
+           affine_controls: bool = False):
     rng = random.Random(seed)
     beam = [initial_state()]
     best = beam[0]
     for layer in range(1, layers + 1):
         children: dict[str, State] = {}
         for state in beam:
-            for layer_gates in proposal_layers(
-                    state, preserve_inputs, proposal_limit, max_parallel, rng):
-                child = apply_rccx_layer_state(state, layer_gates)
-                if child is None:
-                    continue
-                key = semantic_hash(child.wires)
-                old = children.get(key)
-                if old is None or score_state(child) < score_state(old):
-                    children[key] = child
+            if affine_controls and max_parallel == 1:
+                operations = [("affine", op) for op in proposal_affine_operations(
+                    state, preserve_inputs, proposal_limit, rng)]
+                operations.extend(("plain", op) for op in proposal_gates(
+                    state, preserve_inputs, proposal_limit, rng))
+                for kind, operation in operations:
+                    if kind == "affine":
+                        child = apply_affine_rccx_state(state, *operation)
+                    else:
+                        child = apply_rccx_state(state, *operation)
+                    if child is None:
+                        continue
+                    key = semantic_hash(child.wires)
+                    old = children.get(key)
+                    if old is None or score_state(child) < score_state(old):
+                        children[key] = child
+            else:
+                layer_candidates = proposal_layers(
+                    state, preserve_inputs, proposal_limit, max_parallel, rng)
+                for layer_gates in layer_candidates:
+                    child = apply_rccx_layer_state(state, layer_gates)
+                    if child is None:
+                        continue
+                    key = semantic_hash(child.wires)
+                    old = children.get(key)
+                    if old is None or score_state(child) < score_state(old):
+                        children[key] = child
             if len(children) > beam_width * 32:
                 kept = sorted(children.values(), key=score_state)[:beam_width * 16]
                 children = {semantic_hash(item.wires): item for item in kept}
@@ -404,6 +481,7 @@ def main() -> None:
     parser.add_argument("--proposal-limit", type=int, default=128)
     parser.add_argument("--max-parallel", type=int, default=1)
     parser.add_argument("--exact-top", type=int, default=0)
+    parser.add_argument("--affine-controls", action="store_true")
     parser.add_argument("--out", default="artifacts/destructive_semantic")
     args = parser.parse_args()
 
@@ -416,7 +494,7 @@ def main() -> None:
     result, completed_layer = search(
         args.beam, args.layers, args.seed, args.preserve_inputs,
         out / "checkpoints", args.proposal_limit, args.max_parallel,
-        args.exact_top)
+        args.exact_top, args.affine_controls)
     payload = {
         "seed": args.seed,
         "beam_width": args.beam,
@@ -425,6 +503,7 @@ def main() -> None:
         "proposal_limit": args.proposal_limit,
         "max_parallel": args.max_parallel,
         "exact_top": args.exact_top,
+        "affine_controls": args.affine_controls,
         "completed_layer": completed_layer,
         "target_marked_states": TARGET.bit_count(),
         "estimated_depth": result.estimated_depth,

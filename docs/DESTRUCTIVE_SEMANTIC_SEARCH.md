@@ -90,3 +90,10 @@ per layer. It matched the proxy-selected trajectory through the observed layer
 9 boundary and added substantial runtime without producing a lower residual.
 It is retained as an optional diagnostic; broad exact ranking is not currently
 cost-effective.
+
+Affine-control RCCX sandwiches were also tested. The macro
+`CX(c,a); RCCX(a,b,t); CX(c,a)` is semantically reversible and exposes
+`(W[a] XOR W[c]) AND W[b]`. A beam-64, 16-proposal, ten-layer run reached
+residual 609 at estimated depth 51, worse than the plain destructive run's
+residual 539 at a comparable layer budget. The macro is retained as an
+available primitive, but this proposal ranking is not currently competitive.
