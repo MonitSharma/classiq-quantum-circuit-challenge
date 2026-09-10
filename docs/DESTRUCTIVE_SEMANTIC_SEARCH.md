@@ -686,3 +686,11 @@ preserved exact row-factor classifier is depth 6,531. This route is therefore
 not competitive with the current destructive frontier; the bounded result is
 recorded in
 `artifacts/destructive_semantic/full12_formula_probe.metrics.json`.
+
+Greedy ESOP analysis in the current-wire basis found two useful products:
+`q11 ^= q1q2q3q4q9q14` lowers residual 323 to 315, followed by
+`q12 ^= q2q3q4q7q8q10q11`, which lowers it to 307. The shared `q2q3q4`
+factor can be computed once and reused, but the exact two-workspace lowering
+still compiles to depth 160 / 117 CX. It is therefore a semantic insight and
+native rejection, recorded in
+`artifacts/destructive_semantic/residual323_greedy_esop.metrics.json`.
