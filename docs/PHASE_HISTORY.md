@@ -138,6 +138,15 @@ and clearing each rank factor is far too expensive. The useful result is that
 the phase-history constructor and verification workflow are validated on the
 full logo, so subsequent optimization can safely attack sharing and cleanup.
 
+Two alternative exact ten-product decompositions were run through the same
+builder and exhaustive verifier. `rank_mc_pareto_terms.json` produced depth
+2402 / 1529 CX with SHA
+`8a69e458b35adf7d564b1adf63be44214b82e46396f3a1ce4328a74490c072a2`, while
+`pair_terms.json` produced depth 2424 / 1560 CX with SHA
+`ac64f4eff163220d141b9cf416d3cb301092796ad9ef74e3e4c5ce1e6155d168`.
+Both reports check all 4096 inputs with zero ancilla leakage; neither improves
+the 2380-depth `rank_terms` baseline.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary

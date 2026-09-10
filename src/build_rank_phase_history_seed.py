@@ -22,8 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 TERMS = ROOT / "artifacts" / "rank_terms.json"
 
 
-def build() -> QuantumCircuit:
-    terms = json.loads(TERMS.read_text())
+def build(terms_path: Path = TERMS) -> QuantumCircuit:
+    terms = json.loads(terms_path.read_text())
     circuit = QuantumCircuit(18)
     for x_table, y_table in terms:
         x_compute = pred(x_table, 0, 12, [13, 14, 15, 16, 17])
@@ -40,13 +40,14 @@ def build() -> QuantumCircuit:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    parser.add_argument("--terms", type=Path, default=TERMS)
     parser.add_argument(
         "--out", type=Path,
         default=Path("artifacts/phase_history/rank_product_seed.qasm"),
     )
     args = parser.parse_args()
     compiled = transpile(
-        build(), basis_gates=["u3", "cx"],
+        build(args.terms), basis_gates=["u3", "cx"],
         qubits_initially_zero=False, optimization_level=3,
     )
     args.out.parent.mkdir(parents=True, exist_ok=True)
@@ -56,7 +57,8 @@ def main() -> None:
         "depth": compiled.depth(),
         "cx_count": compiled.count_ops().get("cx", 0),
         "width": compiled.num_qubits,
-        "terms": len(json.loads(TERMS.read_text())),
+        "terms": len(json.loads(args.terms.read_text())),
+        "terms_path": str(args.terms),
         "qubits_initially_zero": False,
     }, indent=2))
 
