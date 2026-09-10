@@ -1,0 +1,18 @@
+{
+  "experiment": "higher-order controlled-swap semantic screen",
+  "seed": 20261007,
+  "target_marked_states": 1097,
+  "control_size_2": {
+    "move_count": 20808,
+    "candidate_states": 7987,
+    "best_exact_residual": 827,
+    "best_move": ["rccx", 10, 11, 14]
+  },
+  "control_size_3": {
+    "move_count": 88128,
+    "candidate_states": 20857,
+    "best_exact_residual": 827,
+    "best_move": ["rccx", 10, 11, 13]
+  },
+  "status": "verified semantic negative; no affine completion or QASM candidate"
+}

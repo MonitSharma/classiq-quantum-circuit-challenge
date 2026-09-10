@@ -1388,3 +1388,15 @@ A deeper beam-32 continuation (five layers, 4,896 proposals per state) reached
 known residual-447 destructive frontier or enter the affine span, so the mixed
 Fredkin/RCCX family is closed at this bounded depth. The result is recorded in
 `artifacts/destructive_semantic/fredkin_mixed_screen_seed20261006.metrics.json`.
+
+## Higher-order controlled-swap screen (September 11, 2026)
+
+To test whether swapping two wires under a higher-order condition could escape
+the shallow Fredkin basin, one-step screens enumerated controlled swaps with
+two and three current-wire controls, together with all ordinary RCCX moves.
+The two-control screen covered 20,808 moves and the three-control screen
+88,128 moves. Both selected an ordinary RCCX as their best move and reached
+exact affine residual **827**, with no affine completion. This closes the
+single-move higher-order controlled-swap variant at the current frontier; no
+QASM was lowered. Results are in
+`artifacts/destructive_semantic/controlled_swap_screen_seed20261007.metrics.json`.
