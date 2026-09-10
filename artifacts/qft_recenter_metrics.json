@@ -1,0 +1,13 @@
+{
+  "transform": "low5 -> low5 - (19 if y5=0 else 9) mod 32",
+  "depth": 81,
+  "cx": 58,
+  "width": 18,
+  "basis": [
+    "u3",
+    "cx"
+  ],
+  "qubits_initially_zero": false,
+  "classical_inputs_verified": 64,
+  "decision": "kill_coordinate-coding"
+}

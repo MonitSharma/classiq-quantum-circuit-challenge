@@ -1,0 +1,9 @@
+{
+  "base_artifact": "artifacts/destructive_semantic/direct_wire_seed2024_residual501.metrics.json",
+  "base_direct_target_mismatches": 501,
+  "legal_mcx3_candidates": 9780,
+  "best_one_step_direct_target_mismatches": 501,
+  "best_one_step_exact_affine_distance": 501,
+  "status": "incomplete_negative_control",
+  "note": "Exhaustive one-step scan over all distinct three-control/target wire choices; no candidate improved the residual-501 state."
+}

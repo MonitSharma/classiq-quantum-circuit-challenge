@@ -1,0 +1,5 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+artifacts/bdd_dirty_reversible.qasm

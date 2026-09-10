@@ -1,0 +1,12 @@
+{
+  "y_seed": 1085,
+  "x_seed": 3511,
+  "relative_or": true,
+  "raw_depth": 540,
+  "raw_cx": 918,
+  "optimized_depth": 535,
+  "optimized_cx": 918,
+  "width": 18,
+  "pass": "pytket.FullPeepholeOptimise",
+  "sha256": "a7ef23f038c2f4f1b6309899025283b32656d17fcd142f21618c9aeb013769f2"
+}

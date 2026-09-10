@@ -1,0 +1,24 @@
+{
+  "input_matrix_rows": [
+    1,
+    2,
+    4,
+    40,
+    16,
+    48
+  ],
+  "input_offset": 16,
+  "unique_monomials": 26,
+  "depth": 1478,
+  "cx": 823,
+  "width": 18,
+  "basis": [
+    "u3",
+    "cx"
+  ],
+  "qubits_initially_zero": false,
+  "classical_inputs_verified": 64,
+  "relative_phase_classes": 4,
+  "verification": "All 64 y inputs mapped to exact feature bits with y and q17 restored; loader is intended for inverse pairing.",
+  "note": "Loader-only direct-output ESOP diagnostic; not integrated into the logo oracle."
+}

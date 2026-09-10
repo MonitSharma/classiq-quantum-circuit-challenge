@@ -1,0 +1,59 @@
+{
+  "trials": [
+    {
+      "seed": 0,
+      "depth": 398,
+      "cx_count": 487,
+      "width": 18
+    },
+    {
+      "seed": 1,
+      "depth": 393,
+      "cx_count": 507,
+      "width": 18
+    },
+    {
+      "seed": 2,
+      "depth": 385,
+      "cx_count": 491,
+      "width": 18
+    },
+    {
+      "seed": 3,
+      "depth": 395,
+      "cx_count": 503,
+      "width": 18
+    },
+    {
+      "seed": 4,
+      "depth": 397,
+      "cx_count": 483,
+      "width": 18
+    },
+    {
+      "seed": 5,
+      "depth": 401,
+      "cx_count": 483,
+      "width": 18
+    },
+    {
+      "seed": 6,
+      "depth": 389,
+      "cx_count": 491,
+      "width": 18
+    },
+    {
+      "seed": 7,
+      "depth": 400,
+      "cx_count": 507,
+      "width": 18
+    }
+  ],
+  "best": {
+    "seed": 2,
+    "depth": 385,
+    "cx_count": 491,
+    "width": 18
+  },
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/disk_only_mux.qasm"
+}

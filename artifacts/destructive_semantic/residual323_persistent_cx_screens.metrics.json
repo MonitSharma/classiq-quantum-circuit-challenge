@@ -1,0 +1,20 @@
+{
+  "experiment": "persistent linear-basis two-step screens from residual-323 fused chain",
+  "base_artifact": "high_order_affine_fused_tail.metrics.json",
+  "base_affine_residual": 323,
+  "semantic_inputs_checked": 4096,
+  "proxy": "exact affine distance proxy through two-wire combinations",
+  "screens": [
+    {
+      "ordering": "CX then RCCX",
+      "nontrivial_sequences_tested": 590944,
+      "improvement_below_323": false
+    },
+    {
+      "ordering": "RCCX then CX",
+      "nontrivial_sequences_tested": 749088,
+      "improvement_below_323": false
+    }
+  ],
+  "status": "negative two-step persistent-CX screen; deeper linear/nonlinear search remains open"
+}

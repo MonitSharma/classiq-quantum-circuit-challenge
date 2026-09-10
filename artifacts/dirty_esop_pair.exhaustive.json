@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/dirty_esop_pair.qasm",
+  "sha256": "aec06f3f176c5e889ef222b9b8645a8f3b62efb9a2cab7d9618c2b5b3c418eb9",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 2156,
+  "cx_count": 1346,
+  "max_error": 1.9827430071094554e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.492810684033451e-13,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 6.7407732009887695,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

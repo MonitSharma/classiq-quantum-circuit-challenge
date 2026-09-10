@@ -1,0 +1,12 @@
+{
+  "basis": "rank_mc_pareto_terms",
+  "x_total_internal_nodes": 42,
+  "y_total_internal_nodes": 40,
+  "x_unique_predicates": 42,
+  "y_unique_predicates": 40,
+  "x_repeated_predicates": 0,
+  "y_repeated_predicates": 0,
+  "x_top_repeated": [],
+  "y_top_repeated": [],
+  "note": "Internal predicate truth tables are canonicalized over six local variables; missing bounded-XAG factors are omitted and reported by cache state."
+}

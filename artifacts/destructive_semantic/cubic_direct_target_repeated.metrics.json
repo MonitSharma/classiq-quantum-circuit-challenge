@@ -1,0 +1,14 @@
+{
+  "experiment": "repeated cubic destructive updates on direct target",
+  "base_artifact": "direct_wire_seed2024_extended.metrics.json",
+  "target_wire": 11,
+  "primitive": "W[t] ^= W[a] & W[b] & W[c]",
+  "beam_width": 4,
+  "layers": 4,
+  "proposal_scope": "all 3-control combinations with target q11",
+  "base_residual": 513,
+  "best_residual": 513,
+  "best_exact_affine_residual": 513,
+  "status": "negative; no multi-step improvement",
+  "related_one_step_scan": "mcx3_residual501_one_step.metrics.json"
+}

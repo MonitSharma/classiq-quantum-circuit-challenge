@@ -1,0 +1,12 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/exact_stream_pair_terms_development.qasm",
+  "sha256": "f44158faeac79cd6623b893d78fa00a505471f96ca90040be81229f1ce2cd3d1",
+  "width": 18,
+  "depth": 1227,
+  "cx_count": 1361,
+  "random_dense_states": 5,
+  "max_error": 5.691585162728684e-16,
+  "ancilla_error": 1.1075648978582848e-16,
+  "normalization_error": 1.8318679906315083e-14,
+  "verification": "Dense random inputs supported on all 4096 coordinates; probabilistic numerical check, not exhaustive operator proof"
+}

@@ -1,0 +1,30 @@
+{
+  "5": {
+    "status": "verified_phase_component",
+    "depth": 455,
+    "cx": 612,
+    "width": 18,
+    "path": "artifacts/persistent_pair_5.qasm"
+  },
+  "9": {
+    "status": "verified_phase_component",
+    "depth": 463,
+    "cx": 540,
+    "width": 18,
+    "path": "artifacts/persistent_pair_9.qasm"
+  },
+  "4": {
+    "status": "verified_phase_component",
+    "depth": 137,
+    "cx": 102,
+    "width": 18,
+    "path": "artifacts/persistent_pair_4.qasm"
+  },
+  "2": {
+    "status": "verified_phase_component",
+    "depth": 95,
+    "cx": 96,
+    "width": 18,
+    "path": "artifacts/persistent_pair_2.qasm"
+  }
+}

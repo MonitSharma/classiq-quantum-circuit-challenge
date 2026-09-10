@@ -1,0 +1,13 @@
+{
+  "experiment": "exact one-RCCX neighborhood from residual-323 fused chain",
+  "base_artifact": "high_order_affine_fused_tail.metrics.json",
+  "base_affine_residual": 323,
+  "candidate_count": 2448,
+  "candidate_definition": "all distinct control-pairs and physical targets over 18 wires",
+  "exact_affine_distance_evaluated": true,
+  "improvement_count": 0,
+  "best_affine_residual": 323,
+  "semantic_inputs_checked": 4096,
+  "runtime_seconds": 363.26363921165466,
+  "status": "complete one-step neighborhood; no improving RCCX update"
+}

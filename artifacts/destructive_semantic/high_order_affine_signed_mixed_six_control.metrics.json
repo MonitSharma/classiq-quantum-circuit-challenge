@@ -1,0 +1,20 @@
+{
+  "experiment": "residual-295 signed six-control continuation",
+  "base_artifact": "high_order_affine_signed_mixed.metrics.json",
+  "additional_correction": [11, [[4, false], [5, true], [8, true], [9, true], [10, false], [16, false]]],
+  "corrected_affine_residual": 295,
+  "corrected_affine_combo": [11, 12],
+  "semantic_inputs_checked": 4096,
+  "clean_ancillas": [13, 17],
+  "clean_ancillas_restored": true,
+  "compiled_forward_depth": 119,
+  "compiled_forward_cx": 87,
+  "transpilation": {
+    "basis_gates": ["u3", "cx"],
+    "qubits_initially_zero": false,
+    "optimization_level": 3
+  },
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "status": "semantic Pareto continuation; above promising depth screen"
+}

@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/full_mux_derive_v.qasm",
+  "sha256": "8cd9929e97a1588399e558589918f514ba6510814cdc4a920cab9ecbe6d30217",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 545,
+  "cx_count": 945,
+  "max_error": 1.3307865088815604e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.8111071624736833e-14,
+  "peak_sparse_support": 32,
+  "elapsed_seconds": 5.874467849731445,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

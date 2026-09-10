@@ -1,0 +1,18 @@
+{
+  "experiment": "Pareto residual/depth beam control",
+  "seed": 524,
+  "beam_width": 16,
+  "layers": 10,
+  "proposal_limit": 4,
+  "proxy_order": 3,
+  "double_rccx": true,
+  "pareto_beam": true,
+  "residual": 581,
+  "exact_affine_distance": 581,
+  "compiled_forward_depth": 88,
+  "compiled_forward_cx": 52,
+  "matches_non_pareto_control": true,
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "note": "Pareto selection preserved the prior result but did not improve this seed through layer 10."
+}

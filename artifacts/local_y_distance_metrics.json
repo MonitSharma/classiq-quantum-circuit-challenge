@@ -1,0 +1,19 @@
+{
+  "transform": "low5 -> low5 - (19 if y5=0 else 9) mod 32",
+  "preserved": "y5",
+  "depth": 274,
+  "cx": 151,
+  "width": 18,
+  "basis": [
+    "u3",
+    "cx"
+  ],
+  "qubits_initially_zero": false,
+  "classical_inputs_verified": 64,
+  "ancillas": [
+    15,
+    16,
+    17
+  ],
+  "note": "Transform-only fallback; no radius logic or complete oracle integration."
+}

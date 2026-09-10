@@ -1,0 +1,11 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/direct_product_retention_term0_exact_v2_development.qasm",
+  "sha256": "4847944094e71f419e4574ee689cdcb535f39a014c0729b760b7b185815faca5",
+  "basis_inputs_checked": 4096,
+  "depth": 508,
+  "cx_count": 407,
+  "width": 18,
+  "max_error": 5.729513021547367e-15,
+  "ancilla_error": 0.0,
+  "verification": "Exhaustive product-term phase verification"
+}

@@ -1,0 +1,11 @@
+{
+  "base_candidate": "high_order_affine_chain.metrics.json",
+  "current_affine_residual": 339,
+  "scan_targets": [11, 12],
+  "scan_degrees": "all nonempty products of the other nonzero semantic wires",
+  "candidate_products_scanned": "all degrees through 16 for each target",
+  "best_single_next_correction": {"target": 12, "controls": [2, 3, 4, 10, 11], "residual": 323},
+  "fifth_correction": {"target": 11, "controls": [1, 2, 3, 4, 9, 14], "residual": 315, "control_count": 6},
+  "exact_one_step_completion": false,
+  "status": "no one-step exact affine completion; six-control continuation is natively expensive"
+}

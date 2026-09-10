@@ -1,0 +1,32 @@
+[
+  {
+    "term_index": 6,
+    "representation": "bounded_low_and_xag",
+    "depth": 186,
+    "cx": 182,
+    "raw_cx": 168,
+    "raw_rccx": 20,
+    "raw_cz": 8,
+    "raw_x": 44,
+    "compute_actions": 10,
+    "uncompute_actions": 10,
+    "phase_actions": 12,
+    "max_live_ancillas": 6,
+    "affine_frame_unit_test": "passed"
+  },
+  {
+    "term_index": 7,
+    "representation": "bounded_low_and_xag",
+    "depth": 202,
+    "cx": 223,
+    "raw_cx": 164,
+    "raw_rccx": 20,
+    "raw_cz": 35,
+    "raw_x": 32,
+    "compute_actions": 10,
+    "uncompute_actions": 10,
+    "phase_actions": 35,
+    "max_live_ancillas": 6,
+    "affine_frame_unit_test": "passed"
+  }
+]

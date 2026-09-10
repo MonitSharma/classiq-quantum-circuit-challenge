@@ -1,0 +1,8 @@
+{
+  "source": "artifacts/full_mux_derive_v.qasm",
+  "pass": "pytket.FullPeepholeOptimise",
+  "depth": 540,
+  "cx": 945,
+  "width": 18,
+  "sha256": "4baad4c76a20db8e92ea7e2f2f68a0d8d9041e570d33275903bf38e3c228e39b"
+}

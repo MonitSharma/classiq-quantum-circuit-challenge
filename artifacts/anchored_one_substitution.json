@@ -1,0 +1,836 @@
+{
+  "pair_terms": [
+    {
+      "basis": "pair_terms",
+      "changed_terms": [
+        0
+      ],
+      "assignment": [
+        "parallel_rank_pair_xag",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 775,
+      "cx": 749,
+      "width": 18,
+      "delta_depth": -4,
+      "delta_cx": 13
+    },
+    {
+      "basis": "pair_terms",
+      "changed_terms": [
+        1
+      ],
+      "assignment": [
+        "pair_circuit",
+        "parallel_rank_pair_xag",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 794,
+      "cx": 751,
+      "width": 18,
+      "delta_depth": 15,
+      "delta_cx": 15
+    },
+    {
+      "basis": "pair_terms",
+      "changed_terms": [
+        2
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 826,
+      "cx": 801,
+      "width": 18,
+      "delta_depth": 47,
+      "delta_cx": 65
+    },
+    {
+      "basis": "pair_terms",
+      "changed_terms": [
+        1
+      ],
+      "assignment": [
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 856,
+      "cx": 841,
+      "width": 18,
+      "delta_depth": 77,
+      "delta_cx": 105
+    },
+    {
+      "basis": "pair_terms",
+      "changed_terms": [
+        8
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit"
+      ],
+      "depth": 884,
+      "cx": 891,
+      "width": 18,
+      "delta_depth": 105,
+      "delta_cx": 155
+    },
+    {
+      "basis": "pair_terms",
+      "changed_terms": [
+        4
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 913,
+      "cx": 955,
+      "width": 18,
+      "delta_depth": 134,
+      "delta_cx": 219
+    },
+    {
+      "basis": "pair_terms",
+      "changed_terms": [
+        6
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 941,
+      "cx": 945,
+      "width": 18,
+      "delta_depth": 162,
+      "delta_cx": 209
+    },
+    {
+      "basis": "pair_terms",
+      "changed_terms": [
+        0
+      ],
+      "assignment": [
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 970,
+      "cx": 927,
+      "width": 18,
+      "delta_depth": 191,
+      "delta_cx": 191
+    },
+    {
+      "basis": "pair_terms",
+      "changed_terms": [
+        3
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1020,
+      "cx": 1027,
+      "width": 18,
+      "delta_depth": 241,
+      "delta_cx": 291
+    },
+    {
+      "basis": "pair_terms",
+      "changed_terms": [
+        5
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1104,
+      "cx": 1163,
+      "width": 18,
+      "delta_depth": 325,
+      "delta_cx": 427
+    },
+    {
+      "basis": "pair_terms",
+      "changed_terms": [
+        7
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1167,
+      "cx": 1115,
+      "width": 18,
+      "delta_depth": 388,
+      "delta_cx": 379
+    },
+    {
+      "basis": "pair_terms",
+      "changed_terms": [
+        9
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble"
+      ],
+      "depth": 1711,
+      "cx": 1690,
+      "width": 18,
+      "delta_depth": 932,
+      "delta_cx": 954
+    }
+  ],
+  "rank_terms": [
+    {
+      "basis": "rank_terms",
+      "changed_terms": [
+        0
+      ],
+      "assignment": [
+        "parallel_rank_pair_xag",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 841,
+      "cx": 792,
+      "width": 18,
+      "delta_depth": -1,
+      "delta_cx": 11
+    },
+    {
+      "basis": "rank_terms",
+      "changed_terms": [
+        7
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 921,
+      "cx": 905,
+      "width": 18,
+      "delta_depth": 79,
+      "delta_cx": 124
+    },
+    {
+      "basis": "rank_terms",
+      "changed_terms": [
+        2
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1003,
+      "cx": 965,
+      "width": 18,
+      "delta_depth": 161,
+      "delta_cx": 184
+    },
+    {
+      "basis": "rank_terms",
+      "changed_terms": [
+        8
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit"
+      ],
+      "depth": 1019,
+      "cx": 1001,
+      "width": 18,
+      "delta_depth": 177,
+      "delta_cx": 220
+    },
+    {
+      "basis": "rank_terms",
+      "changed_terms": [
+        4
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1020,
+      "cx": 1054,
+      "width": 18,
+      "delta_depth": 178,
+      "delta_cx": 273
+    },
+    {
+      "basis": "rank_terms",
+      "changed_terms": [
+        0
+      ],
+      "assignment": [
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1032,
+      "cx": 974,
+      "width": 18,
+      "delta_depth": 190,
+      "delta_cx": 193
+    },
+    {
+      "basis": "rank_terms",
+      "changed_terms": [
+        1
+      ],
+      "assignment": [
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1061,
+      "cx": 1075,
+      "width": 18,
+      "delta_depth": 219,
+      "delta_cx": 294
+    },
+    {
+      "basis": "rank_terms",
+      "changed_terms": [
+        3
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1082,
+      "cx": 1072,
+      "width": 18,
+      "delta_depth": 240,
+      "delta_cx": 291
+    },
+    {
+      "basis": "rank_terms",
+      "changed_terms": [
+        5
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1163,
+      "cx": 1206,
+      "width": 18,
+      "delta_depth": 321,
+      "delta_cx": 425
+    },
+    {
+      "basis": "rank_terms",
+      "changed_terms": [
+        6
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1373,
+      "cx": 1327,
+      "width": 18,
+      "delta_depth": 531,
+      "delta_cx": 546
+    },
+    {
+      "basis": "rank_terms",
+      "changed_terms": [
+        9
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble"
+      ],
+      "depth": 1771,
+      "cx": 1728,
+      "width": 18,
+      "delta_depth": 929,
+      "delta_cx": 947
+    }
+  ],
+  "rank_mc_pareto_terms": [
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        1
+      ],
+      "assignment": [
+        "pair_circuit",
+        "parallel_rank_pair_xag",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 860,
+      "cx": 809,
+      "width": 18,
+      "delta_depth": 1,
+      "delta_cx": 9
+    },
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        5
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "parallel_rank_pair_xag",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 865,
+      "cx": 817,
+      "width": 18,
+      "delta_depth": 6,
+      "delta_cx": 17
+    },
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        0
+      ],
+      "assignment": [
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 883,
+      "cx": 836,
+      "width": 18,
+      "delta_depth": 24,
+      "delta_cx": 36
+    },
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        7
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "minmc_rank_pair",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 926,
+      "cx": 950,
+      "width": 18,
+      "delta_depth": 67,
+      "delta_cx": 150
+    },
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        5
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 967,
+      "cx": 930,
+      "width": 18,
+      "delta_depth": 108,
+      "delta_cx": 130
+    },
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        4
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 990,
+      "cx": 1022,
+      "width": 18,
+      "delta_depth": 131,
+      "delta_cx": 222
+    },
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        8
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit"
+      ],
+      "depth": 1028,
+      "cx": 1006,
+      "width": 18,
+      "delta_depth": 169,
+      "delta_cx": 206
+    },
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        9
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble"
+      ],
+      "depth": 1030,
+      "cx": 982,
+      "width": 18,
+      "delta_depth": 171,
+      "delta_cx": 182
+    },
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        1
+      ],
+      "assignment": [
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1046,
+      "cx": 991,
+      "width": 18,
+      "delta_depth": 187,
+      "delta_cx": 191
+    },
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        3
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1076,
+      "cx": 1060,
+      "width": 18,
+      "delta_depth": 217,
+      "delta_cx": 260
+    },
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        2
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1096,
+      "cx": 1091,
+      "width": 18,
+      "delta_depth": 237,
+      "delta_cx": 291
+    },
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        6
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1283,
+      "cx": 1194,
+      "width": 18,
+      "delta_depth": 424,
+      "delta_cx": 394
+    },
+    {
+      "basis": "rank_mc_pareto_terms",
+      "changed_terms": [
+        7
+      ],
+      "assignment": [
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "pair_circuit",
+        "phase_pebble",
+        "pair_circuit",
+        "pair_circuit"
+      ],
+      "depth": 1521,
+      "cx": 1422,
+      "width": 18,
+      "delta_depth": 662,
+      "delta_cx": 622
+    }
+  ]
+}

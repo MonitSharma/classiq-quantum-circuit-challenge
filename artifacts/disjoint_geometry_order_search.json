@@ -1,0 +1,82 @@
+{
+  "trials": [
+    {
+      "mode": "raw_first",
+      "order": [
+        "A",
+        "B_prime",
+        "disk"
+      ],
+      "depth": 709,
+      "cx_count": 754,
+      "width": 18
+    },
+    {
+      "mode": "raw_first",
+      "order": [
+        "A",
+        "disk",
+        "B_prime"
+      ],
+      "depth": 714,
+      "cx_count": 752,
+      "width": 18
+    },
+    {
+      "mode": "raw_first",
+      "order": [
+        "B_prime",
+        "A",
+        "disk"
+      ],
+      "depth": 711,
+      "cx_count": 754,
+      "width": 18
+    },
+    {
+      "mode": "raw_first",
+      "order": [
+        "B_prime",
+        "disk",
+        "A"
+      ],
+      "depth": 714,
+      "cx_count": 754,
+      "width": 18
+    },
+    {
+      "mode": "raw_first",
+      "order": [
+        "disk",
+        "A",
+        "B_prime"
+      ],
+      "depth": 710,
+      "cx_count": 754,
+      "width": 18
+    },
+    {
+      "mode": "raw_first",
+      "order": [
+        "disk",
+        "B_prime",
+        "A"
+      ],
+      "depth": 708,
+      "cx_count": 752,
+      "width": 18
+    }
+  ],
+  "best": {
+    "mode": "raw_first",
+    "order": [
+      "disk",
+      "B_prime",
+      "A"
+    ],
+    "depth": 708,
+    "cx_count": 752,
+    "width": 18
+  },
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/disjoint_geometry_708.qasm"
+}

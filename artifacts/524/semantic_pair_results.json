@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "features": [
+        "R0",
+        "R1"
+      ],
+      "depth": 128,
+      "cx": 128,
+      "width": 18,
+      "mode": "strict_walsh_reference",
+      "semantic_synthesis": "not_attempted_bqskit_1.2.1_available"
+    },
+    {
+      "features": [
+        "R1",
+        "R2"
+      ],
+      "depth": 109,
+      "cx": 110,
+      "width": 18,
+      "mode": "strict_walsh_reference",
+      "semantic_synthesis": "not_attempted_bqskit_1.2.1_available"
+    },
+    {
+      "features": [
+        "A",
+        "B"
+      ],
+      "depth": 128,
+      "cx": 128,
+      "width": 18,
+      "mode": "strict_walsh_reference",
+      "semantic_synthesis": "not_attempted_bqskit_1.2.1_available"
+    },
+    {
+      "features": [
+        "A",
+        "B",
+        "V"
+      ],
+      "depth": 128,
+      "cx": 172,
+      "width": 18,
+      "mode": "strict_walsh_reference",
+      "semantic_synthesis": "not_attempted_bqskit_1.2.1_available"
+    }
+  ]
+}

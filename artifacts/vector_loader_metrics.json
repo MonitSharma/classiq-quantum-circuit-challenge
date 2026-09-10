@@ -1,0 +1,19 @@
+{
+  "kind": "exact_minterm_reference",
+  "outputs": [
+    "R0",
+    "R1",
+    "R2",
+    "A",
+    "B"
+  ],
+  "depth": 7463,
+  "cx": 3822,
+  "width": 18,
+  "basis": [
+    "u3",
+    "cx"
+  ],
+  "qubits_initially_zero": false,
+  "note": "Loader-only reference; not integrated into the logo oracle."
+}

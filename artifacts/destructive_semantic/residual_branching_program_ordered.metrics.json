@@ -1,0 +1,8 @@
+{
+  "variable_order": [0, 1, 2, 3, 4, 5, 11, 8, 6, 7, 9, 10],
+  "marked_states": 1097,
+  "layer_state_counts": [1, 2, 4, 8, 13, 15, 11, 12, 19, 19, 10, 4, 2],
+  "max_layer_states": 19,
+  "status": "exact_structural_diagnostic",
+  "note": "Layered residual/cofactor DAG; not itself a reversible circuit or oracle. Regenerate with src/residual_branching_program.py."
+}

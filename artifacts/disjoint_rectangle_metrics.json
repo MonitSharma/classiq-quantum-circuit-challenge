@@ -1,0 +1,14 @@
+{
+  "A": {
+    "depth": 160,
+    "cx_count": 122,
+    "width": 18,
+    "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/disjoint_rectangle_A.qasm"
+  },
+  "B_prime": {
+    "depth": 161,
+    "cx_count": 145,
+    "width": 18,
+    "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/disjoint_rectangle_B_prime.qasm"
+  }
+}

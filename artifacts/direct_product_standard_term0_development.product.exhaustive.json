@@ -1,0 +1,11 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/direct_product_standard_term0_development.qasm",
+  "sha256": "01c0d20b60a023b181c890f1ffe4f77dbbd12459bf45846ad0c253f8e622bae0",
+  "basis_inputs_checked": 4096,
+  "depth": 243,
+  "cx_count": 243,
+  "width": 18,
+  "max_error": 8.360097326576708e-15,
+  "ancilla_error": 0.0,
+  "verification": "Exhaustive product-term phase verification"
+}

@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/exact_vector_stream_rank_terms_development.qasm",
+  "sha256": "0a9645c3da51b5d035da0ec60296337137ec06e3dbc13d22ff974f2a5fdd8677",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 2774,
+  "cx_count": 1601,
+  "max_error": 3.46951800549961e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 3.255665128177894e-13,
+  "peak_sparse_support": 256,
+  "elapsed_seconds": 19.197519302368164,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/530/full_mux_feature_permuted_530.qasm",
+  "sha256": "7f9676b2d372d9ca5eb31889bf9f3af1d6fc4a678bd9b782f6e67ef707938156",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 530,
+  "cx_count": 1020,
+  "max_error": 1.5157695690493977e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 2.337933797156194e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 8.885441780090332,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

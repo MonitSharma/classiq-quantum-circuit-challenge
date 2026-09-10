@@ -1,0 +1,1543 @@
+{
+  "generated_matrices": 256,
+  "affine_encodings_scored": 8192,
+  "abc_candidates": 64,
+  "natural_basis": {
+    "matrix_rows": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "offset": 0,
+    "anf_union": 36,
+    "anf_terms": 64,
+    "max_degree": 6,
+    "output_term_counts": [
+      16,
+      20,
+      12,
+      8,
+      8
+    ]
+  },
+  "best_by_anf": {
+    "matrix_rows": [
+      1,
+      6,
+      4,
+      8,
+      16
+    ],
+    "offset": 0,
+    "anf_union": 36,
+    "anf_terms": 62,
+    "max_degree": 6,
+    "output_term_counts": [
+      16,
+      18,
+      12,
+      8,
+      8
+    ]
+  },
+  "best_by_abc": {
+    "matrix_rows": [
+      17,
+      2,
+      4,
+      8,
+      20
+    ],
+    "offset": 0,
+    "anf_union": 36,
+    "anf_terms": 66,
+    "max_degree": 6,
+    "output_term_counts": [
+      14,
+      20,
+      12,
+      8,
+      12
+    ],
+    "abc_and": 46,
+    "abc_level": 7,
+    "abc_returncode": 0
+  },
+  "candidates": [
+    {
+      "matrix_rows": [
+        1,
+        6,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 62,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        18,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 58,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        6,
+        5,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 62,
+      "max_degree": 6,
+      "output_term_counts": [
+        18,
+        16,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 60,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        9,
+        2,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 62,
+      "max_degree": 6,
+      "output_term_counts": [
+        14,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 58,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        9,
+        26,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 62,
+      "max_degree": 6,
+      "output_term_counts": [
+        14,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 69,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        2,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 62,
+      "max_degree": 6,
+      "output_term_counts": [
+        14,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 47,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 64,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 56,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        20,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 64,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 56,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        3,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 64,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 60,
+      "abc_level": 10,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 64,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 59,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        4,
+        16,
+        8
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 64,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 59,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        20,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 64,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 56,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        18,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 64,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 59,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        5,
+        2,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 64,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 53,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        5,
+        10,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 64,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 60,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        20,
+        6,
+        13,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 64,
+      "max_degree": 6,
+      "output_term_counts": [
+        12,
+        18,
+        18,
+        8,
+        8
+      ],
+      "abc_and": 62,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        8,
+        4,
+        30,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 66,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        8,
+        12,
+        22,
+        8
+      ],
+      "abc_and": 59,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        22,
+        20,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 66,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        22,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 53,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        9,
+        4,
+        15,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 66,
+      "max_degree": 6,
+      "output_term_counts": [
+        14,
+        12,
+        24,
+        8,
+        8
+      ],
+      "abc_and": 74,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        9,
+        10,
+        4,
+        8,
+        24
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 66,
+      "max_degree": 6,
+      "output_term_counts": [
+        14,
+        20,
+        12,
+        8,
+        12
+      ],
+      "abc_and": 63,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        2,
+        4,
+        8,
+        20
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 66,
+      "max_degree": 6,
+      "output_term_counts": [
+        14,
+        20,
+        12,
+        8,
+        12
+      ],
+      "abc_and": 46,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        2,
+        4,
+        8,
+        24
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 66,
+      "max_degree": 6,
+      "output_term_counts": [
+        14,
+        20,
+        12,
+        8,
+        12
+      ],
+      "abc_and": 59,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        2,
+        4,
+        24,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 66,
+      "max_degree": 6,
+      "output_term_counts": [
+        14,
+        20,
+        12,
+        12,
+        8
+      ],
+      "abc_and": 56,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        2,
+        5,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 66,
+      "max_degree": 6,
+      "output_term_counts": [
+        14,
+        20,
+        16,
+        8,
+        8
+      ],
+      "abc_and": 55,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        17,
+        2,
+        12,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 66,
+      "max_degree": 6,
+      "output_term_counts": [
+        14,
+        20,
+        16,
+        8,
+        8
+      ],
+      "abc_and": 52,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        20
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        12
+      ],
+      "abc_and": 61,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        24
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        12
+      ],
+      "abc_and": 64,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        24,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        12,
+        8
+      ],
+      "abc_and": 57,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        5,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        16,
+        8,
+        8
+      ],
+      "abc_and": 56,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        12,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        16,
+        8,
+        8
+      ],
+      "abc_and": 60,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        6,
+        4,
+        8,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        18,
+        12,
+        8,
+        14
+      ],
+      "abc_and": 53,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        4,
+        8,
+        20
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        12
+      ],
+      "abc_and": 61,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        26,
+        4,
+        24,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        12,
+        8
+      ],
+      "abc_and": 69,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        1,
+        4,
+        24,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        20,
+        16,
+        12,
+        12,
+        8
+      ],
+      "abc_and": 62,
+      "abc_level": 10,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        20,
+        20,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 57,
+      "abc_level": 10,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        5,
+        10,
+        1,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        16,
+        8,
+        8
+      ],
+      "abc_and": 61,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        5,
+        10,
+        12,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        16,
+        8,
+        8
+      ],
+      "abc_and": 67,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        5,
+        10,
+        20,
+        16,
+        24
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 68,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        12
+      ],
+      "abc_and": 53,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        8,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        14
+      ],
+      "abc_and": 57,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        9,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        14,
+        8
+      ],
+      "abc_and": 65,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        16,
+        9
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        14
+      ],
+      "abc_and": 65,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        6,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        18,
+        8,
+        8
+      ],
+      "abc_and": 59,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        13,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        18,
+        8,
+        8
+      ],
+      "abc_and": 64,
+      "abc_level": 10,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        20,
+        9,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        14,
+        8
+      ],
+      "abc_and": 65,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        3,
+        4,
+        8,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        14
+      ],
+      "abc_and": 62,
+      "abc_level": 10,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        10,
+        4,
+        8,
+        17
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        8,
+        14
+      ],
+      "abc_and": 57,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        11,
+        5,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        22,
+        16,
+        8,
+        8
+      ],
+      "abc_and": 62,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        11,
+        20,
+        24,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        22,
+        12,
+        12,
+        8
+      ],
+      "abc_and": 64,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        6,
+        4,
+        8,
+        20
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        20,
+        18,
+        12,
+        8,
+        12
+      ],
+      "abc_and": 66,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        4,
+        6,
+        17,
+        20,
+        9
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        12,
+        18,
+        14,
+        12,
+        14
+      ],
+      "abc_and": 64,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        5,
+        2,
+        4,
+        9,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        14,
+        8
+      ],
+      "abc_and": 64,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        5,
+        7,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        26,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 59,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        8,
+        2,
+        5,
+        9,
+        24
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        8,
+        20,
+        16,
+        14,
+        12
+      ],
+      "abc_and": 64,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        9,
+        26,
+        5,
+        24,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        14,
+        20,
+        16,
+        12,
+        8
+      ],
+      "abc_and": 76,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        21,
+        2,
+        4,
+        8,
+        20
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        18,
+        20,
+        12,
+        8,
+        12
+      ],
+      "abc_and": 57,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        25,
+        6,
+        2,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 70,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        18,
+        20,
+        8,
+        8
+      ],
+      "abc_and": 63,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        4,
+        12,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        16,
+        8
+      ],
+      "abc_and": 61,
+      "abc_level": 8,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        12,
+        8,
+        24
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        16,
+        8,
+        12
+      ],
+      "abc_and": 69,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        20,
+        28,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        16,
+        8
+      ],
+      "abc_and": 64,
+      "abc_level": 7,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        2,
+        24,
+        28,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        12,
+        16,
+        8
+      ],
+      "abc_and": 69,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        16,
+        5,
+        24,
+        26
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        8,
+        16,
+        12,
+        20
+      ],
+      "abc_and": 69,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        1,
+        18,
+        12,
+        8,
+        24
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "output_term_counts": [
+        16,
+        20,
+        16,
+        8,
+        12
+      ],
+      "abc_and": 69,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        3,
+        2,
+        8,
+        28,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "output_term_counts": [
+        20,
+        20,
+        8,
+        16,
+        8
+      ],
+      "abc_and": 68,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        7,
+        6,
+        4,
+        8,
+        16
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "output_term_counts": [
+        26,
+        18,
+        12,
+        8,
+        8
+      ],
+      "abc_and": 60,
+      "abc_level": 9,
+      "abc_returncode": 0
+    },
+    {
+      "matrix_rows": [
+        16,
+        8,
+        5,
+        26,
+        3
+      ],
+      "offset": 0,
+      "anf_union": 36,
+      "anf_terms": 72,
+      "max_degree": 6,
+      "output_term_counts": [
+        8,
+        8,
+        16,
+        20,
+        20
+      ],
+      "abc_and": 71,
+      "abc_level": 10,
+      "abc_returncode": 0
+    }
+  ],
+  "note": "ANF and ABC scores are irreversible screening metrics; no loader or oracle score is claimed."
+}

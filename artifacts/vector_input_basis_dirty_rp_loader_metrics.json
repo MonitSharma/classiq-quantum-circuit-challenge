@@ -1,0 +1,23 @@
+{
+  "input_matrix_rows": [
+    1,
+    2,
+    4,
+    40,
+    16,
+    48
+  ],
+  "input_offset": 16,
+  "unique_monomials": 26,
+  "depth": 1560,
+  "cx": 874,
+  "width": 18,
+  "basis": [
+    "u3",
+    "cx"
+  ],
+  "qubits_initially_zero": false,
+  "classical_inputs_verified": 64,
+  "verification": "All 64 y basis states mapped exactly with zero q17 leakage and one shared global phase.",
+  "note": "Loader-only relative-phase dirty-ancilla diagnostic; not integrated into the logo oracle."
+}

@@ -1,0 +1,121 @@
+{
+  "backend": "gf2_span_quotiented_shared_xag",
+  "rows": [
+    {
+      "features": [
+        "R0",
+        "R1"
+      ],
+      "high_degree_monomials": {
+        "R0": [
+          31,
+          47,
+          61,
+          63
+        ],
+        "R1": [
+          31,
+          47,
+          59,
+          61
+        ]
+      },
+      "high_degree_rank": 2,
+      "and_lower_bound": 4,
+      "search": {
+        "status": "state_limit",
+        "depth_reached": 2,
+        "states": 5000,
+        "extensions": 4348,
+        "elapsed_seconds": 0.1553196907043457
+      }
+    },
+    {
+      "features": [
+        "R1",
+        "R2"
+      ],
+      "high_degree_monomials": {
+        "R1": [
+          31,
+          47,
+          59,
+          61
+        ],
+        "R2": [
+          31,
+          47,
+          59
+        ]
+      },
+      "high_degree_rank": 2,
+      "and_lower_bound": 4,
+      "search": {
+        "status": "state_limit",
+        "depth_reached": 2,
+        "states": 5000,
+        "extensions": 4348,
+        "elapsed_seconds": 0.14256787300109863
+      }
+    },
+    {
+      "features": [
+        "A",
+        "B"
+      ],
+      "high_degree_monomials": {
+        "A": [
+          31,
+          61,
+          63
+        ],
+        "B": [
+          47,
+          55,
+          63
+        ]
+      },
+      "high_degree_rank": 2,
+      "and_lower_bound": 4,
+      "search": {
+        "status": "state_limit",
+        "depth_reached": 2,
+        "states": 5000,
+        "extensions": 4348,
+        "elapsed_seconds": 0.15441417694091797
+      }
+    },
+    {
+      "features": [
+        "A",
+        "B",
+        "V"
+      ],
+      "high_degree_monomials": {
+        "A": [
+          31,
+          61,
+          63
+        ],
+        "B": [
+          47,
+          55,
+          63
+        ],
+        "V": [
+          31,
+          55
+        ]
+      },
+      "high_degree_rank": 3,
+      "and_lower_bound": 5,
+      "search": {
+        "status": "state_limit",
+        "depth_reached": 2,
+        "states": 5000,
+        "extensions": 4348,
+        "elapsed_seconds": 0.16956496238708496
+      }
+    }
+  ]
+}

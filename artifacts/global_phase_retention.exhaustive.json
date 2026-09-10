@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/global_phase_retention.qasm",
+  "sha256": "a6f4d0e447b14c6da40c99951f116744cd62656e5e38def8377f107dc288c105",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 1591,
+  "cx_count": 1094,
+  "max_error": 3.9975159891313595e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.0303976459345237e-13,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 2.613391160964966,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

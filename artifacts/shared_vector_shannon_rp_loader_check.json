@@ -1,0 +1,9 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/shared_vector_shannon_rp_loader.qasm",
+  "sha256": "7752f0c9f9beb1ec9f8b9970310c253f9fa641d56a86ef0c2282a2426c362f0f",
+  "inputs_checked": 64,
+  "features": ["R0", "R1", "R2", "A", "B"],
+  "scratch_q17_zero": true,
+  "input_bits_preserved": true,
+  "verification": "Sparse basis-state check of all 64 y inputs; exact output bits and clean q17; relative phases permitted for compute/uncompute use."
+}

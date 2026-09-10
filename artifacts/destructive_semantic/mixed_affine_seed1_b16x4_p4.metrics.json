@@ -1,0 +1,16 @@
+{
+  "seed": 1,
+  "beam_width": 16,
+  "requested_layers": 4,
+  "completed_layers": 3,
+  "proposal_limit": 4,
+  "affine_controls": true,
+  "biaffine_controls": true,
+  "forward_affine_controls": true,
+  "guided_hints": true,
+  "proxy_order": 3,
+  "best_residual_by_completed_layer": [827, 759, 653],
+  "best_direct_mismatches_by_completed_layer": [1097, 827, 933],
+  "status": "incomplete_negative_control",
+  "note": "Layer 4 was stopped during expensive order-3 proposal scoring; the mixed move set did not approach the existing frontiers."
+}

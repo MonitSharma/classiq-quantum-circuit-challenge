@@ -1,0 +1,28 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/528/full_mux_feature_linear_528.qasm",
+  "sha256": "f83b8695497cca51d13b29e90d6eff184d5cb6def7619511caca79f794192309",
+  "depth": 527,
+  "cx": 950,
+  "width": 18,
+  "matrix_rows": [
+    9,
+    23,
+    21,
+    8,
+    17,
+    32
+  ],
+  "assignment": [
+    12,
+    15,
+    14,
+    16,
+    17,
+    13
+  ],
+  "qubits_initially_zero": false,
+  "status": "exhaustively_verified",
+  "exhaustive_report": "artifacts/528/full_mux_feature_linear_528.exhaustive.json",
+  "dense_report": "artifacts/528/full_mux_feature_linear_528.verification.json",
+  "qmod": "artifacts/528/full_mux_feature_linear_528.qmod"
+}

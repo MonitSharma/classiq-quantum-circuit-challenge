@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/disjoint_rectangle_A.qasm",
+  "sha256": "6230cb7046b5836ff239d9139e0c81f2c5341030b1c68c2220c5e23a532c3d77",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 160,
+  "cx_count": 122,
+  "max_error": 5.4324404942746024e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.0835883394192045e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 0.2451939582824707,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

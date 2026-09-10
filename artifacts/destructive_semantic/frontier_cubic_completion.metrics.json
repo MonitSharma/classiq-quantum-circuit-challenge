@@ -1,0 +1,8 @@
+{
+  "frontier_states": ["direct501", "residual359", "residual355", "residual349"],
+  "basis_test": "constant + current wires + all pair-products + all cubic products, excluding the proposed target wire",
+  "targets_tested_per_state": 18,
+  "exact_completions": [],
+  "status": "exact_negative_structural_test",
+  "note": "The target correction is not in the degree-3 current-wire product span for any physical target on any listed frontier state."
+}

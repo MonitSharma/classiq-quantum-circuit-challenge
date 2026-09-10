@@ -1,0 +1,26 @@
+{
+  "experiment": "targeted triple-RCCX continuation from residual-355 state",
+  "seed": 1,
+  "base_residual": 355,
+  "triple_rccx": true,
+  "additional_gates_after_residual355": [
+    ["rccx", 5, 13, 17],
+    ["rccx", 2, 12, 17],
+    ["rccx", 3, 17, 12],
+    ["rccx", 12, 13, 11],
+    ["rccx", 2, 12, 17],
+    ["rccx", 0, 17, 11]
+  ],
+  "residual": 349,
+  "exact_affine_distance": 349,
+  "affine_combo": [11, 17],
+  "compiled_forward_depth": 149,
+  "compiled_forward_cx": 83,
+  "gate_count": 29,
+  "target_marked_states": 1097,
+  "direct_target_wire_mismatches": 1057,
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "semantic_hash": "f76a68c1e942d07a13503b86ac9b28d6",
+  "note": "Lower affine residual than the residual-355 point, but substantially deeper; retained as a targeted frontier record, not a candidate oracle."
+}

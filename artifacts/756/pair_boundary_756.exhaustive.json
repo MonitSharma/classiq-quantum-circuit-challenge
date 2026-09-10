@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/756/pair_boundary_756.qasm",
+  "sha256": "fce0c6f5067d659ada0aac47bfbfe7bd2f1e514c1402a774f898f72fb39e0657",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 756,
+  "cx_count": 747,
+  "max_error": 1.106065782652136e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 5.580430508224377e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 0.9781928062438965,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

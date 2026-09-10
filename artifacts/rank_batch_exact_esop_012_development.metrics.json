@@ -1,0 +1,11 @@
+{
+  "indices": [
+    0,
+    1,
+    2
+  ],
+  "depth": 1431,
+  "cx": 823,
+  "width": 18,
+  "qasm": "artifacts/rank_batch_exact_esop_012_development.qasm"
+}

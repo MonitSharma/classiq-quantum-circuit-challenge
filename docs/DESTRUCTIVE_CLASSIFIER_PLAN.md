@@ -1,0 +1,222 @@
+# Destructive Reversible Classifier Plan
+
+## Objective
+
+Develop a new phase-oracle architecture based on a reversible classifier
+
+\[
+O_f = C^\dagger Z_t C,
+\]
+
+where the forward circuit `C` may overwrite all 12 coordinate wires and all 6
+clean ancillas. On the subspace with ancillas initially zero, only one output
+wire `t` is constrained: it must equal the exact logo predicate `f(x,y)`.
+All other midpoint wires are unrestricted garbage, provided `C` is a
+reversible monomial circuit and `C^dagger` restores every input and ancilla.
+
+## Why this is different
+
+The protected `full_mux` architecture preserves the coordinate registers while
+loading six y-features, applies phase logic, and uncomputes the features. This
+plan treats the entire 18-wire register as reversible workspace during the
+forward computation. It therefore searches for a shallow reversible embedding
+of one Boolean output instead of a clean compute/phase/uncompute realization of
+six named features.
+
+Relative-phase Toffoli and Peres-style primitives are permitted inside `C`.
+Their intermediate phases need not cancel locally: the exact inverse `C^dagger`
+is used, so the whole conjugation cancels the midpoint phase ledger. This claim
+must still be checked by exhaustive verification of the serialized oracle.
+
+## Correctness contract
+
+For every 12-bit coordinate basis state `|x,y>` with q[12:18] initially zero,
+
+```text
+C |x,y,0^6> = exp(i phi(x,y)) |g(x,y)>
+```
+
+with `g_t(x,y) = logo(x,y)`.
+
+Then `C^dagger Z_t C` applies exactly the required shared-sign phase and
+restores q[0:18]. Inputs remain arbitrary at the oracle boundary; only the six
+ancillas start clean.
+
+## Milestones and stop rules
+
+1. Reproduce the 1,097 marked states and the exact coordinate convention.
+2. Build a classical reversible-embedding model with all 18 wires writable.
+3. Search or construct candidate forward classifiers and score serialized
+   U3/CX depth of `C`.
+4. Treat forward depth <= 110 as promising; forward depth <= 94 is the direct
+   threshold for a nominal complete depth below 190 before cancellation.
+5. Emit every candidate under a new filename. Never overwrite the protected
+   `artifacts/524` files.
+6. For a complete candidate, construct `C^dagger Z C`, serialize standalone in
+   U3/CX, and run `src/exhaustive_verify.py` with arbitrary-input semantics.
+
+## Initial implementation direction
+
+Start with a destructive XAG/register-allocation prototype rather than
+reusing `src/full_mux.py`. Use the existing exact `logo` truth table and
+relative-phase-safe primitives, but allow logical inputs to be retired and
+their physical wires to hold nonlinear state. The first prototype may be a
+forward-classifier diagnostic; it is not a score-bearing oracle until the
+conjugated circuit passes exhaustive verification.
+
+## Evidence and limitations
+
+Reversible embedding with don't-care garbage is a known synthesis problem, but
+optimal embedding is hard in general. The extra garbage freedom is therefore a
+search opportunity, not a proof that a shallow classifier exists. The target
+leaderboard value is treated as unverified context; no rank or submission claim
+is made by this plan.
+
+## Initial semantic search result
+
+The semantic engine and verifier pipeline are now implemented in
+`src/destructive_semantic_search.py` and
+`src/verify_destructive_classifier.py`. A deterministic beam-128 run with 48
+proposals per state reached nonlinear layer 13 before the next expansion hit
+the current memory limit. Its best saved state had affine residual 501 at an
+estimated forward depth 36. The state used original coordinate wires as RCCX
+targets, confirming that destructive mode is active. No affine completion or
+complete oracle has been found yet.
+
+Layer checkpoints are retained under `artifacts/destructive_semantic/`. The
+next implementation task is to reduce state memory and add disjoint RCCX layer
+generation before increasing the beam.
+
+The matching preserve-inputs ablation reached residual 575 under the same
+beam-128, 48-proposal, 16-layer configuration. The calibrated destructive run
+reached residual 473 at estimated forward depth 70 before its next expansion
+hit the memory boundary. Neither run reached affine completion.
+
+The disjoint-RCCX layer extension was validated but reached residual 575 by
+layer 9 in the first beam-128 comparison. A deeper low-fanout single-RCCX run
+reached residual 503 by layer 25 at estimated depth 126. An order-3 affine
+proxy subsequently reached residual 513 at estimated depth 84 after 14 layers,
+the best current heuristic result. A full-proxy mutation-ranking control
+reproduced only the early residual 827 trajectory while being much slower per
+layer. No classifier has reached affine completion, and no complete
+`C^dagger Z C` oracle has been serialized or exhaustively verified. The next
+search change should therefore be guided semantic proposals or a
+memory-efficient mutation strategy, not broad exact ranking or simply a larger
+beam.
+
+A two-sided affine-control RCCX proposal was then tested. The reversible
+five-wire block temporarily XORs both controls before RCCX and restores them
+afterward. A beam-16, six-layer run reached residual 647 at estimated depth
+41; its serialized forward circuit measured depth 35 and 30 CX gates. This is
+a useful new heuristic move, but it did not reach affine completion and is not
+a complete classifier or phase oracle.
+
+Bounded two-RCCX lookahead was then tested to preserve synergistic mutation
+pairs. A beam-16, six-layer run reached residual 593 after 12 RCCXs at
+estimated depth 77; the serialized forward circuit measured depth 59 and 34
+CX gates. This is the best current destructive-search heuristic result, but no
+affine completion or complete phase oracle has been found.
+
+Resuming that beam through layer 10 improved the residual to 581. The retained
+18-RCCX history compiled to forward depth 88 and 52 CX gates, which is a
+promising screening depth but not a valid classifier: its best affine-span
+residual is 581, and no complete phase oracle was constructed or verified.
+
+Lifted rank-factor truth tables were added as optional semantic proposal hints.
+The guided beam also reached residual 581, but its selected circuit compiled
+to depth 99 and 58 CX gates, so the hints currently improve exploration rather
+than the depth objective.
+
+Seed 1 with the double-RCCX move set reached residual 429 at layer 10. Its
+20-RCCX history compiled to forward depth 92 and 58 CX gates, but its best
+affine-span residual is 429. This is a strong heuristic screening result, not
+a complete classifier or verified phase oracle.
+
+The wider seed-1 beam also retained a Pareto candidate with residual 383 and
+compiled forward depth 91 (58 CX gates). The residual-379 state was deeper at
+112, so the residual-383 candidate is the better depth-screening point. Both
+ remain incomplete affine-span approximations, not midpoint classifiers.
+
+A seed-1 beam of 64 states found a depth-90 candidate with residual 403 and
+46 CX gates. This improves the current depth/residual Pareto point, but 403
+the affine-span residual remains nonzero and no complete oracle has been
+verified.
+
+Resuming the seed-1 beam one additional layer produced residual 379 at
+compiled forward depth 84 with 48 CX gates. This is the current best
+depth/residual heuristic point, but the affine-span residual remains 379 and
+no complete phase oracle has been constructed or verified.
+
+The next seed-1 beam layer reduced the residual to 359, with compiled forward
+depth 107 and 56 CX gates. This is a lower-residual but deeper Pareto point;
+the depth-84/residual-379 candidate remains the shallow frontier point. Both
+still fail midpoint classification and are not verified oracles.
+
+Seed 94 produced a shallow Pareto point with affine residual 531, compiled
+forward depth 81, and 48 CX gates. It is shallower but less accurate than the
+seed-1 candidates and remains an incomplete classifier.
+
+An unrestored affine-control prefix was also implemented and semantically
+validated. Its seed-1 four-layer control reached residual 647 at compiled depth
+26, so it was not competitive in the short run; it remains an optional
+all-wires-writable move rather than the main search primitive.
+
+Bounded triple-RCCX lookahead was added as an optional escape move. Its cold
+seed-1 control reached residual 575 at compiled depth 53; a local probe around
+the residual-359 basin reached residual 355, so it is retained for targeted
+continuations but is not the default search path.
+
+A further targeted continuation reached exact affine residual 349, but its
+29-RCCX circuit compiled to forward depth 149 and 83 CX gates. No affine
+completion or complete phase-oracle verification has been reached.
+
+A beam-16 divergent double-RCCX continuation seeded from that residual-349
+state stayed at residual 349 after four layers, including exact scoring of
+eight leaders; the local basin therefore needs a different move family.
+
+A four-layer forward-affine-control continuation likewise stayed at residual
+349, confirming that this affine-prefix variant does not escape the basin in
+the tested window.
+
+A direct-wire objective was also tested independently: a beam-32, 12-layer
+run reached 609 direct mismatches on q11 at estimated depth 70, weaker than
+the affine-residual frontier. Direct mismatch and affine residual are tracked
+separately in the experiment records. The search engine now exposes this mode
+as `--direct-target`, while retaining affine-span ranking by default.
+
+A deeper seed-2024 direct-target run improved the best mismatch to 543 on q11;
+the selected 26-RCCX circuit compiled to depth 60 / 62 CX, but is still not a
+classifier.
+
+Extending that direct-target history reduced the mismatch to 513; the 44-RCCX
+candidate compiled to depth 113 / 106 CX, but still has no exact classifier or
+oracle verification.
+
+A further continuation reached mismatch 501 with a 56-RCCX circuit at depth
+155 / 128 CX; the next three-gate probe plateaued, and no exact classifier was
+found.
+
+The existing input-preserving v0 oracle separately passed exhaustive
+verification for all 4,096 inputs at depth 21,392 / 15,462 CX. This is a
+correctness baseline only and does not establish a destructive classifier.
+
+An exact ten-row-factor input-preserving classifier was also constructed and
+exhaustively verified through its conjugated oracle at depth 13,064 / 7,476
+CX. It is retained as a correctness baseline, not as a destructive-search
+candidate.
+
+A cold seed-42 triple-RCCX beam reached residual 531 at estimated depth 77
+after four layers; it did not reach affine completion and is weaker than the
+targeted seed-1 basin.
+
+Seed 42 produced a substantially stronger shallow point: affine residual 447
+at compiled forward depth 59 with 32 CX gates. It dominates the seed-94
+shallow candidate, but remains incomplete and unverified.
+
+Resuming seed 42 through layer 10 reduced the affine residual to 423 at
+compiled forward depth 73 with 46 CX gates. This is a strong intermediate
+Pareto point, but it remains an incomplete classifier and unverified oracle.
+
+Continuing seed 42 through layer 14 reduced the affine residual to 415 at
+compiled forward depth 97 with 66 CX gates. This is a lower-residual but
+deeper frontier point and remains an incomplete classifier.

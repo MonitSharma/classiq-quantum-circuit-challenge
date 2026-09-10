@@ -1,0 +1,12 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/threshold_phase_ucr_ucr_corrected_candidate.qasm",
+  "depth": 969,
+  "cx": 1338,
+  "width": 18,
+  "sha256": "4a6deced9376fd428c177174b695e5c8473f6acf2953f8e8138c4d6879a45845",
+  "status": "exhaustively_verified",
+  "exhaustive_report": "artifacts/threshold_phase_ucr_ucr_corrected_candidate.exhaustive.json",
+  "max_error": 2.001921759818483e-14,
+  "ancilla_error": 0.0,
+  "representation": "UCR feature phases plus exact x-only branch correction"
+}

@@ -1,0 +1,11 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/rank_term_phase_only_2_development.qasm",
+  "sha256": "2f9a133db60b7c111135e1e38f93ff092c4caa636590105e90fd5ffb47e859a2",
+  "basis_inputs_checked": 4096,
+  "depth": 251,
+  "cx_count": 162,
+  "width": 18,
+  "max_error": 2.8549142762343643e-15,
+  "ancilla_error": 0.0,
+  "verification": "Exhaustive product-term phase verification"
+}

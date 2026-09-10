@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/class_nested5_codebook_search.qasm",
+  "sha256": "890cfb8e55fdfb6dedba98ab255ab63337e72255478bf2167e17cec42a4ff422",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 4079,
+  "cx_count": 3568,
+  "max_error": 7.227645687345304e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 5.258339537398111e-13,
+  "peak_sparse_support": 128,
+  "elapsed_seconds": 18.448528289794922,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

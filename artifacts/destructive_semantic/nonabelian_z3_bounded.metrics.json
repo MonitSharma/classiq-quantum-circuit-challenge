@@ -1,0 +1,15 @@
+{
+  "l4_order_0123": {
+    "solver_result": "unsat",
+    "timeout_ms": 60000,
+    "status": "proven_unsat",
+    "elapsed_seconds": 1.411
+  },
+  "l12_ordered": {
+    "solver_result": "unknown",
+    "timeout_ms": 60000,
+    "status": "timeout_or_unknown",
+    "order": [0, 1, 2, 3, 4, 5, 11, 8, 6, 7, 9, 10]
+  },
+  "note": "Exact finite-group branching-program constraints; unknown is a solver timeout, not an impossibility result."
+}

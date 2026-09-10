@@ -1,0 +1,89 @@
+{
+  "search": "destructive_semantic_search",
+  "seed": 524,
+  "beam_width": 128,
+  "proposal_limit": 48,
+  "requested_layers": 16,
+  "completed_layer": 13,
+  "target_marked_states": 1097,
+  "residual": 501,
+  "estimated_forward_depth": 36,
+  "semantic_hash": "0c353122765f1cc8645b712571e63afd",
+  "affine_solution": null,
+  "gates": [
+    [
+      "rccx",
+      5,
+      10,
+      11
+    ],
+    [
+      "rccx",
+      10,
+      11,
+      12
+    ],
+    [
+      "rccx",
+      9,
+      12,
+      11
+    ],
+    [
+      "rccx",
+      5,
+      11,
+      14
+    ],
+    [
+      "rccx",
+      4,
+      14,
+      11
+    ],
+    [
+      "rccx",
+      12,
+      14,
+      11
+    ],
+    [
+      "rccx",
+      0,
+      14,
+      17
+    ],
+    [
+      "rccx",
+      5,
+      11,
+      13
+    ],
+    [
+      "rccx",
+      5,
+      14,
+      11
+    ],
+    [
+      "rccx",
+      9,
+      13,
+      15
+    ],
+    [
+      "rccx",
+      8,
+      15,
+      11
+    ],
+    [
+      "rccx",
+      9,
+      14,
+      16
+    ]
+  ],
+  "status": "not_affine_completed",
+  "checkpoint": "artifacts/destructive_semantic/beam128x16_p48/checkpoints/layer_013.pkl"
+}

@@ -1,0 +1,23 @@
+{
+  "basis": "rank_terms",
+  "order": [
+    7,
+    6,
+    8,
+    9,
+    5,
+    3,
+    4,
+    1,
+    2,
+    0
+  ],
+  "edge_path_score": {
+    "depth": 1450,
+    "cx": 1343
+  },
+  "depth": 1267,
+  "cx": 1322,
+  "width": 18,
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/exact_stream_rank_terms_development.qasm"
+}

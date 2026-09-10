@@ -1,0 +1,19 @@
+{
+  "indices": [
+    0,
+    1,
+    2
+  ],
+  "basis": "rank_terms",
+  "depth": 484,
+  "cx": 290,
+  "width": 18,
+  "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/cofactor_product_phase_012_development.qasm",
+  "x_tree_score": 56,
+  "x_raw_depth": 20,
+  "y_esop_cubes": [
+    1,
+    3,
+    2
+  ]
+}

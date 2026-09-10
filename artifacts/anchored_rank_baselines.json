@@ -1,0 +1,53 @@
+{
+  "pair_terms": {
+    "depth": 779,
+    "cx": 736,
+    "width": 18,
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ]
+  },
+  "rank_terms": {
+    "depth": 842,
+    "cx": 781,
+    "width": 18,
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ]
+  },
+  "rank_mc_pareto_terms": {
+    "depth": 859,
+    "cx": 800,
+    "width": 18,
+    "assignment": [
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit",
+      "pair_circuit"
+    ]
+  }
+}

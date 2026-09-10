@@ -1,0 +1,226 @@
+{
+  "5": {
+    "path_length": 14,
+    "old_prepare_restore_depth": 36,
+    "old_prepare_restore_cx": 26,
+    "transition_depth_sum": 29,
+    "transition_cx_sum": 24,
+    "transitions": [
+      {
+        "cx": 0,
+        "depth": 0
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 2,
+        "depth": 2
+      },
+      {
+        "cx": 2,
+        "depth": 2
+      },
+      {
+        "cx": 3,
+        "depth": 2
+      },
+      {
+        "cx": 3,
+        "depth": 2
+      },
+      {
+        "cx": 2,
+        "depth": 2
+      },
+      {
+        "cx": 2,
+        "depth": 2
+      },
+      {
+        "cx": 2,
+        "depth": 2
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 2,
+        "depth": 3
+      },
+      {
+        "cx": 2,
+        "depth": 3
+      },
+      {
+        "cx": 2,
+        "depth": 3
+      }
+    ],
+    "note": "linear-preparation diagnostic only; RCCX semantic basis changes are not yet integrated"
+  },
+  "9": {
+    "path_length": 14,
+    "old_prepare_restore_depth": 22,
+    "old_prepare_restore_cx": 8,
+    "transition_depth_sum": 16,
+    "transition_cx_sum": 8,
+    "transitions": [
+      {
+        "cx": 0,
+        "depth": 0
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 2,
+        "depth": 2
+      },
+      {
+        "cx": 2,
+        "depth": 2
+      },
+      {
+        "cx": 1,
+        "depth": 1
+      },
+      {
+        "cx": 1,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 1,
+        "depth": 1
+      },
+      {
+        "cx": 1,
+        "depth": 1
+      }
+    ],
+    "note": "linear-preparation diagnostic only; RCCX semantic basis changes are not yet integrated"
+  },
+  "4": {
+    "path_length": 10,
+    "old_prepare_restore_depth": 16,
+    "old_prepare_restore_cx": 0,
+    "transition_depth_sum": 11,
+    "transition_cx_sum": 0,
+    "transitions": [
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      }
+    ],
+    "note": "linear-preparation diagnostic only; RCCX semantic basis changes are not yet integrated"
+  },
+  "2": {
+    "path_length": 8,
+    "old_prepare_restore_depth": 18,
+    "old_prepare_restore_cx": 8,
+    "transition_depth_sum": 15,
+    "transition_cx_sum": 8,
+    "transitions": [
+      {
+        "cx": 1,
+        "depth": 2
+      },
+      {
+        "cx": 1,
+        "depth": 2
+      },
+      {
+        "cx": 0,
+        "depth": 0
+      },
+      {
+        "cx": 0,
+        "depth": 1
+      },
+      {
+        "cx": 1,
+        "depth": 2
+      },
+      {
+        "cx": 1,
+        "depth": 2
+      },
+      {
+        "cx": 1,
+        "depth": 2
+      },
+      {
+        "cx": 2,
+        "depth": 3
+      }
+    ],
+    "note": "linear-preparation diagnostic only; RCCX semantic basis changes are not yet integrated"
+  }
+}

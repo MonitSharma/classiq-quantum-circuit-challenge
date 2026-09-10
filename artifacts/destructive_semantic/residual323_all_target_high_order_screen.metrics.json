@@ -1,0 +1,22 @@
+{
+  "experiment": "all-target high-order monomial screen from residual-323 fused chain",
+  "base_artifact": "high_order_affine_fused_tail.metrics.json",
+  "base_affine_residual": 323,
+  "degrees_tested": [3, 4, 5, 6],
+  "candidate_count": 132163,
+  "targets": "all 18 physical wires, including clean wires",
+  "proxy": "affine distance through three-wire combinations",
+  "proxy_hit_count": 7,
+  "best_residual": 315,
+  "best_exact_hits": [
+    [11, [1, 2, 3, 4, 9, 14]],
+    [12, [1, 2, 3, 4, 9, 14]],
+    [13, [1, 2, 3, 4, 9, 14]],
+    [17, [1, 2, 3, 4, 9, 14]],
+    [12, [1, 2, 3, 9, 11, 14]],
+    [13, [1, 2, 3, 9, 11, 14]],
+    [17, [1, 2, 3, 9, 11, 14]]
+  ],
+  "semantic_inputs_checked": 4096,
+  "status": "complete degree-3-through-6 all-target screen; no improvement below residual 315"
+}

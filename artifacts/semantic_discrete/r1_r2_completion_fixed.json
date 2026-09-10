@@ -1,0 +1,14 @@
+{
+  "status": "smoke_limit",
+  "features": [
+    "R1",
+    "R2"
+  ],
+  "counters": {
+    "first_extensions": 651,
+    "second_extensions": 1086,
+    "direction_tests": 21,
+    "completion_successes": 0
+  },
+  "elapsed_seconds": 0.4353458881378174
+}

@@ -1,0 +1,21 @@
+{
+  "status": "exact semantic embedding; structured native synthesis pending",
+  "variable_order": [11, 9, 10, 5, 4, 2, 3, 1, 0, 8, 7, 6],
+  "loaded_prefix_bits": [11, 9, 10, 5, 4, 2],
+  "remaining_control_bits": [3, 1, 0, 8, 7, 6],
+  "state_width": 7,
+  "state_capacity": 128,
+  "marked_states": 1097,
+  "semantic_replay_inputs": 4096,
+  "source_slot_peak": 99,
+  "transition_anf_terms": 2459,
+  "terminal_anf_terms": 45,
+  "terminal_anf_degree": 6,
+  "total_anf_terms": 2504,
+  "terminal_tail_compiled_depth": 1967,
+  "terminal_tail_compiled_cx": 1109,
+  "total_controlled_permutation_adjacent_transpositions": 322,
+  "total_gray_path_mct_cost": 2106,
+  "order_screen": {"generated_orders": 436, "capacity128_valid": 32},
+  "interpretation": "best Boolean-transition score in this neighborhood; not a complete QASM candidate"
+}

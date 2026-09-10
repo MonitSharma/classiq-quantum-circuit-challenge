@@ -1,0 +1,25 @@
+{
+  "experiment": "signed-control continuation from shallow destructive base",
+  "base_artifact": "double_seed42_b16x6_p4_depth59.json",
+  "base_affine_residual": 447,
+  "base_affine_combo": [11, 12],
+  "corrections": [
+    [11, [[5, false], [7, true], [8, true], [9, false], [15, true]]],
+    [11, [[4, false], [5, true], [8, true], [9, true], [10, false], [16, false]]]
+  ],
+  "corrected_affine_residual": 347,
+  "corrected_affine_combo": [11, 12],
+  "semantic_inputs_checked": 4096,
+  "clean_ancillas": [13, 17],
+  "clean_ancillas_restored": true,
+  "compiled_forward_depth": 99,
+  "compiled_forward_cx": 73,
+  "transpilation": {
+    "basis_gates": ["u3", "cx"],
+    "qubits_initially_zero": false,
+    "optimization_level": 3
+  },
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "status": "signed-control Pareto candidate; incomplete classifier"
+}

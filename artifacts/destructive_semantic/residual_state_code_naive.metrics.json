@@ -1,0 +1,11 @@
+{
+  "variable_order": [0, 1, 2, 3, 4, 5, 11, 8, 6, 7, 9, 10],
+  "layer_state_counts": [1, 2, 4, 8, 13, 15, 11, 12, 19, 19, 10, 4, 2],
+  "state_register": [12, 13, 14, 15, 16],
+  "raw_gate_count": 3723,
+  "esop_terms": 589,
+  "classifier_depth": 47885,
+  "classifier_cx": 29642,
+  "status": "unverified_negative_control",
+  "note": "Semantically computes the residual-state code, but direct prefix-ESOP updates are too expensive. No oracle QASM was retained."
+}

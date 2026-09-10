@@ -1,0 +1,12 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/rank.qasm",
+  "sha256": "273019bde0061d433c1d3fa7985dcf9aa7ee717d54510ebb0e93c7e6fdfaaa5a",
+  "width": 18,
+  "depth": 1409,
+  "cx_count": 1037,
+  "random_dense_states": 3,
+  "max_error": 5.835275607609835e-16,
+  "ancilla_error": 1.3092278833360675e-16,
+  "normalization_error": 9.325873406851315e-15,
+  "verification": "Dense random inputs supported on all 4096 coordinates; probabilistic numerical check, not exhaustive operator proof"
+}

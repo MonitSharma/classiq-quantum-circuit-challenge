@@ -1,0 +1,14 @@
+{
+  "status": "timeout_or_no_witness",
+  "features": [
+    "R1",
+    "R2"
+  ],
+  "counters": {
+    "first_extensions": 651,
+    "second_extensions": 424445,
+    "direction_tests": 0,
+    "completion_successes": 0
+  },
+  "elapsed_seconds": 10.022863149642944
+}

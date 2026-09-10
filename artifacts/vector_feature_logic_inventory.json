@@ -1,0 +1,205 @@
+{
+  "inputs": 6,
+  "outputs": [
+    "R0",
+    "R1",
+    "R2",
+    "A",
+    "B"
+  ],
+  "scalar_anf_term_count": 64,
+  "unique_anf_monomial_count": 36,
+  "shared_anf_monomial_count": 14,
+  "shared_anf_monomials": [
+    {
+      "mask": 16,
+      "term": "y4",
+      "occurrences": 3,
+      "outputs": [
+        "R0",
+        "R1",
+        "R2"
+      ]
+    },
+    {
+      "mask": 29,
+      "term": "y0 y2 y3 y4",
+      "occurrences": 2,
+      "outputs": [
+        "R1",
+        "A"
+      ]
+    },
+    {
+      "mask": 31,
+      "term": "y0 y1 y2 y3 y4",
+      "occurrences": 4,
+      "outputs": [
+        "R0",
+        "R1",
+        "R2",
+        "A"
+      ]
+    },
+    {
+      "mask": 40,
+      "term": "y3 y5",
+      "occurrences": 3,
+      "outputs": [
+        "R1",
+        "R2",
+        "B"
+      ]
+    },
+    {
+      "mask": 44,
+      "term": "y2 y3 y5",
+      "occurrences": 3,
+      "outputs": [
+        "R0",
+        "R1",
+        "B"
+      ]
+    },
+    {
+      "mask": 45,
+      "term": "y0 y2 y3 y5",
+      "occurrences": 2,
+      "outputs": [
+        "R0",
+        "R1"
+      ]
+    },
+    {
+      "mask": 47,
+      "term": "y0 y1 y2 y3 y5",
+      "occurrences": 4,
+      "outputs": [
+        "R0",
+        "R1",
+        "R2",
+        "B"
+      ]
+    },
+    {
+      "mask": 48,
+      "term": "y4 y5",
+      "occurrences": 3,
+      "outputs": [
+        "R0",
+        "R1",
+        "R2"
+      ]
+    },
+    {
+      "mask": 54,
+      "term": "y1 y2 y4 y5",
+      "occurrences": 2,
+      "outputs": [
+        "R0",
+        "A"
+      ]
+    },
+    {
+      "mask": 56,
+      "term": "y3 y4 y5",
+      "occurrences": 5,
+      "outputs": [
+        "R0",
+        "R1",
+        "R2",
+        "A",
+        "B"
+      ]
+    },
+    {
+      "mask": 59,
+      "term": "y0 y1 y3 y4 y5",
+      "occurrences": 2,
+      "outputs": [
+        "R1",
+        "R2"
+      ]
+    },
+    {
+      "mask": 60,
+      "term": "y2 y3 y4 y5",
+      "occurrences": 3,
+      "outputs": [
+        "R0",
+        "R2",
+        "B"
+      ]
+    },
+    {
+      "mask": 61,
+      "term": "y0 y2 y3 y4 y5",
+      "occurrences": 3,
+      "outputs": [
+        "R0",
+        "R1",
+        "A"
+      ]
+    },
+    {
+      "mask": 63,
+      "term": "y0 y1 y2 y3 y4 y5",
+      "occurrences": 3,
+      "outputs": [
+        "R0",
+        "A",
+        "B"
+      ]
+    }
+  ],
+  "per_output": {
+    "R0": {
+      "anf_term_count": 16,
+      "algebraic_degree": 6
+    },
+    "R1": {
+      "anf_term_count": 20,
+      "algebraic_degree": 5
+    },
+    "R2": {
+      "anf_term_count": 12,
+      "algebraic_degree": 5
+    },
+    "A": {
+      "anf_term_count": 8,
+      "algebraic_degree": 6
+    },
+    "B": {
+      "anf_term_count": 8,
+      "algebraic_degree": 6
+    }
+  },
+  "abc_binary": "experiments/abc/abc",
+  "abc_runs": [
+    {
+      "name": "strash_balance_rewrite_refactor_resub",
+      "script": "strash; balance; rewrite; refactor; resub; balance",
+      "returncode": 0,
+      "stdout": "======== ABC command line \"read_pla /Users/monitsharma/Downloads/classiq/artifacts/vector_feature.pla; strash; balance; rewrite; refactor; resub; balance; ps; write_bench /Users/monitsharma/Downloads/classiq/artifacts/vector_feature_abc_strash_balance_rewrite_refactor_resub.bench\"\n\u001b[1;37m/Users/monitsharma/Downloads/classiq/artifacts/vector_feature:\u001b[0m i/o =    6/    5  lat =    0  and =     56  lev =  8\n",
+      "stderr": "",
+      "output": "artifacts/vector_feature_abc_strash_balance_rewrite_refactor_resub.bench"
+    },
+    {
+      "name": "strash_rewrite_z_balance_refactor",
+      "script": "strash; rewrite -z; balance; refactor; rewrite -z; balance",
+      "returncode": 0,
+      "stdout": "======== ABC command line \"read_pla /Users/monitsharma/Downloads/classiq/artifacts/vector_feature.pla; strash; rewrite -z; balance; refactor; rewrite -z; balance; ps; write_bench /Users/monitsharma/Downloads/classiq/artifacts/vector_feature_abc_strash_rewrite_z_balance_refactor.bench\"\n\u001b[1;37m/Users/monitsharma/Downloads/classiq/artifacts/vector_feature:\u001b[0m i/o =    6/    5  lat =    0  and =     58  lev =  7\n",
+      "stderr": "",
+      "output": "artifacts/vector_feature_abc_strash_rewrite_z_balance_refactor.bench"
+    },
+    {
+      "name": "strash_balance_rewrite_resub_balance",
+      "script": "strash; balance; rewrite; resub; balance; rewrite -z; balance",
+      "returncode": 0,
+      "stdout": "======== ABC command line \"read_pla /Users/monitsharma/Downloads/classiq/artifacts/vector_feature.pla; strash; balance; rewrite; resub; balance; rewrite -z; balance; ps; write_bench /Users/monitsharma/Downloads/classiq/artifacts/vector_feature_abc_strash_balance_rewrite_resub_balance.bench\"\n\u001b[1;37m/Users/monitsharma/Downloads/classiq/artifacts/vector_feature:\u001b[0m i/o =    6/    5  lat =    0  and =     56  lev =  8\n",
+      "stderr": "",
+      "output": "artifacts/vector_feature_abc_strash_balance_rewrite_resub_balance.bench"
+    }
+  ],
+  "note": "ABC outputs are synthesis inventories only; no reversible loader is claimed."
+}

@@ -1,0 +1,30 @@
+{
+  "experiment": "seed-42 double-RCCX residual frontier",
+  "seed": 42,
+  "beam_width": 16,
+  "layers": 14,
+  "resumed_from_layer": 10,
+  "proposal_limit": 4,
+  "proxy_order": 3,
+  "double_rccx": true,
+  "residual": 415,
+  "exact_affine_distance": 415,
+  "estimated_forward_depth": 154,
+  "compiled_forward_depth": 97,
+  "compiled_forward_cx": 66,
+  "target_marked_states": 1097,
+  "semantic_hash": "1e1238e0bba810779be01e2032b424f7",
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "gates": [
+    ["rccx", 5, 10, 11], ["rccx", 10, 11, 15], ["rccx", 9, 15, 11],
+    ["rccx", 5, 11, 17], ["rccx", 15, 17, 11], ["rccx", 4, 17, 11],
+    ["rccx", 5, 17, 11], ["rccx", 11, 17, 14], ["rccx", 9, 17, 11],
+    ["rccx", 4, 14, 16], ["rccx", 5, 11, 14], ["rccx", 8, 14, 11],
+    ["rccx", 5, 16, 12], ["rccx", 8, 16, 12], ["rccx", 4, 12, 11],
+    ["rccx", 12, 17, 16], ["rccx", 2, 16, 13], ["rccx", 3, 16, 11],
+    ["rccx", 5, 16, 13], ["rccx", 14, 17, 11], ["rccx", 9, 17, 11],
+    ["rccx", 13, 16, 11], ["rccx", 9, 17, 14], ["rccx", 13, 17, 14],
+    ["rccx", 3, 14, 13], ["rccx", 1, 13, 11]
+  ]
+}

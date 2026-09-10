@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "1": {"depth": 8168, "cx_count": 4094},
+    "2": {"depth": 8168, "cx_count": 4094},
+    "3": {"depth": 8168, "cx_count": 4094},
+    "4": {"depth": 8168, "cx_count": 4094},
+    "6": {"depth": 8168, "cx_count": 4094},
+    "12": {"depth": 8168, "cx_count": 4094}
+  },
+  "result": "all supported GraySynth section sizes are identical after U3/CX serialization"
+}
