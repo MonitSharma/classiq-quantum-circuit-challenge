@@ -32,6 +32,7 @@ TARGET_WIRE = 12
 RCCX_ESTIMATED_DEPTH = 7
 BIAFFINE_RCCX_ESTIMATED_DEPTH = 9
 PROXY_ORDER = 2
+FULL_PROXY_SHORTLIST_MULTIPLIER = 32
 
 
 def input_truth_tables() -> tuple[int, ...]:
@@ -264,6 +265,17 @@ def apply_rccx_layer_state(
     return child
 
 
+def apply_double_rccx_state(
+    state: State, first: tuple[int, int, int],
+    second: tuple[int, int, int],
+) -> State | None:
+    """Apply two serial RCCXs as one lookahead search move."""
+    child = apply_rccx_state(state, *first)
+    if child is None:
+        return None
+    return apply_rccx_state(child, *second)
+
+
 def apply_affine_rccx_state(
     state: State, a: int, mix: int, b: int, target: int
 ) -> State | None:
@@ -403,22 +415,30 @@ def proposal_gates(
                 new_value = state.wires[target] ^ term
                 if new_value == state.wires[target]:
                     continue
-                if evaluate_proxy:
-                    candidate_wires = list(state.wires)
-                    candidate_wires[target] = new_value
-                    heuristic, _ = affine_distance_proxy(
-                        tuple(candidate_wires), max_order=PROXY_ORDER
-                    )
-                else:
-                    direct = (TARGET ^ new_value).bit_count()
-                    pair_hint = min(
-                        (TARGET ^ new_value ^ state.wires[i]).bit_count()
-                        for i in range(N_WIRES) if i != target
-                    )
-                    heuristic = min(direct, pair_hint)
-                proposals.append((heuristic, rng.random(), a, b, target))
+                direct = (TARGET ^ new_value).bit_count()
+                pair_hint = min(
+                    (TARGET ^ new_value ^ state.wires[i]).bit_count()
+                    for i in range(N_WIRES) if i != target
+                )
+                proposals.append((min(direct, pair_hint), rng.random(),
+                                  a, b, target, new_value))
     proposals.sort()
-    return [(a, b, target) for _, _, a, b, target in proposals[:limit]]
+    if evaluate_proxy:
+        # Full order-3 scoring is useful but expensive. Keep the cheap
+        # direct/pair shortlist bounded before evaluating all triples.
+        shortlist = proposals[:max(limit * FULL_PROXY_SHORTLIST_MULTIPLIER, 256)]
+        rescored = []
+        for _, tie, a, b, target, new_value in shortlist:
+            candidate_wires = list(state.wires)
+            candidate_wires[target] = new_value
+            heuristic, _ = affine_distance_proxy(
+                tuple(candidate_wires), max_order=PROXY_ORDER
+            )
+            rescored.append((heuristic, tie, a, b, target))
+        rescored.sort()
+        return [(a, b, target)
+                for _, _, a, b, target in rescored[:limit]]
+    return [(a, b, target) for _, _, a, b, target, _ in proposals[:limit]]
 
 
 def proposal_layers(
@@ -505,6 +525,34 @@ def proposal_biaffine_operations(
             for _, _, a, mix_a, b, mix_b, target in proposals[:limit]]
 
 
+def proposal_double_operations(
+    state: State, preserve_inputs: bool, limit: int, rng: random.Random
+):
+    """Find short synergistic RCCX pairs using a bounded two-step lookahead."""
+    firsts = proposal_gates(
+        state, preserve_inputs, max(limit * 8, 32), rng, False
+    )
+    proposals = []
+    for first in firsts:
+        intermediate = apply_rccx_state(state, *first)
+        if intermediate is None:
+            continue
+        seconds = proposal_gates(
+            intermediate, preserve_inputs, max(limit * 8, 32), rng, False
+        )
+        for second in seconds:
+            child = apply_rccx_state(intermediate, *second)
+            if child is None:
+                continue
+            heuristic, _ = affine_distance_proxy(
+                child.wires, max_order=PROXY_ORDER
+            )
+            proposals.append((heuristic, rng.random(), first, second))
+    proposals.sort()
+    return [(first, second)
+            for _, _, first, second in proposals[:limit]]
+
+
 def refine_exact_leaders(states: list[State], count: int) -> list[State]:
     """Replace the proxy residual on the leading states with exact distance."""
     if count <= 0:
@@ -526,7 +574,8 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
            checkpoint_dir: Path | None = None, proposal_limit: int = 128,
            max_parallel: int = 1, exact_top: int = 0,
            affine_controls: bool = False, full_proxy_proposals: bool = False,
-           resume: Path | None = None, biaffine_controls: bool = False):
+           resume: Path | None = None, biaffine_controls: bool = False,
+           double_rccx: bool = False):
     rng = random.Random(seed)
     start_layer = 0
     if resume is None:
@@ -569,6 +618,18 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
                         child = apply_biaffine_rccx_state(state, *operation)
                     else:
                         child = apply_rccx_state(state, *operation)
+                    if child is None:
+                        continue
+                    key = semantic_hash(child.wires)
+                    old = children.get(key)
+                    if old is None or score_state(child) < score_state(old):
+                        children[key] = child
+            elif double_rccx and max_parallel == 1:
+                operations = proposal_double_operations(
+                    state, preserve_inputs, proposal_limit, rng
+                )
+                for first, second in operations:
+                    child = apply_double_rccx_state(state, first, second)
                     if child is None:
                         continue
                     key = semantic_hash(child.wires)
@@ -640,6 +701,11 @@ def main() -> None:
         action="store_true",
         help="allow two-sided temporary affine-control RCCX blocks",
     )
+    parser.add_argument(
+        "--double-rccx",
+        action="store_true",
+        help="use bounded two-RCCX lookahead moves",
+    )
     parser.add_argument("--proxy-order", type=int, choices=[2, 3], default=2)
     parser.add_argument("--out", default="artifacts/destructive_semantic")
     args = parser.parse_args()
@@ -657,7 +723,7 @@ def main() -> None:
         args.beam, args.layers, args.seed, args.preserve_inputs,
         out / "checkpoints", args.proposal_limit, args.max_parallel,
         args.exact_top, args.affine_controls, args.full_proxy_proposals,
-        args.resume, args.biaffine_controls)
+        args.resume, args.biaffine_controls, args.double_rccx)
     payload = {
         "seed": args.seed,
         "beam_width": args.beam,
@@ -670,6 +736,7 @@ def main() -> None:
         "full_proxy_proposals": args.full_proxy_proposals,
         "resume": str(args.resume) if args.resume else None,
         "biaffine_controls": args.biaffine_controls,
+        "double_rccx": args.double_rccx,
         "proxy_order": args.proxy_order,
         "completed_layer": completed_layer,
         "target_marked_states": TARGET.bit_count(),

@@ -110,3 +110,9 @@ afterward. A beam-16, six-layer run reached residual 647 at estimated depth
 41; its serialized forward circuit measured depth 35 and 30 CX gates. This is
 a useful new heuristic move, but it did not reach affine completion and is not
 a complete classifier or phase oracle.
+
+Bounded two-RCCX lookahead was then tested to preserve synergistic mutation
+pairs. A beam-16, six-layer run reached residual 593 after 12 RCCXs at
+estimated depth 77; the serialized forward circuit measured depth 59 and 34
+CX gates. This is the best current destructive-search heuristic result, but no
+affine completion or complete phase oracle has been found.

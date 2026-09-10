@@ -117,13 +117,12 @@ limit to 24 reproduced residual 531 by layer 10 without a further gain. This
 is the best current heuristic variant, but it remains far from affine
 completion.
 
-A full-proxy proposal mode was added as a controlled experiment. It scores
-each possible RCCX mutation with the complete configured proxy rather than the
-cheaper direct/pair hint. On a small order-3 run (beam 32, eight proposals,
-four layers), it reached residual 827 at layer 4—the same early trajectory as
-the cheaper ranking—but required about 89 seconds and therefore does not
-justify using the expensive score at every child in deeper searches. The mode
-is retained behind `--full-proxy-proposals` for targeted experiments.
+A full-proxy proposal mode was added as a controlled experiment. It first
+keeps a bounded shortlist using the cheap direct/pair hint, then scores that
+shortlist with the complete configured proxy. This avoids evaluating every
+legal RCCX mutation while retaining some order-3 guidance. The mode remains
+behind `--full-proxy-proposals`; it is an exploratory ranking control rather
+than a replacement for the default beam.
 
 The search also supports a two-sided affine-control block behind
 `--biaffine-controls`:
@@ -142,3 +141,13 @@ compiled to forward depth 35 and 30 CX gates. This is an improvement over the
 early plain trajectory but still does not approach affine completion, and the
 proposal enumeration is expensive. Compact evidence is in
 `artifacts/destructive_semantic/biaffine_b16x6_p4.metrics.json`.
+
+Finally, bounded two-RCCX lookahead was added behind `--double-rccx`. Each
+search move contains two serial plain RCCXs, and the pair is scored after both
+updates. This lets the beam retain synergistic pairs whose first mutation is
+not individually attractive. A beam-16, six-layer, order-3 run reached
+residual 593 after 12 RCCXs at estimated depth 77; the selected history
+compiled to forward depth 59 and 34 CX gates. This is the best current
+destructive-search heuristic result, but it still has no affine completion.
+Compact evidence is in
+`artifacts/destructive_semantic/double_b16x6_p4.metrics.json`.
