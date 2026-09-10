@@ -27,18 +27,18 @@ from high_order_affine_no_uncompute_v6 import build_candidate_v6
 
 
 # 53-cube ESOP from the 15-input reachable-state don't-care screen, reordered
-# by a deterministic insertion/reversal continuation search (seed 20260920)
+# by a deterministic insertion/reversal continuation search (seed 20260921)
 # against the complete C-dagger-Z-C
 # oracle.  Each pair is (positive_literal_mask, negative_literal_mask) over
 # CHART = (q0..q11,q14,q15,q16).
 TERMS = (
-    (3058, 29700), (23330, 9428), (1856, 26790), (4576, 11798),
-    (16864, 11798), (26146, 6420), (1856, 30880), (26148, 6544),
+    (3058, 29700), (23330, 9428), (26146, 6420), (16864, 11798),
+    (4576, 11798), (1856, 26790), (1856, 30880), (26148, 6544),
     (4576, 28176), (23341, 9296), (21222, 11544), (23102, 9472),
-    (21304, 11270), (22832, 9742), (23024, 9742), (2296, 30214),
+    (23024, 9742), (22832, 9742), (21304, 11270), (2296, 30214),
     (744, 32022), (13864, 18710), (808, 31766), (5952, 26814),
-    (2524, 30240), (1884, 30880), (3996, 28704), (2588, 29984),
-    (22772, 9992), (2552, 30210), (23338, 9424), (26274, 6424),
+    (22772, 9992), (2524, 30240), (1884, 30880), (3996, 28704),
+    (2588, 29984), (2552, 30210), (23338, 9424), (26274, 6424),
     (2354, 30285), (2482, 29773), (21226, 11541), (2523, 30244),
     (1883, 30884), (3099, 21028), (2075, 29220), (2843, 29732),
     (3483, 28708), (3483, 21028), (26159, 6544), (23343, 9360),
@@ -68,7 +68,7 @@ def build_classifier():
         "esop_terms": len(TERMS),
         "esop_literals": sum(p.bit_count() + n.bit_count() for p, n in TERMS),
         "esop_chart_wires": list(CHART),
-        "esop_order": "300-move continuation seed 20260920",
+        "esop_order": "300-move continuation seed 20260921",
         "target_wire": 12,
         "semantic_inputs_checked": 4096,
         "classifier_complete": True,
