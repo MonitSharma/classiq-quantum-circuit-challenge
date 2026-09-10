@@ -663,3 +663,9 @@ three-affine-form products also found no improvement. These are semantic
 pruning results, not a proof of optimality; the exact scopes and the one
 six-control exception are recorded in
 `artifacts/destructive_semantic/residual323_short_control_screens.metrics.json`.
+
+The full one-step RCCX neighborhood was then checked with the exact affine
+distance: all 2,448 choices of distinct control pair and physical target were
+evaluated, including updates to garbage wires. None reduced residual 323.
+This rules out a one-RCCX escape from the current state; the result is in
+`artifacts/destructive_semantic/residual323_one_rccx_neighborhood.metrics.json`.
