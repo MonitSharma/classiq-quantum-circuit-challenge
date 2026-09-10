@@ -500,3 +500,13 @@ A 2,000-sample random GL(7,2) screen was substantially worse; its best score
 was 45,283 terms. This rejects blind affine relabeling as the next optimization
 lever. Evidence is in
 `artifacts/destructive_semantic/reversible_width128_affine_relabel_screen.metrics.json`.
+
+The order search was then rescored using the ANF complexity of every output
+bit of every controlled state permutation, plus the terminal output function.
+The best nearby order was
+`q11,q9,q10,q5,q4,q2,q3,q1,q0,q8,q7,q6`, with 2,459 transition terms and 45
+terminal terms (2,504 total). Its measured terminal tail is depth 1,967 /
+1,109 CX. This is the best structured-transition score so far, although its
+Gray-path MCT estimate is slightly worse than the previous order; it remains
+an exact semantic control rather than a complete oracle. Measurements are in
+`artifacts/destructive_semantic/reversible_width128_anf_order_search.metrics.json`.
