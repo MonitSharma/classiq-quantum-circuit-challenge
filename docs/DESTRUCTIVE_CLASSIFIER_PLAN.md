@@ -160,3 +160,11 @@ An unrestored affine-control prefix was also implemented and semantically
 validated. Its seed-1 four-layer control reached residual 647 at compiled depth
 26, so it was not competitive in the short run; it remains an optional
 all-wires-writable move rather than the main search primitive.
+
+Seed 42 produced a substantially stronger shallow point: affine residual 447
+at compiled forward depth 59 with 32 CX gates. It dominates the seed-94
+shallow candidate, but remains incomplete and unverified.
+
+Resuming seed 42 through layer 10 reduced the affine residual to 423 at
+compiled forward depth 73 with 46 CX gates. This is a strong intermediate
+Pareto point, but it remains an incomplete classifier and unverified oracle.

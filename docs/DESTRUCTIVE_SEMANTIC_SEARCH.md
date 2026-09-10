@@ -199,6 +199,19 @@ shallowest measured point so far: affine residual 531 at compiled depth 81 and
 classifier. Its exact gate history is in
 `artifacts/destructive_semantic/double_seed94_b32x8_p4_depth81.json`.
 
+Parallel seed screening found a stronger shallow point with seed 42: affine
+residual 447 at compiled forward depth 59 and 32 CX gates. This dominates the
+seed-94 depth-81/residual-531 point and is a new shallow Pareto candidate, but
+it remains an affine approximation rather than a verified classifier. Its
+exact history is in
+`artifacts/destructive_semantic/double_seed42_b16x6_p4_depth59.json`.
+
+Resuming seed 42 through layer 10 lowered the affine residual to 423. The
+18-RCCX history compiled to forward depth 73 and 46 CX gates, producing a
+second strong Pareto point between the depth-59/residual-447 and
+depth-84/residual-379 candidates. Its history is preserved in
+`artifacts/destructive_semantic/double_seed42_b16x10_p4_depth73.json`.
+
 An optional `--forward-affine-controls` move now explores the destructive
 prefix `CX(mix_a,a); CX(mix_b,b); RCCX(a,b,t)` without restoring the controls.
 Its semantic implementation was checked against the decomposed sequence, and

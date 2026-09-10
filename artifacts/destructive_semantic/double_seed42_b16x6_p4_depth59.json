@@ -1,0 +1,32 @@
+{
+  "experiment": "seed-42 double-RCCX shallow Pareto candidate",
+  "seed": 42,
+  "beam_width": 16,
+  "layers": 6,
+  "proposal_limit": 4,
+  "proxy_order": 3,
+  "double_rccx": true,
+  "residual": 447,
+  "exact_affine_distance": 447,
+  "estimated_forward_depth": 84,
+  "compiled_forward_depth": 59,
+  "compiled_forward_cx": 32,
+  "target_marked_states": 1097,
+  "semantic_hash": "08c3a2c130e5a4d619e59a1d88ca0101",
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "gates": [
+    ["rccx", 5, 10, 11],
+    ["rccx", 10, 11, 15],
+    ["rccx", 9, 15, 11],
+    ["rccx", 5, 11, 14],
+    ["rccx", 4, 14, 11],
+    ["rccx", 10, 14, 11],
+    ["rccx", 5, 14, 16],
+    ["rccx", 5, 16, 11],
+    ["rccx", 8, 16, 14],
+    ["rccx", 9, 14, 12],
+    ["rccx", 11, 14, 12],
+    ["rccx", 12, 15, 11]
+  ]
+}
