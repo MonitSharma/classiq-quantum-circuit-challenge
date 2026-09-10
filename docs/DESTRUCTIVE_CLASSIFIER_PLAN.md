@@ -136,3 +136,7 @@ The wider seed-1 beam also retained a Pareto candidate with residual 383 and
 compiled forward depth 91 (58 CX gates). The residual-379 state was deeper at
 112, so the residual-383 candidate is the better depth-screening point. Both
 remain incomplete midpoint classifiers.
+
+A seed-1 beam of 64 states found a depth-90 candidate with residual 403 and
+46 CX gates. This improves the current depth/residual Pareto point, but 403
+midpoint inputs still mismatch and no complete oracle has been verified.

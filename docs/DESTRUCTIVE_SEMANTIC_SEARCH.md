@@ -191,3 +191,10 @@ to a named feature. A guided double-lookahead continuation reached residual
 versus the shallower depth-88 control. The hints are therefore useful for
 diversity but not currently the preferred depth objective. Evidence is in
 `artifacts/destructive_semantic/guided_double_b16x10_p4.metrics.json`.
+
+A wider seed-1 beam (64 states) found a stronger depth-screening point at
+residual 403. Its 16-RCCX history compiled to forward depth 90 and 46 CX
+gates, improving the depth-91 Pareto point while reducing CX count. The
+midpoint target still mismatches 403 inputs, so this remains a heuristic
+candidate only. Its exact gate history and semantic hash are preserved in
+`artifacts/destructive_semantic/double_seed1_b64x8_p4_depth90.json`.
