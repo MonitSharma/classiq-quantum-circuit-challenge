@@ -188,6 +188,10 @@ A deeper seed-2024 direct-target run improved the best mismatch to 543 on q11;
 the selected 26-RCCX circuit compiled to depth 60 / 62 CX, but is still not a
 classifier.
 
+Extending that direct-target history reduced the mismatch to 513; the 44-RCCX
+candidate compiled to depth 113 / 106 CX, but still has no exact classifier or
+oracle verification.
+
 A cold seed-42 triple-RCCX beam reached residual 531 at estimated depth 77
 after four layers; it did not reach affine completion and is weaker than the
 targeted seed-1 basin.
