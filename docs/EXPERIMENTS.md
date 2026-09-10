@@ -2326,3 +2326,16 @@ improvement within the destructive ESOP family, not a rank-1 result.
 ## Verified pytket peephole rewrite of the complete oracle (September 10, 2026)
 
 `pytket.FullPeepholeOptimise` was applied to the exact serialized nineteenth-pass oracle, then the result was re-lowered through Qiskit to the required `u3`/`cx` basis. The reproducible driver is `src/pytket_peephole_oracle.py`; the rewritten QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves19_peephole.qasm` with SHA256 `502aa04caca19427f733d6e2dc1c4b7ce8e0951d41b283f17e36c6bddcf39228`. It improves the oracle from **6,780/5,697** to **6,769/5,693** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `1.4220683945409565e-13`, ancilla error `6.799055944770995e-15`, discarded-amplitude bound `2.4809831634384518e-12`, and peak sparse support 128. This is a verified circuit-level improvement, but remains noncompetitive and does not establish rank 1.
+
+## Destructive ESOP variable-order and affine-tail screens (September 11, 2026)
+
+A bounded screen randomized the variable order supplied to Espresso for the same
+v6 residual and regenerated exact intersection-span covers. The best classical
+screened cover used 77--80 cubes and 694--706 total literals, but its complete
+serialized candidates measured **7,790/6,497** or worse, so lower cube/literal
+counts did not translate into native depth. A second screen inserted the
+equivalent q11-to-q12 affine completion CNOT at all 85 positions relative to
+the fixed nineteenth-pass cube order. Every position produced 6,780 depth;
+the best was 5,697 CX, equal to the pre-pytket baseline. Neither screen
+improves the verified pytket result at 6,769/5,693, and no candidate was
+retained or pushed.

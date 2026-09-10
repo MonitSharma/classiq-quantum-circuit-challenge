@@ -1142,3 +1142,12 @@ completion currently measured, though still noncompetitive.
 ## Verified pytket peephole rewrite of the complete oracle (September 10, 2026)
 
 `pytket.FullPeepholeOptimise` was applied to the exact serialized nineteenth-pass oracle, then the result was re-lowered through Qiskit to the required `u3`/`cx` basis. The reproducible driver is `src/pytket_peephole_oracle.py`; the rewritten QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves19_peephole.qasm` with SHA256 `502aa04caca19427f733d6e2dc1c4b7ce8e0951d41b283f17e36c6bddcf39228`. It improves the oracle from **6,780/5,697** to **6,769/5,693** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `1.4220683945409565e-13`, ancilla error `6.799055944770995e-15`, discarded-amplitude bound `2.4809831634384518e-12`, and peak sparse support 128. This is a verified circuit-level improvement, but remains noncompetitive and does not establish rank 1.
+
+## September 11 follow-up screens
+
+A randomized Espresso variable-order screen generated exact 77--80-cube
+residual covers, but the best complete candidate measured **7,790/6,497**
+depth/CX. A separate all-position screen for the affine q11-to-q12 CNOT
+found no depth improvement: all placements were 6,780 depth, with the best
+5,697 CX. These are negative diagnostics; the verified pytket artifact above
+remains authoritative and no new artifact was retained.
