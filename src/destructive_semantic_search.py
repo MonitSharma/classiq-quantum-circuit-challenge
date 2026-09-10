@@ -9,6 +9,7 @@ for cancelling its phase in the eventual C-dagger-Z-C oracle.
 from __future__ import annotations
 
 import argparse
+from functools import lru_cache
 import hashlib
 import json
 import pickle
@@ -52,6 +53,29 @@ def logo_truth_table() -> int:
 
 
 TARGET = logo_truth_table()
+
+
+@lru_cache(maxsize=1)
+def guided_truth_table_hints() -> tuple[int, ...]:
+    """Load old factor truth tables only as optional semantic proposal hints."""
+    path = Path(__file__).resolve().parents[1] / "artifacts" / "rank_factor_inventory.json"
+    if not path.exists():
+        return ()
+    records = json.loads(path.read_text()).get("functions", [])
+    hints: set[int] = set()
+    for record in records:
+        side = record.get("side")
+        table = int(record["truth_table"])
+        if side not in {"x", "y"}:
+            continue
+        lifted = 0
+        for y in range(64):
+            for x in range(64):
+                bit = x if side == "x" else y
+                if (table >> bit) & 1:
+                    lifted |= 1 << (y * 64 + x)
+        hints.add(lifted)
+    return tuple(sorted(hints))
 
 
 def initial_wire_truth_tables() -> tuple[int, ...]:
@@ -430,8 +454,10 @@ def proposal_gates(
     limit: int,
     rng: random.Random,
     evaluate_proxy: bool = False,
+    guided_hints: bool = False,
 ):
     proposals = []
+    hints = guided_truth_table_hints() if guided_hints else ()
     for a in range(N_WIRES):
         for b in range(a + 1, N_WIRES):
             term = state.wires[a] & state.wires[b]
@@ -448,15 +474,31 @@ def proposal_gates(
                     (TARGET ^ new_value ^ state.wires[i]).bit_count()
                     for i in range(N_WIRES) if i != target
                 )
-                proposals.append((min(direct, pair_hint), rng.random(),
-                                  a, b, target, new_value))
+                hint_distance = min(
+                    (new_value ^ hint).bit_count() for hint in hints
+                ) if hints else 0
+                proposals.append((min(direct, pair_hint), hint_distance,
+                                  rng.random(), a, b, target, new_value))
     proposals.sort()
+    if guided_hints:
+        hint_order = sorted(proposals, key=lambda item: (item[1], item[0], item[2]))
+        selected = []
+        seen = set()
+        for item in proposals[:limit] + hint_order[:max(limit, 8)]:
+            key = item[3:6]
+            if key in seen:
+                continue
+            seen.add(key)
+            selected.append(item)
+            if len(selected) >= limit:
+                break
+        proposals = selected
     if evaluate_proxy:
         # Full order-3 scoring is useful but expensive. Keep the cheap
         # direct/pair shortlist bounded before evaluating all triples.
         shortlist = proposals[:max(limit * FULL_PROXY_SHORTLIST_MULTIPLIER, 256)]
         rescored = []
-        for _, tie, a, b, target, new_value in shortlist:
+        for _, _, tie, a, b, target, new_value in shortlist:
             candidate_wires = list(state.wires)
             candidate_wires[target] = new_value
             heuristic, _ = affine_distance_proxy(
@@ -466,15 +508,17 @@ def proposal_gates(
         rescored.sort()
         return [(a, b, target)
                 for _, _, a, b, target in rescored[:limit]]
-    return [(a, b, target) for _, _, a, b, target, _ in proposals[:limit]]
+    return [(a, b, target) for _, _, _, a, b, target, _ in proposals[:limit]]
 
 
 def proposal_layers(
     state: State, preserve_inputs: bool, limit: int, max_parallel: int,
     rng: random.Random, evaluate_proxy: bool = False,
+    guided_hints: bool = False,
 ) -> list[tuple[tuple[int, int, int], ...]]:
     singles = proposal_gates(
-        state, preserve_inputs, max(limit * 2, 32), rng, evaluate_proxy
+        state, preserve_inputs, max(limit * 2, 32), rng, evaluate_proxy,
+        guided_hints
     )
     layers: list[tuple[tuple[int, int, int], ...]] = []
     seen: set[tuple[tuple[int, int, int], ...]] = set()
@@ -498,10 +542,12 @@ def proposal_layers(
 
 
 def proposal_affine_operations(
-    state: State, preserve_inputs: bool, limit: int, rng: random.Random
+    state: State, preserve_inputs: bool, limit: int, rng: random.Random,
+    guided_hints: bool = False,
 ):
     """Rank affine-control RCCX sandwiches using the cheap residual proxy."""
-    base = proposal_gates(state, preserve_inputs, max(limit, 32), rng)
+    base = proposal_gates(state, preserve_inputs, max(limit, 32), rng,
+                         guided_hints=guided_hints)
     proposals = []
     for a, b, target in base:
         for mix in range(N_WIRES):
@@ -524,10 +570,12 @@ def proposal_affine_operations(
 
 
 def proposal_biaffine_operations(
-    state: State, preserve_inputs: bool, limit: int, rng: random.Random
+    state: State, preserve_inputs: bool, limit: int, rng: random.Random,
+    guided_hints: bool = False,
 ):
     """Rank two-sided affine-control RCCX proposals by the proxy."""
-    base = proposal_gates(state, preserve_inputs, max(limit, 32), rng)
+    base = proposal_gates(state, preserve_inputs, max(limit, 32), rng,
+                         guided_hints=guided_hints)
     proposals = []
     for a, b, target in base:
         for mix_a in range(N_WIRES):
@@ -554,11 +602,12 @@ def proposal_biaffine_operations(
 
 
 def proposal_double_operations(
-    state: State, preserve_inputs: bool, limit: int, rng: random.Random
+    state: State, preserve_inputs: bool, limit: int, rng: random.Random,
+    guided_hints: bool = False,
 ):
     """Find short synergistic RCCX pairs using a bounded two-step lookahead."""
     firsts = proposal_gates(
-        state, preserve_inputs, max(limit * 8, 32), rng, False
+        state, preserve_inputs, max(limit * 8, 32), rng, False, guided_hints
     )
     proposals = []
     for first in firsts:
@@ -566,7 +615,8 @@ def proposal_double_operations(
         if intermediate is None:
             continue
         seconds = proposal_gates(
-            intermediate, preserve_inputs, max(limit * 8, 32), rng, False
+            intermediate, preserve_inputs, max(limit * 8, 32), rng, False,
+            guided_hints
         )
         for second in seconds:
             child = apply_rccx_state(intermediate, *second)
@@ -603,7 +653,8 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
            max_parallel: int = 1, exact_top: int = 0,
            affine_controls: bool = False, full_proxy_proposals: bool = False,
            resume: Path | None = None, biaffine_controls: bool = False,
-           double_rccx: bool = False, pareto_beam: bool = False):
+           double_rccx: bool = False, pareto_beam: bool = False,
+           guided_hints: bool = False):
     rng = random.Random(seed)
     start_layer = 0
     if resume is None:
@@ -629,16 +680,18 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
                 if affine_controls:
                     operations.extend(
                         ("affine", op) for op in proposal_affine_operations(
-                            state, preserve_inputs, proposal_limit, rng)
+                            state, preserve_inputs, proposal_limit, rng,
+                            guided_hints)
                     )
                 if biaffine_controls:
                     operations.extend(
                         ("biaffine", op) for op in proposal_biaffine_operations(
-                            state, preserve_inputs, proposal_limit, rng)
+                            state, preserve_inputs, proposal_limit, rng,
+                            guided_hints)
                     )
                 operations.extend(("plain", op) for op in proposal_gates(
                     state, preserve_inputs, proposal_limit, rng,
-                    full_proxy_proposals))
+                    full_proxy_proposals, guided_hints))
                 for kind, operation in operations:
                     if kind == "affine":
                         child = apply_affine_rccx_state(state, *operation)
@@ -654,7 +707,7 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
                         children[key] = child
             elif double_rccx and max_parallel == 1:
                 operations = proposal_double_operations(
-                    state, preserve_inputs, proposal_limit, rng
+                    state, preserve_inputs, proposal_limit, rng, guided_hints
                 )
                 for first, second in operations:
                     child = apply_double_rccx_state(state, first, second)
@@ -667,7 +720,7 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
             else:
                 layer_candidates = proposal_layers(
                     state, preserve_inputs, proposal_limit, max_parallel, rng,
-                    full_proxy_proposals)
+                    full_proxy_proposals, guided_hints)
                 for layer_gates in layer_candidates:
                     child = apply_rccx_layer_state(state, layer_gates)
                     if child is None:
@@ -743,6 +796,11 @@ def main() -> None:
         action="store_true",
         help="retain residual/depth non-dominated beam states",
     )
+    parser.add_argument(
+        "--guided-hints",
+        action="store_true",
+        help="add proposal candidates near lifted rank-factor truth tables",
+    )
     parser.add_argument("--proxy-order", type=int, choices=[2, 3], default=2)
     parser.add_argument("--out", default="artifacts/destructive_semantic")
     args = parser.parse_args()
@@ -761,7 +819,7 @@ def main() -> None:
         out / "checkpoints", args.proposal_limit, args.max_parallel,
         args.exact_top, args.affine_controls, args.full_proxy_proposals,
         args.resume, args.biaffine_controls, args.double_rccx,
-        args.pareto_beam)
+        args.pareto_beam, args.guided_hints)
     payload = {
         "seed": args.seed,
         "beam_width": args.beam,
@@ -776,6 +834,7 @@ def main() -> None:
         "biaffine_controls": args.biaffine_controls,
         "double_rccx": args.double_rccx,
         "pareto_beam": args.pareto_beam,
+        "guided_hints": args.guided_hints,
         "proxy_order": args.proxy_order,
         "completed_layer": completed_layer,
         "target_marked_states": TARGET.bit_count(),

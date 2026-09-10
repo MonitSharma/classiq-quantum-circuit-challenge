@@ -1,0 +1,20 @@
+{
+  "experiment": "lifted rank-factor semantic proposal hints",
+  "seed": 524,
+  "beam_width": 16,
+  "layers": 10,
+  "resumed_from_layer": 6,
+  "proposal_limit": 4,
+  "proxy_order": 3,
+  "double_rccx": true,
+  "guided_hint_count": 30,
+  "residual": 581,
+  "exact_affine_distance": 581,
+  "compiled_forward_depth": 99,
+  "compiled_forward_cx": 58,
+  "target_marked_states": 1097,
+  "matches_non_guided_residual": true,
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "note": "Hints changed proposal diversity but did not improve residual; the selected history was deeper than the non-guided depth-88 result."
+}

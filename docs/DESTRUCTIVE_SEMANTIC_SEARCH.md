@@ -167,3 +167,12 @@ shallower even when its residual is slightly worse. On the beam-16,
 double-RCCX layer-10 control it reproduced residual 581 and compiled depth 88,
 with no improvement for seed 524. Evidence is in
 `artifacts/destructive_semantic/double_pareto_b16x10_p4.metrics.json`.
+
+Guided semantic proposals are available behind `--guided-hints`. The loader
+converts 30 existing x/y rank-factor truth tables into 12-variable truth-table
+hints; these only affect proposal ordering and never constrain a physical wire
+to a named feature. A guided double-lookahead continuation reached residual
+581, matching the non-guided search, but compiled to depth 99 and 58 CX gates
+versus the shallower depth-88 control. The hints are therefore useful for
+diversity but not currently the preferred depth objective. Evidence is in
+`artifacts/destructive_semantic/guided_double_b16x10_p4.metrics.json`.

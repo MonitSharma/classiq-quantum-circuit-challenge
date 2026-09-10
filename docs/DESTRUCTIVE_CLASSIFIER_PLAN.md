@@ -119,5 +119,10 @@ affine completion or complete phase oracle has been found.
 
 Resuming that beam through layer 10 improved the residual to 581. The retained
 18-RCCX history compiled to forward depth 88 and 52 CX gates, which is a
-promising screening depth but not a valid classifier: 581 midpoint inputs
-still mismatch, and no complete phase oracle was constructed or verified.
+ promising screening depth but not a valid classifier: 581 midpoint inputs
+ still mismatch, and no complete phase oracle was constructed or verified.
+
+Lifted rank-factor truth tables were added as optional semantic proposal hints.
+The guided beam also reached residual 581, but its selected circuit compiled
+to depth 99 and 58 CX gates, so the hints currently improve exploration rather
+than the depth objective.
