@@ -2241,6 +2241,10 @@ discarded-amplitude bound `1.0184711571506287e-12`, and peak sparse support
 128. This is a verified improvement within the destructive ESOP family, not a
 rank-1 result.
 
+## Destructive sixteenth complete-oracle order search (September 10, 2026)
+
+A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves16.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves16.qasm` with SHA256 `80f0f140ac2325375da2d94e0d89030e23266eab26b20e03541cb8c99080270d`. The forward classifier is **3,454/2,907** and the complete oracle is **6,828/5,733** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `8.966141423930125e-14`, ancilla error `5.4032143640665674e-15`, discarded-amplitude bound `9.477251829066001e-13`, and peak sparse support 128. This is a verified improvement within the destructive ESOP family, not a rank-1 result.
+
 ## Destructive fifteenth complete-oracle order search (September 10, 2026)
 
 A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves15.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves15.qasm` with SHA256 `843bfcd6c7d5ee3f5e88086ad31c3e3794f569a17e5130001b5cea56bc3486c9`. The forward classifier is **3,466/2,914** and the complete oracle is **6,852/5,747** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `8.926393342529894e-14`, zero ancilla error, discarded-amplitude bound `9.544618823574695e-13`, and peak sparse support 128. This is a verified improvement within the destructive ESOP family, not a rank-1 result.
