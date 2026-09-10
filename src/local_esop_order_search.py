@@ -20,6 +20,7 @@ from high_order_affine_exact_esop_clean2_rel_ordered import (
 )
 from high_order_affine_exact_esop_clean2_rel_local import TERMS as LOCAL_TERMS
 from high_order_affine_exact_esop_clean2_rel_oracle_local import TERMS as ORACLE_LOCAL_TERMS
+from high_order_affine_exact_esop_clean2_rel_oracle_moves import TERMS as ORACLE_MOVES_TERMS
 from high_order_affine_exact_esop_clean2_rel import (
     _clear_q13,
     _clear_q17,
@@ -67,6 +68,7 @@ def main():
     parser.add_argument("--passes", type=int, default=1)
     parser.add_argument("--start-local", action="store_true")
     parser.add_argument("--start-oracle-local", action="store_true")
+    parser.add_argument("--start-oracle-moves", action="store_true")
     parser.add_argument("--random-swaps", type=int, default=0)
     parser.add_argument("--complete-oracle", action="store_true")
     parser.add_argument("--random-seed", type=int, default=20260910)
@@ -74,7 +76,9 @@ def main():
     args = parser.parse_args()
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
-        if args.start_oracle_local:
+        if args.start_oracle_moves:
+            current = list(ORACLE_MOVES_TERMS)
+        elif args.start_oracle_local:
             current = list(ORACLE_LOCAL_TERMS)
         else:
             current = list(LOCAL_TERMS if args.start_local else _ordered_terms())
