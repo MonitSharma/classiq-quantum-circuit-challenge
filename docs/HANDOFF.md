@@ -1241,6 +1241,10 @@ Exhaustive verification covered all 4,096 inputs with max error
 completion currently measured, though it remains noncompetitive; the protected
 fallback is unchanged.
 
+## Latest destructive nineteenth complete-oracle order improvement (September 10, 2026)
+
+A 200-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete `C† Z C` oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves19.py`; the exact serialized QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves19.qasm` with SHA256 `98e5f8e569627902d91ed2d6651ca5703b1a600c40fcc81b592dceb736fe5293`. It measures **3,430/2,889** for the forward classifier and **6,780/5,697** for the complete oracle. Its matching exhaustive report checks all 4,096 inputs with max error `8.956417618622867e-14`, zero ancilla error, discarded-amplitude bound `9.286567255799592e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
+
 ## Latest destructive eighteenth complete-oracle order improvement (September 10, 2026)
 
 A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete `C† Z C` oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves18.py`; the exact serialized QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves18.qasm` with SHA256 `dc079a57f1b8ce2ad17c85500c3a44e5ae066b48bdb3a9cc300d2c80641d3b3c`. It measures **3,443/2,894** for the forward classifier and **6,807/5,707** for the complete oracle. Its matching exhaustive report checks all 4,096 inputs with max error `8.622652742461588e-14`, zero ancilla error, discarded-amplitude bound `9.33301339848141e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
