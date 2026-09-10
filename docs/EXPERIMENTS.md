@@ -2079,3 +2079,19 @@ and external reversible-synthesis stacks. None changed the order of magnitude.
 This is a hard stop on internal architecture invention, not a request for
 another compiler variant. Retain 524/950 as the fallback and focus only on
 submission or external structural intelligence.
+
+## Destructive local ESOP order continuation (September 10, 2026)
+
+A bounded adjacent-swap descent was run from the ordered 83-cube cover. It
+kept the v6 prefix, exact cover, two-clean relative-phase lowering, and exact
+cleanup fixed, changing only cube order. The frozen reproducible source is
+`src/high_order_affine_exact_esop_clean2_rel_local.py`. The forward classifier
+measured **3,767/3,109** depth/CX and the complete oracle measured
+**7,461/6,143**. The exact QASM is
+`artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_local_oracle.qasm`
+with SHA256
+`3dcf8dde8caa6069371d8b4be233b92602541983b564061a71508f0a159de5e5`.
+Exhaustive verification covered all 4,096 inputs with max error
+`8.86795809782994e-14`, zero ancilla error, discarded-amplitude bound
+`1.0434552156730549e-12`, and peak sparse support 256. This is a verified
+improvement within the destructive ESOP family, not a rank-1 result.

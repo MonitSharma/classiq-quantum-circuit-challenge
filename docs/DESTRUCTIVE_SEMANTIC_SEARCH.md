@@ -901,3 +901,18 @@ Exhaustive verification covered all 4,096 inputs with max error
 `8.88692833082735e-14`, zero ancilla error, and discarded-amplitude bound
 `1.044782897852009e-12`. This is the strongest verified destructive
 completion currently measured, though still noncompetitive.
+
+ A bounded adjacent-swap descent from that order found a further compiler-aware
+ improvement without changing the v6 prefix, exact 83-cube cover, cleanup, or
+ relative-phase construction. The frozen order is implemented in
+ `src/high_order_affine_exact_esop_clean2_rel_local.py`. It measured **3,767 /
+ 3,109** for the forward classifier and **7,461 / 6,143** for the complete
+ oracle. The exact serialized QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_local_oracle.qasm`
+ with SHA256
+ `3dcf8dde8caa6069371d8b4be233b92602541983b564061a71508f0a159de5e5`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.86795809782994e-14`, zero ancilla error, discarded-amplitude bound
+ `1.0434552156730549e-12`, and peak sparse support 256. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.

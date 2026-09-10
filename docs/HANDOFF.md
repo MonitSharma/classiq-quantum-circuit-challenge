@@ -1241,6 +1241,23 @@ Exhaustive verification covered all 4,096 inputs with max error
 completion currently measured, though it remains noncompetitive; the protected
 fallback is unchanged.
 
+## Latest destructive ESOP order improvement (September 10, 2026)
+
+A bounded adjacent-swap descent from the ordered 83-cube cover found a further
+compiler-aware improvement while keeping the v6 prefix, exact cover, cleanup,
+and relative-phase two-clean lowering unchanged. The frozen source is
+`src/high_order_affine_exact_esop_clean2_rel_local.py`. It measures **3,767 /
+3,109** for the forward classifier and **7,461 / 6,143** for the complete
+oracle. The exact serialized QASM is
+`artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_local_oracle.qasm`
+with SHA256
+`3dcf8dde8caa6069371d8b4be233b92602541983b564061a71508f0a159de5e5`.
+Its matching exhaustive report checks all 4,096 inputs, with max error
+`8.86795809782994e-14`, zero ancilla error, discarded-amplitude bound
+`1.0434552156730549e-12`, and peak sparse support 256. This is the current
+strongest verified destructive completion, but it remains noncompetitive and
+does not establish rank 1.
+
 ## Destructive ordered ESOP continuation (September 10, 2026)
 
 Reordering the 83 ESOP cubes by greedy shared-literal proximity reduced the
