@@ -91,6 +91,12 @@ per layer. It matched the proxy-selected trajectory through the observed layer
 It is retained as an optional diagnostic; broad exact ranking is not currently
 cost-effective.
 
+An all-child exact-ranking control run (beam 32, eight proposals, eight
+layers requested) was also negative: it remained at residual 971 by layer 2
+and hit the resource boundary, while the cheaper proxy trajectory reached 827
+at that point. Exact span distance is therefore retained for final-state
+diagnostics, not used as the primary beam objective.
+
 Affine-control RCCX sandwiches were also tested. The macro
 `CX(c,a); RCCX(a,b,t); CX(c,a)` is semantically reversible and exposes
 `(W[a] XOR W[c]) AND W[b]`. A beam-64, 16-proposal, ten-layer run reached
