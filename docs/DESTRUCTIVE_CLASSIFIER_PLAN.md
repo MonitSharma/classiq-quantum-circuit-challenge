@@ -168,3 +168,7 @@ shallow candidate, but remains incomplete and unverified.
 Resuming seed 42 through layer 10 reduced the affine residual to 423 at
 compiled forward depth 73 with 46 CX gates. This is a strong intermediate
 Pareto point, but it remains an incomplete classifier and unverified oracle.
+
+Continuing seed 42 through layer 14 reduced the affine residual to 415 at
+compiled forward depth 97 with 66 CX gates. This is a lower-residual but
+deeper frontier point and remains an incomplete classifier.

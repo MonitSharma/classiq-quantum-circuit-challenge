@@ -212,6 +212,12 @@ second strong Pareto point between the depth-59/residual-447 and
 depth-84/residual-379 candidates. Its history is preserved in
 `artifacts/destructive_semantic/double_seed42_b16x10_p4_depth73.json`.
 
+Continuing seed 42 through layer 14 lowered the affine residual to 415. The
+26-RCCX history compiled to forward depth 97 and 66 CX gates, giving a
+lower-residual but deeper point than the depth-73/residual-423 candidate. It
+is preserved in
+`artifacts/destructive_semantic/double_seed42_b16x14_p4_depth97.json`.
+
 An optional `--forward-affine-controls` move now explores the destructive
 prefix `CX(mix_a,a); CX(mix_b,b); RCCX(a,b,t)` without restoring the controls.
 Its semantic implementation was checked against the decomposed sequence, and
