@@ -30,6 +30,7 @@ from high_order_affine_exact_esop_clean2_rel_oracle_moves7 import TERMS as ORACL
 from high_order_affine_exact_esop_clean2_rel_oracle_moves8 import TERMS as ORACLE_MOVES8_TERMS
 from high_order_affine_exact_esop_clean2_rel_oracle_moves9 import TERMS as ORACLE_MOVES9_TERMS
 from high_order_affine_exact_esop_clean2_rel_oracle_moves10 import TERMS as ORACLE_MOVES10_TERMS
+from high_order_affine_exact_esop_clean2_rel_oracle_moves11 import TERMS as ORACLE_MOVES11_TERMS
 from high_order_affine_exact_esop_clean2_rel import (
     _clear_q13,
     _clear_q17,
@@ -87,6 +88,7 @@ def main():
     parser.add_argument("--start-oracle-moves8", action="store_true")
     parser.add_argument("--start-oracle-moves9", action="store_true")
     parser.add_argument("--start-oracle-moves10", action="store_true")
+    parser.add_argument("--start-oracle-moves11", action="store_true")
     parser.add_argument("--random-swaps", type=int, default=0)
     parser.add_argument("--complete-oracle", action="store_true")
     parser.add_argument("--random-seed", type=int, default=20260910)
@@ -94,7 +96,9 @@ def main():
     args = parser.parse_args()
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
-        if args.start_oracle_moves10:
+        if args.start_oracle_moves11:
+            current = list(ORACLE_MOVES11_TERMS)
+        elif args.start_oracle_moves10:
             current = list(ORACLE_MOVES10_TERMS)
         elif args.start_oracle_moves9:
             current = list(ORACLE_MOVES9_TERMS)

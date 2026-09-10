@@ -2096,6 +2096,10 @@ Exhaustive verification covered all 4,096 inputs with max error
 `1.0434552156730549e-12`, and peak sparse support 256. This is a verified
 improvement within the destructive ESOP family, not a rank-1 result.
 
+## Destructive twelfth complete-oracle order search (September 10, 2026)
+
+A 100-move deterministic insertion/reversal search initialized from the previous verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves12.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves12.qasm` with SHA256 `a7afb0a8af0e4a9eacd056cbd1b7509bc439b6bb6391ddd94c56fc517f289620`. The forward classifier is **3,483/2,928** and the complete oracle is **6,887/5,775** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `9.129949267455418e-14`, zero ancilla error, discarded-amplitude bound `9.400057039485976e-13`, and peak sparse support 128. This is a verified improvement within the destructive ESOP family, not a rank-1 result.
+
 ## Destructive eleventh insertion/reversal order search (September 10, 2026)
 
 An eleventh insertion/reversal search, initialized from the prior moves order,
