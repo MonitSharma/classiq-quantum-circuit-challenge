@@ -546,3 +546,23 @@ improves the direct residual from 513 to 509:
 forward depth from 113 to 179 (140 CX), so the semantic improvement is not
 competitive. This is recorded as a native rejection in
 `artifacts/destructive_semantic/degree5_direct_target_control.metrics.json`.
+
+## Clean-ancilla high-order correction
+
+The shallow seed-42 candidate has a stronger opportunity than the direct-wire
+frontier: its best affine combination is `q11 XOR q12`, and q17 is untouched
+and therefore clean. The exact correction
+
+```text
+q17 ^= q2 & q3 & q4
+q12 ^= q17 & q8 & q11
+q17 ^= q2 & q3 & q4
+```
+
+uses three relative-phase 3-control X blocks. Semantic replay over all 4,096
+inputs restores q17 and reduces the affine residual from 447 to 387. The
+whole forward candidate compiles to depth 79 / 50 CX, which is a substantial
+improvement over the previous 113-depth direct-wire candidate, although it is
+still incomplete and has no exhaustive phase-oracle verification. The
+reproducible builder is `src/high_order_affine_correction.py`; measurements
+are in `artifacts/destructive_semantic/high_order_affine_correction.metrics.json`.
