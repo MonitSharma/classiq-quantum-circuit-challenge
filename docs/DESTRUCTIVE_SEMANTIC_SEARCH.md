@@ -1315,3 +1315,13 @@ below 359. A separate signed beam found a distinct low-depth trajectory,
 reaching exact residual 613 at estimated depth 54, but it plateaued through
 16 layers and never reached affine completion. The full screen is recorded in
 `artifacts/destructive_semantic/signed_control_screen_seed20261002.metrics.json`.
+
+## Arbitrary-parity control screen (September 11, 2026)
+
+To test larger linear basis changes directly, 100,000 random RCCX mutations
+were sampled whose two controls were disjoint parities of one to eight current
+wires. The 256 best cheap candidates were exact-scored; none improved the
+residual-359 frontier or changed its best affine combination `[11, 12]`.
+This closes the single-step arbitrary-parity variant at that frontier. The
+screen is recorded in
+`artifacts/destructive_semantic/arbitrary_parity_screen_seed20261003.metrics.json`.
