@@ -328,6 +328,13 @@ improvement: the best result remained 501 mismatches. The scan is recorded in
 larger order-3 beam was stopped after its scoring cost grew without producing
 a better state.
 
+An exact algebraic completion test was then applied to the direct-501 and
+affine residual-359/355/349 frontier states. For every physical target wire,
+the remaining correction was tested against the GF(2) span of the constant,
+all current wires, all pair-products, and all cubic products. No completion
+exists in any of those 18 x 4 cases. The negative structural result is in
+`artifacts/destructive_semantic/frontier_cubic_completion.metrics.json`.
+
 The separate non-Abelian phase-computer direction now has a finite-group
 prototype in `src/nonabelian_branch_search.py`. It constructs and checks the
 120-element binary icosahedral multiplication table, then evaluates a
