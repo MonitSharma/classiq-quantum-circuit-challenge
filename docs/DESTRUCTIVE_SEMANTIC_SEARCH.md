@@ -492,3 +492,11 @@ far above the target, but they improve the prior width-128 control and provide
 strong evidence that arbitrary permutation completion is the current
 bottleneck. Measurements are in
 `artifacts/destructive_semantic/reversible_width128_order_search.metrics.json`.
+
+Affine state relabeling was screened as a low-cost way to simplify those
+transitions. XOR offsets at the layer boundaries retained the identity basis
+as the best result, at 2,626 total ANF terms including the terminal function.
+A 2,000-sample random GL(7,2) screen was substantially worse; its best score
+was 45,283 terms. This rejects blind affine relabeling as the next optimization
+lever. Evidence is in
+`artifacts/destructive_semantic/reversible_width128_affine_relabel_screen.metrics.json`.
