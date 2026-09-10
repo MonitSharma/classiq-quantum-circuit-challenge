@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from pathlib import Path
 
 from search import logo
@@ -61,12 +62,28 @@ def residual_program(order: tuple[int, ...] = DEFAULT_ORDER) -> dict:
         transitions.append(layer_transitions)
         layers.append(next_layer)
 
+    max_fanin_by_layer = []
+    for layer in transitions:
+        fixed_bit_fanins = []
+        for bit_value in (0, 1):
+            counts: dict[int, int] = {}
+            for children in layer:
+                child = children[bit_value]
+                counts[child] = counts.get(child, 0) + 1
+            fixed_bit_fanins.append(max(counts.values(), default=1))
+        max_fanin_by_layer.append(max(fixed_bit_fanins, default=1))
+
     return {
         "variable_order": list(order),
         "marked_states": sum(target_table()),
         "layer_state_counts": [len(layer) for layer in layers],
         "max_layer_states": max(len(layer) for layer in layers),
         "transitions": transitions,
+        "max_fanin_by_layer": max_fanin_by_layer,
+        "minimum_distinguishing_garbage_bits": [
+            math.ceil(math.log2(value)) if value > 1 else 0
+            for value in max_fanin_by_layer
+        ],
         "terminal_values": [
             list(table)[0] for table in layers[-1]
         ],
@@ -84,7 +101,8 @@ def main() -> None:
     print(json.dumps({
         key: result[key]
         for key in ("variable_order", "marked_states", "layer_state_counts",
-                    "max_layer_states")
+                    "max_layer_states", "max_fanin_by_layer",
+                    "minimum_distinguishing_garbage_bits")
     }, indent=2))
     if args.out is not None:
         args.out.parent.mkdir(parents=True, exist_ok=True)
