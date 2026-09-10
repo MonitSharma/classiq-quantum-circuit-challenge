@@ -1241,6 +1241,10 @@ Exhaustive verification covered all 4,096 inputs with max error
 completion currently measured, though it remains noncompetitive; the protected
 fallback is unchanged.
 
+## Latest destructive seventeenth complete-oracle order improvement (September 10, 2026)
+
+A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete `C† Z C` oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves17.py`; the exact serialized QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves17.qasm` with SHA256 `9b0a259f361fe69790ae20e89ff0e7c2610dfc3da3b51c5ab74cc65124f0e4b9`. It measures **3,445/2,900** for the forward classifier and **6,814/5,719** for the complete oracle. Its matching exhaustive report checks all 4,096 inputs with max error `8.797088423521596e-14`, ancilla error `5.359944321926805e-15`, discarded-amplitude bound `9.41215665475758e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
+
 ## Latest destructive sixteenth complete-oracle order improvement (September 10, 2026)
 
 A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete `C† Z C` oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves16.py`; the exact serialized QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves16.qasm` with SHA256 `80f0f140ac2325375da2d94e0d89030e23266eab26b20e03541cb8c99080270d`. It measures **3,454/2,907** for the forward classifier and **6,828/5,733** for the complete oracle. Its matching exhaustive report checks all 4,096 inputs with max error `8.966141423930125e-14`, ancilla error `5.4032143640665674e-15`, discarded-amplitude bound `9.477251829066001e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
