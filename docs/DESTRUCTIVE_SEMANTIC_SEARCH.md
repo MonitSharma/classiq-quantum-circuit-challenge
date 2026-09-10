@@ -532,3 +532,10 @@ terminal output are added. The reproducible pilot is
 This establishes that the present arbitrary-permutation state-machine route
 must be replaced by a more structured reversible update, not merely tuned by
 more label seeds.
+
+As a separate primitive test, repeated cubic destructive updates were applied
+to the direct target wire of the residual-513 frontier. A four-layer, beam-4
+search over all 3-control combinations stayed at residual 513; together with
+the earlier exhaustive one-step cubic scan, this gives no evidence that cubic
+target updates are the missing primitive. The compact result is in
+`artifacts/destructive_semantic/cubic_direct_target_repeated.metrics.json`.
