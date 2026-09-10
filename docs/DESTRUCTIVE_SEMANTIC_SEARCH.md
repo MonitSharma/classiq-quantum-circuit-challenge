@@ -904,6 +904,19 @@ completion currently measured, though still noncompetitive.
  strongest verified destructive completion, but remains noncompetitive and does
  not establish rank 1.
 
+ A second deterministic random single-swap search, initialized from the prior
+ complete-oracle order, reduced the forward classifier to **3,719 / 3,079**
+ and the complete oracle to **7,367 / 6,083** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_local2.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_local2.qasm`
+ with SHA256
+ `611f8f7f92e94ad4b0bb0f570f3a05eb09ccd8bb4f9be4592f22fb553dd22107`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.91279548610909e-14`, ancilla error `5.559163521111997e-15`,
+ discarded-amplitude bound `1.0316187888679335e-12`, and peak sparse support
+ 256. This remains noncompetitive and does not establish rank 1.
+
 Reordering the 83 ESOP cubes by greedy shared-literal proximity further
 reduced the serialized classifier to **3,802 / 3,129** and the complete oracle
 to **7,534 / 6,195** depth/CX. The verified candidate is

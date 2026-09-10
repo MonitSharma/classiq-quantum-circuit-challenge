@@ -19,6 +19,7 @@ from high_order_affine_exact_esop_clean2_rel_ordered import (
     _ordered_terms,
 )
 from high_order_affine_exact_esop_clean2_rel_local import TERMS as LOCAL_TERMS
+from high_order_affine_exact_esop_clean2_rel_oracle_local import TERMS as ORACLE_LOCAL_TERMS
 from high_order_affine_exact_esop_clean2_rel import (
     _clear_q13,
     _clear_q17,
@@ -65,12 +66,16 @@ def main():
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--passes", type=int, default=1)
     parser.add_argument("--start-local", action="store_true")
+    parser.add_argument("--start-oracle-local", action="store_true")
     parser.add_argument("--random-swaps", type=int, default=0)
     parser.add_argument("--complete-oracle", action="store_true")
     args = parser.parse_args()
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
-        current = list(LOCAL_TERMS if args.start_local else _ordered_terms())
+        if args.start_oracle_local:
+            current = list(ORACLE_LOCAL_TERMS)
+        else:
+            current = list(LOCAL_TERMS if args.start_local else _ordered_terms())
         best_order = list(current)
         best_score = score(build_classifier_for_terms(best_order), args.complete_oracle)
         records = [{"kind": "baseline", "score": best_score}]
