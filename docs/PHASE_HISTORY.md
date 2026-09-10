@@ -243,6 +243,17 @@ Hamming residual. The controlled run at
 rank-product/factor hint coverage remained zero. This separates a scoring
 stagnation issue from the deeper proposal-space limitation.
 
+## Shared XAG proposal-source pilot
+
+`src/search_shared_xag_phase_order.py` exposes the existing shared XAG/AND
+graph and reversible pebble planner as a target-guided trajectory source. A
+48-order deterministic screen produced an exact full-logo phase oracle at
+depth 1345 / 1027 CX, with all 4096 inputs and zero ancilla leakage verified
+in `artifacts/phase_history/shared_xag_phase_order_48.exhaustive.json` (SHA
+`e3a9c7ea15dd0cf666edd715b02c26ae66ff6b5f411ab1430a79921e5d3d9dfb`). No
+order improved the first valid schedule. This validates the proposal-source
+integration but does not challenge the protected 524-depth circuit.
+
 ## Next experiment
 
 The cumulative-history objective, provenance recovery, exact oracle builder,
