@@ -1359,3 +1359,20 @@ nonlinear X/Y nodes across terms before scheduling. It found no merge: all 91
 nodes had distinct side-qualified truth tables, and the resulting serialized
 candidate was byte-identical. Thus this rank-term basis has no latent
 cross-term sharing for the retention scheduler to exploit.
+
+## Destructive Fredkin screen (September 11, 2026)
+
+The semantic move set was broadened with controlled swaps of current wire
+contents. A Fredkin update is reversible and was modeled exactly as
+`W[a] ^= W[c] & (W[a] XOR W[b])` and
+`W[b] ^= W[c] & (W[a] XOR W[b])`; its native lowering is
+`CX--RCCX--CX`, with the exact inverse reserved for any complete oracle.
+
+A deterministic beam-32, three-layer screen over all 2,448 physical Fredkin
+moves reached exact affine residuals **827, 759, 703**, respectively. The
+matched preserve-inputs ablation had only 240 legal moves and remained at
+residual **1,097**, because swapping two initially-zero ancillas cannot change
+their semantics. The unrestricted result is weaker than the existing
+destructive RCCX frontiers, so no circuit was lowered or promoted. Metrics are
+in `artifacts/destructive_semantic/fredkin_semantic_screen_seed20261004.metrics.json`;
+the reusable semantic implementation is `src/fredkin_semantic_screen.py`.
