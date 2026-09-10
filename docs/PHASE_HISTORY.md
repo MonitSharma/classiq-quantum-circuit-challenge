@@ -147,6 +147,15 @@ builder and exhaustive verifier. `rank_mc_pareto_terms.json` produced depth
 Both reports check all 4096 inputs with zero ancilla leakage; neither improves
 the 2380-depth `rank_terms` baseline.
 
+An accumulator experiment kept q14 live across all ten products and used
+relative-phase dirty-MCX synthesis to preserve it while computing q12/q13.
+The exact QASM is `artifacts/phase_history/rank_accumulator_seed.qasm`; it
+passed all 4096 inputs with zero leakage, but serialized to depth 7355 / 4031
+CX (SHA
+`094b603b18f93aa800b00bd5916b5dac882f0cd3d7cbc881c40da3c537af6158`). The
+conceptual sharing gain is overwhelmed by dirty-MCX lowering cost, so this
+implementation is closed as a negative direction.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary
