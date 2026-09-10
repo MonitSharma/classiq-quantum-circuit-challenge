@@ -180,6 +180,15 @@ This improves the phase-history baseline from depth 2380 / 1531 CX to
 2359 / 1520 CX, but remains well above the protected depth-524 circuit. It is
 therefore a verified experimental improvement, not a new repository best.
 
+A broader 1000-permutation run found a further exact improvement. The best
+order was `[2, 7, 4, 3, 8, 9, 5, 6, 1, 0]`; its candidate is
+`artifacts/phase_history/rank_product_order_search_1000.qasm`. The matching
+exhaustive report checks all 4096 inputs, restores all ancillas, and records
+depth 2348 / 1513 CX with SHA
+`c96ecd26f8f5e7a6fca1d42d51b8806476f3e01bc5113ce7eb98b302a711e384`.
+This remains an experimental phase-history result, not a replacement for the
+protected depth-524 artifact.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary
