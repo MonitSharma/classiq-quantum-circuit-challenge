@@ -14,6 +14,21 @@ No challenge entry has been submitted. No current official score/rank exists for
 
 ## Challenge and scoring
 
+### Live leaderboard recheck (September 11, 2026)
+
+The official challenge page was rechecked in the user's Safari. The live
+leaderboard has moved substantially since the earlier snapshot: Hyun-Jung K.
+is currently first at **183 depth / 789 CX**, followed by Daksh S. at
+**188 / 451**, Satwik S. at **190 / 389**, Gabriele M. at **191 / 374**, and
+Jayachandiran U. at **195 / 432**. The page showed 62 submissions, with Monit
+S. at **524 / 950**. These are current observed standings, not a result from
+this repository; no submission has been made from this workspace.
+
+The upload form exposes only QMOD/QASM submission fields and does not expose
+the leading circuits or their source code. Therefore the live page supplies a
+new target range but no direct implementation clue. The older historical
+leaderboard below remains useful only as an experiment-time reference.
+
 Source: https://www.classiq.io/challenge, visited in the user's Safari. Last observed leaderboard (historical snapshot, refresh before making current claims):
 
 | Rank | Name | Depth | CX |
