@@ -716,3 +716,14 @@ through degree-6 monomial updates, including writes to q13 and q17. The only
 seven proxy hits were equivalent residual-315 six-control corrections already
 identified; none improved below 315. The exact hit list is recorded in
 `artifacts/destructive_semantic/residual323_all_target_high_order_screen.metrics.json`.
+
+Negative-control monomials opened a separate Pareto path. From the original
+depth-59 base, two signed corrections—five controls followed by six controls—
+reduce the exact affine residual from 447 to 347 and compile to forward depth
+99 / 73 CX. Negative controls are implemented with paired X gates and the
+same relative-phase clean-workspace constructions; q13 and q17 are restored
+over all 4,096 inputs. This is not a complete classifier and does not beat
+the residual-323 depth-102 candidate, but it gives a lower-depth basis for
+further signed-control search. The builder and metrics are
+`src/high_order_affine_signed_controls.py` and
+`artifacts/destructive_semantic/high_order_affine_signed_controls.metrics.json`.
