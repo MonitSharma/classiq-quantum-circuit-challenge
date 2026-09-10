@@ -103,3 +103,10 @@ layer. No classifier has reached affine completion, and no complete
 search change should therefore be guided semantic proposals or a
 memory-efficient mutation strategy, not broad exact ranking or simply a larger
 beam.
+
+A two-sided affine-control RCCX proposal was then tested. The reversible
+five-wire block temporarily XORs both controls before RCCX and restores them
+afterward. A beam-16, six-layer run reached residual 647 at estimated depth
+41; its serialized forward circuit measured depth 35 and 30 CX gates. This is
+a useful new heuristic move, but it did not reach affine completion and is not
+a complete classifier or phase oracle.

@@ -6,13 +6,28 @@ import argparse
 import json
 from pathlib import Path
 
-from destructive_semantic_search import TARGET, initial_wire_truth_tables, apply_cx_semantic, apply_rccx_semantic, apply_x_semantic
+from destructive_semantic_search import (
+    TARGET,
+    apply_biaffine_semantic,
+    apply_cx_semantic,
+    apply_rccx_semantic,
+    apply_x_semantic,
+    initial_wire_truth_tables,
+)
 
 
 def verify(path: str) -> dict:
     payload = json.loads(Path(path).read_text())
     wires = initial_wire_truth_tables()
-    for kind, a, b, target in payload["gates"]:
+    for gate in payload["gates"]:
+        kind = gate[0]
+        if kind == "biaffine":
+            _, a, mix_a, b, mix_b, target = gate
+            wires = apply_biaffine_semantic(
+                wires, a, mix_a, b, mix_b, target
+            )
+            continue
+        _, a, b, target = gate
         if kind == "x":
             wires = apply_x_semantic(wires, a)
         elif kind == "cx":

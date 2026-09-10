@@ -30,6 +30,7 @@ TARGET_WIRE = 12
 # qubits_initially_zero=False, optimization_level=3: one RCCX is depth 7,
 # three CXs; two wire-disjoint RCCXs remain depth 7.
 RCCX_ESTIMATED_DEPTH = 7
+BIAFFINE_RCCX_ESTIMATED_DEPTH = 9
 PROXY_ORDER = 2
 
 
@@ -77,6 +78,19 @@ def apply_rccx_semantic(
         raise ValueError("RCCX wires must be distinct")
     out = list(wires)
     out[target] ^= out[control_a] & out[control_b]
+    return tuple(out)
+
+
+def apply_biaffine_semantic(
+    wires: tuple[int, ...], a: int, mix_a: int, b: int, mix_b: int,
+    target: int,
+) -> tuple[int, ...]:
+    if len({a, mix_a, b, mix_b, target}) != 5:
+        raise ValueError("biaffine RCCX wires must be distinct")
+    out = list(wires)
+    out[target] ^= (wires[a] ^ wires[mix_a]) & (
+        wires[b] ^ wires[mix_b]
+    )
     return tuple(out)
 
 
@@ -282,6 +296,38 @@ def apply_affine_rccx_state(
                  max(state.estimated_depth, rccx_end + 1), residual, combo)
 
 
+def apply_biaffine_rccx_state(
+    state: State, a: int, mix_a: int, b: int, mix_b: int, target: int
+) -> State | None:
+    """Apply two temporary affine-control changes around one RCCX.
+
+    The reversible block temporarily maps each control to an XOR with a
+    second live wire, applies RCCX, and restores both controls. Its net
+    semantic update is
+    ``W[target] ^= (W[a] XOR W[mix_a]) AND (W[b] XOR W[mix_b])``.
+    """
+    if len({a, mix_a, b, mix_b, target}) != 5:
+        raise ValueError("biaffine RCCX wires must be distinct")
+    wires = apply_biaffine_semantic(
+        state.wires, a, mix_a, b, mix_b, target
+    )
+    term = state.wires[target] ^ wires[target]
+    if not term:
+        return None
+    arrivals = list(state.arrivals)
+    start = max(arrivals[a], arrivals[mix_a], arrivals[b],
+                arrivals[mix_b], arrivals[target])
+    end = start + BIAFFINE_RCCX_ESTIMATED_DEPTH
+    for wire in (a, mix_a, b, mix_b, target):
+        arrivals[wire] = end
+    residual, combo = affine_distance_proxy(wires, max_order=PROXY_ORDER)
+    gates = state.gates + (
+        ("biaffine", a, mix_a, b, mix_b, target),
+    )
+    return State(wires, tuple(arrivals), gates,
+                 max(state.estimated_depth, end), residual, combo)
+
+
 def complete_affine(state: State, target_wire: int = TARGET_WIRE) -> State | None:
     solution = affine_span_solution(state.wires)
     if solution is None:
@@ -309,9 +355,19 @@ def complete_affine(state: State, target_wire: int = TARGET_WIRE) -> State | Non
     return State(tuple(wires), tuple(arrivals), tuple(gates), depth, 0, ())
 
 
-def build_circuit(gates: tuple[tuple[str, int, int, int], ...]) -> QuantumCircuit:
+def build_circuit(gates: tuple[tuple, ...]) -> QuantumCircuit:
     q = QuantumCircuit(N_WIRES)
-    for kind, a, b, target in gates:
+    for gate in gates:
+        kind = gate[0]
+        if kind == "biaffine":
+            _, a, mix_a, b, mix_b, target = gate
+            q.cx(mix_a, a)
+            q.cx(mix_b, b)
+            q.rccx(a, b, target)
+            q.cx(mix_b, b)
+            q.cx(mix_a, a)
+            continue
+        _, a, b, target = gate
         if kind == "x":
             q.x(a)
         elif kind == "cx":
@@ -419,6 +475,36 @@ def proposal_affine_operations(
             for _, _, a, mix, b, target in proposals[:limit]]
 
 
+def proposal_biaffine_operations(
+    state: State, preserve_inputs: bool, limit: int, rng: random.Random
+):
+    """Rank two-sided affine-control RCCX proposals by the proxy."""
+    base = proposal_gates(state, preserve_inputs, max(limit, 32), rng)
+    proposals = []
+    for a, b, target in base:
+        for mix_a in range(N_WIRES):
+            if mix_a in (a, b, target):
+                continue
+            for mix_b in range(N_WIRES):
+                if mix_b in (a, mix_a, b, target):
+                    continue
+                term = (state.wires[a] ^ state.wires[mix_a]) & (
+                    state.wires[b] ^ state.wires[mix_b]
+                )
+                if not term:
+                    continue
+                candidate_wires = list(state.wires)
+                candidate_wires[target] ^= term
+                heuristic, _ = affine_distance_proxy(
+                    tuple(candidate_wires), max_order=PROXY_ORDER
+                )
+                proposals.append((heuristic, rng.random(), a, mix_a, b,
+                                  mix_b, target))
+    proposals.sort()
+    return [(a, mix_a, b, mix_b, target)
+            for _, _, a, mix_a, b, mix_b, target in proposals[:limit]]
+
+
 def refine_exact_leaders(states: list[State], count: int) -> list[State]:
     """Replace the proxy residual on the leading states with exact distance."""
     if count <= 0:
@@ -439,22 +525,48 @@ def refine_exact_leaders(states: list[State], count: int) -> list[State]:
 def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
            checkpoint_dir: Path | None = None, proposal_limit: int = 128,
            max_parallel: int = 1, exact_top: int = 0,
-           affine_controls: bool = False, full_proxy_proposals: bool = False):
+           affine_controls: bool = False, full_proxy_proposals: bool = False,
+           resume: Path | None = None, biaffine_controls: bool = False):
     rng = random.Random(seed)
-    beam = [initial_state()]
-    best = beam[0]
-    for layer in range(1, layers + 1):
+    start_layer = 0
+    if resume is None:
+        beam = [initial_state()]
+        best = beam[0]
+    else:
+        with resume.open("rb") as handle:
+            saved = pickle.load(handle)
+        if not isinstance(saved, dict) or "beam" not in saved or "best" not in saved:
+            raise ValueError("resume checkpoint must contain beam and best")
+        beam = saved["beam"]
+        best = saved["best"]
+        start_layer = int(saved.get("layer", 0))
+        if not beam:
+            raise ValueError("resume checkpoint contains an empty beam")
+        if start_layer >= layers:
+            raise ValueError("resume checkpoint is already at or beyond --layers")
+    for layer in range(start_layer + 1, layers + 1):
         children: dict[str, State] = {}
         for state in beam:
-            if affine_controls and max_parallel == 1:
-                operations = [("affine", op) for op in proposal_affine_operations(
-                    state, preserve_inputs, proposal_limit, rng)]
+            if (affine_controls or biaffine_controls) and max_parallel == 1:
+                operations = []
+                if affine_controls:
+                    operations.extend(
+                        ("affine", op) for op in proposal_affine_operations(
+                            state, preserve_inputs, proposal_limit, rng)
+                    )
+                if biaffine_controls:
+                    operations.extend(
+                        ("biaffine", op) for op in proposal_biaffine_operations(
+                            state, preserve_inputs, proposal_limit, rng)
+                    )
                 operations.extend(("plain", op) for op in proposal_gates(
                     state, preserve_inputs, proposal_limit, rng,
                     full_proxy_proposals))
                 for kind, operation in operations:
                     if kind == "affine":
                         child = apply_affine_rccx_state(state, *operation)
+                    elif kind == "biaffine":
+                        child = apply_biaffine_rccx_state(state, *operation)
                     else:
                         child = apply_rccx_state(state, *operation)
                     if child is None:
@@ -518,6 +630,16 @@ def main() -> None:
         action="store_true",
         help="rank plain RCCX mutations by the complete configured proxy",
     )
+    parser.add_argument(
+        "--resume",
+        type=Path,
+        help="resume from a layer checkpoint produced by this search",
+    )
+    parser.add_argument(
+        "--biaffine-controls",
+        action="store_true",
+        help="allow two-sided temporary affine-control RCCX blocks",
+    )
     parser.add_argument("--proxy-order", type=int, choices=[2, 3], default=2)
     parser.add_argument("--out", default="artifacts/destructive_semantic")
     args = parser.parse_args()
@@ -534,7 +656,8 @@ def main() -> None:
     result, completed_layer = search(
         args.beam, args.layers, args.seed, args.preserve_inputs,
         out / "checkpoints", args.proposal_limit, args.max_parallel,
-        args.exact_top, args.affine_controls, args.full_proxy_proposals)
+        args.exact_top, args.affine_controls, args.full_proxy_proposals,
+        args.resume, args.biaffine_controls)
     payload = {
         "seed": args.seed,
         "beam_width": args.beam,
@@ -545,6 +668,8 @@ def main() -> None:
         "exact_top": args.exact_top,
         "affine_controls": args.affine_controls,
         "full_proxy_proposals": args.full_proxy_proposals,
+        "resume": str(args.resume) if args.resume else None,
+        "biaffine_controls": args.biaffine_controls,
         "proxy_order": args.proxy_order,
         "completed_layer": completed_layer,
         "target_marked_states": TARGET.bit_count(),

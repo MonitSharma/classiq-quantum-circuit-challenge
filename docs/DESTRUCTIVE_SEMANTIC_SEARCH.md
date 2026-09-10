@@ -124,3 +124,21 @@ four layers), it reached residual 827 at layer 4—the same early trajectory as
 the cheaper ranking—but required about 89 seconds and therefore does not
 justify using the expensive score at every child in deeper searches. The mode
 is retained behind `--full-proxy-proposals` for targeted experiments.
+
+The search also supports a two-sided affine-control block behind
+`--biaffine-controls`:
+
+```text
+CX(mix_a, a); CX(mix_b, b); RCCX(a, b, target);
+CX(mix_b, b); CX(mix_a, a)
+```
+
+Its semantic update is
+`W[target] ^= (W[a] XOR W[mix_a]) AND (W[b] XOR W[mix_b])`, with all five
+wires distinct. The block is reversible and its semantic replay was checked
+against the decomposed CX/RCCX sequence. A beam-16, six-layer, order-3 run
+reached residual 647 at estimated depth 41; the selected six-block history
+compiled to forward depth 35 and 30 CX gates. This is an improvement over the
+early plain trajectory but still does not approach affine completion, and the
+proposal enumeration is expensive. Compact evidence is in
+`artifacts/destructive_semantic/biaffine_b16x6_p4.metrics.json`.
