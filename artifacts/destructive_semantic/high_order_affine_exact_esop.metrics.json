@@ -1,0 +1,21 @@
+{
+  "experiment": "exact no-uncompute ESOP completion",
+  "base_artifact": "double_seed42_b16x6_p4_depth59.json",
+  "corrected_affine_residual": 0,
+  "semantic_inputs_checked": 4096,
+  "target_wire": 12,
+  "esop_terms": 85,
+  "esop_chart_wires": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16],
+  "esop_max_controls": 13,
+  "midpoint_garbage_wires": [13, 14, 16, 17],
+  "compiled_forward_depth": 9665,
+  "compiled_forward_cx": 6646,
+  "transpilation": {
+    "basis_gates": ["u3", "cx"],
+    "qubits_initially_zero": false,
+    "optimization_level": 3
+  },
+  "classifier_complete": true,
+  "oracle_exhaustively_verified": false,
+  "status": "exact classifier; noncompetitive ESOP completion"
+}

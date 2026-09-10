@@ -802,3 +802,14 @@ CX. It is a residual Pareto point, not a depth improvement, and remains an
 incomplete classifier. The builder and metrics are
 `src/high_order_affine_no_uncompute_v6.py` and
 `artifacts/destructive_semantic/high_order_affine_no_uncompute_v6.metrics.json`.
+
+An exact-completion branch was also constructed to separate correctness from
+the depth frontier. Espresso reduced the v6 residual to a 51-cube SOP; the
+SOP intersections span an exact 85-term ESOP over the reachable 15-wire chart.
+Applying those terms as MCX corrections makes q11 XOR q12 equal the logo for
+all 4,096 inputs. The complete classifier compiles to depth 9,665 / 6,646 CX
+in the required U3/CX basis, so it is a correctness artifact and not a
+competitive candidate. Its builder and metrics are
+`src/high_order_affine_exact_esop.py` and
+`artifacts/destructive_semantic/high_order_affine_exact_esop.metrics.json`.
+The corresponding phase oracle has not yet been exhaustively verified.
