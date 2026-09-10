@@ -2476,3 +2476,13 @@ Pytket rewriting produced the promoted **6,152/5,889** QASM. Its SHA256 is
 Exhaustive verification covered all 4,096 inputs with maximum error
 `7.966577422597382e-14`, ancilla error `6.618821459495052e-15`, discarded
 amplitude bound `3.75404704096987e-12`, and peak sparse support 512.
+
+## Destructive semantic beam revisit (September 11, 2026)
+
+A fresh bounded run combined the order-3 residual proxy, double-RCCX
+lookahead, Pareto retention, and guided semantic hints. With seed `20260926`,
+beam 32, eight layers, and proposal limit 8, it reached exact affine residual
+**501** at estimated forward depth 98 after 16 RCCX operations. It did not
+enter the affine span, so it is retained only as a semantic-search result in
+`artifacts/destructive_semantic/combo_seed20260926_b32x8_p8.json`; no QASM or
+best-artifact replacement was made.

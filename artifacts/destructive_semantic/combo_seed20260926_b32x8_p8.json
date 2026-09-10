@@ -1,0 +1,130 @@
+{
+  "seed": 20260926,
+  "beam_width": 32,
+  "layers": 8,
+  "preserve_inputs": false,
+  "proposal_limit": 8,
+  "max_parallel": 1,
+  "exact_top": 0,
+  "affine_controls": false,
+  "full_proxy_proposals": false,
+  "resume": null,
+  "biaffine_controls": false,
+  "double_rccx": true,
+  "pareto_beam": true,
+  "guided_hints": true,
+  "forward_affine_controls": false,
+  "triple_rccx": false,
+  "proxy_order": 3,
+  "direct_target": false,
+  "completed_layer": 8,
+  "target_marked_states": 1097,
+  "estimated_depth": 98,
+  "residual": 501,
+  "exact_affine_distance": 501,
+  "exact_affine_combo": [
+    11
+  ],
+  "affine_solution": null,
+  "gates": [
+    [
+      "rccx",
+      10,
+      11,
+      14
+    ],
+    [
+      "rccx",
+      7,
+      14,
+      16
+    ],
+    [
+      "rccx",
+      9,
+      14,
+      11
+    ],
+    [
+      "rccx",
+      5,
+      11,
+      13
+    ],
+    [
+      "rccx",
+      8,
+      13,
+      12
+    ],
+    [
+      "rccx",
+      9,
+      13,
+      11
+    ],
+    [
+      "rccx",
+      5,
+      13,
+      11
+    ],
+    [
+      "rccx",
+      9,
+      12,
+      17
+    ],
+    [
+      "rccx",
+      11,
+      16,
+      15
+    ],
+    [
+      "rccx",
+      8,
+      15,
+      11
+    ],
+    [
+      "rccx",
+      4,
+      12,
+      17
+    ],
+    [
+      "rccx",
+      14,
+      17,
+      11
+    ],
+    [
+      "rccx",
+      8,
+      17,
+      11
+    ],
+    [
+      "rccx",
+      5,
+      17,
+      12
+    ],
+    [
+      "rccx",
+      7,
+      12,
+      11
+    ],
+    [
+      "rccx",
+      12,
+      16,
+      11
+    ]
+  ],
+  "elapsed_seconds": 1420.0922057628632,
+  "semantic_hash": "7018c1b873bbe25f78942c17ccc9e690",
+  "direct_target_mismatches": 501
+}

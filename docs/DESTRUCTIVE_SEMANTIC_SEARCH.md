@@ -1257,3 +1257,16 @@ after pytket. The exact promoted QASM is
 `408012b6331392bc9da312373b6ae7e48b7b0f1788ab5e984ae504881465a241`. Its
 matching exhaustive report covers all 4,096 inputs with maximum error
 `7.966577422597382e-14` and ancilla error `6.618821459495052e-15`.
+
+## Combined semantic-beam continuation (September 11, 2026)
+
+To revisit the brief's intended destructive-search direction, a fresh
+configuration combined the order-3 affine residual proxy, double-RCCX
+lookahead, Pareto beam retention, and guided semantic hints. The practical
+screen used seed `20260926`, beam 32, eight layers, and proposal limit 8.
+It reached exact affine residual **501** at estimated forward depth 98 after
+16 RCCX operations, with direct-target mismatch 501 and no affine completion.
+The selected state is preserved in
+`artifacts/destructive_semantic/combo_seed20260926_b32x8_p8.json`.
+This is a new destructive semantic trajectory, not a classifier or oracle;
+no QASM was promoted.
