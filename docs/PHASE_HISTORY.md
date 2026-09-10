@@ -84,6 +84,16 @@ five-layer search reached rank 22 at estimated forward depth 35, but did not
 enter the logo span. Its checkpointed result is under
 `artifacts/phase_history/parallel_seed7_b8_l5/`.
 
+## ANF diagnostic
+
+`src/multiplicative_depth_analysis.py` computes the exact 12-variable ANF by
+the Möbius transform. It is a structural diagnostic only; it does not compile
+the terms individually. The report is saved at
+`artifacts/phase_history/logo_anf.json` and records degree 12 with 886
+nonconstant terms. A future multiplicative-depth/XAG tool should consume this
+structure as proposal guidance while the phase-history engine remains the
+actual oracle-construction path.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary
