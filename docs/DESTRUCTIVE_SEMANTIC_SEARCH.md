@@ -329,6 +329,17 @@ candidate oracle and no QASM was generated. The result is preserved as
 `artifacts/destructive_semantic/nonabelian_l16_initial.metrics.json`; the
 prototype remains a research direction rather than a correctness result.
 
+The target was also converted into an exact layered residual-function
+branching program using variable order
+`q0,q1,q2,q3,q4,q5,q11,q8,q6,q7,q9,q10`. The layer state counts are
+`1,2,4,8,13,15,11,17,18,13,7,4,2`, with 1,097 marked inputs and a maximum
+of 18 distinct residual functions. This is a structural diagnostic rather
+than a reversible circuit: residual states can merge, so a future destructive
+embedding must carry enough garbage to make each transition injective. The
+reproducible extractor is `src/residual_branching_program.py`, with compact
+measurements in
+`artifacts/destructive_semantic/residual_branching_program_ordered.metrics.json`.
+
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
 It did not reach affine completion and is weaker than the targeted seed-1
