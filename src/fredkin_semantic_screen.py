@@ -17,6 +17,7 @@ from pathlib import Path
 from destructive_semantic_search import (
     TARGET,
     affine_distance_proxy,
+    apply_rccx_semantic,
     exact_affine_distance,
     initial_wire_truth_tables,
 )
@@ -53,12 +54,30 @@ def moves(preserve_inputs: bool):
                 yield control, a, b
 
 
+def mixed_moves(preserve_inputs: bool):
+    for move in moves(preserve_inputs):
+        yield ("fredkin",) + move
+    for a in range(18):
+        for b in range(a + 1, 18):
+            for target in range(18):
+                if target in (a, b) or (preserve_inputs and target < 12):
+                    continue
+                yield ("rccx", a, b, target)
+
+
+def apply_move(wires: tuple[int, ...], move: tuple) -> tuple[int, ...]:
+    if move[0] == "fredkin":
+        return apply_fredkin(wires, move[1], move[2], move[3])
+    return apply_rccx_semantic(wires, move[1], move[2], move[3])
+
+
 def screen(beam_width: int, layers: int, seed: int,
-           preserve_inputs: bool) -> dict:
+           preserve_inputs: bool, mixed: bool = False) -> dict:
     rng = random.Random(seed)
     beam = [State(initial_wire_truth_tables(), ())]
     records = []
-    all_moves = tuple(moves(preserve_inputs))
+    all_moves = tuple(mixed_moves(preserve_inputs) if mixed
+                      else (("fredkin",) + move for move in moves(preserve_inputs)))
     for layer in range(1, layers + 1):
         candidates: dict[tuple[int, ...], State] = {}
         for state in beam:
@@ -67,12 +86,12 @@ def screen(beam_width: int, layers: int, seed: int,
             # dominating ties without changing the candidate set.
             order = list(all_moves)
             rng.shuffle(order)
-            for control, a, b in order:
-                child_wires = apply_fredkin(state.wires, control, a, b)
+            for move in order:
+                child_wires = apply_move(state.wires, move)
                 if child_wires in candidates:
                     continue
                 candidates[child_wires] = State(
-                    child_wires, state.moves + ((control, a, b),)
+                    child_wires, state.moves + (tuple(move),)
                 )
         ranked = []
         for state in candidates.values():
@@ -110,9 +129,12 @@ def main() -> None:
     parser.add_argument("--layers", type=int, default=3)
     parser.add_argument("--seed", type=int, default=20261004)
     parser.add_argument("--preserve-inputs", action="store_true")
+    parser.add_argument("--mixed", action="store_true",
+                        help="include RCCX moves alongside Fredkin moves")
     parser.add_argument("--out", type=Path)
     args = parser.parse_args()
-    result = screen(args.beam, args.layers, args.seed, args.preserve_inputs)
+    result = screen(args.beam, args.layers, args.seed, args.preserve_inputs,
+                    args.mixed)
     print(json.dumps(result, indent=2))
     if args.out is not None:
         args.out.parent.mkdir(parents=True, exist_ok=True)
