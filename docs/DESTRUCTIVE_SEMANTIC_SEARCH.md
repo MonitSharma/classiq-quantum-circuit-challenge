@@ -577,3 +577,10 @@ fourth correction lowers the residual to 323 but raises depth to 138, so the
 three-block chain is the current depth/residual Pareto point. Its reproducible
 builder is `src/high_order_affine_chain.py`; measurements are in
 `artifacts/destructive_semantic/high_order_affine_chain.metrics.json`.
+
+An all-degree monomial scan on the remaining `q11 XOR q12` residual found no
+single exact completion. The best next correction is the previously measured
+fourth block, reducing residual 339 to 323; a fifth six-control correction
+reaches 315 but moves beyond the depth-screened construction. This boundary is
+recorded in
+`artifacts/destructive_semantic/high_order_affine_completion_scan.metrics.json`.
