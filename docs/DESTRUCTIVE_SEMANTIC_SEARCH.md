@@ -271,6 +271,11 @@ its gate history is preserved in
 The same objective is now reproducible with the search engine's
 `--direct-target` option; affine-span ranking remains the default.
 
+A deeper direct-target run (seed 2024, beam 32, 20 layers) improved the best
+direct mismatch to 543 on q11. Its 26-RCCX history compiled to forward depth
+60 and 62 CX gates, but it remains incomplete. The exact record is in
+`artifacts/destructive_semantic/direct_wire_beam_seed2024.metrics.json`.
+
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
 It did not reach affine completion and is weaker than the targeted seed-1

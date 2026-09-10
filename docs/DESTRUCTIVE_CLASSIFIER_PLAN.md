@@ -184,6 +184,10 @@ the affine-residual frontier. Direct mismatch and affine residual are tracked
 separately in the experiment records. The search engine now exposes this mode
 as `--direct-target`, while retaining affine-span ranking by default.
 
+A deeper seed-2024 direct-target run improved the best mismatch to 543 on q11;
+the selected 26-RCCX circuit compiled to depth 60 / 62 CX, but is still not a
+classifier.
+
 A cold seed-42 triple-RCCX beam reached residual 531 at estimated depth 77
 after four layers; it did not reach affine completion and is weaker than the
 targeted seed-1 basin.
