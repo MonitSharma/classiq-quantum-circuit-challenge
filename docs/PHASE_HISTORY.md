@@ -189,6 +189,14 @@ depth 2348 / 1513 CX with SHA
 This remains an experimental phase-history result, not a replacement for the
 protected depth-524 artifact.
 
+A 2000-permutation continuation found order `[8, 4, 3, 0, 2, 9, 5, 7, 6, 1]`.
+The fresh QASM `artifacts/phase_history/rank_product_order_search_2000.qasm`
+was exhaustively verified on all 4096 inputs with zero ancilla leakage at
+depth 2342 / 1513 CX; its SHA is
+`cf88a76d99dbeb5262676b29d1dbcac551d85076b05942325dd31844da002254`.
+This is a native-cancellation improvement within the exact rank-product
+baseline, but it is still far above the <180 research target.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary
