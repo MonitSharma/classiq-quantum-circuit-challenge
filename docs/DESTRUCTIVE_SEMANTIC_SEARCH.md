@@ -342,6 +342,14 @@ This rules out a low-order multiplicative tail for that state; the exact
 negative result is recorded in
 `artifacts/destructive_semantic/direct501_product_span_degree7.metrics.json`.
 
+The remaining mixed affine move-set control was screened with affine,
+biaffine, and unrestored forward-affine proposals enabled together (seed 1,
+beam 16, proposal limit 4, order-3 proxy). It reached residuals 827, 759,
+and 653 through three completed layers, remaining weaker than the existing
+frontiers; layer 4 was stopped during expensive proposal scoring. The bounded
+result is recorded in
+`artifacts/destructive_semantic/mixed_affine_seed1_b16x4_p4.metrics.json`.
+
 The separate non-Abelian phase-computer direction now has a finite-group
 prototype in `src/nonabelian_branch_search.py`. It constructs and checks the
 120-element binary icosahedral multiplication table, then evaluates a
