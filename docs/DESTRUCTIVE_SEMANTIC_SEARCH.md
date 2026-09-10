@@ -25,7 +25,7 @@ coordinate function visible.
 - exact input and logo truth tables;
 - semantic X, CX, and RCCX updates;
 - affine GF(2) span detection for the logo target;
-- a cheap constant/single/pair residual heuristic;
+- configurable constant/single/pair or order-3 residual heuristics;
 - deterministic bounded beam search over RCCX updates;
 - reversible X/CX affine completion when the target enters the span;
 - checkpoint serialization under `artifacts/destructive_semantic/checkpoints/`.
@@ -58,12 +58,11 @@ must remain unchanged.
 
 ## Limitations of the first implementation
 
-The initial beam uses single RCCX transitions and a pairwise affine residual
-proxy. It does not yet perform multi-RCCX disjoint layer generation, exact
-meet-in-the-middle affine distance, guided rank/XAG seed pools, or a full
-native-cost calibration. Disjoint layer generation and native-cost calibration
-are now implemented; exact meet-in-the-middle distance is reported for the
-selected final state but is not yet used to rank every child.
+The initial beam uses single RCCX transitions and an affine residual proxy. It
+does not yet perform guided rank/XAG seed construction or a complete native
+cost model. Disjoint layer generation and native-cost calibration are now
+implemented; exact meet-in-the-middle distance is reported for the selected
+final state but is not used to rank every child.
 
 ## Observed result
 
@@ -117,3 +116,11 @@ order-2 residual 539 at the comparable ten-layer point. Increasing the proposal
 limit to 24 reproduced residual 531 by layer 10 without a further gain. This
 is the best current heuristic variant, but it remains far from affine
 completion.
+
+A full-proxy proposal mode was added as a controlled experiment. It scores
+each possible RCCX mutation with the complete configured proxy rather than the
+cheaper direct/pair hint. On a small order-3 run (beam 32, eight proposals,
+four layers), it reached residual 827 at layer 4—the same early trajectory as
+the cheaper ranking—but required about 89 seconds and therefore does not
+justify using the expensive score at every child in deeper searches. The mode
+is retained behind `--full-proxy-proposals` for targeted experiments.

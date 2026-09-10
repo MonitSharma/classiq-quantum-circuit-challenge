@@ -94,6 +94,12 @@ hit the memory boundary. Neither run reached affine completion.
 
 The disjoint-RCCX layer extension was validated but reached residual 575 by
 layer 9 in the first beam-128 comparison. A deeper low-fanout single-RCCX run
-reached residual 503 by layer 25 at estimated depth 126. The next search
-change is exact affine-distance scoring for selected states plus guided semantic
-proposals, not simply a larger beam.
+reached residual 503 by layer 25 at estimated depth 126. An order-3 affine
+proxy subsequently reached residual 513 at estimated depth 84 after 14 layers,
+the best current heuristic result. A full-proxy mutation-ranking control
+reproduced only the early residual 827 trajectory while being much slower per
+layer. No classifier has reached affine completion, and no complete
+`C^dagger Z C` oracle has been serialized or exhaustively verified. The next
+search change should therefore be guided semantic proposals or a
+memory-efficient mutation strategy, not broad exact ranking or simply a larger
+beam.

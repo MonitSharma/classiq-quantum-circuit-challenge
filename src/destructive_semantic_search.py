@@ -328,7 +328,13 @@ def score_state(state: State) -> tuple[int, int, int, str]:
     return exact, state.residual, state.estimated_depth, semantic_hash(state.wires)
 
 
-def proposal_gates(state: State, preserve_inputs: bool, limit: int, rng: random.Random):
+def proposal_gates(
+    state: State,
+    preserve_inputs: bool,
+    limit: int,
+    rng: random.Random,
+    evaluate_proxy: bool = False,
+):
     proposals = []
     for a in range(N_WIRES):
         for b in range(a + 1, N_WIRES):
@@ -341,21 +347,31 @@ def proposal_gates(state: State, preserve_inputs: bool, limit: int, rng: random.
                 new_value = state.wires[target] ^ term
                 if new_value == state.wires[target]:
                     continue
-                direct = (TARGET ^ new_value).bit_count()
-                pair_hint = min(
-                    (TARGET ^ new_value ^ state.wires[i]).bit_count()
-                    for i in range(N_WIRES) if i != target
-                )
-                proposals.append((min(direct, pair_hint), rng.random(), a, b, target))
+                if evaluate_proxy:
+                    candidate_wires = list(state.wires)
+                    candidate_wires[target] = new_value
+                    heuristic, _ = affine_distance_proxy(
+                        tuple(candidate_wires), max_order=PROXY_ORDER
+                    )
+                else:
+                    direct = (TARGET ^ new_value).bit_count()
+                    pair_hint = min(
+                        (TARGET ^ new_value ^ state.wires[i]).bit_count()
+                        for i in range(N_WIRES) if i != target
+                    )
+                    heuristic = min(direct, pair_hint)
+                proposals.append((heuristic, rng.random(), a, b, target))
     proposals.sort()
     return [(a, b, target) for _, _, a, b, target in proposals[:limit]]
 
 
 def proposal_layers(
     state: State, preserve_inputs: bool, limit: int, max_parallel: int,
-    rng: random.Random,
+    rng: random.Random, evaluate_proxy: bool = False,
 ) -> list[tuple[tuple[int, int, int], ...]]:
-    singles = proposal_gates(state, preserve_inputs, max(limit * 2, 32), rng)
+    singles = proposal_gates(
+        state, preserve_inputs, max(limit * 2, 32), rng, evaluate_proxy
+    )
     layers: list[tuple[tuple[int, int, int], ...]] = []
     seen: set[tuple[tuple[int, int, int], ...]] = set()
     for index, primary in enumerate(singles):
@@ -423,7 +439,7 @@ def refine_exact_leaders(states: list[State], count: int) -> list[State]:
 def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
            checkpoint_dir: Path | None = None, proposal_limit: int = 128,
            max_parallel: int = 1, exact_top: int = 0,
-           affine_controls: bool = False):
+           affine_controls: bool = False, full_proxy_proposals: bool = False):
     rng = random.Random(seed)
     beam = [initial_state()]
     best = beam[0]
@@ -434,7 +450,8 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
                 operations = [("affine", op) for op in proposal_affine_operations(
                     state, preserve_inputs, proposal_limit, rng)]
                 operations.extend(("plain", op) for op in proposal_gates(
-                    state, preserve_inputs, proposal_limit, rng))
+                    state, preserve_inputs, proposal_limit, rng,
+                    full_proxy_proposals))
                 for kind, operation in operations:
                     if kind == "affine":
                         child = apply_affine_rccx_state(state, *operation)
@@ -448,7 +465,8 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
                         children[key] = child
             else:
                 layer_candidates = proposal_layers(
-                    state, preserve_inputs, proposal_limit, max_parallel, rng)
+                    state, preserve_inputs, proposal_limit, max_parallel, rng,
+                    full_proxy_proposals)
                 for layer_gates in layer_candidates:
                     child = apply_rccx_layer_state(state, layer_gates)
                     if child is None:
@@ -495,6 +513,11 @@ def main() -> None:
     parser.add_argument("--max-parallel", type=int, default=1)
     parser.add_argument("--exact-top", type=int, default=0)
     parser.add_argument("--affine-controls", action="store_true")
+    parser.add_argument(
+        "--full-proxy-proposals",
+        action="store_true",
+        help="rank plain RCCX mutations by the complete configured proxy",
+    )
     parser.add_argument("--proxy-order", type=int, choices=[2, 3], default=2)
     parser.add_argument("--out", default="artifacts/destructive_semantic")
     args = parser.parse_args()
@@ -511,7 +534,7 @@ def main() -> None:
     result, completed_layer = search(
         args.beam, args.layers, args.seed, args.preserve_inputs,
         out / "checkpoints", args.proposal_limit, args.max_parallel,
-        args.exact_top, args.affine_controls)
+        args.exact_top, args.affine_controls, args.full_proxy_proposals)
     payload = {
         "seed": args.seed,
         "beam_width": args.beam,
@@ -521,6 +544,7 @@ def main() -> None:
         "max_parallel": args.max_parallel,
         "exact_top": args.exact_top,
         "affine_controls": args.affine_controls,
+        "full_proxy_proposals": args.full_proxy_proposals,
         "proxy_order": args.proxy_order,
         "completed_layer": completed_layer,
         "target_marked_states": TARGET.bit_count(),
