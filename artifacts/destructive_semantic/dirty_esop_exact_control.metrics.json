@@ -1,0 +1,17 @@
+{
+  "classifier_depth": 10648,
+  "classifier_cx": 7736,
+  "oracle_depth": 21412,
+  "oracle_cx": 15462,
+  "width": 18,
+  "oracle_sha256": "279e6eb4be74671e74beef8b561b4480114dbbb28740cbb7f05568e7aaa83918",
+  "basis": ["u3", "cx"],
+  "qubits_initially_zero": false,
+  "basis_inputs_checked": 4096,
+  "max_error": 1.8254649433970885e-13,
+  "ancilla_error": 2.9294954910683034e-15,
+  "discarded_amplitude_bound": 5.256720355685405e-12,
+  "peak_sparse_support": 1024,
+  "status": "verified_exact_negative_control",
+  "note": "Uses dirty v-chain MCX for controls of size 4 through 9, falls back to no-ancilla MCX for larger controls, and swaps the computed q12 result into q11. It is slightly deeper than the verified v0 oracle."
+}

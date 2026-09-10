@@ -304,12 +304,30 @@ are in `artifacts/destructive_semantic/row_factor_classifier.qasm`,
 `artifacts/destructive_semantic/row_factor_verified.metrics.json`. This is an
 exact correctness baseline, not a destructive-search result.
 
+An exact dirty-ancilla ESOP control was also tested as a concrete destructive
+embedding: the classifier computes the logo into q12, permits dirty-chain
+workspace, and swaps q12 with q11 so the required midpoint wire is q11 while
+the old q11 value becomes garbage. Exhaustive verification passed on all 4,096
+inputs, but the serialized oracle measured depth 21,412 / 15,462 CX, slightly
+worse than the v0 oracle. Its verified measurements are recorded in
+`artifacts/destructive_semantic/dirty_esop_exact_control.metrics.json`; this
+is a correctness control, not an optimization result.
+
 A direct-target triple-RCCX control was also run from seed 2024 (beam 16,
 four layers, proposal limit 4). It reached 589 mismatches on its best
 physical wire at estimated depth 63 after 12 RCCXs. This is weaker than the
 existing direct-target residual-501 frontier and remains an incomplete
 classifier; its exact history is recorded in
 `artifacts/destructive_semantic/direct_triple_seed2024_b16x4_p4.metrics.json`.
+
+The separate non-Abelian phase-computer direction now has a finite-group
+prototype in `src/nonabelian_branch_search.py`. It constructs and checks the
+120-element binary icosahedral multiplication table, then evaluates a
+width-2 branching program over all 4,096 inputs using only table lookups. An
+initial stochastic length-16 control reached 3,796 mismatches, so it is not a
+candidate oracle and no QASM was generated. The result is preserved as
+`artifacts/destructive_semantic/nonabelian_l16_initial.metrics.json`; the
+prototype remains a research direction rather than a correctness result.
 
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
