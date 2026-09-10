@@ -268,6 +268,8 @@ mismatches on q11 at estimated depth 70, weaker than the residual-349 affine
 frontier. This confirms that direct-wire targeting is a distinct trajectory;
 its gate history is preserved in
 `artifacts/destructive_semantic/direct_wire_beam_seed1919.metrics.json`.
+The same objective is now reproducible with the search engine's
+`--direct-target` option; affine-span ranking remains the default.
 
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.

@@ -35,6 +35,7 @@ BIAFFINE_RCCX_ESTIMATED_DEPTH = 9
 FORWARD_BIAFFINE_ESTIMATED_DEPTH = 8
 PROXY_ORDER = 2
 FULL_PROXY_SHORTLIST_MULTIPLIER = 32
+DIRECT_TARGET_OBJECTIVE = False
 
 
 def input_truth_tables() -> tuple[int, ...]:
@@ -473,6 +474,9 @@ def build_circuit(gates: tuple[tuple, ...]) -> QuantumCircuit:
 
 
 def score_state(state: State) -> tuple[int, int, int, str]:
+    if DIRECT_TARGET_OBJECTIVE:
+        direct = min((TARGET ^ wire).bit_count() for wire in state.wires)
+        return 0, direct, state.estimated_depth, semantic_hash(state.wires)
     exact = 0 if affine_span_solution(state.wires) is not None else 1
     return exact, state.residual, state.estimated_depth, semantic_hash(state.wires)
 
@@ -896,6 +900,9 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
             "layer": layer,
             "beam": len(beam),
             "best_residual": beam[0].residual,
+            "best_direct_mismatches": min(
+                (TARGET ^ wire).bit_count() for wire in beam[0].wires
+            ),
             "best_depth_estimate": beam[0].estimated_depth,
             "best_exact_span": affine_span_solution(beam[0].wires) is not None,
         }), flush=True)
@@ -960,11 +967,18 @@ def main() -> None:
         help="use bounded three-RCCX lookahead moves",
     )
     parser.add_argument("--proxy-order", type=int, choices=[2, 3], default=2)
+    parser.add_argument(
+        "--direct-target",
+        action="store_true",
+        help="rank states by direct mismatch of their best physical wire",
+    )
     parser.add_argument("--out", default="artifacts/destructive_semantic")
     args = parser.parse_args()
 
     global PROXY_ORDER
     PROXY_ORDER = args.proxy_order
+    global DIRECT_TARGET_OBJECTIVE
+    DIRECT_TARGET_OBJECTIVE = args.direct_target
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -997,6 +1011,7 @@ def main() -> None:
         "forward_affine_controls": args.forward_affine_controls,
         "triple_rccx": args.triple_rccx,
         "proxy_order": args.proxy_order,
+        "direct_target": args.direct_target,
         "completed_layer": completed_layer,
         "target_marked_states": TARGET.bit_count(),
         "estimated_depth": result.estimated_depth,
@@ -1007,6 +1022,9 @@ def main() -> None:
         "gates": result.gates,
         "elapsed_seconds": time.time() - started,
         "semantic_hash": semantic_hash(result.wires),
+        "direct_target_mismatches": min(
+            (TARGET ^ wire).bit_count() for wire in result.wires
+        ),
     }
     (out / "latest_result.json").write_text(json.dumps(payload, indent=2) + "\n")
     with (out / "checkpoints" / f"beam_{args.beam}_layers_{args.layers}.pkl").open("wb") as handle:

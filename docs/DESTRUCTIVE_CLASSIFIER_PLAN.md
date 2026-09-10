@@ -181,7 +181,8 @@ the tested window.
 A direct-wire objective was also tested independently: a beam-32, 12-layer
 run reached 609 direct mismatches on q11 at estimated depth 70, weaker than
 the affine-residual frontier. Direct mismatch and affine residual are tracked
-separately in the experiment records.
+separately in the experiment records. The search engine now exposes this mode
+as `--direct-target`, while retaining affine-span ranking by default.
 
 A cold seed-42 triple-RCCX beam reached residual 531 at estimated depth 77
 after four layers; it did not reach affine completion and is weaker than the
