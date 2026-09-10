@@ -624,3 +624,23 @@ U3/CX basis. It is a promising incomplete classifier candidate, not a
 verified phase oracle. The builder and metrics are
 `src/high_order_affine_reordered_chain.py` and
 `artifacts/destructive_semantic/high_order_affine_reordered_chain.metrics.json`.
+
+A native-depth screen over direct `q11 XOR q12` residuals produced a tempting
+107-depth / 76-CX pair using `q12 ^= q7q10q11q16`, then
+`q11 ^= q8q10q12q16`. Independent exact affine-span replay rejected it: the
+full residual is 339 rather than 323. This is retained only as a screening
+lesson—direct target-combination residuals are insufficient, and every native
+candidate must be checked with the full affine-span distance before it can
+enter the frontier.
+
+The residual-323 continuation was then rescheduled without changing its
+semantics. In the tail, q17 computes `q2q3` and q13 computes `q8q10` before
+either target toggle; q12 is toggled first, q11 second, and both workspaces
+are then uncomputed. This preserves the dependency order while allowing the
+independent partial products to overlap. Exact replay still restores q13 and
+q17 over all 4,096 inputs and gives residual 323; required-basis transpilation
+measures forward depth 102 / 72 CX. This is the current native-depth
+frontier, still incomplete and not exhaustively verified as a phase oracle.
+The builder and metrics are
+`src/high_order_affine_fused_tail.py` and
+`artifacts/destructive_semantic/high_order_affine_fused_tail.metrics.json`.
