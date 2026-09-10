@@ -22,8 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TERMS = ROOT / "artifacts" / "rank_terms.json"
 
 
-def build(terms_path: Path = TERMS) -> QuantumCircuit:
-    terms = json.loads(terms_path.read_text())
+def build_terms(terms: list[list[int]]) -> QuantumCircuit:
     circuit = QuantumCircuit(18)
     for x_table, y_table in terms:
         x_compute = pred(x_table, 0, 12, [13, 14, 15, 16, 17])
@@ -36,6 +35,10 @@ def build(terms_path: Path = TERMS) -> QuantumCircuit:
         circuit.compose(y_compute.inverse(), inplace=True)
         circuit.compose(x_compute.inverse(), inplace=True)
     return circuit
+
+
+def build(terms_path: Path = TERMS) -> QuantumCircuit:
+    return build_terms(json.loads(terms_path.read_text()))
 
 
 def main() -> None:

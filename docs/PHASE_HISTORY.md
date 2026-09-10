@@ -165,6 +165,21 @@ leakage; SHA
 Because depth did not improve, generic pytket post-processing is closed for
 this seed.
 
+## Phase-block ordering search
+
+The ten rank-product phase blocks commute logically, but their serialized
+ordering affects local cancellation during Qiskit's `u3`/`cx` lowering. The
+ordering search in `src/search_phase_term_order.py` tested 120 deterministic
+permutations and found the order `[0, 9, 5, 6, 7, 2, 1, 8, 4, 3]`. The exact
+candidate is `artifacts/phase_history/rank_product_order_search_120.qasm`,
+with matching metrics and exhaustive report. It passed all 4096 inputs with
+zero ancilla leakage at depth 2359 and 1520 CX gates; its QASM SHA is
+`baed794d3294e652e12516f94b79692021d45e69d8e03de2a694eb43a28d2883`.
+
+This improves the phase-history baseline from depth 2380 / 1531 CX to
+2359 / 1520 CX, but remains well above the protected depth-524 circuit. It is
+therefore a verified experimental improvement, not a new repository best.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary
