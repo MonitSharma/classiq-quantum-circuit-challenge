@@ -1226,3 +1226,17 @@ Exhaustive verification covered all 4,096 inputs with max error
 `1.4074952220269104e-12`. This is the strongest verified destructive
 completion so far, though it remains noncompetitive; the protected fallback is
 unchanged.
+
+## Destructive 83-cube alternate-cover continuation (September 10, 2026)
+
+Selecting the second exact Espresso cover, with 83 cubes instead of 84, within
+the relative-phase two-clean lowering improved the classifier to **4,326/3,629**
+and the complete oracle to **8,559/7,171** depth/CX. The verified QASM is
+`artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_alt_oracle.qasm`
+with SHA256
+`9e1c6a59be7fe4af91dbd081e7afe062fa2d20d70dad674011e9f0390b089023`.
+Exhaustive verification covered all 4,096 inputs with max error
+`1.185645420639957e-13`, zero ancilla error, and discarded-amplitude bound
+`1.3819464577271947e-12`. This is the strongest verified destructive
+completion currently measured, though it remains noncompetitive; the protected
+fallback is unchanged.

@@ -877,3 +877,15 @@ Exhaustive verification covered all 4,096 inputs with max error
 `1.1233836331473806e-13`, zero ancilla error, and discarded-amplitude bound
 `1.4074952220269104e-12`. This is the strongest verified destructive
 completion so far, though it remains noncompetitive.
+
+Selecting the second exact Espresso cover (83 cubes rather than 84) within the
+same relative-phase two-clean lowering improved the classifier to **4,326 /
+3,629** and the complete oracle to **8,559 / 7,171** depth/CX. The verified
+candidate is `src/high_order_affine_exact_esop_clean2_rel_alt.py` with QASM
+`artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_alt_oracle.qasm`
+and SHA256
+`9e1c6a59be7fe4af91dbd081e7afe062fa2d20d70dad674011e9f0390b089023`.
+Exhaustive verification covered all 4,096 inputs with max error
+`1.185645420639957e-13`, zero ancilla error, and discarded-amplitude bound
+`1.3819464577271947e-12`. This is the strongest verified destructive
+completion currently measured, though still noncompetitive.
