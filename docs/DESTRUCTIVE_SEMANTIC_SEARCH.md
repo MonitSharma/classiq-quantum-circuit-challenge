@@ -340,6 +340,15 @@ reproducible extractor is `src/residual_branching_program.py`, with compact
 measurements in
 `artifacts/destructive_semantic/residual_branching_program_ordered.metrics.json`.
 
+A first reversible embedding of that DAG stored each layer's residual-state
+ID in five wires and synthesized the Boolean difference for every state bit
+directly from the consumed prefix. The semantic construction was exact, but
+its 589 ESOP terms compiled to forward depth 47,885 / 29,642 CX. This rejects
+the naive prefix-ESOP embedding as an optimization path; the residual DAG is
+still useful as a structural target for a transition synthesis that exploits
+state-local controls. Measurements are in
+`artifacts/destructive_semantic/residual_state_code_naive.metrics.json`.
+
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
 It did not reach affine completion and is weaker than the targeted seed-1
