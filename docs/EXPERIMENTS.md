@@ -2241,6 +2241,14 @@ discarded-amplitude bound `1.0184711571506287e-12`, and peak sparse support
 128. This is a verified improvement within the destructive ESOP family, not a
 rank-1 result.
 
+## Alternate 84-cube cover screen (September 10, 2026)
+
+The toolchain alternates between an exact 83-cube and 84-cube Espresso cover.
+The 84-cube cover serialized to **8,700/7,303** depth/CX with the same
+two-clean relative-phase lowering; a 200-move complete-oracle
+insertion/reversal search reached **8,165/6,927**. This negative result does
+not replace the verified 83-cube best.
+
 ## Destructive nineteenth complete-oracle order search (September 10, 2026)
 
 A 200-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves19.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves19.qasm` with SHA256 `98e5f8e569627902d91ed2d6651ca5703b1a600c40fcc81b592dceb736fe5293`. The forward classifier is **3,430/2,889** and the complete oracle is **6,780/5,697** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `8.956417618622867e-14`, zero ancilla error, discarded-amplitude bound `9.286567255799592e-13`, and peak sparse support 128. This is a verified improvement within the destructive ESOP family, not a rank-1 result.

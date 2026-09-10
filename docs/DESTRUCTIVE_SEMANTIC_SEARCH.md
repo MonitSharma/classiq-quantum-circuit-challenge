@@ -904,6 +904,15 @@ completion currently measured, though still noncompetitive.
  strongest verified destructive completion, but remains noncompetitive and does
  not establish rank 1.
 
+## Alternate 84-cube cover screen (September 10, 2026)
+
+The toolchain alternates between an exact 83-cube and 84-cube Espresso cover.
+The 84-cube cover was evaluated with the same two-clean relative-phase
+lowering: its sorted order serialized to **8,700/7,303** depth/CX, and a
+200-move complete-oracle insertion/reversal search reached only **8,165/6,927**.
+This is a negative result; the 83-cube cover remains the active exact-cover
+family and the 84-cube candidate is not a new best.
+
 ## Destructive nineteenth complete-oracle order search (September 10, 2026)
 
 A 200-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves19.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves19.qasm` with SHA256 `98e5f8e569627902d91ed2d6651ca5703b1a600c40fcc81b592dceb736fe5293`. The forward classifier is **3,430/2,889** and the complete oracle is **6,780/5,697** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `8.956417618622867e-14`, zero ancilla error, discarded-amplitude bound `9.286567255799592e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.

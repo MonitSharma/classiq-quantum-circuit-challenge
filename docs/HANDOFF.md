@@ -1241,6 +1241,14 @@ Exhaustive verification covered all 4,096 inputs with max error
 completion currently measured, though it remains noncompetitive; the protected
 fallback is unchanged.
 
+## Alternate 84-cube exact-cover screen (September 10, 2026)
+
+Repeated Espresso calls on this toolchain expose an exact 84-cube cover in
+addition to the active 83-cube cover. The 84-cube construction serialized to
+**8,700/7,303** depth/CX; after 200 complete-oracle insertion/reversal moves it
+reached **8,165/6,927**, still far above the verified 83-cube best. This is a
+recorded negative result, not a replacement candidate.
+
 ## Latest destructive nineteenth complete-oracle order improvement (September 10, 2026)
 
 A 200-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete `C† Z C` oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves19.py`; the exact serialized QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves19.qasm` with SHA256 `98e5f8e569627902d91ed2d6651ca5703b1a600c40fcc81b592dceb736fe5293`. It measures **3,430/2,889** for the forward classifier and **6,780/5,697** for the complete oracle. Its matching exhaustive report checks all 4,096 inputs with max error `8.956417618622867e-14`, zero ancilla error, discarded-amplitude bound `9.286567255799592e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
