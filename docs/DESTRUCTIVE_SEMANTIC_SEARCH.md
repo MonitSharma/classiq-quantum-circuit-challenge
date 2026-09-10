@@ -1400,3 +1400,10 @@ exact affine residual **827**, with no affine completion. This closes the
 single-move higher-order controlled-swap variant at the current frontier; no
 QASM was lowered. Results are in
 `artifacts/destructive_semantic/controlled_swap_screen_seed20261007.metrics.json`.
+
+A final one-step signed screen checked both positive and complemented control
+predicates for every physical controlled swap (4,896 variants). The best move
+was still a positive controlled swap with exact residual **827**; negative
+controls produced no improvement. This closes the signed controlled-swap
+variant without native lowering. Metrics are in
+`artifacts/destructive_semantic/signed_controlled_swap_screen_seed20261008.metrics.json`.

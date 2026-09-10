@@ -1,0 +1,14 @@
+{
+  "experiment": "signed controlled-swap one-step semantic screen",
+  "moves_checked": 4896,
+  "target_marked_states": 1097,
+  "best_proxy_residual": 827,
+  "best_exact_residual": 827,
+  "best_exact_combo": [11],
+  "best_move": {
+    "control": 10,
+    "negative_control": false,
+    "swap": [11, 12]
+  },
+  "status": "verified semantic negative; no affine completion or QASM candidate"
+}
