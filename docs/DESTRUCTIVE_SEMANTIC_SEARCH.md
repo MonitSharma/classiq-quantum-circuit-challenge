@@ -1304,3 +1304,14 @@ layers, and 3,000 random moves per state, the best exact affine residual was
 647 at estimated depth 67. This matched the earlier two-sided affine-control
 basin and did not reach affine completion. The controlled result is recorded
 in `artifacts/destructive_semantic/higher_order_parity_beam_seed20261001.metrics.json`.
+
+## Signed-control RCCX screen (September 11, 2026)
+
+The semantic search was extended experimentally to include all four control
+polarities, since the exact ESOP uses complemented literals while the original
+beam only applied positive products. An exhaustive one-step scan from the
+residual-359 frontier checked 9,792 signed mutations and found no residual
+below 359. A separate signed beam found a distinct low-depth trajectory,
+reaching exact residual 613 at estimated depth 54, but it plateaued through
+16 layers and never reached affine completion. The full screen is recorded in
+`artifacts/destructive_semantic/signed_control_screen_seed20261002.metrics.json`.
