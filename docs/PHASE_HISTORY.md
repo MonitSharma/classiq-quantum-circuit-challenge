@@ -123,6 +123,21 @@ slightly exceeds the preferred 85-depth forward budget because affine-control
 macros cost nine native layers; it is retained as a diagnostic rather than a
 candidate.
 
+## Exact end-to-end baseline
+
+`src/build_rank_phase_history_seed.py` uses the repository's exact ESOP
+predicate builder to expose each of the ten verified rank products on q14,
+deposits a Z phase, and clears each block. The serialized standalone QASM is
+`artifacts/phase_history/rank_product_seed.qasm`; its matching exhaustive
+report is `rank_product_seed.exhaustive.json`. It passed all 4096 basis inputs
+with zero ancilla leakage, depth 2380, and 1531 CX gates. The exact QASM SHA is
+`710127eeb72bebf54cb4494698089e25592252ab0a0982abc5cf09c3dc85e2d9`.
+
+This is a correctness baseline, not an improvement: independently computing
+and clearing each rank factor is far too expensive. The useful result is that
+the phase-history constructor and verification workflow are validated on the
+full logo, so subsequent optimization can safely attack sharing and cleanup.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary

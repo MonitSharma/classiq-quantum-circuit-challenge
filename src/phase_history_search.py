@@ -61,6 +61,30 @@ def rank_product_hints() -> tuple[int, ...]:
     return tuple(lift(x, "x") & lift(y, "y") for x, y in terms)
 
 
+@lru_cache(maxsize=1)
+def rank_factor_hints() -> tuple[int, ...]:
+    """Lift the exact x/y factors used by the rank decomposition."""
+    path = Path(__file__).resolve().parents[1] / "artifacts" / "rank_terms.json"
+    if not path.exists():
+        return ()
+    terms = json.loads(path.read_text())
+
+    def lift(table: int, side: str) -> int:
+        value = 0
+        for y in range(64):
+            for x in range(64):
+                coordinate = x if side == "x" else y
+                if (table >> coordinate) & 1:
+                    value |= 1 << (y * 64 + x)
+        return value
+
+    return tuple(
+        factor
+        for x, y in terms
+        for factor in (lift(x, "x"), lift(y, "y"))
+    )
+
+
 @dataclass(frozen=True)
 class Signal:
     signal_id: int
@@ -402,7 +426,11 @@ def history_score(state: HistoryState) -> tuple:
         if signal.step >= 0
     )
     hints = rank_product_hints()
+    factor_hints = rank_factor_hints()
     hint_coverage = sum(state.basis.solve(hint) is not None for hint in hints)
+    factor_coverage = sum(
+        state.basis.solve(hint) is not None for hint in factor_hints
+    )
     best_hint = min(
         (signal.value ^ hint).bit_count()
         for signal in state.basis.signals
@@ -412,6 +440,7 @@ def history_score(state: HistoryState) -> tuple:
     return (
         0 if state.basis.solve(TARGET) is not None else 1,
         -hint_coverage,
+        -factor_coverage,
         greedy.bit_count(),
         best_hint,
         best_single,
@@ -428,7 +457,7 @@ def history_proposals(
 ) -> list[Gate]:
     """Generate bounded RCCX proposals using history-aware cheap filters."""
     target_remainder = state.basis.remainder(TARGET)
-    hints = rank_product_hints()
+    hints = rank_product_hints() + rank_factor_hints()
     proposals = []
 
     def add_proposal(new_value: int, gate: Gate) -> None:
@@ -658,6 +687,12 @@ def main() -> None:
             "include_rc3x": args.include_rc3x,
             "completed_layer": completed_layer,
             "history_rank": result.basis.rank,
+            "product_hint_coverage": sum(
+                result.basis.solve(hint) is not None for hint in rank_product_hints()
+            ),
+            "factor_hint_coverage": sum(
+                result.basis.solve(hint) is not None for hint in rank_factor_hints()
+            ),
             "remainder_bits": result.basis.remainder(TARGET).bit_count(),
             "target_in_span": result.basis.solve(TARGET) is not None,
             "estimated_forward_depth": result.estimated_depth,
