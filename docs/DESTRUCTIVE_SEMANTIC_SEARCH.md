@@ -109,3 +109,11 @@ reached residual 487 and seed 94 reached 499 after 16 layers; the stronger
 beam-128 seed-1 run reached residual 553 by layer 9 before memory pressure.
 Neither beat the seed-524 residual 473 trajectory. Simple tie-breaking seed
 variation is therefore not the next lever.
+
+An optional order-3 residual proxy was added, considering affine combinations
+of up to three current wires. Beam 64 with 16 proposals reached residual 531 by
+layer 10 and residual 513 by layer 14 at estimated depth 84, improving on the
+order-2 residual 539 at the comparable ten-layer point. Increasing the proposal
+limit to 24 reproduced residual 531 by layer 10 without a further gain. This
+is the best current heuristic variant, but it remains far from affine
+completion.

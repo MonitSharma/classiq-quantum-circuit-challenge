@@ -30,6 +30,7 @@ TARGET_WIRE = 12
 # qubits_initially_zero=False, optimization_level=3: one RCCX is depth 7,
 # three CXs; two wire-disjoint RCCXs remain depth 7.
 RCCX_ESTIMATED_DEPTH = 7
+PROXY_ORDER = 2
 
 
 def input_truth_tables() -> tuple[int, ...]:
@@ -119,8 +120,9 @@ def affine_span_solution(wires: tuple[int, ...], target: int = TARGET):
     }
 
 
-def affine_distance_proxy(wires: tuple[int, ...], target: int = TARGET):
-    """Cheap residual distance using constants, singles, and wire pairs."""
+def affine_distance_proxy(wires: tuple[int, ...], target: int = TARGET,
+                          max_order: int = 2):
+    """Cheap residual distance using constants and small wire combinations."""
     best = target.bit_count()
     best_combo: tuple[int, ...] = ()
     values = [(0, 0), (ALL_ONES, -1)]
@@ -137,6 +139,17 @@ def affine_distance_proxy(wires: tuple[int, ...], target: int = TARGET):
             distance = (target ^ ALL_ONES ^ wires[i] ^ wires[j]).bit_count()
             if distance < best:
                 best, best_combo = distance, (-1, i, j)
+    if max_order >= 3:
+        for i in range(N_WIRES):
+            for j in range(i + 1, N_WIRES):
+                ij = wires[i] ^ wires[j]
+                for k in range(j + 1, N_WIRES):
+                    distance = (target ^ ij ^ wires[k]).bit_count()
+                    if distance < best:
+                        best, best_combo = distance, (i, j, k)
+                    distance = (target ^ ALL_ONES ^ ij ^ wires[k]).bit_count()
+                    if distance < best:
+                        best, best_combo = distance, (-1, i, j, k)
     return best, best_combo
 
 
@@ -197,7 +210,7 @@ class State:
 
 def initial_state() -> State:
     wires = initial_wire_truth_tables()
-    residual, combo = affine_distance_proxy(wires)
+    residual, combo = affine_distance_proxy(wires, max_order=PROXY_ORDER)
     return State(wires, (0,) * N_WIRES, (), 0, residual, combo)
 
 
@@ -209,7 +222,7 @@ def apply_rccx_state(state: State, a: int, b: int, target: int) -> State | None:
     end = start + RCCX_ESTIMATED_DEPTH
     arrivals = list(state.arrivals)
     arrivals[a] = arrivals[b] = arrivals[target] = end
-    residual, combo = affine_distance_proxy(wires)
+    residual, combo = affine_distance_proxy(wires, max_order=PROXY_ORDER)
     return State(
         wires,
         tuple(arrivals),
@@ -259,7 +272,7 @@ def apply_affine_rccx_state(
     rccx_end = max(arrivals[a], arrivals[b], arrivals[target]) + RCCX_ESTIMATED_DEPTH
     arrivals[a] = rccx_end + 1
     arrivals[target] = rccx_end
-    residual, combo = affine_distance_proxy(tuple(wires))
+    residual, combo = affine_distance_proxy(tuple(wires), max_order=PROXY_ORDER)
     gates = state.gates + (
         ("cx", mix, a, -1),
         ("rccx", a, b, target),
@@ -482,8 +495,12 @@ def main() -> None:
     parser.add_argument("--max-parallel", type=int, default=1)
     parser.add_argument("--exact-top", type=int, default=0)
     parser.add_argument("--affine-controls", action="store_true")
+    parser.add_argument("--proxy-order", type=int, choices=[2, 3], default=2)
     parser.add_argument("--out", default="artifacts/destructive_semantic")
     args = parser.parse_args()
+
+    global PROXY_ORDER
+    PROXY_ORDER = args.proxy_order
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -504,6 +521,7 @@ def main() -> None:
         "max_parallel": args.max_parallel,
         "exact_top": args.exact_top,
         "affine_controls": args.affine_controls,
+        "proxy_order": args.proxy_order,
         "completed_layer": completed_layer,
         "target_marked_states": TARGET.bit_count(),
         "estimated_depth": result.estimated_depth,
