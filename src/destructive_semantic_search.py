@@ -14,7 +14,7 @@ import json
 import pickle
 import random
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 
 from qiskit import QuantumCircuit, qasm2, transpile
@@ -332,9 +332,26 @@ def proposal_layers(
     return layers[:limit]
 
 
+def refine_exact_leaders(states: list[State], count: int) -> list[State]:
+    """Replace the proxy residual on the leading states with exact distance."""
+    if count <= 0:
+        return states
+    ordered = sorted(states, key=score_state)
+    leaders = {semantic_hash(state.wires): state for state in ordered[:count]}
+    refined = []
+    for state in states:
+        replacement = leaders.get(semantic_hash(state.wires))
+        if replacement is None:
+            refined.append(state)
+            continue
+        distance, combo = exact_affine_distance(state.wires)
+        refined.append(replace(state, residual=distance, combo=combo))
+    return refined
+
+
 def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
            checkpoint_dir: Path | None = None, proposal_limit: int = 128,
-           max_parallel: int = 1):
+           max_parallel: int = 1, exact_top: int = 0):
     rng = random.Random(seed)
     beam = [initial_state()]
     best = beam[0]
@@ -353,7 +370,8 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
             if len(children) > beam_width * 32:
                 kept = sorted(children.values(), key=score_state)[:beam_width * 16]
                 children = {semantic_hash(item.wires): item for item in kept}
-        beam = sorted(children.values(), key=score_state)[:beam_width]
+        candidates = refine_exact_leaders(list(children.values()), exact_top)
+        beam = sorted(candidates, key=score_state)[:beam_width]
         if not beam:
             break
         if score_state(beam[0]) < score_state(best):
@@ -385,6 +403,7 @@ def main() -> None:
     parser.add_argument("--preserve-inputs", action="store_true")
     parser.add_argument("--proposal-limit", type=int, default=128)
     parser.add_argument("--max-parallel", type=int, default=1)
+    parser.add_argument("--exact-top", type=int, default=0)
     parser.add_argument("--out", default="artifacts/destructive_semantic")
     args = parser.parse_args()
 
@@ -396,7 +415,8 @@ def main() -> None:
     started = time.time()
     result, completed_layer = search(
         args.beam, args.layers, args.seed, args.preserve_inputs,
-        out / "checkpoints", args.proposal_limit, args.max_parallel)
+        out / "checkpoints", args.proposal_limit, args.max_parallel,
+        args.exact_top)
     payload = {
         "seed": args.seed,
         "beam_width": args.beam,
@@ -404,6 +424,7 @@ def main() -> None:
         "preserve_inputs": args.preserve_inputs,
         "proposal_limit": args.proposal_limit,
         "max_parallel": args.max_parallel,
+        "exact_top": args.exact_top,
         "completed_layer": completed_layer,
         "target_marked_states": TARGET.bit_count(),
         "estimated_depth": result.estimated_depth,

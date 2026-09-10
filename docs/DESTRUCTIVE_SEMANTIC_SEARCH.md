@@ -84,3 +84,9 @@ RCCXs allowed per layer reached residual 575 by layer 9 before memory pressure.
 A lower-fanout single-RCCX run reached residual 503 by layer 25 at estimated
 depth 126. These results motivate exact selected-state affine-distance scoring
 and guided semantic proposals rather than simply increasing the beam.
+
+Exact meet-in-the-middle distance was then enabled for the leading 16 children
+per layer. It matched the proxy-selected trajectory through the observed layer
+9 boundary and added substantial runtime without producing a lower residual.
+It is retained as an optional diagnostic; broad exact ranking is not currently
+cost-effective.
