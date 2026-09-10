@@ -519,3 +519,16 @@ adjacent transpositions, and a terminal tail of depth 1,962 / 1,109 CX. This
 is the current width-128 transition control; it still has no standalone
 U3/CX classifier or exhaustive phase-oracle verification. Measurements are in
 `artifacts/destructive_semantic/reversible_width128_label_seed_screen.metrics.json`.
+
+One exact native pilot was then synthesized. For layer 6, branch 1 of the
+seed-43 model, Gray-path routing produces 196 neighboring basis-state swaps.
+Using six clean work qubits and Qiskit's exact `v-chain` MCX decomposition,
+the standalone controlled transition compiles to depth 9,323 / 4,841 CX in
+the required U3/CX basis with `qubits_initially_zero=False`. This is already
+far beyond the complete-oracle target before the other five layers or the
+terminal output are added. The reproducible pilot is
+`src/reversible_transition_native_pilot.py`, with measurements in
+`artifacts/destructive_semantic/reversible_transition_native_pilot.metrics.json`.
+This establishes that the present arbitrary-permutation state-machine route
+must be replaced by a more structured reversible update, not merely tuned by
+more label seeds.

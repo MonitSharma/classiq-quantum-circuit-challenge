@@ -1,0 +1,16 @@
+{
+  "status": "native transition pilot; not a complete classifier",
+  "variable_order": [11, 9, 10, 5, 4, 2, 3, 1, 0, 8, 7, 6],
+  "state_width": 7,
+  "label_seed": 43,
+  "layer": 6,
+  "branch": 1,
+  "cycle_transpositions": 28,
+  "gray_neighbor_swaps": 196,
+  "mcx_mode": "v-chain",
+  "clean_work_qubits": 6,
+  "compiled_qubits": 14,
+  "compiled_depth": 9323,
+  "compiled_cx": 4841,
+  "transpilation": {"basis_gates": ["u3", "cx"], "qubits_initially_zero": false, "optimization_level": 3}
+}
