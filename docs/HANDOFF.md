@@ -1211,3 +1211,18 @@ Exhaustive verification covered all 4,096 inputs with max error
 `1.412328984831398e-12`. This is the strongest exact destructive completion
 measured so far, but remains noncompetitive; the protected fallback is
 unchanged.
+
+## Destructive relative-phase two-clean ESOP continuation (September 10, 2026)
+
+Replacing the single exact middle CCX in each two-clean MCX block by RCCX
+preserved the midpoint Boolean classifier while letting internal phases cancel
+under the enclosing inverse. The classifier measured **4,397/3,698** and the
+complete oracle **8,700/7,303** depth/CX. The verified QASM is
+`artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle.qasm`
+with SHA256
+`c695be1a55fb381404b988fe0f273005c4502953cb0501a83f53171b59ea678d`.
+Exhaustive verification covered all 4,096 inputs with max error
+`1.1233836331473806e-13`, zero ancilla error, and discarded-amplitude bound
+`1.4074952220269104e-12`. This is the strongest verified destructive
+completion so far, though it remains noncompetitive; the protected fallback is
+unchanged.
