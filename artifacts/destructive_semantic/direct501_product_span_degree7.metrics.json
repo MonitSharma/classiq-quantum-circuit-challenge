@@ -1,0 +1,8 @@
+{
+  "state": "direct_wire_seed2024_residual501",
+  "targets_tested": 18,
+  "maximum_product_degree_tested": 7,
+  "minimum_completion_degree_by_target": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+  "status": "exact_negative_structural_test",
+  "note": "For each target, tested the GF(2) span of the constant and all products of up to seven distinct other current wire functions. No target correction was representable."
+}

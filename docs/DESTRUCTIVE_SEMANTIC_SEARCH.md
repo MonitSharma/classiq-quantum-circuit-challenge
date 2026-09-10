@@ -335,6 +335,13 @@ all current wires, all pair-products, and all cubic products. No completion
 exists in any of those 18 x 4 cases. The negative structural result is in
 `artifacts/destructive_semantic/frontier_cubic_completion.metrics.json`.
 
+The direct-target residual-501 state was then tested to product degree 7 for
+all 18 possible target wires. No correction was found in the GF(2) span of
+the constant and all products of up to seven distinct other current wires.
+This rules out a low-order multiplicative tail for that state; the exact
+negative result is recorded in
+`artifacts/destructive_semantic/direct501_product_span_degree7.metrics.json`.
+
 The separate non-Abelian phase-computer direction now has a finite-group
 prototype in `src/nonabelian_branch_search.py`. It constructs and checks the
 120-element binary icosahedral multiplication table, then evaluates a
