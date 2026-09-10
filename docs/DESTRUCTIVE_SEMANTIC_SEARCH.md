@@ -449,3 +449,28 @@ residual-first 20-RCCX history compiled to depth 107 and 56 CX gates, so it is
 not a replacement for the shallow depth-84/residual-379 point; together they
 form the current measured Pareto frontier. The residual-359 history is
 preserved in `artifacts/destructive_semantic/double_seed1_b64x10_p4_residual359.json`.
+
+## Width-256 reversible embedding experiment
+
+The residual-DAG analysis showed that a six-clean-ancilla state machine is too
+narrow: the best reversible-slot recurrence peaks at 85 slots. A new semantic
+model therefore loads the first six variables of the slot-oriented order
+`(10,5,11,4,9,8)` into six clean ancillas and uses an eight-bit state register
+of capacity 256. The remaining controls are `(3,1,0,2,7,6)`. The exact model
+is implemented in `src/reversible_width256_synthesis.py`.
+
+The model constructs six pairs of full 256-state permutations, with the
+permutation selected by the next input bit. It assigns labels to preserve
+identity where possible and, on the final layer, forces the least-significant
+state-label bit to equal the terminal residual value. An exhaustive semantic
+replay covers all 4,096 coordinate assignments and confirms the 1,097 marked
+states. The compact measurements are in
+`artifacts/destructive_semantic/reversible_width256_synthesis.metrics.json`.
+
+This is a correctness-verified embedding, not a competitive oracle candidate.
+The parity constraint and full-permutation completion require 538 adjacent
+state transpositions, estimated as 3,488 Gray-path MCTs before decomposition
+to U3/CX. That native cost is presently far beyond the target, so this model
+is retained as a structural control and not promoted to a complete QASM
+candidate. Native synthesis or a different state-labeling/decomposition
+strategy remains pending.
