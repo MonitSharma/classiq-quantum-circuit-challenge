@@ -197,6 +197,15 @@ depth 2342 / 1513 CX; its SHA is
 This is a native-cancellation improvement within the exact rank-product
 baseline, but it is still far above the <180 research target.
 
+As a controlled comparison, fresh exhaustive reports were generated for the
+pre-existing shared-XAG phase artifact and its rank-basis variant. Both pass
+all 4096 inputs with zero ancilla leakage: `artifacts/xag_phase.qasm` measures
+depth 905 / 795 CX (SHA
+`3aaa4ef5f8681b1895cb82c32fdd084bce588915366b665769d253bed3a28abf`), while
+`artifacts/xag_basis_rank_False.qasm` measures depth 1390 / 1039 CX (SHA
+`3a1d1d9b5b10ce6ad68124393858e0b458cbf62007363dc5411b4a6abaaa901a`). These
+are validation records for an older route, not new candidates.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary
