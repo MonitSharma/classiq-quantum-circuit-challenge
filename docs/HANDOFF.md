@@ -1243,6 +1243,23 @@ fallback is unchanged.
 
 ## Latest destructive insertion/reversal order improvement (September 10, 2026)
 
+A tenth insertion/reversal search, initialized from the prior moves order, found
+a further improvement while keeping the v6 prefix, exact 83-cube cover,
+cleanup, and relative-phase two-clean lowering unchanged. The frozen source is
+`src/high_order_affine_exact_esop_clean2_rel_oracle_moves10.py`. It measures
+**3,550 / 2,975** for the forward classifier and **7,017 / 5,869** for the
+complete oracle. The exact serialized QASM is
+`artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves10.qasm`
+with SHA256
+`4eb5a869e10ba71f3f9a7a6947b7c2a1ac21126acd02bab34b8cdd1beb6824d3`.
+Its matching exhaustive report checks all 4,096 inputs, with max error
+`9.049381835646179e-14`, zero ancilla error, discarded-amplitude bound
+`9.708059442523023e-13`, and peak sparse support 128. This is the current
+strongest verified destructive completion, but remains noncompetitive and does
+not establish rank 1.
+
+## Latest destructive insertion/reversal order improvement (September 10, 2026)
+
 A ninth insertion/reversal search, initialized from the prior moves order, found
 a further improvement while keeping the v6 prefix, exact 83-cube cover,
 cleanup, and relative-phase two-clean lowering unchanged. The frozen source is
