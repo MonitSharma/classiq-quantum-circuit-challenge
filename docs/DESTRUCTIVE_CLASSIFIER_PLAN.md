@@ -91,3 +91,9 @@ The matching preserve-inputs ablation reached residual 575 under the same
 beam-128, 48-proposal, 16-layer configuration. The calibrated destructive run
 reached residual 473 at estimated forward depth 70 before its next expansion
 hit the memory boundary. Neither run reached affine completion.
+
+The disjoint-RCCX layer extension was validated but reached residual 575 by
+layer 9 in the first beam-128 comparison. A deeper low-fanout single-RCCX run
+reached residual 503 by layer 25 at estimated depth 126. The next search
+change is exact affine-distance scoring for selected states plus guided semantic
+proposals, not simply a larger beam.

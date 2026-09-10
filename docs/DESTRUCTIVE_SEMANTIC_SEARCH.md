@@ -61,8 +61,9 @@ must remain unchanged.
 The initial beam uses single RCCX transitions and a pairwise affine residual
 proxy. It does not yet perform multi-RCCX disjoint layer generation, exact
 meet-in-the-middle affine distance, guided rank/XAG seed pools, or a full
-native-cost calibration. Those are follow-up improvements after the pipeline
-has produced reproducible small-beam evidence.
+native-cost calibration. Disjoint layer generation and native-cost calibration
+are now implemented; exact meet-in-the-middle distance is reported for the
+selected final state but is not yet used to rank every child.
 
 ## Observed result
 
@@ -77,3 +78,9 @@ The matching preserve-inputs ablation reached residual 575, versus residual
 473 for the calibrated destructive run. This confirms a measurable benefit from
 allowing coordinate wires to be overwritten. Neither run reached affine
 completion.
+
+The disjoint-RCCX layer extension was validated, but a beam-128 run with two
+RCCXs allowed per layer reached residual 575 by layer 9 before memory pressure.
+A lower-fanout single-RCCX run reached residual 503 by layer 25 at estimated
+depth 126. These results motivate exact selected-state affine-distance scoring
+and guided semantic proposals rather than simply increasing the beam.

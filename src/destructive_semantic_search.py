@@ -140,6 +140,44 @@ def affine_distance_proxy(wires: tuple[int, ...], target: int = TARGET):
     return best, best_combo
 
 
+def exact_affine_distance(wires: tuple[int, ...], target: int = TARGET):
+    """Exact minimum Hamming residual over the 18-wire affine span.
+
+    The two nine-wire halves give 512 combinations each. The constant is
+    checked as a final toggle, so the search performs 262,144 4096-bit
+    popcounts without enumerating a 2^18 Python list.
+    """
+    combinations: list[list[tuple[int, int]]] = []
+    for offset in (0, 9):
+        half: list[tuple[int, int]] = []
+        for mask in range(1 << 9):
+            value = 0
+            for bit in range(9):
+                if mask & (1 << bit):
+                    value ^= wires[offset + bit]
+            half.append((value, mask))
+        combinations.append(half)
+    best = target.bit_count()
+    best_combo: tuple[int, ...] = ()
+    for left, left_mask in combinations[0]:
+        for right, right_mask in combinations[1]:
+            base = target ^ left ^ right
+            distance = base.bit_count()
+            if distance < best:
+                best = distance
+                best_combo = tuple(i for i in range(9) if left_mask & (1 << i))
+                best_combo += tuple(i + 9 for i in range(9)
+                                    if right_mask & (1 << i))
+            distance = (base ^ ALL_ONES).bit_count()
+            if distance < best:
+                best = distance
+                best_combo = (-1,)
+                best_combo += tuple(i for i in range(9) if left_mask & (1 << i))
+                best_combo += tuple(i + 9 for i in range(9)
+                                    if right_mask & (1 << i))
+    return best, best_combo
+
+
 def semantic_hash(wires: tuple[int, ...]) -> str:
     h = hashlib.blake2b(digest_size=16)
     for value in wires:
@@ -180,6 +218,23 @@ def apply_rccx_state(state: State, a: int, b: int, target: int) -> State | None:
         residual,
         combo,
     )
+
+
+def apply_rccx_layer_state(
+    state: State, gates: tuple[tuple[int, int, int], ...]
+) -> State | None:
+    """Apply wire-disjoint RCCXs as one conceptual native-depth layer."""
+    touched: set[int] = set()
+    for a, b, target in gates:
+        if touched.intersection((a, b, target)):
+            raise ValueError("RCCX layer is not wire-disjoint")
+        touched.update((a, b, target))
+    child = state
+    for a, b, target in gates:
+        child = apply_rccx_state(child, a, b, target)
+        if child is None:
+            return None
+    return child
 
 
 def complete_affine(state: State, target_wire: int = TARGET_WIRE) -> State | None:
@@ -251,23 +306,53 @@ def proposal_gates(state: State, preserve_inputs: bool, limit: int, rng: random.
     return [(a, b, target) for _, _, a, b, target in proposals[:limit]]
 
 
+def proposal_layers(
+    state: State, preserve_inputs: bool, limit: int, max_parallel: int,
+    rng: random.Random,
+) -> list[tuple[tuple[int, int, int], ...]]:
+    singles = proposal_gates(state, preserve_inputs, max(limit * 2, 32), rng)
+    layers: list[tuple[tuple[int, int, int], ...]] = []
+    seen: set[tuple[tuple[int, int, int], ...]] = set()
+    for index, primary in enumerate(singles):
+        candidate = [primary]
+        used = set(primary)
+        for extra in singles[index + 1:]:
+            if used.isdisjoint(extra):
+                candidate.append(extra)
+                used.update(extra)
+                if len(candidate) >= max_parallel:
+                    break
+        for width in range(1, len(candidate) + 1):
+            layer = tuple(candidate[:width])
+            if layer not in seen:
+                seen.add(layer)
+                layers.append(layer)
+    rng.shuffle(layers)
+    layers.sort(key=lambda layer: (-len(layer), layer))
+    return layers[:limit]
+
+
 def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
-           checkpoint_dir: Path | None = None, proposal_limit: int = 128):
+           checkpoint_dir: Path | None = None, proposal_limit: int = 128,
+           max_parallel: int = 1):
     rng = random.Random(seed)
     beam = [initial_state()]
     best = beam[0]
     for layer in range(1, layers + 1):
         children: dict[str, State] = {}
         for state in beam:
-            for a, b, target in proposal_gates(
-                    state, preserve_inputs, proposal_limit, rng):
-                child = apply_rccx_state(state, a, b, target)
+            for layer_gates in proposal_layers(
+                    state, preserve_inputs, proposal_limit, max_parallel, rng):
+                child = apply_rccx_layer_state(state, layer_gates)
                 if child is None:
                     continue
                 key = semantic_hash(child.wires)
                 old = children.get(key)
                 if old is None or score_state(child) < score_state(old):
                     children[key] = child
+            if len(children) > beam_width * 32:
+                kept = sorted(children.values(), key=score_state)[:beam_width * 16]
+                children = {semantic_hash(item.wires): item for item in kept}
         beam = sorted(children.values(), key=score_state)[:beam_width]
         if not beam:
             break
@@ -299,6 +384,7 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=524)
     parser.add_argument("--preserve-inputs", action="store_true")
     parser.add_argument("--proposal-limit", type=int, default=128)
+    parser.add_argument("--max-parallel", type=int, default=1)
     parser.add_argument("--out", default="artifacts/destructive_semantic")
     args = parser.parse_args()
 
@@ -310,17 +396,20 @@ def main() -> None:
     started = time.time()
     result, completed_layer = search(
         args.beam, args.layers, args.seed, args.preserve_inputs,
-        out / "checkpoints", args.proposal_limit)
+        out / "checkpoints", args.proposal_limit, args.max_parallel)
     payload = {
         "seed": args.seed,
         "beam_width": args.beam,
         "layers": args.layers,
         "preserve_inputs": args.preserve_inputs,
         "proposal_limit": args.proposal_limit,
+        "max_parallel": args.max_parallel,
         "completed_layer": completed_layer,
         "target_marked_states": TARGET.bit_count(),
         "estimated_depth": result.estimated_depth,
         "residual": result.residual,
+        "exact_affine_distance": exact_affine_distance(result.wires)[0],
+        "exact_affine_combo": exact_affine_distance(result.wires)[1],
         "affine_solution": affine_span_solution(result.wires),
         "gates": result.gates,
         "elapsed_seconds": time.time() - started,
