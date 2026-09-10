@@ -1294,3 +1294,13 @@ The best residual moved only to **355**, while estimated forward depth grew
 from 140 to 161; no state entered the affine span. The retained history is
 recorded in
 `artifacts/destructive_semantic/exact_distance_continuation_seed20260929.metrics.json`.
+
+## Higher-order parity-control screen (September 11, 2026)
+
+A separate stochastic beam allowed each destructive RCCX move to use live
+parities of two to four disjoint current wires as both controls, with the
+control parities left destructive. With seed `20261001`, beam 16, eight
+layers, and 3,000 random moves per state, the best exact affine residual was
+647 at estimated depth 67. This matched the earlier two-sided affine-control
+basin and did not reach affine completion. The controlled result is recorded
+in `artifacts/destructive_semantic/higher_order_parity_beam_seed20261001.metrics.json`.
