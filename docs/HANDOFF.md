@@ -1167,3 +1167,17 @@ Stop active internal architecture invention. The verified 524/950 artifact is
 the submission fallback; remaining work should be limited to explicit
 submission and external investigation of the structural technique used by
 competitive solutions.
+
+## Destructive ESOP borrowed-ancilla continuation (September 10, 2026)
+
+The exact destructive v6 classifier was lowered with Qiskit's
+`synth_mcx_2_dirty_kg24`, borrowing and restoring two non-control wires per
+ESOP cube. The exact forward classifier is **9,011/7,687** depth/CX; the
+complete serialized oracle is **17,575/15,000**. The verified QASM is
+`artifacts/destructive_semantic/high_order_affine_exact_esop_dirty2_oracle.qasm`
+with SHA256
+`2f1bf81bbe17baed2842b16aa1912382814cb806aedb6f778fe2d7631051eccb`.
+Exhaustive verification covered all 4,096 basis inputs with max error
+`2.979403618689416e-13`, zero ancilla leakage, and discarded-amplitude bound
+`5.726332944000072e-12`. This is a correctness artifact, not a competitive
+candidate or leaderboard claim; the protected 524/950 fallback is unchanged.

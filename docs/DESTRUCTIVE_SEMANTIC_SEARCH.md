@@ -822,3 +822,18 @@ temporary validation QASM SHA256 was
 source now exposes `build_oracle()` and `--out-oracle-qasm` so this exact
 correctness artifact can be regenerated; it remains far outside the depth
 objective and makes no leaderboard claim.
+
+The ESOP completion was then lowered with Qiskit's Khattar--Gidney
+two-borrowed-ancilla MCX construction (`synth_mcx_2_dirty_kg24`). It uses only
+RCCX/CCX-style monomial primitives and restores the two borrowed wires for each
+cube. The exact classifier improved to **9,011 / 7,687** forward depth/CX, and
+the serialized complete oracle improved to **17,575 / 15,000**. The candidate
+is `src/high_order_affine_exact_esop_dirty2.py` with QASM
+`artifacts/destructive_semantic/high_order_affine_exact_esop_dirty2_oracle.qasm`.
+Its SHA256 is
+`2f1bf81bbe17baed2842b16aa1912382814cb806aedb6f778fe2d7631051eccb`.
+Exhaustive verification checked all 4,096 inputs, with max error
+`2.979403618689416e-13`, zero ancilla leakage, and discarded-amplitude bound
+`5.726332944000072e-12`. This is a verified but noncompetitive completion;
+the borrowed-ancilla lowering is a measured improvement over the 9,558 / 6,545
+predecessor, not a leaderboard result.
