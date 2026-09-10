@@ -904,6 +904,10 @@ completion currently measured, though still noncompetitive.
  strongest verified destructive completion, but remains noncompetitive and does
  not establish rank 1.
 
+## Destructive fourteenth complete-oracle order search (September 10, 2026)
+
+A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves14.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves14.qasm` with SHA256 `3a4c87a4ac4ac301bd977b69fe9f73ba15df16c26b5a232926124bf7d8263182`. The forward classifier is **3,467/2,915** and the complete oracle is **6,854/5,749** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `9.010374723394408e-14`, zero ancilla error, discarded-amplitude bound `9.330775596424445e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
+
 ## Destructive thirteenth complete-oracle order search (September 10, 2026)
 
 A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves13.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves13.qasm` with SHA256 `feda8f0cacdd35d6670b4eb703590cbe8a4e93992b43f6adbac40e1301a0cefc`. The forward classifier is **3,467/2,917** and the complete oracle is **6,854/5,753** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `8.898318069658582e-14`, zero ancilla error, discarded-amplitude bound `9.493200925461926e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
