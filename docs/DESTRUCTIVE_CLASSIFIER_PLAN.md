@@ -161,6 +161,11 @@ validated. Its seed-1 four-layer control reached residual 647 at compiled depth
 26, so it was not competitive in the short run; it remains an optional
 all-wires-writable move rather than the main search primitive.
 
+Bounded triple-RCCX lookahead was added as an optional escape move. Its cold
+seed-1 control reached residual 575 at compiled depth 53; a local probe around
+the residual-359 basin reached residual 355, so it is retained for targeted
+continuations but is not the default search path.
+
 Seed 42 produced a substantially stronger shallow point: affine residual 447
 at compiled forward depth 59 with 32 CX gates. It dominates the seed-94
 shallow candidate, but remains incomplete and unverified.

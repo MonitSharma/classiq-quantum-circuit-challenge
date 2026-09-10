@@ -1,0 +1,18 @@
+{
+  "experiment": "bounded triple-RCCX lookahead control",
+  "seed": 1,
+  "beam_width": 16,
+  "layers": 3,
+  "proposal_limit": 4,
+  "proxy_order": 3,
+  "triple_rccx": true,
+  "residual": 575,
+  "exact_affine_distance": 575,
+  "estimated_forward_depth": 63,
+  "compiled_forward_depth": 53,
+  "compiled_forward_cx": 27,
+  "target_marked_states": 1097,
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "note": "Cold-start control is weaker than the established double-RCCX basin, but three-step local lookahead improved a residual-359 state to 355."
+}

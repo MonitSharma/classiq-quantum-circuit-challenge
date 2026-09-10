@@ -227,6 +227,15 @@ was not competitive in the short test. It remains available for mixed future
 searches. Evidence is in
 `artifacts/destructive_semantic/forward_affine_b16x4_p4.metrics.json`.
 
+Bounded three-RCCX lookahead is available behind `--triple-rccx`. It uses a
+staged proposal pool and scores the state after all three reversible updates.
+The cold seed-1 beam-16, three-layer control reached affine residual 575 at
+compiled depth 53 and 27 CX gates, weaker than the established double-RCCX
+basin. A separate local three-step probe around the residual-359 state found
+residual 355, so the move is retained as an optional escape mechanism rather
+than the default search. Evidence for the cold control is in
+`artifacts/destructive_semantic/triple_seed1_b16x3_p4.metrics.json`.
+
 A wider seed-1 beam (64 states) found a stronger depth-screening point at
 residual 403. Its 16-RCCX history compiled to forward depth 90 and 46 CX
 gates, improving the depth-91 Pareto point while reducing CX count. The

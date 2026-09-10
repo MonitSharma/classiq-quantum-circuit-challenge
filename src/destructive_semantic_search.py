@@ -315,6 +315,19 @@ def apply_double_rccx_state(
     return apply_rccx_state(child, *second)
 
 
+def apply_triple_rccx_state(
+    state: State,
+    first: tuple[int, int, int],
+    second: tuple[int, int, int],
+    third: tuple[int, int, int],
+) -> State | None:
+    """Apply three serial RCCXs as one bounded lookahead search move."""
+    child = apply_double_rccx_state(state, first, second)
+    if child is None:
+        return None
+    return apply_rccx_state(child, *third)
+
+
 def apply_affine_rccx_state(
     state: State, a: int, mix: int, b: int, target: int
 ) -> State | None:
@@ -705,6 +718,45 @@ def proposal_double_operations(
             for _, _, first, second in proposals[:limit]]
 
 
+def proposal_triple_operations(
+    state: State, preserve_inputs: bool, limit: int, rng: random.Random,
+    guided_hints: bool = False,
+):
+    """Find synergistic RCCX triples with a staged bounded lookahead."""
+    firsts = proposal_gates(
+        state, preserve_inputs, max(limit * 6, 24), rng, False, guided_hints
+    )
+    proposals = []
+    for first in firsts:
+        one = apply_rccx_state(state, *first)
+        if one is None:
+            continue
+        seconds = proposal_gates(
+            one, preserve_inputs, max(limit * 6, 24), rng, False,
+            guided_hints
+        )
+        for second in seconds:
+            two = apply_rccx_state(one, *second)
+            if two is None:
+                continue
+            thirds = proposal_gates(
+                two, preserve_inputs, max(limit * 3, 12), rng, False,
+                guided_hints
+            )
+            for third in thirds:
+                child = apply_rccx_state(two, *third)
+                if child is None:
+                    continue
+                heuristic, _ = affine_distance_proxy(
+                    child.wires, max_order=PROXY_ORDER
+                )
+                proposals.append((heuristic, rng.random(), first, second,
+                                  third))
+    proposals.sort()
+    return [(first, second, third)
+            for _, _, first, second, third in proposals[:limit]]
+
+
 def refine_exact_leaders(states: list[State], count: int) -> list[State]:
     """Replace the proxy residual on the leading states with exact distance."""
     if count <= 0:
@@ -728,7 +780,8 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
            affine_controls: bool = False, full_proxy_proposals: bool = False,
            resume: Path | None = None, biaffine_controls: bool = False,
            double_rccx: bool = False, pareto_beam: bool = False,
-           guided_hints: bool = False, forward_affine_controls: bool = False):
+           guided_hints: bool = False, forward_affine_controls: bool = False,
+           triple_rccx: bool = False):
     rng = random.Random(seed)
     start_layer = 0
     if resume is None:
@@ -782,6 +835,18 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
                         child = apply_forward_biaffine_state(state, *operation)
                     else:
                         child = apply_rccx_state(state, *operation)
+                    if child is None:
+                        continue
+                    key = semantic_hash(child.wires)
+                    old = children.get(key)
+                    if old is None or score_state(child) < score_state(old):
+                        children[key] = child
+            elif triple_rccx and max_parallel == 1:
+                operations = proposal_triple_operations(
+                    state, preserve_inputs, proposal_limit, rng, guided_hints
+                )
+                for first, second, third in operations:
+                    child = apply_triple_rccx_state(state, first, second, third)
                     if child is None:
                         continue
                     key = semantic_hash(child.wires)
@@ -889,6 +954,11 @@ def main() -> None:
         action="store_true",
         help="allow destructive affine-control prefixes without restoration",
     )
+    parser.add_argument(
+        "--triple-rccx",
+        action="store_true",
+        help="use bounded three-RCCX lookahead moves",
+    )
     parser.add_argument("--proxy-order", type=int, choices=[2, 3], default=2)
     parser.add_argument("--out", default="artifacts/destructive_semantic")
     args = parser.parse_args()
@@ -907,7 +977,8 @@ def main() -> None:
         out / "checkpoints", args.proposal_limit, args.max_parallel,
         args.exact_top, args.affine_controls, args.full_proxy_proposals,
         args.resume, args.biaffine_controls, args.double_rccx,
-        args.pareto_beam, args.guided_hints, args.forward_affine_controls)
+        args.pareto_beam, args.guided_hints, args.forward_affine_controls,
+        args.triple_rccx)
     payload = {
         "seed": args.seed,
         "beam_width": args.beam,
@@ -924,6 +995,7 @@ def main() -> None:
         "pareto_beam": args.pareto_beam,
         "guided_hints": args.guided_hints,
         "forward_affine_controls": args.forward_affine_controls,
+        "triple_rccx": args.triple_rccx,
         "proxy_order": args.proxy_order,
         "completed_layer": completed_layer,
         "target_marked_states": TARGET.bit_count(),
