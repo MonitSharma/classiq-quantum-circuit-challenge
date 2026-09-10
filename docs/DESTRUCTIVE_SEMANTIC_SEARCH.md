@@ -1325,3 +1325,14 @@ residual-359 frontier or changed its best affine combination `[11, 12]`.
 This closes the single-step arbitrary-parity variant at that frontier. The
 screen is recorded in
 `artifacts/destructive_semantic/arbitrary_parity_screen_seed20261003.metrics.json`.
+
+## Greedy v6 residual factor chain (September 11, 2026)
+
+The retained-garbage v6 state was used as a factorization target rather than
+as an ESOP completion input. Greedily applying signed degree-2--7 monomials to
+q11 while preserving the affine combination `W11 XOR W12` reduced the exact
+residual from **197 to 63** over all 4,096 semantic states. Lowering the 23
+corrections with one-dirty-ancilla MCX blocks produced a forward circuit of
+**2,449/1,380** depth/CX, so the semantic improvement is not native-depth
+competitive and was not promoted. Metrics are in
+`artifacts/destructive_semantic/no_uncompute_v6_greedy_factor_chain.metrics.json`.
