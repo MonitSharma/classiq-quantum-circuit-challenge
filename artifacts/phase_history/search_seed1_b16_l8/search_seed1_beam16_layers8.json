@@ -1,0 +1,63 @@
+{
+  "mode": "history_beam_diagnostic",
+  "seed": 1,
+  "beam_width": 16,
+  "layers": 8,
+  "proposal_limit": 48,
+  "completed_layer": 8,
+  "history_rank": 19,
+  "remainder_bits": 1097,
+  "target_in_span": false,
+  "estimated_forward_depth": 56,
+  "gates": [
+    [
+      "rccx",
+      5,
+      10,
+      11
+    ],
+    [
+      "rccx",
+      6,
+      11,
+      16
+    ],
+    [
+      "rccx",
+      10,
+      16,
+      11
+    ],
+    [
+      "rccx",
+      11,
+      16,
+      13
+    ],
+    [
+      "rccx",
+      9,
+      13,
+      15
+    ],
+    [
+      "rccx",
+      8,
+      13,
+      15
+    ],
+    [
+      "rccx",
+      9,
+      15,
+      17
+    ],
+    [
+      "rccx",
+      8,
+      13,
+      17
+    ]
+  ],
+  "provenance": null
+}
