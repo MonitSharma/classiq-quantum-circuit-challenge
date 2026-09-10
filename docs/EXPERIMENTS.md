@@ -2375,3 +2375,14 @@ matching exhaustive report covers all 4,096 inputs with maximum error
 amplitude bound `4.39671084432726e-12`, and peak sparse support 512. This is a
 verified improvement, but it remains far above the historical leaderboard
 range and does not establish rank 1.
+
+## Destructive don't-care ESOP order continuation (September 11, 2026)
+
+A second deterministic continuation of the 53-cube complete-oracle order
+search (250 insertion/reversal moves, seed `20260914`) reduced the pre-peephole
+oracle from **6,739/6,495** to **6,483/6,233** depth/CX. Applying the same
+pytket rewrite produced the promoted **6,471/6,229** QASM. Its SHA256 is
+`b2406cb5ab5ddebae2b81a4ef42fd270b71881fab4d5e5f9549fc030bb552fb8`.
+Exhaustive verification covered all 4,096 inputs with maximum error
+`9.271857944426466e-14`, ancilla error `7.400714895795043e-15`, discarded
+amplitude bound `3.994318691564067e-12`, and peak sparse support 512.

@@ -1178,3 +1178,12 @@ measured 6,739/6,495 depth/CX. The promoted pytket-rewritten QASM is
 with maximum error `1.051782074333784e-13` and ancilla error
 `7.217861607583946e-15`. This is the current verified destructive best, not a
 rank-1 result.
+
+The frozen 53-cube order was then continued with 250 deterministic
+insertion/reversal moves using seed `20260914`. The pre-peephole oracle reached
+6,483/6,233 depth/CX, and the promoted pytket-rewritten QASM reached
+**6,471/6,229**. The exact artifact is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`b2406cb5ab5ddebae2b81a4ef42fd270b71881fab4d5e5f9549fc030bb552fb8`. The
+matching exhaustive report covers all 4,096 inputs with maximum error
+`9.271857944426466e-14` and ancilla error `7.400714895795043e-15`.

@@ -1,14 +1,14 @@
 {
   "qasm": "/Users/monitsharma/Downloads/classiq-development/artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm",
-  "sha256": "0ce30d3b5d95a4ed8d09738d5fe14a202192b751677b9c963a85ea6e36e87e9f",
+  "sha256": "b2406cb5ab5ddebae2b81a4ef42fd270b71881fab4d5e5f9549fc030bb552fb8",
   "basis_inputs_checked": 4096,
   "width": 18,
-  "depth": 6727,
-  "cx_count": 6491,
-  "max_error": 1.051782074333784e-13,
-  "ancilla_error": 7.217861607583946e-15,
-  "discarded_amplitude_bound": 4.39671084432726e-12,
+  "depth": 6471,
+  "cx_count": 6229,
+  "max_error": 9.271857944426466e-14,
+  "ancilla_error": 7.400714895795043e-15,
+  "discarded_amplitude_bound": 3.994318691564067e-12,
   "peak_sparse_support": 512,
-  "elapsed_seconds": 42.97250509262085,
+  "elapsed_seconds": 38.69946908950806,
   "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
 }
