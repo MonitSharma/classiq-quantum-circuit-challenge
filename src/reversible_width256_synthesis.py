@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import random
 from pathlib import Path
 
 from residual_branching_program import residual_program
@@ -78,18 +79,26 @@ def _complete_permutation(partial: dict[int, int], capacity: int) -> list[int]:
 
 
 def _choose_labels(source_labels: dict[int, list[int]], capacities: dict[int, int],
-                   final_layer: bool, capacity: int) -> dict[int, list[int]]:
+                   final_layer: bool, capacity: int,
+                   rng: random.Random | None = None) -> dict[int, list[int]]:
     """Assign disjoint state labels, favoring labels reused by both branches."""
     available = set(range(capacity))
     result: dict[int, list[int]] = {}
     for state in sorted(capacities, key=lambda item: (-capacities[item], item)):
         candidates = []
         for label in available:
-            score = int(label in source_labels.get(state, []))
+            # A label appearing under both control values is more valuable
+            # than one appearing under only one branch: it can preserve the
+            # same wire state in both controlled permutations.
+            score = source_labels.get(state, []).count(label)
             if final_layer and (label & 1) != state:
                 continue
             candidates.append((score, label))
-        candidates.sort(key=lambda item: (-item[0], item[1]))
+        if rng is None:
+            candidates.sort(key=lambda item: (-item[0], item[1]))
+        else:
+            tie_break = {label: rng.random() for _, label in candidates}
+            candidates.sort(key=lambda item: (-item[0], tie_break[item[1]]))
         count = capacities[state]
         if len(candidates) < count:
             raise AssertionError("state-label capacity is infeasible")
@@ -136,10 +145,12 @@ def _controlled_permutation(current: dict[int, list[int]], next_labels: dict[int
 
 def build_model(order: tuple[int, ...] = ORDER,
                 state_bits: int = DEFAULT_STATE_BITS,
-                output_parity: bool = True) -> dict:
+                output_parity: bool = True,
+                label_seed: int | None = None) -> dict:
     if state_bits < 6:
         raise ValueError("six loaded prefix bits require at least six state bits")
     capacity = 1 << state_bits
+    rng = random.Random(label_seed) if label_seed is not None else None
     program = residual_program(order)
     transitions = program["transitions"]
     # Six prefix bits are represented by the first 64 state labels.
@@ -173,13 +184,10 @@ def build_model(order: tuple[int, ...] = ORDER,
             )
             for child in source_by_child
         }
-        source_sets = {
-            child: list({label for label in labels})
-            for child, labels in source_by_child.items()
-        }
-        next_labels = _choose_labels(source_sets, capacities,
+        next_labels = _choose_labels(source_by_child, capacities,
                                      final_layer=layer == 11 and output_parity,
-                                     capacity=capacity)
+                                     capacity=capacity,
+                                     rng=rng)
         permutations = []
         stats = []
         for bit in (0, 1):
@@ -254,6 +262,7 @@ def build_model(order: tuple[int, ...] = ORDER,
         "layers": layers,
         "final_state_label_values": final_label_values,
         "output_parity_encoding": output_parity,
+        "label_seed": label_seed,
         "total_controlled_permutation_adjacent_transpositions": total_adjacent,
         "total_gray_path_mct_cost": total_hamming_cost,
         "marked_states": program["marked_states"],
@@ -266,12 +275,14 @@ def main() -> None:
     parser.add_argument("--order", nargs=12, type=int, default=list(ORDER))
     parser.add_argument("--state-bits", type=int, default=DEFAULT_STATE_BITS)
     parser.add_argument("--no-output-parity", action="store_true")
+    parser.add_argument("--label-seed", type=int)
     parser.add_argument("--out", type=Path)
     args = parser.parse_args()
     if sorted(args.order) != list(range(12)):
         raise SystemExit("--order must be a permutation of 0..11")
     result = build_model(tuple(args.order), state_bits=args.state_bits,
-                         output_parity=not args.no_output_parity)
+                         output_parity=not args.no_output_parity,
+                         label_seed=args.label_seed)
     compact = {key: value for key, value in result.items() if key != "layers"}
     compact["layers"] = [
         {

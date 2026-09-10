@@ -510,3 +510,12 @@ terminal terms (2,504 total). Its measured terminal tail is depth 1,967 /
 Gray-path MCT estimate is slightly worse than the previous order; it remains
 an exact semantic control rather than a complete oracle. Measurements are in
 `artifacts/destructive_semantic/reversible_width128_anf_order_search.metrics.json`.
+
+The label allocator was strengthened to preserve branch multiplicity: a state
+label reachable under both control values is preferred over one reachable under
+only one value. A deterministic 200-seed tie-break screen on the ANF-best
+order found a Pareto point at label seed 43: 1,540 Gray-path MCTs, 246
+adjacent transpositions, and a terminal tail of depth 1,962 / 1,109 CX. This
+is the current width-128 transition control; it still has no standalone
+U3/CX classifier or exhaustive phase-oracle verification. Measurements are in
+`artifacts/destructive_semantic/reversible_width128_label_seed_screen.metrics.json`.
