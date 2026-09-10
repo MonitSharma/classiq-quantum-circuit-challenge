@@ -785,3 +785,10 @@ followed by `RC3X(q14,q13,q11,q12)`, with negative literals on q1--q4.
 Those two partials are intentionally retained as additional midpoint garbage.
 The affine residual falls to 251; the actual serialized U3/CX depth is recorded
 with the reproducible v4 builder and metrics once compiled.
+
+A bounded two-gate continuation then mutates q16 with `q5·¬q14` and applies
+`RC3X(q16,q11,q13,q12)`. Exact affine residual decreases to 231, at native
+forward depth 135 / 90 CX. This is a residual Pareto point rather than a depth
+improvement over v3/v4; q13, q14, q16, and q17 remain intentional midpoint garbage.
+The builder and metrics are `src/high_order_affine_no_uncompute_v5.py` and
+`artifacts/destructive_semantic/high_order_affine_no_uncompute_v5.metrics.json`.
