@@ -34,6 +34,12 @@ coordinate function visible.
 same semantic engine and checks all 4,096 inputs before any quantum oracle is
 constructed.
 
+The independent self-test `src/test_destructive_semantics.py` now exercises a
+96-operation random X/CX/RCCX history twice—once with scalar basis-state bits
+and once with the packed 4,096-bit semantic helpers. Both replays matched on
+every physical wire and every input. It also checks the 1,097-state target
+cardinality and a constant-plus-two-wire affine-span toy case.
+
 ## Initial validation sequence
 
 The first runs are intentionally small: primitive semantics, target cardinality,
