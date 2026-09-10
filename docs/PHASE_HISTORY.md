@@ -115,6 +115,14 @@ at `artifacts/phase_history/affine_seed606_b8_l6/` reached rank 19 at
 estimated forward depth 48. It brought one historical signal within eight
 truth-table bits of a rank product, but exact target membership still failed.
 
+Destructive X/CX proposals are now included as cheap affine moves, exposing
+complemented literals and arbitrary linear forms. The first mixed X/CX/RCCX/
+RC3X run (`artifacts/phase_history/linear_mixed_seed707_b8_l8/`) reached rank
+29 at estimated depth 88, but did not enter the exact target span. Its depth
+slightly exceeds the preferred 85-depth forward budget because affine-control
+macros cost nine native layers; it is retained as a diagnostic rather than a
+candidate.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary

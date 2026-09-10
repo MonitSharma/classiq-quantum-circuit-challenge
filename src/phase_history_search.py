@@ -430,6 +430,31 @@ def history_proposals(
     target_remainder = state.basis.remainder(TARGET)
     hints = rank_product_hints()
     proposals = []
+
+    def add_proposal(new_value: int, gate: Gate) -> None:
+        if new_value in state.basis.first_signal_for_value:
+            return
+        hint_distance = min(
+            (new_value ^ hint).bit_count() for hint in hints
+        ) if hints else 0
+        target_distance = min(
+            (target_remainder ^ new_value).bit_count(),
+            (TARGET ^ new_value).bit_count(),
+        )
+        proposals.append((1, hint_distance, target_distance, rng.random(), gate))
+
+    # Linear changes are cheap and expose arbitrary affine forms, including
+    # complemented literals through X. They are part of the destructive
+    # trajectory, so their historical values are valid phase resources.
+    for target in range(N_WIRES):
+        add_proposal(ALL_ONES ^ state.wires[target], ("x", target))
+        for control in range(N_WIRES):
+            if control != target:
+                add_proposal(
+                    state.wires[target] ^ state.wires[control],
+                    ("cx", control, target),
+                )
+
     for a in range(N_WIRES):
         for b in range(a + 1, N_WIRES):
             product = state.wires[a] & state.wires[b]
@@ -521,6 +546,18 @@ def history_layer_proposals(
     return layers[:limit]
 
 
+def native_gate_cost(gate: Gate) -> int:
+    if gate[0] in {"x", "cx"}:
+        return 1
+    if gate[0] == "rccx":
+        return 7
+    if gate[0] == "affine":
+        return 9
+    if gate[0] in {"rc3x", "rcccx"}:
+        return 13
+    return max(native_gate_cost(primitive) for primitive in gate[1])
+
+
 def search_history(
     beam_width: int = 16,
     layers: int = 4,
@@ -556,11 +593,8 @@ def search_history(
             for layer_gates in proposals:
                 gate = layer_gates[0] if len(layer_gates) == 1 else ("layer", layer_gates)
                 gates = state.gates + (gate,)
-                layer_cost = max(
-                    13 if primitive[0] in {"rc3x", "rcccx"} else
-                    9 if primitive[0] == "affine" else 7
-                    for primitive in layer_gates
-                )
+                layer_cost = max(native_gate_cost(primitive)
+                                 for primitive in layer_gates)
                 child = history_state(gates, state.estimated_depth + layer_cost)
                 children.append(child)
         children.sort(key=history_score)
