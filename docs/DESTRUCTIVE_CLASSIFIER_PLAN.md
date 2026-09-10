@@ -170,6 +170,10 @@ A further targeted continuation reached exact affine residual 349, but its
 29-RCCX circuit compiled to forward depth 149 and 83 CX gates. No affine
 completion or complete phase-oracle verification has been reached.
 
+A beam-16 divergent double-RCCX continuation seeded from that residual-349
+state stayed at residual 349 after four layers, including exact scoring of
+eight leaders; the local basin therefore needs a different move family.
+
 A cold seed-42 triple-RCCX beam reached residual 531 at estimated depth 77
 after four layers; it did not reach affine completion and is weaker than the
 targeted seed-1 basin.

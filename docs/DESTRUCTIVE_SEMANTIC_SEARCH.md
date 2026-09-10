@@ -251,6 +251,12 @@ residual-359/depth-107 frontier point, and direct target-wire replay still had
 `artifacts/destructive_semantic/targeted_triple_residual349.json` and is not a
 complete classifier or phase oracle.
 
+A divergent continuation seeded directly from the residual-349 state (beam 16,
+four double-RCCX layers, Pareto retention, exact scoring on eight leaders)
+also remained at residual 349. This rules out a simple greedy-path artifact in
+that local window; the negative result is preserved in
+`artifacts/destructive_semantic/residual349_double_beam4.metrics.json`.
+
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
 It did not reach affine completion and is weaker than the targeted seed-1
