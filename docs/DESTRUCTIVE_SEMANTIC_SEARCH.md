@@ -752,3 +752,21 @@ control set. It remains above the promising depth screen but is the strongest
 signed semantic Pareto point; the builder and metrics are
 `src/high_order_affine_signed_reordered.py` and
 `artifacts/destructive_semantic/high_order_affine_signed_reordered.metrics.json`.
+
+The destructive contract was then applied literally: the signed five-control
+block retains its partial product in q17, and the positive q12 block retains
+q2q3 in q13 instead of uncomputing either workspace. The selected affine
+residual is 331, while the forward circuit compiles to depth 79 / 51 CX.
+q13 and q17 are intentionally nonzero midpoint garbage; this is allowed for
+C but means no classifier or oracle claim is made. The reproducible builder
+and metrics are `src/high_order_affine_no_uncompute.py` and
+`artifacts/destructive_semantic/high_order_affine_no_uncompute.metrics.json`.
+
+Using the retained q13 partial as a live control enables a direct RC3X update
+`q12 ^= q11·q13·q14`, lowering the no-uncompute residual to 315 while the
+forward circuit remains depth 90 / 57 CX. q13 and q17 remain intentional
+midpoint garbage. This v2 candidate is the current depth/residual Pareto
+frontier, still incomplete and not an exhaustively verified oracle; its
+builder and metrics are
+`src/high_order_affine_no_uncompute_v2.py` and
+`artifacts/destructive_semantic/high_order_affine_no_uncompute_v2.metrics.json`.
