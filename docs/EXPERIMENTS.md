@@ -2095,3 +2095,20 @@ Exhaustive verification covered all 4,096 inputs with max error
 `8.86795809782994e-14`, zero ancilla error, discarded-amplitude bound
 `1.0434552156730549e-12`, and peak sparse support 256. This is a verified
 improvement within the destructive ESOP family, not a rank-1 result.
+
+## Destructive complete-oracle order search (September 10, 2026)
+
+A deterministic random single-swap search scored the complete `C† Z C` oracle
+directly, rather than using forward classifier depth as a proxy. It kept the v6
+prefix, exact 83-cube cover, two-clean relative-phase lowering, and cleanup
+fixed. The frozen source is
+`src/high_order_affine_exact_esop_clean2_rel_oracle_local.py`. The forward
+classifier measured **3,747/3,095** depth/CX and the complete oracle measured
+**7,418/6,115**. The exact QASM is
+`artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_local.qasm`
+with SHA256
+`c3f6abf681d54ad1104204b6a1ef6ee9cf3765629db358b8e263fe3cd300c9d8`.
+Exhaustive verification covered all 4,096 inputs with max error
+`8.731663258757493e-14`, zero ancilla error, discarded-amplitude bound
+`1.0416137327337738e-12`, and peak sparse support 256. This is a verified
+improvement within the destructive ESOP family, not a rank-1 result.

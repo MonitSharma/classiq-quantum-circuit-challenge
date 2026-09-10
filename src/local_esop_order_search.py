@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import random
 import warnings
 from pathlib import Path
 
@@ -17,6 +18,7 @@ from high_order_affine_exact_esop_clean2_rel_ordered import (
     _append_cube,
     _ordered_terms,
 )
+from high_order_affine_exact_esop_clean2_rel_local import TERMS as LOCAL_TERMS
 from high_order_affine_exact_esop_clean2_rel import (
     _clear_q13,
     _clear_q17,
@@ -42,7 +44,12 @@ def build_classifier_for_terms(terms):
     return circuit
 
 
-def score(circuit):
+def score(circuit, complete_oracle=False):
+    if complete_oracle:
+        oracle = circuit.copy()
+        oracle.z(12)
+        oracle.compose(circuit.inverse(), inplace=True)
+        circuit = oracle
     compiled = transpile(
         circuit,
         basis_gates=["u3", "cx"],
@@ -57,19 +64,22 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--passes", type=int, default=1)
+    parser.add_argument("--start-local", action="store_true")
+    parser.add_argument("--random-swaps", type=int, default=0)
+    parser.add_argument("--complete-oracle", action="store_true")
     args = parser.parse_args()
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
-        current = list(_ordered_terms())
+        current = list(LOCAL_TERMS if args.start_local else _ordered_terms())
         best_order = list(current)
-        best_score = score(build_classifier_for_terms(best_order))
+        best_score = score(build_classifier_for_terms(best_order), args.complete_oracle)
         records = [{"kind": "baseline", "score": best_score}]
         for pass_index in range(args.passes):
             improved = False
             for index in range(len(best_order) - 1):
                 trial = list(best_order)
                 trial[index], trial[index + 1] = trial[index + 1], trial[index]
-                trial_score = score(build_classifier_for_terms(trial))
+                trial_score = score(build_classifier_for_terms(trial), args.complete_oracle)
                 records.append({"pass": pass_index, "index": index, "score": trial_score})
                 if trial_score < best_score:
                     best_order, best_score = trial, trial_score
@@ -77,6 +87,16 @@ def main():
                     print(json.dumps({"new_best": best_score, "index": index}))
             if not improved:
                 break
+        rng = random.Random(20260910)
+        for index in range(args.random_swaps):
+            left, right = sorted(rng.sample(range(len(best_order)), 2))
+            trial = list(best_order)
+            trial[left], trial[right] = trial[right], trial[left]
+            trial_score = score(build_classifier_for_terms(trial), args.complete_oracle)
+            records.append({"kind": "random_swap", "left": left, "right": right, "score": trial_score})
+            if trial_score < best_score:
+                best_order, best_score = trial, trial_score
+                print(json.dumps({"new_best": best_score, "left": left, "right": right}))
         args.out.write_text(json.dumps({
             "best_forward_score": best_score,
             "order": [list(term) for term in best_order],

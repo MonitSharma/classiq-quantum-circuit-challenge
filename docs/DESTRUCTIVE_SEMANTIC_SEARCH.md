@@ -890,6 +890,20 @@ Exhaustive verification covered all 4,096 inputs with max error
 `1.3819464577271947e-12`. This is the strongest verified destructive
 completion currently measured, though still noncompetitive.
 
+ A deterministic random single-swap search scored the complete `C† Z C`
+ oracle directly and found a further ordering improvement. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_local.py`; it measures
+ **3,747 / 3,095** for the forward classifier and **7,418 / 6,115** for the
+ complete oracle. The verified QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_local.qasm`
+ with SHA256
+ `c3f6abf681d54ad1104204b6a1ef6ee9cf3765629db358b8e263fe3cd300c9d8`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.731663258757493e-14`, zero ancilla error, discarded-amplitude bound
+ `1.0416137327337738e-12`, and peak sparse support 256. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
 Reordering the 83 ESOP cubes by greedy shared-literal proximity further
 reduced the serialized classifier to **3,802 / 3,129** and the complete oracle
 to **7,534 / 6,195** depth/CX. The verified candidate is
