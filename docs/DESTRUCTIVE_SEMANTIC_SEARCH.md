@@ -736,3 +736,11 @@ nominal sub-190 forward-depth screen but is still not an exact classifier or
 verified phase oracle. The builder and metrics are
 `src/high_order_affine_signed_mixed.py` and
 `artifacts/destructive_semantic/high_order_affine_signed_mixed.metrics.json`.
+
+Appending the strongest signed six-control correction to the depth-92 mixed
+candidate lowers the exact affine residual from 331 to 295. Its straightforward
+factored lowering compiles to depth 119 / 87 CX, so it is a semantic Pareto
+continuation above the promising depth screen. It is retained for future
+factor-sharing work in
+`src/high_order_affine_signed_mixed_six_control.py` and
+`artifacts/destructive_semantic/high_order_affine_signed_mixed_six_control.metrics.json`.
