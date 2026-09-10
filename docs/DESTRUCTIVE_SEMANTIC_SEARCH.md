@@ -262,6 +262,13 @@ remained at residual 349, despite Pareto retention and exact scoring of eight
 leaders. Its metrics are preserved in
 `artifacts/destructive_semantic/residual349_forward_affine4.metrics.json`.
 
+The objective was then changed to direct target-wire mismatch, without using
+affine-span residual for selection. A 32-state, 12-layer RCCX beam reached 609
+mismatches on q11 at estimated depth 70, weaker than the residual-349 affine
+frontier. This confirms that direct-wire targeting is a distinct trajectory;
+its gate history is preserved in
+`artifacts/destructive_semantic/direct_wire_beam_seed1919.metrics.json`.
+
 A fresh cold seed-42 triple-RCCX beam (16 states, four layers, proposal limit
 4) reached exact residual 531 at estimated depth 77 after about 773 seconds.
 It did not reach affine completion and is weaker than the targeted seed-1
