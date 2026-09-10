@@ -783,8 +783,10 @@ complete classifier or verified phase oracle. The builder and metrics are
 The next residual factorization uses two partial updates in q14 and q13,
 followed by `RC3X(q14,q13,q11,q12)`, with negative literals on q1--q4.
 Those two partials are intentionally retained as additional midpoint garbage.
-The affine residual falls to 251; the actual serialized U3/CX depth is recorded
-with the reproducible v4 builder and metrics once compiled.
+The affine residual falls to 251 at actual serialized U3/CX depth 123 / 81 CX.
+The reproducible builder and metrics are
+`src/high_order_affine_no_uncompute_v4.py` and
+`artifacts/destructive_semantic/high_order_affine_no_uncompute_v4.metrics.json`.
 
 A bounded two-gate continuation then mutates q16 with `q5·¬q14` and applies
 `RC3X(q16,q11,q13,q12)`. Exact affine residual decreases to 231, at native
