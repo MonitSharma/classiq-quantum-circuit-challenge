@@ -584,3 +584,14 @@ fourth block, reducing residual 339 to 323; a fifth six-control correction
 reaches 315 but moves beyond the depth-screened construction. This boundary is
 recorded in
 `artifacts/destructive_semantic/high_order_affine_completion_scan.metrics.json`.
+
+The depth-109 chain also exposed a second clean workspace: q13 is untouched by
+the shallow base candidate. Using q17 for the first correction and q13 for the
+second allows their compute and uncompute halves to overlap; only the two
+toggles on q12 remain serial. The resulting exact semantic candidate keeps
+residual 339, restores both clean ancillas over all 4,096 inputs, and compiles
+to forward depth 98 / 72 CX. This is the current strongest depth-screened
+candidate, still incomplete and not exhaustively verified as a phase oracle.
+The builder and metrics are
+`src/high_order_affine_parallel_chain.py` and
+`artifacts/destructive_semantic/high_order_affine_parallel_chain.metrics.json`.
