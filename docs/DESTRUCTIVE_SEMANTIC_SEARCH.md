@@ -770,3 +770,18 @@ frontier, still incomplete and not an exhaustively verified oracle; its
 builder and metrics are
 `src/high_order_affine_no_uncompute_v2.py` and
 `artifacts/destructive_semantic/high_order_affine_no_uncompute_v2.metrics.json`.
+
+The residual-315 state exposes a four-literal error term
+`q9·q10·¬q15·q17`. A restored temporary partial in q14 implements this
+correction without uncomputing the intentionally retained q13/q17 garbage.
+The resulting residual is 279 at native forward depth 108 / 69 CX. This is
+the strongest current no-uncompute Pareto point, but it is still not a
+complete classifier or verified phase oracle. The builder and metrics are
+`src/high_order_affine_no_uncompute_v3.py` and
+`artifacts/destructive_semantic/high_order_affine_no_uncompute_v3.metrics.json`.
+
+The next residual factorization uses two partial updates in q14 and q13,
+followed by `RC3X(q14,q13,q11,q12)`, with negative literals on q1--q4.
+Those two partials are intentionally retained as additional midpoint garbage.
+The affine residual falls to 251; the actual serialized U3/CX depth is recorded
+with the reproducible v4 builder and metrics once compiled.
