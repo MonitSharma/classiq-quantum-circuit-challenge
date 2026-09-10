@@ -474,3 +474,21 @@ to U3/CX. That native cost is presently far beyond the target, so this model
 is retained as a structural control and not promoted to a complete QASM
 candidate. Native synthesis or a different state-labeling/decomposition
 strategy remains pending.
+
+## Width-128 state-machine control
+
+The slot peak is a capacity bound, not an output-bit bound. A seven-bit state
+register is sufficient for the transition history when the output is kept on
+a separate clean wire, but it cannot encode the terminal 77/49 split as one
+state parity bit. I therefore evaluated the terminal residual as a separate
+seven-input Boolean function instead.
+
+A 301-order neighborhood screen found the better order
+`q10,q9,q11,q4,q5,q2,q3,q1,q0,q8,q7,q6`. Its exact seven-bit state machine
+replays all 4,096 inputs, uses a peak of 99 slots, and costs 2,066 estimated
+Gray-path MCTs. The terminal function has 45 ANF terms of degree six; its
+standalone U3/CX compilation is depth 2,095 / 1,197 CX. These figures remain
+far above the target, but they improve the prior width-128 control and provide
+strong evidence that arbitrary permutation completion is the current
+bottleneck. Measurements are in
+`artifacts/destructive_semantic/reversible_width128_order_search.metrics.json`.

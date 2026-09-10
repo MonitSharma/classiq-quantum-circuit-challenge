@@ -1,4 +1,4 @@
-"""Construct and cost a width-256 reversible embedding of the logo DAG.
+"""Construct and cost a width-limited reversible embedding of the logo DAG.
 
 This module is deliberately a semantic/native-cost experiment.  It does not
 replace the protected oracle or emit a competition QASM file.  Six inputs are
@@ -17,8 +17,7 @@ from residual_branching_program import residual_program
 
 
 ORDER = (10, 5, 11, 4, 9, 8, 3, 1, 0, 2, 7, 6)
-STATE_BITS = 8
-STATE_CAPACITY = 1 << STATE_BITS
+DEFAULT_STATE_BITS = 8
 
 
 def _cycle_stats(permutation: list[int]) -> dict:
@@ -57,8 +56,8 @@ def _cycle_stats(permutation: list[int]) -> dict:
     }
 
 
-def _complete_permutation(partial: dict[int, int]) -> list[int]:
-    permutation = [-1] * STATE_CAPACITY
+def _complete_permutation(partial: dict[int, int], capacity: int) -> list[int]:
+    permutation = [-1] * capacity
     used_outputs = set()
     for source, target in partial.items():
         if permutation[source] != -1 or target in used_outputs:
@@ -67,7 +66,7 @@ def _complete_permutation(partial: dict[int, int]) -> list[int]:
         used_outputs.add(target)
 
     unused_inputs = [i for i, target in enumerate(permutation) if target == -1]
-    unused_outputs = [i for i in range(STATE_CAPACITY) if i not in used_outputs]
+    unused_outputs = [i for i in range(capacity) if i not in used_outputs]
     # Preserve as much of the identity completion as possible.
     for source in unused_inputs:
         if source in unused_outputs:
@@ -79,9 +78,9 @@ def _complete_permutation(partial: dict[int, int]) -> list[int]:
 
 
 def _choose_labels(source_labels: dict[int, list[int]], capacities: dict[int, int],
-                   final_layer: bool) -> dict[int, list[int]]:
+                   final_layer: bool, capacity: int) -> dict[int, list[int]]:
     """Assign disjoint state labels, favoring labels reused by both branches."""
-    available = set(range(STATE_CAPACITY))
+    available = set(range(capacity))
     result: dict[int, list[int]] = {}
     for state in sorted(capacities, key=lambda item: (-capacities[item], item)):
         candidates = []
@@ -101,7 +100,8 @@ def _choose_labels(source_labels: dict[int, list[int]], capacities: dict[int, in
 
 
 def _controlled_permutation(current: dict[int, list[int]], next_labels: dict[int, list[int]],
-                            transitions: list[list[int]], bit: int) -> list[int]:
+                            transitions: list[list[int]], bit: int,
+                            capacity: int) -> list[int]:
     partial: dict[int, int] = {}
     states_by_child: dict[int, list[int]] = {}
     for state in current:
@@ -126,7 +126,7 @@ def _controlled_permutation(current: dict[int, list[int]], next_labels: dict[int
                     raise AssertionError("active state mapping collision")
                 partial[source] = target
 
-    permutation = _complete_permutation(partial)
+    permutation = _complete_permutation(partial, capacity)
     for state, labels in current.items():
         child_labels = set(next_labels[transitions[state][bit]])
         if not all(permutation[label] in child_labels for label in labels):
@@ -134,7 +134,12 @@ def _controlled_permutation(current: dict[int, list[int]], next_labels: dict[int
     return permutation
 
 
-def build_model(order: tuple[int, ...] = ORDER) -> dict:
+def build_model(order: tuple[int, ...] = ORDER,
+                state_bits: int = DEFAULT_STATE_BITS,
+                output_parity: bool = True) -> dict:
+    if state_bits < 6:
+        raise ValueError("six loaded prefix bits require at least six state bits")
+    capacity = 1 << state_bits
     program = residual_program(order)
     transitions = program["transitions"]
     # Six prefix bits are represented by the first 64 state labels.
@@ -172,12 +177,15 @@ def build_model(order: tuple[int, ...] = ORDER) -> dict:
             child: list({label for label in labels})
             for child, labels in source_by_child.items()
         }
-        next_labels = _choose_labels(source_sets, capacities, final_layer=layer == 11)
+        next_labels = _choose_labels(source_sets, capacities,
+                                     final_layer=layer == 11 and output_parity,
+                                     capacity=capacity)
         permutations = []
         stats = []
         for bit in (0, 1):
             permutation = _controlled_permutation(current, next_labels,
-                                                   transitions[layer], bit)
+                                                   transitions[layer], bit,
+                                                   capacity)
             permutation_stats = _cycle_stats(permutation)
             permutations.append(permutation)
             stats.append(permutation_stats)
@@ -193,12 +201,17 @@ def build_model(order: tuple[int, ...] = ORDER) -> dict:
         })
         current = next_labels
 
-    final_parity = {
+    final_label_values = {
         str(state): sorted(labels)
         for state, labels in current.items()
     }
-    if any((label & 1) != state for state, labels in current.items() for label in labels):
+    if output_parity and any((label & 1) != state
+                             for state, labels in current.items()
+                             for label in labels):
         raise AssertionError("final state parity does not encode the logo")
+    label_to_terminal_state = {
+        label: state for state, labels in current.items() for label in labels
+    }
 
     # Replay every one of the 2^12 coordinate assignments through the six
     # loaded-prefix transitions and six controlled permutations.  This checks
@@ -226,17 +239,21 @@ def build_model(order: tuple[int, ...] = ORDER) -> dict:
                 (assignment >> bit) & 1
             ]
             state_id = expected
-        if (label & 1) != (expected if expected in (0, 1) else 0):
-            raise AssertionError("replayed state label does not encode the target")
+        if output_parity:
+            if (label & 1) != expected:
+                raise AssertionError("replayed state label does not encode the target")
+        elif label_to_terminal_state.get(label) != expected:
+            raise AssertionError("replayed state label has the wrong terminal residual")
     return {
         "status": "exact semantic embedding; native QASM pending",
         "variable_order": list(order),
         "loaded_prefix_bits": list(order[:6]),
         "remaining_control_bits": list(order[6:]),
-        "state_width": STATE_BITS,
-        "state_capacity": STATE_CAPACITY,
+        "state_width": state_bits,
+        "state_capacity": capacity,
         "layers": layers,
-        "final_state_label_parity": final_parity,
+        "final_state_label_values": final_label_values,
+        "output_parity_encoding": output_parity,
         "total_controlled_permutation_adjacent_transpositions": total_adjacent,
         "total_gray_path_mct_cost": total_hamming_cost,
         "marked_states": program["marked_states"],
@@ -246,9 +263,15 @@ def build_model(order: tuple[int, ...] = ORDER) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    parser.add_argument("--order", nargs=12, type=int, default=list(ORDER))
+    parser.add_argument("--state-bits", type=int, default=DEFAULT_STATE_BITS)
+    parser.add_argument("--no-output-parity", action="store_true")
     parser.add_argument("--out", type=Path)
     args = parser.parse_args()
-    result = build_model()
+    if sorted(args.order) != list(range(12)):
+        raise SystemExit("--order must be a permutation of 0..11")
+    result = build_model(tuple(args.order), state_bits=args.state_bits,
+                         output_parity=not args.no_output_parity)
     compact = {key: value for key, value in result.items() if key != "layers"}
     compact["layers"] = [
         {
