@@ -2096,6 +2096,20 @@ Exhaustive verification covered all 4,096 inputs with max error
 `1.0434552156730549e-12`, and peak sparse support 256. This is a verified
 improvement within the destructive ESOP family, not a rank-1 result.
 
+## Destructive third insertion/reversal order search (September 10, 2026)
+
+A third insertion/reversal search, initialized from the prior moves order,
+further reduced the forward classifier to **3,658/3,049** and the complete
+oracle to **7,243/6,023** depth/CX. The frozen source is
+`src/high_order_affine_exact_esop_clean2_rel_oracle_moves3.py`; the exact QASM
+is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves3.qasm`
+with SHA256
+`65fe658947ef4490468ca99594d906dea0a3cdcf2d8a09fed759bac73299ae4f`.
+Exhaustive verification covered all 4,096 inputs with max error
+`8.480185504815267e-14`, zero ancilla error, discarded-amplitude bound
+`1.0088640637855541e-12`, and peak sparse support 128. This is a verified
+improvement within the destructive ESOP family, not a rank-1 result.
+
 ## Destructive second insertion/reversal order search (September 10, 2026)
 
 A second insertion/reversal search, initialized from the prior moves order,
