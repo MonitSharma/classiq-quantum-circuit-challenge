@@ -364,7 +364,8 @@ def history_score(state: HistoryState) -> tuple:
 
 def history_proposals(
     state: HistoryState, limit: int, rng: random.Random,
-) -> list[tuple[int, int, int]]:
+    include_rc3x: bool = False,
+) -> list[Gate]:
     """Generate bounded RCCX proposals using history-aware cheap filters."""
     target_remainder = state.basis.remainder(TARGET)
     proposals = []
@@ -381,28 +382,52 @@ def history_proposals(
                     continue
                 # This is only a proposal filter. Exact ranking rebuilds the
                 # complete cumulative basis for each retained child.
-                novelty = 0 if new_value in state.basis.first_signal_for_value else 1
+                novelty = int(new_value not in state.basis.first_signal_for_value)
+                if not novelty:
+                    continue
                 distance = (target_remainder ^ new_value).bit_count()
                 direct = (TARGET ^ new_value).bit_count()
                 proposals.append((novelty, min(distance, direct), rng.random(),
-                                  a, b, target))
+                                  ("rccx", a, b, target)))
+    if include_rc3x:
+        for a in range(N_WIRES):
+            for b in range(a + 1, N_WIRES):
+                for c in range(b + 1, N_WIRES):
+                    product = state.wires[a] & state.wires[b] & state.wires[c]
+                    if not product:
+                        continue
+                    for target in range(N_WIRES):
+                        if target in (a, b, c):
+                            continue
+                        new_value = state.wires[target] ^ product
+                        novelty = int(new_value not in state.basis.first_signal_for_value)
+                        if not novelty:
+                            continue
+                        distance = (target_remainder ^ new_value).bit_count()
+                        direct = (TARGET ^ new_value).bit_count()
+                        proposals.append((novelty, min(distance, direct), rng.random(),
+                                          ("rc3x", a, b, c, target)))
     proposals.sort()
-    return [(a, b, target) for _, _, _, a, b, target in proposals[:limit]]
+    return [gate for _, _, _, gate in proposals[:limit]]
 
 
 def history_layer_proposals(
     state: HistoryState, limit: int, max_parallel: int, rng: random.Random,
+    include_rc3x: bool = False,
 ) -> list[tuple[Gate, ...]]:
-    singles = history_proposals(state, max(limit * 3, 24), rng)
+    singles = history_proposals(
+        state, max(limit * 3, 24), rng, include_rc3x=include_rc3x
+    )
     layers: list[tuple[Gate, ...]] = []
     seen: set[tuple[Gate, ...]] = set()
     for index, first in enumerate(singles):
-        selected = [("rccx", *first)]
-        used = set(first)
+        selected = [first]
+        used = set(first[1:])
         for second in singles[index + 1:]:
-            if used.isdisjoint(second):
-                selected.append(("rccx", *second))
-                used.update(second)
+            second_wires = set(second[1:])
+            if used.isdisjoint(second_wires):
+                selected.append(second)
+                used.update(second_wires)
                 if len(selected) >= max_parallel:
                     break
         for width in range(1, len(selected) + 1):
@@ -422,6 +447,7 @@ def search_history(
     seed: int = 0,
     checkpoint_dir: Path | None = None,
     max_parallel: int = 1,
+    include_rc3x: bool = False,
 ) -> tuple[HistoryState, int]:
     """Run a small deterministic history-span beam search.
 
@@ -437,19 +463,23 @@ def search_history(
         for state in beam:
             if max_parallel > 1:
                 proposals = history_layer_proposals(
-                    state, proposal_limit, max_parallel, rng
+                    state, proposal_limit, max_parallel, rng,
+                    include_rc3x=include_rc3x,
                 )
             else:
                 proposals = [
-                    (("rccx", a, b, target),)
-                    for a, b, target in history_proposals(
-                        state, proposal_limit, rng
+                    (gate,) for gate in history_proposals(
+                        state, proposal_limit, rng, include_rc3x=include_rc3x
                     )
                 ]
             for layer_gates in proposals:
                 gate = layer_gates[0] if len(layer_gates) == 1 else ("layer", layer_gates)
                 gates = state.gates + (gate,)
-                child = history_state(gates, layer * 7)
+                layer_cost = max(
+                    13 if primitive[0] in {"rc3x", "rcccx"} else 7
+                    for primitive in layer_gates
+                )
+                child = history_state(gates, state.estimated_depth + layer_cost)
                 children.append(child)
         children.sort(key=history_score)
         beam = children[:beam_width]
@@ -485,6 +515,7 @@ def main() -> None:
     parser.add_argument("--layers", type=int, default=4)
     parser.add_argument("--proposal-limit", type=int, default=64)
     parser.add_argument("--max-parallel", type=int, default=1)
+    parser.add_argument("--include-rc3x", action="store_true")
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--checkpoint-dir", type=Path)
     parser.add_argument("--out", type=Path,
@@ -498,6 +529,7 @@ def main() -> None:
             seed=args.seed,
             checkpoint_dir=args.checkpoint_dir or args.out / "checkpoints",
             max_parallel=args.max_parallel,
+            include_rc3x=args.include_rc3x,
         )
         args.out.mkdir(parents=True, exist_ok=True)
         payload = {
@@ -507,6 +539,7 @@ def main() -> None:
             "layers": args.layers,
             "proposal_limit": args.proposal_limit,
             "max_parallel": args.max_parallel,
+            "include_rc3x": args.include_rc3x,
             "completed_layer": completed_layer,
             "history_rank": result.basis.rank,
             "remainder_bits": result.basis.remainder(TARGET).bit_count(),

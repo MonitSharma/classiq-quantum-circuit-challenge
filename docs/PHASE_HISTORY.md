@@ -84,6 +84,15 @@ five-layer search reached rank 22 at estimated forward depth 35, but did not
 enter the logo span. Its checkpointed result is under
 `artifacts/phase_history/parallel_seed7_b8_l5/`.
 
+RC3X calibration is also recorded in
+`artifacts/phase_history/rcccx_layer_calibration.json`: one through four
+disjoint RC3X gates each serialize to depth 13, with 6, 12, 18, and 24 CX
+gates respectively. A mixed RCCX/RC3X beam run (beam 24, six layers, three-way
+parallel proposals, seed 303) stayed within estimated forward depth 78 but
+ended at rank 23 with greedy residual 1073 and no exact membership. Its
+checkpointed result is under
+`artifacts/phase_history/search_mixed_seed303_b24_l6_p3/`.
+
 ## ANF diagnostic
 
 `src/multiplicative_depth_analysis.py` computes the exact 12-variable ANF by
