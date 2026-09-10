@@ -644,3 +644,13 @@ frontier, still incomplete and not exhaustively verified as a phase oracle.
 The builder and metrics are
 `src/high_order_affine_fused_tail.py` and
 `artifacts/destructive_semantic/high_order_affine_fused_tail.metrics.json`.
+
+An exhaustive monomial continuation scan from residual 323 found no
+improvement through five controls. A six-control update,
+`q11 ^= q1q2q3q4q9q14`, lowers the exact affine residual to 315, but a
+two-workspace relative-phase lowering compiles to depth 131 / 97 CX. It is
+therefore a semantic improvement rejected by the native-depth objective; the
+measurement is retained in
+`artifacts/destructive_semantic/high_order_affine_six_control_probe.metrics.json`.
+Reusing the q2q3 partial product across earlier q12 corrections was also
+tested and remained depth 102 / 72 CX.
