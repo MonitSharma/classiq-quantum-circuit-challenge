@@ -396,6 +396,34 @@ def score_state(state: State) -> tuple[int, int, int, str]:
     return exact, state.residual, state.estimated_depth, semantic_hash(state.wires)
 
 
+def pareto_select(states: list[State], limit: int) -> list[State]:
+    """Keep residual/depth non-dominated states, then fill by normal score."""
+    if len(states) <= limit:
+        return sorted(states, key=score_state)
+    ordered = sorted(states, key=score_state)
+    pareto: list[State] = []
+    for state in ordered:
+        dominated = any(
+            other.residual <= state.residual
+            and other.estimated_depth <= state.estimated_depth
+            and (other.residual < state.residual
+                 or other.estimated_depth < state.estimated_depth)
+            for other in pareto
+        )
+        if not dominated:
+            pareto.append(state)
+    if len(pareto) >= limit:
+        return sorted(pareto, key=score_state)[:limit]
+    selected = {semantic_hash(state.wires) for state in pareto}
+    for state in ordered:
+        if len(pareto) >= limit:
+            break
+        if semantic_hash(state.wires) not in selected:
+            pareto.append(state)
+            selected.add(semantic_hash(state.wires))
+    return sorted(pareto, key=score_state)
+
+
 def proposal_gates(
     state: State,
     preserve_inputs: bool,
@@ -575,7 +603,7 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
            max_parallel: int = 1, exact_top: int = 0,
            affine_controls: bool = False, full_proxy_proposals: bool = False,
            resume: Path | None = None, biaffine_controls: bool = False,
-           double_rccx: bool = False):
+           double_rccx: bool = False, pareto_beam: bool = False):
     rng = random.Random(seed)
     start_layer = 0
     if resume is None:
@@ -649,10 +677,14 @@ def search(beam_width: int, layers: int, seed: int, preserve_inputs: bool,
                     if old is None or score_state(child) < score_state(old):
                         children[key] = child
             if len(children) > beam_width * 32:
-                kept = sorted(children.values(), key=score_state)[:beam_width * 16]
+                if pareto_beam:
+                    kept = pareto_select(list(children.values()), beam_width * 16)
+                else:
+                    kept = sorted(children.values(), key=score_state)[:beam_width * 16]
                 children = {semantic_hash(item.wires): item for item in kept}
         candidates = refine_exact_leaders(list(children.values()), exact_top)
-        beam = sorted(candidates, key=score_state)[:beam_width]
+        beam = (pareto_select(candidates, beam_width) if pareto_beam
+                else sorted(candidates, key=score_state)[:beam_width])
         if not beam:
             break
         if score_state(beam[0]) < score_state(best):
@@ -706,6 +738,11 @@ def main() -> None:
         action="store_true",
         help="use bounded two-RCCX lookahead moves",
     )
+    parser.add_argument(
+        "--pareto-beam",
+        action="store_true",
+        help="retain residual/depth non-dominated beam states",
+    )
     parser.add_argument("--proxy-order", type=int, choices=[2, 3], default=2)
     parser.add_argument("--out", default="artifacts/destructive_semantic")
     args = parser.parse_args()
@@ -723,7 +760,8 @@ def main() -> None:
         args.beam, args.layers, args.seed, args.preserve_inputs,
         out / "checkpoints", args.proposal_limit, args.max_parallel,
         args.exact_top, args.affine_controls, args.full_proxy_proposals,
-        args.resume, args.biaffine_controls, args.double_rccx)
+        args.resume, args.biaffine_controls, args.double_rccx,
+        args.pareto_beam)
     payload = {
         "seed": args.seed,
         "beam_width": args.beam,
@@ -737,6 +775,7 @@ def main() -> None:
         "resume": str(args.resume) if args.resume else None,
         "biaffine_controls": args.biaffine_controls,
         "double_rccx": args.double_rccx,
+        "pareto_beam": args.pareto_beam,
         "proxy_order": args.proxy_order,
         "completed_layer": completed_layer,
         "target_marked_states": TARGET.bit_count(),

@@ -159,3 +159,11 @@ depth 88 and 52 CX gates. This crosses the nominal forward-depth screening
 threshold, but it is not a classifier: the target wire still mismatches 581
 of 4,096 inputs, so no phase oracle was constructed or verified. Evidence is
 in `artifacts/destructive_semantic/double_resume_b16x10_p4.metrics.json`.
+
+The optional `--pareto-beam` selector now retains residual/depth
+non-dominated states before filling the beam by the normal score. This is the
+requested schedulability safeguard: a state can survive because it is
+shallower even when its residual is slightly worse. On the beam-16,
+double-RCCX layer-10 control it reproduced residual 581 and compiled depth 88,
+with no improvement for seed 524. Evidence is in
+`artifacts/destructive_semantic/double_pareto_b16x10_p4.metrics.json`.
