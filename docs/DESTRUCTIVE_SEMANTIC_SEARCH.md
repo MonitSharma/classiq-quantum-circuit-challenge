@@ -701,3 +701,11 @@ semantic result is residual 331 from a depth-107 base; the current fused
 candidate remains depth 102 with residual 323. The representative basin
 measurements are in
 `artifacts/destructive_semantic/base_basin_correction_scan.metrics.json`.
+
+Persistent linear basis changes were tested explicitly as two-step sequences.
+CX→RCCX and RCCX→CX neighborhoods covered 590,944 and 749,088 nontrivial
+sequences respectively; neither produced an affine-span proxy improvement
+below 323. This closes the shallow persistent-CX escape around the current
+state, but does not rule out deeper linear/nonlinear schedules. Measurements
+are in
+`artifacts/destructive_semantic/residual323_persistent_cx_screens.metrics.json`.
