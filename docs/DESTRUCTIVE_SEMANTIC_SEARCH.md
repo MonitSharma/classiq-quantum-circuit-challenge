@@ -320,6 +320,14 @@ existing direct-target residual-501 frontier and remains an incomplete
 classifier; its exact history is recorded in
 `artifacts/destructive_semantic/direct_triple_seed2024_b16x4_p4.metrics.json`.
 
+Higher-order primitive screening was also performed from the corrected
+direct-target residual-501 state. An exhaustive one-step scan of all 9,780
+legal three-control-X updates found no direct-target or affine-residual
+improvement: the best result remained 501 mismatches. The scan is recorded in
+`artifacts/destructive_semantic/mcx3_residual501_one_step.metrics.json`; a
+larger order-3 beam was stopped after its scoring cost grew without producing
+a better state.
+
 The separate non-Abelian phase-computer direction now has a finite-group
 prototype in `src/nonabelian_branch_search.py`. It constructs and checks the
 120-element binary icosahedral multiplication table, then evaluates a
