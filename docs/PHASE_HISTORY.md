@@ -227,6 +227,14 @@ forward depth 84 and historical rank 22, but exact target membership remained
 false; product- and factor-hint coverage were both zero. The checkpointed
 frontier is retained as a reproducible negative diagnostic, not as an oracle.
 
+A broader continuation at
+`artifacts/phase_history/search_seed1002_b16_l10_p6/` used beam 16, proposal
+limit 24, six-way layers, RC3X proposals, and ten layers. It completed all
+checkpoints at estimated forward depth 102 and historical rank 25, but exact
+target membership and both rank-product/factor hint coverage remained zero.
+This confirms that simply widening the parallel higher-order beam does not
+solve the target under the current proposal/scoring model.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary
