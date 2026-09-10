@@ -595,3 +595,10 @@ candidate, still incomplete and not exhaustively verified as a phase oracle.
 The builder and metrics are
 `src/high_order_affine_parallel_chain.py` and
 `artifacts/destructive_semantic/high_order_affine_parallel_chain.metrics.json`.
+
+Finally, the remaining 339-point residual was passed to an exact bounded XAG
+solver over 15 usable semantic signals. Zero, one, and two AND-node models
+were proven unsatisfiable; the three-node model remained unknown after a
+60-second bounded solve. Thus there is no confirmed low-AND completion yet.
+The probe is recorded in
+`artifacts/destructive_semantic/high_order_affine_xag_probe.metrics.json`.
