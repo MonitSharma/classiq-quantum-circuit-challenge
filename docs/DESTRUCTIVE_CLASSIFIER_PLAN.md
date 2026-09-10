@@ -72,3 +72,17 @@ search opportunity, not a proof that a shallow classifier exists. The target
 leaderboard value is treated as unverified context; no rank or submission claim
 is made by this plan.
 
+## Initial semantic search result
+
+The semantic engine and verifier pipeline are now implemented in
+`src/destructive_semantic_search.py` and
+`src/verify_destructive_classifier.py`. A deterministic beam-128 run with 48
+proposals per state reached nonlinear layer 13 before the next expansion hit
+the current memory limit. Its best saved state had affine residual 501 at an
+estimated forward depth 36. The state used original coordinate wires as RCCX
+targets, confirming that destructive mode is active. No affine completion or
+complete oracle has been found yet.
+
+Layer checkpoints are retained under `artifacts/destructive_semantic/`. The
+next implementation task is to reduce state memory and add disjoint RCCX layer
+generation before increasing the beam.
