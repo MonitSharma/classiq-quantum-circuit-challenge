@@ -1534,3 +1534,7 @@ Exhaustive verification covered all 4,096 inputs with max error
 `1.044782897852009e-12`. This is the strongest verified destructive
 completion currently measured, though it remains noncompetitive; the protected
 fallback is unchanged.
+
+## Latest verified circuit-level peephole improvement (September 10, 2026)
+
+The exact nineteenth-pass oracle was rewritten with `pytket.FullPeepholeOptimise` and re-lowered through Qiskit with `qubits_initially_zero=False`. The reproducible driver is `src/pytket_peephole_oracle.py`; the rewritten QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves19_peephole.qasm` with SHA256 `502aa04caca19427f733d6e2dc1c4b7ce8e0951d41b283f17e36c6bddcf39228`. It measures **6,769/5,693** depth/CX, improving the prior **6,780/5,697**. Its matching exhaustive report checks all 4,096 inputs with max error `1.4220683945409565e-13`, ancilla error `6.799055944770995e-15`, discarded-amplitude bound `2.4809831634384518e-12`, and peak sparse support 128. This is the strongest verified result currently measured, but remains noncompetitive and does not establish rank 1.

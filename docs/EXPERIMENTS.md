@@ -2322,3 +2322,7 @@ Exhaustive verification covered all 4,096 inputs with max error
 `8.731663258757493e-14`, zero ancilla error, discarded-amplitude bound
 `1.0416137327337738e-12`, and peak sparse support 256. This is a verified
 improvement within the destructive ESOP family, not a rank-1 result.
+
+## Verified pytket peephole rewrite of the complete oracle (September 10, 2026)
+
+`pytket.FullPeepholeOptimise` was applied to the exact serialized nineteenth-pass oracle, then the result was re-lowered through Qiskit to the required `u3`/`cx` basis. The reproducible driver is `src/pytket_peephole_oracle.py`; the rewritten QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves19_peephole.qasm` with SHA256 `502aa04caca19427f733d6e2dc1c4b7ce8e0951d41b283f17e36c6bddcf39228`. It improves the oracle from **6,780/5,697** to **6,769/5,693** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `1.4220683945409565e-13`, ancilla error `6.799055944770995e-15`, discarded-amplitude bound `2.4809831634384518e-12`, and peak sparse support 128. This is a verified circuit-level improvement, but remains noncompetitive and does not establish rank 1.
