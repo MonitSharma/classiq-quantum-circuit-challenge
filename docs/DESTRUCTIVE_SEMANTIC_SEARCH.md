@@ -1151,3 +1151,16 @@ depth/CX. A separate all-position screen for the affine q11-to-q12 CNOT
 found no depth improvement: all placements were 6,780 depth, with the best
 5,697 CX. These are negative diagnostics; the verified pytket artifact above
 remains authoritative and no new artifact was retained.
+
+## Invertible CNOT-basis ESOP screen
+
+The v6 prefix was given a six-CNOT invertible basis change on non-target chart
+wires before the exact ESOP correction, followed by its inverse. This produced
+an exact 73-cube/648-literal classifier. The reproducible implementation is
+`src/destructive_linear_basis_esop.py`; the verified QASM is
+`artifacts/destructive_semantic/destructive_linear_basis_esop.qasm`, with
+SHA256 `94849390470797d1d6be68ccc5331e4df321cc4db4decadee69232be987c1518`.
+It measured **7,602/6,373** depth/CX and passed all 4,096 inputs with maximum
+error `1.0331411199642256e-13` and zero ancilla leakage. A 120-move order
+screen reached 7,298/6,189, still above the 6,769/5,693 verified best, so this
+is a retained negative experiment rather than a replacement.

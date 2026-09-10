@@ -2339,3 +2339,21 @@ the fixed nineteenth-pass cube order. Every position produced 6,780 depth;
 the best was 5,697 CX, equal to the pre-pytket baseline. Neither screen
 improves the verified pytket result at 6,769/5,693, and no candidate was
 retained or pushed.
+
+## Destructive invertible CNOT-basis ESOP (September 11, 2026)
+
+The v6 classifier was followed by a six-CNOT invertible basis change on the
+non-target chart wires, exact Espresso/intersection-span completion in that
+basis, and the inverse six-CNOT change. The semantic classifier was exact with
+73 ESOP cubes and 648 literals. The reproducible builder is
+`src/destructive_linear_basis_esop.py`; its serialized complete oracle is
+`artifacts/destructive_semantic/destructive_linear_basis_esop.qasm`, SHA256
+`94849390470797d1d6be68ccc5331e4df321cc4db4decadee69232be987c1518`.
+
+The default order measured **7,602/6,373** depth/CX and passed exhaustive
+verification on all 4,096 inputs with maximum error
+`1.0331411199642256e-13`, zero ancilla leakage, and discarded-amplitude bound
+`1.186644211467845e-12`. A bounded 120-move insertion/reversal screen reached
+**7,298/6,189**, still worse than the verified 6,769/5,693 pytket result. This
+architecture is retained as a verified negative result; no best-artifact
+replacement was made.
