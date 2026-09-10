@@ -596,6 +596,14 @@ The builder and metrics are
 `src/high_order_affine_parallel_chain.py` and
 `artifacts/destructive_semantic/high_order_affine_parallel_chain.metrics.json`.
 
+A v2 correction sequence replaces the first five-control block with the
+four-control update `q12 ^= q2q3q4q11`. It preserves the same residual 339 and
+depth 98, while reducing the compiled CX count from 72 to 66. Both q13 and
+q17 remain clean and are restored. This is the current best depth/CX-screened
+incomplete candidate; its builder and metrics are
+`src/high_order_affine_parallel_chain_v2.py` and
+`artifacts/destructive_semantic/high_order_affine_parallel_chain_v2.metrics.json`.
+
 Finally, the remaining 339-point residual was passed to an exact bounded XAG
 solver over 15 usable semantic signals. Zero, one, and two AND-node models
 were proven unsatisfiable; the three-node model remained unknown after a
