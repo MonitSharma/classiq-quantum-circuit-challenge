@@ -1,19 +1,19 @@
 {
-  "input_qasm": "/private/tmp/destructive_dc_esop_order9.qasm",
-  "input_qasm_sha256": "3dac967d5eba630c114562a264f63adb9438aa3b156d96f57f4be5622a6f1a12",
+  "input_qasm": "/private/tmp/destructive_dc_esop_order10.qasm",
+  "input_qasm_sha256": "f5d09aa82d3411cd380cfa30e2985a2b5fa092d7641c7a71d61eafeb8c11a8c1",
   "rewrite": "pytket.FullPeepholeOptimise",
   "input_pytket": {
-    "depth": 6185,
-    "gate_count": 14035,
-    "cx_count": 5901
+    "depth": 6179,
+    "gate_count": 14031,
+    "cx_count": 5903
   },
   "rewritten_pytket": {
-    "depth": 6173,
-    "gate_count": 13172,
-    "cx_count": 5897
+    "depth": 6167,
+    "gate_count": 13174,
+    "cx_count": 5899
   },
-  "compiled_forward_depth": 6173,
-  "compiled_forward_cx": 5897,
+  "compiled_forward_depth": 6167,
+  "compiled_forward_cx": 5899,
   "transpilation": {
     "basis_gates": [
       "u3",
@@ -23,5 +23,5 @@
     "optimization_level": 3,
     "seed_transpiler": 0
   },
-  "oracle_qasm_sha256": "7bf6b5ed4480be32a2d2db40a987c23424f64ac4c07884a846fff3057ed03139"
+  "oracle_qasm_sha256": "5c9b095bf8d9da10e82f71aa8d4335955eab89b040cab85106197d50f8b9f651"
 }
