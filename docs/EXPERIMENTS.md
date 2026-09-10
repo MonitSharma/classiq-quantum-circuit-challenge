@@ -2416,3 +2416,13 @@ Pytket rewriting produced the promoted **6,312/6,109** QASM. Its SHA256 is
 Exhaustive verification covered all 4,096 inputs with maximum error
 `8.086090488533998e-14`, ancilla error `6.3083655384282156e-15`, discarded
 amplitude bound `3.853277459843223e-12`, and peak sparse support 512.
+
+## Destructive don't-care ESOP order continuation V (September 11, 2026)
+
+A sixth deterministic continuation (300 insertion/reversal moves, seed
+`20260918`) reduced the pre-peephole oracle to **6,256/5,977** depth/CX.
+Pytket rewriting produced the promoted **6,244/5,973** QASM. Its SHA256 is
+`907880ee29d873b3d95b52126a75f3508053b854454cb1f54e55d615e210528f`.
+Exhaustive verification covered all 4,096 inputs with maximum error
+`8.093769516197772e-14`, ancilla error `7.591599188635633e-15`, discarded
+amplitude bound `3.848397947580044e-12`, and peak sparse support 512.
