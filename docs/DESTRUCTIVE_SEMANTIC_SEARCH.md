@@ -1164,3 +1164,17 @@ It measured **7,602/6,373** depth/CX and passed all 4,096 inputs with maximum
 error `1.0331411199642256e-13` and zero ancilla leakage. A 120-move order
 screen reached 7,298/6,189, still above the 6,769/5,693 verified best, so this
 is a retained negative experiment rather than a replacement.
+
+## Reachable-state don't-care ESOP completion
+
+EXORCISM was given the 15-wire v6 semantic chart, constraining the 4,096
+reachable states and marking the other chart states as don't-cares. The exact
+53-cube/694-literal cover was ordered against the complete oracle; the
+reproducible builder is `src/destructive_dc_esop.py`. The pre-peephole oracle
+measured 6,739/6,495 depth/CX. The promoted pytket-rewritten QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`0ce30d3b5d95a4ed8d09738d5fe14a202192b751677b9c963a85ea6e36e87e9f`, at
+**6,727/6,491** depth/CX. Exhaustive verification covered all 4,096 inputs,
+with maximum error `1.051782074333784e-13` and ancilla error
+`7.217861607583946e-15`. This is the current verified destructive best, not a
+rank-1 result.

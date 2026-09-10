@@ -2357,3 +2357,21 @@ verification on all 4,096 inputs with maximum error
 **7,298/6,189**, still worse than the verified 6,769/5,693 pytket result. This
 architecture is retained as a verified negative result; no best-artifact
 replacement was made.
+
+## Destructive reachable-state don't-care ESOP (September 11, 2026)
+
+The v6 residual was encoded over all 15 reachable semantic chart wires, with
+the 28,672 unreachable chart states marked as don't-cares for EXORCISM. The
+resulting exact cover used 53 cubes and 694 literals. A 160-move
+complete-oracle insertion/reversal search produced a serialized oracle at
+**6,739/6,495** depth/CX. Applying `pytket.FullPeepholeOptimise` reduced the
+exact QASM to **6,727/6,491**, currently the best destructive-branch depth.
+
+The reproducible builder is `src/destructive_dc_esop.py`; the promoted QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`0ce30d3b5d95a4ed8d09738d5fe14a202192b751677b9c963a85ea6e36e87e9f`. Its
+matching exhaustive report covers all 4,096 inputs with maximum error
+`1.051782074333784e-13`, ancilla error `7.217861607583946e-15`, discarded
+amplitude bound `4.39671084432726e-12`, and peak sparse support 512. This is a
+verified improvement, but it remains far above the historical leaderboard
+range and does not establish rank 1.
