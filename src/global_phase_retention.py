@@ -35,12 +35,38 @@ class CombinedGraph:
         self.nodes = nodes
 
 
-def _remap_form(form: frozenset[int], term: int) -> frozenset[int]:
-    # Keep original coordinate signals and the constant marker unchanged.
-    return frozenset(
-        value if value < 12 else 10000 * (term + 1) + value
-        for value in form
-    )
+SIDE_MASK = (1 << 64) - 1
+
+
+def _signal_table(signal: int) -> int:
+    if signal == -1:
+        return SIDE_MASK
+    if signal < 6:
+        return sum(1 << value for value in range(64) if (value >> signal) & 1)
+    if signal < 12:
+        bit = signal - 6
+        return sum(1 << value for value in range(64) if (value >> bit) & 1)
+    raise ValueError(signal)
+
+
+def _node_table(graph, node: int, memo: dict[int, int]) -> int:
+    if node in memo:
+        return memo[node]
+    left, right = graph.nodes[node]
+
+    def form_table(form):
+        result = 0
+        for signal in form:
+            if signal == -1:
+                result ^= SIDE_MASK
+            elif signal < 12:
+                result ^= _signal_table(signal)
+            else:
+                result ^= _node_table(graph, signal, memo)
+        return result
+
+    memo[node] = form_table(left) & form_table(right)
+    return memo[node]
 
 
 def build_global(cache: dict, terms: list[list[int]]):
@@ -48,27 +74,54 @@ def build_global(cache: dict, terms: list[list[int]]):
     edges: set[tuple[int, int]] = set()
     constant = False
     per_term = []
+    canonical: dict[tuple[str, int], int] = {}
+    next_canonical = 20000
     for term_index, (x_table, y_table) in enumerate(terms):
         graph, x_root, y_root, representation = make_pair_graph(
             x_table, y_table, cache
         )
-        remapped_nodes = {
-            10000 * (term_index + 1) + node: (
-                _remap_form(left, term_index),
-                _remap_form(right, term_index),
+        memo: dict[int, int] = {}
+        raw_to_canonical: dict[int, int] = {}
+        # Graph construction numbers dependencies before their users.  The
+        # recursive table evaluator also handles the fallback graphs safely.
+        for node in sorted(graph.nodes):
+            if node < 12:
+                continue
+            table = _node_table(graph, node, memo)
+            side = "x" if node < 100 else "y"
+            key = (side, table)
+            if key not in canonical:
+                canonical[key] = next_canonical
+                next_canonical += 1
+            raw_to_canonical[node] = canonical[key]
+
+        def remap_form(form):
+            return frozenset(
+                value if value < 12 else raw_to_canonical[value]
+                for value in form
             )
+
+        remapped_nodes = {
+            raw_to_canonical[node]: (remap_form(left), remap_form(right))
             for node, (left, right) in graph.nodes.items()
             if node >= 12
         }
-        nodes.update(remapped_nodes)
-        rx = frozenset(
-            value if value < 12 else 10000 * (term_index + 1) + value
-            for value in x_root
-        )
-        ry = frozenset(
-            value if value < 12 else 10000 * (term_index + 1) + value
-            for value in y_root
-        )
+        # Equivalent truth tables should have identical definitions.  The
+        # assertion catches accidental cross-side or hash-key collisions.
+        for node, definition in remapped_nodes.items():
+            prior = nodes.get(node)
+            if prior is not None and prior != definition:
+                raise AssertionError("canonical node has inconsistent definition")
+            nodes[node] = definition
+
+        def remap_root(root):
+            return frozenset(
+                value if value < 12 else raw_to_canonical[value]
+                for value in root
+            )
+
+        rx = remap_root(x_root)
+        ry = remap_root(y_root)
         term_edges, term_constant = phase_edges(rx, ry)
         for edge in term_edges:
             # Phase terms add over GF(2), so duplicate edges cancel globally.

@@ -1353,3 +1353,9 @@ the protected 524/950 oracle: global lifetime retention alone does not remove
 enough nonlinear work. The QASM was not promoted or retained in the repository;
 the exact SHA is recorded in
 `artifacts/destructive_semantic/global_phase_retention.metrics.json`.
+
+An exact 64-state canonicalization pass then attempted to merge equivalent
+nonlinear X/Y nodes across terms before scheduling. It found no merge: all 91
+nodes had distinct side-qualified truth tables, and the resulting serialized
+candidate was byte-identical. Thus this rank-term basis has no latent
+cross-term sharing for the retention scheduler to exploit.
