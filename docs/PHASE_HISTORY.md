@@ -58,6 +58,32 @@ No full-logo phase-history candidate has yet entered the exact historical span.
 The protected baseline remains untouched at depth 524, 950 CX, SHA
 `7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147`.
 
+The first bounded single-RCCX history searches (beam 16, proposal limit 48,
+eight layers, seeds 1 and 42) both ended without membership. Their best
+historical rank was 19 and their greedy target residual was 917; the exact
+Gaussian remainder remained 1097. These are diagnostic negative results, not
+evidence against phase-history synthesis. They show that the first serial
+proposal heuristic is not finding sufficiently diverse target-correlated
+nonlinear signals.
+
+The native calibration confirms that disjoint RCCX layers are genuinely
+parallel under the required transpilation settings:
+
+| Disjoint RCCX count | Serialized depth | CX |
+|---:|---:|---:|
+| 1 | 7 | 3 |
+| 2 | 7 | 6 |
+| 3 | 7 | 9 |
+| 4 | 7 | 12 |
+| 5 | 7 | 15 |
+| 6 | 7 | 18 |
+
+The calibration is saved in
+`artifacts/phase_history/rccx_layer_calibration.json`. A first two-wide,
+five-layer search reached rank 22 at estimated forward depth 35, but did not
+enter the logo span. Its checkpointed result is under
+`artifacts/phase_history/parallel_seed7_b8_l5/`.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary

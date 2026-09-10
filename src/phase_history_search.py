@@ -172,6 +172,11 @@ class HistoricalBasis:
 
 def apply_gate_semantic(wires: tuple[int, ...], gate: Gate) -> tuple[int, ...]:
     kind = gate[0]
+    if kind == "layer":
+        out = wires
+        for primitive in gate[1]:
+            out = apply_gate_semantic(out, primitive)
+        return out
     if kind == "x":
         out = list(wires)
         out[gate[1]] ^= ALL_ONES
@@ -205,7 +210,15 @@ def replay_history(
         if wires == before:
             snapshots.append(wires)
             continue
-        if gate[0] == "x":
+        if gate[0] == "layer":
+            touched_targets = tuple(
+                primitive[1] if primitive[0] == "x" else
+                primitive[2] if primitive[0] == "cx" else
+                primitive[3] if primitive[0] == "rccx" else
+                primitive[4]
+                for primitive in gate[1]
+            )
+        elif gate[0] == "x":
             touched_targets = (gate[1],)
         elif gate[0] == "cx":
             touched_targets = (gate[2],)
@@ -246,6 +259,11 @@ def gates_from_circuit(circuit: QuantumCircuit) -> tuple[Gate, ...]:
 
 def _append_gate(circuit: QuantumCircuit, gate: Gate, inverse: bool = False) -> None:
     kind = gate[0]
+    if kind == "layer":
+        primitives = reversed(gate[1]) if inverse else gate[1]
+        for primitive in primitives:
+            _append_gate(circuit, primitive, inverse=inverse)
+        return
     if kind == "x":
         circuit.x(gate[1])
     elif kind == "cx":
@@ -372,12 +390,38 @@ def history_proposals(
     return [(a, b, target) for _, _, _, a, b, target in proposals[:limit]]
 
 
+def history_layer_proposals(
+    state: HistoryState, limit: int, max_parallel: int, rng: random.Random,
+) -> list[tuple[Gate, ...]]:
+    singles = history_proposals(state, max(limit * 3, 24), rng)
+    layers: list[tuple[Gate, ...]] = []
+    seen: set[tuple[Gate, ...]] = set()
+    for index, first in enumerate(singles):
+        selected = [("rccx", *first)]
+        used = set(first)
+        for second in singles[index + 1:]:
+            if used.isdisjoint(second):
+                selected.append(("rccx", *second))
+                used.update(second)
+                if len(selected) >= max_parallel:
+                    break
+        for width in range(1, len(selected) + 1):
+            layer = tuple(selected[:width])
+            if layer not in seen:
+                seen.add(layer)
+                layers.append(layer)
+    rng.shuffle(layers)
+    layers.sort(key=lambda layer: (-len(layer), layer))
+    return layers[:limit]
+
+
 def search_history(
     beam_width: int = 16,
     layers: int = 4,
     proposal_limit: int = 64,
     seed: int = 0,
     checkpoint_dir: Path | None = None,
+    max_parallel: int = 1,
 ) -> tuple[HistoryState, int]:
     """Run a small deterministic history-span beam search.
 
@@ -391,8 +435,20 @@ def search_history(
     for layer in range(1, layers + 1):
         children: list[HistoryState] = []
         for state in beam:
-            for a, b, target in history_proposals(state, proposal_limit, rng):
-                gates = state.gates + (("rccx", a, b, target),)
+            if max_parallel > 1:
+                proposals = history_layer_proposals(
+                    state, proposal_limit, max_parallel, rng
+                )
+            else:
+                proposals = [
+                    (("rccx", a, b, target),)
+                    for a, b, target in history_proposals(
+                        state, proposal_limit, rng
+                    )
+                ]
+            for layer_gates in proposals:
+                gate = layer_gates[0] if len(layer_gates) == 1 else ("layer", layer_gates)
+                gates = state.gates + (gate,)
                 child = history_state(gates, layer * 7)
                 children.append(child)
         children.sort(key=history_score)
@@ -428,6 +484,7 @@ def main() -> None:
     parser.add_argument("--beam", type=int, default=16)
     parser.add_argument("--layers", type=int, default=4)
     parser.add_argument("--proposal-limit", type=int, default=64)
+    parser.add_argument("--max-parallel", type=int, default=1)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--checkpoint-dir", type=Path)
     parser.add_argument("--out", type=Path,
@@ -440,6 +497,7 @@ def main() -> None:
             proposal_limit=args.proposal_limit,
             seed=args.seed,
             checkpoint_dir=args.checkpoint_dir or args.out / "checkpoints",
+            max_parallel=args.max_parallel,
         )
         args.out.mkdir(parents=True, exist_ok=True)
         payload = {
@@ -448,6 +506,7 @@ def main() -> None:
             "beam_width": args.beam,
             "layers": args.layers,
             "proposal_limit": args.proposal_limit,
+            "max_parallel": args.max_parallel,
             "completed_layer": completed_layer,
             "history_rank": result.basis.rank,
             "remainder_bits": result.basis.remainder(TARGET).bit_count(),

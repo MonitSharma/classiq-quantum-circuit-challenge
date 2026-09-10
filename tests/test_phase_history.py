@@ -81,6 +81,13 @@ class PhaseHistoryTests(unittest.TestCase):
             expected = state * expected_phase
             self.assertTrue(result.equiv(expected), basis_index)
 
+    def test_disjoint_layer_semantics(self):
+        gates = (("layer", (("rccx", 0, 1, 2), ("rccx", 3, 4, 5))),)
+        final, _, snapshots = replay_history(gates)
+        self.assertEqual(len(snapshots), 2)
+        initial = initial_wire_truth_tables()
+        self.assertEqual(final[2], initial[2] ^ (initial[0] & initial[1]))
+
 
 if __name__ == "__main__":
     unittest.main()
