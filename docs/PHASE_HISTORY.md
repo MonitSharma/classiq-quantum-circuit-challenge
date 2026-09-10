@@ -156,6 +156,15 @@ CX (SHA
 conceptual sharing gain is overwhelmed by dirty-MCX lowering cost, so this
 implementation is closed as a negative direction.
 
+Bounded pytket post-processing (`FullPeepholeOptimise` and `CliffordSimp`) was
+also applied to the 2380-depth seed. The best fresh QASM,
+`artifacts/phase_history/rank_product_seed_tket.qasm`, remained depth 2380
+but reduced CX to 1525. It passed exhaustive verification with zero ancilla
+leakage; SHA
+`9e5dc7c1c5b3559ae23c0119ec61564d1b9736e469efb1a3b6ee852a03b06882`.
+Because depth did not improve, generic pytket post-processing is closed for
+this seed.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary
