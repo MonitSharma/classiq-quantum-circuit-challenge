@@ -140,3 +140,13 @@ remain incomplete midpoint classifiers.
 A seed-1 beam of 64 states found a depth-90 candidate with residual 403 and
 46 CX gates. This improves the current depth/residual Pareto point, but 403
 midpoint inputs still mismatch and no complete oracle has been verified.
+
+Resuming the seed-1 beam one additional layer produced residual 379 at
+compiled forward depth 84 with 48 CX gates. This is the current best
+depth/residual heuristic point, but 379 midpoint inputs still mismatch and no
+complete phase oracle has been constructed or verified.
+
+The next seed-1 beam layer reduced the residual to 359, with compiled forward
+depth 107 and 56 CX gates. This is a lower-residual but deeper Pareto point;
+the depth-84/residual-379 candidate remains the shallow frontier point. Both
+still fail midpoint classification and are not verified oracles.

@@ -198,3 +198,16 @@ gates, improving the depth-91 Pareto point while reducing CX count. The
 midpoint target still mismatches 403 inputs, so this remains a heuristic
 candidate only. Its exact gate history and semantic hash are preserved in
 `artifacts/destructive_semantic/double_seed1_b64x8_p4_depth90.json`.
+
+Resuming the beam-64 seed-1 checkpoint for one additional layer produced a
+stronger candidate: residual 379 with compiled forward depth 84 and 48 CX
+gates. This dominates the earlier depth-90 point while retaining the same
+residual quality. The target still mismatches 379 inputs, so this is not yet a
+classifier or phase oracle. Its exact gate history is preserved in
+`artifacts/destructive_semantic/double_seed1_b64x9_p4_depth84.json`.
+
+One further layer of the same beam reduced the residual to 359. The
+residual-first 20-RCCX history compiled to depth 107 and 56 CX gates, so it is
+not a replacement for the shallow depth-84/residual-379 point; together they
+form the current measured Pareto frontier. The residual-359 history is
+preserved in `artifacts/destructive_semantic/double_seed1_b64x10_p4_residual359.json`.
