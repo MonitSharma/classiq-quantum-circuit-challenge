@@ -177,6 +177,12 @@ incomplete: 429 midpoint inputs mismatch and no conjugated oracle was built or
 verified. Evidence is in
 `artifacts/destructive_semantic/double_seed1_b16x10_p4.metrics.json`.
 
+The same seed-1 beam also retained a depth-favorable Pareto state with
+residual 383. Its standalone compiled forward circuit measured depth 91 and
+58 CX gates, making it preferable for depth screening to the residual-379
+state at depth 112. The complete gate history and semantic hash are preserved
+in `artifacts/destructive_semantic/double_seed1_b32x10_p4_pareto_depth91.json`.
+
 Guided semantic proposals are available behind `--guided-hints`. The loader
 converts 30 existing x/y rank-factor truth tables into 12-variable truth-table
 hints; these only affect proposal ordering and never constrain a physical wire

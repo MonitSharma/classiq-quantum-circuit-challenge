@@ -131,3 +131,8 @@ Seed 1 with the double-RCCX move set reached residual 429 at layer 10. Its
 20-RCCX history compiled to forward depth 92 and 58 CX gates, but 429 midpoint
 inputs still mismatch. This is a strong heuristic screening result, not a
 complete classifier or verified phase oracle.
+
+The wider seed-1 beam also retained a Pareto candidate with residual 383 and
+compiled forward depth 91 (58 CX gates). The residual-379 state was deeper at
+112, so the residual-383 candidate is the better depth-screening point. Both
+remain incomplete midpoint classifiers.
