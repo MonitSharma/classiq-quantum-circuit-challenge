@@ -2,6 +2,17 @@
   "experiment": "final targeted continuation of direct-wire seed-2024 basin",
   "seed": 6060,
   "base_artifact": "direct_wire_seed2024_extended.metrics.json",
+  "intermediate_gates_after_base": [
+    ["rccx", 0, 13, 11],
+    ["rccx", 2, 13, 14],
+    ["rccx", 0, 13, 11],
+    ["rccx", 0, 13, 14],
+    ["rccx", 0, 14, 11],
+    ["rccx", 0, 14, 11],
+    ["rccx", 4, 12, 13],
+    ["rccx", 1, 13, 14],
+    ["rccx", 0, 14, 11]
+  ],
   "additional_gates": [
     ["rccx", 0, 13, 11],
     ["rccx", 2, 14, 13],
