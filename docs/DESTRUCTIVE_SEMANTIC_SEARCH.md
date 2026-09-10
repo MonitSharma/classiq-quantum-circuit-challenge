@@ -1270,3 +1270,17 @@ The selected state is preserved in
 `artifacts/destructive_semantic/combo_seed20260926_b32x8_p8.json`.
 This is a new destructive semantic trajectory, not a classifier or oracle;
 no QASM was promoted.
+
+## Exact ESOP completion screen (September 11, 2026)
+
+The saved residual-501 prefix was given an exact reachable-state correction
+using a 17-input ESOP cover generated from the current midpoint wires. The
+cover had 70 cubes and 983 literals and replayed with zero mismatches on all
+4,096 reachable states. High-control cubes were lowered with Qiskit's
+one-dirty-ancilla MCX synthesis where possible, falling back to the no-auxiliary
+decomposition for 17 controls. The resulting classifier compiled to depth
+34,985 and the complete conjugated oracle to depth **69,848** with 40,908 CX
+gates. This is functionally exact on the reachable classifier states but not
+competitive with the protected 6,152/5,889 oracle, so it was not promoted.
+Metrics are in
+`artifacts/destructive_semantic/saved_prefix_esop_completion.metrics.json`.
