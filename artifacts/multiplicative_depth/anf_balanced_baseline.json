@@ -1,0 +1,35 @@
+{
+  "target": {
+    "variables": 12,
+    "points": 4096,
+    "marked_points": 1097,
+    "truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1"
+  },
+  "anf_terms_by_degree": {
+    "6": 192,
+    "5": 119,
+    "7": 215,
+    "8": 159,
+    "9": 90,
+    "4": 52,
+    "10": 30,
+    "3": 18,
+    "2": 4,
+    "11": 6,
+    "12": 1
+  },
+  "network": {
+    "exact": true,
+    "and_count": 5096,
+    "multiplicative_depth": 4,
+    "and_layer_widths": [
+      2767,
+      1390,
+      812,
+      127
+    ],
+    "nonlinear_live_width_estimate": 5096,
+    "max_fanout": 742,
+    "truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1"
+  }
+}

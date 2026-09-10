@@ -1,0 +1,35 @@
+{
+  "target_truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1",
+  "networks": {
+    "balanced_anf": {
+      "exact": true,
+      "and_count": 5096,
+      "multiplicative_depth": 4,
+      "and_layer_widths": [
+        2767,
+        1390,
+        812,
+        127
+      ],
+      "nonlinear_live_width_estimate": 5096,
+      "max_fanout": 742,
+      "truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1"
+    },
+    "shared_rank_formula": {
+      "exact": true,
+      "and_count": 97,
+      "multiplicative_depth": 6,
+      "and_layer_widths": [
+        29,
+        21,
+        20,
+        14,
+        10,
+        3
+      ],
+      "nonlinear_live_width_estimate": 97,
+      "max_fanout": 58,
+      "truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1"
+    }
+  }
+}
