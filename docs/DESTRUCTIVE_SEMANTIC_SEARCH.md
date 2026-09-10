@@ -889,3 +889,15 @@ Exhaustive verification covered all 4,096 inputs with max error
 `1.185645420639957e-13`, zero ancilla error, and discarded-amplitude bound
 `1.3819464577271947e-12`. This is the strongest verified destructive
 completion currently measured, though still noncompetitive.
+
+Reordering the 83 ESOP cubes by greedy shared-literal proximity further
+reduced the serialized classifier to **3,802 / 3,129** and the complete oracle
+to **7,534 / 6,195** depth/CX. The verified candidate is
+`src/high_order_affine_exact_esop_clean2_rel_ordered.py` with QASM
+`artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_ordered_oracle.qasm`
+and SHA256
+`c6a98ec8956db153e0dc263c6795907e864ae4a9e7e13cbadebdf8137292ea14`.
+Exhaustive verification covered all 4,096 inputs with max error
+`8.88692833082735e-14`, zero ancilla error, and discarded-amplitude bound
+`1.044782897852009e-12`. This is the strongest verified destructive
+completion currently measured, though still noncompetitive.
