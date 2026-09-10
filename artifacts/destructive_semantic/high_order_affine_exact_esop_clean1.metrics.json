@@ -1,0 +1,134 @@
+{
+  "experiment": "exact ESOP completion with restored clean q13",
+  "base_artifact": "double_seed42_b16x6_p4_depth59.json",
+  "base_affine_residual": 447,
+  "base_affine_combo": [
+    11,
+    12
+  ],
+  "corrections": [
+    [
+      11,
+      [
+        [
+          5,
+          false
+        ],
+        [
+          7,
+          true
+        ],
+        [
+          8,
+          true
+        ],
+        [
+          9,
+          false
+        ],
+        [
+          15,
+          true
+        ]
+      ]
+    ],
+    [
+      12,
+      [
+        2,
+        3,
+        4,
+        11
+      ]
+    ]
+  ],
+  "corrected_affine_residual": 0,
+  "corrected_affine_combo": [
+    11,
+    12
+  ],
+  "semantic_inputs_checked": 4096,
+  "midpoint_garbage_wires": [
+    13,
+    14,
+    16,
+    17
+  ],
+  "midpoint_garbage_nonzero": true,
+  "classifier_complete": true,
+  "oracle_exhaustively_verified": true,
+  "status": "exact classifier; restored-clean-q13 lowering candidate",
+  "additional_correction": [
+    [
+      14,
+      [
+        [
+          4,
+          false
+        ],
+        [
+          10,
+          false
+        ]
+      ]
+    ],
+    [
+      17,
+      [
+        8,
+        9
+      ]
+    ],
+    [
+      11,
+      [
+        14,
+        17,
+        16
+      ]
+    ]
+  ],
+  "esop_terms": 84,
+  "esop_chart_wires": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    14,
+    15,
+    16
+  ],
+  "mcx_synthesis": "synth_mcx_1_clean_kg24",
+  "clean_ancilla": 13,
+  "target_wire": 12,
+  "compiled_forward_depth": 7107,
+  "compiled_forward_cx": 3980,
+  "transpilation": {
+    "basis_gates": [
+      "u3",
+      "cx"
+    ],
+    "qubits_initially_zero": false,
+    "optimization_level": 3,
+    "seed_transpiler": 0
+  },
+  "oracle_depth": 14080,
+  "oracle_cx": 7886,
+  "oracle_qasm_sha256": "bb25d8dcd5245e5f795f6a46fd95173aa38c6025ed3a52f62af9fcd0fad2009a",
+  "exhaustive_verification": {
+    "basis_inputs_checked": 4096,
+    "max_error": 1.204108528388714e-13,
+    "ancilla_error": 5.711331530985915e-15,
+    "discarded_amplitude_bound": 1.852274578072021e-12,
+    "peak_sparse_support": 128,
+    "verification_sha256": "bb25d8dcd5245e5f795f6a46fd95173aa38c6025ed3a52f62af9fcd0fad2009a"
+  }
+}

@@ -1181,3 +1181,18 @@ Exhaustive verification covered all 4,096 basis inputs with max error
 `2.979403618689416e-13`, zero ancilla leakage, and discarded-amplitude bound
 `5.726332944000072e-12`. This is a correctness artifact, not a competitive
 candidate or leaderboard claim; the protected 524/950 fallback is unchanged.
+
+## Destructive clean-q13 ESOP continuation (September 10, 2026)
+
+Restoring q13 to zero after the v6 prefix enabled the one-clean-ancilla
+`synth_mcx_1_clean_kg24` construction for the exact ESOP cubes. The exact
+forward classifier is **7,107/3,980** depth/CX and the complete serialized
+oracle is **14,080/7,886**. The verified QASM is
+`artifacts/destructive_semantic/high_order_affine_exact_esop_clean1_oracle.qasm`
+with SHA256
+`bb25d8dcd5245e5f795f6a46fd95173aa38c6025ed3a52f62af9fcd0fad2009a`.
+Exhaustive verification covered all 4,096 basis inputs with max error
+`1.204108528388714e-13`, ancilla error `5.711331530985915e-15`, and
+discarded-amplitude bound `1.852274578072021e-12`. This is still
+noncompetitive, but it is the strongest exact destructive completion measured
+so far; the protected 524/950 fallback is unchanged.

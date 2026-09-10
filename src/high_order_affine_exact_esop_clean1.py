@@ -1,11 +1,4 @@
-"""Exact v6 classifier with a two-borrowed-ancilla MCX lowering.
-
-This is a separate candidate from ``high_order_affine_exact_esop``.  The
-Khattar--Gidney two-dirty-ancilla synthesis uses only RCCX/CCX primitives, so
-it remains a monomial reversible classifier while borrowing two wires that are
-not controls for each ESOP cube.  The borrowed wires are restored by the
-synthesis itself.
-"""
+"""Exact destructive ESOP classifier using one restored clean workspace wire."""
 
 from __future__ import annotations
 
@@ -16,53 +9,33 @@ import warnings
 from functools import lru_cache
 from pathlib import Path
 
-from qiskit import QuantumCircuit, qasm2, transpile
+from qiskit import qasm2, transpile
 from qiskit.circuit.library import MCXGate
-from qiskit.synthesis import synth_mcx_2_dirty_kg24
+from qiskit.synthesis import synth_mcx_1_clean_kg24
 
-from destructive_semantic_search import TARGET, initial_wire_truth_tables
+from destructive_semantic_search import TARGET
 from high_order_affine_exact_esop import CHART, exact_esop_terms
+from high_order_affine_exact_esop_dirty2 import _replay
 from high_order_affine_no_uncompute_v6 import build_candidate_v6
-
-
-MASK = (1 << 4096) - 1
 
 
 @lru_cache(maxsize=1)
 def _terms():
-    """Freeze the lower-cost second exact cover for consistent rebuilds."""
-    exact_esop_terms()  # warm-up cover; retain one selected cover below
+    """Use one exact cover consistently for classifier and oracle builds."""
     return tuple(exact_esop_terms())
 
 
-def _replay(circuit: QuantumCircuit) -> list[int]:
-    wires = list(initial_wire_truth_tables())
-    for instruction in circuit.data:
-        operation = instruction.operation
-        qubits = [circuit.qubits.index(qubit) for qubit in instruction.qubits]
-        if operation.name == "x":
-            wires[qubits[0]] ^= MASK
-        elif operation.name == "cx":
-            wires[qubits[1]] ^= wires[qubits[0]]
-        elif operation.name in {"rccx", "ccx"}:
-            wires[qubits[-1]] ^= wires[qubits[0]] & wires[qubits[1]]
-        elif operation.name == "rcccx":
-            wires[qubits[3]] ^= (
-                wires[qubits[0]] & wires[qubits[1]] & wires[qubits[2]]
-            )
-        elif operation.name.startswith("mcx"):
-            controls, target = qubits[:-1], qubits[-1]
-            cube = MASK
-            for index, control in enumerate(controls):
-                cube &= (wires[control] if operation.ctrl_state >> index & 1
-                         else MASK ^ wires[control])
-            wires[target] ^= cube
-        else:
-            raise ValueError(f"unsupported semantic operation: {operation.name}")
-    return wires
+def _clear_q13(circuit) -> None:
+    """Restore v6's retained q13 partial to zero, preserving all other wires."""
+    for wire in (3, 4):
+        circuit.x(wire)
+    circuit.rccx(3, 4, 13)
+    for wire in (4, 3):
+        circuit.x(wire)
+    circuit.rccx(2, 3, 13)
 
 
-def _append_cube(circuit: QuantumCircuit, positive: int, negative: int) -> None:
+def _append_cube(circuit, positive: int, negative: int) -> None:
     controls = []
     control_state = 0
     for bit, wire in enumerate(CHART):
@@ -70,18 +43,16 @@ def _append_cube(circuit: QuantumCircuit, positive: int, negative: int) -> None:
             if positive >> bit & 1:
                 control_state |= 1 << len(controls)
             controls.append(wire)
-    ancillas = [
-        wire for wire in range(18)
-        if wire != 12 and wire not in controls
-    ][:2]
+    if 13 in controls or 12 in controls:
+        raise AssertionError("clean q13 or target q12 entered the ESOP chart")
     for index, wire in enumerate(controls):
         if not (control_state >> index) & 1:
             circuit.x(wire)
     if len(controls) >= 3:
-        # The synthesis has n controls, one target, and two borrowed wires.
+        # q13 is clean here; the construction restores it to |0>.
         circuit.compose(
-            synth_mcx_2_dirty_kg24(len(controls)),
-            qubits=controls + [12] + ancillas,
+            synth_mcx_1_clean_kg24(len(controls)),
+            qubits=controls + [12, 13],
             inplace=True,
         )
     else:
@@ -93,26 +64,31 @@ def _append_cube(circuit: QuantumCircuit, positive: int, negative: int) -> None:
 
 def build_classifier():
     circuit, metrics = build_candidate_v6()
+    base_wires = _replay(circuit)
+    _clear_q13(circuit)
+    if _replay(circuit)[13] != 0:
+        raise AssertionError("q13 clean-up failed")
     terms = _terms()
     for positive, negative in terms:
         _append_cube(circuit, positive, negative)
+    _clear_q13(circuit)  # inverse of the clean-up, restoring v6 midpoint q13
     circuit.cx(11, 12)
     wires = _replay(circuit)
-    if wires[12] != TARGET:
-        raise AssertionError("dirty-ancilla ESOP classifier replay failed")
+    if wires[12] != TARGET or wires[13] != base_wires[13]:
+        raise AssertionError("clean-q13 ESOP classifier replay failed")
     metrics = dict(metrics)
     metrics.update({
-        "experiment": "exact ESOP completion with two borrowed ancillas",
+        "experiment": "exact ESOP completion with restored clean q13",
         "esop_terms": len(terms),
         "esop_chart_wires": list(CHART),
-        "dirty_mcx_synthesis": "synth_mcx_2_dirty_kg24",
-        "dirty_ancillas_per_cube": 2,
+        "mcx_synthesis": "synth_mcx_1_clean_kg24",
+        "clean_ancilla": 13,
         "corrected_affine_residual": 0,
         "target_wire": 12,
         "semantic_inputs_checked": 4096,
         "classifier_complete": True,
         "oracle_exhaustively_verified": False,
-        "status": "exact classifier; dirty-ancilla lowering candidate",
+        "status": "exact classifier; restored-clean-q13 lowering candidate",
     })
     return circuit, metrics
 
@@ -127,7 +103,6 @@ def build_oracle():
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--out-qasm", type=Path)
     parser.add_argument("--out-oracle-qasm", type=Path)
     parser.add_argument("--out-metrics", type=Path)
     args = parser.parse_args()
@@ -149,12 +124,6 @@ def main() -> None:
             "seed_transpiler": 0,
         },
     })
-    if args.out_qasm is not None:
-        args.out_qasm.parent.mkdir(parents=True, exist_ok=True)
-        args.out_qasm.write_text(qasm2.dumps(compiled))
-        metrics["qasm_sha256"] = hashlib.sha256(
-            args.out_qasm.read_bytes()
-        ).hexdigest()
     if args.out_oracle_qasm is not None:
         oracle, _ = build_oracle()
         oracle_compiled = transpile(

@@ -837,3 +837,17 @@ Exhaustive verification checked all 4,096 inputs, with max error
 `5.726332944000072e-12`. This is a verified but noncompetitive completion;
 the borrowed-ancilla lowering is a measured improvement over the 9,558 / 6,545
 predecessor, not a leaderboard result.
+
+The next lowering restores q13 to zero after the v6 prefix, uses Qiskit's
+one-clean-ancilla `synth_mcx_1_clean_kg24` for every ESOP cube, and restores
+q13 before the final affine completion. This reduces the exact classifier to
+**7,107 / 3,980** and the complete oracle to **14,080 / 7,886** depth/CX.
+The verified candidate is `src/high_order_affine_exact_esop_clean1.py` with
+QASM `artifacts/destructive_semantic/high_order_affine_exact_esop_clean1_oracle.qasm`
+and SHA256
+`bb25d8dcd5245e5f795f6a46fd95173aa38c6025ed3a52f62af9fcd0fad2009a`.
+Exhaustive verification covered all 4,096 inputs with max error
+`1.204108528388714e-13`, ancilla error `5.711331530985915e-15`, and
+discarded-amplitude bound `1.852274578072021e-12`. This is still a
+noncompetitive correctness artifact, but it is the strongest exact
+destructive completion measured so far.
