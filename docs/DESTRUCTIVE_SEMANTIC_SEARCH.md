@@ -792,3 +792,11 @@ forward depth 135 / 90 CX. This is a residual Pareto point rather than a depth
 improvement over v3/v4; q13, q14, q16, and q17 remain intentional midpoint garbage.
 The builder and metrics are `src/high_order_affine_no_uncompute_v5.py` and
 `artifacts/destructive_semantic/high_order_affine_no_uncompute_v5.metrics.json`.
+
+From v5, the residual factors through two retained partials: q14 receives
+`¬q4·¬q10`, q17 receives `q8·q9`, and `RC3X(q14,q17,q16,q11)` is applied.
+This lowers the exact affine residual to 197 at native forward depth 146 / 102
+CX. It is a residual Pareto point, not a depth improvement, and remains an
+incomplete classifier. The builder and metrics are
+`src/high_order_affine_no_uncompute_v6.py` and
+`artifacts/destructive_semantic/high_order_affine_no_uncompute_v6.metrics.json`.
