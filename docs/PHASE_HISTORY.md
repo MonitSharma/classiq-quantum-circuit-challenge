@@ -235,6 +235,14 @@ target membership and both rank-product/factor hint coverage remained zero.
 This confirms that simply widening the parallel higher-order beam does not
 solve the target under the current proposal/scoring model.
 
+The search engine now also supports `--rank-first`, which makes cumulative
+historical rank the primary pre-membership objective instead of the heuristic
+Hamming residual. The controlled run at
+`artifacts/phase_history/search_seed1003_rankfirst_b16_l10_p6/` reached rank
+26 at estimated forward depth 106, but exact target membership and both
+rank-product/factor hint coverage remained zero. This separates a scoring
+stagnation issue from the deeper proposal-space limitation.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary

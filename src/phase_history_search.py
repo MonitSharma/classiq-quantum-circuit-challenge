@@ -417,7 +417,7 @@ def history_state(gates: Sequence[Gate], depth: int = 0) -> HistoryState:
     return HistoryState(wires, tuple(gates), basis, depth)
 
 
-def history_score(state: HistoryState) -> tuple:
+def history_score(state: HistoryState, rank_first: bool = False) -> tuple:
     remainder = state.basis.remainder(TARGET)
     greedy = state.basis.greedy_residual(TARGET)
     best_single = min(
@@ -437,7 +437,7 @@ def history_score(state: HistoryState) -> tuple:
         if signal.step >= 0
         for hint in hints
     ) if hints else 0
-    return (
+    score = (
         0 if state.basis.solve(TARGET) is not None else 1,
         -hint_coverage,
         -factor_coverage,
@@ -446,6 +446,23 @@ def history_score(state: HistoryState) -> tuple:
         best_single,
         remainder.bit_count(),
         -state.basis.rank,
+        state.estimated_depth,
+        truth_table_hash(state.wires[0]),
+    )
+    if not rank_first:
+        return score
+    # The reduced/greedy residual is only a heuristic and can remain
+    # unchanged while the historical span gains genuinely useful directions.
+    # In this mode rank and exact hint coverage are intentionally primary.
+    return (
+        score[0],
+        -state.basis.rank,
+        -hint_coverage,
+        -factor_coverage,
+        score[3],
+        score[4],
+        score[5],
+        score[6],
         state.estimated_depth,
         truth_table_hash(state.wires[0]),
     )
@@ -595,6 +612,7 @@ def search_history(
     checkpoint_dir: Path | None = None,
     max_parallel: int = 1,
     include_rc3x: bool = False,
+    rank_first: bool = False,
 ) -> tuple[HistoryState, int]:
     """Run a small deterministic history-span beam search.
 
@@ -626,11 +644,13 @@ def search_history(
                                  for primitive in layer_gates)
                 child = history_state(gates, state.estimated_depth + layer_cost)
                 children.append(child)
-        children.sort(key=history_score)
+        children.sort(key=lambda item: history_score(item, rank_first=rank_first))
         beam = children[:beam_width]
         if not beam:
             break
-        if history_score(beam[0]) < history_score(best):
+        if history_score(beam[0], rank_first=rank_first) < history_score(
+            best, rank_first=rank_first
+        ):
             best = beam[0]
         print(json.dumps({
             "layer": layer,
@@ -661,6 +681,7 @@ def main() -> None:
     parser.add_argument("--proposal-limit", type=int, default=64)
     parser.add_argument("--max-parallel", type=int, default=1)
     parser.add_argument("--include-rc3x", action="store_true")
+    parser.add_argument("--rank-first", action="store_true")
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--checkpoint-dir", type=Path)
     parser.add_argument("--out", type=Path,
@@ -675,6 +696,7 @@ def main() -> None:
             checkpoint_dir=args.checkpoint_dir or args.out / "checkpoints",
             max_parallel=args.max_parallel,
             include_rc3x=args.include_rc3x,
+            rank_first=args.rank_first,
         )
         args.out.mkdir(parents=True, exist_ok=True)
         payload = {
@@ -685,6 +707,7 @@ def main() -> None:
             "proposal_limit": args.proposal_limit,
             "max_parallel": args.max_parallel,
             "include_rc3x": args.include_rc3x,
+            "rank_first": args.rank_first,
             "completed_layer": completed_layer,
             "history_rank": result.basis.rank,
             "product_hint_coverage": sum(
