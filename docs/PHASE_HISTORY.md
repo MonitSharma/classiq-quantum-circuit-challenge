@@ -245,7 +245,12 @@ stagnation issue from the deeper proposal-space limitation.
 
 ## Next experiment
 
-The next search should use cumulative-history membership as its primary
-objective, generate wire-disjoint RCCX layers with bounded proposal counts,
-and track actual `u3`/`cx` depth for promising forward trajectories. It must
-preserve checkpoints and write new artifacts under `artifacts/phase_history/`.
+The cumulative-history objective, provenance recovery, exact oracle builder,
+parallel-layer calibration, and bounded beam machinery are now in place. The
+six-way and rank-first runs show that repeating the same local RCCX/RC3X
+proposal family does not generate even one exact rank-product factor. The next
+meaningful search must therefore add target-guided nonlinear proposals from a
+shared XAG/AND graph or an equivalent factor synthesizer, while preserving the
+same exact span-membership and exhaustive-verification gates. Do not spend
+additional runs on wider copies of the closed local beam until that proposal
+source exists.
