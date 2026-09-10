@@ -1,0 +1,19 @@
+{
+  "experiment": "targeted triple-RCCX continuation from residual-359 state",
+  "seed": 1,
+  "base_residual": 359,
+  "triple_rccx": true,
+  "additional_gates": [
+    ["rccx", 1, 12, 11],
+    ["rccx", 1, 17, 12],
+    ["rccx", 2, 12, 11]
+  ],
+  "residual": 355,
+  "exact_affine_distance": 355,
+  "compiled_forward_depth": 125,
+  "compiled_forward_cx": 65,
+  "target_marked_states": 1097,
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "note": "Lower residual but deeper than the residual-359/depth-107 frontier point."
+}

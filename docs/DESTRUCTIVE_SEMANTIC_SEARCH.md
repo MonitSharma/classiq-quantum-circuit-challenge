@@ -236,6 +236,13 @@ residual 355, so the move is retained as an optional escape mechanism rather
 than the default search. Evidence for the cold control is in
 `artifacts/destructive_semantic/triple_seed1_b16x3_p4.metrics.json`.
 
+The triple move was then resumed from the preserved seed-1 residual-359 state
+and reproduced the local improvement to residual 355 with the three-gate
+extension `(1,12,11); (1,17,12); (2,12,11)`. Its serialized circuit measured
+depth 125 and 65 CX gates, so it is a lower-residual but deeper frontier point.
+The compact continuation record is in
+`artifacts/destructive_semantic/double_seed1_targeted_triple_residual355.json`.
+
 A wider seed-1 beam (64 states) found a stronger depth-screening point at
 residual 403. Its 16-RCCX history compiled to forward depth 90 and 46 CX
 gates, improving the depth-91 Pareto point while reducing CX count. The
