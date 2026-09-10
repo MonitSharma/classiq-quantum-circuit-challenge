@@ -669,3 +669,12 @@ distance: all 2,448 choices of distinct control pair and physical target were
 evaluated, including updates to garbage wires. None reduced residual 323.
 This rules out a one-RCCX escape from the current state; the result is in
 `artifacts/destructive_semantic/residual323_one_rccx_neighborhood.metrics.json`.
+
+A bounded three-layer beam was then seeded from the fused residual-323 state
+and allowed plain RCCX, restored one-sided affine-control, restored
+two-sided affine-control, and forward two-sided affine-control updates. It
+retained 64 states per layer, generated 265, 17,159, and 17,361 distinct
+descendants, and exact-rescored 32 leaders at each layer. No exact leader
+improved residual 323. This is a bounded negative result rather than an
+optimality proof; its scope is recorded in
+`artifacts/destructive_semantic/residual323_affine_beam.metrics.json`.
