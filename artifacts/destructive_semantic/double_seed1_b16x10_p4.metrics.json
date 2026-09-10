@@ -1,0 +1,19 @@
+{
+  "experiment": "double-RCCX lookahead seed diversity",
+  "seed": 1,
+  "beam_width": 16,
+  "layers": 10,
+  "proposal_limit": 4,
+  "proxy_order": 3,
+  "double_rccx": true,
+  "rccx_gates": 20,
+  "residual": 429,
+  "exact_affine_distance": 429,
+  "estimated_forward_depth": 119,
+  "compiled_forward_depth": 92,
+  "compiled_forward_cx": 58,
+  "target_marked_states": 1097,
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "note": "Best heuristic result so far; midpoint target still mismatches 429 of 4096 inputs."
+}

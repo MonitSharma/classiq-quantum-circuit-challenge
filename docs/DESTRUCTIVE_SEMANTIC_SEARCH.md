@@ -168,6 +168,15 @@ double-RCCX layer-10 control it reproduced residual 581 and compiled depth 88,
 with no improvement for seed 524. Evidence is in
 `artifacts/destructive_semantic/double_pareto_b16x10_p4.metrics.json`.
 
+Seed diversity was then applied to the stronger double-RCCX move set. Seed 1
+reached residual 447 at layer 6 and residual 429 at layer 10. The retained
+20-RCCX history compiled to forward depth 92 and 58 CX gates; extending it to
+layer 14 did not lower the residual. This is the current best heuristic result
+and falls inside the nominal depth-94 screening range, but it remains
+incomplete: 429 midpoint inputs mismatch and no conjugated oracle was built or
+verified. Evidence is in
+`artifacts/destructive_semantic/double_seed1_b16x10_p4.metrics.json`.
+
 Guided semantic proposals are available behind `--guided-hints`. The loader
 converts 30 existing x/y rank-factor truth tables into 12-variable truth-table
 hints; these only affect proposal ordering and never constrain a physical wire

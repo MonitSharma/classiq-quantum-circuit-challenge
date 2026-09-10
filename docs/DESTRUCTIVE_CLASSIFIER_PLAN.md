@@ -126,3 +126,8 @@ Lifted rank-factor truth tables were added as optional semantic proposal hints.
 The guided beam also reached residual 581, but its selected circuit compiled
 to depth 99 and 58 CX gates, so the hints currently improve exploration rather
 than the depth objective.
+
+Seed 1 with the double-RCCX move set reached residual 429 at layer 10. Its
+20-RCCX history compiled to forward depth 92 and 58 CX gates, but 429 midpoint
+inputs still mismatch. This is a strong heuristic screening result, not a
+complete classifier or verified phase oracle.
