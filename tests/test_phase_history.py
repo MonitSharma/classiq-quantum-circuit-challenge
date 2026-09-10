@@ -88,6 +88,14 @@ class PhaseHistoryTests(unittest.TestCase):
         initial = initial_wire_truth_tables()
         self.assertEqual(final[2], initial[2] ^ (initial[0] & initial[1]))
 
+    def test_affine_history_records_internal_steps(self):
+        gates = (("affine", 0, 1, 2, 12),)
+        final, basis, snapshots = replay_history(gates)
+        initial = initial_wire_truth_tables()
+        self.assertEqual(final[12], initial[12] ^ ((initial[0] ^ initial[1]) & initial[2]))
+        self.assertEqual(len(snapshots), 4)
+        self.assertGreaterEqual(basis.rank, 14)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -198,6 +198,13 @@ def apply_gate_semantic(wires: tuple[int, ...], gate: Gate) -> tuple[int, ...]:
         for primitive in gate[1]:
             out = apply_gate_semantic(out, primitive)
         return out
+    if kind == "affine":
+        _, a, mix, b, target = gate
+        out = list(wires)
+        out[a] ^= wires[mix]
+        out[target] ^= out[a] & out[b]
+        out[a] ^= wires[mix]
+        return tuple(out)
     if kind == "x":
         out = list(wires)
         out[gate[1]] ^= ALL_ONES
@@ -225,33 +232,48 @@ def replay_history(
     for wire, value in enumerate(wires):
         basis.add(value, 0, wire, "initial")
     snapshots = [wires]
-    for step, gate in enumerate(gates, start=1):
-        before = wires
-        wires = apply_gate_semantic(wires, gate)
-        if wires == before:
+    step = 0
+    for gate in gates:
+        if gate[0] == "layer":
+            step += 1
+            before = wires
+            wires = apply_gate_semantic(wires, gate)
+            if wires != before:
+                for primitive in gate[1]:
+                    target = (primitive[1] if primitive[0] == "x" else
+                              primitive[2] if primitive[0] == "cx" else
+                              primitive[3] if primitive[0] == "rccx" else
+                              primitive[4])
+                    basis.add(wires[target], step, target, primitive[0])
             snapshots.append(wires)
             continue
-        if gate[0] == "layer":
-            touched_targets = tuple(
-                primitive[1] if primitive[0] == "x" else
-                primitive[2] if primitive[0] == "cx" else
-                primitive[3] if primitive[0] == "rccx" else
-                primitive[4]
-                for primitive in gate[1]
-            )
-        elif gate[0] == "x":
-            touched_targets = (gate[1],)
-        elif gate[0] == "cx":
-            touched_targets = (gate[2],)
-        elif gate[0] == "rccx":
-            touched_targets = (gate[3],)
-        elif gate[0] in {"rc3x", "rcccx"}:
-            touched_targets = (gate[4],)
-        else:
-            raise ValueError(f"unsupported semantic gate: {gate}")
-        for wire in touched_targets:
-            basis.add(wires[wire], step, wire, gate[0])
-        snapshots.append(wires)
+        primitives = (
+            (("cx", gate[2], gate[1]), ("rccx", gate[1], gate[3], gate[4]),
+             ("cx", gate[2], gate[1]))
+            if gate[0] == "affine" else (gate,)
+        )
+        for primitive in primitives:
+            step += 1
+            before = wires
+            wires = apply_gate_semantic(wires, primitive)
+            if wires == before:
+                snapshots.append(wires)
+                continue
+            gate = primitive
+            if gate[0] == "x":
+                touched_targets = (gate[1],)
+            elif gate[0] == "cx":
+                touched_targets = (gate[2],)
+            elif gate[0] == "rccx":
+                touched_targets = (gate[3],)
+            elif gate[0] in {"rc3x", "rcccx"}:
+                touched_targets = (gate[4],)
+            else:
+                raise ValueError(f"unsupported semantic gate: {gate}")
+            for wire in touched_targets:
+                basis.add(wires[wire], step, wire, gate[0])
+            snapshots.append(wires)
+        continue
     return wires, basis, snapshots
 
 
@@ -283,6 +305,13 @@ def _append_gate(circuit: QuantumCircuit, gate: Gate, inverse: bool = False) -> 
     if kind == "layer":
         primitives = reversed(gate[1]) if inverse else gate[1]
         for primitive in primitives:
+            _append_gate(circuit, primitive, inverse=inverse)
+        return
+    if kind == "affine":
+        _, a, mix, b, target = gate
+        primitives = (("cx", mix, a), ("rccx", a, b, target),
+                      ("cx", mix, a))
+        for primitive in reversed(primitives) if inverse else primitives:
             _append_gate(circuit, primitive, inverse=inverse)
         return
     if kind == "x":
@@ -424,6 +453,20 @@ def history_proposals(
                 ) if hints else 0
                 proposals.append((novelty, hint_distance, min(distance, direct), rng.random(),
                                   ("rccx", a, b, target)))
+                for mix in range(N_WIRES):
+                    if mix in (a, b, target):
+                        continue
+                    product = (state.wires[a] ^ state.wires[mix]) & state.wires[b]
+                    new_value = state.wires[target] ^ product
+                    if not product or new_value in state.basis.first_signal_for_value:
+                        continue
+                    hint_distance = min(
+                        (new_value ^ hint).bit_count() for hint in hints
+                    ) if hints else 0
+                    proposals.append((1, hint_distance,
+                                      min((target_remainder ^ new_value).bit_count(),
+                                          (TARGET ^ new_value).bit_count()),
+                                      rng.random(), ("affine", a, mix, b, target)))
     if include_rc3x:
         for a in range(N_WIRES):
             for b in range(a + 1, N_WIRES):
@@ -514,7 +557,8 @@ def search_history(
                 gate = layer_gates[0] if len(layer_gates) == 1 else ("layer", layer_gates)
                 gates = state.gates + (gate,)
                 layer_cost = max(
-                    13 if primitive[0] in {"rc3x", "rcccx"} else 7
+                    13 if primitive[0] in {"rc3x", "rcccx"} else
+                    9 if primitive[0] == "affine" else 7
                     for primitive in layer_gates
                 )
                 child = history_state(gates, state.estimated_depth + layer_cost)

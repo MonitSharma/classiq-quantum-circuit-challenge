@@ -109,6 +109,12 @@ found zero of those products exactly in the historical span, so proximity to
 known products alone is insufficient; the result is retained under
 `artifacts/phase_history/hinted_seed505_b8_l4/`.
 
+Affine-control RCCX moves are now represented with their internal CX/RCCX/CX
+history, preserving intermediate provenance. The bounded affine-enabled run
+at `artifacts/phase_history/affine_seed606_b8_l6/` reached rank 19 at
+estimated forward depth 48. It brought one historical signal within eight
+truth-table bits of a rank product, but exact target membership still failed.
+
 ## Next experiment
 
 The next search should use cumulative-history membership as its primary
