@@ -132,10 +132,10 @@ take a reference MPO and compute full operator overlaps and Riemannian
 gradients for local unitary gates. It is not merely a state-preparation
 library. However, the supplied implementation is organized around JAX,
 one-dimensional/swap-network layouts, and its model-specific configuration
-layer. The current repository environment does not have JAX installed, so it
-has not been added as an implicit dependency or launched as a long-running
-experiment. The upstream README and implementation should be pinned and
-adapted only after a local target-objective smoke test.
+layer. JAX/JAXLIB `0.4.38` is now installed in the existing `.venv` solely for
+this bounded adapter; it is not a new environment or an unmodified upstream
+long-running campaign. The upstream README and implementation are pinned and
+adapted only through local target-objective smoke tests.
 
 The source is locally inspected under `external/rqcopt-mpo/` at commit
 `95f0898f7baa6579de512eba8b00386bd6b05217`. It remains ignored from the main
