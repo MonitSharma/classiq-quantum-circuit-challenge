@@ -79,6 +79,27 @@ The report is `artifacts/three_sweep/arbitrary_angle_screen.json`. No complete
 oracle was produced, and no score or replacement for the protected fallback is
 claimed.
 
+## Secondary 3+3 loader
+
+The two half-row class counts are exactly seven for `y5=0` and six for
+`y5=1`. A six-output loader using three bits for each bank, all controlled only
+by `y0..y4`, compiles at depth 65 / 164 CX for every tested seed and passes all
+64 clean-ancilla basis inputs. This is slightly deeper and more CX-heavy than
+the common five-bit loader, but it remains viable because it carries more
+direct row information into the middle stage. It consumes all six clean
+ancillas, so its central phase must use direct diagonal gates or dirty
+catalysts; there is no clean q17 helper.
+
+Artifacts are under `artifacts/three_sweep/half_row_loader/`. No middle phase
+or complete oracle has been synthesized yet.
+
+The corresponding exact modular screen also found no feasible direct phase bank
+using either the six half-row code bits alone or those bits plus `x5` and `y5`
+as side features. Thus both common-code and 3+3 encodings fail the same
+direct-UCR middle-stage test. Further work would have to use genuinely
+interleaved non-UCR gates; expanding the number of independent phase tracks is
+not a credible route to the leaderboard depth.
+
 ## Decision rule
 
 The loader is promising at depth <=72 and is stopped for rank-1 purposes above
