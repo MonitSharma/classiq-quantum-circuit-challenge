@@ -2,6 +2,7 @@
   "side": "y",
   "kernel_direction": 28,
   "overwrite": 0,
+  "care_points": 63,
   "depth": 127,
   "raw_ops": {
     "x": 112,
@@ -53,6 +54,11 @@
     20,
     4
   ],
+  "raw_verification": [
+    true,
+    "all 64 inputs"
+  ],
   "serialized_depth": 1650,
-  "cx_count": 957
+  "cx_count": 957,
+  "qasm_sha256": "0c401fe6d185b21070bd993e24f939d74e03aeefa8342a71a3478d445c58d487"
 }

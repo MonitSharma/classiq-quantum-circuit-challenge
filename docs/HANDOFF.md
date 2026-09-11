@@ -32,20 +32,23 @@ impossibility proofs against every phase-tolerant traversal.
 An audit corrected two implementation errors in the earlier comparator probe:
 the semantic beam had initialized input wires as `1<<i` instead of 64-bit
 truth signatures, and the y-loader had placed all three m bits on q13. The
-corrected four-output ESOP probe is **555/359**, not 555/358, and its
-independent 64-input basis-action check passes. Fixed-label
+corrected four-output ESOP probe is **555/359** on the clean-x slice, but its
+corrected 4096-input reusable-loader check finds **3696 mismatches** because
+the dirty MCX scratch is unsafe. Fixed-label
 bucket multiplicities (x=25, y=20) rigorously rule out four code bits plus two
 garbage bits on six wires. A new affine screen found rank-5 garbage projections
 injective within every code bucket using the 3+3 ancilla split. See
 `artifacts/comparator_oracle/three_plus_three_affine_screen.json`; this
 positive resource result still needs native nonlinear lowering.
 
-The focused 3+3 native lowering was then implemented for both admissible y
-kernel directions and all overwrite choices. The best exact encoder measured
-**1491 depth / 845 CX**, with all 64 mappings and inverse restoration checked.
-This fails the <=70 criterion, so x-side synthesis and kernel integration were
-not started. See `src/three_plus_three_native.py` and
-`artifacts/comparator_oracle/three_plus_three/y_screen.json`.
+The focused 3+3 native lowering was then implemented for both y kernel
+directions (28 and 35) and all overwrite choices. The generator now uses a
+distinct kernel-orthogonal basis for k=35, checks care-set collisions, and
+verifies all 64 raw mappings. The best exact encoder remains **1491 depth /
+845 CX** (k=28, overwrite bit 1); k=35's best is 1504/866. This fails the
+<=70 criterion, so x-side synthesis and kernel integration were not started.
+See `src/three_plus_three_native.py` and
+`artifacts/comparator_oracle/three_plus_three/screen.json`.
 
 ## State at handoff
 

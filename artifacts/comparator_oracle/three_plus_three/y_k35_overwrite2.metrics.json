@@ -1,0 +1,54 @@
+{
+  "side": "y",
+  "kernel_direction": 35,
+  "overwrite": 2,
+  "care_points": 64,
+  "depth": 106,
+  "raw_ops": {
+    "x": 96,
+    "mcx": 37,
+    "cx": 21,
+    "ccx": 14
+  },
+  "correction_monomials": [
+    6,
+    12,
+    14,
+    17,
+    18,
+    19,
+    20,
+    21,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    42,
+    68,
+    70,
+    76,
+    80,
+    81,
+    96,
+    97,
+    98
+  ],
+  "linear_rows": [
+    3,
+    4,
+    8,
+    16,
+    33,
+    1
+  ],
+  "raw_verification": [
+    true,
+    "all 64 inputs"
+  ],
+  "serialized_depth": 1504,
+  "cx_count": 866,
+  "qasm_sha256": "73b80deee015ed612d516ae3ed053ac69a24223e9e3a05c55b43db786295c88e"
+}

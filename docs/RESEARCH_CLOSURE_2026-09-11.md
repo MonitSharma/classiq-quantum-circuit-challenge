@@ -61,7 +61,8 @@ started because the exact y embedding never reached the <=70-depth gate.
 
 The implementation was then audited: the prior 555/358 y-loader had targeted
 all three `m` bits onto q13 and was invalid. The corrected four-output probe is
-555/359, so the old native measurement is retracted. A bucket multiplicity
+555/359 on the clean-x slice, but the corrected reusable-loader test finds
+3696/4096 mismatches, so this is not a valid loader measurement. A bucket multiplicity
 proof also shows that four code bits plus two garbage bits cannot be a
 reversible six-wire embedding (largest buckets 25 and 20). A new affine
 3+3-ancilla screen found rank-5 linear garbage projections injective within all
@@ -69,9 +70,11 @@ code buckets on both sides. This is a positive resource result, not yet a
 native circuit; it is the only remaining comparator experiment worth a bounded
 lowering attempt.
 
-That bounded 3+3 lowering was completed for both admissible y kernel
-directions and all overwrite choices. The best exact native y encoder was
-1491/845 depth/CX, with complete 64-input mapping and inverse-restoration
-checks. It fails the <=70-depth criterion, so the tested comparator family is
-closed; this remains an empirical closure, not a proof against every
-phase-tolerant QROM construction.
+That bounded 3+3 lowering was completed for both y kernel directions (28 and
+35) and all overwrite choices. The generator uses a genuinely distinct
+kernel-orthogonal basis for k=35, checks care-set collisions, and verifies the
+raw mapping on all 64 inputs. The best native y encoder remains 1491/845
+depth/CX (k=28, overwrite bit 1); the best k=35 row is 1504/866. It fails the
+<=70-depth criterion, so the tested comparator family is closed; this remains
+an empirical closure, not a proof against every phase-tolerant QROM
+construction.
