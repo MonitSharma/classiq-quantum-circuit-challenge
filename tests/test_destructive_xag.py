@@ -7,6 +7,7 @@ from destructive_xag import (
     output_nodes,
 )
 from destructive_xag_rank import rank_profile
+from destructive_xag_scheduler import prepare, search
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,3 +40,11 @@ def test_affine_live_rank_profile_is_exact_and_over_capacity():
     assert report["maximum_naive_live_count"] == 33
     assert report["maximum_affine_rank_including_constant"] == 34
     assert not report["affine_packing_alone_fits_current_order"]
+
+
+def test_rank_constrained_scheduler_never_exceeds_18_wires():
+    prepared = prepare(ROOT / "artifacts/multiplicative_depth/seeds/shared_rank.xag")
+    result = search(prepared, budget=0, beam_width=10)
+    assert result["maximum_rank"] <= 18
+    assert result["exact_semantic_verification"]
+    assert not result["impossibility_proof"]

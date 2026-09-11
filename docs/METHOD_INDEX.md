@@ -103,6 +103,11 @@ original topological order, so affine packing alone cannot fit that order into
 18 wires. The best one-pass ready-node schedule lowers the observed rank to
 about 22, making scheduling, dirty targets, and bounded recomputation the next
 tests. The cut-by-cut report is `artifacts/destructive_xag_affine_rank.json`.
+The first bounded rank-constrained rematerialization screen tested budgets 0,
+4, 8, 12, 20, and 30 with no phase frontier found. It remains a heuristic
+negative result rather than an impossibility proof; its trace is
+`artifacts/destructive_xag_scheduler.json` and its source is
+`src/destructive_xag_scheduler.py`.
 
 ### Three-sweep campaign
 

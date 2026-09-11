@@ -81,6 +81,13 @@ dirty targets and bounded recomputation; affine packing alone is closed for
 the original order. See `src/destructive_xag_rank.py` and
 `artifacts/destructive_xag_affine_rank.json`.
 
+The first bounded rematerialization screen used all 18 wires and tested
+recomputation budgets through 30. It maintained exact rank ≤ 18 but found no
+logo phase frontier; total evaluations ranged from 78 to 112 across the tested
+budgets. This is only a heuristic closure of the current scheduler/model, not
+an impossibility result. The trace is
+`artifacts/destructive_xag_scheduler.json`; native lowering remains gated.
+
 ## Challenge and scoring
 
 Source: https://www.classiq.io/challenge, visited in the user's Safari. Last observed leaderboard (historical snapshot, refresh before making current claims):
