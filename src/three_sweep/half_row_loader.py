@@ -20,18 +20,26 @@ def row_mask(y: int) -> int:
     return sum(1 << x for x in range(64) if logo(x, y))
 
 
-def half_codes():
+def half_codes(lower_labels=None, upper_labels=None):
     classes = [OrderedDict(), OrderedDict()]
+    if lower_labels is None:
+        lower_labels = {i: i for i in range(7)}
+    if upper_labels is None:
+        upper_labels = {i: i for i in range(6)}
+    labels = [lower_labels, upper_labels]
     z_codes = [{}, {}]
     for half in (0, 1):
         for z in range(32):
             mask = row_mask(z + 32 * half)
             if mask not in classes[half]:
                 classes[half][mask] = len(classes[half])
-            z_codes[half][z] = classes[half][mask]
+            class_index = classes[half][mask]
+            z_codes[half][z] = labels[half][class_index]
     return {
         "lower_class_count": len(classes[0]),
         "upper_class_count": len(classes[1]),
+        "lower_labels": {str(k): v for k, v in lower_labels.items()},
+        "upper_labels": {str(k): v for k, v in upper_labels.items()},
         "z_to_lower_code": {str(z): code for z, code in z_codes[0].items()},
         "z_to_upper_code": {str(z): code for z, code in z_codes[1].items()},
         "lower_masks": [mask for mask in classes[0]],

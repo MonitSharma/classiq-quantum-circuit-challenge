@@ -29,25 +29,29 @@ def append_shell(circuit, xmask, allowed_codes, feature_start, y5):
 
 
 def append_nested_phase(circuit, codes):
+    lower_labels = {int(k): int(v) for k, v in codes["lower_labels"].items()}
+    upper_labels = {int(k): int(v) for k, v in codes["upper_labels"].items()}
     # Lower half: five nested disk masks, plus the separate square class 6.
     previous = 0
     for level in range(1, 6):
         shell = codes["lower_masks"][level] ^ previous
-        append_shell(circuit, shell, range(level, 6), 12, 0)
+        append_shell(circuit, shell,
+                     [lower_labels[i] for i in range(level, 6)], 12, 0)
         previous = codes["lower_masks"][level]
-    append_shell(circuit, codes["lower_masks"][6], [6], 12, 0)
+    append_shell(circuit, codes["lower_masks"][6], [lower_labels[6]], 12, 0)
 
     # Upper half: square base plus four nested upper-disk extensions.
     previous = codes["upper_masks"][0]
-    append_shell(circuit, previous, range(0, 5), 15, 1)
+    append_shell(circuit, previous, [upper_labels[i] for i in range(0, 5)], 15, 1)
     for level in range(1, 5):
         shell = codes["upper_masks"][level] ^ previous
-        append_shell(circuit, shell, range(level, 5), 15, 1)
+        append_shell(circuit, shell,
+                     [upper_labels[i] for i in range(level, 5)], 15, 1)
         previous = codes["upper_masks"][level]
 
 
-def build(seed=0):
-    codes = half_codes()
+def build(seed=0, lower_labels=None, upper_labels=None):
+    codes = half_codes(lower_labels=lower_labels, upper_labels=upper_labels)
     loader = build_loader(tables_from_codes(codes), seed)
     circuit = loader.copy()
     append_nested_phase(circuit, codes)
@@ -81,4 +85,3 @@ def write(seed=0, path="artifacts/three_sweep/shell_decoder.qasm"):
 
 if __name__ == "__main__":
     write()
-

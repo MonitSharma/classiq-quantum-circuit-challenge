@@ -127,6 +127,17 @@ obvious nested-shell variant.
 Artifact: `artifacts/three_sweep/shell_decoder.qasm`; its matching report is
 `artifacts/three_sweep/shell_decoder.exhaustive.json`.
 
+A complete permutation screen over all `7!`-equivalent lower labels reduced
+the shell proxy from 27 to 24; the corresponding upper screen searched all
+`5!` permutations and found proxy cost 24. Building the best combined
+codebook produced an exact **4392 depth / 3448 CX** circuit, an improvement
+over the deterministic shell decoder but still far outside the leaderboard
+range. Its QASM and matching exhaustive report are
+`artifacts/three_sweep/optimized_shell_decoder.qasm` and
+`artifacts/three_sweep/optimized_shell_decoder.exhaustive.json`.
+The codebook search and labels are recorded in
+`artifacts/three_sweep/codebook_search.json`.
+
 ## Decision rule
 
 The loader is promising at depth <=72 and is stopped for rank-1 purposes above
