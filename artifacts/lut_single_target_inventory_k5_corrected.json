@@ -1,0 +1,1216 @@
+{
+  "5": {
+    "abc_output": "======== ABC command line \"read_bench /Users/monitsharma/Downloads/classiq/experiments/logo.bench; strash; balance; rewrite; refactor; resub; if -K 5; write_blif artifacts/lut_single_target/logo_k5.blif\"\n",
+    "metrics": {
+      "lut_limit": 5,
+      "lut_count": 72,
+      "lut_levels": 6,
+      "max_lut_arity": 5,
+      "arity_histogram": {
+        "2": 4,
+        "3": 6,
+        "4": 20,
+        "5": 42
+      },
+      "max_fanout": 29,
+      "peak_live_signals_topological": 24,
+      "exact_4096_inputs": true,
+      "optimistic_native_critical_depth": 2297,
+      "optimistic_native_critical_cx": 1334
+    },
+    "nodes": [
+      {
+        "name": "z0",
+        "inputs": [
+          "x08",
+          "new_n16",
+          "new_n47",
+          "new_n76"
+        ],
+        "arity": 4,
+        "truth_table": 61951,
+        "canonical": 7
+      },
+      {
+        "name": "new_n16",
+        "inputs": [
+          "x04",
+          "new_n17",
+          "x10",
+          "new_n43",
+          "new_n31"
+        ],
+        "arity": 5,
+        "truth_table": 267321344,
+        "canonical": 2047
+      },
+      {
+        "name": "new_n17",
+        "inputs": [
+          "new_n18",
+          "new_n23",
+          "x11",
+          "x05",
+          "new_n29"
+        ],
+        "arity": 5,
+        "truth_table": 62719,
+        "canonical": 8191
+      },
+      {
+        "name": "new_n18",
+        "inputs": [
+          "new_n22",
+          "x09",
+          "new_n19",
+          "x02"
+        ],
+        "arity": 4,
+        "truth_table": 7936,
+        "canonical": 31
+      },
+      {
+        "name": "new_n19",
+        "inputs": [
+          "new_n20",
+          "x07",
+          "x03",
+          "x00",
+          "new_n21"
+        ],
+        "arity": 5,
+        "truth_table": 4283367424,
+        "canonical": 8191
+      },
+      {
+        "name": "new_n20",
+        "inputs": [
+          "x01",
+          "x06",
+          "x09"
+        ],
+        "arity": 3,
+        "truth_table": 16,
+        "canonical": 1
+      },
+      {
+        "name": "new_n21",
+        "inputs": [
+          "x03",
+          "x01",
+          "x06",
+          "x09",
+          "x07"
+        ],
+        "arity": 5,
+        "truth_table": 4211068156,
+        "canonical": 68267
+      },
+      {
+        "name": "new_n22",
+        "inputs": [
+          "x01",
+          "x07",
+          "x00",
+          "x03",
+          "x06"
+        ],
+        "arity": 5,
+        "truth_table": 184537039,
+        "canonical": 214135
+      },
+      {
+        "name": "new_n23",
+        "inputs": [
+          "new_n28",
+          "x09",
+          "x01",
+          "new_n24",
+          "new_n26"
+        ],
+        "arity": 5,
+        "truth_table": 60942,
+        "canonical": 1911
+      },
+      {
+        "name": "new_n24",
+        "inputs": [
+          "x03",
+          "x07",
+          "x09",
+          "x00",
+          "new_n25"
+        ],
+        "arity": 5,
+        "truth_table": 4025478912,
+        "canonical": 218455
+      },
+      {
+        "name": "new_n25",
+        "inputs": [
+          "x02",
+          "x03",
+          "x06",
+          "x07",
+          "x09"
+        ],
+        "arity": 5,
+        "truth_table": 3221225468,
+        "canonical": 98305
+      },
+      {
+        "name": "new_n26",
+        "inputs": [
+          "new_n27",
+          "x02",
+          "x03"
+        ],
+        "arity": 3,
+        "truth_table": 16,
+        "canonical": 1
+      },
+      {
+        "name": "new_n27",
+        "inputs": [
+          "x06",
+          "x01",
+          "x09",
+          "x07"
+        ],
+        "arity": 4,
+        "truth_table": 36608,
+        "canonical": 31
+      },
+      {
+        "name": "new_n28",
+        "inputs": [
+          "x02",
+          "x00",
+          "x07",
+          "x06",
+          "x03"
+        ],
+        "arity": 5,
+        "truth_table": 4279173131,
+        "canonical": 520447
+      },
+      {
+        "name": "new_n29",
+        "inputs": [
+          "new_n30",
+          "x05",
+          "x09",
+          "x11"
+        ],
+        "arity": 4,
+        "truth_table": 256,
+        "canonical": 1
+      },
+      {
+        "name": "new_n30",
+        "inputs": [
+          "x01",
+          "x02",
+          "x03"
+        ],
+        "arity": 3,
+        "truth_table": 1,
+        "canonical": 1
+      },
+      {
+        "name": "new_n31",
+        "inputs": [
+          "x10",
+          "new_n37",
+          "x11",
+          "new_n32",
+          "new_n40"
+        ],
+        "arity": 5,
+        "truth_table": 4079,
+        "canonical": 2047
+      },
+      {
+        "name": "new_n32",
+        "inputs": [
+          "new_n35",
+          "new_n36",
+          "x05",
+          "new_n33",
+          "x03"
+        ],
+        "arity": 5,
+        "truth_table": 4278255616,
+        "canonical": 511
+      },
+      {
+        "name": "new_n33",
+        "inputs": [
+          "x05",
+          "x01",
+          "x02",
+          "new_n34"
+        ],
+        "arity": 4,
+        "truth_table": 14848,
+        "canonical": 27
+      },
+      {
+        "name": "new_n34",
+        "inputs": [
+          "x10",
+          "x09",
+          "x04"
+        ],
+        "arity": 3,
+        "truth_table": 64,
+        "canonical": 1
+      },
+      {
+        "name": "new_n35",
+        "inputs": [
+          "x10",
+          "x09",
+          "x01",
+          "x02"
+        ],
+        "arity": 4,
+        "truth_table": 48896,
+        "canonical": 127
+      },
+      {
+        "name": "new_n36",
+        "inputs": [
+          "x00",
+          "x01",
+          "x10",
+          "x04",
+          "x09"
+        ],
+        "arity": 5,
+        "truth_table": 4042295551,
+        "canonical": 520439
+      },
+      {
+        "name": "new_n37",
+        "inputs": [
+          "x05",
+          "x03",
+          "x09",
+          "x04",
+          "new_n38"
+        ],
+        "arity": 5,
+        "truth_table": 53087,
+        "canonical": 7167
+      },
+      {
+        "name": "new_n38",
+        "inputs": [
+          "x03",
+          "x00",
+          "x02",
+          "new_n39",
+          "x04"
+        ],
+        "arity": 5,
+        "truth_table": 1073741824,
+        "canonical": 1
+      },
+      {
+        "name": "new_n39",
+        "inputs": [
+          "x09",
+          "x06",
+          "x07",
+          "x05"
+        ],
+        "arity": 4,
+        "truth_table": 16384,
+        "canonical": 1
+      },
+      {
+        "name": "new_n40",
+        "inputs": [
+          "x03",
+          "x04",
+          "x02",
+          "new_n41",
+          "x01"
+        ],
+        "arity": 5,
+        "truth_table": 268435456,
+        "canonical": 1
+      },
+      {
+        "name": "new_n41",
+        "inputs": [
+          "x11",
+          "x05",
+          "x09",
+          "new_n42"
+        ],
+        "arity": 4,
+        "truth_table": 16384,
+        "canonical": 1
+      },
+      {
+        "name": "new_n42",
+        "inputs": [
+          "x06",
+          "x07"
+        ],
+        "arity": 2,
+        "truth_table": 8,
+        "canonical": 1
+      },
+      {
+        "name": "new_n43",
+        "inputs": [
+          "new_n44",
+          "x03",
+          "x09",
+          "x04"
+        ],
+        "arity": 4,
+        "truth_table": 256,
+        "canonical": 1
+      },
+      {
+        "name": "new_n44",
+        "inputs": [
+          "new_n46",
+          "x02",
+          "new_n45",
+          "x11",
+          "x05"
+        ],
+        "arity": 5,
+        "truth_table": 4293853439,
+        "canonical": 109226
+      },
+      {
+        "name": "new_n45",
+        "inputs": [
+          "x00",
+          "x01"
+        ],
+        "arity": 2,
+        "truth_table": 1,
+        "canonical": 1
+      },
+      {
+        "name": "new_n46",
+        "inputs": [
+          "x06",
+          "x07"
+        ],
+        "arity": 2,
+        "truth_table": 1,
+        "canonical": 1
+      },
+      {
+        "name": "new_n47",
+        "inputs": [
+          "new_n48",
+          "x11",
+          "x10",
+          "new_n72",
+          "new_n61"
+        ],
+        "arity": 5,
+        "truth_table": 4294180864,
+        "canonical": 8191
+      },
+      {
+        "name": "new_n48",
+        "inputs": [
+          "x04",
+          "new_n39",
+          "x03",
+          "new_n49",
+          "new_n57"
+        ],
+        "arity": 5,
+        "truth_table": 47883,
+        "canonical": 1911
+      },
+      {
+        "name": "new_n49",
+        "inputs": [
+          "new_n56",
+          "new_n53",
+          "x09",
+          "new_n50",
+          "x04"
+        ],
+        "arity": 5,
+        "truth_table": 285343503,
+        "canonical": 489335
+      },
+      {
+        "name": "new_n50",
+        "inputs": [
+          "x05",
+          "new_n52",
+          "new_n51",
+          "x04",
+          "x02"
+        ],
+        "arity": 5,
+        "truth_table": 4042273706,
+        "canonical": 1834779
+      },
+      {
+        "name": "new_n51",
+        "inputs": [
+          "x00",
+          "x07",
+          "x01",
+          "x05",
+          "x04"
+        ],
+        "arity": 5,
+        "truth_table": 4278189839,
+        "canonical": 100488
+      },
+      {
+        "name": "new_n52",
+        "inputs": [
+          "x01",
+          "x00",
+          "x05",
+          "x06",
+          "x07"
+        ],
+        "arity": 5,
+        "truth_table": 1468039296,
+        "canonical": 218182
+      },
+      {
+        "name": "new_n53",
+        "inputs": [
+          "new_n55",
+          "new_n54",
+          "new_n42",
+          "x09",
+          "x05"
+        ],
+        "arity": 5,
+        "truth_table": 15597808,
+        "canonical": 2039
+      },
+      {
+        "name": "new_n54",
+        "inputs": [
+          "x06",
+          "x07",
+          "x01",
+          "x02",
+          "x00"
+        ],
+        "arity": 5,
+        "truth_table": 149946368,
+        "canonical": 426
+      },
+      {
+        "name": "new_n55",
+        "inputs": [
+          "x06",
+          "x07",
+          "x00",
+          "x02",
+          "x01"
+        ],
+        "arity": 5,
+        "truth_table": 527872,
+        "canonical": 281
+      },
+      {
+        "name": "new_n56",
+        "inputs": [
+          "x01",
+          "x00",
+          "new_n42",
+          "x02"
+        ],
+        "arity": 4,
+        "truth_table": 7,
+        "canonical": 7
+      },
+      {
+        "name": "new_n57",
+        "inputs": [
+          "x09",
+          "new_n58",
+          "x03",
+          "x05",
+          "x04"
+        ],
+        "arity": 5,
+        "truth_table": 201981952,
+        "canonical": 27
+      },
+      {
+        "name": "new_n58",
+        "inputs": [
+          "new_n59",
+          "x09",
+          "x02",
+          "x01",
+          "new_n60"
+        ],
+        "arity": 5,
+        "truth_table": 3392338682,
+        "canonical": 1008239
+      },
+      {
+        "name": "new_n59",
+        "inputs": [
+          "x00",
+          "x06",
+          "x07",
+          "x01",
+          "x09"
+        ],
+        "arity": 5,
+        "truth_table": 788594368,
+        "canonical": 251855
+      },
+      {
+        "name": "new_n60",
+        "inputs": [
+          "x00",
+          "x06",
+          "x07"
+        ],
+        "arity": 3,
+        "truth_table": 64,
+        "canonical": 1
+      },
+      {
+        "name": "new_n61",
+        "inputs": [
+          "new_n62",
+          "x11",
+          "x10",
+          "new_n70",
+          "x08"
+        ],
+        "arity": 5,
+        "truth_table": 4280221696,
+        "canonical": 8191
+      },
+      {
+        "name": "new_n62",
+        "inputs": [
+          "x07",
+          "new_n67",
+          "x04",
+          "new_n63",
+          "new_n69"
+        ],
+        "arity": 5,
+        "truth_table": 570621711,
+        "canonical": 489335
+      },
+      {
+        "name": "new_n63",
+        "inputs": [
+          "new_n64",
+          "new_n65",
+          "new_n30",
+          "new_n66"
+        ],
+        "arity": 4,
+        "truth_table": 3003,
+        "canonical": 855
+      },
+      {
+        "name": "new_n64",
+        "inputs": [
+          "x01",
+          "x00",
+          "x02",
+          "x03"
+        ],
+        "arity": 4,
+        "truth_table": 63488,
+        "canonical": 31
+      },
+      {
+        "name": "new_n65",
+        "inputs": [
+          "x07",
+          "x06",
+          "x05",
+          "x09"
+        ],
+        "arity": 4,
+        "truth_table": 3584,
+        "canonical": 7
+      },
+      {
+        "name": "new_n66",
+        "inputs": [
+          "x00",
+          "x07",
+          "x09",
+          "x05"
+        ],
+        "arity": 4,
+        "truth_table": 256,
+        "canonical": 1
+      },
+      {
+        "name": "new_n67",
+        "inputs": [
+          "new_n68",
+          "x02",
+          "x00",
+          "x01",
+          "x03"
+        ],
+        "arity": 5,
+        "truth_table": 3588095996,
+        "canonical": 66443
+      },
+      {
+        "name": "new_n68",
+        "inputs": [
+          "x09",
+          "x06"
+        ],
+        "arity": 2,
+        "truth_table": 4,
+        "canonical": 1
+      },
+      {
+        "name": "new_n69",
+        "inputs": [
+          "new_n46",
+          "new_n30",
+          "x04",
+          "x05",
+          "x09"
+        ],
+        "arity": 5,
+        "truth_table": 69376,
+        "canonical": 426
+      },
+      {
+        "name": "new_n70",
+        "inputs": [
+          "new_n64",
+          "new_n30",
+          "x04",
+          "new_n71"
+        ],
+        "arity": 4,
+        "truth_table": 21248,
+        "canonical": 27
+      },
+      {
+        "name": "new_n71",
+        "inputs": [
+          "x05",
+          "x07",
+          "x09",
+          "x11"
+        ],
+        "arity": 4,
+        "truth_table": 256,
+        "canonical": 1
+      },
+      {
+        "name": "new_n72",
+        "inputs": [
+          "x03",
+          "new_n74",
+          "new_n73",
+          "x02",
+          "new_n75"
+        ],
+        "arity": 5,
+        "truth_table": 4123787264,
+        "canonical": 2039
+      },
+      {
+        "name": "new_n73",
+        "inputs": [
+          "x00",
+          "x06",
+          "x07",
+          "x01"
+        ],
+        "arity": 4,
+        "truth_table": 54525,
+        "canonical": 279
+      },
+      {
+        "name": "new_n74",
+        "inputs": [
+          "x00",
+          "x01",
+          "x06",
+          "x03",
+          "x07"
+        ],
+        "arity": 5,
+        "truth_table": 2414673856,
+        "canonical": 521009
+      },
+      {
+        "name": "new_n75",
+        "inputs": [
+          "x04",
+          "x11",
+          "x09",
+          "x05"
+        ],
+        "arity": 4,
+        "truth_table": 4096,
+        "canonical": 1
+      },
+      {
+        "name": "new_n76",
+        "inputs": [
+          "x01",
+          "new_n81",
+          "x10",
+          "new_n77",
+          "new_n85"
+        ],
+        "arity": 5,
+        "truth_table": 65008,
+        "canonical": 2047
+      },
+      {
+        "name": "new_n77",
+        "inputs": [
+          "x01",
+          "new_n79",
+          "x11",
+          "new_n80",
+          "new_n78"
+        ],
+        "arity": 5,
+        "truth_table": 4079,
+        "canonical": 2047
+      },
+      {
+        "name": "new_n78",
+        "inputs": [
+          "x01",
+          "x02",
+          "x04",
+          "x03",
+          "new_n41"
+        ],
+        "arity": 5,
+        "truth_table": 16777216,
+        "canonical": 1
+      },
+      {
+        "name": "new_n79",
+        "inputs": [
+          "x03",
+          "new_n39",
+          "x05",
+          "x02",
+          "x04"
+        ],
+        "arity": 5,
+        "truth_table": 4286050559,
+        "canonical": 100489
+      },
+      {
+        "name": "new_n80",
+        "inputs": [
+          "x02",
+          "x05",
+          "x09",
+          "x04",
+          "x03"
+        ],
+        "arity": 5,
+        "truth_table": 66304,
+        "canonical": 25
+      },
+      {
+        "name": "new_n81",
+        "inputs": [
+          "x09",
+          "x02",
+          "new_n84",
+          "x03",
+          "new_n82"
+        ],
+        "arity": 5,
+        "truth_table": 48911,
+        "canonical": 2047
+      },
+      {
+        "name": "new_n82",
+        "inputs": [
+          "new_n83",
+          "x00",
+          "new_n42",
+          "x05"
+        ],
+        "arity": 4,
+        "truth_table": 4096,
+        "canonical": 1
+      },
+      {
+        "name": "new_n83",
+        "inputs": [
+          "x02",
+          "x04",
+          "x11",
+          "x09",
+          "x03"
+        ],
+        "arity": 5,
+        "truth_table": 4278189951,
+        "canonical": 98304
+      },
+      {
+        "name": "new_n84",
+        "inputs": [
+          "x04",
+          "x05",
+          "x11"
+        ],
+        "arity": 3,
+        "truth_table": 16,
+        "canonical": 1
+      },
+      {
+        "name": "new_n85",
+        "inputs": [
+          "x00",
+          "x01",
+          "x02",
+          "new_n86"
+        ],
+        "arity": 4,
+        "truth_table": 20224,
+        "canonical": 31
+      },
+      {
+        "name": "new_n86",
+        "inputs": [
+          "x04",
+          "x11",
+          "new_n39",
+          "x10",
+          "x03"
+        ],
+        "arity": 5,
+        "truth_table": 268435456,
+        "canonical": 1
+      }
+    ],
+    "local_costs": {
+      "4:7": {
+        "arity": 4,
+        "truth_table": 61951,
+        "method": "anf",
+        "depth": 158,
+        "cx_count": 90
+      },
+      "5:2047": {
+        "arity": 5,
+        "truth_table": 267321344,
+        "method": "anf",
+        "depth": 361,
+        "cx_count": 208
+      },
+      "5:8191": {
+        "arity": 5,
+        "truth_table": 62719,
+        "method": "anf",
+        "depth": 432,
+        "cx_count": 248
+      },
+      "4:31": {
+        "arity": 4,
+        "truth_table": 7936,
+        "method": "anf",
+        "depth": 113,
+        "cx_count": 65
+      },
+      "3:1": {
+        "arity": 3,
+        "truth_table": 16,
+        "method": "minterms_1",
+        "depth": 28,
+        "cx_count": 14
+      },
+      "5:68267": {
+        "arity": 5,
+        "truth_table": 4211068156,
+        "method": "anf",
+        "depth": 246,
+        "cx_count": 133
+      },
+      "5:214135": {
+        "arity": 5,
+        "truth_table": 184537039,
+        "method": "anf",
+        "depth": 139,
+        "cx_count": 76
+      },
+      "5:1911": {
+        "arity": 5,
+        "truth_table": 60942,
+        "method": "anf",
+        "depth": 550,
+        "cx_count": 319
+      },
+      "5:218455": {
+        "arity": 5,
+        "truth_table": 4025478912,
+        "method": "anf",
+        "depth": 509,
+        "cx_count": 292
+      },
+      "5:98305": {
+        "arity": 5,
+        "truth_table": 3221225468,
+        "method": "anf",
+        "depth": 287,
+        "cx_count": 177
+      },
+      "5:520447": {
+        "arity": 5,
+        "truth_table": 4279173131,
+        "method": "anf",
+        "depth": 569,
+        "cx_count": 324
+      },
+      "4:1": {
+        "arity": 4,
+        "truth_table": 256,
+        "method": "minterms_1",
+        "depth": 65,
+        "cx_count": 36
+      },
+      "5:511": {
+        "arity": 5,
+        "truth_table": 4278255616,
+        "method": "anf",
+        "depth": 534,
+        "cx_count": 306
+      },
+      "4:27": {
+        "arity": 4,
+        "truth_table": 14848,
+        "method": "anf",
+        "depth": 70,
+        "cx_count": 40
+      },
+      "4:127": {
+        "arity": 4,
+        "truth_table": 48896,
+        "method": "anf",
+        "depth": 91,
+        "cx_count": 51
+      },
+      "5:520439": {
+        "arity": 5,
+        "truth_table": 4042295551,
+        "method": "anf",
+        "depth": 101,
+        "cx_count": 57
+      },
+      "5:7167": {
+        "arity": 5,
+        "truth_table": 53087,
+        "method": "anf",
+        "depth": 232,
+        "cx_count": 129
+      },
+      "5:1": {
+        "arity": 5,
+        "truth_table": 1073741824,
+        "method": "minterms_1",
+        "depth": 130,
+        "cx_count": 84
+      },
+      "2:1": {
+        "arity": 2,
+        "truth_table": 8,
+        "method": "anf",
+        "depth": 11,
+        "cx_count": 6
+      },
+      "5:109226": {
+        "arity": 5,
+        "truth_table": 4293853439,
+        "method": "anf",
+        "depth": 399,
+        "cx_count": 229
+      },
+      "5:489335": {
+        "arity": 5,
+        "truth_table": 285343503,
+        "method": "anf",
+        "depth": 406,
+        "cx_count": 235
+      },
+      "5:1834779": {
+        "arity": 5,
+        "truth_table": 4042273706,
+        "method": "anf",
+        "depth": 99,
+        "cx_count": 59
+      },
+      "5:100488": {
+        "arity": 5,
+        "truth_table": 4278189839,
+        "method": "anf",
+        "depth": 381,
+        "cx_count": 221
+      },
+      "5:218182": {
+        "arity": 5,
+        "truth_table": 1468039296,
+        "method": "anf",
+        "depth": 148,
+        "cx_count": 80
+      },
+      "5:2039": {
+        "arity": 5,
+        "truth_table": 15597808,
+        "method": "anf",
+        "depth": 194,
+        "cx_count": 111
+      },
+      "5:426": {
+        "arity": 5,
+        "truth_table": 149946368,
+        "method": "anf",
+        "depth": 220,
+        "cx_count": 134
+      },
+      "5:281": {
+        "arity": 5,
+        "truth_table": 527872,
+        "method": "anf",
+        "depth": 398,
+        "cx_count": 216
+      },
+      "5:27": {
+        "arity": 5,
+        "truth_table": 201981952,
+        "method": "anf",
+        "depth": 203,
+        "cx_count": 108
+      },
+      "5:1008239": {
+        "arity": 5,
+        "truth_table": 3392338682,
+        "method": "anf",
+        "depth": 327,
+        "cx_count": 193
+      },
+      "5:251855": {
+        "arity": 5,
+        "truth_table": 788594368,
+        "method": "anf",
+        "depth": 290,
+        "cx_count": 160
+      },
+      "4:855": {
+        "arity": 4,
+        "truth_table": 3003,
+        "method": "anf",
+        "depth": 109,
+        "cx_count": 62
+      },
+      "5:66443": {
+        "arity": 5,
+        "truth_table": 3588095996,
+        "method": "anf",
+        "depth": 442,
+        "cx_count": 257
+      },
+      "4:279": {
+        "arity": 4,
+        "truth_table": 54525,
+        "method": "anf",
+        "depth": 168,
+        "cx_count": 95
+      },
+      "5:521009": {
+        "arity": 5,
+        "truth_table": 2414673856,
+        "method": "anf",
+        "depth": 314,
+        "cx_count": 171
+      },
+      "5:100489": {
+        "arity": 5,
+        "truth_table": 4286050559,
+        "method": "anf",
+        "depth": 114,
+        "cx_count": 70
+      },
+      "5:25": {
+        "arity": 5,
+        "truth_table": 66304,
+        "method": "minterms_1",
+        "depth": 382,
+        "cx_count": 248
+      },
+      "5:98304": {
+        "arity": 5,
+        "truth_table": 4278189951,
+        "method": "minterms_0_with_x",
+        "depth": 256,
+        "cx_count": 166
+      }
+    },
+    "canonical_classes": {
+      "4:7": 3,
+      "5:2047": 5,
+      "5:8191": 4,
+      "4:31": 4,
+      "3:1": 6,
+      "5:68267": 1,
+      "5:214135": 1,
+      "5:1911": 2,
+      "5:218455": 1,
+      "5:98305": 1,
+      "5:520447": 1,
+      "4:1": 8,
+      "5:511": 1,
+      "4:27": 2,
+      "4:127": 1,
+      "5:520439": 1,
+      "5:7167": 1,
+      "5:1": 4,
+      "2:1": 4,
+      "5:109226": 1,
+      "5:489335": 2,
+      "5:1834779": 1,
+      "5:100488": 1,
+      "5:218182": 1,
+      "5:2039": 2,
+      "5:426": 2,
+      "5:281": 1,
+      "5:27": 1,
+      "5:1008239": 1,
+      "5:251855": 1,
+      "4:855": 1,
+      "5:66443": 1,
+      "4:279": 1,
+      "5:521009": 1,
+      "5:100489": 1,
+      "5:25": 1,
+      "5:98304": 1
+    }
+  }
+}

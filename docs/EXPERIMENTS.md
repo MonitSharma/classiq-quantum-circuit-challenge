@@ -18,12 +18,15 @@ inputs. The BLIF mappings and full local truth-table/cost inventory are under
 The 3-LUT mapping used 142 LUTs at 10 levels with peak topological live
 pressure 35. The 4-LUT mapping used 102 LUTs at 7 levels and pressure 27; the
 5-LUT mapping used 72 LUTs at 6 levels and pressure 24. All exceed 18 live
-signals before reversible target assignment. A direct local cost database
-compiled the observed LUT functions to exact `u3`/`cx` gates, with maximum
-local depths 40, 165, and 718 for k=3,4,5. Dependency-weighted optimistic
-forward paths were **145/86**, **738/417**, and **2151/1225** depth/CX.
+signals before reversible target assignment. The first local cost model was
+found to have incorrectly treated truth-table bits as ANF coefficients and is
+not evidence. After the Möbius correction, each observed LUT was compiled to
+exact `u3`/`cx` alternatives and exhaustively checked on every local
+control/target basis state. Corrected maximum local depths are 50, 170, and
+569 for k=3,4,5. Dependency-weighted optimistic forward paths are
+**462/249**, **965/539**, and **2297/1334** depth/CX.
 
-The best optimistic path is already above the 120-depth stopping threshold and
+The corrected best optimistic path is already above the 120-depth stopping threshold and
 ignores target conflicts, garbage cleanup, and the eventual inverse. Close the
 ABC/LHRS-style LUT route without generating a complete oracle. This is a
 bounded closure of the tested mappings, not a proof against every possible

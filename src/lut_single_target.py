@@ -19,6 +19,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from qiskit import QuantumCircuit, transpile
+from qiskit.quantum_info import Operator
 
 ROOT = Path(__file__).resolve().parents[1]
 ABC = ROOT / "experiments/abc/abc"
@@ -184,6 +185,16 @@ def table_bits(value: int, arity: int) -> list[int]:
     return [(value >> i) & 1 for i in range(1 << arity)]
 
 
+def anf_coefficients(value: int, arity: int) -> list[int]:
+    """Return ANF coefficients indexed by monomial mask."""
+    coefficients = table_bits(value, arity)
+    for bit in range(arity):
+        for mask in range(1 << arity):
+            if mask & (1 << bit):
+                coefficients[mask] ^= coefficients[mask ^ (1 << bit)]
+    return coefficients
+
+
 def canonical_lut(value: int, arity: int) -> tuple[int, tuple[int, ...], int]:
     """Canonicalize under input permutation/negation and output negation."""
     best = None
@@ -206,25 +217,77 @@ def canonical_lut(value: int, arity: int) -> tuple[int, tuple[int, ...], int]:
     return best[0], best[1], best[2]
 
 
-def local_cost(value: int, arity: int) -> dict:
+def anf_circuit(value: int, arity: int) -> QuantumCircuit:
     circuit = QuantumCircuit(arity + 1)
-    if value & 1:
+    coefficients = anf_coefficients(value, arity)
+    if coefficients[0]:
         circuit.x(arity)
     for mask in range(1, 1 << arity):
-        if not ((value >> mask) & 1):
+        if not coefficients[mask]:
             continue
         controls = [bit for bit in range(arity) if mask & (1 << bit)]
         if len(controls) == 1:
             circuit.cx(controls[0], arity)
         else:
             circuit.mcx(controls, arity)
-    compiled = transpile(circuit, basis_gates=["u3", "cx"],
-                         qubits_initially_zero=False, optimization_level=3)
+    return circuit
+
+
+def minterm_circuit(value: int, arity: int, complement: bool = False) -> QuantumCircuit:
+    circuit = QuantumCircuit(arity + 1)
+    selected = [assignment for assignment in range(1 << arity)
+                if ((value >> assignment) & 1) == (0 if complement else 1)]
+    if complement:
+        circuit.x(arity)
+    for assignment in selected:
+        negative = [bit for bit in range(arity) if not (assignment & (1 << bit))]
+        if negative:
+            circuit.x(negative)
+        if arity == 0:
+            circuit.x(arity)
+        elif arity == 1:
+            circuit.cx(0, arity)
+        else:
+            circuit.mcx(list(range(arity)), arity)
+        if negative:
+            circuit.x(negative)
+    return circuit
+
+
+def verify_local_gate(compiled, value: int, arity: int) -> None:
+    unitary = Operator(compiled).data
+    for input_value in range(1 << arity):
+        expected_function = (value >> input_value) & 1
+        for target_value in (0, 1):
+            initial = input_value | (target_value << arity)
+            column = unitary[:, initial]
+            output = int(abs(column).argmax())
+            expected = input_value | ((target_value ^ expected_function) << arity)
+            if output != expected or abs(column[output]) < 1 - 1e-8:
+                raise AssertionError(
+                    f"local LUT mismatch value={value} arity={arity} input={input_value} target={target_value}"
+                )
+
+
+def local_cost(value: int, arity: int) -> dict:
+    candidates = {
+        "anf": anf_circuit(value, arity),
+        "minterms_1": minterm_circuit(value, arity),
+        "minterms_0_with_x": minterm_circuit(value, arity, complement=True),
+    }
+    compiled_candidates = []
+    for method, circuit in candidates.items():
+        compiled = transpile(circuit, basis_gates=["u3", "cx"],
+                             qubits_initially_zero=False, optimization_level=3)
+        verify_local_gate(compiled, value, arity)
+        compiled_candidates.append((compiled.depth(), compiled.count_ops().get("cx", 0), method, compiled))
+    depth, cx_count, method, compiled = min(compiled_candidates, key=lambda item: (item[0], item[1]))
     return {
         "arity": arity,
         "truth_table": value,
-        "depth": compiled.depth(),
-        "cx_count": int(compiled.count_ops().get("cx", 0)),
+        "method": method,
+        "depth": depth,
+        "cx_count": int(cx_count),
     }
 
 

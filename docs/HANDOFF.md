@@ -147,15 +147,17 @@ The next distinct representation tested conventional ABC k-LUT mappings as
 reversible dirty-target gates `t ^= h(controls)`, rather than decomposing the
 global logic into an XAG first. `src/lut_single_target.py` generated exact
 3-, 4-, and 5-LUT BLIF networks and checked each over all 4,096 inputs. The
-full node inventory and local native cost database are in
-`artifacts/lut_single_target_inventory.json`; the detailed disposition is
+full node inventory and corrected local native cost databases are in
+`artifacts/lut_single_target_inventory_k{3,4,5}_corrected.json`; the detailed disposition is
 [`LUT_SINGLE_TARGET.md`](LUT_SINGLE_TARGET.md).
 
 The best 3-LUT mapping has 142 LUTs, 10 levels, peak logical live pressure 35,
-and an optimistic dependency-weighted native path of **145 depth / 86 CX**.
-The 4-LUT and 5-LUT paths are **738 / 417** and **2151 / 1225** respectively.
-Those estimates already ignore target conflicts, garbage, and inverse cost, so
-the 145-depth best exceeds the forward-depth closure threshold of 120. No
+and a corrected optimistic dependency-weighted native path of **462 depth / 249 CX**.
+The 4-LUT and 5-LUT paths are **965 / 539** and **2297 / 1334** respectively.
+These local gates were verified after final U3/CX transpilation on every local
+control/target basis state. The estimates still ignore target conflicts,
+garbage, and inverse cost, so the 462-depth best exceeds the forward-depth
+closure threshold of 120. No
 global dirty-target scheduler or `C†PC` QASM was attempted. The LUT/LHRS route
 is closed under this exact ABC mapping and local-gate cost model.
 

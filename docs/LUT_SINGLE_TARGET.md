@@ -13,15 +13,17 @@ native estimate is at most 105 depth.
 
 `src/lut_single_target.py` runs Berkeley ABC on `experiments/logo.bench` using
 `if -K k`. The emitted BLIF files are preserved under
-`artifacts/lut_single_target/`; the complete inventory is
-[`artifacts/lut_single_target_inventory.json`](../artifacts/lut_single_target_inventory.json).
+`artifacts/lut_single_target/`; corrected inventories are
+[`artifacts/lut_single_target_inventory_k3_corrected.json`](../artifacts/lut_single_target_inventory_k3_corrected.json),
+[`artifacts/lut_single_target_inventory_k4_corrected.json`](../artifacts/lut_single_target_inventory_k4_corrected.json),
+and [`artifacts/lut_single_target_inventory_k5_corrected.json`](../artifacts/lut_single_target_inventory_k5_corrected.json).
 Every mapping reproduces the exact logo truth table on all 4,096 inputs.
 
 | LUT limit | LUT count | LUT levels | Arity histogram | Peak live signals | Optimistic native critical depth | CX |
 |---:|---:|---:|---|---:|---:|---:|
-| 3 | 142 | 10 | 2:38, 3:104 | 35 | **145** | 86 |
-| 4 | 102 | 7 | 2:6, 3:26, 4:70 | 27 | **738** | 417 |
-| 5 | 72 | 6 | 2:4, 3:6, 4:20, 5:42 | 24 | **2151** | 1225 |
+| 3 | 142 | 10 | 2:38, 3:104 | 35 | **462** | 249 |
+| 4 | 102 | 7 | 2:6, 3:26, 4:70 | 27 | **965** | 539 |
+| 5 | 72 | 6 | 2:4, 3:6, 4:20, 5:42 | 24 | **2297** | 1334 |
 
 The live-signal counts exceed the 18-wire budget before reversible target
 assignment. They are not impossibility proofs for all pebbling schedules, but
@@ -35,13 +37,17 @@ permutation/input negation/output negation found:
 
 | LUT limit | Canonical classes | Maximum local depth | Maximum local CX |
 |---:|---:|---:|---:|
-| 3 | 7 | 40 | 21 |
-| 4 | 16 | 165 | 94 |
-| 5 | 37 | 718 | 415 |
+| 3 | 7 | 50 | 27 |
+| 4 | 16 | 170 | 96 |
+| 5 | 37 | 569 | 324 |
 
-The optimistic native path adds exact local depth along the ABC dependency
+The first local model was incorrect: it treated truth-table bits as ANF
+coefficients. The corrected model first applies the Möbius transform, compares
+ANF and exact minterm implementations, and verifies each chosen gate after
+final U3/CX transpilation on every local control/target basis state. The
+optimistic native path then adds corrected local depth along the ABC dependency
 path while ignoring target conflicts, garbage, rematerialization, and inverse
-cost. Even the best 3-LUT mapping is 145 forward depth, above the 120-depth
+cost. Even the best 3-LUT mapping is 462 forward depth, above the 120-depth
 closure threshold; the 4- and 5-LUT mappings are much worse.
 
 ## Disposition
