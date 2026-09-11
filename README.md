@@ -1,8 +1,18 @@
 # Classiq challenge optimization workspace
 
-The objective is to reach rank 1 in the [Classiq challenge](https://www.classiq.io/challenge). Work is unfinished: the protected best locally verified circuit has **depth 524, 950 CX gates, and 18 qubits**. As of September 9, 2026 the leader was Daksh S. at depth 197 / 475 CX; see docs/REASSESSMENT_2026-09-09.md. Nothing has been submitted, and no rank-1 claim is made. See the [research review](docs/RESEARCH_REVIEW_2026-09-09.md) for the repository audit and prior experiments.
+The objective is to reach rank 1 in the [Classiq challenge](https://www.classiq.io/challenge). Work is unfinished. The lowest verified **depth** is now **456** (CX 1140, 18 qubits) from the level/comparator architecture in [docs/LEVEL_COMPARATOR.md](docs/LEVEL_COMPARATOR.md); the lowest verified **CX count** remains the protected **depth 524, 950 CX** artifact. As of September 9, 2026 the leader was Daksh S. at depth 197 / 475 CX; see docs/REASSESSMENT_2026-09-09.md. Nothing has been submitted, and no rank-1 claim is made. See the [research review](docs/RESEARCH_REVIEW_2026-09-09.md) for the repository audit and prior experiments.
 
 Handoff updated September 10, 2026 (Asia/Singapore). Start with [the handoff](docs/HANDOFF.md), then read [the experiment history](docs/EXPERIMENTS.md) and [the current design](docs/CURRENT_DESIGN.md). [AGENTS.md](AGENTS.md) records essential correctness constraints for a new agent.
+
+## Lowest verified depth
+
+- Circuit: [artifacts/456/level_merged_456.qasm](artifacts/456/level_merged_456.qasm) — depth 456, CX 1140, width 18
+- Exhaustive verification: [artifacts/456/level_merged_456.exhaustive.json](artifacts/456/level_merged_456.exhaustive.json)
+- SHA-256 `8e997e511d9fb043ad82896a7c873f5c3a1cca4cde0cce7bf5df5cba6c6c6e7c`
+- Source: [src/level_oracle.py](src/level_oracle.py), `build_merged`
+- Method: `logo(x,y) = [u1(y)+v1(x) >= 6] XOR [u2(y)+v2(x) >= 6]`, two three-bit
+  level comparisons. See [docs/LEVEL_COMPARATOR.md](docs/LEVEL_COMPARATOR.md).
+- It does **not** supersede the 524 artifact on CX count, so both are kept.
 
 ## Best protected artifact
 

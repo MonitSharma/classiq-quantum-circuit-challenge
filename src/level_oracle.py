@@ -354,6 +354,53 @@ def build(nets, seed=0, opt=3):
                      optimization_level=opt, seed_transpiler=seed), info
 
 
+def _final_regs(hist):
+    VARS = [sum(((t >> i) & 1) << t for t in range(64)) for i in range(6)]
+    regs = VARS + [0, 0, 0]
+    for a, b, k in hist:
+        regs[k] ^= a & b
+    return regs
+
+
+def available_triples(hist, level_table):
+    """All level-separating 3-bit codes whose bit functions lie in the register span."""
+    regs = _final_regs(hist)
+    piv = reduce_basis(regs + [FULL])
+    ok = []
+    for sub in range(64):
+        f = sum(1 << t for t in range(64) if (sub >> level_table[t]) & 1)
+        v = f
+        for b in range(63, -1, -1):
+            if v >> b & 1 and b in piv:
+                v ^= piv[b]
+        if v == 0:
+            ok.append(sub)
+    out = []
+    for trio in itertools.combinations(ok, 3):
+        sig = {tuple((s >> u) & 1 for s in trio) for u in range(6)}
+        if len(sig) == 6:
+            out.append(trio)
+    return out
+
+
+def refine_triples(nets, pass_id):
+    """Pick the y/x code pair with the cheapest kernel among those available."""
+    yname, xname = ('u1', 'v1') if pass_id == 1 else ('u2', 'v2')
+    yhist, ytrip = nets[yname]
+    xhist, xtrip = nets[xname]
+    ycands = available_triples(yhist, LEVEL[yname]) if yhist is not None else [ytrip]
+    xcands = available_triples(xhist, LEVEL[xname]) if xhist is not None else [xtrip]
+    best = None
+    for yt in ycands[:400]:
+        alpha, _ = code_of(yt, LEVEL[yname])
+        for xt in xcands[:400]:
+            beta, _ = code_of(xt, LEVEL[xname])
+            c = kernel_cost(kernel_terms(alpha, beta))
+            if best is None or c < best[0]:
+                best = (c, yt, xt)
+    return best
+
+
 def load_nets(directory):
     nets = {}
     for name in ('u1', 'v1', 'u2', 'v2'):
