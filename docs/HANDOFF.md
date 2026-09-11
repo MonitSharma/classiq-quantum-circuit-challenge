@@ -73,6 +73,14 @@ registers before node 22. This is a closure of the naive lowering only; the
 planned affine-frame packing and controlled recomputation remain untested.
 See `src/destructive_xag.py` and `artifacts/destructive_xag_register_pressure.json`.
 
+The subsequent GF(2) live-rank audit gives maximum rank 34 in the original
+topological order, versus 33 naive live signals. The best one-pass ready-node
+schedule reduces the observed rank to about 22, but not below the 18-wire
+capacity. The next falsification step is therefore topological scheduling with
+dirty targets and bounded recomputation; affine packing alone is closed for
+the original order. See `src/destructive_xag_rank.py` and
+`artifacts/destructive_xag_affine_rank.json`.
+
 ## Challenge and scoring
 
 Source: https://www.classiq.io/challenge, visited in the user's Safari. Last observed leaderboard (historical snapshot, refresh before making current claims):

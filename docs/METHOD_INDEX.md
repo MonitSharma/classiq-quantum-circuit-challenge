@@ -98,6 +98,11 @@ one-pass compiler cannot fit. It also runs out of registers at node 22 before
 QASM lowering. This is a negative result only for the one-signal-per-wire
 lowering; the intended affine-frame packing/recomputation variant remains
 untested. The report is `artifacts/destructive_xag_register_pressure.json`.
+The exact GF(2) follow-up finds maximum affine live-rank **34** in the
+original topological order, so affine packing alone cannot fit that order into
+18 wires. The best one-pass ready-node schedule lowers the observed rank to
+about 22, making scheduling, dirty targets, and bounded recomputation the next
+tests. The cut-by-cut report is `artifacts/destructive_xag_affine_rank.json`.
 
 ### Three-sweep campaign
 

@@ -6,6 +6,7 @@ from destructive_xag import (
     signal_last_use,
     output_nodes,
 )
+from destructive_xag_rank import rank_profile
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -30,3 +31,11 @@ def test_one_signal_allocator_fails_before_quantum_lowering():
     report = one_signal_register_pressure(parsed, beam_width=1000)
     assert report["minimum_observed_peak_registers"] == 22
     assert not report["fits_reserved_predicate_register"]
+
+
+def test_affine_live_rank_profile_is_exact_and_over_capacity():
+    report = rank_profile(ROOT / "artifacts/multiplicative_depth/seeds/shared_rank.xag")
+    assert report["exact"]
+    assert report["maximum_naive_live_count"] == 33
+    assert report["maximum_affine_rank_including_constant"] == 34
+    assert not report["affine_packing_alone_fits_current_order"]
