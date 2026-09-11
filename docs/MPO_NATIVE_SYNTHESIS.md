@@ -77,6 +77,14 @@ Qiskit transpilation for reusable circuit pieces must pass
 `qubits_initially_zero=False`, consistent with the repository-wide correctness
 rule.
 
+`src/mpo_contract.py` provides an exact local MPO application and
+Hilbert--Schmidt contraction for adjacent TT-order gates. Its cross-check is
+`src/mpo_contract_smoke.py`; the recorded result in
+`artifacts/mpo_native/contraction_smoke.json` agrees with dense Qiskit output
+to `1.48e-22` absolute process-fidelity difference for a random six-gate
+layer. This validates the tensor index convention and provides the future
+optimizer with a non-dense objective path.
+
 ## External optimizer assessment
 
 The public `INMLe/rqcopt-mpo` repository is relevant: its brick-wall routines
