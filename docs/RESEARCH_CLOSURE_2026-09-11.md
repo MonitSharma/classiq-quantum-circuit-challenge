@@ -14,7 +14,7 @@ with compute/phase/uncompute:
 | XAG / low multiplicative depth | 81-97 AND classical networks, but native realizations around 1023/899 or worse; destructive dirty-span screens found no phase frontier | Closed |
 | BDD / ESOP / Walsh / phase polynomial | Classical simplification or full phase expansions did not produce a competitive native network | Closed |
 | LUT single-target | Corrected 3-, 4-, and 5-LUT forward estimates of 462/249, 965/539, and 2297/1334 depth/CX | Closed |
-| Quotient/class layouts | 11-by-11 quotient structure, but exact 61-rectangle central phase compiled to 6456/5490 | Closed |
+| Quotient/class layouts | 11-by-11 quotient structure; corrected exact 61-rectangle central phase compiled to 5877/4682 and was exhaustively verified | Closed |
 | Feature loaders, row/column codes, phase histories, MPO/QBP/ZH probes | Exact prototypes were far above target or failed to expose a compact unitary representation | Closed as tested |
 
 The corrected LUT result is especially important. The 462-depth 3-LUT path is
@@ -55,13 +55,13 @@ The final co-designed monomial embedding probe searched whole six-wire
 X/CX/RCCX semantic permutations, allowing arbitrary placement of the four
 required y-code bits and two garbage wires. A 1500-state beam through 16
 primitives found no exact boundary map; its best exact distinct-wire score was
-157/256. This closes the tested monomial embedding family, not every
+186/256 exact score in a completed four-primitive beam, with no exact map. This closes the tested monomial embedding family, not every
 reversible or phase-tolerant QROM construction. No x-side or full oracle was
 started because the exact y embedding never reached the <=70-depth gate.
 
 The implementation was then audited: the prior 555/358 y-loader had targeted
 all three `m` bits onto q13 and was invalid. The corrected four-output probe is
-2217/1433, so the old native measurement is retracted. A bucket multiplicity
+555/359, so the old native measurement is retracted. A bucket multiplicity
 proof also shows that four code bits plus two garbage bits cannot be a
 reversible six-wire embedding (largest buckets 25 and 20). A new affine
 3+3-ancilla screen found rank-5 linear garbage projections injective within all

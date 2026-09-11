@@ -68,6 +68,7 @@ def main(max_gates=8, beam_width=500):
     beam = [(score(initial), initial, ())]
     seen = {initial}
     best = beam[0]
+    best_exact = (exact_score(initial), initial, ())
     for depth in range(1, max_gates + 1):
         candidates = []
         for _, state, history in beam:
@@ -76,6 +77,8 @@ def main(max_gates=8, beam_width=500):
                 h = history + (gate,)
                 s = score(nxt)
                 if s > best[0]: best = (s, nxt, h)
+                es = exact_score(nxt)
+                if es > best_exact[0]: best_exact = (es, nxt, h)
                 candidates.append((s, nxt, h))
         candidates.sort(key=lambda item: (-item[0], len(item[2])))
         new = []
@@ -87,17 +90,17 @@ def main(max_gates=8, beam_width=500):
         beam = new
         print(json.dumps({"gate_depth": depth, "best_score": best[0],
                           "max_score": 256, "beam": len(beam)}), flush=True)
-        if best[0] == 256:
+        if best_exact[0] == 256:
             break
     report = {
         "max_gates": max_gates, "beam_width": beam_width,
         "best_score": best[0], "max_score": 256,
-        "best_exact_score": exact_score(best[1]),
-        "best_gate_count": len(best[2]),
-        "best_output_wires": list(best_mapping(best[1])),
+        "best_exact_score": best_exact[0],
+        "best_gate_count": len(best_exact[2]),
+        "best_output_wires": list(best_mapping(best_exact[1])),
         "best_history": [{"name": n, "controls": list(c), "target": t}
-                         for n, c, t in best[2]],
-        "status": "exact boundary mapping found" if best[0] == 256
+                         for n, c, t in best_exact[2]],
+        "status": "exact boundary mapping found" if best_exact[0] == 256
                   else "bounded search did not reach exact boundary mapping",
     }
     out = Path("artifacts/comparator_oracle/y_loader/whole_register_search.json")

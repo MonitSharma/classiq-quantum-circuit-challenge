@@ -17,10 +17,9 @@ from search import pred, truth
 def build_y_loader():
     q = QuantumCircuit(18)
     for target, values in zip(range(12, 16), (Y_B, *[Y_M] * 3)):
-        for bit in range(4):
-            source_bit = 0 if target == 12 else target - 13
-            table = truth(y for y in range(64) if (values[y] >> source_bit) & 1)
-            q.compose(pred(table, 6, target, [0, 1, 2, 3]), inplace=True)
+        source_bit = 0 if target == 12 else target - 13
+        table = truth(y for y in range(64) if (values[y] >> source_bit) & 1)
+        q.compose(pred(table, 6, target, [0, 1, 2, 3]), inplace=True)
     return q
 
 

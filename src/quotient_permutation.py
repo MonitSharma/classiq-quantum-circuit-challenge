@@ -215,13 +215,19 @@ def compile_dyadic_central(table: np.ndarray, output: Path) -> dict:
     q = QuantumCircuit(18)
     for literals, x0, y0, sx, sy in cover["selected_rectangles"]:
         cube = []
-        for bit in range(6):
-            if not (sx & (1 << bit)):
-                cube.append(bit + 1 if x0 & (1 << bit) else -(bit + 1))
-        for bit in range(6):
-            if not (sy & (1 << bit)):
-                variable = 6 + bit + 1
-                cube.append(variable if y0 & (1 << bit) else -variable)
+        wx = sx.bit_length() - 1
+        wy = sy.bit_length() - 1
+        for bit in range(wx, 6):
+            if x0 & (1 << bit):
+                cube.append(bit + 1)
+            else:
+                cube.append(-(bit + 1))
+        for bit in range(wy, 6):
+            variable = 6 + bit + 1
+            if y0 & (1 << bit):
+                cube.append(variable)
+            else:
+                cube.append(-variable)
         phase_cube(q, frozenset(cube), [])
     compiled = transpile(q, basis_gates=["u3", "cx"], qubits_initially_zero=False, optimization_level=3)
     output.parent.mkdir(parents=True, exist_ok=True)

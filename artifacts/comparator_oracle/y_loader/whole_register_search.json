@@ -1,13 +1,13 @@
 {
-  "max_gates": 8,
+  "max_gates": 4,
   "beam_width": 500,
-  "best_score": 200,
+  "best_score": 192,
   "max_score": 256,
-  "best_exact_score": 200,
-  "best_gate_count": 8,
+  "best_exact_score": 186,
+  "best_gate_count": 4,
   "best_output_wires": [
     3,
-    2,
+    0,
     5,
     4
   ],
@@ -35,42 +35,12 @@
       "target": 3
     },
     {
-      "name": "cx",
-      "controls": [
-        2
-      ],
-      "target": 3
-    },
-    {
       "name": "rccx",
       "controls": [
-        2,
-        4
-      ],
-      "target": 3
-    },
-    {
-      "name": "rccx",
-      "controls": [
-        2,
+        4,
         5
       ],
-      "target": 3
-    },
-    {
-      "name": "cx",
-      "controls": [
-        3
-      ],
-      "target": 2
-    },
-    {
-      "name": "rccx",
-      "controls": [
-        1,
-        4
-      ],
-      "target": 2
+      "target": 0
     }
   ],
   "status": "bounded search did not reach exact boundary mapping"

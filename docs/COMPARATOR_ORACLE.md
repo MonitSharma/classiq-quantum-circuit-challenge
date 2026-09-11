@@ -42,11 +42,13 @@ temporary dirty wires.  It is transpiled with
 
 | artifact | depth | CX | width |
 |---|---:|---:|---:|
-| `artifacts/comparator_oracle/y_loader/y_loader_esop_probe.qasm` | **2217** | **1433** | 18 |
+| `artifacts/comparator_oracle/y_loader/y_loader_esop_probe.qasm` | **555** | **359** | 18 |
 
 The original 555/358 entry was invalid because all three m bits were targeted
-onto q13. After correcting the target loop, the real result is 2217/1433.
-This fails the primary y-loader criterion (`<=60` depth; `>75` kill).  It is a
+onto q13. After removing the duplicate toggle loop, the corrected result is
+555/359 and passes the independent 64-input basis-action check in
+`y_loader_esop_probe.basis.json`. This fails the primary y-loader criterion
+(`<=60` depth; `>75` kill). It is a
 loader-only diagnostic, not an oracle, and is not promoted.
 
 ## Decision
@@ -65,9 +67,9 @@ The protected 524/950 artifact under `artifacts/524/` was not modified.
 The remaining variant searched the complete six-wire semantic state under
 X/CX/RCCX transformations. Four output wires were selected jointly from all
 `6P4` placements; the two remaining wires were unrestricted garbage. A
-1500-state beam was run through 16 primitives. The best fast-bound score was
-159/256 and the best exact distinct-wire score was 157/256; no exact `(b,m)`
-boundary map was found. The report is
+1500-state beam was completed through four primitives. The best fast-bound
+score was 192/256 and the best exact distinct-wire score was 186/256; no exact
+`(b,m)` boundary map was found. Longer runs were stopped for throughput. The report is
 `artifacts/comparator_oracle/y_loader/whole_register_search.json`.
 
 This closes the tested co-designed monomial embedding search, but not every
@@ -122,22 +124,22 @@ label permutation or codeword-conditioned phase expansion.
 ## Whole-register semantic probe
 
 The serialized probe was profiled in
-`artifacts/comparator_oracle/y_loader/esop_failure_profile.json`.  It has 324
+`artifacts/comparator_oracle/y_loader/esop_failure_profile.json`. It has 162
 pre-lowering RCCX operations; after lowering, q0 is the most heavily used
-wire (1162 operations and 654 CX participations).  This confirms that the
-2217 depth is primarily a dirty-scratch/target serialization problem, not
-merely a large number of independent gates.
+wire (289 operations and 162 CX participations). This confirms that the 555
+depth is primarily a dirty-scratch/target serialization problem, not merely a
+large number of independent gates.
 
 `src/whole_register_y_search.py` then searched complete six-wire truth
 signatures under X/CX/RCCX, scoring only four designated boundary outputs and
-leaving two wires as unrestricted garbage.  With the initial fixed output
-placement, a beam of 4000 states through 18 primitives did not reach the exact
-boundary map; its best score was 157/256.  A broader arbitrary-output mapping
-run was stopped for throughput before producing a report and is not treated as
-negative evidence.  The search is therefore a bounded diagnostic, not a proof
-against all reversible embeddings.
+leaving two wires as unrestricted garbage. After correcting the input
+signatures and tracking exact distinct-wire assignments separately, a
+completed four-primitive beam reached 186/256 exact score (relaxed upper bound
+192/256), with no exact boundary map. Longer arbitrary-placement runs were
+stopped for throughput and are not treated as negative evidence. The search is
+therefore a bounded diagnostic, not a proof against all reversible embeddings.
 
-Nevertheless, the only completed native classifier is 2217 depth, far beyond
+Nevertheless, the only completed native classifier is 555 depth, far beyond
 the requested 70-depth kill threshold.  Per the experiment protocol, the
 comparator architecture is **closed for this lowering**; x-side synthesis and
 kernel integration were not started.

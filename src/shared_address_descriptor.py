@@ -38,14 +38,15 @@ def quotient_descriptors(t):
 
 def kernel_table(t, dy, dx, row_order, col_order):
     """Return the 8-bit descriptor kernel, with unreachable cells zero."""
-    out = np.zeros((256,), dtype=np.uint8)
+    out = np.full((256,), 255, dtype=np.uint8)
     for y in range(N):
         for x in range(N):
             address = (row_order[dy[y]] << 4) | col_order[dx[x]]
             value = int(t[y, x])
-            if out[address] not in (0, value):
+            if out[address] not in (255, value):
                 raise AssertionError("quotient descriptor is not well-defined")
             out[address] = value
+    out[out == 255] = 0
     return out
 
 

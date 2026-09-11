@@ -50,7 +50,13 @@ workspace wires available to the existing MCZ helper. The serialized
 `u3`/`cx` diagnostic measured:
 
 ```text
-depth 6456 / CX 5490 / width 18
+depth 5877 / CX 4682 / width 18
+
+The earlier 6456/5490 measurement was invalid because the compiler treated a
+rectangle width as a bitmask. The corrected compiler constrains only the high
+bits of each dyadic block. The rebuilt QASM passed exhaustive verification
+against the transformed quotient table; see
+`artifacts/quotient_permutation_best_central.quotient.exhaustive.json`.
 ```
 
 This is far above the 150-depth optimistic cutoff. It shows that the cheap

@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/quotient_permutation_best_central.qasm",
+  "sha256": "ecd8b85c343d29bee88737061a5544031612aeef59bfdceb6b074eb012e0a669",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 5877,
+  "cx_count": 4682,
+  "max_error": 1.2145479619729053e-13,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 7.340461870227386e-13,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 16.33581280708313,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

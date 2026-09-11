@@ -1,0 +1,8 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/comparator_oracle/y_loader/y_loader_esop_probe.qasm",
+  "basis_inputs_checked": 64,
+  "mismatches": 0,
+  "max_amplitude_error": 2.55351295663786e-15,
+  "counterexamples": [],
+  "verification": "basis action: y preserved, code in q12..q15, q0..q5 and q16..q17 zero"
+}

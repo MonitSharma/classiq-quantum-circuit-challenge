@@ -112,7 +112,8 @@ reduced-OBDD nodes, 61 greedy disjoint dyadic rectangles, 551 dyadic literals,
 456 ANF terms, and 2,909 ANF literals. These are only structural proxies.
 
 The exact 61-rectangle central phase was then compiled with the repository MCZ
-helper as a calibration. It measured **6456 depth / 5490 CX / 18 qubits** in
+helper as a calibration. After correcting the dyadic bit semantics, it
+measured **5877 depth / 4682 CX / 18 qubits** in
 `artifacts/quotient_permutation_best_central.qasm`. This exceeds the 150-depth
 central-only cutoff by a wide margin, so no `P_x`/`P_y` synthesis or full
 conjugated oracle was attempted. The free-layout proxy was promising in

@@ -1,7 +1,7 @@
 {
   "qasm": "artifacts/comparator_oracle/y_loader/y_loader_esop_probe.qasm",
-  "depth": 2217,
-  "cx_count": 1433,
+  "depth": 555,
+  "cx_count": 359,
   "width": 18,
   "targets": "q12=b, q13..q15=m bits",
   "dirty_scratch": [

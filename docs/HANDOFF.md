@@ -24,14 +24,16 @@ The shared-address QROM screen found 11 row and 11 column classes, requiring
 4+4 descriptor bits; the best 2000-sample label screen left an 86-term,
 366-literal degree-8 kernel. The follow-up whole-register X/CX/RCCX beam allowed
 arbitrary placement of four y-code bits and two garbage wires, but found no
-exact boundary map through 16 primitives (best exact score 157/256). These are
+exact boundary map in the completed four-primitive beam (best exact score 186/256).
+Longer runs were stopped for throughput. These are
 bounded closures of the tested descriptor and monomial families, not
 impossibility proofs against every phase-tolerant traversal.
 
 An audit corrected two implementation errors in the earlier comparator probe:
 the semantic beam had initialized input wires as `1<<i` instead of 64-bit
 truth signatures, and the y-loader had placed all three m bits on q13. The
-corrected four-output ESOP probe is **2217/1433**, not 555/358. Fixed-label
+corrected four-output ESOP probe is **555/359**, not 555/358, and its
+independent 64-input basis-action check passes. Fixed-label
 bucket multiplicities (x=25, y=20) rigorously rule out four code bits plus two
 garbage bits on six wires. A new affine screen found rank-5 garbage projections
 injective within every code bucket using the 3+3 ancilla split. See
@@ -174,7 +176,8 @@ data registers as free. The exact quotient and class populations are in
 The best of 200 free contiguous class layouts reduced the diagnostic proxies
 to 74 reduced-OBDD nodes, 61 exact dyadic rectangles, and 551 dyadic literals.
 However, compiling that exact 61-rectangle central phase with the repository's
-MCZ helper measured **6456 depth / 5490 CX / 18 qubits**. Since the central
+MCZ helper measured **5877 depth / 4682 CX / 18 qubits** and passed independent
+exhaustive verification. Since the central
 phase alone is far above the 150-depth cutoff, no reversible `P_x`/`P_y`
 search or full conjugated oracle was attempted. The quotient structure is
 useful classical information, but this direct rectangle realization is closed.
