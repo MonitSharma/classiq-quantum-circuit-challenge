@@ -106,8 +106,16 @@ tests. The cut-by-cut report is `artifacts/destructive_xag_affine_rank.json`.
 The first bounded rank-constrained rematerialization screen tested budgets 0,
 4, 8, 12, 20, and 30 with no phase frontier found. It remains a heuristic
 negative result rather than an impossibility proof; its trace is
-`artifacts/destructive_xag_scheduler.json` and its source is
+`artifacts/destructive_xag_scheduler_rank19_beam50.json` and its source is
 `src/destructive_xag_scheduler.py`.
+The scheduler's affine capacity is corrected to rank 19: 18 physical wire
+functions plus the free constant-one offset.
+
+The corrected beam-50 rerun remained negative at budgets through 30. A separate
+physical dirty-span prototype, which applies (h\mapsto h\oplus(a b)) to the
+actual affine basis, reached 36 guided products without an exact phase
+frontier. Both are bounded heuristic screens; neither is an impossibility
+proof. The physical prototype is `src/destructive_dirty_search.py`.
 
 ### Three-sweep campaign
 

@@ -8,6 +8,7 @@ from destructive_xag import (
 )
 from destructive_xag_rank import rank_profile
 from destructive_xag_scheduler import prepare, search
+from destructive_dirty_search import canonical_span, prepare_products, search as dirty_search
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,6 +46,18 @@ def test_affine_live_rank_profile_is_exact_and_over_capacity():
 def test_rank_constrained_scheduler_never_exceeds_18_wires():
     prepared = prepare(ROOT / "artifacts/multiplicative_depth/seeds/shared_rank.xag")
     result = search(prepared, budget=0, beam_width=10)
-    assert result["maximum_rank"] <= 18
+    assert result["maximum_rank"] <= 19
     assert result["exact_semantic_verification"]
     assert not result["impossibility_proof"]
+
+
+def test_dirty_span_starts_with_twelve_input_dimensions():
+    initial, _, _, _ = prepare_products(ROOT / "artifacts/multiplicative_depth/seeds/shared_rank.xag")
+    assert len(initial.basis) == 12
+    assert len(canonical_span(list(initial.basis) + [0])) == 12
+
+
+def test_dirty_span_search_is_rank_constrained():
+    result = dirty_search(ROOT / "artifacts/multiplicative_depth/seeds/shared_rank.xag", beam_width=2, max_evaluations=2)
+    assert result["maximum_affine_rank_including_constant"] <= 19
+    assert result["exact_semantic_verification"]

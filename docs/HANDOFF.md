@@ -82,11 +82,19 @@ the original order. See `src/destructive_xag_rank.py` and
 `artifacts/destructive_xag_affine_rank.json`.
 
 The first bounded rematerialization screen used all 18 wires and tested
-recomputation budgets through 30. It maintained exact rank ≤ 18 but found no
+recomputation budgets through 30. It maintained exact affine rank ≤ 19 (the
+constant-one vector is free) but found no
 logo phase frontier; total evaluations ranged from 78 to 112 across the tested
 budgets. This is only a heuristic closure of the current scheduler/model, not
 an impossibility result. The trace is
-`artifacts/destructive_xag_scheduler.json`; native lowering remains gated.
+`artifacts/destructive_xag_scheduler_rank19_beam50.json`; native lowering remains gated.
+
+The corrected beam-50 rerun produced the same no-frontier result. The first
+physical dirty-span prototype then kept all 18 wire functions symbolically and
+implemented basis transitions (h\to h\oplus(a b)); it reached 36 guided
+products with rank 19 and no phase frontier. This remains a narrow semantic
+prototype because it has not yet searched arbitrary affine target directions,
+repeated products, or native affine-frame synthesis.
 
 ## Challenge and scoring
 

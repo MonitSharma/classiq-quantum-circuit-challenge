@@ -1,10 +1,11 @@
 """Rank-constrained, space-only scheduler for the destructive XAG idea.
 
-This module intentionally stops before QASM lowering.  A state is an affine
+This module intentionally stops before QASM lowering. A state is an affine
 span of exact 4096-entry Boolean truth tables represented by resident XAG
-signals.  New nonlinear signals may replace one old resident signal when the
-18-dimensional rank budget is full.  Recomputing an evicted node consumes one
-evaluation from the requested budget.
+signals. With the constant-one vector included in the rank calculation, 18
+physical wires have affine rank capacity 19. New nonlinear signals may replace
+one old resident signal when that budget is full. Recomputing an evicted node
+consumes one evaluation from the requested budget.
 """
 
 from __future__ import annotations
@@ -18,7 +19,7 @@ from destructive_xag import load_xag
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WIRE_LIMIT = 18
+WIRE_LIMIT = 19
 INPUTS = frozenset(range(1, 13))
 
 
@@ -245,7 +246,7 @@ def _result(prepared: Prepared, budget: int, state: State, success: bool, suppor
         "beam_width": beam_width,
         "success": success,
         "phase_support": support,
-        "maximum_rank": max([18, *(event["rank"] for event in state.trace)]),
+        "maximum_rank": max([13, *(event["rank"] for event in state.trace)]),
         "total_and_evaluations": state.evaluations,
         "distinct_and_nodes": state.seen.bit_count(),
         "recomputations": state.recomputations,

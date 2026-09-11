@@ -40,17 +40,38 @@ The next space-only scheduler used all 18 wires, did not reserve a predicate
 wire, allowed a resident XAG value to be evicted, and permitted exact
 rematerialization when its affine operands returned to the resident span. It
 checked the logo truth table after every state transition and rejected every
-state whose affine rank, including constant one, exceeded 18. With a bounded
+state whose affine rank, including constant one, exceeded 19. With a bounded
 beam of 50 states, budgets of 0, 4, 8, 12, 20, and 30 recomputations produced
 78, 86, 90, 94, 102, and 112 total AND evaluations respectively, but no phase
 frontier. The full traces are in
-`artifacts/destructive_xag_scheduler.json`; the implementation is
+`artifacts/destructive_xag_scheduler_rank19_beam50.json`; the implementation is
 `src/destructive_xag_scheduler.py`.
 
 This is a heuristic bounded-search negative result, not a proof that the XAG
 cannot fit. It closes only the current strict affine-span/rematerialization
 model and beam policy. Native QASM lowering remains gated on a successful
-rank-18 semantic schedule.
+rank-19 semantic schedule, corresponding to 18 physical wires plus a free
+affine constant.
+
+The capacity correction was rerun at beam width 50 for all six budgets and
+still found no phase frontier: the evaluation totals remained 78, 86, 90, 94,
+102, and 112. The requested beam-2000 control did not finish within the
+bounded runtime window and produced no report, so it is recorded as a
+throughput timeout rather than evidence about feasibility.
+
+### Physical dirty-span search
+
+`src/destructive_dirty_search.py` is the first implementation that keeps the
+physical affine span rather than a set of named XAG nodes. It starts with the
+12 coordinate functions and six zero wires, adds a guided XAG product into a
+redundant wire while rank is below 19, and at full rank replaces a basis
+direction (h) by (h\oplus(a\land b)). It permits coordinate wires as dirty
+targets and tests the exact logo truth table after every transition. The
+beam-50 screen reached 36 product evaluations, maintained rank 19, and found
+no phase frontier. The beam-500 control was stopped for throughput and is not
+a result. This is an intentionally narrow first physical-span model: it uses
+canonical basis directions as targets and does not yet synthesize affine CNOT
+frames or permit repeated product evaluations.
 
 ## Three-sweep campaign closure (September 11, 2026)
 
