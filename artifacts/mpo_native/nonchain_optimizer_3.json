@@ -1,0 +1,39 @@
+{
+  "pairs": [
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      4,
+      11
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      6,
+      9
+    ]
+  ],
+  "iterations": 3,
+  "learning_rate": 0.01,
+  "initial_process_fidelity": 0.17245854245087822,
+  "final_process_fidelity": NaN,
+  "loss_history": [
+    0.8275414575491218,
+    NaN,
+    NaN
+  ],
+  "optimizer": "JAX autodiff + per-gate polar retraction",
+  "not_promoted": true
+}

@@ -1,0 +1,28 @@
+{
+  "status": "not_found",
+  "checked_prefix_programs": 65536,
+  "checked_suffix_programs": 65536,
+  "exact_candidates": 0,
+  "kind": "restricted exact finite-group QBP meet-in-the-middle",
+  "group": "binary_icosahedral",
+  "length": 8,
+  "order": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    11,
+    8
+  ],
+  "alphabet": [
+    1,
+    3,
+    5,
+    7
+  ],
+  "sample_count": 64,
+  "elapsed_seconds": 291.3920888900757,
+  "git_commit": "a7283b1be1818226e8115607ef60f5894b54243d"
+}

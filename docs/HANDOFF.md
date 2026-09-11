@@ -1,5 +1,10 @@
 # Continuation handoff
 
+The complete cross-branch research index is [`METHOD_INDEX.md`](METHOD_INDEX.md).
+It summarizes every method family, experiment, research reference, evidence
+level, and closure decision; this handoff retains the operational details and
+artifact-specific history.
+
 Current research entry point: [September 9 literature and repository review](RESEARCH_REVIEW_2026-09-09.md). The protected best is **524/950/18**, hash checked again in `artifacts/research_structure_audit.json`. Safari's live leaderboard shows Daksh S. at 197/475 and “Monit S.” at rank 21 with 531/1020; historical “nothing submitted” statements below are stale. No upload was made during this review. The new report narrows several overbroad architectural claims and records exact selector/code-size and boundary-residual diagnostics. No new quantum best is claimed.
 
 ## State at handoff
@@ -13,6 +18,33 @@ Best (superseded, see the second continuation section below): `artifacts/full_mu
 This is exhaustive numerical checking, not a symbolic proof. Since all basis columns are checked with one shared global phase, it also checks the action on superpositions by linearity, subject to numerical tolerance.
 
 No challenge entry has been submitted. No current official score/rank exists for our artifact. The packaged deliverables are in `artifacts/531/`: `full_mux_531.qasm` plus its matching exhaustive report and `full_mux_531.qmod`. The QMOD is the logical oracle model; it is not expected to synthesize back to the exact pytket-optimized QASM. Do not claim rank 1.
+
+## Strategic rethinking checkpoint (September 11, 2026)
+
+The new unitary/state-space investigation is documented in
+[`UNITARY_STATE_SPACE.md`](UNITARY_STATE_SPACE.md), with executable probes and
+machine-readable reports under `artifacts/unitary_state_space/`. It tested four
+structurally different explanations for a sub-183 circuit: finite-size
+Nie--Zi-style phase/state compression, exact finite-group quantum branching
+programs, tensor-train/MPO-to-unitary dilation, and direct ZH-diagram
+simplification. None produced a new verified oracle, but the results are more
+informative than another long run of the existing beams:
+
+* the exact 12-variable truth tensor has maximum TT rank 13, so it is
+  compressible but not a same-bond unitary pipeline;
+* the finite-size resource audit does not support a useful constant-depth
+  interpretation of the asymptotic phase-polynomial literature;
+* exact QBP searches, restricted meet-in-the-middle searches, native-group
+  calibration, and continuous width-2/width-4 relaxations did not reach the
+  target phase;
+* a direct 1,097-term ZH graph was constructed, but generic simplification
+  timed out before producing a compact unitary.
+
+This is a research closure, not an impossibility proof. The current conclusion
+is that the 524/950 circuit remains the protected fallback and that the
+destructive, low-multiplicative-depth/XAG, phase-history, and generic MPO
+optimizer families should not receive another large run without a new theorem
+or representation. Rank 1 remains unfinished; no new best is claimed.
 
 ## Challenge and scoring
 
@@ -1174,3 +1206,109 @@ Stop active internal architecture invention. The verified 524/950 artifact is
 the submission fallback; remaining work should be limited to explicit
 submission and external investigation of the structural technique used by
 competitive solutions.
+
+## Cross-branch strategic closure after the 21-hour run (September 11, 2026)
+
+A review of `main`, `development`, `multiplicative-depth`, and
+`another-one`, including the latest destructive-search commits, changes the
+diagnosis. The remaining gap is not best explained by insufficient search
+time. The explored branches have optimized the wrong circuit classes for the
+competition objective. The current leaderboard depth of **183** is retained
+here as the working challenge target reported during this review; it is not a
+new local score or a claim about the leader's construction.
+
+| Branch | Circuit class tested | Evidence | Conclusion |
+|---|---|---|---|
+| `main` | Six-feature UCR load/phase/unload | Verified **524 / 950 / 18**; the architecture is heavily serialized and q16 carries a large critical workload | The architecture is closed; compiler tuning cannot plausibly remove the roughly 300-layer gap |
+| `development` | Destructive semantic classifiers, high-order corrections, dirty/clean completion, and controlled swaps | Shallow approximate classifiers exist, but exact completion expands to thousands of layers; the semantic implementation was independently self-tested over all 4096 inputs | Destructive semantics are valid, but classifier Hamming/affine residual is not a useful leading objective for an exact shallow oracle |
+| `multiplicative-depth` | Exact low-MD XAGs | MD=4 reaches 5096 ANDs; a smaller exact XAG reaches 81 ANDs at MD=6, while the best native realization remains about **1023 / 899** | Multiplicative depth does not translate into native quantum depth; affine transport, live values, and recomputation dominate |
+| `another-one` | Historical phase signals and phase-history constructions | Shallow histories reach rank 29 around depth 88 and rank 26 around depth 106, but the target never enters the span; the exact shared-XAG proposal is **1345 / 1027** | Removing final classical output is conceptually useful, but the explored RCCX/RC3X trajectory family does not generate the target cheaply |
+
+The destructive branch is therefore a mapped negative landscape rather than an
+unfinished beam campaign. Forward points improved the best affine residual
+from approximately 331 at depth 79, through 315 at depth 90 and 279 at depth
+108, to 197 at depth 146, but that residual still measures truth-table points
+outside the available affine span. Exact completions remained in the
+many-thousands-of-layers regime. Exhaustive local screens of RCCX neighbors,
+higher-degree monomials, persistent-CX transformations, affine and signed
+controls, and controlled swaps found no escape from this regime.
+
+The apparent combination with `another-one` was also checked directly. The
+depth-79 no-uncompute trajectory reached historical rank 27 and the depth-90
+v2 trajectory reached rank 28, but neither contained the logo phase in its
+span. The depth-92 signed/positive trajectory likewise did not contain the
+target. Thus no hidden sub-200 construction was found by combining the
+existing shallow destructive histories with phase-history synthesis.
+
+### Disposition
+
+Close the destructive beam campaign, multiplicative-depth search, XAG
+rewrites, and current phase-history trajectory family. Do not spend more time
+on larger versions of these searches or on compiler tuning of the protected
+UCR architecture. The verified **524 / 950 / 18** artifact remains the
+fallback and is unchanged. A future attempt is justified only if it introduces
+a genuinely different structural idea, such as external structural
+intelligence or reverse engineering of the circuit class used by the leading
+solution. Rank 1 has not been achieved, and no local result should be
+represented as such.
+
+## MPO-native branch status (September 11, 2026)
+
+The new `mpo-native-synthesis` branch is the first materially different
+structural direction after the cross-branch closure. It contains an exact
+TT/MPO representation of the logo phase, a full process-overlap objective,
+an exact non-adjacent gate contraction, and topology generators for all-to-all
+matchings. The target's interleaved TT order has maximum exact rank 13, and
+the target sign tensor reconstructs to numerical precision.
+
+The adjacent RieADAM brick-wall family plateaued near process fidelity
+`0.3020024`; its best abstract 4-layer checkpoint compiles to depth 25 / CX 64
+but is only approximate and is not promoted. The non-adjacent contraction
+matches dense evaluation to about `4.0e-21`. Differentiating through dynamic
+MPO QR/SVD splitting was not viable in the installed JAX version, so the
+bounded one-layer direct-overlap test reached `0.1917240554` after 200 steps.
+This is diagnostic only. The next real task is a fixed-coordinate,
+multi-layer, non-chain tensor-network optimizer followed by exact QASM
+promotion and exhaustive verification.
+
+The gatewise Procrustes optimizer is now implemented in
+`src/mpo_gate_sweep.py`. It contracts exact local environments using cached
+tensor-network paths and performs polar/SVD updates. The bounded results are
+round-robin 2-layer fidelity 0.355433, round-robin 4-layer fidelity 0.358981,
+round-robin 6-layer fidelity 0.369852, TT 6-layer fidelity 0.301523, and x-y
+4-layer fidelity 0.282325. The round-robin 4- and 6-layer checkpoints compile
+to depth 17 / 48 CX and 25 / 72 CX respectively, but remain large-error
+approximations. The six-layer run took about 818 seconds for five sweeps;
+eight-layer round-robin contractions became impractical, so no unsupported result
+was recorded. Fixed-topology extension
+is not currently a credible route; the next experiment should be adaptive
+matching selection or the explicitly deferred four-ancilla bus ansatz.
+
+The first four-ancilla bus ansatz is now also measured. With explicit clean
+ancilla boundaries and gatewise Procrustes updates, two bus interactions per
+data qubit reached 0.259720 and four reached 0.265659 after 15 sweeps. This
+is below the no-ancilla matching result and the schedule family is closed;
+only a materially different multi-pass/isometric bus construction would
+justify more work.
+
+The stronger sequential-memory test in `src/mpo_sequential_unitary.py` gives
+each data step an arbitrary 32x32 unitary on the four-qubit memory plus data.
+Twenty Haar restarts converged to 0.266116–0.266156; memory dimensions 32 and
+64 did not improve it. The simple single-pass sequential architecture is
+closed. A fixed-topology Riemannian probe optimizer also failed to beat exact
+gate sweeps. The executable MPO invariant suite is now six tests, all passing.
+
+The promotion wrapper `src/promote_mpo_candidate.py` now checks serialized
+`u3/cx` basis and width, records the QASM SHA, and invokes the repository
+exhaustive verifier. It rejected the depth-17 round-robin QASM with max error
+about 2.0, so no MPO artifact is verified or promoted.
+
+An analytic 15-parameter SU(4) Adam ladder was also tested. Exact fidelity
+rose from 0.5690 at 24 layers to 0.6434 at 32 and 0.6616 at 40, but the
+40-layer native compile was depth 241 / 720 CX. The trend is too slow for the
+183 target, so fixed round-robin SU(4) depth expansion is closed. No artifact
+from this ladder is a candidate.
+
+An analytic four-ancilla bus Adam control was also checked with 64 fixed trace
+probes. Its 48-SU(4)-gate schedule reached only 0.373421 after 150 steps,
+below the no-ancilla ladder; the bus schedule is closed.

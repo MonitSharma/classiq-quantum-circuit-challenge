@@ -1,0 +1,235 @@
+{
+  "kind": "exact classical analysis plus existing QASM/report hash audit",
+  "best": {
+    "qasm": "artifacts/524/full_mux_feature_linear_tket_524.qasm",
+    "sha256": "7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147",
+    "report_hash_matches": true,
+    "depth": 524,
+    "cx": 950,
+    "width": 18,
+    "per_wire_operations": [
+      56,
+      52,
+      36,
+      58,
+      81,
+      25,
+      98,
+      100,
+      110,
+      106,
+      130,
+      115,
+      245,
+      321,
+      240,
+      225,
+      405,
+      320
+    ],
+    "fixed_gate_multiset_depth_lower_bound": 405
+  },
+  "marked_pixels": 1097,
+  "distinct_rows": 11,
+  "distinct_columns": 11,
+  "gf2_rank": 10,
+  "row_class_sizes": [
+    2,
+    2,
+    2,
+    2,
+    4,
+    4,
+    4,
+    5,
+    5,
+    12,
+    22
+  ],
+  "feature_codeword_count": 10,
+  "y_selector_splits": [
+    {
+      "selector_bit": 0,
+      "classes_in_selector_0": 9,
+      "classes_in_selector_1": 9,
+      "ordered_cofactor_pair_classes": 17
+    },
+    {
+      "selector_bit": 1,
+      "classes_in_selector_0": 9,
+      "classes_in_selector_1": 11,
+      "ordered_cofactor_pair_classes": 18
+    },
+    {
+      "selector_bit": 2,
+      "classes_in_selector_0": 9,
+      "classes_in_selector_1": 10,
+      "ordered_cofactor_pair_classes": 19
+    },
+    {
+      "selector_bit": 3,
+      "classes_in_selector_0": 8,
+      "classes_in_selector_1": 10,
+      "ordered_cofactor_pair_classes": 19
+    },
+    {
+      "selector_bit": 4,
+      "classes_in_selector_0": 10,
+      "classes_in_selector_1": 7,
+      "ordered_cofactor_pair_classes": 16
+    },
+    {
+      "selector_bit": 5,
+      "classes_in_selector_0": 7,
+      "classes_in_selector_1": 6,
+      "ordered_cofactor_pair_classes": 18
+    }
+  ],
+  "x_selector_splits": [
+    {
+      "selector_bit": 0,
+      "classes_in_selector_0": 10,
+      "classes_in_selector_1": 9,
+      "ordered_cofactor_pair_classes": 17
+    },
+    {
+      "selector_bit": 1,
+      "classes_in_selector_0": 11,
+      "classes_in_selector_1": 10,
+      "ordered_cofactor_pair_classes": 18
+    },
+    {
+      "selector_bit": 2,
+      "classes_in_selector_0": 11,
+      "classes_in_selector_1": 10,
+      "ordered_cofactor_pair_classes": 17
+    },
+    {
+      "selector_bit": 3,
+      "classes_in_selector_0": 11,
+      "classes_in_selector_1": 10,
+      "ordered_cofactor_pair_classes": 18
+    },
+    {
+      "selector_bit": 4,
+      "classes_in_selector_0": 7,
+      "classes_in_selector_1": 7,
+      "ordered_cofactor_pair_classes": 15
+    },
+    {
+      "selector_bit": 5,
+      "classes_in_selector_0": 3,
+      "classes_in_selector_1": 10,
+      "ordered_cofactor_pair_classes": 15
+    }
+  ],
+  "one_bit_exact_core_plus_residual": [
+    {
+      "axis": "x",
+      "bit": 0,
+      "residual_pixels": 45,
+      "core_gf2_rank": 9,
+      "residual_gf2_rank": 9,
+      "nonempty_residual_row_patterns": 9
+    },
+    {
+      "axis": "x",
+      "bit": 1,
+      "residual_pixels": 129,
+      "core_gf2_rank": 10,
+      "residual_gf2_rank": 10,
+      "nonempty_residual_row_patterns": 10
+    },
+    {
+      "axis": "x",
+      "bit": 2,
+      "residual_pixels": 209,
+      "core_gf2_rank": 10,
+      "residual_gf2_rank": 10,
+      "nonempty_residual_row_patterns": 10
+    },
+    {
+      "axis": "x",
+      "bit": 3,
+      "residual_pixels": 249,
+      "core_gf2_rank": 10,
+      "residual_gf2_rank": 9,
+      "nonempty_residual_row_patterns": 9
+    },
+    {
+      "axis": "x",
+      "bit": 4,
+      "residual_pixels": 447,
+      "core_gf2_rank": 6,
+      "residual_gf2_rank": 9,
+      "nonempty_residual_row_patterns": 9
+    },
+    {
+      "axis": "x",
+      "bit": 5,
+      "residual_pixels": 693,
+      "core_gf2_rank": 2,
+      "residual_gf2_rank": 10,
+      "nonempty_residual_row_patterns": 10
+    },
+    {
+      "axis": "y",
+      "bit": 0,
+      "residual_pixels": 77,
+      "core_gf2_rank": 8,
+      "residual_gf2_rank": 10,
+      "nonempty_residual_row_patterns": 10
+    },
+    {
+      "axis": "y",
+      "bit": 1,
+      "residual_pixels": 143,
+      "core_gf2_rank": 8,
+      "residual_gf2_rank": 10,
+      "nonempty_residual_row_patterns": 10
+    },
+    {
+      "axis": "y",
+      "bit": 2,
+      "residual_pixels": 381,
+      "core_gf2_rank": 8,
+      "residual_gf2_rank": 10,
+      "nonempty_residual_row_patterns": 13
+    },
+    {
+      "axis": "y",
+      "bit": 3,
+      "residual_pixels": 539,
+      "core_gf2_rank": 7,
+      "residual_gf2_rank": 9,
+      "nonempty_residual_row_patterns": 15
+    },
+    {
+      "axis": "y",
+      "bit": 4,
+      "residual_pixels": 787,
+      "core_gf2_rank": 9,
+      "residual_gf2_rank": 9,
+      "nonempty_residual_row_patterns": 13
+    },
+    {
+      "axis": "y",
+      "bit": 5,
+      "residual_pixels": 1087,
+      "core_gf2_rank": 6,
+      "residual_gf2_rank": 10,
+      "nonempty_residual_row_patterns": 16
+    }
+  ],
+  "two_bit_majority_core": {
+    "discarded_bits": [
+      "x0",
+      "y0"
+    ],
+    "tie_value": 0,
+    "residual_pixels": 105,
+    "core_gf2_rank": 10,
+    "residual_gf2_rank": 19,
+    "warning": "Population and rank are not circuit depth estimates."
+  }
+}

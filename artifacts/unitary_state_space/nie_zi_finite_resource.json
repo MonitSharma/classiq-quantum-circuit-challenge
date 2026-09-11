@@ -1,0 +1,249 @@
+{
+  "kind": "Nie-Zi finite-size resource audit",
+  "timestamp_utc": "2026-09-11T02:38:04.475746+00:00",
+  "git_commit": "a7283b1be1818226e8115607ef60f5894b54243d",
+  "command": "PYTHONPATH=src .venv/bin/python src/nie_zi_finite.py",
+  "paper": "arXiv:2607.28402v1, Section 4.3, Theorem 1",
+  "n": 12,
+  "ancillas": 6,
+  "output_bits": 1,
+  "construction_regime": "m < n conditional-clean prefix construction",
+  "parameter_rows": [
+    {
+      "p": 11,
+      "q": 1,
+      "prefix_iterations": 2048,
+      "conditional_clean_workspace": 17,
+      "unit_constant_condition": false,
+      "paper_capacity_ratio": 8.5,
+      "optimistic_table_slots": 0.11764705882352941,
+      "optimistic_round_trip_slots": 0.23529411764705882,
+      "optimistic_total_slots": 481.88235294117646,
+      "prefix_overhead_slots": 25,
+      "optimistic_total_with_prefix": 51681.882352941175
+    },
+    {
+      "p": 10,
+      "q": 2,
+      "prefix_iterations": 1024,
+      "conditional_clean_workspace": 16,
+      "unit_constant_condition": false,
+      "paper_capacity_ratio": 8.0,
+      "optimistic_table_slots": 0.25,
+      "optimistic_round_trip_slots": 0.5,
+      "optimistic_total_slots": 512.0,
+      "prefix_overhead_slots": 23,
+      "optimistic_total_with_prefix": 24064.0
+    },
+    {
+      "p": 9,
+      "q": 3,
+      "prefix_iterations": 512,
+      "conditional_clean_workspace": 15,
+      "unit_constant_condition": false,
+      "paper_capacity_ratio": 5.625,
+      "optimistic_table_slots": 0.5333333333333333,
+      "optimistic_round_trip_slots": 1.0666666666666667,
+      "optimistic_total_slots": 546.1333333333333,
+      "prefix_overhead_slots": 21,
+      "optimistic_total_with_prefix": 11298.133333333333
+    },
+    {
+      "p": 8,
+      "q": 4,
+      "prefix_iterations": 256,
+      "conditional_clean_workspace": 14,
+      "unit_constant_condition": false,
+      "paper_capacity_ratio": 3.5,
+      "optimistic_table_slots": 1.1428571428571428,
+      "optimistic_round_trip_slots": 2.2857142857142856,
+      "optimistic_total_slots": 585.1428571428571,
+      "prefix_overhead_slots": 19,
+      "optimistic_total_with_prefix": 5449.142857142857
+    },
+    {
+      "p": 7,
+      "q": 5,
+      "prefix_iterations": 128,
+      "conditional_clean_workspace": 13,
+      "unit_constant_condition": false,
+      "paper_capacity_ratio": 2.03125,
+      "optimistic_table_slots": 2.4615384615384617,
+      "optimistic_round_trip_slots": 4.923076923076923,
+      "optimistic_total_slots": 630.1538461538462,
+      "prefix_overhead_slots": 17,
+      "optimistic_total_with_prefix": 2806.153846153846
+    },
+    {
+      "p": 6,
+      "q": 6,
+      "prefix_iterations": 64,
+      "conditional_clean_workspace": 12,
+      "unit_constant_condition": false,
+      "paper_capacity_ratio": 1.125,
+      "optimistic_table_slots": 5.333333333333333,
+      "optimistic_round_trip_slots": 10.666666666666666,
+      "optimistic_total_slots": 682.6666666666666,
+      "prefix_overhead_slots": 15,
+      "optimistic_total_with_prefix": 1642.6666666666665
+    },
+    {
+      "p": 5,
+      "q": 7,
+      "prefix_iterations": 32,
+      "conditional_clean_workspace": 11,
+      "unit_constant_condition": true,
+      "paper_capacity_ratio": 0.6015625,
+      "optimistic_table_slots": 11.636363636363637,
+      "optimistic_round_trip_slots": 23.272727272727273,
+      "optimistic_total_slots": 744.7272727272727,
+      "prefix_overhead_slots": 13,
+      "optimistic_total_with_prefix": 1160.7272727272727
+    },
+    {
+      "p": 4,
+      "q": 8,
+      "prefix_iterations": 16,
+      "conditional_clean_workspace": 10,
+      "unit_constant_condition": true,
+      "paper_capacity_ratio": 0.3125,
+      "optimistic_table_slots": 25.6,
+      "optimistic_round_trip_slots": 51.2,
+      "optimistic_total_slots": 819.2,
+      "prefix_overhead_slots": 11,
+      "optimistic_total_with_prefix": 995.2
+    },
+    {
+      "p": 3,
+      "q": 9,
+      "prefix_iterations": 8,
+      "conditional_clean_workspace": 9,
+      "unit_constant_condition": true,
+      "paper_capacity_ratio": 0.158203125,
+      "optimistic_table_slots": 56.888888888888886,
+      "optimistic_round_trip_slots": 113.77777777777777,
+      "optimistic_total_slots": 910.2222222222222,
+      "prefix_overhead_slots": 9,
+      "optimistic_total_with_prefix": 982.2222222222222
+    },
+    {
+      "p": 2,
+      "q": 10,
+      "prefix_iterations": 4,
+      "conditional_clean_workspace": 8,
+      "unit_constant_condition": true,
+      "paper_capacity_ratio": 0.078125,
+      "optimistic_table_slots": 128.0,
+      "optimistic_round_trip_slots": 256.0,
+      "optimistic_total_slots": 1024.0,
+      "prefix_overhead_slots": 7,
+      "optimistic_total_with_prefix": 1052.0
+    },
+    {
+      "p": 1,
+      "q": 11,
+      "prefix_iterations": 2,
+      "conditional_clean_workspace": 7,
+      "unit_constant_condition": true,
+      "paper_capacity_ratio": 0.03759765625,
+      "optimistic_table_slots": 292.57142857142856,
+      "optimistic_round_trip_slots": 585.1428571428571,
+      "optimistic_total_slots": 1170.2857142857142,
+      "prefix_overhead_slots": 5,
+      "optimistic_total_with_prefix": 1180.2857142857142
+    }
+  ],
+  "best_unit_constant_screened_split": {
+    "p": 3,
+    "q": 9,
+    "prefix_iterations": 8,
+    "conditional_clean_workspace": 9,
+    "unit_constant_condition": true,
+    "paper_capacity_ratio": 0.158203125,
+    "optimistic_table_slots": 56.888888888888886,
+    "optimistic_round_trip_slots": 113.77777777777777,
+    "optimistic_total_slots": 910.2222222222222,
+    "prefix_overhead_slots": 9,
+    "optimistic_total_with_prefix": 982.2222222222222
+  },
+  "calibrated_primitives": {
+    "x": {
+      "qubits": 1,
+      "depth": 1,
+      "cx": 0,
+      "ops": {
+        "u3": 1
+      }
+    },
+    "cx": {
+      "qubits": 2,
+      "depth": 1,
+      "cx": 1,
+      "ops": {
+        "cx": 1
+      }
+    },
+    "ccx": {
+      "qubits": 3,
+      "depth": 11,
+      "cx": 6,
+      "ops": {
+        "u3": 9,
+        "cx": 6
+      }
+    },
+    "rccx": {
+      "qubits": 3,
+      "depth": 9,
+      "cx": 3,
+      "ops": {
+        "u3": 6,
+        "cx": 3
+      }
+    },
+    "mcx3": {
+      "qubits": 4,
+      "depth": 27,
+      "cx": 14,
+      "ops": {
+        "u3": 17,
+        "cx": 14
+      }
+    },
+    "mcx4": {
+      "qubits": 5,
+      "depth": 81,
+      "cx": 36,
+      "ops": {
+        "u3": 69,
+        "cx": 36
+      }
+    },
+    "mcx5": {
+      "qubits": 6,
+      "depth": 150,
+      "cx": 84,
+      "ops": {
+        "u3": 127,
+        "cx": 84
+      }
+    },
+    "mcx6": {
+      "qubits": 7,
+      "depth": 213,
+      "cx": 136,
+      "ops": {
+        "u3": 179,
+        "cx": 136
+      }
+    }
+  },
+  "paper_limits": {
+    "theorem_depth_bound": "O(2^n/(n+m)) for m<n",
+    "hidden_constants": "not specified in the paper",
+    "gate_model": "constant-width finite gate set, not directly u3/cx depth",
+    "finite_schedule": "not supplied; this report does not claim an implementation"
+  },
+  "verdict": "STOP",
+  "verdict_basis": "Even the unit-constant screened estimate exceeds the requested native-depth gate; the paper's asymptotic theorem cannot justify implementing a full n=12,m=6 oracle here."
+}

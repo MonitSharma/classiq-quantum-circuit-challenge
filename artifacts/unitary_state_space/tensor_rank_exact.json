@@ -1,0 +1,118 @@
+{
+  "kind": "exact modular TT-rank certification",
+  "timestamp_utc": "2026-09-11T02:46:49.784166+00:00",
+  "git_commit": "a7283b1be1818226e8115607ef60f5894b54243d",
+  "command": "PYTHONPATH=src .venv/bin/python src/tensor_rank_exact.py",
+  "order": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    11,
+    8,
+    6,
+    7,
+    9,
+    10
+  ],
+  "unfolding_ranks": [
+    2,
+    4,
+    8,
+    11,
+    12,
+    11,
+    12,
+    13,
+    8,
+    4,
+    2
+  ],
+  "tt_ranks_endpoint_inclusive": [
+    1,
+    2,
+    4,
+    8,
+    11,
+    12,
+    11,
+    12,
+    13,
+    8,
+    4,
+    2,
+    1
+  ],
+  "maximum_bond_dimension": 13,
+  "primes": [
+    1000003,
+    1000033,
+    1000037
+  ],
+  "rank_by_prime": {
+    "1": {
+      "1000003": 2,
+      "1000033": 2,
+      "1000037": 2
+    },
+    "2": {
+      "1000003": 4,
+      "1000033": 4,
+      "1000037": 4
+    },
+    "3": {
+      "1000003": 8,
+      "1000033": 8,
+      "1000037": 8
+    },
+    "4": {
+      "1000003": 11,
+      "1000033": 11,
+      "1000037": 11
+    },
+    "5": {
+      "1000003": 12,
+      "1000033": 12,
+      "1000037": 12
+    },
+    "6": {
+      "1000003": 11,
+      "1000033": 11,
+      "1000037": 11
+    },
+    "7": {
+      "1000003": 12,
+      "1000033": 12,
+      "1000037": 12
+    },
+    "8": {
+      "1000003": 13,
+      "1000033": 13,
+      "1000037": 13
+    },
+    "9": {
+      "1000003": 8,
+      "1000033": 8,
+      "1000037": 8
+    },
+    "10": {
+      "1000003": 4,
+      "1000033": 4,
+      "1000037": 4
+    },
+    "11": {
+      "1000003": 2,
+      "1000033": 2,
+      "1000037": 2
+    }
+  },
+  "target_sign_sha256": "14b63510667b9ab53535f3e8c5526765dff027ddbbac57d10b423d4fc73f199a",
+  "interpretation": {
+    "modular_rank": "lower bound on characteristic-zero integer rank",
+    "matching_tt_profile": "exact rational TT factorization supplies a matching upper bound",
+    "unitary_warning": "TT cores are not thereby unitary transitions"
+  },
+  "exact_witness": "artifacts/unitary_state_space/tensor_tt_exact.json"
+}

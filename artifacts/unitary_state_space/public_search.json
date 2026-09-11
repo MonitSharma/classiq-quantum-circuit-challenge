@@ -1,0 +1,27 @@
+{
+  "kind": "public structural search for reported depth-183 submission",
+  "date": "2026-09-11",
+  "queries": [
+    "Classiq challenge quantum circuit depth 183 logo oracle",
+    "site:github.com MonitSharma classiq depth 183",
+    "Classiq quantum challenge leaderboard 183 u3 cx",
+    "depth 183 quantum oracle Classiq",
+    "u3 cx Classiq challenge"
+  ],
+  "inspected_public_material": [
+    {
+      "url": "https://www.classiq.io/insights/the-classiq-coding-competition-by-the-numbers",
+      "relevance": "generic Classiq competition background; no current submission circuit"
+    },
+    {
+      "url": "https://classiq.mintlify.app/explore/tutorials/workshops/oracle_workshop/oracles_workshop",
+      "relevance": "generic oracle and phase-kickback tutorial; not this challenge's solution"
+    },
+    {
+      "url": "https://github.com/Classiq/",
+      "relevance": "official public organization page; no matching depth-183 implementation"
+    }
+  ],
+  "result": "no public circuit, participant write-up, or architecture identifying the reported leader was found",
+  "evidence_classification": "negative search result, not an inference about the leader's architecture"
+}

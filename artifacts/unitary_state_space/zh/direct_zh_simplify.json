@@ -1,0 +1,22 @@
+{
+  "kind": "direct ZH truth-table phase oracle",
+  "mode": "simplify",
+  "git_commit": "a7283b1be1818226e8115607ef60f5894b54243d",
+  "input_qubits": 12,
+  "marked_terms": 1097,
+  "raw_graph": {
+    "vertices": 27713,
+    "edges": 39768,
+    "vertex_types": {
+      "BOUNDARY": 24,
+      "X": 13428,
+      "Z": 13164,
+      "H_BOX": 1097
+    }
+  },
+  "source": "logo(x,y) truth table; no input QASM",
+  "simplification_status": "timeout",
+  "timeout_seconds": 10,
+  "error": "ZH simplification exceeded 10s",
+  "elapsed_seconds": 10.083677053451538
+}

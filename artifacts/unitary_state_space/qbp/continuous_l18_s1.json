@@ -1,0 +1,33 @@
+{
+  "length": 18,
+  "steps": 2000,
+  "seed": 1,
+  "order": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    11,
+    8,
+    6,
+    7,
+    9,
+    10,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "loss": 0.9550883720223822,
+  "minimum_target_real_amplitude": -0.9784379873276156,
+  "maximum_target_amplitude_error": 1.9784379873276157,
+  "maximum_memory_leakage": 0.9997490115002229,
+  "runtime_seconds": 12.264169931411743,
+  "status": "numerical_only",
+  "kind": "continuous SU(2) QBP phase-process search",
+  "git_commit": "a7283b1be1818226e8115607ef60f5894b54243d"
+}

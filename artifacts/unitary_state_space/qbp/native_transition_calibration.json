@@ -1,0 +1,31 @@
+{
+  "kind": "finite-group QBP native transition calibration",
+  "git_commit": "a7283b1be1818226e8115607ef60f5894b54243d",
+  "group": "binary_icosahedral",
+  "group_order": 120,
+  "single_qubit": {
+    "max_depth": 1,
+    "max_cx": 0,
+    "distinct_depths": [
+      0,
+      1
+    ]
+  },
+  "controlled_relative": {
+    "max_depth": 5,
+    "max_cx": 2,
+    "distinct_depths": [
+      0,
+      1,
+      2,
+      3,
+      5
+    ],
+    "distinct_cx": [
+      0,
+      1,
+      2
+    ]
+  },
+  "interpretation": "A QBP instruction can be factored into an uncontrolled base and a controlled relative unitary; this is only a transition estimate, not a complete clean phase oracle."
+}

@@ -1,0 +1,150 @@
+{
+  "kind": "exact TT same-bond isometric feasibility diagnostic",
+  "timestamp_utc": "2026-09-11T02:59:52.077856+00:00",
+  "git_commit": "a7283b1be1818226e8115607ef60f5894b54243d",
+  "witness": "artifacts/unitary_state_space/tensor_tt_exact.json",
+  "layers": [
+    {
+      "layer": 0,
+      "left_bond": 1,
+      "right_bond": 2,
+      "symmetric_metric_variables": 3,
+      "exact_equation_rank": 1,
+      "exact_metric_nullity": 2,
+      "right_dimension_at_least_left": true,
+      "same_bond_row_isometry_necessary_condition": true,
+      "obstruction": "no algebraic obstruction; positive metric not yet proved"
+    },
+    {
+      "layer": 1,
+      "left_bond": 2,
+      "right_bond": 4,
+      "symmetric_metric_variables": 10,
+      "exact_equation_rank": 3,
+      "exact_metric_nullity": 7,
+      "right_dimension_at_least_left": true,
+      "same_bond_row_isometry_necessary_condition": true,
+      "obstruction": "no algebraic obstruction; positive metric not yet proved"
+    },
+    {
+      "layer": 2,
+      "left_bond": 4,
+      "right_bond": 8,
+      "symmetric_metric_variables": 36,
+      "exact_equation_rank": 10,
+      "exact_metric_nullity": 26,
+      "right_dimension_at_least_left": true,
+      "same_bond_row_isometry_necessary_condition": true,
+      "obstruction": "no algebraic obstruction; positive metric not yet proved"
+    },
+    {
+      "layer": 3,
+      "left_bond": 8,
+      "right_bond": 11,
+      "symmetric_metric_variables": 66,
+      "exact_equation_rank": 35,
+      "exact_metric_nullity": 31,
+      "right_dimension_at_least_left": true,
+      "same_bond_row_isometry_necessary_condition": true,
+      "obstruction": "no algebraic obstruction; positive metric not yet proved"
+    },
+    {
+      "layer": 4,
+      "left_bond": 11,
+      "right_bond": 12,
+      "symmetric_metric_variables": 78,
+      "exact_equation_rank": 45,
+      "exact_metric_nullity": 33,
+      "right_dimension_at_least_left": true,
+      "same_bond_row_isometry_necessary_condition": true,
+      "obstruction": "no algebraic obstruction; positive metric not yet proved"
+    },
+    {
+      "layer": 5,
+      "left_bond": 12,
+      "right_bond": 11,
+      "symmetric_metric_variables": 66,
+      "exact_equation_rank": 57,
+      "exact_metric_nullity": 9,
+      "right_dimension_at_least_left": false,
+      "same_bond_row_isometry_necessary_condition": false,
+      "obstruction": "right bond shrinks below left bond"
+    },
+    {
+      "layer": 6,
+      "left_bond": 11,
+      "right_bond": 12,
+      "symmetric_metric_variables": 78,
+      "exact_equation_rank": 45,
+      "exact_metric_nullity": 33,
+      "right_dimension_at_least_left": true,
+      "same_bond_row_isometry_necessary_condition": true,
+      "obstruction": "no algebraic obstruction; positive metric not yet proved"
+    },
+    {
+      "layer": 7,
+      "left_bond": 12,
+      "right_bond": 13,
+      "symmetric_metric_variables": 91,
+      "exact_equation_rank": 71,
+      "exact_metric_nullity": 20,
+      "right_dimension_at_least_left": true,
+      "same_bond_row_isometry_necessary_condition": true,
+      "obstruction": "no algebraic obstruction; positive metric not yet proved"
+    },
+    {
+      "layer": 8,
+      "left_bond": 13,
+      "right_bond": 8,
+      "symmetric_metric_variables": 36,
+      "exact_equation_rank": 35,
+      "exact_metric_nullity": 1,
+      "right_dimension_at_least_left": false,
+      "same_bond_row_isometry_necessary_condition": false,
+      "obstruction": "right bond shrinks below left bond"
+    },
+    {
+      "layer": 9,
+      "left_bond": 8,
+      "right_bond": 4,
+      "symmetric_metric_variables": 10,
+      "exact_equation_rank": 10,
+      "exact_metric_nullity": 0,
+      "right_dimension_at_least_left": false,
+      "same_bond_row_isometry_necessary_condition": false,
+      "obstruction": "zero common-metric nullspace"
+    },
+    {
+      "layer": 10,
+      "left_bond": 4,
+      "right_bond": 2,
+      "symmetric_metric_variables": 3,
+      "exact_equation_rank": 3,
+      "exact_metric_nullity": 0,
+      "right_dimension_at_least_left": false,
+      "same_bond_row_isometry_necessary_condition": false,
+      "obstruction": "zero common-metric nullspace"
+    },
+    {
+      "layer": 11,
+      "left_bond": 2,
+      "right_bond": 1,
+      "symmetric_metric_variables": 1,
+      "exact_equation_rank": 1,
+      "exact_metric_nullity": 0,
+      "right_dimension_at_least_left": false,
+      "same_bond_row_isometry_necessary_condition": false,
+      "obstruction": "zero common-metric nullspace"
+    }
+  ],
+  "obstructed_layers": [
+    5,
+    8,
+    9,
+    10,
+    11
+  ],
+  "memory_qubits_for_max_bond": 4,
+  "interpretation": "The natural same-bond row-isometric TT realization is obstructed. This does not rule out padded unitary dilation, a different gauge/order, or a QBP initialized from the TT.",
+  "decision": "STOP_SAME_BOND_DILATION_CONDITIONAL_PIVOT_TO_PADDED_OR_QBP"
+}

@@ -1,0 +1,31 @@
+{
+  "order": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    11,
+    8,
+    6,
+    7,
+    9,
+    10,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "length": 18,
+  "timeout_ms": 5000,
+  "solver_result": "unknown",
+  "elapsed_seconds": 5.074625730514526,
+  "status": "timeout_or_unknown",
+  "kind": "exact finite-group QBP checkpoint",
+  "group": "binary_icosahedral",
+  "group_order": 120,
+  "git_commit": "a7283b1be1818226e8115607ef60f5894b54243d"
+}

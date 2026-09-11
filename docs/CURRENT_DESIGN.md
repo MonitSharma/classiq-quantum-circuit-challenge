@@ -1,5 +1,25 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+For the complete method inventory, research references, experiment status, and
+cross-branch handoff, see [`METHOD_INDEX.md`](METHOD_INDEX.md) and the detailed
+chronology in [`EXPERIMENTS.md`](EXPERIMENTS.md).
+
+Status note (September 11, 2026): this architecture is a verified fallback,
+not an active optimization target. The cross-branch review in
+`docs/HANDOFF.md` also closes the current destructive, low-multiplicative-depth,
+XAG-rewrite, and phase-history families. Reaching the reported 183-depth
+leaderboard target requires a materially different structural circuit class;
+compiler tuning or a larger run of those searches is not considered a useful
+next step.
+
+The subsequent structural rethink is recorded in
+[`UNITARY_STATE_SPACE.md`](UNITARY_STATE_SPACE.md). Exact tensor-rank/TT
+analysis, finite-size phase-state auditing, quantum-branching-program probes,
+same-bond unitary feasibility checks, and direct ZH construction all produced
+diagnostic evidence but no replacement circuit. This file therefore describes
+the fallback only; new work should not quietly turn its feature-load/
+phase/unload architecture back into the default search objective.
+
  Implementation: `src/full_mux.py` / `src/feature_linear_encoding.py`, importing
 the radius, phase-cube, and pair helpers. The protected post-processed artifact
 is `artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524 depth / 950
@@ -146,3 +166,42 @@ depth 969, CX 1244, width 18, SHA
 The trusted `full_mux` baseline remains unchanged.
 
 Changing relative-phase components or helpers can invalidate an otherwise correct classical computation. Keep arbitrary input semantics in every compiler call, restore all temporary values before inverse lookup, and verify each exact exported circuit. No symbolic optimization should bypass numerical verification.
+
+## MPO-native synthesis status (September 11, 2026)
+
+The active experimental branch is `mpo-native-synthesis`. It represents the
+logo as an exact diagonal TT/MPO in the interleaved order with maximum rank
+13, and its arbitrary-pair contraction has been checked against dense
+evaluation. The adjacent brick-wall optimizer plateaued near process
+fidelity 0.302 and is not a route to a verified candidate. A bounded
+non-chain autodiff test reached 0.191724 after 200 steps using the exact
+one-layer operator overlap; this is diagnostic only. No candidate has been
+promoted, and the verified 524/950 fallback remains unchanged.
+
+The gatewise MPO Procrustes sweep is the current no-ancilla optimizer. Its
+best bounded round-robin result is process fidelity 0.369852 at six SU(4)
+layers, compiling to depth 25 / 72 CX but remaining approximate. TT and x-y
+families plateaued lower, and eight-layer round-robin environment contractions
+became impractical. Do not interpret these shallow native metrics as a
+verified oracle or as a new repository best; the exact promotion pipeline is
+still required.
+
+The analytic Adam ladder reached exact fidelity 0.6616 at 40 round-robin
+SU(4) layers, but native compilation was already depth 241 / 720 CX. This
+confirms that fixed matching depth expansion is not competitive; the result is
+diagnostic and unpromoted.
+
+The analytic four-ancilla bus Adam control reached only estimated fidelity
+0.373421 with 64 trace probes, below the no-ancilla ladder. This bus schedule
+is closed and no ancilla-assisted circuit has been promoted.
+
+The four-ancilla bus diagnostic used explicit clean-subspace boundaries and
+reached only 0.265659 process fidelity after 15 sweeps with 48 SU(4) gates.
+It is below the best no-ancilla result and is closed for this schedule
+family; no bus circuit has been promoted or verified.
+
+The stronger sequential-memory block ansatz and Riemannian control were also
+negative: 20 Haar restarts of arbitrary 32x32 memory/data blocks converged to
+0.266116–0.266156, and the batched trace-gradient control did not beat the
+exact gatewise sweep. The six-test MPO invariant suite passes; all numerical
+results remain approximate and unpromoted.

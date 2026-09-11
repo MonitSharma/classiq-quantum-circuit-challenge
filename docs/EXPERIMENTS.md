@@ -1,5 +1,23 @@
 # Experiment history and failure notes
 
+For a cross-branch inventory of every method family, source file, research
+reference, result type, and disposition, see [`METHOD_INDEX.md`](METHOD_INDEX.md).
+This file remains the detailed chronological lab notebook; entries below are
+not all equally strong evidence, so retain the verified/diagnostic/unknown
+distinction.
+
+## Cross-branch strategic closure (September 11, 2026)
+
+The review recorded in `docs/HANDOFF.md` closes the current destructive beam,
+multiplicative-depth/XAG, and phase-history search families. The 183-depth
+leaderboard target is not explained by more time in these circuit classes:
+approximate destructive classifiers do not complete exactly at shallow depth,
+low multiplicative depth does not translate to native U3/CX depth, and the
+replayed shallow destructive histories do not span the logo phase. Treat these
+as mapped negative directions. A future search should begin from a genuinely
+different structural hypothesis or external reverse engineering, not a larger
+run of the same objectives.
+
 Latest research-only diagnostics: [literature and repository review](RESEARCH_REVIEW_2026-09-09.md), reproduced by `src/research_structure_audit.py`. The protected **524/950/18** artifact has a fixed-gate per-wire depth bound of 405. Row coding with retained y5 needs only three additional bits in principle (7/6 conditional classes), but a shared code depending only on low5 y needs at least five bits (18 ordered row-pair classes). Removing x0 leaves an exact 45-pixel, rank-9 correction. These are classical analysis results, not new circuit scores; no old searches were rerun.
 
 ## Disjoint geometry architecture (September 9, 2026)
@@ -2002,3 +2020,21 @@ and external reversible-synthesis stacks. None changed the order of magnitude.
 This is a hard stop on internal architecture invention, not a request for
 another compiler variant. Retain 524/950 as the fallback and focus only on
 submission or external structural intelligence.
+
+## MPO-native non-chain capability test (September 11, 2026)
+
+The MPO branch validated an exact non-adjacent six-gate matching contraction
+against dense evaluation to approximately `4.0e-21` process-fidelity error.
+An attempted JAX optimizer through dynamic MPO QR/SVD refactorization was not
+usable: QR differentiation is unimplemented in the installed JAX version,
+while exact SVD differentiation is singular at the repeated values produced
+by unitary matching layers.
+
+The fallback capability test in `src/mpo_nonchain_optimizer.py` optimizes the
+exact process overlap of one disjoint long-range matching directly through
+its diagonal operator contribution. It uses JAX autodiff and unitary
+retraction, not finite differences. Fidelity moved from `0.1724585425` to
+`0.1748858031` in 20 steps and to `0.1917240554` in 200 steps. This is not a
+candidate or an exact full-oracle result; it only confirms stable gradients
+for a genuinely nonlocal operator objective. A multi-layer optimizer with a
+fixed differentiable tensor-network coordinate system is still required.
