@@ -68,3 +68,10 @@ reversible six-wire embedding (largest buckets 25 and 20). A new affine
 code buckets on both sides. This is a positive resource result, not yet a
 native circuit; it is the only remaining comparator experiment worth a bounded
 lowering attempt.
+
+That bounded 3+3 lowering was completed for both admissible y kernel
+directions and all overwrite choices. The best exact native y encoder was
+1491/845 depth/CX, with complete 64-input mapping and inverse-restoration
+checks. It fails the <=70-depth criterion, so the tested comparator family is
+closed; this remains an empirical closure, not a proof against every
+phase-tolerant QROM construction.

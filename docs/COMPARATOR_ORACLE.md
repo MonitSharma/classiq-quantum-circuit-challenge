@@ -141,3 +141,19 @@ Nevertheless, the only completed native classifier is 2217 depth, far beyond
 the requested 70-depth kill threshold.  Per the experiment protocol, the
 comparator architecture is **closed for this lowering**; x-side synthesis and
 kernel integration were not started.
+
+## 3+3 native lowering result
+
+`src/three_plus_three_native.py` implements the proposed construction for both
+admissible y kernel directions (`28` and `35`) and all four choices of the
+overwritten code bit. It uses the affine basis, computes three code bits into
+three clean outputs, and realizes the fourth with a degree-3 care-set
+correction. The raw mapping was checked on all 64 y inputs, and the exact
+inverse restores every input.
+
+The best serialized candidate was **1491 depth / 845 CX** (overwrite bit 1).
+The full screen is in `artifacts/comparator_oracle/three_plus_three/y_screen.json`;
+the saved representative QASM is the overwrite-bit-0 variant and is not the
+best-scoring row.
+This fails the <=70-depth GO threshold decisively and closes the tested 3+3
+affine-isometry lowering; no x-side synthesis or kernel integration was done.

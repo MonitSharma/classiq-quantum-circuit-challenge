@@ -38,6 +38,13 @@ injective within every code bucket using the 3+3 ancilla split. See
 `artifacts/comparator_oracle/three_plus_three_affine_screen.json`; this
 positive resource result still needs native nonlinear lowering.
 
+The focused 3+3 native lowering was then implemented for both admissible y
+kernel directions and all overwrite choices. The best exact encoder measured
+**1491 depth / 845 CX**, with all 64 mappings and inverse restoration checked.
+This fails the <=70 criterion, so x-side synthesis and kernel integration were
+not started. See `src/three_plus_three_native.py` and
+`artifacts/comparator_oracle/three_plus_three/y_screen.json`.
+
 ## State at handoff
 
 Updated September 10, 2026. The user wants the top rank, and the workspace now records the full experiment history, including failures. This is a research/optimization workspace, not a finished rank-1 submission.

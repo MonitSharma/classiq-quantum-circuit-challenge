@@ -59,7 +59,7 @@ def side_report(name, c0, c1, seed):
         "bucket_count": len(groups),
         "bucket_sizes": sizes,
         "max_bucket": max(sizes),
-        "minimum_garbage_bits": max(size.bit_length() for size in sizes),
+        "minimum_garbage_bits": max((size - 1).bit_length() for size in sizes),
         "affine_projection_masks": projection,
         "affine_projection_rank": rank2(projection) if projection else None,
         "affine_projection_is_injective_per_bucket": bool(projection),
