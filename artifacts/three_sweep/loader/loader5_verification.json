@@ -1,0 +1,10 @@
+{
+  "codebook": "/private/var/folders/tm/6bh1bn3x6pgfgp8nvpknylq40000gn/T/pytest-of-monitsharma/pytest-114/test_loader_basis_action0/codebook.json",
+  "seed": 0,
+  "depth": 64,
+  "cx_count": 120,
+  "basis_inputs_checked": 64,
+  "max_probability_leakage": 0.0,
+  "max_basis_index_error": 0.0,
+  "verified": true
+}
