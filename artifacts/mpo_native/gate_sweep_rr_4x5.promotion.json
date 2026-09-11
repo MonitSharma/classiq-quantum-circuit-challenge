@@ -1,0 +1,16 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/mpo_native/gate_sweep_rr_4x5.qasm",
+  "sha256": "a1e36f28976369cc12990f303f63264be06c22dc28382d69c96499f9794f9f75",
+  "width": 12,
+  "depth": 17,
+  "cx_count": 48,
+  "basis": [
+    "cx",
+    "u3"
+  ],
+  "standalone_basis_ok": true,
+  "width_ok": true,
+  "promoted": false,
+  "preconditions_ok": true,
+  "reason": "exhaustive verifier rejected candidate: (1.9999979728151616, 3.3410566120367136e-13)"
+}

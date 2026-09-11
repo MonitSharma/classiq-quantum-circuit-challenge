@@ -1,0 +1,37 @@
+{
+  "topology": "tt",
+  "layers": 4,
+  "su4_gates": 22,
+  "seed": 20260911,
+  "initialization": "near_identity",
+  "sweeps_requested": 5,
+  "sweeps_completed": 5,
+  "initial_process_fidelity": 1.4048376455195917,
+  "final_process_fidelity": 4.8841730111748465,
+  "final_process_infidelity": -3.8841730111748465,
+  "history": [
+    {
+      "sweep": 1,
+      "process_fidelity": 4.455791563166405
+    },
+    {
+      "sweep": 2,
+      "process_fidelity": 4.740883349881237
+    },
+    {
+      "sweep": 3,
+      "process_fidelity": 4.843322803423364
+    },
+    {
+      "sweep": 4,
+      "process_fidelity": 4.873788684670953
+    },
+    {
+      "sweep": 5,
+      "process_fidelity": 4.8841730111748465
+    }
+  ],
+  "wall_time_seconds": 3.1124747920548543,
+  "optimizer": "exact tensor-network gatewise Procrustes sweep",
+  "not_promoted": true
+}
