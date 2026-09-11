@@ -1,0 +1,12 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/456/level_merged_456_clifford.qasm",
+  "sha256": "02b0cd1ce262d2c47aa6aa4a00259b1c50f58f87805554f17cc941fa601575fa",
+  "width": 18,
+  "depth": 456,
+  "cx_count": 1140,
+  "random_dense_states": 2,
+  "max_error": 5.258977801906845e-15,
+  "ancilla_error": 6.435275994857031e-16,
+  "normalization_error": 2.3314683517128287e-14,
+  "verification": "Dense random inputs supported on all 4096 coordinates; probabilistic numerical check, not exhaustive operator proof"
+}

@@ -86,43 +86,97 @@ code bit separating level 0 from level 5 has odd support and therefore all 64
 Walsh coefficients are nonzero. A sparse ladder saves nothing on the load and
 about 15 layers on the middle block.
 
+## Why 456 is the floor for multiplexer encoders
+
+Depth is the ranked metric, so everything below is about depth alone.
+
+A uniformly controlled Ry block puts one Ry and one CX on each output wire per
+Gray step, so its depth is twice the number of steps, and the number of steps
+is the Walsh support of the loaded table. The support cannot be shrunk here.
+For `u1` the level classes have sizes 47, 2, 2, 4, 4, 5; a code bit that
+separates level 0 from level 5 therefore covers an odd number of points, and an
+odd-size set has **all 64** Walsh coefficients nonzero. So at least one output
+per block needs 64 steps, the block costs 128 layers, and the three blocks cost
+384. With two 27-layer kernels that is 438; the measured circuit is 456.
+
+Three further routes were tested and closed.
+
+**Five-control loads with a guarded kernel.** Pass 1 lives entirely in
+`y5 = 0` and `x5 = 1`, so its codes are `NOT y5 AND h(y4..y0)` and
+`x5 AND h'(x4..x0)`, and a five-control block is only 64 layers. But the
+kernel then needs both guard literals, turning each of its four CCZ terms into
+a five-controlled Z. Measured primitives: CCZ is depth 10, C3Z 27, C4Z 65. The
+guarded kernel costs about 325, against a 128-layer saving on the loads. The
+guard costs almost exactly what it saves.
+
+**One pass with four-bit codes.** Using a raw data bit plus three loaded bits
+per side (`y5` with the row class, `x4` with the column class — both verified
+to have at most 7 classes per half) needs only two multiplexer blocks. But the
+kernel becomes an eight-variable diagonal with no scratch. An annealing search
+over the code labellings, with the unreachable code pairs used as don't-cares,
+found nothing better than 17 CCZ, 15 C3Z and 7 C4Z. That is roughly 1000
+layers. The route is dead.
+
+**A linear twist between the registers.** `x -> x XOR L(y)` is a handful of
+CNOTs and could in principle lower the rank. Over 40,000 sampled maps the best
+twisted matrix had GF(2) rank 21 and at least 31 distinct rows, against rank 10
+and 11 rows for the identity. The natural x/y split is optimal; there is no
+cheap coordinate change to find.
+
 ## The open step
 
-Replace each multiplexer with an explicit AND network. A six-to-three encoder
-has nine wires available per side (six data wires, which may be scrambled
-because the encoder is inverted later, plus three clean ancillas). Measured
-primitive costs: RCCX is depth 7 (3 CX), chained RCCX about 5 each, CCZ 10,
-C3Z 27, C4Z 65.
+Only AND-network encoders can go lower, and the budget is exact. Two passes
+cost `4E + 2K`; with the measured `K = 27` a sub-180 circuit needs `E <= 31`
+per encoder, and matching the 197/475 leaderboard entry needs `E` around 35.
 
-Budget for a sub-200 circuit: four encoders at roughly 13 ANDs and 35-45
-layers each gives `2 * (2*40 + 40) = 240` for two passes, and the merge trick
-does not apply to AND networks. The leader's 197/475 is consistent with about
-13 ANDs per encoder — 8 encoder instances at ~40 CX each is ~320 CX, plus
-kernels and linear layers.
+The wire budget is forced. Each side gets nine wires (six data, which may be
+scrambled because the encoder is inverted later, plus three clean ancillas):
+three hold the code and six hold the rest of the coordinate, and six are the
+minimum because the largest level class has 47 members. Nine wires also mean at
+most **three ANDs per layer**, since an RCCX occupies three wires. So `E` is
+about `(number of ANDs / 3) * 9`, and 31 layers means roughly ten ANDs.
 
-`src/level_oracle.py::emit_encoder` already replays such a network and places
-the code bits (`tests/test_level_oracle.py` covers negated operands and
-multi-register operand preparation), and `load_nets` plus `refine_triples`
-consume the search output and pick the cheapest kernel among the codes a
-network exposes. The missing piece is a synthesiser that actually finds a
-network.
+Search alone will not find these networks, and the reason is not tuning.
+A target enters the span only when some product lands in one specific coset out
+of `2^(64-dim)`; that never happens by chance. Three searches were run to
+confirm it: the register-limited beam, the same with exact minimum coset
+weights instead of Gaussian residuals, and an unlimited-register version. All
+three drove the residual down quickly and then stalled — the unlimited one at
+residual 4 with 23 pool elements, where a single product would have closed it
+if one existed. The targets have to be **factored**, not stumbled upon.
 
-`src/level_encoder_search.py` is a beam search over the nine-register model:
+Factoring is what works. For `v1` (disk A columns) the thresholds are
+`V1 = [32,48]` down to `V5 = [38,42]`, and with `m = x - 32` every one of them
+is `x5 AND NOT x4 AND (a four-variable function of x3..x0)`, plus one
+correction at `m = 16`. Writing `G = x5 AND NOT x4` and `Z = (m = 0)`:
 
-```sh
-.venv/bin/python src/level_encoder_search.py u1 0 1800 artifacts/level_nets
+```text
+bit0 = G AND NOT Z          bit1 = G AND Y4          bit2 = G XOR (x5 AND x4) AND Z XOR G AND U
 ```
 
-It scores a state by the smallest total residual weight over all
-level-separating code triples, which gives a usable gradient. In runs of about
-six minutes per encoder it drove the residual from 20 to 2-10 at 6-7 ANDs and
-then stalled; it did not close. Two known weaknesses:
+with `Y4`, `U`, `Z` four-variable. Every four-variable function has
+multiplicative complexity at most 3, so this is about twelve ANDs at AND depth
+3 or 4, four layers, and roughly 36-45 layers of depth. Two register tricks
+make it fit in nine wires: `G AND x4 = 0`, so the dead `x4` wire is free
+scratch for any product that is later ANDed with `G`; and `G AND x5 = G`, so
+the `x5` wire is scratch too, with one CX of correction.
 
-1. It optimises AND **count**, not AND **depth**, and depth is the score. A
-   layered variant that picks up to three wire-disjoint ANDs per layer would
-   target the right quantity.
-2. Operands are sampled rather than enumerated. The family of operands (XORs
-   of at most three registers, optionally complemented) has only about 258
-   members, so roughly 33,000 products - small enough to enumerate exactly at
-   each step instead of sampling 6,000 of them. An exact one-AND completion
-   check at every node would end the stall if a completion exists.
+`u1`, `u2` and `v2` do not align to a power of two, so their subfunctions are
+five-variable rather than four, and they should land nearer 60 layers. A
+realistic total is therefore **210-260**, not 180, unless the factorisations
+come out better than this hand analysis.
+
+Two structural savings are still unused. The pass-1 and pass-2 encoders on each
+side share a prefix `P`: writing `E1 = A.P` and `E2 = B.P` turns
+`E1 K1 E1' E2 K2 E2'` into `P A K1 A' B K2 B' P'`, so the shared part is paid
+twice instead of four times. And the kernel code was chosen to minimise kernel
+depth alone; choosing it jointly with encoder cost is likely worth more, since
+the threshold-based code `(V2, V4, V1 XOR V3 XOR V5)` is both easy to compute
+and close to the cheapest kernel found.
+
+`src/level_oracle.py::emit_encoder` replays a network and places the code bits,
+`load_nets` and `refine_triples` consume search output, and
+`tests/test_level_oracle.py` covers the emitter. What is missing is a
+factoring synthesiser: exact multiplicative-complexity synthesis of the four-
+and five-variable subfunctions, then a scheduler that packs three ANDs per
+layer using the two dead-wire tricks above.
