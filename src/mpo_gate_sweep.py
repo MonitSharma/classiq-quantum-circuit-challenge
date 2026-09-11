@@ -46,13 +46,9 @@ def topology_layers(
 ) -> list[list[tuple[int, int]]]:
     if name == "round_robin":
         source = round_robin_matchings()
-        selected = list(sequence) if sequence is not None else list(range(layers))
+        selected = list(sequence) if sequence is not None else [index % len(source) for index in range(layers)]
         if len(selected) != layers or any(index < 0 or index >= len(source) for index in selected):
             raise ValueError("round-robin sequence must contain valid matching indices")
-        if len(set(selected)) != len(selected):
-            raise ValueError("round-robin sequence must not repeat a matching")
-        if layers > len(source):
-            raise ValueError("round_robin has only 11 matching layers")
         return slot_pairs([source[index] for index in selected])
     if name == "tt":
         base = tt_brickwall_layers()
