@@ -46,6 +46,12 @@ one dimension is available for a control-only/global phase. Therefore at least
 10 independent nonconstant side features are required. The proposed five- or
 six-track affine phase kernel cannot represent the exact logo in that model.
 
+The resource consequence is decisive for this particular template: ten tracks
+need 320 control-target CNOTs, and at most five can be scheduled per CX layer.
+Even granting 32 parallel rotation layers, the ideal middle stage is at least
+96 layers; load plus unload then gives a structural floor of 224 layers. Thus
+the simple three-sweep UCR explanation cannot reach the 183 leaderboard entry.
+
 This is a useful closure, not a general circuit lower bound. It does not rule
 out arbitrary-angle modular phase solutions, non-UCR gate-level constructions,
 dirty catalysts, or a middle circuit that uses controls and side information
@@ -57,6 +63,21 @@ The first loader checkpoint remains positive: the deterministic five-bit
 codebook has 18 classes, loads correctly on all 64 `(z,y5)` basis inputs, and
 compiles at depth 64 / 120 CX for the tested seeds. Thus the loader hypothesis
 is viable; the simple five/six-track central-kernel hypothesis is not.
+
+## Arbitrary-angle checkpoint
+
+The natural loophole was checked with an exact modular feasibility model rather
+than numerical optimization. For each of the 32 assignments of `x0..x4`, the
+screen solved whether arbitrary real RZ angles could produce the exact sign
+table using the feature sets `{code}`, `{code,x5}`, `{code,y5}`, or
+`{code,x5,y5}`, including a free control-dependent phase and integer `2*pi`
+lifts. None of the four sets was feasible for any control slice. This closes
+the direct five-control phase-bank version with the proposed code, while not
+ruling out a non-UCR circuit or a much richer feature set.
+
+The report is `artifacts/three_sweep/arbitrary_angle_screen.json`. No complete
+oracle was produced, and no score or replacement for the protected fallback is
+claimed.
 
 ## Decision rule
 

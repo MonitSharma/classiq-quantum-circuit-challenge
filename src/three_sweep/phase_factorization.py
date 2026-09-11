@@ -24,15 +24,21 @@ def analyze():
             "sign_rank": item["sign_rank"],
         })
     best = min(rows, key=lambda item: (item["minimum_nonconstant_pi_tracks"], item["sign_rank"]))
+    min_tracks = min(item["minimum_nonconstant_pi_tracks"] for item in rows)
+    central_depth_floor = 32 + (32 * min_tracks + 4) // 5
     return {
         "model": "pi_angle_RZ_tracks_with_arbitrary_side_boolean_features",
         "partitions": len(rows),
         "best_partition": best,
-        "minimum_over_all_partitions": min(item["minimum_nonconstant_pi_tracks"] for item in rows),
+        "minimum_over_all_partitions": min_tracks,
+        "central_ucr_depth_floor": central_depth_floor,
+        "three_sweep_depth_floor": 64 + central_depth_floor + 64,
         "interpretation": (
             "Five or six side-feature tracks cannot represent the exact phase "
-            "in this restricted pi-angle UCR model. This is not an impossibility "
-            "result for arbitrary-angle or non-UCR circuits."
+            "in this restricted pi-angle UCR model. With ten tracks, the ideal "
+            "middle schedule is already at least 96 layers and the three-stage "
+            "skeleton is at least 224 layers. This is not an impossibility result "
+            "for arbitrary-angle or non-UCR circuits."
         ),
     }
 
@@ -47,4 +53,3 @@ def write(path="artifacts/three_sweep/phase_factorization_screen.json"):
 
 if __name__ == "__main__":
     write()
-
