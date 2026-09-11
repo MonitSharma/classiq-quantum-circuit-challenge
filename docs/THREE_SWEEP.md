@@ -163,6 +163,15 @@ Artifacts are under `artifacts/three_sweep/column_pair_loader/`; the complete
 verified decoder is `artifacts/three_sweep/column_decoder.qasm` with matching
 report `artifacts/three_sweep/column_decoder.exhaustive.json`.
 
+Finally, reachable-state parity sharing was applied to the transposed loader.
+It uses 1777 parity terms over the 30 distinct `(column class, x5)` side
+states. A bounded GraySynth section-size sweep found the best exact candidate
+at **3802 depth / 2133 CX**, with exhaustive verification and zero ancilla
+leakage. This is the best three-sweep-derived result in the branch, but it is
+still decisively noncompetitive. The artifact is
+`artifacts/three_sweep/reachable_column_phase_poly.qasm` with its matching
+exhaustive report.
+
 ## Decision rule
 
 The loader is promising at depth <=72 and is stopped for rank-1 purposes above
