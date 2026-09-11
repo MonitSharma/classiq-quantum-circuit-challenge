@@ -87,6 +87,18 @@ paths and matching verification reports.
 
 ## Method inventory
 
+### Exact destructive classifier + one phase (September 11, 2026)
+
+The first falsification checkpoint is implemented in `src/destructive_xag.py`.
+The original-coordinate 97-AND XAG is exact over all 4096 points, but a
+bounded topological allocator that gives each nonlinear signal one physical
+wire observes a minimum peak of **22 live registers**. With one wire reserved
+for the predicate, only 17 signal wires are available, so the straightforward
+one-pass compiler cannot fit. It also runs out of registers at node 22 before
+QASM lowering. This is a negative result only for the one-signal-per-wire
+lowering; the intended affine-frame packing/recomputation variant remains
+untested. The report is `artifacts/destructive_xag_register_pressure.json`.
+
 ### Three-sweep campaign
 
 The complete September 11 record is [`THREE_SWEEP.md`](THREE_SWEEP.md). It

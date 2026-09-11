@@ -6,6 +6,23 @@ This file remains the detailed chronological lab notebook; entries below are
 not all equally strong evidence, so retain the verified/diagnostic/unknown
 distinction.
 
+## Exact destructive classifier checkpoint (September 11, 2026)
+
+The proposed (C^\dagger Z C) architecture was started from the exact
+original-coordinate XAG at `artifacts/multiplicative_depth/seeds/shared_rank.xag`
+(97 AND nodes, six multiplicative layers). The first compiler reserves one
+predicate wire, reuses an input or nonlinear wire only after its last consumer,
+and accumulates each output root once. A bounded topological register screen
+observed **22 peak logical registers**, versus 17 available signal wires after
+reserving the predicate. The direct compiler consequently fails before node 22.
+
+This does not reject destructive classification: it rejects only the naive
+one-logical-signal-per-wire lowering. The next implementation must pack affine
+frames or deliberately recompute selected nodes. No QASM candidate was
+promoted, and the protected 524 circuit is unchanged. The reproducible report
+is `artifacts/destructive_xag_register_pressure.json`; the compiler prototype
+is `src/destructive_xag.py`.
+
 ## Three-sweep campaign closure (September 11, 2026)
 
 The complete campaign is recorded in [`THREE_SWEEP.md`](THREE_SWEEP.md). It

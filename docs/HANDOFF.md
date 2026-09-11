@@ -62,6 +62,17 @@ This closes the tested direct three-sweep, 3+3, nested-shell, codebook-search,
 transposed-column, and reachable-parity variants as competition paths. It is
 not an impossibility proof and does not replace the protected 524/950 fallback.
 
+## Destructive-XAG checkpoint (September 11, 2026)
+
+The next focused experiment is the exact classifier architecture
+(C^\dagger Z C), guided by the original-coordinate 97-AND XAG. The first
+one-signal-per-wire allocator is now implemented and reproducible, but its
+bounded topological screen requires 22 live logical registers, exceeding the
+17 signal wires available after reserving the predicate wire. It runs out of
+registers before node 22. This is a closure of the naive lowering only; the
+planned affine-frame packing and controlled recomputation remain untested.
+See `src/destructive_xag.py` and `artifacts/destructive_xag_register_pressure.json`.
+
 ## Challenge and scoring
 
 Source: https://www.classiq.io/challenge, visited in the user's Safari. Last observed leaderboard (historical snapshot, refresh before making current claims):

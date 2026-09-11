@@ -192,6 +192,24 @@ with SHA-256
 `3232ebeb0ccf2928fe1d2d18c0c5f420afff1a7418e6ccaf1d25e994673cce86`.
 The original 97-AND two-form CZ stream remains the best tested realization.
 
+## Destructive-classifier handoff (September 11, 2026)
+
+The next experiment uses the exact XAG as a reversible classifier skeleton and
+forms the oracle as (C^\dagger Z C), allowing intermediate input wires and
+ancillas to become garbage. The original-coordinate seed
+`artifacts/multiplicative_depth/seeds/shared_rank.xag` is exact with 97 ANDs.
+The often-quoted 81-AND artifact
+`optimized/affine_balance_118.xag` is exact in the affine-transformed frame;
+it is not the logo predicate when evaluated directly in the original basis and
+must be composed with its recorded affine input transformation.
+
+The first one-pass allocator, implemented in `src/destructive_xag.py`, gives
+each nonlinear value one physical register and recycles values after their last
+consumer. Its bounded schedule requires at least 22 live registers, so it does
+not fit the 17 signal wires left after reserving one predicate wire. This closes
+only that naive lowering. Affine-frame packing and controlled recomputation are
+the remaining required ingredients; no destructive QASM candidate is claimed.
+
 A direct final-signal-to-ancilla phase-tap variant was also exhaustively
 verified, but scored depth 1207 / 1003 CX with SHA-256
 `06e5a7a56211aeb41cd0950235d0430367eb91f42fb2b03d08dd0959b1fbafb6`. The
