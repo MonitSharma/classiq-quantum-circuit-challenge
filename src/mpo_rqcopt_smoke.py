@@ -187,7 +187,7 @@ if __name__ == "__main__":
         "--initialization", choices=["identity", "near_identity", "random"], default="random"
     )
     parser.add_argument("--warm-start")
-    parser.add_argument("--order", choices=["tt", "challenge", "reverse"], default="tt")
+    parser.add_argument("--order", choices=["tt", "challenge", "reverse", "xy"], default="tt")
     parser.add_argument(
         "--output", default="artifacts/mpo_native/rqcopt_smoke.json"
     )
@@ -201,7 +201,12 @@ if __name__ == "__main__":
                 args.output,
                 args.initialization,
                 args.warm_start,
-                {"tt": DEFAULT_ORDER, "challenge": tuple(range(12)), "reverse": tuple(reversed(range(12)))}[args.order],
+                {
+                    "tt": DEFAULT_ORDER,
+                    "challenge": tuple(range(12)),
+                    "reverse": tuple(reversed(range(12))),
+                    "xy": tuple(sum(([i, 6 + i] for i in range(6)), [])),
+                }[args.order],
             ),
             indent=2,
         )

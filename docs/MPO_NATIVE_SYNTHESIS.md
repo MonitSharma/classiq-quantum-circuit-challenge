@@ -119,6 +119,12 @@ much stronger 4-layer result. This supports retaining the interleaved order as
 the current chain topology, while leaving all-to-all matching topologies as
 the next major structural experiment.
 
+An explicit alternating x-y order `(x0,y0,x1,y1,...,x5,y5)` was also tested
+for 2 layers and 50 iterations. It reached `0.2189523424`, only modestly above
+the identity baseline. Its exact TT maximum rank is 26, versus 13 for the
+interleaved order, so this first cross-register chain is not competitive. It
+does not rule out a genuinely non-chain all-to-all matching circuit.
+
 ## External optimizer assessment
 
 The public `INMLe/rqcopt-mpo` repository is relevant: its brick-wall routines
