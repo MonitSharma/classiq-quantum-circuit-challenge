@@ -1,0 +1,21 @@
+{
+  "n_layers": 2,
+  "iterations_requested": 5,
+  "evaluations": 5,
+  "learning_rate": 0.01,
+  "initialization": "near_identity",
+  "initial_overlap_real": 1531.2851714012481,
+  "initial_overlap_imag": -131.60929538854,
+  "initial_process_fidelity": 0.14079542653477298,
+  "final_overlap_real": 1556.7431360212022,
+  "final_overlap_imag": -97.37372635277073,
+  "final_process_fidelity": 0.1450139781315894,
+  "loss_history": [
+    1.2523021624017343,
+    1.2497267903759826,
+    1.2471970335893503,
+    1.2447119097006487,
+    1.2422704121156392
+  ],
+  "external_commit": "95f0898f7baa6579de512eba8b00386bd6b05217"
+}
