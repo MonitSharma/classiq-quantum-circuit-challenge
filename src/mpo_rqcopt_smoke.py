@@ -58,9 +58,14 @@ def run(
     initial = initial.reshape((-1, 4, 4))
     if warm_start is not None:
         loaded = np.load(warm_start)["gates"]
-        if loaded.shape != (11, 4, 4):
-            raise ValueError("warm start must contain exactly one 2-layer 12-qubit gate list")
-        identity = np.repeat(np.eye(4, dtype=np.complex128)[None, :, :], 11, axis=0)
+        if loaded.ndim != 3 or loaded.shape[1:] != (4, 4):
+            raise ValueError("warm start must contain a gate list shaped (n,4,4)")
+        expected = sum(6 if odd else 5 for odd in parity)
+        if loaded.shape[0] > expected:
+            raise ValueError("warm start has more gates than the requested target topology")
+        identity = np.repeat(
+            np.eye(4, dtype=np.complex128)[None, :, :], expected - loaded.shape[0], axis=0
+        )
         initial = jnp.asarray(np.concatenate([loaded, identity], axis=0))
         initialization = "warm_start"
     elif initialization == "random":

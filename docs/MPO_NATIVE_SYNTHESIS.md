@@ -106,6 +106,12 @@ criterion. Replaying the serialized QASM through the MPO contraction gives
 `0.3019871591263913`, an absolute difference of about `6.7e-11` from the
 abstract checkpoint. Exact challenge verification remains pending.
 
+A 6-layer warm start from that 4-layer checkpoint reached `0.3019961070` in
+20 iterations, effectively a plateau. This is an early warning that simply
+adding identity-initialized layers is not sufficient; the next useful run
+should vary topology, restart phase, or optimize the native decomposed
+topology rather than blindly increasing layer count.
+
 ## External optimizer assessment
 
 The public `INMLe/rqcopt-mpo` repository is relevant: its brick-wall routines
