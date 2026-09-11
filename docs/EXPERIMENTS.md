@@ -32,6 +32,24 @@ ABC/LHRS-style LUT route without generating a complete oracle. This is a
 bounded closure of the tested mappings, not a proof against every possible
 quantum-aware LUT mapper.
 
+## Broad classical-compression closure (September 11, 2026)
+
+The corrected LUT experiment changes the interpretation of the research record.
+The question is no longer whether one more Boolean representation might be
+slightly better. XAGs, destructive XAG spans, LUT single-target gates,
+BDD/ESOP/Walsh forms, quotient layouts, feature/class loaders, phase histories,
+and several operator-level probes have all failed to expose a credible native
+route from the exact predicate to depth 183. The corrected LUT forward path is
+462 at best, and a naive `C†PC` realization is already about 925 before the
+central phase and inverse.
+
+Therefore record the broader empirical conclusion: **classical logic
+compression is not translating into native quantum depth for this instance**
+under the tested compute/phase/uncompute families. This does not prove that a
+hand-designed single-target network or qualitatively different operator-level
+construction is impossible. It does close the current cycle of proposing
+another conventional Boolean representation without a new architectural clue.
+
 ## Nonlinear spectral conjugation: exact early closure (September 11, 2026)
 
 After closing the destructive-XAG route, a new branch tested whether a shallow

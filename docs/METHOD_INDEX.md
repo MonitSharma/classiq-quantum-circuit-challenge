@@ -31,6 +31,20 @@ SHA-256 7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147
 No rank-one result or challenge submission has been established in this
 workspace.
 
+## Broad closure: classical compression to native depth
+
+The corrected LUT checkpoint now closes the broader tested hypothesis that an
+efficient conventional representation—XAG, LUT network, BDD/ESOP, phase
+polynomial, or related Boolean DAG—will automatically become a leaderboard
+depth oracle after reversible compilation. The best corrected LUT forward path
+is 462 depth before dirty scheduling, phase, and inverse; a naive `C†PC`
+construction is already about 925 depth. See
+[`RESEARCH_CLOSURE_2026-09-11.md`](RESEARCH_CLOSURE_2026-09-11.md).
+
+This is an empirical research closure, not an impossibility theorem. Future
+work should require a genuinely different operator-level hypothesis or
+external architectural evidence before reopening Boolean-network synthesis.
+
 ## Branch and campaign map
 
 | Branch or campaign | Main question | Outcome |

@@ -161,6 +161,24 @@ closure threshold of 120. No
 global dirty-target scheduler or `C†PC` QASM was attempted. The LUT/LHRS route
 is closed under this exact ABC mapping and local-gate cost model.
 
+## Broad strategic closure (September 11, 2026)
+
+The corrected LUT result closes more than the particular ABC mapping. Across
+XAG, destructive XAG, LUT single-target, BDD/ESOP/Walsh, quotient layouts,
+feature/class loaders, phase histories, and unitary/MPO/QBP/ZH probes,
+conventional logic compression has not translated into native quantum depth
+for this instance. The corrected best LUT forward path is 462 depth; a naive
+`C†PC` form is already about 925 depth before reversible pressure, central
+phase, and inverse. The previous 145/86 number is deprecated because its local
+cost model used truth-table bits as ANF coefficients.
+
+Keep this as an empirical closure, not an impossibility claim. Do not start
+another Boolean representation or generic pebbling campaign without a new
+operator-level construction or external evidence about the winning circuit.
+The recommended next phase is reverse engineering from leaderboard metrics and
+the challenge constraints. Full details are in
+[`RESEARCH_CLOSURE_2026-09-11.md`](RESEARCH_CLOSURE_2026-09-11.md).
+
 ## Challenge and scoring
 
 Source: https://www.classiq.io/challenge, visited in the user's Safari. Last observed leaderboard (historical snapshot, refresh before making current claims):

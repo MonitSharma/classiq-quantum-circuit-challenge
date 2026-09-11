@@ -1,0 +1,41 @@
+# Research closure: classical logic compression to reversible depth
+
+Updated September 11, 2026. This note consolidates the latest closure rather
+than claiming that the challenge is impossible.
+
+The protected exact fallback remains depth 524 / CX 950. The target leaderboard
+gap is therefore 524 to an observed 183-depth entry. The completed campaigns
+now provide substantial evidence against the broad strategy of first finding
+an efficient conventional Boolean representation and then reversibilizing it
+with compute/phase/uncompute:
+
+| Representation | Strongest relevant evidence | Disposition |
+|---|---|---|
+| XAG / low multiplicative depth | 81-97 AND classical networks, but native realizations around 1023/899 or worse; destructive dirty-span screens found no phase frontier | Closed |
+| BDD / ESOP / Walsh / phase polynomial | Classical simplification or full phase expansions did not produce a competitive native network | Closed |
+| LUT single-target | Corrected 3-, 4-, and 5-LUT forward estimates of 462/249, 965/539, and 2297/1334 depth/CX | Closed |
+| Quotient/class layouts | 11-by-11 quotient structure, but exact 61-rectangle central phase compiled to 6456/5490 | Closed |
+| Feature loaders, row/column codes, phase histories, MPO/QBP/ZH probes | Exact prototypes were far above target or failed to expose a compact unitary representation | Closed as tested |
+
+The corrected LUT result is especially important. The 462-depth 3-LUT path is
+still optimistic: it excludes the 18-wire reversible schedule, dirty-target
+conflicts, garbage/rematerialization, the central phase, and the inverse. A
+naive `C† P C` interpretation is already about `2*462+1 = 925` depth before
+those costs. The earlier 145/86 estimate was invalid because truth-table bits
+had been mistaken for ANF coefficients; it is explicitly deprecated.
+
+The appropriate conclusion is:
+
+> Classical logic compression is not translating into native quantum depth for
+> this instance under the tested representations.
+
+This is not a lower bound on every hand-designed single-target network and does
+not rule out a qualitatively different operator-level construction. It does
+mean that another incremental Boolean representation, another generic
+compute/phase/uncompute compiler, or another larger reversible pebbling beam is
+not a sensible competition bet without a new external architectural clue.
+
+The remaining high-ROI work is narrower: reverse-engineer a likely winning
+architecture from leaderboard metrics and challenge constraints, or identify
+an operator-level construction with a credible native-depth estimate before
+implementing it. No rank-one result or submission is claimed.
