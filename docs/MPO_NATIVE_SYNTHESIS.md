@@ -112,6 +112,13 @@ adding identity-initialized layers is not sufficient; the next useful run
 should vary topology, restart phase, or optimize the native decomposed
 topology rather than blindly increasing layer count.
 
+As a bounded order control, 2-layer near-identity runs for 50 iterations
+reached process fidelities `0.2177549926` in natural challenge order and
+`0.2233680863` in reverse order, versus the interleaved TT-order campaign's
+much stronger 4-layer result. This supports retaining the interleaved order as
+the current chain topology, while leaving all-to-all matching topologies as
+the next major structural experiment.
+
 ## External optimizer assessment
 
 The public `INMLe/rqcopt-mpo` repository is relevant: its brick-wall routines

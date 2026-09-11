@@ -29,6 +29,7 @@ from rqcopt_mpo.util import (  # noqa: E402
 )
 
 from mpo_contract import target_mpo  # noqa: E402
+from mpo_target import DEFAULT_ORDER  # noqa: E402
 
 
 def make_layers(n_layers: int) -> tuple[jnp.ndarray, list[bool]]:
@@ -49,8 +50,9 @@ def run(
     output: str | Path,
     initialization: str = "random",
     warm_start: str | None = None,
+    order: tuple[int, ...] = DEFAULT_ORDER,
 ) -> dict:
-    target = [jnp.asarray(core) for core in target_mpo()]
+    target = [jnp.asarray(core) for core in target_mpo(order)]
     initial, parity = make_layers(n_layers)
     # The upstream ADAM implementation stores each gate as a 4x4 matrix for
     # its per-gate second moment.  Convert to tensor form only at the MPO
@@ -156,6 +158,7 @@ def run(
         "learning_rate": lr,
         "initialization": initialization,
         "warm_start": warm_start,
+        "order": list(order),
         "initial_overlap_real": float(jnp.real(initial_overlap)),
         "initial_overlap_imag": float(jnp.imag(initial_overlap)),
         "initial_process_fidelity": float(abs(complex(initial_overlap)) ** 2 / 4096**2),
@@ -184,13 +187,22 @@ if __name__ == "__main__":
         "--initialization", choices=["identity", "near_identity", "random"], default="random"
     )
     parser.add_argument("--warm-start")
+    parser.add_argument("--order", choices=["tt", "challenge", "reverse"], default="tt")
     parser.add_argument(
         "--output", default="artifacts/mpo_native/rqcopt_smoke.json"
     )
     args = parser.parse_args()
     print(
         json.dumps(
-            run(args.layers, args.iterations, args.lr, args.output, args.initialization, args.warm_start),
+            run(
+                args.layers,
+                args.iterations,
+                args.lr,
+                args.output,
+                args.initialization,
+                args.warm_start,
+                {"tt": DEFAULT_ORDER, "challenge": tuple(range(12)), "reverse": tuple(reversed(range(12)))}[args.order],
+            ),
             indent=2,
         )
     )
