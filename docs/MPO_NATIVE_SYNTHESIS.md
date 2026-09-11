@@ -97,6 +97,13 @@ initialization is stationary for the first-order objective at this target, so
 near-identity or random restarts are necessary. Run records append to
 `artifacts/mpo_native/progress.jsonl`.
 
+The 4-layer/50-iteration warm checkpoint compiles to a 12-qubit diagnostic
+QASM circuit at **depth 25 / 64 CX** (`artifacts/mpo_native/rqcopt_phase_4x50_warm_compiled.qasm`, SHA
+`551c977d3bc7423456abde4f0c01d884239e586e325f9a7a29545436e3e91e0a`). Its
+abstract process fidelity is `0.3019871592`; it is explicitly not promoted,
+because approximate process fidelity is not the challenge's exact oracle
+criterion and compiled dense fidelity/exhaustive verification remain pending.
+
 ## External optimizer assessment
 
 The public `INMLe/rqcopt-mpo` repository is relevant: its brick-wall routines
