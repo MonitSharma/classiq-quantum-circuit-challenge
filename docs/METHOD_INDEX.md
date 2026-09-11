@@ -41,6 +41,7 @@ workspace.
 | `another-one` | Historical phase signals and phase-history spans | Rank improved to roughly 26–29, but the target phase was not in the span; exact phase proposal about 1345/1027; closed |
 | `mpo-native-synthesis` | Direct operator synthesis from an exact diagonal MPO/TT | Tensor representation validated, generic optimizers plateaued; merged into `main` as a negative research record |
 | `unitary-state-space` | Recast the target as a compressed unitary: finite-size phase states, exact QBPs, TT/MPO dilation, and ZH diagrams | Exact tensor/TT artifacts and bounded probes; no verified improvement, but several misleading abstractions are now closed |
+| `three-sweep` | Row-pair loaders, 3+3 and transposed column-pair decoders, phase-rank screens, shell sharing, and reachable parity polynomials | Loaders verified in the 52--65 depth range, but exact decoders were 3802+ depth; closed with no improvement |
 
 The merge commit for the MPO campaign is recorded in Git; the branch is
 retained for provenance. The current working tree may contain uncommitted
@@ -85,6 +86,13 @@ The 524 file is never overwritten by experiments. New candidates must use new
 paths and matching verification reports.
 
 ## Method inventory
+
+### Three-sweep campaign
+
+The complete September 11 record is [`THREE_SWEEP.md`](THREE_SWEEP.md). It
+contains the construction, source/artifact map, exhaustive reports, research
+interpretation, and the distinction between verified subcircuits, exact but
+uncompetitive full oracles, and unresolved hypotheses.
 
 ### 1. Direct Classiq and notebook synthesis
 

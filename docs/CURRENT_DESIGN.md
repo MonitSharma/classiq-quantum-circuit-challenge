@@ -20,6 +20,13 @@ diagnostic evidence but no replacement circuit. This file therefore describes
 the fallback only; new work should not quietly turn its feature-load/
 phase/unload architecture back into the default search objective.
 
+The September 11 `three-sweep` campaign tested the main alternative row/column
+code architecture. Its loaders were individually correct, but exact phase and
+decoder constructions were thousands of layers deep; the best was 3802/2133
+and is not a replacement. See [`THREE_SWEEP.md`](THREE_SWEEP.md) for the full
+measurements. A genuinely new representation is required before another large
+optimization run.
+
  Implementation: `src/full_mux.py` / `src/feature_linear_encoding.py`, importing
 the radius, phase-cube, and pair helpers. The protected post-processed artifact
 is `artifacts/524/full_mux_feature_linear_tket_524.qasm` at **524 depth / 950

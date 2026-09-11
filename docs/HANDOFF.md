@@ -46,6 +46,22 @@ destructive, low-multiplicative-depth/XAG, phase-history, and generic MPO
 optimizer families should not receive another large run without a new theorem
 or representation. Rank 1 remains unfinished; no new best is claimed.
 
+## Three-sweep architecture checkpoint (September 11, 2026)
+
+The dedicated `three-sweep` campaign is documented in [`THREE_SWEEP.md`](THREE_SWEEP.md),
+with source under `src/three_sweep/` and artifacts under `artifacts/three_sweep/`.
+It tested row-pair and phase-history reinterpretations rather than extending the
+old destructive beam. The common five-bit loader verified at 64/120 depth/CX,
+the 3+3 loader at 65/164, and the best transposed column-pair loader at 52/90.
+The phase-rank screen rejected all 792 five-control partitions as a direct
+low-depth phase bank. Exact reachable-code decoders measured 3917/3176 and
+4392/3448; the best complete transposed reachable-parity oracle was **3802
+depth / 2133 CX**, exhaustively verified with zero ancilla leakage.
+
+This closes the tested direct three-sweep, 3+3, nested-shell, codebook-search,
+transposed-column, and reachable-parity variants as competition paths. It is
+not an impossibility proof and does not replace the protected 524/950 fallback.
+
 ## Challenge and scoring
 
 Source: https://www.classiq.io/challenge, visited in the user's Safari. Last observed leaderboard (historical snapshot, refresh before making current claims):

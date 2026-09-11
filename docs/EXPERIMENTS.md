@@ -6,6 +6,22 @@ This file remains the detailed chronological lab notebook; entries below are
 not all equally strong evidence, so retain the verified/diagnostic/unknown
 distinction.
 
+## Three-sweep campaign closure (September 11, 2026)
+
+The complete campaign is recorded in [`THREE_SWEEP.md`](THREE_SWEEP.md). It
+reconstructed the 18 ordered row-pair classes, built and verified common
+five-bit, 3+3, and transposed column-pair loaders, and measured phase sharing
+in the reachable code spaces. The strongest complete exact artifact was
+`artifacts/three_sweep/reachable_column_phase_poly.qasm` at **3802 depth / 2133
+CX**, with a matching exhaustive report and zero ancilla leakage. Other exact
+decoders measured 3917/3176, 4392/3448, and 10046/8436.
+
+The negative result is architectural: compact classical row/column codes do
+not automatically yield a compact reversible phase oracle. Direct arbitrary-
+angle banks were infeasible on the tested feature sets, while reachable parity
+constructions remained dominated by decoder and compute/uncompute cost. This
+closes the tested family without claiming a lower bound for all circuits.
+
 ## Cross-branch strategic closure (September 11, 2026)
 
 The review recorded in `docs/HANDOFF.md` closes the current destructive beam,
