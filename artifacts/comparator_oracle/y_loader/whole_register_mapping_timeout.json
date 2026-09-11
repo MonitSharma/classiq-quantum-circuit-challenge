@@ -1,0 +1,9 @@
+{
+  "search": "whole_register_y_search.py",
+  "output_mapping": "all 6P4 placements",
+  "max_gates": 12,
+  "beam_width": 2500,
+  "completed_layers": 3,
+  "status": "throughput timeout before report completion",
+  "evidence_level": "not negative evidence"
+}

@@ -1,0 +1,37 @@
+{
+  "max_gates": 18,
+  "beam_width": 4000,
+  "best_score": 157,
+  "max_score": 256,
+  "best_gate_count": 4,
+  "best_history": [
+    {
+      "name": "x",
+      "controls": [],
+      "target": 0
+    },
+    {
+      "name": "cx",
+      "controls": [
+        1
+      ],
+      "target": 4
+    },
+    {
+      "name": "cx",
+      "controls": [
+        1
+      ],
+      "target": 5
+    },
+    {
+      "name": "rccx",
+      "controls": [
+        4,
+        5
+      ],
+      "target": 1
+    }
+  ],
+  "status": "bounded search did not reach exact boundary mapping"
+}

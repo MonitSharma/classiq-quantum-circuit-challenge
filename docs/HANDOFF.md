@@ -7,6 +7,17 @@ artifact-specific history.
 
 Current research entry point: [September 9 literature and repository review](RESEARCH_REVIEW_2026-09-09.md). The protected best is **524/950/18**, hash checked again in `artifacts/research_structure_audit.json`. Safari's live leaderboard shows Daksh S. at 197/475 and “Monit S.” at rank 21 with 531/1020; historical “nothing submitted” statements below are stale. No upload was made during this review. The new report narrows several overbroad architectural claims and records exact selector/code-size and boundary-residual diagnostics. No new quantum best is claimed.
 
+## Shared-address descriptor checkpoint (September 11, 2026)
+
+The shared-address QROM hypothesis was screened mathematically before circuit
+generation. Exact quotienting gives 11 row classes and 11 column classes, so a
+binary descriptor needs at least four bits per side. Across 2000 random class
+label assignments, the best exact middle kernel had 86 ANF terms, 366 literals,
+degree 8, and 256/256 nonzero Walsh coefficients. This weakens the proposed
+<=55-depth kernel estimate but is not an impossibility proof against a new
+phase-tolerant traversal. Details are in `src/shared_address_descriptor.py`
+and `artifacts/shared_address_descriptor/descriptor_report.json`.
+
 ## State at handoff
 
 Updated September 10, 2026. The user wants the top rank, and the workspace now records the full experiment history, including failures. This is a research/optimization workspace, not a finished rank-1 submission.

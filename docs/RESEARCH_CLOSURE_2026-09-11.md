@@ -39,3 +39,14 @@ The remaining high-ROI work is narrower: reverse-engineer a likely winning
 architecture from leaderboard metrics and challenge constraints, or identify
 an operator-level construction with a credible native-depth estimate before
 implementing it. No rank-one result or submission is claimed.
+
+## Shared-address descriptor screen
+
+The proposed shared-address QROM route was screened mathematically in
+`src/shared_address_descriptor.py`.  Exact row/column quotienting gives 11
+classes on each side, hence a minimum 4+4-bit binary descriptor.  Optimizing
+2000 random class-label assignments produced a best middle kernel with 86 ANF
+terms, 366 literals, degree 8, and dense 8-bit Walsh support (256/256).
+This is not an impossibility proof for a genuinely phase-tolerant shared
+traversal, but it falsifies the unsupported inference that compact addresses
+automatically yield a <=55-depth kernel.  No QROM circuit was generated.

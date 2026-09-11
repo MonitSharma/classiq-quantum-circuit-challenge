@@ -1,0 +1,135 @@
+{
+  "qasm": "artifacts/comparator_oracle/y_loader/y_loader_esop_probe.qasm",
+  "depth": 555,
+  "cx_count": 358,
+  "width": 18,
+  "per_wire": [
+    {
+      "wire": 0,
+      "u3": 127,
+      "cx": 162,
+      "total": 289
+    },
+    {
+      "wire": 1,
+      "u3": 103,
+      "cx": 124,
+      "total": 227
+    },
+    {
+      "wire": 2,
+      "u3": 63,
+      "cx": 71,
+      "total": 134
+    },
+    {
+      "wire": 3,
+      "u3": 26,
+      "cx": 26,
+      "total": 52
+    },
+    {
+      "wire": 4,
+      "u3": 0,
+      "cx": 0,
+      "total": 0
+    },
+    {
+      "wire": 5,
+      "u3": 0,
+      "cx": 0,
+      "total": 0
+    },
+    {
+      "wire": 6,
+      "u3": 4,
+      "cx": 20,
+      "total": 24
+    },
+    {
+      "wire": 7,
+      "u3": 6,
+      "cx": 32,
+      "total": 38
+    },
+    {
+      "wire": 8,
+      "u3": 11,
+      "cx": 54,
+      "total": 65
+    },
+    {
+      "wire": 9,
+      "u3": 15,
+      "cx": 65,
+      "total": 80
+    },
+    {
+      "wire": 10,
+      "u3": 23,
+      "cx": 71,
+      "total": 94
+    },
+    {
+      "wire": 11,
+      "u3": 13,
+      "cx": 21,
+      "total": 34
+    },
+    {
+      "wire": 12,
+      "u3": 15,
+      "cx": 18,
+      "total": 33
+    },
+    {
+      "wire": 13,
+      "u3": 50,
+      "cx": 52,
+      "total": 102
+    },
+    {
+      "wire": 14,
+      "u3": 0,
+      "cx": 0,
+      "total": 0
+    },
+    {
+      "wire": 15,
+      "u3": 0,
+      "cx": 0,
+      "total": 0
+    },
+    {
+      "wire": 16,
+      "u3": 0,
+      "cx": 0,
+      "total": 0
+    },
+    {
+      "wire": 17,
+      "u3": 0,
+      "cx": 0,
+      "total": 0
+    }
+  ],
+  "critical_wire_by_total": {
+    "wire": 0,
+    "u3": 127,
+    "cx": 162,
+    "total": 289
+  },
+  "critical_wire_by_cx": {
+    "wire": 0,
+    "u3": 127,
+    "cx": 162,
+    "total": 289
+  },
+  "raw_pre_lowering_ops": {
+    "rccx": 162,
+    "x": 110,
+    "cx": 4
+  },
+  "raw_pre_lowering_depth": 178,
+  "interpretation": "serialized cost is dominated by repeated target/scratch participation; abstract predicate count is not the native metric"
+}
