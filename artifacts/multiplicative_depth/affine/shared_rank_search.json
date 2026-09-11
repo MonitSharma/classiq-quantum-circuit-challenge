@@ -1,0 +1,7300 @@
+{
+  "seed": 20260910,
+  "trials": 129,
+  "target_truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1",
+  "all_source_exact": true,
+  "all_tool_results_exact": true,
+  "best": {
+    "trial": 118,
+    "rows": [
+      3404,
+      4030,
+      554,
+      137,
+      2060,
+      3140,
+      3340,
+      256,
+      3482,
+      1981,
+      1056,
+      1060
+    ],
+    "offset": 2380,
+    "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_118.xag",
+    "source_exact": true,
+    "source_metrics": {
+      "exact": true,
+      "and_count": 97,
+      "multiplicative_depth": 6,
+      "and_layer_widths": [
+        29,
+        21,
+        20,
+        14,
+        10,
+        3
+      ],
+      "nonlinear_live_width_estimate": 22,
+      "max_fanout": 79,
+      "truth_table_sha256": "f5d56b52c093f3c2acf1c7d619a853cfb7d6ee827a274e290245e9f13e78a60c"
+    },
+    "tool": {
+      "truth_points": 4096,
+      "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_118.xag",
+      "pipeline": "balance",
+      "exact_before": true,
+      "exact_after": true,
+      "md_before": 6,
+      "md_after": 6,
+      "and_count_before": 97,
+      "and_count_after": 81,
+      "nonlinear_live_width_after": 11,
+      "and_layer_widths_after": [
+        20,
+        20,
+        15,
+        13,
+        10,
+        3
+      ]
+    }
+  },
+  "records": [
+    {
+      "trial": 0,
+      "rows": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048
+      ],
+      "offset": 0,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_000.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 58,
+        "truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_000.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 81,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          26,
+          22,
+          14,
+          12,
+          6,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 1,
+      "rows": [
+        1,
+        2,
+        4,
+        8,
+        18,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048
+      ],
+      "offset": 0,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_001.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 58,
+        "truth_table_sha256": "a4edab3de36b084d9df10e68354b33b0fa1cada6ea99d57aac3224f3b78173c3"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_001.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 82,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          26,
+          20,
+          14,
+          13,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 2,
+      "rows": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1056,
+        2048
+      ],
+      "offset": 32,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_002.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 62,
+        "truth_table_sha256": "da428577cb904640622bb2b4fe562c12ee61d78eb138eaf0b00385e4280b2e33"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_002.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          27,
+          23,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 3,
+      "rows": [
+        2,
+        1,
+        2052,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        2048,
+        1024
+      ],
+      "offset": 0,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_003.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 58,
+        "truth_table_sha256": "c1c5b147f8d0c91194d5ec63fdf4e76d06f98f833b26bb044a4275243519e857"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_003.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          27,
+          23,
+          14,
+          12,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 4,
+      "rows": [
+        1,
+        2,
+        512,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        4,
+        1024,
+        2176
+      ],
+      "offset": 48,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_004.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 64,
+        "truth_table_sha256": "3b65fcbfd95612307eb9bf5c89cfbfb026e0763e799f2a6e3d025d8f258064c4"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_004.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          27,
+          23,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 5,
+      "rows": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        96,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048
+      ],
+      "offset": 640,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_005.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 65,
+        "truth_table_sha256": "ffe01fbd72b1f33c3e2d5a3916a5d9422070481114fd0dbb2fbb8d5e85bbbaa2"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_005.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 9,
+        "and_layer_widths_after": [
+          27,
+          21,
+          14,
+          13,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 6,
+      "rows": [
+        65,
+        256,
+        8,
+        2,
+        16,
+        32,
+        64,
+        128,
+        4,
+        512,
+        1024,
+        2048
+      ],
+      "offset": 1040,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_006.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 57,
+        "truth_table_sha256": "93e70ae9ed6ccaaa9dd1457aeef9ce70194b79adefe60931a5f4c749d172ee01"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_006.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 80,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          22,
+          23,
+          14,
+          13,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 7,
+      "rows": [
+        1,
+        256,
+        4,
+        8,
+        16,
+        32,
+        2112,
+        128,
+        1024,
+        512,
+        2,
+        2048
+      ],
+      "offset": 1280,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_007.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 57,
+        "truth_table_sha256": "52d2fd4f1930bf149b40c6bff495074a8dfecb7dfb21519819b88a13c5110436"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_007.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 81,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          26,
+          21,
+          14,
+          12,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 8,
+      "rows": [
+        260,
+        1024,
+        1,
+        272,
+        16,
+        48,
+        64,
+        2048,
+        128,
+        512,
+        2,
+        8
+      ],
+      "offset": 0,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_008.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 58,
+        "truth_table_sha256": "7658440a0e2e6f44848737c6755013965e8ac48b2ec3a19e5a734ef023896a8d"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_008.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          24,
+          23,
+          14,
+          12,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 9,
+      "rows": [
+        1024,
+        10,
+        4,
+        2048,
+        16,
+        32,
+        64,
+        8,
+        256,
+        512,
+        1025,
+        129
+      ],
+      "offset": 2336,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_009.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 69,
+        "truth_table_sha256": "5295278791eb1abb028c0379cefd95282cfd7bd25e4499296c834d3c63ddd56c"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_009.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          26,
+          23,
+          15,
+          13,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 10,
+      "rows": [
+        64,
+        2,
+        16,
+        2048,
+        2560,
+        2592,
+        8,
+        2688,
+        256,
+        4,
+        1024,
+        17
+      ],
+      "offset": 32,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_010.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 62,
+        "truth_table_sha256": "62caddf1bb4e96c609b76d8fd90a705e7588f780f23dabff9c76e8ba109e9664"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_010.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          26,
+          21,
+          15,
+          13,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 11,
+      "rows": [
+        1,
+        256,
+        2048,
+        8,
+        512,
+        33,
+        64,
+        128,
+        2,
+        2052,
+        1025,
+        16
+      ],
+      "offset": 51,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_011.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 65,
+        "truth_table_sha256": "9a9dbb01fb57d8854df454c27aaec6926105c5f583ff24d4cf9a8b3de2c24c2e"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_011.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 9,
+        "and_layer_widths_after": [
+          26,
+          23,
+          14,
+          13,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 12,
+      "rows": [
+        256,
+        2,
+        4,
+        8,
+        624,
+        64,
+        16,
+        1,
+        1028,
+        528,
+        128,
+        2048
+      ],
+      "offset": 2306,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_012.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 72,
+        "truth_table_sha256": "92ddeb4f0a6d264f03ecd93af6b1eb54f6c24331dcd77e8d6a0893e1fd582a9e"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_012.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          24,
+          21,
+          15,
+          13,
+          10,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 13,
+      "rows": [
+        512,
+        2,
+        96,
+        8,
+        16,
+        257,
+        64,
+        128,
+        256,
+        1024,
+        68,
+        2048
+      ],
+      "offset": 16,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_013.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 60,
+        "truth_table_sha256": "134282c7272ac6ac94bba36569fa7dca0695ecc9c5c05e5e2923312dc8a2411c"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_013.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          27,
+          22,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 14,
+      "rows": [
+        2593,
+        2,
+        258,
+        2052,
+        1024,
+        513,
+        8,
+        128,
+        192,
+        512,
+        16,
+        4
+      ],
+      "offset": 6,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_014.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 63,
+        "truth_table_sha256": "303dab13cba91fe405c83c6d7b3cf6035d85be02016e13c7bba4b2160098e41e"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_014.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          24,
+          24,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 15,
+      "rows": [
+        2066,
+        1024,
+        32,
+        16,
+        96,
+        4,
+        640,
+        128,
+        2152,
+        256,
+        1,
+        2048
+      ],
+      "offset": 528,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_015.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 63,
+        "truth_table_sha256": "eed6338d4e221d50a11ff01e849ba6bff1bf7bb23ba5f9e1d52fe43d940c5b3c"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_015.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 82,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          22,
+          22,
+          16,
+          13,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 16,
+      "rows": [
+        512,
+        2199,
+        4,
+        8,
+        128,
+        32,
+        1,
+        16,
+        256,
+        2256,
+        1024,
+        2192
+      ],
+      "offset": 2180,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_016.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 67,
+        "truth_table_sha256": "76d8049eaf7b2191984c5bc76623f03359b610aa1670a65cc58e508c00baaa83"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_016.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          22,
+          20,
+          16,
+          14,
+          10,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 17,
+      "rows": [
+        2305,
+        32,
+        128,
+        40,
+        1042,
+        512,
+        64,
+        68,
+        1024,
+        1026,
+        256,
+        2048
+      ],
+      "offset": 1962,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_017.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 75,
+        "truth_table_sha256": "d9d2b072e6956656a9e61fd28ef52bfa63ee96494812a199d20821d6e441a622"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_017.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          25,
+          23,
+          15,
+          12,
+          9,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 18,
+      "rows": [
+        1,
+        1024,
+        404,
+        320,
+        1152,
+        32,
+        16,
+        64,
+        2,
+        512,
+        8,
+        2048
+      ],
+      "offset": 1655,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_018.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 68,
+        "truth_table_sha256": "c6d3a79c9d20d4895be5b1f0d41d02871946ac81f9dd2b4b35961531a328f172"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_018.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          25,
+          22,
+          14,
+          12,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 19,
+      "rows": [
+        1,
+        2,
+        772,
+        32,
+        16,
+        512,
+        72,
+        2048,
+        144,
+        8,
+        1024,
+        256
+      ],
+      "offset": 2162,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_019.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 79,
+        "truth_table_sha256": "561f306f23fe099667ba19eab0d89d8984f82ca2ffc78b0e9ccbbdc871dfb023"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_019.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 82,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          24,
+          22,
+          14,
+          12,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 20,
+      "rows": [
+        65,
+        24,
+        64,
+        8,
+        128,
+        66,
+        4,
+        258,
+        32,
+        3072,
+        1024,
+        512
+      ],
+      "offset": 1562,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_020.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 71,
+        "truth_table_sha256": "00ae223b529f45b6817dd331be7ddef1818adf70aeafbbb79044dcd0a1a2c43d"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_020.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 14,
+        "and_layer_widths_after": [
+          22,
+          24,
+          15,
+          13,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 21,
+      "rows": [
+        5,
+        2634,
+        1026,
+        8,
+        520,
+        32,
+        72,
+        4,
+        16,
+        256,
+        2048,
+        128
+      ],
+      "offset": 919,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_021.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 70,
+        "truth_table_sha256": "f464367c53a1bdcbdcf1d4f7b725cc37810ced8aa2cfe4806d03d1ddc7369199"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_021.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          23,
+          22,
+          15,
+          12,
+          8,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 22,
+      "rows": [
+        128,
+        16,
+        34,
+        1,
+        8,
+        36,
+        514,
+        32,
+        256,
+        2112,
+        1024,
+        2048
+      ],
+      "offset": 2449,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_022.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 63,
+        "truth_table_sha256": "4de52b653f69129b21fae47856acd16de303f430ba7845fdbae26b59f361493d"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_022.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          26,
+          24,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 23,
+      "rows": [
+        1,
+        10,
+        2,
+        288,
+        512,
+        74,
+        16,
+        256,
+        1024,
+        132,
+        2048,
+        6
+      ],
+      "offset": 1346,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_023.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 69,
+        "truth_table_sha256": "7e3b5b7924f209a5b75026fbb5f6ee3e5913062fe830dcd1bc1d84ccedc54360"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_023.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          27,
+          20,
+          15,
+          13,
+          10,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 24,
+      "rows": [
+        768,
+        4,
+        403,
+        1,
+        16,
+        64,
+        256,
+        32,
+        2048,
+        72,
+        1024,
+        2
+      ],
+      "offset": 2219,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_024.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 70,
+        "truth_table_sha256": "e4ac8e5e825ebbaace6180b96a30e9aa8039fbdf79cc795b20e433247cc1b308"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_024.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          25,
+          24,
+          14,
+          12,
+          8,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 25,
+      "rows": [
+        512,
+        32,
+        64,
+        8,
+        4,
+        2050,
+        128,
+        65,
+        2,
+        1312,
+        1024,
+        16
+      ],
+      "offset": 3885,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_025.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 63,
+        "truth_table_sha256": "51472bcf8f5e93cd074a13f775a3258d40d72364b3c8663f28c573214c56c631"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_025.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 82,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          24,
+          22,
+          15,
+          13,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 26,
+      "rows": [
+        1089,
+        2050,
+        1024,
+        544,
+        2192,
+        290,
+        8,
+        64,
+        258,
+        4,
+        128,
+        2048
+      ],
+      "offset": 1075,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_026.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 62,
+        "truth_table_sha256": "aa7868fcb845b412b066867db4c392cb570fbc8b80b123b0a80619af9c243f75"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_026.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 7,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          24,
+          20,
+          14,
+          12,
+          10,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 27,
+      "rows": [
+        516,
+        1542,
+        268,
+        2048,
+        160,
+        284,
+        328,
+        512,
+        144,
+        292,
+        1,
+        1028
+      ],
+      "offset": 106,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_027.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 74,
+        "truth_table_sha256": "8e15e15114f5ca42a90b2b58a8f3adae72fab2b7e005179edbb94df930eb97ab"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_027.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          26,
+          24,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 28,
+      "rows": [
+        3266,
+        2050,
+        512,
+        548,
+        1,
+        2114,
+        3138,
+        1126,
+        16,
+        4,
+        110,
+        256
+      ],
+      "offset": 388,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_028.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 66,
+        "truth_table_sha256": "d2587f9ba0a8fa6356fdff9d56deb015b62c1bec18c4d308db0fd5a10da9b0b3"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_028.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          27,
+          22,
+          14,
+          12,
+          8,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 29,
+      "rows": [
+        7,
+        351,
+        88,
+        1088,
+        6,
+        8,
+        128,
+        1031,
+        32,
+        1602,
+        1090,
+        2048
+      ],
+      "offset": 1532,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_029.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 78,
+        "truth_table_sha256": "28a877581e6db2ac7e7082a400c73583753f59a0cb3cd72cf449083edd59bee0"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_029.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          26,
+          23,
+          14,
+          12,
+          9,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 30,
+      "rows": [
+        80,
+        264,
+        267,
+        2176,
+        112,
+        333,
+        269,
+        1288,
+        128,
+        512,
+        2,
+        256
+      ],
+      "offset": 3745,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_030.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 61,
+        "truth_table_sha256": "35646a48895c600b3dac149fd922b42d93fb7dc821fb3f4e829d09c14f524a83"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_030.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 87,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          25,
+          23,
+          14,
+          12,
+          9,
+          4
+        ]
+      }
+    },
+    {
+      "trial": 31,
+      "rows": [
+        225,
+        1,
+        4,
+        2080,
+        1163,
+        1024,
+        1036,
+        20,
+        2592,
+        260,
+        2,
+        292
+      ],
+      "offset": 84,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_031.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 67,
+        "truth_table_sha256": "f7f8dbac991a11931c63f4dc589718ab2cc1b9ea9df2a7d2e2ba5112e216fdb2"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_031.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          26,
+          21,
+          16,
+          13,
+          6,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 32,
+      "rows": [
+        512,
+        848,
+        1024,
+        64,
+        35,
+        320,
+        2048,
+        32,
+        140,
+        4,
+        18,
+        128
+      ],
+      "offset": 1108,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_032.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 64,
+        "truth_table_sha256": "7b4cab92458137ca2d43a8196ba1b9d79ff510e5ffec10f37340b32caa0789ab"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_032.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 7,
+        "and_count_before": 97,
+        "and_count_after": 80,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          19,
+          20,
+          15,
+          13,
+          10,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 33,
+      "rows": [
+        1,
+        1025,
+        560,
+        1561,
+        4,
+        8,
+        2304,
+        2596,
+        128,
+        2,
+        2048,
+        72
+      ],
+      "offset": 1604,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_033.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 65,
+        "truth_table_sha256": "48c89f6071c2fee99a7979b4940c8c4ff1f96b2faf3a2d18dc8bac4f066e943a"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_033.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 7,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          27,
+          23,
+          14,
+          12,
+          6,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 34,
+      "rows": [
+        4,
+        32,
+        2064,
+        1536,
+        512,
+        2115,
+        2883,
+        2144,
+        131,
+        2882,
+        66,
+        40
+      ],
+      "offset": 259,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_034.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 63,
+        "truth_table_sha256": "9e4ba18cb016b6aa2db5932aff04ca52cdbbec96158a102bfe5437b4e39cdcf9"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_034.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          24,
+          21,
+          16,
+          13,
+          9,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 35,
+      "rows": [
+        137,
+        2056,
+        64,
+        1028,
+        16,
+        512,
+        776,
+        3,
+        256,
+        1,
+        32,
+        4
+      ],
+      "offset": 296,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_035.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 66,
+        "truth_table_sha256": "9023b959df4f45741bb8fc34a03ccee71ccc6ae6f88644c11c4fc13d79fa79b0"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_035.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          24,
+          21,
+          14,
+          13,
+          9,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 36,
+      "rows": [
+        2304,
+        1350,
+        10,
+        2375,
+        128,
+        36,
+        2116,
+        21,
+        17,
+        3584,
+        2048,
+        1
+      ],
+      "offset": 3460,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_036.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 64,
+        "truth_table_sha256": "3ddbf0931846138dee5128cc5e945a09ce769fa064ff5b85ad558066e98c1ca7"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_036.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          25,
+          23,
+          14,
+          12,
+          9,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 37,
+      "rows": [
+        1377,
+        2,
+        102,
+        2176,
+        2216,
+        2404,
+        1344,
+        20,
+        36,
+        560,
+        2048,
+        4
+      ],
+      "offset": 3493,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_037.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 63,
+        "truth_table_sha256": "27460133134724ee0dfd8269a1d208c77306ce115368f37f22139054e0564323"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_037.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          24,
+          22,
+          14,
+          12,
+          9,
+          4
+        ]
+      }
+    },
+    {
+      "trial": 38,
+      "rows": [
+        128,
+        2048,
+        4,
+        514,
+        520,
+        48,
+        2593,
+        1,
+        16,
+        770,
+        1168,
+        594
+      ],
+      "offset": 1074,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_038.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 68,
+        "truth_table_sha256": "01ef7f06c4da3683cca7beed65fc27f9cece3fccfaab5094dad841f94b78bbaa"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_038.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          27,
+          22,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 39,
+      "rows": [
+        261,
+        272,
+        768,
+        2056,
+        32,
+        400,
+        3,
+        340,
+        17,
+        384,
+        1091,
+        8
+      ],
+      "offset": 3239,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_039.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 65,
+        "truth_table_sha256": "28caa7f012fe67b26af0765a1ecf191e923954b5cd3f6bd26824a8e86d350a08"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_039.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 80,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          23,
+          22,
+          15,
+          13,
+          6,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 40,
+      "rows": [
+        546,
+        68,
+        32,
+        256,
+        1092,
+        128,
+        296,
+        512,
+        1104,
+        1105,
+        1108,
+        2176
+      ],
+      "offset": 1465,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_040.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 63,
+        "truth_table_sha256": "735f419d2c9e5f91e5aa23c442ae175d713c8bbf98f8833553cc4e848f8046ad"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_040.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          23,
+          22,
+          15,
+          13,
+          7,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 41,
+      "rows": [
+        2048,
+        1286,
+        256,
+        4,
+        418,
+        419,
+        35,
+        10,
+        64,
+        2816,
+        1028,
+        336
+      ],
+      "offset": 4082,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_041.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 81,
+        "truth_table_sha256": "9cb79bab6dec6279fa09ad493db14f3e929dad9424ad81fa70a10d2a71fe7694"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_041.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 14,
+        "and_layer_widths_after": [
+          23,
+          21,
+          16,
+          13,
+          7,
+          4
+        ]
+      }
+    },
+    {
+      "trial": 42,
+      "rows": [
+        535,
+        6,
+        1041,
+        170,
+        320,
+        518,
+        582,
+        128,
+        200,
+        16,
+        38,
+        2048
+      ],
+      "offset": 2270,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_042.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 83,
+        "truth_table_sha256": "15a71c9a36286bf48efcfab98cd1483539d1f5141683a987b5f882e64ba20cd8"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_042.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 7,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          24,
+          23,
+          14,
+          12,
+          7,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 43,
+      "rows": [
+        1264,
+        1024,
+        1072,
+        1156,
+        1028,
+        9,
+        1168,
+        1267,
+        256,
+        1542,
+        2,
+        2626
+      ],
+      "offset": 1545,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_043.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 75,
+        "truth_table_sha256": "aa457cfd8d78678ba2059e22605cbb659c03b50c9960824bb787138ba2844e2d"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_043.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          24,
+          22,
+          14,
+          12,
+          9,
+          4
+        ]
+      }
+    },
+    {
+      "trial": 44,
+      "rows": [
+        192,
+        516,
+        256,
+        2048,
+        524,
+        2483,
+        1024,
+        64,
+        2450,
+        576,
+        608,
+        272
+      ],
+      "offset": 1107,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_044.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 63,
+        "truth_table_sha256": "401bf467a611ddc1403ea8efa7af39197b8189b75f55b8e9ed6a2b5d7c184431"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_044.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 81,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          21,
+          20,
+          15,
+          13,
+          9,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 45,
+      "rows": [
+        2562,
+        25,
+        2048,
+        5,
+        2560,
+        66,
+        34,
+        3011,
+        16,
+        3586,
+        2883,
+        1
+      ],
+      "offset": 2321,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_045.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 66,
+        "truth_table_sha256": "07fa8e4ea68cb15b19e77c69bcc97daad2edec6cf61488b577f221de0dd1b419"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_045.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 87,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          23,
+          24,
+          15,
+          13,
+          9,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 46,
+      "rows": [
+        2068,
+        512,
+        8,
+        2136,
+        1024,
+        2453,
+        1192,
+        608,
+        256,
+        16,
+        2138,
+        552
+      ],
+      "offset": 229,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_046.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 67,
+        "truth_table_sha256": "e2ace2c8db717b2c82b2ad0800cd05e80cc5e45631b57b4f4b67c9d8ee8314a8"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_046.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 14,
+        "and_layer_widths_after": [
+          26,
+          23,
+          14,
+          12,
+          7,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 47,
+      "rows": [
+        260,
+        512,
+        2340,
+        3080,
+        2848,
+        128,
+        25,
+        64,
+        24,
+        2,
+        1032,
+        10
+      ],
+      "offset": 2749,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_047.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 72,
+        "truth_table_sha256": "dc49005ff522f3e98779fd51e3cdd2fef3ad329e7aaf60fe8c435e3d843f8eaa"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_047.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          26,
+          23,
+          14,
+          12,
+          8,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 48,
+      "rows": [
+        4,
+        394,
+        2634,
+        1024,
+        522,
+        258,
+        64,
+        2514,
+        1448,
+        10,
+        2,
+        129
+      ],
+      "offset": 524,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_048.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 71,
+        "truth_table_sha256": "f76f2d9f80d82dd1aed4a2122f107318d3db7decf45665b634b0937223e44759"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_048.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          24,
+          24,
+          14,
+          12,
+          9,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 49,
+      "rows": [
+        8,
+        1557,
+        2048,
+        36,
+        128,
+        2312,
+        512,
+        532,
+        1560,
+        76,
+        1024,
+        2
+      ],
+      "offset": 2421,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_049.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 72,
+        "truth_table_sha256": "ddc80b9daaab1281acb98a240bad9b64af267e40df39433ac5bec09c51935a41"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_049.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          22,
+          22,
+          15,
+          13,
+          8,
+          4
+        ]
+      }
+    },
+    {
+      "trial": 50,
+      "rows": [
+        59,
+        138,
+        257,
+        1728,
+        2120,
+        10,
+        64,
+        1096,
+        1025,
+        4,
+        2136,
+        8
+      ],
+      "offset": 2878,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_050.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 83,
+        "truth_table_sha256": "d4d0f4fb1e2af0e925f9dadb3cfa607c21e53ad9a36368807d31cba605c78a00"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_050.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 7,
+        "and_count_before": 97,
+        "and_count_after": 81,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          22,
+          21,
+          14,
+          13,
+          7,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 51,
+      "rows": [
+        33,
+        2056,
+        3080,
+        8,
+        1028,
+        97,
+        512,
+        776,
+        35,
+        3,
+        128,
+        16
+      ],
+      "offset": 581,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_051.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 62,
+        "truth_table_sha256": "e57007c793f0a44421e17cc8f5f84486e3e71734f87474fe183aa6759d13fa0b"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_051.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          25,
+          23,
+          14,
+          12,
+          9,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 52,
+      "rows": [
+        2816,
+        2560,
+        2052,
+        48,
+        2689,
+        1,
+        2185,
+        65,
+        2048,
+        2064,
+        1025,
+        1267
+      ],
+      "offset": 528,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_052.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 71,
+        "truth_table_sha256": "ca5cb228e940609503f3d0e818ba27b1bfccf6f79e4086cf4f6efc6dc3dbefae"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_052.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 88,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          29,
+          23,
+          15,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 53,
+      "rows": [
+        1024,
+        512,
+        88,
+        256,
+        704,
+        1248,
+        3296,
+        516,
+        1664,
+        3681,
+        272,
+        2691
+      ],
+      "offset": 1846,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_053.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 73,
+        "truth_table_sha256": "58baedb85809a1529b9bbd84c224cddae2b6a2e8c91a86ad214695dd2b0a1eed"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_053.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          26,
+          22,
+          14,
+          12,
+          9,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 54,
+      "rows": [
+        204,
+        4,
+        2048,
+        8,
+        2560,
+        3648,
+        33,
+        141,
+        152,
+        136,
+        460,
+        2626
+      ],
+      "offset": 513,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_054.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 64,
+        "truth_table_sha256": "63b7099903c735f3178c750220cfe59a1e5816ce1afcb4473d821a5e4d41c1cc"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_054.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          23,
+          21,
+          15,
+          13,
+          8,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 55,
+      "rows": [
+        256,
+        640,
+        32,
+        1,
+        72,
+        1560,
+        2440,
+        8,
+        1028,
+        1090,
+        392,
+        1024
+      ],
+      "offset": 3024,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_055.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 75,
+        "truth_table_sha256": "da2c96bcea152e8780dd7be473f70772f4ca75e7b373994af473d965b3515d73"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_055.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          26,
+          23,
+          13,
+          13,
+          8,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 56,
+      "rows": [
+        2422,
+        258,
+        16,
+        868,
+        524,
+        1548,
+        80,
+        596,
+        2176,
+        1,
+        2080,
+        144
+      ],
+      "offset": 2861,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_056.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 68,
+        "truth_table_sha256": "297f4aa112a984fdf749fd31a3227a7fd51c2ed1a39aeca91eb723a6fcd5494f"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_056.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 7,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          26,
+          22,
+          14,
+          12,
+          8,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 57,
+      "rows": [
+        2616,
+        1025,
+        2305,
+        208,
+        12,
+        528,
+        32,
+        80,
+        2049,
+        28,
+        189,
+        3158
+      ],
+      "offset": 1556,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_057.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 75,
+        "truth_table_sha256": "481ef9cccd1cd5d27c66907b01fbc40dd0c21e20f44a4346099de02e03ebc802"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_057.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          23,
+          22,
+          14,
+          12,
+          11,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 58,
+      "rows": [
+        3536,
+        132,
+        2512,
+        2,
+        32,
+        3520,
+        4044,
+        21,
+        576,
+        1280,
+        64,
+        8
+      ],
+      "offset": 2015,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_058.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 76,
+        "truth_table_sha256": "b6e243aaa19f0d9330076409081071167ba0af837147f01b4c6a3c63a76f5535"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_058.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          26,
+          21,
+          14,
+          12,
+          9,
+          4
+        ]
+      }
+    },
+    {
+      "trial": 59,
+      "rows": [
+        2138,
+        3930,
+        3326,
+        83,
+        2130,
+        3500,
+        292,
+        3802,
+        3582,
+        64,
+        262,
+        258
+      ],
+      "offset": 2651,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_059.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 85,
+        "truth_table_sha256": "e4a80bb25c17bef27dcdf9301f4a0694f482681872434bace87b56e9b9060c2b"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_059.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 14,
+        "and_layer_widths_after": [
+          23,
+          23,
+          14,
+          12,
+          8,
+          4
+        ]
+      }
+    },
+    {
+      "trial": 60,
+      "rows": [
+        512,
+        264,
+        2954,
+        98,
+        14,
+        428,
+        2952,
+        1552,
+        8,
+        179,
+        64,
+        144
+      ],
+      "offset": 2062,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_060.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 68,
+        "truth_table_sha256": "c8be116d09eb972bc030d6f03cc98bc67906a0851e1b1ce226f2237bd0aaeecc"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_060.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 7,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          24,
+          23,
+          14,
+          12,
+          8,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 61,
+      "rows": [
+        1542,
+        258,
+        688,
+        8,
+        560,
+        2230,
+        402,
+        625,
+        256,
+        129,
+        1601,
+        2736
+      ],
+      "offset": 56,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_061.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 68,
+        "truth_table_sha256": "79d6d82a3b0b5678a95a50ae00b048dbdbb6b12c7503311f2899a41b1728971e"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_061.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          27,
+          24,
+          14,
+          13,
+          6,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 62,
+      "rows": [
+        2209,
+        3713,
+        1024,
+        1544,
+        161,
+        505,
+        14,
+        171,
+        160,
+        945,
+        360,
+        433
+      ],
+      "offset": 2815,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_062.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 80,
+        "truth_table_sha256": "087f0d8fe742f49277005249f5c135f52af77203e819aa8a0379a7e5dabeb125"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_062.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          24,
+          23,
+          16,
+          13,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 63,
+      "rows": [
+        1,
+        654,
+        2305,
+        24,
+        600,
+        129,
+        3453,
+        64,
+        3368,
+        1405,
+        220,
+        3329
+      ],
+      "offset": 1810,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_063.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 71,
+        "truth_table_sha256": "c0265a88de1d5907e2f974b19620871d85df9253050fa628645e228431263fd5"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_063.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          27,
+          22,
+          15,
+          12,
+          6,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 64,
+      "rows": [
+        2099,
+        1048,
+        1572,
+        640,
+        260,
+        128,
+        72,
+        2048,
+        2182,
+        2070,
+        2098,
+        256
+      ],
+      "offset": 2236,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_064.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 79,
+        "truth_table_sha256": "cd80bddd5c0714acf030fcceb74f847b86d651561fb51e80dc14efac53886bef"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_064.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          25,
+          20,
+          14,
+          12,
+          10,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 65,
+      "rows": [
+        8,
+        28,
+        2128,
+        1312,
+        3486,
+        43,
+        256,
+        1068,
+        2,
+        930,
+        265,
+        418
+      ],
+      "offset": 3419,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_065.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 72,
+        "truth_table_sha256": "622f990596db660cada03aae0270aa442c296666de24158aa3c67aa1cc8ece33"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_065.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          26,
+          21,
+          17,
+          13,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 66,
+      "rows": [
+        256,
+        538,
+        536,
+        1154,
+        144,
+        513,
+        2178,
+        101,
+        288,
+        512,
+        60,
+        2184
+      ],
+      "offset": 884,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_066.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 80,
+        "truth_table_sha256": "ba685ababf5b7f421d407458ec27964ad12ca1354d006fbba5217275f18c31c0"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_066.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          22,
+          22,
+          15,
+          13,
+          9,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 67,
+      "rows": [
+        780,
+        1040,
+        16,
+        72,
+        260,
+        3102,
+        1901,
+        256,
+        1256,
+        120,
+        377,
+        2048
+      ],
+      "offset": 3716,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_067.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 73,
+        "truth_table_sha256": "74f6071399f3ef8d9dfdc2285c0848e21f99e82918a9a74c30efdc8cd06ef4d6"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_067.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          26,
+          22,
+          15,
+          13,
+          7,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 68,
+      "rows": [
+        32,
+        64,
+        896,
+        2232,
+        1034,
+        641,
+        768,
+        2048,
+        34,
+        774,
+        2953,
+        8
+      ],
+      "offset": 3803,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_068.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 73,
+        "truth_table_sha256": "35751cdc6ccb44f11c02de7fefd06f27861fc2875c94d8e4da479691585a3229"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_068.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          25,
+          21,
+          14,
+          12,
+          10,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 69,
+      "rows": [
+        2,
+        1592,
+        896,
+        68,
+        528,
+        2579,
+        2114,
+        384,
+        2592,
+        3377,
+        1552,
+        2048
+      ],
+      "offset": 2574,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_069.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 67,
+        "truth_table_sha256": "224c034a04255ca3f2ed19af22f079c7dec63a9f12f465b6bded7999e96a7a54"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_069.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 7,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          24,
+          23,
+          14,
+          12,
+          8,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 70,
+      "rows": [
+        9,
+        786,
+        770,
+        5,
+        819,
+        128,
+        514,
+        1,
+        64,
+        34,
+        1803,
+        2064
+      ],
+      "offset": 1593,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_070.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 62,
+        "truth_table_sha256": "8c4775bec2b5eeea89765b8cdf920791af51ef905f66ad594827f2f8e9677437"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_070.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 7,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          25,
+          21,
+          16,
+          13,
+          8,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 71,
+      "rows": [
+        522,
+        24,
+        1058,
+        2376,
+        4,
+        72,
+        528,
+        1098,
+        16,
+        842,
+        2057,
+        1186
+      ],
+      "offset": 211,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_071.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 77,
+        "truth_table_sha256": "e0d0e455c8d85d218f0f374b62a36b169ce399c94c7ff1c7ab00c2c69707a3bc"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_071.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          25,
+          22,
+          14,
+          12,
+          10,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 72,
+      "rows": [
+        2844,
+        666,
+        2084,
+        5,
+        60,
+        190,
+        2242,
+        1024,
+        924,
+        16,
+        37,
+        2194
+      ],
+      "offset": 2400,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_072.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 74,
+        "truth_table_sha256": "26532f0585912af68db9826bd679e39b3d5d910b2cdbb8c6b1b657f813e68c55"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_072.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 82,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          23,
+          23,
+          14,
+          12,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 73,
+      "rows": [
+        1,
+        3073,
+        12,
+        67,
+        2744,
+        907,
+        1580,
+        680,
+        3018,
+        815,
+        640,
+        516
+      ],
+      "offset": 2573,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_073.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 74,
+        "truth_table_sha256": "b79a7474165931552cf10c774a49d500cd0d1204ce15845521f3b9e8f293f73c"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_073.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          24,
+          21,
+          15,
+          13,
+          7,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 74,
+      "rows": [
+        1137,
+        1152,
+        130,
+        138,
+        905,
+        1,
+        64,
+        513,
+        68,
+        2116,
+        192,
+        362
+      ],
+      "offset": 1644,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_074.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 71,
+        "truth_table_sha256": "50414737e605319bc74b102ca2f074766fc731106198e037ff86aaf809b206d3"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_074.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          27,
+          21,
+          14,
+          12,
+          10,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 75,
+      "rows": [
+        1026,
+        512,
+        16,
+        716,
+        1860,
+        264,
+        2756,
+        965,
+        704,
+        1448,
+        1289,
+        8
+      ],
+      "offset": 2976,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_075.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 72,
+        "truth_table_sha256": "2954e06d60203965b2bca5ff562bb0569a1427fc2eaec6d61c9cfd9b81f7ae03"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_075.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          25,
+          22,
+          14,
+          11,
+          8,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 76,
+      "rows": [
+        3,
+        836,
+        1071,
+        772,
+        2874,
+        576,
+        2056,
+        16,
+        786,
+        716,
+        2866,
+        832
+      ],
+      "offset": 3596,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_076.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 78,
+        "truth_table_sha256": "f82417de0fbd0e13cbdda075416fa7c3c424761164f0454639700ba17dfe26bc"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_076.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          25,
+          24,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 77,
+      "rows": [
+        1096,
+        2224,
+        2256,
+        2200,
+        538,
+        2196,
+        2944,
+        336,
+        3024,
+        3208,
+        2203,
+        200
+      ],
+      "offset": 2394,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_077.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 87,
+        "truth_table_sha256": "b5bf43b93578316fa48bb61cc4bb3412babdb83cc2fb7bf375dfb87160ee1f8b"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_077.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 82,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          25,
+          23,
+          14,
+          12,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 78,
+      "rows": [
+        512,
+        1268,
+        289,
+        1333,
+        1076,
+        1381,
+        1335,
+        2048,
+        1260,
+        1509,
+        1288,
+        1063
+      ],
+      "offset": 2859,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_078.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 87,
+        "truth_table_sha256": "8cd51e5fb93aa9e84a008bd32639457af80c14476779ed48387f1f8052aa2de1"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_078.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          25,
+          24,
+          14,
+          12,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 79,
+      "rows": [
+        3210,
+        262,
+        3226,
+        1056,
+        1091,
+        9,
+        1060,
+        288,
+        1188,
+        551,
+        8,
+        256
+      ],
+      "offset": 2622,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_079.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 77,
+        "truth_table_sha256": "b14aead22e6ee2a582a5aae83b7910a910d9ddc3393530611d3770c547451b40"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_079.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          23,
+          23,
+          14,
+          12,
+          8,
+          4
+        ]
+      }
+    },
+    {
+      "trial": 80,
+      "rows": [
+        128,
+        3950,
+        768,
+        320,
+        769,
+        3,
+        1024,
+        2088,
+        3966,
+        3913,
+        384,
+        3190
+      ],
+      "offset": 2816,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_080.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 66,
+        "truth_table_sha256": "5d6581a7be50baa67bb8b775d185d413a7db073b72613e697632411b7f6b6eb1"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_080.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          22,
+          21,
+          15,
+          13,
+          9,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 81,
+      "rows": [
+        128,
+        84,
+        386,
+        64,
+        8,
+        531,
+        2062,
+        149,
+        32,
+        524,
+        1024,
+        17
+      ],
+      "offset": 102,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_081.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 72,
+        "truth_table_sha256": "52e99f7739d6658ff6a3633415f3d820d6b95e4174512b620fa4d763dd008e20"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_081.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          27,
+          24,
+          14,
+          12,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 82,
+      "rows": [
+        512,
+        420,
+        769,
+        3897,
+        2889,
+        2352,
+        2440,
+        320,
+        310,
+        12,
+        2102,
+        3917
+      ],
+      "offset": 1717,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_082.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 83,
+        "truth_table_sha256": "af9c6bf705dcb76ea79756330400a36153420441ac39ce97ed3371879c35d559"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_082.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          26,
+          23,
+          14,
+          12,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 83,
+      "rows": [
+        65,
+        2144,
+        1056,
+        2226,
+        179,
+        1312,
+        2,
+        1,
+        674,
+        332,
+        166,
+        16
+      ],
+      "offset": 559,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_083.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 66,
+        "truth_table_sha256": "0e8ef2fcc5c3ffcd7d77721b1e087a9e272fbb22b1c470a28ac6d165cd2826e1"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_083.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          25,
+          21,
+          14,
+          12,
+          11,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 84,
+      "rows": [
+        2903,
+        3207,
+        3231,
+        3348,
+        16,
+        1434,
+        3287,
+        52,
+        1280,
+        32,
+        1216,
+        2837
+      ],
+      "offset": 2049,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_084.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 76,
+        "truth_table_sha256": "ff279e57043586df950d9176cc7e1a383bbab316fd87c147e1f5ffaf1f7fc245"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_084.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          26,
+          24,
+          14,
+          12,
+          6,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 85,
+      "rows": [
+        1894,
+        1026,
+        94,
+        2372,
+        1,
+        2116,
+        1600,
+        30,
+        9,
+        352,
+        2,
+        478
+      ],
+      "offset": 2979,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_085.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 73,
+        "truth_table_sha256": "29b3cf24aa4ae4146dc0837229ba299e64a1cdda7f8e06d8e2251f082538cdbe"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_085.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          26,
+          22,
+          14,
+          12,
+          10,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 86,
+      "rows": [
+        144,
+        3075,
+        349,
+        363,
+        38,
+        676,
+        329,
+        1040,
+        3122,
+        644,
+        185,
+        64
+      ],
+      "offset": 3383,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_086.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 65,
+        "truth_table_sha256": "e9e1c2f56a5bcbe29b8b546dc5a4ee3fd91b9bd8f9ce739525bc75af06d6338a"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_086.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 81,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          24,
+          23,
+          14,
+          12,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 87,
+      "rows": [
+        2133,
+        2129,
+        357,
+        787,
+        1430,
+        3463,
+        256,
+        3220,
+        290,
+        35,
+        3155,
+        347
+      ],
+      "offset": 3074,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_087.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 80,
+        "truth_table_sha256": "9e20643f283af2949c88df6583630c01cede958b824bd1e5432a01718e2235a6"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_087.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          27,
+          23,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 88,
+      "rows": [
+        2368,
+        2007,
+        3775,
+        3773,
+        2021,
+        1437,
+        3616,
+        1656,
+        3485,
+        445,
+        2496,
+        2500
+      ],
+      "offset": 456,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_088.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 82,
+        "truth_table_sha256": "a215b349873831f5deb853c66fc1230f1d88376f9f543901dbe99a7be0c58600"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_088.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          25,
+          24,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 89,
+      "rows": [
+        162,
+        832,
+        2736,
+        3045,
+        520,
+        194,
+        3072,
+        869,
+        489,
+        2560,
+        512,
+        2720
+      ],
+      "offset": 150,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_089.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 76,
+        "truth_table_sha256": "93ccdbc2ea7fdecf1d8475a710cb632c0f419bd3d7ed4ae9bd94596979319753"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_089.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 82,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          24,
+          21,
+          14,
+          12,
+          9,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 90,
+      "rows": [
+        65,
+        2336,
+        1099,
+        2,
+        2720,
+        2048,
+        1026,
+        583,
+        71,
+        256,
+        238,
+        3388
+      ],
+      "offset": 1746,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_090.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 76,
+        "truth_table_sha256": "31c4319eb60ecb941cf1a3f69c34d6b59c9663f98e10fc8f0a9efe7882376344"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_090.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          26,
+          23,
+          14,
+          12,
+          8,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 91,
+      "rows": [
+        264,
+        145,
+        513,
+        1606,
+        267,
+        259,
+        1600,
+        128,
+        1607,
+        2379,
+        2856,
+        192
+      ],
+      "offset": 1511,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_091.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 67,
+        "truth_table_sha256": "1ea07609dea37515a820a4466ed67f7db8b944e2de4f470ebd0383781dac7c24"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_091.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 82,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          25,
+          22,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 92,
+      "rows": [
+        1044,
+        1060,
+        660,
+        20,
+        64,
+        1303,
+        92,
+        1558,
+        3188,
+        3156,
+        1172,
+        278
+      ],
+      "offset": 707,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_092.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 105,
+        "truth_table_sha256": "84db40f7612a21c429b10a707230d38acad5caddbea574a936689b9f4abe9413"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_092.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          26,
+          24,
+          14,
+          12,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 93,
+      "rows": [
+        1547,
+        1416,
+        2656,
+        2666,
+        627,
+        170,
+        1315,
+        1322,
+        2764,
+        1905,
+        1166,
+        530
+      ],
+      "offset": 3074,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_093.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 79,
+        "truth_table_sha256": "f3f04efbc6509da2f3266198779e4c9e1c8a4af364d7c7e085def7e3a6ba3228"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_093.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 80,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          23,
+          24,
+          14,
+          12,
+          6,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 94,
+      "rows": [
+        2309,
+        2089,
+        2049,
+        2081,
+        640,
+        657,
+        2390,
+        3079,
+        512,
+        4,
+        3415,
+        3073
+      ],
+      "offset": 3938,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_094.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 82,
+        "truth_table_sha256": "6c0c7928173f889e41268cb0e5114c0689e36e082683fabd7a2380a96890e255"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_094.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          26,
+          22,
+          14,
+          12,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 95,
+      "rows": [
+        274,
+        2170,
+        3153,
+        57,
+        208,
+        792,
+        3139,
+        2014,
+        3254,
+        59,
+        2970,
+        3348
+      ],
+      "offset": 3778,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_095.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 100,
+        "truth_table_sha256": "d8a448199ba12474a1868c258350bcc4a982ef9b76b74bf4b4817f86863cdf0a"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_095.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          28,
+          23,
+          14,
+          12,
+          6,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 96,
+      "rows": [
+        193,
+        1924,
+        1890,
+        1,
+        2,
+        1284,
+        770,
+        1587,
+        269,
+        512,
+        4003,
+        1728
+      ],
+      "offset": 2880,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_096.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 73,
+        "truth_table_sha256": "579d39dd8cf0f26ac2ca784442aa1651ca3e2985965fff7843d56ff91805823d"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_096.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          26,
+          21,
+          14,
+          12,
+          9,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 97,
+      "rows": [
+        1616,
+        1991,
+        2212,
+        82,
+        1,
+        2085,
+        2052,
+        3557,
+        2592,
+        2104,
+        138,
+        24
+      ],
+      "offset": 2567,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_097.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 62,
+        "truth_table_sha256": "90f5754f9ea2f85845010ab7b04baa58c136006b3b93606da944e22f1fe62382"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_097.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          26,
+          22,
+          14,
+          13,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 98,
+      "rows": [
+        677,
+        933,
+        2290,
+        130,
+        2636,
+        852,
+        63,
+        2836,
+        1073,
+        10,
+        741,
+        80
+      ],
+      "offset": 3424,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_098.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 69,
+        "truth_table_sha256": "60675ea602bc84a7641eb71d5b963d68fa934def00ba9386d9312b24e096fc4f"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_098.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 9,
+        "and_layer_widths_after": [
+          23,
+          23,
+          15,
+          12,
+          8,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 99,
+      "rows": [
+        3572,
+        652,
+        128,
+        258,
+        2358,
+        956,
+        377,
+        174,
+        2,
+        14,
+        2552,
+        2208
+      ],
+      "offset": 3924,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_099.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 73,
+        "truth_table_sha256": "826e3723a6110c5f9e7f5055fba9c5d457dace299a10c928301aca8fbb7ccffb"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_099.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          23,
+          22,
+          16,
+          13,
+          7,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 100,
+      "rows": [
+        64,
+        2057,
+        16,
+        220,
+        2496,
+        2553,
+        8,
+        576,
+        2048,
+        2126,
+        1024,
+        2241
+      ],
+      "offset": 3451,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_100.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 76,
+        "truth_table_sha256": "c727507a224c59744e962e0a006a123a8f75123a49237e4eb26b21fb617ee199"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_100.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          24,
+          20,
+          15,
+          13,
+          10,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 101,
+      "rows": [
+        397,
+        3325,
+        1313,
+        512,
+        781,
+        1452,
+        2628,
+        1457,
+        944,
+        2850,
+        12,
+        2817
+      ],
+      "offset": 2991,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_101.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 80,
+        "truth_table_sha256": "296b549228f8b759f5cc68091585de3197e8112c2b082f6429a475666dfd345e"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_101.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          24,
+          23,
+          14,
+          12,
+          8,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 102,
+      "rows": [
+        542,
+        2220,
+        2,
+        2304,
+        577,
+        320,
+        3042,
+        2054,
+        4,
+        1918,
+        660,
+        1586
+      ],
+      "offset": 3980,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_102.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 67,
+        "truth_table_sha256": "718eea3ca2f07b8c91287b1172774163c7b1e7cf7dd39c304740f2737c1cb97e"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_102.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          23,
+          22,
+          15,
+          13,
+          9,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 103,
+      "rows": [
+        2702,
+        1415,
+        3525,
+        1714,
+        2658,
+        640,
+        9,
+        4,
+        1562,
+        1038,
+        1720,
+        1050
+      ],
+      "offset": 260,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_103.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 71,
+        "truth_table_sha256": "0586368fb48a20ee1cb7c0f40fcdfcd47c398825e48bd6a3e92c93baa6c74fc7"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_103.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 81,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          24,
+          22,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 104,
+      "rows": [
+        3327,
+        575,
+        2987,
+        2991,
+        2739,
+        139,
+        3656,
+        42,
+        1321,
+        128,
+        863,
+        1112
+      ],
+      "offset": 3635,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_104.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 98,
+        "truth_table_sha256": "de15d070d113bf5345901b8e552a27442850c6509045bdcea3fa84742d12b41e"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_104.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          21,
+          23,
+          16,
+          13,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 105,
+      "rows": [
+        2844,
+        1034,
+        502,
+        2972,
+        93,
+        2689,
+        3084,
+        129,
+        3082,
+        3840,
+        1160,
+        1040
+      ],
+      "offset": 3467,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_105.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 69,
+        "truth_table_sha256": "7e743b027d627186441e93446b02ca36b1c93cc8a2e56eb4585bcf09b2badf65"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_105.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 81,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          22,
+          24,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 106,
+      "rows": [
+        583,
+        558,
+        770,
+        96,
+        64,
+        167,
+        334,
+        118,
+        239,
+        1468,
+        2567,
+        608
+      ],
+      "offset": 1015,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_106.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 79,
+        "truth_table_sha256": "c599d934fcde1385fb98d632c1f832b64adf5117668ae25f209f50938ec231d9"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_106.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 79,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          22,
+          24,
+          15,
+          12,
+          5,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 107,
+      "rows": [
+        1217,
+        1276,
+        80,
+        560,
+        321,
+        1285,
+        369,
+        1425,
+        210,
+        1153,
+        2896,
+        688
+      ],
+      "offset": 3178,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_107.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 80,
+        "truth_table_sha256": "b630d72f2081e6a511e914725dfb5fc38c7f08d74fa5f070c285d34587e43b8a"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_107.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 82,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          24,
+          21,
+          14,
+          13,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 108,
+      "rows": [
+        1367,
+        3193,
+        17,
+        1349,
+        2184,
+        2465,
+        1815,
+        1026,
+        1568,
+        1538,
+        2752,
+        1536
+      ],
+      "offset": 2097,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_108.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 84,
+        "truth_table_sha256": "933cc1e8e9097973203a1a22908abcf0e0467dce91e7bab4df32be23b9178a4b"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_108.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          26,
+          24,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 109,
+      "rows": [
+        3089,
+        635,
+        24,
+        512,
+        1357,
+        353,
+        146,
+        631,
+        1680,
+        2049,
+        2388,
+        118
+      ],
+      "offset": 2201,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_109.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 82,
+        "truth_table_sha256": "68f3c19eeb5b49a33416cbc2a0e7f254aca1a25624c8f85886b95408cdaff02e"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_109.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          25,
+          22,
+          14,
+          13,
+          8,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 110,
+      "rows": [
+        3104,
+        3425,
+        25,
+        704,
+        2160,
+        134,
+        1857,
+        1601,
+        6,
+        4,
+        992,
+        716
+      ],
+      "offset": 321,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_110.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 72,
+        "truth_table_sha256": "c8dc2e9d009f65f0a614c03f597f0c32ff6565e14dbbc812daa6c5294163da0f"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_110.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          27,
+          23,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 111,
+      "rows": [
+        2,
+        240,
+        2510,
+        2274,
+        579,
+        578,
+        144,
+        4,
+        389,
+        2226,
+        32,
+        1308
+      ],
+      "offset": 4060,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_111.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 78,
+        "truth_table_sha256": "62f1d69ca6cf80839cb63ca97a0e83a44095f8fbc8def9dbfd563452e4c6c154"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_111.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 82,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          24,
+          22,
+          14,
+          12,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 112,
+      "rows": [
+        12,
+        3386,
+        1837,
+        822,
+        524,
+        321,
+        257,
+        917,
+        1969,
+        2304,
+        736,
+        2048
+      ],
+      "offset": 2140,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_112.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 77,
+        "truth_table_sha256": "45597dfed172db2ba886fcfee42c1e2c95bf20bdff8aeef59c05fa44a7e6a31f"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_112.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 7,
+        "and_count_before": 97,
+        "and_count_after": 81,
+        "nonlinear_live_width_after": 14,
+        "and_layer_widths_after": [
+          23,
+          21,
+          14,
+          13,
+          8,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 113,
+      "rows": [
+        2064,
+        1061,
+        1109,
+        2048,
+        769,
+        84,
+        3479,
+        3124,
+        45,
+        2112,
+        1317,
+        3508
+      ],
+      "offset": 582,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_113.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 80,
+        "truth_table_sha256": "f793235e57e8f74d4bb25a60f72d4b9fa239ce20200c7dc9d005fea8cc08e405"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_113.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          26,
+          23,
+          14,
+          12,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 114,
+      "rows": [
+        1025,
+        2068,
+        592,
+        3712,
+        2204,
+        340,
+        3700,
+        532,
+        140,
+        2880,
+        2146,
+        2676
+      ],
+      "offset": 2508,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_114.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 76,
+        "truth_table_sha256": "ce9c2673b22ee3c7990ae00077d6e63e55c3d012c8891081f18830b347786499"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_114.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 86,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          28,
+          22,
+          16,
+          13,
+          6,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 115,
+      "rows": [
+        3488,
+        2464,
+        1207,
+        3071,
+        122,
+        1191,
+        1221,
+        263,
+        38,
+        250,
+        1605,
+        3013
+      ],
+      "offset": 738,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_115.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 81,
+        "truth_table_sha256": "7c0a80e4327264d3602fb86e5acd6c7babac8cdb61a56c9dbbce6644cf29b207"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_115.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          27,
+          23,
+          14,
+          12,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 116,
+      "rows": [
+        1047,
+        1586,
+        2073,
+        3685,
+        983,
+        519,
+        20,
+        1494,
+        2112,
+        1270,
+        1699,
+        130
+      ],
+      "offset": 1417,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_116.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 80,
+        "truth_table_sha256": "bd01b12bee094c5299a71d3628d59ad104ece9604a6a46bdb49e9d45b432a2fb"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_116.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          22,
+          24,
+          16,
+          13,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 117,
+      "rows": [
+        3392,
+        330,
+        552,
+        2,
+        2600,
+        842,
+        2353,
+        2347,
+        2304,
+        2189,
+        2415,
+        8
+      ],
+      "offset": 1920,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_117.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 80,
+        "truth_table_sha256": "4b93f7f42b4945f1b2f9f1d1d8610a7e7f723eb8c6d6371db261e23be005f88e"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_117.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 82,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          25,
+          21,
+          15,
+          13,
+          6,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 118,
+      "rows": [
+        3404,
+        4030,
+        554,
+        137,
+        2060,
+        3140,
+        3340,
+        256,
+        3482,
+        1981,
+        1056,
+        1060
+      ],
+      "offset": 2380,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_118.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 79,
+        "truth_table_sha256": "f5d56b52c093f3c2acf1c7d619a853cfb7d6ee827a274e290245e9f13e78a60c"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_118.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 81,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          20,
+          20,
+          15,
+          13,
+          10,
+          3
+        ]
+      }
+    },
+    {
+      "trial": 119,
+      "rows": [
+        2112,
+        1056,
+        142,
+        1006,
+        1305,
+        1303,
+        3351,
+        3181,
+        1343,
+        2344,
+        1338,
+        3091
+      ],
+      "offset": 661,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_119.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 78,
+        "truth_table_sha256": "b5f2cca24be74ed931e9e60deb40b28b8c3fa7914daa34b6509d6709c19ee20f"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_119.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          27,
+          21,
+          14,
+          12,
+          7,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 120,
+      "rows": [
+        1058,
+        1170,
+        525,
+        2186,
+        2234,
+        2994,
+        210,
+        2337,
+        3360,
+        2120,
+        2336,
+        155
+      ],
+      "offset": 1986,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_120.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 76,
+        "truth_table_sha256": "c7d969f5010d241909f23775c6357513253dbfae26b21c0722a6daf5cf604416"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_120.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 80,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          23,
+          21,
+          14,
+          13,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 121,
+      "rows": [
+        162,
+        1024,
+        1547,
+        272,
+        729,
+        516,
+        157,
+        211,
+        872,
+        2993,
+        4057,
+        2997
+      ],
+      "offset": 910,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_121.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 76,
+        "truth_table_sha256": "093db01fe4fcbbf12b869deec1be9b6501bb5608c3618e294573a2bd807d014f"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_121.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 82,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          25,
+          22,
+          14,
+          12,
+          7,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 122,
+      "rows": [
+        2951,
+        621,
+        2668,
+        3239,
+        2957,
+        2674,
+        2876,
+        2638,
+        2177,
+        763,
+        877,
+        2967
+      ],
+      "offset": 227,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_122.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 99,
+        "truth_table_sha256": "e26368d34e936107f938c0f78deb16de68b4bcb7a6f06edb63bb8bc79e2bed97"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_122.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          25,
+          22,
+          15,
+          13,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 123,
+      "rows": [
+        254,
+        1294,
+        2301,
+        2125,
+        541,
+        3846,
+        2909,
+        1222,
+        2814,
+        2211,
+        2921,
+        3049
+      ],
+      "offset": 1382,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_123.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 86,
+        "truth_table_sha256": "bdaf28a377b18cd83da368117f3743c36fd9392662e38371dc7171a01536e237"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_123.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          27,
+          22,
+          14,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 124,
+      "rows": [
+        1700,
+        68,
+        3776,
+        480,
+        869,
+        288,
+        2630,
+        306,
+        520,
+        583,
+        1282,
+        1076
+      ],
+      "offset": 1455,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_124.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 64,
+        "truth_table_sha256": "c258574f6c2fd3c42a00fbdee2ed98ac94de2d16c527ff469d4b981db60fbea8"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_124.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 85,
+        "nonlinear_live_width_after": 11,
+        "and_layer_widths_after": [
+          25,
+          24,
+          14,
+          12,
+          9,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 125,
+      "rows": [
+        1793,
+        1845,
+        1024,
+        1409,
+        3610,
+        128,
+        732,
+        704,
+        1549,
+        138,
+        1585,
+        256
+      ],
+      "offset": 2479,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_125.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 72,
+        "truth_table_sha256": "471ccf4adf974a9e5dfed8451a7d10b2615310bdd66af901ab24e307316b9c6c"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_125.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 7,
+        "and_count_before": 97,
+        "and_count_after": 83,
+        "nonlinear_live_width_after": 10,
+        "and_layer_widths_after": [
+          22,
+          22,
+          15,
+          13,
+          8,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 126,
+      "rows": [
+        704,
+        2065,
+        2667,
+        874,
+        17,
+        4001,
+        2553,
+        627,
+        3154,
+        3975,
+        273,
+        2074
+      ],
+      "offset": 3855,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_126.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 80,
+        "truth_table_sha256": "d17a0bc8e90d6d814f0a40f81cb22732271d96fa231ac420074c27a6d9d5ea25"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_126.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 81,
+        "nonlinear_live_width_after": 13,
+        "and_layer_widths_after": [
+          24,
+          24,
+          14,
+          12,
+          6,
+          1
+        ]
+      }
+    },
+    {
+      "trial": 127,
+      "rows": [
+        1040,
+        1864,
+        3848,
+        1536,
+        128,
+        1912,
+        3853,
+        888,
+        4026,
+        2048,
+        988,
+        1279
+      ],
+      "offset": 202,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_127.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 81,
+        "truth_table_sha256": "17d87ab004f6601e83a41ed1b4e15c03d055d110b1a915b56c62788d331c6ecc"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_127.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          26,
+          21,
+          16,
+          13,
+          6,
+          2
+        ]
+      }
+    },
+    {
+      "trial": 128,
+      "rows": [
+        2143,
+        3729,
+        1466,
+        3980,
+        9,
+        284,
+        424,
+        644,
+        3258,
+        4064,
+        2868,
+        260
+      ],
+      "offset": 3275,
+      "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_128.xag",
+      "source_exact": true,
+      "source_metrics": {
+        "exact": true,
+        "and_count": 97,
+        "multiplicative_depth": 6,
+        "and_layer_widths": [
+          29,
+          21,
+          20,
+          14,
+          10,
+          3
+        ],
+        "nonlinear_live_width_estimate": 22,
+        "max_fanout": 72,
+        "truth_table_sha256": "aa34f1fba711b7d55710fc32e2a244ed6b3101882b0b543dbaf4ac5c5710b61f"
+      },
+      "tool": {
+        "truth_points": 4096,
+        "seed": "/Users/monitsharma/Downloads/Classiq_2/artifacts/multiplicative_depth/affine/shared_rank/seed_128.xag",
+        "pipeline": "balance",
+        "exact_before": true,
+        "exact_after": true,
+        "md_before": 6,
+        "md_after": 6,
+        "and_count_before": 97,
+        "and_count_after": 84,
+        "nonlinear_live_width_after": 12,
+        "and_layer_widths_after": [
+          24,
+          23,
+          14,
+          12,
+          9,
+          2
+        ]
+      }
+    }
+  ]
+}

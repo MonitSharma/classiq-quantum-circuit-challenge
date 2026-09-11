@@ -1,0 +1,61 @@
+{
+  "seed": "artifacts/multiplicative_depth/affine/shared_rank/seed_118.xag",
+  "exact_seed": true,
+  "output_taps": 10,
+  "clean_ancilla_limit": 6,
+  "feasible": true,
+  "peak_live_nonlinear_values": 6,
+  "nonlinear_toggle_count": 304,
+  "steps": [
+    {
+      "output_signal": 100,
+      "compute_toggles": 12,
+      "live_after_tap": 6
+    },
+    {
+      "output_signal": 101,
+      "compute_toggles": 16,
+      "live_after_tap": 6
+    },
+    {
+      "output_signal": 102,
+      "compute_toggles": 16,
+      "live_after_tap": 6
+    },
+    {
+      "output_signal": 103,
+      "compute_toggles": 14,
+      "live_after_tap": 6
+    },
+    {
+      "output_signal": 104,
+      "compute_toggles": 16,
+      "live_after_tap": 6
+    },
+    {
+      "output_signal": 105,
+      "compute_toggles": 18,
+      "live_after_tap": 6
+    },
+    {
+      "output_signal": 106,
+      "compute_toggles": 14,
+      "live_after_tap": 6
+    },
+    {
+      "output_signal": 107,
+      "compute_toggles": 14,
+      "live_after_tap": 6
+    },
+    {
+      "output_signal": 108,
+      "compute_toggles": 14,
+      "live_after_tap": 6
+    },
+    {
+      "output_signal": 109,
+      "compute_toggles": 18,
+      "live_after_tap": 6
+    }
+  ]
+}

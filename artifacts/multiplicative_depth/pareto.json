@@ -1,0 +1,47 @@
+{
+  "truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1",
+  "sort": ["multiplicative_depth", "nonlinear_live_width_estimate", "max_layer_width", "and_count"],
+  "candidates": [
+    {
+      "name": "balanced_anf",
+      "exact": true,
+      "and_count": 5096,
+      "multiplicative_depth": 4,
+      "and_layer_widths": [2767, 1390, 812, 127],
+      "nonlinear_live_width_estimate": 892,
+      "max_layer_width": 2767,
+      "source_pipeline": "balanced ANF monomial products"
+    },
+    {
+      "name": "shared_rank_formula",
+      "exact": true,
+      "and_count": 97,
+      "multiplicative_depth": 6,
+      "and_layer_widths": [29, 21, 20, 14, 10, 3],
+      "nonlinear_live_width_estimate": 22,
+      "max_layer_width": 29,
+      "source_pipeline": "repository shared rank-factor reconstruction"
+    },
+    {
+      "name": "shared_rank_xag_mockturtle_balance",
+      "exact": true,
+      "and_count": 81,
+      "multiplicative_depth": 6,
+      "and_layer_widths": [26, 22, 14, 12, 6, 1],
+      "nonlinear_live_width_estimate": 13,
+      "max_layer_width": 26,
+      "source_pipeline": "mockturtle xag_balance"
+    },
+    {
+      "name": "shared_rank_affine_trial_118_mockturtle_balance",
+      "exact": true,
+      "and_count": 81,
+      "multiplicative_depth": 6,
+      "and_layer_widths": [20, 20, 15, 13, 10, 3],
+      "nonlinear_live_width_estimate": 11,
+      "max_layer_width": 20,
+      "affine_basis_cost": 50,
+      "source_pipeline": "129-basis affine substitution -> mockturtle xag_balance"
+    }
+  ]
+}

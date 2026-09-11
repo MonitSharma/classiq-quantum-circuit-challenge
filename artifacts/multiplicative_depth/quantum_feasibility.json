@@ -1,0 +1,88 @@
+{
+  "candidate": "shared_rank_affine_trial_118_mockturtle_balance",
+  "exact": true,
+  "truth_table_sha256": "d86d44aa45393ecc14ddfed0ed08d97e550a2786d58f61173fa71a6394253cf1",
+  "multiplicative_depth": 6,
+  "and_count": 81,
+  "and_layer_widths": [20, 20, 15, 13, 10, 3],
+  "nonlinear_live_width_estimate": 11,
+  "clean_ancillas_available": 6,
+  "workspace_gap": 5,
+  "affine_preprocessing_estimate": {"cx_like_row_xors": 45, "input_complements": 5},
+  "quantum_lowering_started": true,
+  "first_prototype": {
+    "qasm": "artifacts/multiplicative_depth/md_rank_stream.qasm",
+    "qasm_sha256": "75fe5e9fa42e4496a6cb8036712b42008885bab87202d8110f48ce67682ddc5c",
+    "width": 18,
+    "depth": 1046,
+    "cx_count": 903,
+    "exact": true,
+    "exhaustive_inputs": 4096,
+    "ancilla_error": 4.2788845528148164e-15
+  },
+  "pytket_peephole_diagnostic": {
+    "qasm": "artifacts/multiplicative_depth/md_rank_stream_pytket.qasm",
+    "qasm_sha256": "436613fe2ce1ecf74a7b10eac00188237e7e656a3dc860d8c5a6adf53737038d",
+    "width": 18,
+    "depth": 1031,
+    "cx_count": 903,
+    "exact": true,
+    "exhaustive_inputs": 4096
+  },
+  "ordered_stream_best": {
+    "term_order": [5, 2, 0, 9, 7, 3, 8, 4, 1, 6],
+    "qasm": "artifacts/multiplicative_depth/md_rank_order_stream_pytket.qasm",
+    "qasm_sha256": "b1b126b5077824084304b79fcf4ff6c683b3e99023eaae261c98f6247a46b313",
+    "width": 18,
+    "depth": 1023,
+    "cx_count": 899,
+    "exact": true,
+    "exhaustive_inputs": 4096
+  },
+  "direct_signal_tap_prototype": {
+    "qasm": "artifacts/multiplicative_depth/md_rank_signal_stream.qasm",
+    "qasm_sha256": "06e5a7a56211aeb41cd0950235d0430367eb91f42fb2b03d08dd0959b1fbafb6",
+    "width": 18,
+    "depth": 1207,
+    "cx_count": 1003,
+    "exact": true,
+    "exhaustive_inputs": 4096
+  },
+  "optimized_xag_affine_prototype": {
+    "xag": "artifacts/multiplicative_depth/optimized/affine_balance_118.xag",
+    "xag_exact": true,
+    "xag_and_count": 81,
+    "xag_multiplicative_depth": 6,
+    "qasm": "artifacts/multiplicative_depth/md_optimized_affine_stream.qasm",
+    "qasm_sha256": "684807b50fa521d0615568620d561b266fc25ccb8f3946bce8e4fc4f9cffbe12",
+    "width": 18,
+    "depth": 2742,
+    "cx_count": 2810,
+    "exact": true,
+    "exhaustive_inputs": 4096
+  },
+  "optimized_xag_original_basis_prototype": {
+    "xag": "artifacts/multiplicative_depth/optimized/shared_balance.xag",
+    "xag_exact": true,
+    "xag_and_count": 81,
+    "xag_multiplicative_depth": 6,
+    "qasm": "artifacts/multiplicative_depth/md_balanced_signal_stream.qasm",
+    "qasm_sha256": "3232ebeb0ccf2928fe1d2d18c0c5f420afff1a7418e6ccaf1d25e994673cce86",
+    "width": 18,
+    "depth": 1194,
+    "cx_count": 1016,
+    "exact": true,
+    "exhaustive_inputs": 4096
+  },
+  "affine_basis_prototype": {
+    "qasm": "artifacts/multiplicative_depth/md_affine_stream.qasm",
+    "qasm_sha256": "5875ec5d9a813128c39d126eb7ce3c0449dcb261371ae1050c18a6f6dfe4b4fd",
+    "width": 18,
+    "depth": 2593,
+    "cx_count": 2716,
+    "exact": true,
+    "exhaustive_inputs": 4096,
+    "ancilla_error": 0.0
+  },
+  "conclusion": "The exact streamed prototype is valid but far above the 350-depth kill criterion; diagnose affine and nonlinear scheduling before broad quantum optimization"
+}

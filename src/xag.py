@@ -65,14 +65,38 @@ def linear(q,a,b,wire):
  if const[1]:pre.x(r)
  return pre,p,r
 
-def phase_forms(q,a,b,wire):
+def linear_best(q,a,b,wire):
+ # Enumerate pivot choices because shared/overlapping affine forms can have
+ # different CNOT costs.  This is a local linear-equivalence optimization.
+ forms=[set(wire[v] for v in f if v!=-1) for f in (a,b)]
+ const=[-1 in a,-1 in b]
+ if not forms[0] or not forms[1] or forms[0]==forms[1]:raise ValueError('dependent forms')
+ choices=[]
+ for p0 in sorted(forms[0]):
+  f0=set(forms[0]);f1=set(forms[1]);pre=QuantumCircuit(18)
+  for c in sorted(f0-{p0}):
+   pre.cx(c,p0)
+   if p0 in f1:
+    if c in f1:f1.remove(c)
+    else:f1.add(c)
+  candidates=f1-{p0}
+  for r0 in sorted(candidates):
+   ppre=QuantumCircuit(18);ppre.compose(pre,inplace=True)
+   for c in sorted(f1-{r0}):ppre.cx(c,r0)
+   if const[0]:ppre.x(p0)
+   if const[1]:ppre.x(r0)
+   choices.append((ppre,p0,r0))
+ if not choices:raise ValueError('dependent forms')
+ return min(choices,key=lambda item:(item[0].count_ops().get('cx',0),item[0].depth()))
+
+def phase_forms(q,a,b,wire,linearizer=linear):
  if not a or not b:return
  if a==b:single=a
  elif a==b^{-1}:return
  elif a==frozenset([-1]):single=b
  elif b==frozenset([-1]):single=a
  else:
-  pre,p,r=linear(q,a,b,wire);q.compose(pre,inplace=True);q.cz(p,r);q.compose(pre.inverse(),inplace=True);return
+  pre,p,r=linearizer(q,a,b,wire);q.compose(pre,inplace=True);q.cz(p,r);q.compose(pre.inverse(),inplace=True);return
  for v in single:
   if v==-1:q.global_phase+=np.pi
   else:q.z(wire[v])
@@ -114,10 +138,10 @@ def plan(g,live,targets,limit=6,max_states=300000):
     dist[z]=dd;parent[z]=(s,v);heapq.heappush(queue,(dd+h(z),dd,z))
  raise ValueError('not pebbleable')
 
-def build(terms,order=None,clear_each=False):
+def build(terms,order=None,clear_each=False,linearizer=linear):
  g,roots=make_graph(terms);q=QuantumCircuit(18);wire={v:v for v in range(12)};live=set();free=list(range(12,18))
  def toggle(v):
-  a,b=g.nodes[v];pre,p,r=linear(q,a,b,wire)
+  a,b=g.nodes[v];pre,p,r=linearizer(q,a,b,wire)
   if v in live:t=wire[v]
   else:t=free.pop(0);wire[v]=t
   q.compose(pre,inplace=True);q.rccx(p,r,t);q.compose(pre.inverse(),inplace=True)
@@ -127,7 +151,7 @@ def build(terms,order=None,clear_each=False):
  for i in (range(len(roots)) if order is None else order):
   path=plan(g,frozenset(live),roots[i])
   for v in path:toggle(v)
-  history+=path;phase_forms(q,*roots[i],wire)
+  history+=path;phase_forms(q,*roots[i],wire,linearizer)
   if clear_each:
    for v in reversed(history):toggle(v)
    history=[]
