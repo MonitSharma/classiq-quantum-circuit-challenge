@@ -101,8 +101,28 @@ does not apply to AND networks. The leader's 197/475 is consistent with about
 kernels and linear layers.
 
 `src/level_oracle.py::emit_encoder` already replays such a network and places
-the code bits; the missing piece is a synthesiser that finds one with low AND
-**depth**. The beam search in the scratch tree reduces the residual to 3-4
-bits at 10-11 ANDs and then stalls, and it does not optimise for depth, which
-is the metric that matters. A layered search that picks up to three
-wire-disjoint ANDs per layer is the next thing to build.
+the code bits (`tests/test_level_oracle.py` covers negated operands and
+multi-register operand preparation), and `load_nets` plus `refine_triples`
+consume the search output and pick the cheapest kernel among the codes a
+network exposes. The missing piece is a synthesiser that actually finds a
+network.
+
+`src/level_encoder_search.py` is a beam search over the nine-register model:
+
+```sh
+.venv/bin/python src/level_encoder_search.py u1 0 1800 artifacts/level_nets
+```
+
+It scores a state by the smallest total residual weight over all
+level-separating code triples, which gives a usable gradient. In runs of about
+six minutes per encoder it drove the residual from 20 to 2-10 at 6-7 ANDs and
+then stalled; it did not close. Two known weaknesses:
+
+1. It optimises AND **count**, not AND **depth**, and depth is the score. A
+   layered variant that picks up to three wire-disjoint ANDs per layer would
+   target the right quantity.
+2. Operands are sampled rather than enumerated. The family of operands (XORs
+   of at most three registers, optionally complemented) has only about 258
+   members, so roughly 33,000 products - small enough to enumerate exactly at
+   each step instead of sampling 6,000 of them. An exact one-AND completion
+   check at every node would end the stall if a completion exists.
