@@ -31,13 +31,14 @@ def analyze():
         "partitions": len(rows),
         "best_partition": best,
         "minimum_over_all_partitions": min_tracks,
-        "central_ucr_depth_floor": central_depth_floor,
-        "three_sweep_depth_floor": 64 + central_depth_floor + 64,
+        "idealized_central_ucr_schedule": central_depth_floor,
+        "idealized_three_sweep_schedule": 64 + central_depth_floor + 64,
         "interpretation": (
             "Five or six side-feature tracks cannot represent the exact phase "
             "in this restricted pi-angle UCR model. With ten tracks, the ideal "
-            "middle schedule is already at least 96 layers and the three-stage "
-            "skeleton is at least 224 layers. This is not an impossibility result "
+            "middle schedule is estimated at 96 layers and the three-stage "
+            "skeleton at 224 layers under the idealized UCR serialization model. "
+            "This is not an impossibility result "
             "for arbitrary-angle or non-UCR circuits."
         ),
     }

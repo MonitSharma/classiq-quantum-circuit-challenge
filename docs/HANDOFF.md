@@ -9,20 +9,22 @@ Current research entry point: [September 9 literature and repository review](RES
 
 ## Shared-address descriptor checkpoint (September 11, 2026)
 
-The shared-address QROM hypothesis was screened mathematically before circuit
-generation. Exact quotienting gives 11 row classes and 11 column classes, so a
-binary descriptor needs at least four bits per side. Across 2000 random class
-label assignments, the best exact middle kernel had 86 ANF terms, 366 literals,
-degree 8, and 256/256 nonzero Walsh coefficients. This weakens the proposed
-<=55-depth kernel estimate but is not an impossibility proof against a new
-phase-tolerant traversal. Details are in `src/shared_address_descriptor.py`
+The shared-address QROM hypothesis was reopened before circuit generation.
+Exact quotienting gives 11 row classes and 11 column classes, so a binary
+descriptor needs at least four bits per side. The all-16-label search records
+a reachable-domain witness with 31 ANF terms, 154 literals, and degree 7,
+using three unreachable-address completions; the old 86/366 result was
+incomplete. This remains a mathematical screen, not a <=55-depth kernel or
+an impossibility proof. Details are in `src/shared_address_descriptor.py`
 and `artifacts/shared_address_descriptor/descriptor_report.json`.
 
 ## Shared-address and monomial-embedding checkpoint (September 11, 2026)
 
 The shared-address QROM screen found 11 row and 11 column classes, requiring
-4+4 descriptor bits; the best 2000-sample label screen left an 86-term,
-366-literal degree-8 kernel. The follow-up whole-register X/CX/RCCX beam allowed
+4+4 descriptor bits. The reopened all-16-label screen has a reachable-domain
+witness with 31 ANF terms, 154 literals, degree 7, using three unreachable
+address completions; the old 86/366 result was incomplete. The follow-up
+whole-register X/CX/RCCX beam allowed
 arbitrary placement of four y-code bits and two garbage wires, but found no
 exact boundary map in the completed four-primitive beam (best exact score 186/256).
 Longer runs were stopped for throughput. These are

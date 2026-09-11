@@ -9,6 +9,11 @@
   "ancilla_error": 0.0,
   "discarded_amplitude_bound": 7.340461870227386e-13,
   "peak_sparse_support": 64,
-  "elapsed_seconds": 16.33581280708313,
-  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+  "elapsed_seconds": 17.15148901939392,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+  "provenance": {
+    "source_report": "/Users/monitsharma/Downloads/classiq/artifacts/quotient_permutation_screen_200.json",
+    "source_report_sha256": "78821874f847757eba840ab546bb8f8f728808a3b45c8e1b4c3cf64f666be24a",
+    "transformed_table_sha256": "da3ea79c44cdf377dc2d8d0f93b2fbdd09b71920c64b29073e25cc52ef651d8a"
+  }
 }

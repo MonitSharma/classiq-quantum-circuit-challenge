@@ -82,10 +82,9 @@ def main(max_gates=8, beam_width=500):
                 candidates.append((s, nxt, h))
         candidates.sort(key=lambda item: (-item[0], len(item[2])))
         new = []
-        local = set()
         for item in candidates:
-            if item[1] in local: continue
-            local.add(item[1]); new.append(item)
+            if item[1] in seen: continue
+            seen.add(item[1]); new.append(item)
             if len(new) >= beam_width: break
         beam = new
         print(json.dumps({"gate_depth": depth, "best_score": best[0],

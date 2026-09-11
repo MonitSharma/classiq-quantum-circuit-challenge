@@ -1,0 +1,9 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/comparator_oracle/three_plus_three/y_k28_overwrite2.qasm",
+  "qasm_sha256": "5144078cb91af12d23060df576f3ab411add00d6f94065c4a99d2ed78737346c",
+  "metrics": "/Users/monitsharma/Downloads/classiq/artifacts/comparator_oracle/three_plus_three/y_k28_overwrite2.metrics.json",
+  "inputs_checked": 64,
+  "mismatches": 0,
+  "counterexamples": [],
+  "verification": "serialized u3/cx QASM basis action"
+}

@@ -36,8 +36,8 @@ def quotient_descriptors(t):
     return ys, xs, dy, dx
 
 
-def kernel_table(t, dy, dx, row_order, col_order):
-    """Return the 8-bit descriptor kernel, with unreachable cells zero."""
+def kernel_table(t, dy, dx, row_order, col_order, completion=()):
+    """Return the descriptor kernel, optionally completing unreachable cells."""
     out = np.full((256,), 255, dtype=np.uint8)
     for y in range(N):
         for x in range(N):
@@ -47,6 +47,11 @@ def kernel_table(t, dy, dx, row_order, col_order):
                 raise AssertionError("quotient descriptor is not well-defined")
             out[address] = value
     out[out == 255] = 0
+    for address in completion:
+        if address in {((row_order[dy[y]] << 4) | col_order[dx[x]])
+                       for y in range(N) for x in range(N)}:
+            raise ValueError(f"completion address {address} is reachable")
+        out[address] ^= 1
     return out
 
 
@@ -89,23 +94,33 @@ def main(samples=2000, seed=20260911):
     rng = random.Random(seed)
     best = None
     for sample in range(samples):
-        rows = base_rows if sample == 0 else tuple(rng.sample(base_rows, len(base_rows)))
-        cols = base_cols if sample == 0 else tuple(rng.sample(base_cols, len(base_cols)))
+        rows = base_rows if sample == 0 else tuple(rng.sample(range(16), len(base_rows)))
+        cols = base_cols if sample == 0 else tuple(rng.sample(range(16), len(base_cols)))
         values = kernel_table(t, dy, dx, rows, cols)
         m = metrics(values)
         key = (m["anf_literal_cost"], m["anf_terms"], m["anf_max_degree"])
         if best is None or key < best[0]:
-            best = (key, {"row_order": list(rows), "column_order": list(cols), "metrics": m})
+            best = (key, {"row_order": list(rows), "column_order": list(cols),
+                          "completion": [], "metrics": m})
+    witness_rows = (10, 1, 4, 3, 2, 7, 9, 6, 5, 11, 15)
+    witness_cols = (2, 13, 8, 3, 14, 12, 11, 15, 5, 9, 7)
+    witness_completion = (186, 220, 223)
+    witness_values = kernel_table(t, dy, dx, witness_rows, witness_cols, witness_completion)
+    witness = {"row_order": list(witness_rows), "column_order": list(witness_cols),
+               "completion": list(witness_completion), "metrics": metrics(witness_values)}
     report = {
         "descriptor": "dy=row-pattern class, dx=column-pattern class",
         "row_class_count": len(ys), "column_class_count": len(xs),
         "required_descriptor_bits": {"dy": 4, "dx": 4},
         "row_classes": [list(g) for g in ys],
         "column_classes": [list(g) for g in xs],
-        "quotient_marked_pairs": int(sum(int(t[y, x]) for y in range(N) for x in range(N))),
+        "marked_pixels_original": int(t.sum()),
+        "marked_descriptor_pairs": int(sum(int(v) for v in
+                                            kernel_table(t, dy, dx, base_rows, base_cols))),
         "baseline_natural": {"row_order": list(base_rows), "column_order": list(base_cols),
                              "metrics": metrics(kernel_table(t, dy, dx, base_rows, base_cols))},
-        "best_label_screen": best[1], "samples": samples, "seed": seed,
+        "best_label_screen": best[1], "known_reachable_completion_witness": witness,
+        "samples": samples, "seed": seed,
         "exact_table_sha256": hashlib.sha256(t.tobytes()).hexdigest(),
         "status": "mathematical descriptor/kernel screen; no reversible QROM circuit claimed",
     }
@@ -113,7 +128,8 @@ def main(samples=2000, seed=20260911):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({"rows": len(ys), "columns": len(xs),
-                      "best": best[1]["metrics"], "path": str(path)}, indent=2))
+                      "best": best[1]["metrics"],
+                      "witness": witness["metrics"], "path": str(path)}, indent=2))
 
 
 if __name__ == "__main__":

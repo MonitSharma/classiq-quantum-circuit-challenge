@@ -2,6 +2,8 @@
 
 import json
 import sys
+import argparse
+import hashlib
 from pathlib import Path
 
 import numpy as np
@@ -20,8 +22,9 @@ def transformed_table(report):
     return quotient[row_labels[:, None], col_labels[None, :]]
 
 
-def main(path):
-    report = json.loads(Path("artifacts/quotient_permutation_screen_200.json").read_text())
+def main(path, source_report_path):
+    source_path = Path(source_report_path)
+    report = json.loads(source_path.read_text())
     table = transformed_table(report)
     old_logo = exhaustive_verify.logo
     exhaustive_verify.logo = lambda x, y: bool(table[y, x])
@@ -31,9 +34,23 @@ def main(path):
         exhaustive_verify.logo = old_logo
     output = Path(path).with_suffix(".quotient.exhaustive.json")
     generated = Path(path).with_suffix(".exhaustive.json")
-    if generated.exists(): generated.replace(output)
-    print(json.dumps({"verification": str(output), "mismatches": 0}))
+    if not generated.exists():
+        raise RuntimeError("exhaustive verifier did not produce a report")
+    result = json.loads(generated.read_text())
+    result["provenance"] = {
+        "source_report": str(source_path.resolve()),
+        "source_report_sha256": hashlib.sha256(source_path.read_bytes()).hexdigest(),
+        "transformed_table_sha256": hashlib.sha256(table.tobytes()).hexdigest(),
+    }
+    output.write_text(json.dumps(result, indent=2) + "\n")
+    generated.unlink()
+    print(json.dumps({"verification": str(output), "mismatches": 0,
+                      "source_report_sha256": result["provenance"]["source_report_sha256"]}))
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    parser = argparse.ArgumentParser()
+    parser.add_argument("qasm")
+    parser.add_argument("source_report")
+    args = parser.parse_args()
+    main(args.qasm, args.source_report)

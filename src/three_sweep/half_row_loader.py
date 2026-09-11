@@ -67,9 +67,9 @@ def build(tables: list[int], seed: int = 0):
     rng = random.Random(seed)
     base = list(range(n))
     rng.shuffle(base)
-    shifts = list(range(n))
+    shifts = list(range(n)) + [rng.randrange(n) for _ in range(len(tables) - n)]
     rng.shuffle(shifts)
-    orders = [base[s % n:] + base[:s % n] for s in range(len(tables))]
+    orders = [base[s:] + base[:s] for s in shifts]
     coefficients = []
     for table, order in zip(tables, orders):
         values = np.array([

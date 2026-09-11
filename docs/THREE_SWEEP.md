@@ -46,10 +46,11 @@ one dimension is available for a control-only/global phase. Therefore at least
 10 independent nonconstant side features are required. The proposed five- or
 six-track affine phase kernel cannot represent the exact logo in that model.
 
-The resource consequence is decisive for this particular template: ten tracks
+The resource consequence under this scheduling model is notable: ten tracks
 need 320 control-target CNOTs, and at most five can be scheduled per CX layer.
-Even granting 32 parallel rotation layers, the ideal middle stage is at least
-96 layers; load plus unload then gives a structural floor of 224 layers. Thus
+Even granting 32 parallel rotation layers, the idealized middle schedule is
+96 layers; load plus unload then gives an idealized three-stage schedule of
+224 layers. Thus
 the simple three-sweep UCR explanation cannot reach the 183 leaderboard entry.
 
 This is a useful closure, not a general circuit lower bound. It does not rule

@@ -42,20 +42,21 @@ implementing it. No rank-one result or submission is claimed.
 
 ## Shared-address descriptor screen
 
-The proposed shared-address QROM route was screened mathematically in
-`src/shared_address_descriptor.py`.  Exact row/column quotienting gives 11
-classes on each side, hence a minimum 4+4-bit binary descriptor.  Optimizing
-2000 random class-label assignments produced a best middle kernel with 86 ANF
-terms, 366 literals, degree 8, and dense 8-bit Walsh support (256/256).
-This is not an impossibility proof for a genuinely phase-tolerant shared
-traversal, but it falsifies the unsupported inference that compact addresses
-automatically yield a <=55-depth kernel.  No QROM circuit was generated.
+The proposed shared-address QROM route was reopened in
+`src/shared_address_descriptor.py`. Exact row/column quotienting gives 11
+classes on each side, hence a minimum 4+4-bit binary descriptor. Allowing
+arbitrary distinct labels from all 16 words and a completion on unreachable
+addresses gives a witness with **31 ANF terms, 154 literals, degree 7**,
+versus the old incomplete 86/366/8 screen. The witness has 35 marked
+reachable descriptor pairs and flips unreachable addresses 186, 220, 223.
+This remains a mathematical screen, not a <=55-depth QROM circuit or an
+impossibility result.
 
 The final co-designed monomial embedding probe searched whole six-wire
 X/CX/RCCX semantic permutations, allowing arbitrary placement of the four
-required y-code bits and two garbage wires. A 1500-state beam through 16
+required y-code bits and two garbage wires. A width-500 beam through four
 primitives found no exact boundary map; its best exact distinct-wire score was
-186/256 exact score in a completed four-primitive beam, with no exact map. This closes the tested monomial embedding family, not every
+186/256, with no exact map. This closes the tested monomial embedding family, not every
 reversible or phase-tolerant QROM construction. No x-side or full oracle was
 started because the exact y embedding never reached the <=70-depth gate.
 

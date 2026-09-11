@@ -67,7 +67,7 @@ The protected 524/950 artifact under `artifacts/524/` was not modified.
 The remaining variant searched the complete six-wire semantic state under
 X/CX/RCCX transformations. Four output wires were selected jointly from all
 `6P4` placements; the two remaining wires were unrestricted garbage. A
-1500-state beam was completed through four primitives. The best fast-bound
+width-500 beam was completed through four primitives. The best fast-bound
 score was 192/256 and the best exact distinct-wire score was 186/256; no exact
 `(b,m)` boundary map was found. Longer runs were stopped for throughput. The report is
 `artifacts/comparator_oracle/y_loader/whole_register_search.json`.
@@ -108,11 +108,13 @@ patterns.  The screen is implemented in
 `artifacts/shared_address_descriptor/descriptor_report.json`.
 
 There are exactly 11 row classes and 11 column classes, requiring at least
-four binary descriptor bits on each side.  The descriptor is exact, but the
-middle kernel remains dense after label optimization: over 2000 random row
-and column label assignments, the best result had **86 ANF terms, 366 ANF
-literals, degree 8, and 256/256 nonzero Walsh coefficients**.  This is a
-mathematical screen only; no QROM circuit was claimed.
+four binary descriptor bits on each side. The original screen was incomplete:
+it only used labels 0..10 and forced all 135 unreachable addresses to zero.
+The reopened screen allows arbitrary distinct 4-bit labels and records a
+reachable-domain completion witness with **31 ANF terms, 154 literals,
+degree 7** (35 marked reachable descriptor pairs; three unreachable addresses
+are flipped). This is still a mathematical screen only; no QROM circuit was
+claimed.
 
 This does not prove that every shared-address QROM construction is
 impossible, because a phase-tolerant traversal could exploit structure not
