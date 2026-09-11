@@ -32,3 +32,10 @@ def test_baseline_spectrum_and_screen():
     assert metrics["weighted_support"] == 24576
     report = run(samples=8, mutations=2, seed=42, max_weight=2)
     assert report["best_sampled_candidate"]["metrics"]["walsh_support"] == SIZE
+
+
+def test_phase_walsh_coefficients_have_correct_parity():
+    bits = truth_table().astype(np.int64)
+    coefficients = fwht(1 - 2 * bits)
+    assert coefficients[0] == 1902
+    assert np.all(np.abs(coefficients[1:]) % 4 == 2)
