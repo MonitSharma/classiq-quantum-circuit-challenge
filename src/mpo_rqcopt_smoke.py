@@ -48,6 +48,7 @@ def run(
     lr: float,
     output: str | Path,
     initialization: str = "random",
+    warm_start: str | None = None,
 ) -> dict:
     target = [jnp.asarray(core) for core in target_mpo()]
     initial, parity = make_layers(n_layers)
@@ -55,7 +56,14 @@ def run(
     # its per-gate second moment.  Convert to tensor form only at the MPO
     # contraction boundary.
     initial = initial.reshape((-1, 4, 4))
-    if initialization == "random":
+    if warm_start is not None:
+        loaded = np.load(warm_start)["gates"]
+        if loaded.shape != (11, 4, 4):
+            raise ValueError("warm start must contain exactly one 2-layer 12-qubit gate list")
+        identity = np.repeat(np.eye(4, dtype=np.complex128)[None, :, :], 11, axis=0)
+        initial = jnp.asarray(np.concatenate([loaded, identity], axis=0))
+        initialization = "warm_start"
+    elif initialization == "random":
         rng = np.random.default_rng(20260911)
         initial = jnp.asarray(
             np.asarray([unitary_group.rvs(4, random_state=rng) for _ in range(initial.shape[0])])
@@ -69,7 +77,7 @@ def run(
             gates.append(expm(0.1j * h))
         initial = jnp.asarray(np.asarray(gates))
     elif initialization != "identity":
-        raise ValueError("initialization must be identity, near_identity, or random")
+        raise ValueError("initialization must be identity, near_identity, random, or warm_start")
 
     def objective(gates):
         gates = gates.reshape((-1, 2, 2, 2, 2))
@@ -83,8 +91,18 @@ def run(
             target, per_layer, parity, max_bondim=64, compute_overlap=True
         )
         dimension = 2**12
-        cost = 2.0 - 2.0 * jnp.real(overlap) / dimension
-        return cost, (-gradient).reshape((-1, 4, 4))
+        magnitude = jnp.abs(overlap)
+        phase = jnp.where(magnitude > 0, overlap / magnitude, 1.0 + 0.0j)
+        # compute_full_gradient returns the Euclidean overlap derivative.
+        # Align it with the current overlap before projecting to the SU(4)
+        # tangent space; this differentiates |overlap| rather than Re(overlap).
+        aligned = (jnp.conj(phase) * gradient).reshape((-1, 4, 4))
+        current = gates.reshape((-1, 4, 4))
+        projected = vmap(
+            lambda u, z: project_unitary_tangent(u, z, use_TN=False)
+        )(current, aligned)
+        cost = 2.0 - 2.0 * magnitude / dimension
+        return cost, (-projected)
 
     def overlap_for(gates):
         tensor_gates = gates.reshape((-1, 2, 2, 2, 2))
@@ -132,6 +150,7 @@ def run(
         "evaluations": evaluations,
         "learning_rate": lr,
         "initialization": initialization,
+        "warm_start": warm_start,
         "initial_overlap_real": float(jnp.real(initial_overlap)),
         "initial_overlap_imag": float(jnp.imag(initial_overlap)),
         "initial_process_fidelity": float(abs(complex(initial_overlap)) ** 2 / 4096**2),
@@ -159,8 +178,14 @@ if __name__ == "__main__":
     parser.add_argument(
         "--initialization", choices=["identity", "near_identity", "random"], default="random"
     )
+    parser.add_argument("--warm-start")
     parser.add_argument(
         "--output", default="artifacts/mpo_native/rqcopt_smoke.json"
     )
     args = parser.parse_args()
-    print(json.dumps(run(args.layers, args.iterations, args.lr, args.output, args.initialization), indent=2))
+    print(
+        json.dumps(
+            run(args.layers, args.iterations, args.lr, args.output, args.initialization, args.warm_start),
+            indent=2,
+        )
+    )

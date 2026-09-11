@@ -85,14 +85,17 @@ to `1.48e-22` absolute process-fidelity difference for a random six-gate
 layer. This validates the tensor index convention and provides the future
 optimizer with a non-dense objective path.
 
-The pinned Riemannian smoke wrapper is `src/mpo_rqcopt_smoke.py`. A bounded
-20-iteration, 2-layer, near-identity run improved process fidelity from
-`0.1407954265` to `0.1567285921`. This is a feasibility signal only, not a
-candidate: it is still below the identity baseline `0.2156260014`, uses an
-abstract two-qubit-gate topology, and has not been decomposed or exhaustively
-verified as challenge QASM. Identity initialization is stationary for the
-real-overlap objective at this target, so near-identity or random restarts are
-necessary. Run records append to `artifacts/mpo_native/progress.jsonl`.
+The pinned Riemannian smoke wrapper is `src/mpo_rqcopt_smoke.py`. It now uses a
+phase-invariant process loss based on `|Tr(U_target^dagger V)|`, with the
+phase-aligned gradient projected onto each SU(4) tangent space. A bounded
+100-iteration, 2-layer, near-identity run improved process fidelity from
+`0.1407954265` to `0.2944914418`. A warm-started 4-layer run improved from
+`0.2944914418` to `0.3019871592` in 50 iterations. These are feasibility
+signals only, not candidates: they use abstract two-qubit gates and have not
+been decomposed or exhaustively verified as challenge QASM. Identity
+initialization is stationary for the first-order objective at this target, so
+near-identity or random restarts are necessary. Run records append to
+`artifacts/mpo_native/progress.jsonl`.
 
 ## External optimizer assessment
 
