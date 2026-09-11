@@ -63,7 +63,8 @@ def exact_score(state):
 
 
 def main(max_gates=8, beam_width=500):
-    initial = tuple(1 << i for i in range(6))
+    initial = tuple(sum(((y >> i) & 1) << y for y in range(64))
+                   for i in range(6))
     beam = [(score(initial), initial, ())]
     seen = {initial}
     best = beam[0]

@@ -1,0 +1,64 @@
+{
+  "x": {
+    "side": "x",
+    "bucket_count": 11,
+    "bucket_sizes": [
+      2,
+      2,
+      2,
+      4,
+      4,
+      4,
+      4,
+      5,
+      5,
+      7,
+      25
+    ],
+    "max_bucket": 25,
+    "minimum_garbage_bits": 5,
+    "affine_projection_masks": [
+      52,
+      39,
+      24,
+      1,
+      29
+    ],
+    "affine_projection_rank": 5,
+    "affine_projection_is_injective_per_bucket": true,
+    "code_plus_garbage_output_width": 9
+  },
+  "y": {
+    "side": "y",
+    "bucket_count": 12,
+    "bucket_sizes": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      4,
+      4,
+      4,
+      5,
+      5,
+      12,
+      20
+    ],
+    "max_bucket": 20,
+    "minimum_garbage_bits": 5,
+    "affine_projection_masks": [
+      22,
+      52,
+      45,
+      35,
+      32
+    ],
+    "affine_projection_rank": 5,
+    "affine_projection_is_injective_per_bucket": true,
+    "code_plus_garbage_output_width": 9
+  },
+  "resource_identity": "6 data wires + 3 clean ancillas = 9 wires per side",
+  "interpretation": "five affine garbage bits can make the fixed code embedding reversible if the nonlinear code bits are computed into the remaining four outputs",
+  "status": "exact resource/affine screen; no native classifier claimed"
+}

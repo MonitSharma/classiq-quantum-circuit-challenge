@@ -28,6 +28,16 @@ exact boundary map through 16 primitives (best exact score 157/256). These are
 bounded closures of the tested descriptor and monomial families, not
 impossibility proofs against every phase-tolerant traversal.
 
+An audit corrected two implementation errors in the earlier comparator probe:
+the semantic beam had initialized input wires as `1<<i` instead of 64-bit
+truth signatures, and the y-loader had placed all three m bits on q13. The
+corrected four-output ESOP probe is **2217/1433**, not 555/358. Fixed-label
+bucket multiplicities (x=25, y=20) rigorously rule out four code bits plus two
+garbage bits on six wires. A new affine screen found rank-5 garbage projections
+injective within every code bucket using the 3+3 ancilla split. See
+`artifacts/comparator_oracle/three_plus_three_affine_screen.json`; this
+positive resource result still needs native nonlinear lowering.
+
 ## State at handoff
 
 Updated September 10, 2026. The user wants the top rank, and the workspace now records the full experiment history, including failures. This is a research/optimization workspace, not a finished rank-1 submission.

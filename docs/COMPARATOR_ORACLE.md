@@ -42,8 +42,10 @@ temporary dirty wires.  It is transpiled with
 
 | artifact | depth | CX | width |
 |---|---:|---:|---:|
-| `artifacts/comparator_oracle/y_loader/y_loader_esop_probe.qasm` | **555** | **358** | 18 |
+| `artifacts/comparator_oracle/y_loader/y_loader_esop_probe.qasm` | **2217** | **1433** | 18 |
 
+The original 555/358 entry was invalid because all three m bits were targeted
+onto q13. After correcting the target loop, the real result is 2217/1433.
 This fails the primary y-loader criterion (`<=60` depth; `>75` kill).  It is a
 loader-only diagnostic, not an oracle, and is not promoted.
 
@@ -73,6 +75,28 @@ possible reversible embedding or phase-tolerant QROM traversal. Since no
 exact candidate was found, there is no native loader depth to promote and the
 <=70-depth GO condition was not met.
 
+## 3+3-ancilla affine-isometry screen
+
+The fixed-label bucket multiplicities make the original six-wire embedding
+impossible: the largest x bucket has 25 inputs and the largest y bucket has
+20, while four code bits leave only two garbage bits. A reversible embedding
+therefore needs five garbage bits per side. The exact resource identity is
+`6 data + 3 clean ancillas = 9 wires` on each side.
+
+`src/comparator_isometry_affine_screen.py` searched affine garbage projections
+and found rank-5 projections injective within every code bucket on both sides:
+
+| side | classes | max bucket | affine masks |
+|---|---:|---:|---|
+| x | 11 | 25 | 52, 39, 24, 1, 29 |
+| y | 12 | 20 | 22, 52, 45, 35, 32 |
+
+The report is `artifacts/comparator_oracle/three_plus_three_affine_screen.json`.
+This is a genuine positive resource result, but not yet a native classifier:
+the three nonlinear code outputs and one fourth code output still need a
+physical reversible construction. The next valid experiment is therefore a
+3+3 affine-isometry lowering, not another six-wire permutation beam.
+
 ## Shared-address descriptor screen
 
 The follow-up hypothesis was tested mathematically before circuit generation
@@ -98,11 +122,11 @@ label permutation or codeword-conditioned phase expansion.
 ## Whole-register semantic probe
 
 The serialized probe was profiled in
-`artifacts/comparator_oracle/y_loader/esop_failure_profile.json`.  It has 162
+`artifacts/comparator_oracle/y_loader/esop_failure_profile.json`.  It has 324
 pre-lowering RCCX operations; after lowering, q0 is the most heavily used
-wire (289 operations and 162 CX participations).  This confirms that the 555
-depth is primarily a dirty-scratch/target serialization problem, not merely a
-large number of independent gates.
+wire (1162 operations and 654 CX participations).  This confirms that the
+2217 depth is primarily a dirty-scratch/target serialization problem, not
+merely a large number of independent gates.
 
 `src/whole_register_y_search.py` then searched complete six-wire truth
 signatures under X/CX/RCCX, scoring only four designated boundary outputs and
@@ -113,7 +137,7 @@ run was stopped for throughput before producing a report and is not treated as
 negative evidence.  The search is therefore a bounded diagnostic, not a proof
 against all reversible embeddings.
 
-Nevertheless, the only completed native classifier is 555 depth, far beyond
+Nevertheless, the only completed native classifier is 2217 depth, far beyond
 the requested 70-depth kill threshold.  Per the experiment protocol, the
 comparator architecture is **closed for this lowering**; x-side synthesis and
 kernel integration were not started.

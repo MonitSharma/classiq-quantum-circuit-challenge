@@ -58,3 +58,13 @@ primitives found no exact boundary map; its best exact distinct-wire score was
 157/256. This closes the tested monomial embedding family, not every
 reversible or phase-tolerant QROM construction. No x-side or full oracle was
 started because the exact y embedding never reached the <=70-depth gate.
+
+The implementation was then audited: the prior 555/358 y-loader had targeted
+all three `m` bits onto q13 and was invalid. The corrected four-output probe is
+2217/1433, so the old native measurement is retracted. A bucket multiplicity
+proof also shows that four code bits plus two garbage bits cannot be a
+reversible six-wire embedding (largest buckets 25 and 20). A new affine
+3+3-ancilla screen found rank-5 linear garbage projections injective within all
+code buckets on both sides. This is a positive resource result, not yet a
+native circuit; it is the only remaining comparator experiment worth a bounded
+lowering attempt.
