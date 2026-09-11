@@ -6,6 +6,29 @@ This file remains the detailed chronological lab notebook; entries below are
 not all equally strong evidence, so retain the verified/diagnostic/unknown
 distinction.
 
+## LUT single-target synthesis screen (September 11, 2026)
+
+To test a circuit class not represented by the prior XAG/ANF/BDD searches, the
+exact logo was mapped with Berkeley ABC to 3-, 4-, and 5-input LUT networks.
+Each LUT was retained as a reversible dirty-target operation
+`target ^= h(controls)`, and every ABC network was checked over all 4,096
+inputs. The BLIF mappings and full local truth-table/cost inventory are under
+`artifacts/lut_single_target/` and `artifacts/lut_single_target_inventory.json`.
+
+The 3-LUT mapping used 142 LUTs at 10 levels with peak topological live
+pressure 35. The 4-LUT mapping used 102 LUTs at 7 levels and pressure 27; the
+5-LUT mapping used 72 LUTs at 6 levels and pressure 24. All exceed 18 live
+signals before reversible target assignment. A direct local cost database
+compiled the observed LUT functions to exact `u3`/`cx` gates, with maximum
+local depths 40, 165, and 718 for k=3,4,5. Dependency-weighted optimistic
+forward paths were **145/86**, **738/417**, and **2151/1225** depth/CX.
+
+The best optimistic path is already above the 120-depth stopping threshold and
+ignores target conflicts, garbage cleanup, and the eventual inverse. Close the
+ABC/LHRS-style LUT route without generating a complete oracle. This is a
+bounded closure of the tested mappings, not a proof against every possible
+quantum-aware LUT mapper.
+
 ## Nonlinear spectral conjugation: exact early closure (September 11, 2026)
 
 After closing the destructive-XAG route, a new branch tested whether a shallow

@@ -44,6 +44,7 @@ workspace.
 | `three-sweep` | Row-pair loaders, 3+3 and transposed column-pair decoders, phase-rank screens, shell sharing, and reachable parity polynomials | Loaders verified in the 52--65 depth range, but exact decoders were 3802+ depth; closed with no improvement |
 | `nonlinear-spectral` | Exact FWHT screen of shallow invertible triangular coordinate mutations and spectral conjugation | Closed the ordinary Walsh-support objective exactly: the odd 1,097-point population forces all 4,096 coefficients nonzero under every permutation |
 | `quotient-permutation` | In-place x/y data-register quotient permutations, free class-layout screen, and exact central dyadic phase diagnostic | 11-by-11 quotient is real structure, but the best 61-rectangle central diagnostic was 6456/5490; permutation synthesis was not justified |
+| `lut-single-target` | ABC 3/4/5-LUT mappings retained as reversible dirty-target single-target gates, with local U3/CX cost database | Exact mappings found, but the best optimistic forward native critical path was 145 depth; closed before global reversible scheduling |
 
 The merge commit for the MPO campaign is recorded in Git; the branch is
 retained for provenance. The current working tree may contain uncommitted
