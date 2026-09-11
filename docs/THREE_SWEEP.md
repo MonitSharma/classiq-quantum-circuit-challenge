@@ -138,6 +138,17 @@ range. Its QASM and matching exhaustive report are
 The codebook search and labels are recorded in
 `artifacts/three_sweep/codebook_search.json`.
 
+## Reachable-state parity sharing
+
+I also solved a phase-polynomial representation only on the 36 distinct
+`(3+3 code, y5)` side states, avoiding arbitrary completion of unreachable code
+words. A corrected exact-angle GraySynth implementation produced 2076 parity
+terms and an exhaustively verified circuit at **4597 depth / 2824 CX**. This is
+valid but worse than the 3917/3176 direct decoder: reducing MCZ count does not
+remove the CNOT transport needed to realize the parities. The matching QASM and
+report are `artifacts/three_sweep/reachable_phase_poly.qasm` and
+`artifacts/three_sweep/reachable_phase_poly.exhaustive.json`.
+
 ## Transposed column-pair architecture
 
 The transposed geometry has only 15 ordered x-column pairs, so four code bits
