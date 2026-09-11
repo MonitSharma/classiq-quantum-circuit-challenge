@@ -111,9 +111,10 @@ Before any QASM work, `src/nonlinear_spectral.py` applied exact triangular
 mutations `z_t ^= a(z)&b(z)` and measured the 4,096-point FWHT. The baseline
 has 1,097 marked points and all 4,096 Walsh coefficients are nonzero.
 
-This is forced for every reversible coordinate permutation: each Walsh
-numerator is the sum of 4,096 signs with an odd number of negative terms, so
-it is odd and cannot vanish. Exact screens at mutation counts 1, 2, 3, 4, 6,
+This is forced for every reversible coordinate permutation. For every nonzero
+mask, the phase-vector coefficient is twice the marked-set character sum; that
+sum has 1,097 signed terms and is odd, so it cannot vanish. The constant
+coefficient is `4096-2*1097=1902`. Exact screens at mutation counts 1, 2, 3, 4, 6,
 and 8 therefore all retained support 4,096 and weighted support 24,576. The
 reports are `artifacts/nonlinear_spectral_baseline.json` and
 `artifacts/nonlinear_spectral_screen_m{1,2,3,4,6,8}.json`; the full disposition
@@ -122,6 +123,23 @@ is [`NONLINEAR_SPECTRAL.md`](NONLINEAR_SPECTRAL.md).
 Close ordinary Walsh-support sparsification by reversible recoding. Do not
 synthesize a QASM candidate from this screen. A future spectral attempt would
 need a different representation or cost model, not more mutation depth.
+
+## Quotient-permutation checkpoint (September 11, 2026)
+
+The next architecture reconstructed the exact 64-by-64 matrix into 11 row
+classes and 11 column classes, then treated permutations of the original x/y
+data registers as free. The exact quotient and class populations are in
+`artifacts/quotient_permutation_screen_200.json`; the implementation is
+`src/quotient_permutation.py` and the full analysis is
+[`QUOTIENT_PERMUTATION.md`](QUOTIENT_PERMUTATION.md).
+
+The best of 200 free contiguous class layouts reduced the diagnostic proxies
+to 74 reduced-OBDD nodes, 61 exact dyadic rectangles, and 551 dyadic literals.
+However, compiling that exact 61-rectangle central phase with the repository's
+MCZ helper measured **6456 depth / 5490 CX / 18 qubits**. Since the central
+phase alone is far above the 150-depth cutoff, no reversible `P_x`/`P_y`
+search or full conjugated oracle was attempted. The quotient structure is
+useful classical information, but this direct rectangle realization is closed.
 
 ## Challenge and scoring
 

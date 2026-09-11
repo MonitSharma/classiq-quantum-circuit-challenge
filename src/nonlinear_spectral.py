@@ -2,12 +2,13 @@
 
 This module does not synthesize a quantum circuit.  It treats a reversible
 coordinate change ``T`` as a permutation of the 12-bit truth table and measures
-the Walsh spectrum of ``g(z) = f(T^{-1}(z))`` exactly.  The first useful
-falsification is recorded explicitly: because the logo has 1,097 marked points
-(an odd population), every Walsh numerator is odd for every permutation of the
-truth table.  Thus ordinary Walsh support cannot collapse under any reversible
-coordinate change, although coefficient concentration and related diagnostics
-can still be measured.
+the Walsh spectrum of the phase vector ``s(z)=(-1)**g(z)`` exactly.  The first
+useful falsification is recorded explicitly: because the logo has 1,097 marked
+points (an odd population), every nonconstant phase-vector Walsh coefficient
+is twice a nonzero odd character sum for every permutation of the truth table.
+Thus ordinary Walsh support cannot collapse under any reversible coordinate
+change, although coefficient concentration and related diagnostics can still
+be measured.
 
 The supported mutations are guaranteed-invertible coordinate updates
 ``z[target] ^= a(z) & b(z)``.  The target is excluded from both affine control
@@ -193,8 +194,10 @@ def run(samples: int, mutations: int, seed: int, max_weight: int) -> dict:
         "max_affine_control_weight": max_weight,
         "seed": seed,
         "invariant_note": (
-            "The 1,097 marked points are odd. For every permutation T and every Walsh mask S, "
-            "sum_z (-1)^g(z)(-1)^(S·z) is odd, hence nonzero. Ordinary Walsh support is "
+            "The phase vector is s(z)=(-1)^g(z). For every nonzero Walsh mask S, "
+            "W_s(S)=-2*sum_{g(z)=1}(-1)^(S·z). The inner sum has 1,097 terms, "
+            "so it is odd and nonzero; hence W_s(S) is 2 mod 4 up to sign. "
+            "At S=0, W_s(0)=4096-2*1097=1902. Ordinary Walsh support is "
             "therefore exactly 4096 for every reversible coordinate change."
         ),
     }

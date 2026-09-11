@@ -29,11 +29,20 @@ numerator at mask `S` is
 W(S) = sum_z (-1)^g(z) (-1)^(S·z).
 ```
 
-There are 1,097 negative terms and 2,999 positive terms, so every numerator
-is odd. A reversible coordinate change only permutes the values of `g`, so
-the same odd-population argument applies after `T`. Therefore every Walsh
-coefficient is nonzero for every reversible coordinate permutation. This is an
-exact obstruction to the proposed support-collapse criterion.
+For the phase vector `s(z)=(-1)^g(z)`, and any nonzero mask `S`,
+
+```text
+W_s(S) = -2 * sum_{z:g(z)=1} (-1)^(S·z).
+```
+
+The inner marked-set character sum has exactly 1,097 terms, each equal to
+`+1` or `-1`, so it is odd and cannot be zero. Thus every nonconstant phase
+coefficient is twice a nonzero odd integer (`W_s(S) = 2 mod 4` up to sign).
+For the constant mask, `W_s(0) = 4096 - 2*1097 = 1902`. A reversible
+coordinate change only permutes the values of `g`, so the same proof applies
+after `T`. Therefore every Walsh coefficient is nonzero for every reversible
+coordinate permutation. This is an exact obstruction to the proposed
+support-collapse criterion.
 
 The exact baseline report is
 [`artifacts/nonlinear_spectral_baseline.json`](../artifacts/nonlinear_spectral_baseline.json):

@@ -18,9 +18,10 @@ involved.
 
 The baseline has 1,097 marked points, all 4,096 Walsh coefficients nonzero,
 weighted support 24,576, and 2,048 masks containing each wire. The support
-result is not merely empirical: for any reversible recoding, the transformed
-Boolean function still has 1,097 negative phase entries. Every Walsh numerator
-is consequently odd, so no coefficient can be zero.
+result is not merely empirical. For every nonzero mask, the phase-vector
+Walsh coefficient is `-2` times the marked-set character sum. That sum has
+1,097 signed terms and is odd, so it cannot vanish; the constant coefficient
+is `4096-2*1097=1902`.
 
 Exact screens sampled 256 chains at each of 1, 2, 3, 4, 6, and 8 mutations,
 with seed 42 and affine control masks of weight at most two. Every candidate
@@ -34,6 +35,27 @@ Disposition: close support sparsification by reversible recoding before QASM
 synthesis. This is a structural falsification of one objective, not a proof
 that no non-permutation spectral embedding or other quantum representation can
 work.
+
+## In-place quotient-permutation screen (September 11, 2026)
+
+The exact logo matrix has only 11 distinct row classes and 11 distinct column
+classes, with populations `22,2,2,4,4,5,12,2,2,4,5` and
+`4,25,7,2,2,4,4,5,2,4,5`. This suggested permuting the original six x and six
+y data bits in place, applying a simpler phase to the reordered matrix, then
+unpermuting—without a class-code loader.
+
+`src/quotient_permutation.py` reconstructed the exact quotient and sampled 200
+free contiguous class layouts (seed `20260911`). The best layout measured 74
+reduced-OBDD nodes, 61 greedy disjoint dyadic rectangles, 551 dyadic literals,
+456 ANF terms, and 2,909 ANF literals. These are only structural proxies.
+
+The exact 61-rectangle central phase was then compiled with the repository MCZ
+helper as a calibration. It measured **6456 depth / 5490 CX / 18 qubits** in
+`artifacts/quotient_permutation_best_central.qasm`. This exceeds the 150-depth
+central-only cutoff by a wide margin, so no `P_x`/`P_y` synthesis or full
+conjugated oracle was attempted. The free-layout proxy was promising in
+classical terms but not in native quantum depth; close this direct quotient
+permutation route unless a new shared central-phase primitive is found.
 
 ## Exact destructive classifier checkpoint (September 11, 2026)
 
