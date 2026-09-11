@@ -46,6 +46,13 @@ class DirtyState:
     trace: tuple[dict, ...]
 
 
+@dataclass(frozen=True)
+class RepeatedDirtyState:
+    basis: tuple[int, ...]
+    evaluations: int
+    trace: tuple[dict, ...]
+
+
 def prepare_products(path: Path) -> tuple[DirtyState, tuple[int, ...], tuple[int, ...], tuple[int, ...]]:
     parsed = load_xag(path)
     graph: XAG = parsed.graph
@@ -140,6 +147,156 @@ def search(path: Path, beam_width: int = 500, max_evaluations: int = 97) -> dict
     return result(best, False, beam_width, max_evaluations)
 
 
+def output_cone(path: Path) -> set[int]:
+    parsed = load_xag(path)
+    cone = {signal for signal in mask_indices(parsed.output_affine_mask) if signal >= 13}
+    stack = list(cone)
+    while stack:
+        node = stack.pop()
+        index = node - 13
+        for mask in (parsed.nodes[index].left_affine_mask, parsed.nodes[index].right_affine_mask):
+            for signal in mask_indices(mask):
+                if signal >= 13 and signal not in cone:
+                    cone.add(signal)
+                    stack.append(signal)
+    return cone
+
+
+def _repeated_features(state: RepeatedDirtyState, left, right, products, cone, signals):
+    basis = span_basis(DirtyState(state.basis, 0, state.evaluations, state.trace))
+    cone_available = sum(
+        _reduce_with_basis(basis, signals[node]) is not None for node in cone
+    )
+    cone_ready = 0
+    total_ready = 0
+    for index, product in enumerate(products):
+        operands_ready = (
+            _reduce_with_basis(basis, left[index]) is not None
+            and _reduce_with_basis(basis, right[index]) is not None
+        )
+        if operands_ready and _reduce_with_basis(basis, product) is None:
+            total_ready += 1
+            if index + 13 in cone:
+                cone_ready += 1
+    return cone_available, cone_ready, total_ready
+
+
+def repeated_search(path: Path, beam_width: int = 50, max_evaluations: int = 120) -> dict:
+    """Search the physical affine span while permitting product repeats.
+
+    States are deduplicated by their canonical affine span at each evaluation
+    depth. Product history is deliberately absent from the state key.
+    """
+
+    initial, left, right, products = prepare_products(path)
+    parsed = load_xag(path)
+    signals = tuple(parsed.graph._signals())
+    cone = output_cone(path)
+    feature_cache = {}
+    phase_cache = {}
+
+    def features_for_basis(basis_tuple):
+        if basis_tuple in feature_cache:
+            return feature_cache[basis_tuple]
+        probe = RepeatedDirtyState(basis_tuple, 0, tuple())
+        value = _repeated_features(probe, left, right, products, cone, signals)
+        feature_cache[basis_tuple] = value
+        return value
+
+    def phase_for_basis(basis_tuple):
+        if basis_tuple not in phase_cache:
+            phase_cache[basis_tuple] = phase_support(
+                DirtyState(basis_tuple, 0, 0, tuple())
+            )
+        return phase_cache[basis_tuple]
+
+    beam = [RepeatedDirtyState(initial.basis, 0, tuple())]
+    termination = "evaluation_budget"
+    for step in range(max_evaluations + 1):
+        for state in beam:
+            support = phase_for_basis(state.basis)
+            if support is not None:
+                return repeated_result(
+                    state, True, termination, beam_width, max_evaluations, cone, signals,
+                )
+        if step == max_evaluations:
+            break
+        candidates: dict[tuple[int, ...], RepeatedDirtyState] = {}
+        for state in beam:
+            basis = span_basis(DirtyState(state.basis, 0, state.evaluations, state.trace))
+            ready = []
+            for index, product in enumerate(products):
+                if _reduce_with_basis(basis, left[index]) is None:
+                    continue
+                if _reduce_with_basis(basis, right[index]) is None:
+                    continue
+                if _reduce_with_basis(basis, product) is not None:
+                    continue
+                ready.append((index, product))
+            for index, product in ready:
+                if len(state.basis) < WIRE_COUNT:
+                    targets = [(None, canonical_span(list(state.basis) + [product]))]
+                else:
+                    targets = [
+                        (target, canonical_span(
+                            [value for value in state.basis if value != target]
+                            + [target ^ product]
+                        ))
+                        for target in state.basis
+                    ]
+                for target, new_basis in targets:
+                    if len(new_basis) > WIRE_COUNT:
+                        continue
+                    trace = state.trace + ({
+                        "evaluation": state.evaluations + 1,
+                        "product": index + 13,
+                        "target_basis": target,
+                        "rank_including_constant": len(new_basis) + 1,
+                    },)
+                    child = RepeatedDirtyState(new_basis, state.evaluations + 1, trace)
+                    prior = candidates.get(new_basis)
+                    if prior is None or len(child.trace) < len(prior.trace):
+                        candidates[new_basis] = child
+        if not candidates:
+            termination = "no_guided_transition"
+            break
+        scored = []
+        for state in candidates.values():
+            features = features_for_basis(state.basis)
+            # Output-cone availability dominates general readiness. All states
+            # at one layer have equal evaluation count, but retaining it in the
+            # key makes the policy explicit and deterministic.
+            scored.append(((-features[0], -features[1], -features[2], state.evaluations, state.basis), state))
+        scored.sort(key=lambda item: item[0])
+        beam = [state for _, state in scored[:beam_width]]
+    best = beam[0]
+    return repeated_result(best, False, termination, beam_width, max_evaluations, cone, signals)
+
+
+def repeated_result(state: RepeatedDirtyState, success: bool, termination: str,
+                    beam_width: int, max_evaluations: int, cone: set[int], signals) -> dict:
+    product_ids = [event["product"] for event in state.trace]
+    support = phase_support(DirtyState(state.basis, 0, state.evaluations, state.trace))
+    return {
+        "search_type": "physical_dirty_affine_span_repeated_products",
+        "exact_semantic_verification": True,
+        "impossibility_proof": False,
+        "success": success,
+        "termination": termination,
+        "beam_width": beam_width,
+        "max_evaluations": max_evaluations,
+        "total_product_evaluations": state.evaluations,
+        "unique_product_count": len(set(product_ids)),
+        "repeated_product_evaluations": len(product_ids) - len(set(product_ids)),
+        "maximum_affine_rank_including_constant": len(state.basis) + 1,
+        "output_cone_size": len(cone),
+        "output_cone_available": _repeated_features(state, (), (), (), cone, signals)[0],
+        "phase_support_in_canonical_basis": support,
+        "final_basis_size": len(state.basis),
+        "trace": list(state.trace),
+    }
+
+
 def result(state: DirtyState, success: bool, beam_width: int, max_evaluations: int) -> dict:
     return {
         "search_type": "physical_dirty_affine_span",
@@ -163,9 +320,14 @@ def main() -> None:
     parser.add_argument("--xag", type=Path, default=ROOT / "artifacts/multiplicative_depth/seeds/shared_rank.xag")
     parser.add_argument("--beam-width", type=int, default=500)
     parser.add_argument("--max-evaluations", type=int, default=97)
+    parser.add_argument("--allow-repeats", action="store_true")
     parser.add_argument("--out", type=Path, default=ROOT / "artifacts/destructive_dirty_search.json")
     args = parser.parse_args()
-    report = search(args.xag, args.beam_width, args.max_evaluations)
+    report = (
+        repeated_search(args.xag, args.beam_width, args.max_evaluations)
+        if args.allow_repeats
+        else search(args.xag, args.beam_width, args.max_evaluations)
+    )
     args.out.write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({key: value for key, value in report.items() if key != "trace"}, indent=2))
 

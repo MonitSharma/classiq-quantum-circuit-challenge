@@ -116,6 +116,10 @@ physical dirty-span prototype, which applies (h\mapsto h\oplus(a b)) to the
 actual affine basis, reached 36 guided products without an exact phase
 frontier. Both are bounded heuristic screens; neither is an impossibility
 proof. The physical prototype is `src/destructive_dirty_search.py`.
+The final repeated-product variant removed the one-use restriction and ran to
+120 evaluations at beam 50 without a phase frontier; it repeatedly used only
+nine products and reached 20 output-cone signals. Its reports are the
+`destructive_dirty_search_repeated_beam50_*` artifacts.
 
 ### Three-sweep campaign
 

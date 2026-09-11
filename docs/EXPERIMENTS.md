@@ -73,6 +73,24 @@ a result. This is an intentionally narrow first physical-span model: it uses
 canonical basis directions as targets and does not yet synthesize affine CNOT
 frames or permit repeated product evaluations.
 
+### Final repeated-product destructive-XAG screen
+
+The artificial one-use restriction was then removed. States were deduplicated
+by canonical affine span, repeated guided products were allowed whenever their
+operands were available and the product was outside the span, and output-cone
+availability dominated the beam score. Beam-50 runs at evaluation budgets 60,
+80, 100, and 120 all found no exact phase frontier. Each settled on nine
+unique products repeatedly regenerated, reaching 20 available output-cone
+signals but never the logo span; rank remained 19. The reports are
+`artifacts/destructive_dirty_search_repeated_beam50_60.json`,
+`..._80.json`, `..._100.json`, and `..._120.json`.
+
+A beam-200/60 control exceeded the bounded runtime window while scoring its
+candidate states and produced no report. This completes the planned
+repeated-product test as a bounded heuristic screen: the current exact
+97-product dirty-span model did not reach a phase frontier by 120 evaluations,
+but this is not an impossibility proof. No QASM lowering was attempted.
+
 ## Three-sweep campaign closure (September 11, 2026)
 
 The complete campaign is recorded in [`THREE_SWEEP.md`](THREE_SWEEP.md). It

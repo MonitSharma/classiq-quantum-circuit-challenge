@@ -96,6 +96,13 @@ products with rank 19 and no phase frontier. This remains a narrow semantic
 prototype because it has not yet searched arbitrary affine target directions,
 repeated products, or native affine-frame synthesis.
 
+The final repeated-product screen removed the one-use restriction and allowed
+the same guided XAG product to be rematerialized whenever it left the affine
+span. Beam 50 at 60, 80, 100, and 120 evaluations found no phase frontier;
+each run reused nine products and reached 20 available output-cone signals.
+This is the final bounded heuristic screen for this exact-XAG model, not an
+impossibility proof. No QASM lowering was attempted.
+
 ## Challenge and scoring
 
 Source: https://www.classiq.io/challenge, visited in the user's Safari. Last observed leaderboard (historical snapshot, refresh before making current claims):
