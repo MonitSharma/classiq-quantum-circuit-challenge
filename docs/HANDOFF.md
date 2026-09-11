@@ -103,6 +103,26 @@ each run reused nine products and reached 20 available output-cone signals.
 This is the final bounded heuristic screen for this exact-XAG model, not an
 impossibility proof. No QASM lowering was attempted.
 
+## Nonlinear-spectral checkpoint (September 11, 2026)
+
+The next proposed architecture was a shallow reversible coordinate conjugation
+`U=T†D_gT`, with `g=logo∘T⁻¹`, hoping to make the diagonal phase Walsh-sparse.
+Before any QASM work, `src/nonlinear_spectral.py` applied exact triangular
+mutations `z_t ^= a(z)&b(z)` and measured the 4,096-point FWHT. The baseline
+has 1,097 marked points and all 4,096 Walsh coefficients are nonzero.
+
+This is forced for every reversible coordinate permutation: each Walsh
+numerator is the sum of 4,096 signs with an odd number of negative terms, so
+it is odd and cannot vanish. Exact screens at mutation counts 1, 2, 3, 4, 6,
+and 8 therefore all retained support 4,096 and weighted support 24,576. The
+reports are `artifacts/nonlinear_spectral_baseline.json` and
+`artifacts/nonlinear_spectral_screen_m{1,2,3,4,6,8}.json`; the full disposition
+is [`NONLINEAR_SPECTRAL.md`](NONLINEAR_SPECTRAL.md).
+
+Close ordinary Walsh-support sparsification by reversible recoding. Do not
+synthesize a QASM candidate from this screen. A future spectral attempt would
+need a different representation or cost model, not more mutation depth.
+
 ## Challenge and scoring
 
 Source: https://www.classiq.io/challenge, visited in the user's Safari. Last observed leaderboard (historical snapshot, refresh before making current claims):

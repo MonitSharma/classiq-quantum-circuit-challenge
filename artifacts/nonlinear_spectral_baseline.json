@@ -1,0 +1,99 @@
+{
+  "n_variables": 12,
+  "truth_table_size": 4096,
+  "baseline": {
+    "walsh_support": 4096,
+    "walsh_support_fraction": 1.0,
+    "nonconstant_support": 4095,
+    "weighted_support": 24576,
+    "parity_weight_histogram": {
+      "0": 1,
+      "1": 12,
+      "2": 66,
+      "3": 220,
+      "4": 495,
+      "5": 792,
+      "6": 924,
+      "7": 792,
+      "8": 495,
+      "9": 220,
+      "10": 66,
+      "11": 12,
+      "12": 1
+    },
+    "wire_participation": [
+      2048,
+      2048,
+      2048,
+      2048,
+      2048,
+      2048,
+      2048,
+      2048,
+      2048,
+      2048,
+      2048,
+      2048
+    ],
+    "max_abs_walsh": 1902,
+    "top32_abs_mass": 16772,
+    "total_abs_mass": 89660,
+    "mapping_is_bijective": true,
+    "marked_population": 1097
+  },
+  "best_sampled_candidate": {
+    "mutations": [],
+    "mutation_cost": 0,
+    "metrics": {
+      "walsh_support": 4096,
+      "walsh_support_fraction": 1.0,
+      "nonconstant_support": 4095,
+      "weighted_support": 24576,
+      "parity_weight_histogram": {
+        "0": 1,
+        "1": 12,
+        "2": 66,
+        "3": 220,
+        "4": 495,
+        "5": 792,
+        "6": 924,
+        "7": 792,
+        "8": 495,
+        "9": 220,
+        "10": 66,
+        "11": 12,
+        "12": 1
+      },
+      "wire_participation": [
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "max_abs_walsh": 1902,
+      "top32_abs_mass": 16772,
+      "total_abs_mass": 89660,
+      "mapping_is_bijective": true,
+      "marked_population": 1097
+    },
+    "score": [
+      4096,
+      24576,
+      -16772,
+      -1902
+    ]
+  },
+  "samples": 1,
+  "mutation_count": 0,
+  "max_affine_control_weight": 2,
+  "seed": 42,
+  "invariant_note": "The 1,097 marked points are odd. For every permutation T and every Walsh mask S, sum_z (-1)^g(z)(-1)^(S\u00b7z) is odd, hence nonzero. Ordinary Walsh support is therefore exactly 4096 for every reversible coordinate change."
+}

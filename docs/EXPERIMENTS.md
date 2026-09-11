@@ -6,6 +6,35 @@ This file remains the detailed chronological lab notebook; entries below are
 not all equally strong evidence, so retain the verified/diagnostic/unknown
 distinction.
 
+## Nonlinear spectral conjugation: exact early closure (September 11, 2026)
+
+After closing the destructive-XAG route, a new branch tested whether a shallow
+reversible coordinate transform could make the target phase Walsh-sparse. The
+transform family was the guaranteed-invertible triangular mutation
+`z_t ^= a(z)&b(z)`, with bounded-weight affine parities excluding the target.
+The exact implementation is `src/nonlinear_spectral.py` and operates on the
+full 4,096-entry truth table; no approximate classifier or native circuit was
+involved.
+
+The baseline has 1,097 marked points, all 4,096 Walsh coefficients nonzero,
+weighted support 24,576, and 2,048 masks containing each wire. The support
+result is not merely empirical: for any reversible recoding, the transformed
+Boolean function still has 1,097 negative phase entries. Every Walsh numerator
+is consequently odd, so no coefficient can be zero.
+
+Exact screens sampled 256 chains at each of 1, 2, 3, 4, 6, and 8 mutations,
+with seed 42 and affine control masks of weight at most two. Every candidate
+was bijective and every report retained support 4,096 and weighted support
+24,576. The best top-32 coefficient-mass values varied from 16,776 to 17,284,
+but this is not a demonstrated native-depth reduction. Reports are
+`artifacts/nonlinear_spectral_baseline.json` and
+`artifacts/nonlinear_spectral_screen_m{1,2,3,4,6,8}.json`.
+
+Disposition: close support sparsification by reversible recoding before QASM
+synthesis. This is a structural falsification of one objective, not a proof
+that no non-permutation spectral embedding or other quantum representation can
+work.
+
 ## Exact destructive classifier checkpoint (September 11, 2026)
 
 The proposed (C^\dagger Z C) architecture was started from the exact

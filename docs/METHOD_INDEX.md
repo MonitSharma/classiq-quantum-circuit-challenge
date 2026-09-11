@@ -42,6 +42,7 @@ workspace.
 | `mpo-native-synthesis` | Direct operator synthesis from an exact diagonal MPO/TT | Tensor representation validated, generic optimizers plateaued; merged into `main` as a negative research record |
 | `unitary-state-space` | Recast the target as a compressed unitary: finite-size phase states, exact QBPs, TT/MPO dilation, and ZH diagrams | Exact tensor/TT artifacts and bounded probes; no verified improvement, but several misleading abstractions are now closed |
 | `three-sweep` | Row-pair loaders, 3+3 and transposed column-pair decoders, phase-rank screens, shell sharing, and reachable parity polynomials | Loaders verified in the 52--65 depth range, but exact decoders were 3802+ depth; closed with no improvement |
+| `nonlinear-spectral` | Exact FWHT screen of shallow invertible triangular coordinate mutations and spectral conjugation | Closed the ordinary Walsh-support objective exactly: the odd 1,097-point population forces all 4,096 coefficients nonzero under every permutation |
 
 The merge commit for the MPO campaign is recorded in Git; the branch is
 retained for provenance. The current working tree may contain uncommitted
