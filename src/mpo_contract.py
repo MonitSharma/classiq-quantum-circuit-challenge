@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import Mapping, Sequence
 
 import numpy as np
+from qiskit import qasm2
 
 from mpo_target import DEFAULT_ORDER, DIM, diagonal_mpo, tt_svd, ordered_tensor
 
@@ -63,6 +64,64 @@ def apply_layer(
     for slot in sorted(gates):
         out = apply_adjacent_gate(out, slot, gates[slot], max_bond=max_bond)
     return out
+
+
+def apply_single_qubit(mpo: Sequence[np.ndarray], slot: int, gate: np.ndarray) -> list[np.ndarray]:
+    """Left-apply a one-qubit gate to one MPO output leg."""
+    if not 0 <= slot < len(mpo):
+        raise ValueError("invalid MPO slot")
+    gate = np.asarray(gate, dtype=np.complex128).reshape(2, 2)
+    out = list(mpo)
+    out[slot] = np.einsum("co,lior->licr", gate, out[slot])
+    return out
+
+
+def cx_matrix(control: int, target: int) -> np.ndarray:
+    """Return a CX matrix in local basis order (first site, second site)."""
+    gate = np.zeros((4, 4), dtype=np.complex128)
+    for first in range(2):
+        for second in range(2):
+            bits = [first, second]
+            if bits[control]:
+                bits[target] ^= 1
+            row = 2 * bits[0] + bits[1]
+            col = 2 * first + second
+            gate[row, col] = 1.0
+    return gate
+
+
+def u3_matrix(theta: float, phi: float, lam: float) -> np.ndarray:
+    c, s = np.cos(theta / 2), np.sin(theta / 2)
+    return np.asarray(
+        [[c, -np.exp(1j * lam) * s],
+         [np.exp(1j * phi) * s, np.exp(1j * (phi + lam)) * c]],
+        dtype=np.complex128,
+    )
+
+
+def apply_u3_cx_qasm(
+    path: str, physical_to_slot: Mapping[int, int], n_sites: int = 12
+) -> list[np.ndarray]:
+    """Replay standalone u3/cx QASM into an exact MPO accumulator."""
+    circuit = qasm2.loads(open(path).read())
+    if circuit.num_qubits != n_sites or set(circuit.count_ops()) - {"u3", "cx"}:
+        raise ValueError("expected a standalone u3/cx circuit")
+    mpo = identity_mpo(n_sites)
+    for inst in circuit.data:
+        name = inst.operation.name
+        if name == "u3":
+            physical = circuit.find_bit(inst.qubits[0]).index
+            mpo = apply_single_qubit(
+                mpo, physical_to_slot[physical], u3_matrix(*map(float, inst.operation.params))
+            )
+        elif name == "cx":
+            control = physical_to_slot[circuit.find_bit(inst.qubits[0]).index]
+            target = physical_to_slot[circuit.find_bit(inst.qubits[1]).index]
+            if abs(control - target) != 1:
+                raise ValueError("QASM CX is not adjacent in the MPO order")
+            first = min(control, target)
+            mpo = apply_adjacent_gate(mpo, first, cx_matrix(control - first, target - first))
+    return mpo
 
 
 def hilbert_schmidt_overlap(left: Sequence[np.ndarray], right: Sequence[np.ndarray]) -> complex:
