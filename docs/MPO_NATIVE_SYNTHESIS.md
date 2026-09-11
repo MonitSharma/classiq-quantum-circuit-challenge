@@ -112,6 +112,10 @@ adding identity-initialized layers is not sufficient; the next useful run
 should vary topology, restart phase, or optimize the native decomposed
 topology rather than blindly increasing layer count.
 
+A reduced-step 100-iteration continuation of the 4-layer checkpoint reached
+only `0.3020024344`, confirming that the earlier 0.302 plateau is not chiefly
+an insufficient iteration count.
+
 As a bounded order control, 2-layer near-identity runs for 50 iterations
 reached process fidelities `0.2177549926` in natural challenge order and
 `0.2233680863` in reverse order, versus the interleaved TT-order campaign's
@@ -124,6 +128,13 @@ for 2 layers and 50 iterations. It reached `0.2189523424`, only modestly above
 the identity baseline. Its exact TT maximum rank is 26, versus 13 for the
 interleaved order, so this first cross-register chain is not competitive. It
 does not rule out a genuinely non-chain all-to-all matching circuit.
+
+A reproducible 100-sample permutation screen is implemented in
+`src/search_mpo_orders.py`. With seed `20260911`, the best sampled order was
+the existing interleaved order at maximum TT rank 13; every random order was
+at least 22. This is not an exhaustive ordering proof, but it removes the
+most immediate possibility that a simple relabeling gives a better chain
+ansatz.
 
 ## External optimizer assessment
 
