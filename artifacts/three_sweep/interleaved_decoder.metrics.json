@@ -1,0 +1,8 @@
+{
+  "seed": 0,
+  "qasm": "artifacts/three_sweep/interleaved_decoder.qasm",
+  "depth": 3917,
+  "cx_count": 3176,
+  "width": 18,
+  "phase_cubes": "exact ESOP terms conditioned on reachable 3+3 codes"
+}

@@ -1,0 +1,230 @@
+{
+  "codebook": "artifacts/three_sweep/codebook_deterministic.json",
+  "seeds": 32,
+  "results": [
+    {
+      "seed": 0,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed0.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 1,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed1.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 2,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed2.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 3,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed3.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 4,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed4.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 5,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed5.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 6,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed6.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 7,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed7.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 8,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed8.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 9,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed9.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 10,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed10.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 11,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed11.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 12,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed12.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 13,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed13.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 14,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed14.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 15,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed15.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 16,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed16.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 17,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed17.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 18,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed18.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 19,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed19.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 20,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed20.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 21,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed21.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 22,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed22.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 23,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed23.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 24,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed24.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 25,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed25.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 26,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed26.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 27,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed27.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 28,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed28.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 29,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed29.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 30,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed30.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    },
+    {
+      "seed": 31,
+      "qasm": "artifacts/three_sweep/loader/loader5_seed31.qasm",
+      "depth": 64,
+      "cx_count": 120,
+      "width": 18
+    }
+  ]
+}

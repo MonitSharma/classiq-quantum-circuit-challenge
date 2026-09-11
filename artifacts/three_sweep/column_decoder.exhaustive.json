@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/three_sweep/column_decoder.qasm",
+  "sha256": "dd33c866136bbddb0fdbe58fa925e6155fcb3c161d97265666d824e1990b2ef2",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 10046,
+  "cx_count": 8436,
+  "max_error": 2.349556150014729e-13,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.2424139436453865e-12,
+  "peak_sparse_support": 128,
+  "elapsed_seconds": 25.760086059570312,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

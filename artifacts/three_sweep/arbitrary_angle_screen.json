@@ -1,0 +1,63 @@
+{
+  "model": "exact_modular_real_angle_phase_bank",
+  "control_bits": "x0..x4",
+  "side_features": [
+    {
+      "features": [
+        "constant",
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "controls_checked": 32,
+      "all_control_slices_feasible": false,
+      "feasible_control_slices": 0
+    },
+    {
+      "features": [
+        "constant",
+        "x5",
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "controls_checked": 32,
+      "all_control_slices_feasible": false,
+      "feasible_control_slices": 0
+    },
+    {
+      "features": [
+        "constant",
+        "y5",
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "controls_checked": 32,
+      "all_control_slices_feasible": false,
+      "feasible_control_slices": 0
+    },
+    {
+      "features": [
+        "constant",
+        "x5",
+        "y5",
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "controls_checked": 32,
+      "all_control_slices_feasible": false,
+      "feasible_control_slices": 0
+    }
+  ],
+  "interpretation": "Feasibility means the target sign table lies in the modular phase manifold for the listed binary features. It does not synthesize or verify a complete quantum circuit."
+}

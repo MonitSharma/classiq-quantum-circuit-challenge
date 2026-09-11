@@ -1,0 +1,8 @@
+{
+  "seed": 19,
+  "qasm": "artifacts/three_sweep/column_decoder.qasm",
+  "depth": 10046,
+  "cx_count": 8436,
+  "width": 18,
+  "construction": "reachable 4-bit column-pair code decoder"
+}

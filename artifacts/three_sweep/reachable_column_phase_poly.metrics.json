@@ -1,0 +1,9 @@
+{
+  "seed": 19,
+  "section_size": 4,
+  "qasm": "artifacts/three_sweep/reachable_column_phase_poly.qasm",
+  "phase_terms": 1777,
+  "depth": 3802,
+  "cx_count": 2133,
+  "width": 18
+}

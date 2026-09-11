@@ -1,0 +1,20 @@
+{
+  "model": "pi_angle_RZ_tracks_with_arbitrary_side_boolean_features",
+  "partitions": 792,
+  "best_partition": {
+    "chosen_bits": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "gf2_phase_row_rank": 11,
+    "minimum_nonconstant_pi_tracks": 10,
+    "sign_rank": 12
+  },
+  "minimum_over_all_partitions": 10,
+  "central_ucr_depth_floor": 96,
+  "three_sweep_depth_floor": 224,
+  "interpretation": "Five or six side-feature tracks cannot represent the exact phase in this restricted pi-angle UCR model. With ten tracks, the ideal middle schedule is already at least 96 layers and the three-stage skeleton is at least 224 layers. This is not an impossibility result for arbitrary-angle or non-UCR circuits."
+}

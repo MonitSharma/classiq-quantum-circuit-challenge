@@ -1,0 +1,8 @@
+{
+  "seed": 0,
+  "qasm": "artifacts/three_sweep/shell_decoder.qasm",
+  "depth": 5413,
+  "cx_count": 4030,
+  "width": 18,
+  "construction": "nested x-shells conditioned on reachable code ranges"
+}

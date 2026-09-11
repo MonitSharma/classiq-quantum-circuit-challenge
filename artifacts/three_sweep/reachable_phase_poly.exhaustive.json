@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/three_sweep/reachable_phase_poly.qasm",
+  "sha256": "daba5ae72b99ba9c7b8c3fb5e899035d00ed930c6a47dede0bfd2ff9c1b3d7e2",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 4597,
+  "cx_count": 2824,
+  "max_error": 1.0659444467559396e-14,
+  "ancilla_error": 2.165056014365969e-15,
+  "discarded_amplitude_bound": 1.5443265766413096e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 6.709543943405151,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

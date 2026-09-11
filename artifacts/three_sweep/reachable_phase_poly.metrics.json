@@ -1,0 +1,8 @@
+{
+  "seed": 0,
+  "qasm": "artifacts/three_sweep/reachable_phase_poly.qasm",
+  "phase_terms": 2076,
+  "depth": 4597,
+  "cx_count": 2824,
+  "width": 18
+}

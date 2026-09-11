@@ -1,0 +1,9 @@
+{
+  "seed": 19,
+  "depth": 52,
+  "cx_count": 90,
+  "basis_inputs_checked": 64,
+  "max_probability_leakage": 0.0,
+  "max_basis_index_error": 0,
+  "verified": true
+}

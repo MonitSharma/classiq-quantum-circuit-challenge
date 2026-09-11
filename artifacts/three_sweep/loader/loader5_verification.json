@@ -1,0 +1,10 @@
+{
+  "codebook": "artifacts/three_sweep/codebook_deterministic.json",
+  "seed": 0,
+  "depth": 64,
+  "cx_count": 120,
+  "basis_inputs_checked": 64,
+  "max_probability_leakage": 0.0,
+  "max_basis_index_error": 0.0,
+  "verified": true
+}

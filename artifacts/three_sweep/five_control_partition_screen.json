@@ -1,0 +1,11093 @@
+{
+  "partitions": 792,
+  "results": [
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "gf2_rank": 11,
+      "real_rank": 11,
+      "sign_rank": 12,
+      "distinct_rows": 15,
+      "distinct_columns": 12
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      "gf2_rank": 11,
+      "real_rank": 11,
+      "sign_rank": 12,
+      "distinct_rows": 15,
+      "distinct_columns": 14
+    },
+    {
+      "chosen_bits": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 11,
+      "real_rank": 11,
+      "sign_rank": 12,
+      "distinct_rows": 18,
+      "distinct_columns": 12
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        3,
+        11
+      ],
+      "gf2_rank": 14,
+      "real_rank": 14,
+      "sign_rank": 14,
+      "distinct_rows": 16,
+      "distinct_columns": 17
+    },
+    {
+      "chosen_bits": [
+        6,
+        7,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 14,
+      "real_rank": 14,
+      "sign_rank": 14,
+      "distinct_rows": 16,
+      "distinct_columns": 16
+    },
+    {
+      "chosen_bits": [
+        5,
+        8,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 14,
+      "real_rank": 14,
+      "sign_rank": 15,
+      "distinct_rows": 15,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        6,
+        7,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 14,
+      "real_rank": 14,
+      "sign_rank": 15,
+      "distinct_rows": 19,
+      "distinct_columns": 17
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 15,
+      "real_rank": 15,
+      "sign_rank": 16,
+      "distinct_rows": 16,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        5,
+        6,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 15,
+      "real_rank": 15,
+      "sign_rank": 16,
+      "distinct_rows": 17,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        5,
+        7,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 15,
+      "real_rank": 15,
+      "sign_rank": 16,
+      "distinct_rows": 17,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 16,
+      "real_rank": 16,
+      "sign_rank": 16,
+      "distinct_rows": 18,
+      "distinct_columns": 23
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "gf2_rank": 16,
+      "real_rank": 16,
+      "sign_rank": 17,
+      "distinct_rows": 17,
+      "distinct_columns": 20
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gf2_rank": 16,
+      "real_rank": 16,
+      "sign_rank": 17,
+      "distinct_rows": 17,
+      "distinct_columns": 17
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        5,
+        11
+      ],
+      "gf2_rank": 16,
+      "real_rank": 16,
+      "sign_rank": 17,
+      "distinct_rows": 17,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 16,
+      "real_rank": 16,
+      "sign_rank": 17,
+      "distinct_rows": 18,
+      "distinct_columns": 26
+    },
+    {
+      "chosen_bits": [
+        5,
+        6,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 16,
+      "real_rank": 16,
+      "sign_rank": 17,
+      "distinct_rows": 19,
+      "distinct_columns": 32
+    },
+    {
+      "chosen_bits": [
+        5,
+        6,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 16,
+      "real_rank": 16,
+      "sign_rank": 17,
+      "distinct_rows": 17,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        5,
+        6,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 16,
+      "real_rank": 16,
+      "sign_rank": 17,
+      "distinct_rows": 18,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        5,
+        7,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 16,
+      "real_rank": 16,
+      "sign_rank": 17,
+      "distinct_rows": 18,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        6,
+        7,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 16,
+      "real_rank": 16,
+      "sign_rank": 17,
+      "distinct_rows": 19,
+      "distinct_columns": 18
+    },
+    {
+      "chosen_bits": [
+        6,
+        8,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 16,
+      "real_rank": 16,
+      "sign_rank": 17,
+      "distinct_rows": 18,
+      "distinct_columns": 19
+    },
+    {
+      "chosen_bits": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 16,
+      "real_rank": 16,
+      "sign_rank": 17,
+      "distinct_rows": 17,
+      "distinct_columns": 17
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        3,
+        9
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 17,
+      "distinct_rows": 22,
+      "distinct_columns": 27
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        3,
+        10
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 17,
+      "distinct_rows": 21,
+      "distinct_columns": 21
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        10,
+        11
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 17,
+      "distinct_rows": 18,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 17,
+      "distinct_rows": 20,
+      "distinct_columns": 23
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 18,
+      "distinct_rows": 18,
+      "distinct_columns": 20
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 18,
+      "distinct_rows": 18,
+      "distinct_columns": 20
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        5,
+        11
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 18,
+      "distinct_rows": 19,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        10,
+        11
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 18,
+      "distinct_rows": 18,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        5,
+        11
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 18,
+      "distinct_rows": 19,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        5,
+        11
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 18,
+      "distinct_rows": 19,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 18,
+      "distinct_rows": 18,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        4,
+        6,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 18,
+      "distinct_rows": 23,
+      "distinct_columns": 31
+    },
+    {
+      "chosen_bits": [
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 18,
+      "distinct_rows": 19,
+      "distinct_columns": 27
+    },
+    {
+      "chosen_bits": [
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 17,
+      "real_rank": 17,
+      "sign_rank": 18,
+      "distinct_rows": 18,
+      "distinct_columns": 30
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        3,
+        6
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 18,
+      "distinct_rows": 20,
+      "distinct_columns": 23
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        3,
+        7
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 18,
+      "distinct_rows": 23,
+      "distinct_columns": 26
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        3,
+        8
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 18,
+      "distinct_rows": 22,
+      "distinct_columns": 29
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        5,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 19,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        5,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 19,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 19,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 19,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        4,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 19,
+      "distinct_columns": 29
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 19,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 19,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 20,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 20,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        4,
+        6,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 22,
+      "distinct_columns": 25
+    },
+    {
+      "chosen_bits": [
+        4,
+        6,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 22,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        4,
+        6,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 20,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        4,
+        7,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 21,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        4,
+        8,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 20,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        5,
+        6,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 20,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        5,
+        6,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 19,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        5,
+        6,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 21,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        5,
+        7,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 18,
+      "real_rank": 18,
+      "sign_rank": 19,
+      "distinct_rows": 20,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        4,
+        11
+      ],
+      "gf2_rank": 19,
+      "real_rank": 19,
+      "sign_rank": 19,
+      "distinct_rows": 19,
+      "distinct_columns": 32
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        4,
+        11
+      ],
+      "gf2_rank": 19,
+      "real_rank": 19,
+      "sign_rank": 20,
+      "distinct_rows": 20,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        5,
+        10
+      ],
+      "gf2_rank": 19,
+      "real_rank": 19,
+      "sign_rank": 20,
+      "distinct_rows": 21,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        10,
+        11
+      ],
+      "gf2_rank": 19,
+      "real_rank": 19,
+      "sign_rank": 20,
+      "distinct_rows": 21,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 19,
+      "real_rank": 19,
+      "sign_rank": 20,
+      "distinct_rows": 21,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 19,
+      "real_rank": 19,
+      "sign_rank": 20,
+      "distinct_rows": 21,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 19,
+      "real_rank": 19,
+      "sign_rank": 20,
+      "distinct_rows": 21,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 19,
+      "real_rank": 19,
+      "sign_rank": 20,
+      "distinct_rows": 21,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        4,
+        6,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 19,
+      "real_rank": 19,
+      "sign_rank": 20,
+      "distinct_rows": 21,
+      "distinct_columns": 32
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        5,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 20,
+      "distinct_rows": 20,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 20,
+      "distinct_rows": 20,
+      "distinct_columns": 32
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 20,
+      "distinct_rows": 20,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        10,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 20,
+      "distinct_rows": 21,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        10,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 20,
+      "distinct_rows": 21,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        9,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 20,
+      "distinct_rows": 21,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        4,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 21,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        5,
+        10
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 22,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 21,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        9,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 21,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        5,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 22,
+      "distinct_columns": 29
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        5,
+        10
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 22,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        10,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 22,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        5,
+        10
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 22,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 22,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 22,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 22,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 23,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 22,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        4,
+        6,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 23,
+      "distinct_columns": 27
+    },
+    {
+      "chosen_bits": [
+        4,
+        7,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 23,
+      "distinct_columns": 32
+    },
+    {
+      "chosen_bits": [
+        4,
+        7,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 20,
+      "real_rank": 20,
+      "sign_rank": 21,
+      "distinct_rows": 21,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 21,
+      "distinct_rows": 21,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        5,
+        9
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 21,
+      "distinct_rows": 21,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        5,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 21,
+      "distinct_rows": 21,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        5,
+        6
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 21,
+      "distinct_rows": 21,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        5,
+        7
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 21,
+      "distinct_rows": 21,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 21,
+      "distinct_rows": 23,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        5,
+        10
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        9,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        5,
+        10
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 23,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        8,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 23,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 23,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 23,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 23,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        6,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        5,
+        10
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 32
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 23,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        1,
+        6,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        9,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        2,
+        6,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        8,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        3,
+        6,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 23,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 23,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 24,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        4,
+        6,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 21,
+      "real_rank": 21,
+      "sign_rank": 22,
+      "distinct_rows": 25,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        5,
+        7
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        5,
+        8
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        5,
+        10
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        9,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        5,
+        10
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        5,
+        9
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        5,
+        10
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 23,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        5,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        5,
+        9
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        6,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 24,
+      "distinct_columns": 27
+    },
+    {
+      "chosen_bits": [
+        0,
+        6,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 24,
+      "distinct_columns": 28
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        5,
+        9
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        5,
+        9
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        5,
+        9
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        5,
+        9
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 22,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        9,
+        10
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 23,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 22,
+      "distinct_rows": 24,
+      "distinct_columns": 32
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        9,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        9,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        8,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        4,
+        10
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 25,
+      "distinct_columns": 27
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        9,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        9,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        8,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        6,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 24,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 24,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 25,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 24,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        4,
+        6,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        4,
+        7,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 22,
+      "real_rank": 22,
+      "sign_rank": 23,
+      "distinct_rows": 25,
+      "distinct_columns": 26
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        4,
+        10
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 25,
+      "distinct_columns": 30
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        8,
+        10
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 25,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        5,
+        8
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        5,
+        9
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        5,
+        6
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        5,
+        8
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        5,
+        9
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        5,
+        8
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 25,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 24,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 24,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 24,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        0,
+        6,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 24,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        0,
+        6,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 24,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 30
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        4,
+        9
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 24,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 25,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 24,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        3,
+        6,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 26,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 23,
+      "distinct_rows": 23,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        4,
+        10
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 31
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        4,
+        10
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 26,
+      "distinct_columns": 31
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        6,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        9,
+        10
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        7,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        0,
+        7,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 56
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        5,
+        8
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        1,
+        7,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        1,
+        8,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        2,
+        7,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        2,
+        8,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        8,
+        10
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 56
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        3,
+        7,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        3,
+        8,
+        9,
+        10,
+        11
+      ],
+      "gf2_rank": 23,
+      "real_rank": 23,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        6,
+        7
+      ],
+      "gf2_rank": 22,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 29
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        4,
+        9
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        6,
+        7
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 29,
+      "distinct_columns": 29
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        6,
+        8
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 29,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        6,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        10,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        4,
+        9
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        5,
+        7
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        9,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        10,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        5,
+        7
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        8,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 26,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 26,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        5,
+        6
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        5,
+        7
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        5,
+        8
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        8,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        5,
+        7
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        8,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        9,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        6,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 30
+    },
+    {
+      "chosen_bits": [
+        0,
+        6,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        0,
+        7,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        4,
+        7
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        6,
+        8
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        6,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        8,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        5,
+        8
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        8,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        5,
+        7
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        10,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 27,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        1,
+        6,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 27,
+      "distinct_columns": 32
+    },
+    {
+      "chosen_bits": [
+        1,
+        6,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 26,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 27,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        2,
+        6,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 25,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        2,
+        6,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 26,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 27,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 24,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 24,
+      "distinct_rows": 27,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        8,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        8,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        8,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        8,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 57
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        8,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        7,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        8,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        8,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        8,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 27,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 56
+    },
+    {
+      "chosen_bits": [
+        1,
+        7,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        6,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        8,
+        9
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        9,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        8,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 27,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 60
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        2,
+        6,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 27,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        2,
+        7,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        6,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        7,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        7,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 27,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        3,
+        7,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        4,
+        6,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 24,
+      "real_rank": 24,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 30
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        4,
+        6
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 32
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        6,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        6,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 27,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        7,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 28,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        7,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 27,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        9,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        4,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        6,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 28,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        6,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        6,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        8,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        6,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        6,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        7,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        9,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 27,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        4,
+        7
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        6,
+        7
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 32
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        8,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 27,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        8,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        10,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        6,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        6,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        7,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        9,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 28,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        6,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        7,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        8,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        6,
+        7
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        6,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        7,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        0,
+        6,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        6,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        6,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        7,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        7,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        8,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        9,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        6,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        6,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        9,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 27,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        1,
+        6,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        1,
+        6,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        1,
+        6,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 27,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 27,
+      "distinct_columns": 31
+    },
+    {
+      "chosen_bits": [
+        2,
+        6,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        3,
+        6,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 25,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        3,
+        6,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 26,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        3,
+        6,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 25,
+      "distinct_rows": 27,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        6,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        7,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        6,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 58
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 28,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 57
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        7,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        8,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        8,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 28,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 28,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 56
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 28,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 56
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 25,
+      "real_rank": 25,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        4,
+        8
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        7,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        8,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        8,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        4,
+        6
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        7,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        8,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        9,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        7,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        9,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        6,
+        7
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 28,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        6,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        6,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        6,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        7,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 28,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 28,
+      "distinct_columns": 31
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 30,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        4,
+        8
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        6,
+        8
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        6,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 28,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        6,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        6,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        7,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        7,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        6,
+        7
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        6,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        6,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 28,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        6,
+        7
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        6,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        6,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        8,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 28,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 28,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        4,
+        8
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        7,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        7,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        7,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        8,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        9,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        6,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        7,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 57
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        8,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        8,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 28,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        9,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        6,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        1,
+        6,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        1,
+        7,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        6,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        7,
+        8
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        6,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        9,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 27,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        2,
+        6,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        2,
+        6,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        2,
+        7,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        6,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        8,
+        9
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        3,
+        6,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        3,
+        6,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        3,
+        7,
+        8,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 26,
+      "distinct_rows": 26,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        9,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        7,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 29
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 56
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        6,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 56
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        8,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 29,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 59
+    },
+    {
+      "chosen_bits": [
+        1,
+        6,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        6,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 57
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        8,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 29,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 58
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 56
+    },
+    {
+      "chosen_bits": [
+        2,
+        6,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        3,
+        6,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 26,
+      "real_rank": 26,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        4,
+        7
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        2,
+        7,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        4,
+        7
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 36
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        6,
+        7
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 29,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        6,
+        8
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        7,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        7,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        8,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        8,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        7,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 29,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 29,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 30,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        7,
+        8
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        7,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        7,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        8,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        3,
+        9,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        9,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        6,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        7,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 58
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        7,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 59
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        8,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 29,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        6,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        8,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        6,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        7,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 57
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        7,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 58
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 29,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 29,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        6,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        5,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        3,
+        8,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        6,
+        7
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        6,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        8,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 29,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        6,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        9,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        7,
+        8
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 29,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        7,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        7,
+        9,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 28,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 31,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        3,
+        5,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 27,
+      "distinct_rows": 27,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        8,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 28,
+      "distinct_rows": 30,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        6,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        7,
+        10
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        8,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 27,
+      "real_rank": 27,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 59
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        3,
+        7,
+        8
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        8,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        5,
+        7,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 30,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        6,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        8,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        8,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        5,
+        7,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 59
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        6,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        7,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        7,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        5,
+        7,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 57
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 31,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        5,
+        7,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 30,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        0,
+        6,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 33
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        6,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        6,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 30,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        7,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        7,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        8,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        7,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 61
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        5,
+        7,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 59
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        6,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        7,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        7,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        6,
+        8
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 34
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        6,
+        10,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        6,
+        8
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        7,
+        8
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 31,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 30,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        1,
+        5,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        4,
+        7,
+        8
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        6,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 56
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        6,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        6,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        7,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 58
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        8,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        6,
+        8
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        7,
+        8
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 31,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 30,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        2,
+        5,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        5,
+        7,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        6,
+        7,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 28,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 29,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 28,
+      "distinct_rows": 30,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        8,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 56
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        6,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        7,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        7,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 62
+    },
+    {
+      "chosen_bits": [
+        1,
+        7,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        6,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        7,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        7,
+        11
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 63
+    },
+    {
+      "chosen_bits": [
+        2,
+        7,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 28,
+      "real_rank": 28,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        6,
+        7
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 31,
+      "distinct_columns": 35
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        6,
+        8
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 31,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        6,
+        9
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        6,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        7,
+        8
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 32,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        7,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 31,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 31,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 31,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 31,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 37
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        6,
+        7
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        6,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        7,
+        8
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        7,
+        9
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        7,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 56
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        6,
+        7
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 31,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        6,
+        8
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 31,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        6,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 31,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        7,
+        8
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 31,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        6,
+        7
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 31,
+      "distinct_columns": 38
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        7,
+        8
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        7,
+        8
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        6,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        7,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 59
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        8,
+        9
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        1,
+        6,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        6,
+        9,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        8,
+        9
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        2,
+        6,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 30,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        3,
+        6,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 29,
+      "distinct_rows": 29,
+      "distinct_columns": 43
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 30,
+      "distinct_rows": 31,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 29,
+      "real_rank": 29,
+      "sign_rank": 30,
+      "distinct_rows": 31,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        4,
+        7,
+        9
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 31,
+      "distinct_columns": 40
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        4,
+        6,
+        8
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 31,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 31,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 31,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        0,
+        2,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        4,
+        7,
+        10
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 31,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 31,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        0,
+        3,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 31,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        0,
+        4,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        4,
+        6,
+        8
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        6,
+        8
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 47
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        6,
+        10
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 32,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        8,
+        10
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        6,
+        9
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        6,
+        11
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        8,
+        9
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        6,
+        7,
+        9
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        6,
+        7,
+        11
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 42
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        7,
+        8,
+        9
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        7,
+        8,
+        11
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        6,
+        9
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        7,
+        9
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 60
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 60
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 32,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 31,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        2,
+        3,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 32,
+      "distinct_columns": 45
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 49
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        6,
+        9
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 52
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 30,
+      "real_rank": 30,
+      "sign_rank": 30,
+      "distinct_rows": 30,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        0,
+        1,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 31,
+      "distinct_columns": 41
+    },
+    {
+      "chosen_bits": [
+        1,
+        2,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 31,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 31,
+      "distinct_columns": 39
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        4,
+        7,
+        10
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 31,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        6,
+        8,
+        9
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 31,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 31,
+      "distinct_columns": 48
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        6,
+        8,
+        11
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 31,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 32,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 31,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 31,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 32,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 31,
+      "distinct_columns": 53
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        7,
+        8,
+        10
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 31,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 32,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        3,
+        4,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 31,
+      "distinct_rows": 32,
+      "distinct_columns": 46
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        8,
+        10,
+        11
+      ],
+      "gf2_rank": 31,
+      "real_rank": 31,
+      "sign_rank": 32,
+      "distinct_rows": 32,
+      "distinct_columns": 51
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "gf2_rank": 32,
+      "real_rank": 32,
+      "sign_rank": 32,
+      "distinct_rows": 32,
+      "distinct_columns": 59
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        5,
+        7,
+        11
+      ],
+      "gf2_rank": 32,
+      "real_rank": 32,
+      "sign_rank": 32,
+      "distinct_rows": 32,
+      "distinct_columns": 59
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        7,
+        9,
+        10
+      ],
+      "gf2_rank": 32,
+      "real_rank": 32,
+      "sign_rank": 32,
+      "distinct_rows": 32,
+      "distinct_columns": 50
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        7,
+        10,
+        11
+      ],
+      "gf2_rank": 32,
+      "real_rank": 32,
+      "sign_rank": 32,
+      "distinct_rows": 32,
+      "distinct_columns": 54
+    },
+    {
+      "chosen_bits": [
+        1,
+        3,
+        8,
+        9,
+        10
+      ],
+      "gf2_rank": 32,
+      "real_rank": 32,
+      "sign_rank": 32,
+      "distinct_rows": 32,
+      "distinct_columns": 44
+    },
+    {
+      "chosen_bits": [
+        1,
+        4,
+        5,
+        7,
+        9
+      ],
+      "gf2_rank": 32,
+      "real_rank": 32,
+      "sign_rank": 32,
+      "distinct_rows": 32,
+      "distinct_columns": 55
+    },
+    {
+      "chosen_bits": [
+        2,
+        4,
+        5,
+        7,
+        9
+      ],
+      "gf2_rank": 32,
+      "real_rank": 32,
+      "sign_rank": 32,
+      "distinct_rows": 32,
+      "distinct_columns": 56
+    }
+  ]
+}
