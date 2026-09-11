@@ -1,0 +1,33 @@
+{
+  "seed": 20260911,
+  "physical_matching": [
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      4,
+      10
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      7,
+      11
+    ]
+  ],
+  "mpo_process_fidelity": 8.044477339940767e-08,
+  "dense_process_fidelity": 8.044477339940367e-08,
+  "absolute_difference": 3.99693671985623e-21,
+  "verified": true
+}

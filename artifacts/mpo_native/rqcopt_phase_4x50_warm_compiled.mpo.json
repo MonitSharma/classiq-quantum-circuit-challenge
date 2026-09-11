@@ -1,0 +1,5 @@
+{
+  "qasm": "artifacts/mpo_native/rqcopt_phase_4x50_warm_compiled.qasm",
+  "mpo_process_fidelity": 0.3019871591263913,
+  "verification": "exact MPO contraction of serialized u3/cx circuit; approximate target is expected"
+}

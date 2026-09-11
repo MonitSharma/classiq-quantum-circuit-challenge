@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 artifacts/bdd_dirty_reversible.qasm
+external/rqcopt-mpo/

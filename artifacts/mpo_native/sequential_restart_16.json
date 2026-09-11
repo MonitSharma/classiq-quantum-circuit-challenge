@@ -1,0 +1,32 @@
+{
+  "architecture": "sequential four-ancilla memory with 32x32 unitary blocks",
+  "memory_dimension": 16,
+  "blocks": 12,
+  "block_dimension": 32,
+  "seed": 16,
+  "initialization": "haar",
+  "sweeps": 15,
+  "initial_process_fidelity": 8.981511800958011e-10,
+  "final_process_fidelity": 0.26615565385931406,
+  "history": [
+    0.19505434020850732,
+    0.2636121150487912,
+    0.2655668341934669,
+    0.26594364513892826,
+    0.2660637055094731,
+    0.26611078635703544,
+    0.26613166731063065,
+    0.2661420396025655,
+    0.26614768012203105,
+    0.266150942808003,
+    0.266152905220161,
+    0.26615411397222255,
+    0.2661548701234268,
+    0.2661553484700371,
+    0.26615565385931406
+  ],
+  "wall_time_seconds": 0.1890400000847876,
+  "clean_memory_boundary": true,
+  "promoted": false,
+  "reason": "abstract 32x32 block ansatz; no two-qubit decomposition or verification"
+}

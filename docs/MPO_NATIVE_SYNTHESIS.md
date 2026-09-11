@@ -1,0 +1,190 @@
+# MPO-native synthesis campaign
+
+## Status
+
+This campaign is on branch `mpo-native-synthesis`. It optimizes the target
+diagonal unitary directly rather than computing `logo(x,y)` into a classical
+workspace. No submitted or verified competition circuit has been produced
+yet. The protected `artifacts/524/full_mux_feature_linear_tket_524.qasm` file
+is unchanged.
+
+## Structural reproduction
+
+The first milestone is implemented in `src/mpo_target.py`. It constructs the
+sign tensor directly from `src/search.py::logo`, using the explicit tensor-axis
+order
+
+```text
+q0, q1, q2, q3, q4, q5, q11, q8, q6, q7, q9, q10
+```
+
+The reproducible command is:
+
+```sh
+.venv/bin/python src/mpo_target.py
+```
+
+The current deterministic report is
+`artifacts/mpo_native/structural_report.json`. It records:
+
+| Quantity | Result |
+|---|---:|
+| Marked states | 1097 / 4096 |
+| Sign-table SHA-256 | `9013c7bf82abcb1cbbcfff367b7321fb02c2a1cc1ba26ab2051640fd9b0eba13` |
+| TT ranks, including endpoints | `[1, 2, 4, 8, 11, 12, 11, 12, 13, 8, 4, 2, 1]` |
+| Maximum TT rank | 13 |
+| Maximum TT reconstruction error | `2.01e-13` |
+| Maximum diagonal-MPO basis-action error | `2.01e-13` |
+| Ordinary sign-matrix rank across x\|y | 11 |
+
+The decomposition is saved as `artifacts/mpo_native/target_tt.npz`; the
+diagonal MPO cores are saved separately as
+`artifacts/mpo_native/target_mpo.npz`. The sign table is saved as
+`artifacts/mpo_native/target_signs.npy`.
+
+The TT ranks are numerical ranks from double-precision SVD with a relative
+cutoff of `1e-12`. Reconstruction is checked over every tensor entry, and the
+MPO action is checked over every 12-bit basis string. This establishes the
+claimed tensor structure, but it does not establish a shallow circuit: MPO
+bond dimension is not a depth bound, and TT cores are not automatically
+unitary or isometric.
+
+The same report includes two comparison orders. The natural challenge order
+has maximum TT rank 17, and the reverse order also has maximum rank 17. Thus
+the rank-13 result is not a generic artifact of the tensor dimensions; the
+interleaved order is materially better for this target.
+
+## Planned synthesis experiments
+
+The next bounded experiment should optimize a full-operator objective for
+12-qubit circuits with no ancillas. Candidate circuits must be evaluated as
+operators, not by state fidelity or diagonal entries alone. The process
+fidelity target is
+
+```text
+|Tr(U_target† V)|² / 4096²
+```
+
+The initial topology ladder should include TT-order matchings, all-to-all
+round-robin matchings, and explicit x-y matchings at 4, 6, 8, 10, 12, 16,
+20, and 24 parallel two-qubit layers. Every promising result must eventually
+be decomposed to exact `u3`/`cx` QASM and checked with the repository's
+exhaustive verifier and dense random-state verifier. No abstract SU(4) depth
+or optimizer loss will be treated as a competition result.
+
+The optimizer must also preserve arbitrary input states. Any future use of
+Qiskit transpilation for reusable circuit pieces must pass
+`qubits_initially_zero=False`, consistent with the repository-wide correctness
+rule.
+
+`src/mpo_contract.py` provides an exact local MPO application and
+Hilbert--Schmidt contraction for adjacent TT-order gates. Its cross-check is
+`src/mpo_contract_smoke.py`; the recorded result in
+`artifacts/mpo_native/contraction_smoke.json` agrees with dense Qiskit output
+to `1.48e-22` absolute process-fidelity difference for a random six-gate
+layer. This validates the tensor index convention and provides the future
+optimizer with a non-dense objective path.
+
+The pinned Riemannian smoke wrapper is `src/mpo_rqcopt_smoke.py`. It now uses a
+phase-invariant process loss based on `|Tr(U_target^dagger V)|`, with the
+phase-aligned gradient projected onto each SU(4) tangent space. A bounded
+100-iteration, 2-layer, near-identity run improved process fidelity from
+`0.1407954265` to `0.2944914418`. A warm-started 4-layer run improved from
+`0.2944914418` to `0.3019871592` in 50 iterations. These are feasibility
+signals only, not candidates: they use abstract two-qubit gates and have not
+been decomposed or exhaustively verified as challenge QASM. Identity
+initialization is stationary for the first-order objective at this target, so
+near-identity or random restarts are necessary. Run records append to
+`artifacts/mpo_native/progress.jsonl`.
+
+The 4-layer/50-iteration warm checkpoint compiles to a 12-qubit diagnostic
+QASM circuit at **depth 25 / 64 CX** (`artifacts/mpo_native/rqcopt_phase_4x50_warm_compiled.qasm`, SHA
+`551c977d3bc7423456abde4f0c01d884239e586e325f9a7a29545436e3e91e0a`). Its
+abstract process fidelity is `0.3019871592`; it is explicitly not promoted,
+because approximate process fidelity is not the challenge's exact oracle
+criterion. Replaying the serialized QASM through the MPO contraction gives
+`0.3019871591263913`, an absolute difference of about `6.7e-11` from the
+abstract checkpoint. Exact challenge verification remains pending.
+
+A 6-layer warm start from that 4-layer checkpoint reached `0.3019961070` in
+20 iterations, effectively a plateau. This is an early warning that simply
+adding identity-initialized layers is not sufficient; the next useful run
+should vary topology, restart phase, or optimize the native decomposed
+topology rather than blindly increasing layer count.
+
+A reduced-step 100-iteration continuation of the 4-layer checkpoint reached
+only `0.3020024344`, confirming that the earlier 0.302 plateau is not chiefly
+an insufficient iteration count.
+
+An 8-layer warm-start probe was also negative: after 10 iterations it reached
+`0.3019521264`, slightly below the 4-layer checkpoint, with the added identity
+layers introducing phase drift. The current adjacent-chain/RieADAM family is
+therefore closed for now; further effort should change the interaction
+topology or optimizer parameterization rather than extend this ladder.
+
+As a bounded order control, 2-layer near-identity runs for 50 iterations
+reached process fidelities `0.2177549926` in natural challenge order and
+`0.2233680863` in reverse order, versus the interleaved TT-order campaign's
+much stronger 4-layer result. This supports retaining the interleaved order as
+the current chain topology, while leaving all-to-all matching topologies as
+the next major structural experiment.
+
+An explicit alternating x-y order `(x0,y0,x1,y1,...,x5,y5)` was also tested
+for 2 layers and 50 iterations. It reached `0.2189523424`, only modestly above
+the identity baseline. Its exact TT maximum rank is 26, versus 13 for the
+interleaved order, so this first cross-register chain is not competitive. It
+does not rule out a genuinely non-chain all-to-all matching circuit.
+
+A reproducible 100-sample permutation screen is implemented in
+`src/search_mpo_orders.py`. With seed `20260911`, the best sampled order was
+the existing interleaved order at maximum TT rank 13; every random order was
+at least 22. This is not an exhaustive ordering proof, but it removes the
+most immediate possibility that a simple relabeling gives a better chain
+ansatz.
+
+The true non-chain evaluation primitive is now implemented in
+`src/mpo_contract.py::apply_nonadjacent_gate`. It contracts the full MPO
+window between two sites and re-splits it exactly, without adding SWAP gates.
+`src/mpo_nonadjacent_smoke.py` validates a six-gate long-range round-robin
+matching against dense Qiskit: process fidelities agree to `4.0e-21`. This is
+an evaluation foundation for the next all-to-all optimizer; it is not yet an
+optimized candidate.
+
+## External optimizer assessment
+
+The public `INMLe/rqcopt-mpo` repository is relevant: its brick-wall routines
+take a reference MPO and compute full operator overlaps and Riemannian
+gradients for local unitary gates. It is not merely a state-preparation
+library. However, the supplied implementation is organized around JAX,
+one-dimensional/swap-network layouts, and its model-specific configuration
+layer. JAX/JAXLIB `0.4.38` is now installed in the existing `.venv` solely for
+this bounded adapter; it is not a new environment or an unmodified upstream
+long-running campaign. The upstream README and implementation are pinned and
+adapted only through local target-objective smoke tests.
+
+The source is locally inspected under `external/rqcopt-mpo/` at commit
+`95f0898f7baa6579de512eba8b00386bd6b05217`. It remains ignored from the main
+repository history; the commit pin is recorded here for reproducibility.
+
+The immediate local topology support is in `src/mpo_topologies.py`. It emits
+disjoint all-to-all matchings and TT-order brick-wall layers without inserting
+physical SWAPs. This separates topology generation from the eventual choice
+of optimizer.
+
+## Operator-objective smoke test
+
+`src/mpo_objective.py` provides an exact dense diagnostic for small bounded
+experiments. Run it with:
+
+```sh
+.venv/bin/python src/mpo_objective.py
+```
+
+The current smoke output is in
+`artifacts/mpo_native/objective_smoke.jsonl`. Identity has process fidelity
+`0.21562600135803223`, exactly matching the squared normalized trace of the
+sign target. A random six-gate matching layer has process fidelity about
+`5.84e-9` and normalized off-diagonal Frobenius leakage about `0.99987`.
+This confirms that the objective is measuring the full operator rather than
+only diagonal agreement. The dense path is deliberately not the eventual
+training loop; it is the correctness oracle for later MPO contractions.

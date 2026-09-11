@@ -1,0 +1,27 @@
+{
+  "architecture": "four-ancilla MPO-inspired bus",
+  "bus_qubits": 4,
+  "buses_per_data": 2,
+  "two_qubit_gates": 24,
+  "sweeps": 10,
+  "seed": 1,
+  "initialization": "haar",
+  "initial_clean_subspace_process_fidelity": 6.496054102791045e-09,
+  "final_clean_subspace_process_fidelity": 0.25971970460131766,
+  "history": [
+    0.004912193613002063,
+    0.07288219719904375,
+    0.24068050772635607,
+    0.25264399310255475,
+    0.2541026848126919,
+    0.25495419928252344,
+    0.25578177974156385,
+    0.2568324849457743,
+    0.2581815642362644,
+    0.25971970460131766
+  ],
+  "wall_time_seconds": 4.35936241701711,
+  "ancillas_initialized_and_projected_to_zero": true,
+  "promoted": false,
+  "reason": "ansatz diagnostic; no native QASM promotion"
+}

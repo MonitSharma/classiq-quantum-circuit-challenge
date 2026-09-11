@@ -1,0 +1,14 @@
+{
+  "checkpoint": "artifacts/mpo_native/gate_sweep_rr_4x5.npz",
+  "qasm": "artifacts/mpo_native/gate_sweep_rr_4x5.qasm",
+  "sha256": "a1e36f28976369cc12990f303f63264be06c22dc28382d69c96499f9794f9f75",
+  "width": 12,
+  "depth": 17,
+  "cx_count": 48,
+  "basis": [
+    "cx",
+    "u3"
+  ],
+  "promoted": false,
+  "reason": "abstract MPO gate-sweep checkpoint; approximate and not exhaustively verified"
+}
