@@ -142,6 +142,14 @@ at least 22. This is not an exhaustive ordering proof, but it removes the
 most immediate possibility that a simple relabeling gives a better chain
 ansatz.
 
+The true non-chain evaluation primitive is now implemented in
+`src/mpo_contract.py::apply_nonadjacent_gate`. It contracts the full MPO
+window between two sites and re-splits it exactly, without adding SWAP gates.
+`src/mpo_nonadjacent_smoke.py` validates a six-gate long-range round-robin
+matching against dense Qiskit: process fidelities agree to `4.0e-21`. This is
+an evaluation foundation for the next all-to-all optimizer; it is not yet an
+optimized candidate.
+
 ## External optimizer assessment
 
 The public `INMLe/rqcopt-mpo` repository is relevant: its brick-wall routines

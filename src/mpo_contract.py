@@ -56,6 +56,80 @@ def apply_adjacent_gate(
     return out
 
 
+def _embedded_local_gate(gate: np.ndarray, n_sites: int, first: int, second: int) -> np.ndarray:
+    """Embed a two-site gate in an n-site local basis (first site is MSB)."""
+    gate = np.asarray(gate, dtype=np.complex128).reshape(4, 4)
+    dimension = 2**n_sites
+    embedded = np.zeros((dimension, dimension), dtype=np.complex128)
+    for column in range(dimension):
+        bits = [(column >> (n_sites - 1 - i)) & 1 for i in range(n_sites)]
+        local_column = 2 * bits[first] + bits[second]
+        for local_row in range(4):
+            row_bits = bits.copy()
+            row_bits[first] = local_row >> 1
+            row_bits[second] = local_row & 1
+            row = sum(bit << (n_sites - 1 - i) for i, bit in enumerate(row_bits))
+            embedded[row, column] = gate[local_row, local_column]
+    return embedded
+
+
+def _split_operator_window(tensor: np.ndarray, n_sites: int, max_bond: int | None) -> list[np.ndarray]:
+    """Split a window shaped (left, input..., output..., right) into MPO cores."""
+    left, _, _, right = tensor.shape
+    tensor = tensor.reshape(left, 2**n_sites, 2**n_sites, right)
+    tensor = tensor.reshape((left,) + (2,) * n_sites + (2,) * n_sites + (right,))
+    permutation = [0]
+    for i in range(n_sites):
+        permutation.extend((1 + i, 1 + n_sites + i))
+    permutation.append(2 * n_sites + 1)
+    tensor = np.transpose(tensor, permutation)
+    cores = []
+    bond = left
+    remaining = tensor
+    for site in range(n_sites - 1):
+        matrix = remaining.reshape(bond * 4, -1)
+        u, singular, vh = np.linalg.svd(matrix, full_matrices=False)
+        rank = len(singular) if max_bond is None else min(len(singular), max_bond)
+        u = u[:, :rank]
+        cores.append(u.reshape(bond, 2, 2, rank))
+        remaining = (singular[:rank, None] * vh[:rank]).reshape(
+            (rank,) + remaining.shape[3:]
+        )
+        bond = rank
+    cores.append(remaining.reshape(bond, 2, 2, right))
+    return cores
+
+
+def apply_nonadjacent_gate(
+    mpo: Sequence[np.ndarray], first: int, second: int, gate: np.ndarray, max_bond: int | None = None
+) -> list[np.ndarray]:
+    """Left-apply a gate to arbitrary sites without physical SWAP gates."""
+    if first == second or not (0 <= first < len(mpo) and 0 <= second < len(mpo)):
+        raise ValueError("gate sites must be distinct MPO slots")
+    if first > second:
+        first, second = second, first
+    window = list(mpo[first : second + 1])
+    merged = window[0]
+    for core in window[1:]:
+        merged = np.tensordot(merged, core, axes=(-1, 0))
+    n_sites = second - first + 1
+    # Current merged axes are left, (input,output)*n, right.  Separate them
+    # into input and output blocks before applying the embedded gate.
+    permutation = [0]
+    permutation.extend(1 + 2 * i for i in range(n_sites))
+    permutation.extend(2 + 2 * i for i in range(n_sites))
+    permutation.append(2 * n_sites + 1)
+    merged = np.transpose(merged, permutation)
+    left, right = merged.shape[0], merged.shape[-1]
+    merged = merged.reshape(left, 2**n_sites, 2**n_sites, right)
+    embedded = _embedded_local_gate(gate, n_sites, 0, n_sites - 1)
+    merged = np.einsum("co,lior->licr", embedded, merged)
+    replacement = _split_operator_window(merged, n_sites, max_bond)
+    out = list(mpo)
+    out[first : second + 1] = replacement
+    return out
+
+
 def apply_layer(
     mpo: Sequence[np.ndarray], gates: Mapping[int, np.ndarray], max_bond: int | None = None
 ) -> list[np.ndarray]:
