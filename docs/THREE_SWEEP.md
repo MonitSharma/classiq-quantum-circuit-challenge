@@ -114,6 +114,19 @@ phase work across row classes before lowering to multi-controlled gadgets.
 Artifact: `artifacts/three_sweep/interleaved_decoder.qasm`; its matching report
 is `artifacts/three_sweep/interleaved_decoder.exhaustive.json`.
 
+## Nested shell-sharing baseline
+
+The half-row masks have visible nested interval structure, so a shell-sharing
+decoder was tested: each x-shell is applied once and conditioned on a range of
+reachable code levels rather than decoding every class independently. It is
+exactly verified, but scores **5413 depth / 4030 CX**, worse than the direct
+reachable-code decoder. The native multi-controlled lowering of the code-range
+predicates costs more than the abstract shell sharing saves. This closes the
+obvious nested-shell variant.
+
+Artifact: `artifacts/three_sweep/shell_decoder.qasm`; its matching report is
+`artifacts/three_sweep/shell_decoder.exhaustive.json`.
+
 ## Decision rule
 
 The loader is promising at depth <=72 and is stopped for rank-1 purposes above
