@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/three_sweep/interleaved_decoder.qasm",
+  "sha256": "0cc015ac6c7862fd35440d984997ba37981c01c31f3114090c4d82c570c5bfd6",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 3917,
+  "cx_count": 3176,
+  "max_error": 6.751287259035549e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 5.810331814913087e-13,
+  "peak_sparse_support": 256,
+  "elapsed_seconds": 36.12209606170654,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

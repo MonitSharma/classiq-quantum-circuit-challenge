@@ -100,6 +100,20 @@ direct-UCR middle-stage test. Further work would have to use genuinely
 interleaved non-UCR gates; expanding the number of independent phase tracks is
 not a credible route to the leaderboard depth.
 
+## Reachable-code decoder baseline
+
+The first genuinely interleaved construction was also implemented: it loads
+the verified 3+3 code, applies exact ESOP phase terms conditioned on the
+corresponding code bank and `y5`, then uncomputes the loader. The serialized
+QASM is exhaustively verified on all 4096 clean-ancilla inputs, with zero
+ancilla leakage, but scores **3917 depth / 3176 CX / 18 qubits**. This closes
+the straightforward reachable-code decoder. It demonstrates that exploiting
+unreachable code words alone is not enough; the missing construction must share
+phase work across row classes before lowering to multi-controlled gadgets.
+
+Artifact: `artifacts/three_sweep/interleaved_decoder.qasm`; its matching report
+is `artifacts/three_sweep/interleaved_decoder.exhaustive.json`.
+
 ## Decision rule
 
 The loader is promising at depth <=72 and is stopped for rank-1 purposes above
