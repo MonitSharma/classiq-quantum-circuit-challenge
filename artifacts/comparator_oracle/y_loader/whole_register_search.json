@@ -1,9 +1,16 @@
 {
-  "max_gates": 18,
-  "beam_width": 4000,
-  "best_score": 157,
+  "max_gates": 16,
+  "beam_width": 1500,
+  "best_score": 159,
   "max_score": 256,
+  "best_exact_score": 157,
   "best_gate_count": 4,
+  "best_output_wires": [
+    0,
+    1,
+    4,
+    5
+  ],
   "best_history": [
     {
       "name": "x",
@@ -15,20 +22,20 @@
       "controls": [
         1
       ],
-      "target": 4
+      "target": 2
     },
     {
       "name": "cx",
       "controls": [
         1
       ],
-      "target": 5
+      "target": 3
     },
     {
       "name": "rccx",
       "controls": [
-        4,
-        5
+        2,
+        3
       ],
       "target": 1
     }

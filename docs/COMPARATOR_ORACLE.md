@@ -58,6 +58,21 @@ closes this ESOP/relative-phase-MCX lowering.
 
 The protected 524/950 artifact under `artifacts/524/` was not modified.
 
+## Co-designed in-place monomial embedding
+
+The remaining variant searched the complete six-wire semantic state under
+X/CX/RCCX transformations. Four output wires were selected jointly from all
+`6P4` placements; the two remaining wires were unrestricted garbage. A
+1500-state beam was run through 16 primitives. The best fast-bound score was
+159/256 and the best exact distinct-wire score was 157/256; no exact `(b,m)`
+boundary map was found. The report is
+`artifacts/comparator_oracle/y_loader/whole_register_search.json`.
+
+This closes the tested co-designed monomial embedding search, but not every
+possible reversible embedding or phase-tolerant QROM traversal. Since no
+exact candidate was found, there is no native loader depth to promote and the
+<=70-depth GO condition was not met.
+
 ## Shared-address descriptor screen
 
 The follow-up hypothesis was tested mathematically before circuit generation

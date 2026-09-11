@@ -50,3 +50,11 @@ terms, 366 literals, degree 8, and dense 8-bit Walsh support (256/256).
 This is not an impossibility proof for a genuinely phase-tolerant shared
 traversal, but it falsifies the unsupported inference that compact addresses
 automatically yield a <=55-depth kernel.  No QROM circuit was generated.
+
+The final co-designed monomial embedding probe searched whole six-wire
+X/CX/RCCX semantic permutations, allowing arbitrary placement of the four
+required y-code bits and two garbage wires. A 1500-state beam through 16
+primitives found no exact boundary map; its best exact distinct-wire score was
+157/256. This closes the tested monomial embedding family, not every
+reversible or phase-tolerant QROM construction. No x-side or full oracle was
+started because the exact y embedding never reached the <=70-depth gate.

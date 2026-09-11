@@ -5,7 +5,6 @@ four designated boundary wires are scored; the other two are unrestricted
 garbage.  This is a bounded falsification probe, not an optimality proof.
 """
 
-import heapq
 import json
 import itertools
 from pathlib import Path
@@ -45,9 +44,10 @@ def apply(state, gate):
 
 
 def score(state):
-    return max(sum(64 - (state[wire] ^ TARGET[i]).bit_count()
-                   for i, wire in enumerate(mapping))
-               for mapping in OUTPUT_MAPS)
+    # Fast admissible upper bound for beam ordering.  Exact distinct-wire
+    # assignment is checked by best_mapping() for the reported state.
+    return sum(max(64 - (state[wire] ^ TARGET[i]).bit_count()
+                   for wire in range(6)) for i in range(4))
 
 
 def best_mapping(state):
@@ -56,7 +56,13 @@ def best_mapping(state):
                                        for i, wire in enumerate(mapping)))
 
 
-def main(max_gates=18, beam_width=4000):
+def exact_score(state):
+    mapping = best_mapping(state)
+    return sum(64 - (state[wire] ^ TARGET[i]).bit_count()
+               for i, wire in enumerate(mapping))
+
+
+def main(max_gates=8, beam_width=500):
     initial = tuple(1 << i for i in range(6))
     beam = [(score(initial), initial, ())]
     seen = {initial}
@@ -85,6 +91,7 @@ def main(max_gates=18, beam_width=4000):
     report = {
         "max_gates": max_gates, "beam_width": beam_width,
         "best_score": best[0], "max_score": 256,
+        "best_exact_score": exact_score(best[1]),
         "best_gate_count": len(best[2]),
         "best_output_wires": list(best_mapping(best[1])),
         "best_history": [{"name": n, "controls": list(c), "target": t}

@@ -18,6 +18,16 @@ degree 8, and 256/256 nonzero Walsh coefficients. This weakens the proposed
 phase-tolerant traversal. Details are in `src/shared_address_descriptor.py`
 and `artifacts/shared_address_descriptor/descriptor_report.json`.
 
+## Shared-address and monomial-embedding checkpoint (September 11, 2026)
+
+The shared-address QROM screen found 11 row and 11 column classes, requiring
+4+4 descriptor bits; the best 2000-sample label screen left an 86-term,
+366-literal degree-8 kernel. The follow-up whole-register X/CX/RCCX beam allowed
+arbitrary placement of four y-code bits and two garbage wires, but found no
+exact boundary map through 16 primitives (best exact score 157/256). These are
+bounded closures of the tested descriptor and monomial families, not
+impossibility proofs against every phase-tolerant traversal.
+
 ## State at handoff
 
 Updated September 10, 2026. The user wants the top rank, and the workspace now records the full experiment history, including failures. This is a research/optimization workspace, not a finished rank-1 submission.
