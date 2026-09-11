@@ -116,6 +116,12 @@ A reduced-step 100-iteration continuation of the 4-layer checkpoint reached
 only `0.3020024344`, confirming that the earlier 0.302 plateau is not chiefly
 an insufficient iteration count.
 
+An 8-layer warm-start probe was also negative: after 10 iterations it reached
+`0.3019521264`, slightly below the 4-layer checkpoint, with the added identity
+layers introducing phase drift. The current adjacent-chain/RieADAM family is
+therefore closed for now; further effort should change the interaction
+topology or optimizer parameterization rather than extend this ladder.
+
 As a bounded order control, 2-layer near-identity runs for 50 iterations
 reached process fidelities `0.2177549926` in natural challenge order and
 `0.2233680863` in reverse order, versus the interleaved TT-order campaign's

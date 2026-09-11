@@ -1,0 +1,41 @@
+{
+  "n_layers": 8,
+  "iterations_requested": 10,
+  "evaluations": 10,
+  "learning_rate": 0.01,
+  "initialization": "warm_start",
+  "warm_start": "artifacts/mpo_native/rqcopt_phase_4x50_warm_optimization.npz",
+  "order": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    11,
+    8,
+    6,
+    7,
+    9,
+    10
+  ],
+  "initial_overlap_real": 2250.887152450042,
+  "initial_overlap_imag": 3.2902822227055175,
+  "initial_process_fidelity": 0.3019871591938593,
+  "final_overlap_real": 2244.479200852028,
+  "final_overlap_imag": -168.01536668646327,
+  "final_process_fidelity": 0.3019521264135924,
+  "loss_history": [
+    0.9009328333648405,
+    0.9012099333078158,
+    0.9012189512534066,
+    0.9012754707931243,
+    0.9012545052356704,
+    0.9011726507868014,
+    0.9010934468629419,
+    0.9010495912836503,
+    0.9010331518382224,
+    0.9010182291489413
+  ],
+  "external_commit": "95f0898f7baa6579de512eba8b00386bd6b05217"
+}
