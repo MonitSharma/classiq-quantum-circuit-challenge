@@ -93,3 +93,21 @@ The immediate local topology support is in `src/mpo_topologies.py`. It emits
 disjoint all-to-all matchings and TT-order brick-wall layers without inserting
 physical SWAPs. This separates topology generation from the eventual choice
 of optimizer.
+
+## Operator-objective smoke test
+
+`src/mpo_objective.py` provides an exact dense diagnostic for small bounded
+experiments. Run it with:
+
+```sh
+.venv/bin/python src/mpo_objective.py
+```
+
+The current smoke output is in
+`artifacts/mpo_native/objective_smoke.jsonl`. Identity has process fidelity
+`0.21562600135803223`, exactly matching the squared normalized trace of the
+sign target. A random six-gate matching layer has process fidelity about
+`5.84e-9` and normalized off-diagonal Frobenius leakage about `0.99987`.
+This confirms that the objective is measuring the full operator rather than
+only diagonal agreement. The dense path is deliberately not the eventual
+training loop; it is the correctness oracle for later MPO contractions.
