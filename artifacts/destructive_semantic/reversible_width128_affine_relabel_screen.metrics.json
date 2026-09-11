@@ -1,0 +1,19 @@
+{
+  "base_order": [10, 9, 11, 4, 5, 2, 3, 1, 0, 8, 7, 6],
+  "state_width": 7,
+  "base_transition_anf_terms": 2581,
+  "base_terminal_anf_terms": 45,
+  "base_total_anf_terms": 2626,
+  "xor_offset_screen": {
+    "boundary_offsets_tested": 128,
+    "best_path": [0, 0, 0, 0, 0, 0, 0],
+    "best_total_anf_terms": 2626
+  },
+  "global_gl7_screen": {
+    "random_invertible_transforms_tested": 2000,
+    "best_total_anf_terms": 45283,
+    "best_transform_translation": 33,
+    "result": "no improvement over the native label basis"
+  },
+  "status": "negative synthesis control; exact state embedding remains valid"
+}

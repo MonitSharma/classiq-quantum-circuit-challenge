@@ -1,0 +1,12 @@
+{
+  "group": "binary_icosahedral",
+  "group_order": 120,
+  "multiplication_table_verified": true,
+  "length": 16,
+  "iterations": 4000,
+  "seed": 20260910,
+  "target_marked_states": 1097,
+  "mismatches": 3796,
+  "status": "incomplete_initial_control",
+  "note": "Classical finite-group branching-program probe; no QASM was produced."
+}

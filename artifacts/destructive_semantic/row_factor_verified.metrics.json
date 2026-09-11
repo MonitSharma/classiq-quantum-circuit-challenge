@@ -1,0 +1,21 @@
+{
+  "experiment": "exact row-factor classifier baseline",
+  "terms": 10,
+  "classifier_qasm": "artifacts/destructive_semantic/row_factor_classifier.qasm",
+  "classifier_sha256": "d143673aeb8fee8d447b2abd93bc7236ca3dc6c58bff01dabde56636b9a67f90",
+  "classifier_depth": 6531,
+  "classifier_cx": 3739,
+  "oracle_qasm": "artifacts/destructive_semantic/row_factor_oracle.qasm",
+  "oracle_sha256": "b7504855acafc9fa20227888dae4e81e88ab3ff9385443208caa146f1f182158",
+  "oracle_depth": 13064,
+  "oracle_cx": 7476,
+  "width": 18,
+  "qubits_initially_zero": false,
+  "basis_inputs_checked": 4096,
+  "max_error": 7.024141638659456e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 5.569155034520167e-13,
+  "peak_sparse_support": 64,
+  "oracle_exhaustively_verified": true,
+  "note": "Exact input-preserving row-factor baseline; not a destructive-search candidate or leaderboard claim."
+}

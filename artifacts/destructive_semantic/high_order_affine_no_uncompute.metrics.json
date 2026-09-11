@@ -1,0 +1,23 @@
+{
+  "experiment": "no-uncompute destructive forward classifier",
+  "base_artifact": "double_seed42_b16x6_p4_depth59.json",
+  "corrections": [
+    [11, [[5, false], [7, true], [8, true], [9, false], [15, true]]],
+    [12, [2, 3, 4, 11]]
+  ],
+  "corrected_affine_residual": 331,
+  "corrected_affine_combo": [11, 12],
+  "semantic_inputs_checked": 4096,
+  "midpoint_garbage_wires": [13, 17],
+  "midpoint_garbage_nonzero": true,
+  "compiled_forward_depth": 79,
+  "compiled_forward_cx": 51,
+  "transpilation": {
+    "basis_gates": ["u3", "cx"],
+    "qubits_initially_zero": false,
+    "optimization_level": 3
+  },
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "status": "no-uncompute depth candidate; incomplete classifier"
+}

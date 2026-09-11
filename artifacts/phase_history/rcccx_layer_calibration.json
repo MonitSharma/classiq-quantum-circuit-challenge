@@ -1,0 +1,26 @@
+[
+  {
+    "parallel_rcccx": 1,
+    "depth": 13,
+    "cx_count": 6,
+    "width": 18
+  },
+  {
+    "parallel_rcccx": 2,
+    "depth": 13,
+    "cx_count": 12,
+    "width": 18
+  },
+  {
+    "parallel_rcccx": 3,
+    "depth": 13,
+    "cx_count": 18,
+    "width": 18
+  },
+  {
+    "parallel_rcccx": 4,
+    "depth": 13,
+    "cx_count": 24,
+    "width": 18
+  }
+]

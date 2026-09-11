@@ -1,0 +1,101 @@
+{
+  "mode": "history_beam_diagnostic",
+  "seed": 7,
+  "beam_width": 8,
+  "layers": 5,
+  "proposal_limit": 24,
+  "max_parallel": 2,
+  "completed_layer": 5,
+  "history_rank": 22,
+  "remainder_bits": 1097,
+  "target_in_span": false,
+  "estimated_forward_depth": 35,
+  "gates": [
+    [
+      "layer",
+      [
+        [
+          "rccx",
+          0,
+          10,
+          11
+        ],
+        [
+          "rccx",
+          6,
+          8,
+          17
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "rccx",
+          0,
+          11,
+          12
+        ],
+        [
+          "rccx",
+          1,
+          17,
+          16
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "rccx",
+          1,
+          12,
+          13
+        ],
+        [
+          "rccx",
+          11,
+          17,
+          14
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "rccx",
+          3,
+          13,
+          12
+        ],
+        [
+          "rccx",
+          9,
+          14,
+          15
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "rccx",
+          0,
+          10,
+          11
+        ],
+        [
+          "rccx",
+          5,
+          15,
+          14
+        ]
+      ]
+    ]
+  ],
+  "provenance": null
+}

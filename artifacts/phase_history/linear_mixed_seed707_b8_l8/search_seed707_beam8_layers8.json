@@ -1,0 +1,166 @@
+{
+  "mode": "history_beam_diagnostic",
+  "seed": 707,
+  "beam_width": 8,
+  "layers": 8,
+  "proposal_limit": 48,
+  "max_parallel": 2,
+  "include_rc3x": true,
+  "completed_layer": 8,
+  "history_rank": 29,
+  "remainder_bits": 1097,
+  "target_in_span": false,
+  "estimated_forward_depth": 88,
+  "gates": [
+    [
+      "layer",
+      [
+        [
+          "rc3x",
+          0,
+          4,
+          11,
+          12
+        ],
+        [
+          "rc3x",
+          1,
+          5,
+          9,
+          14
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "rc3x",
+          1,
+          6,
+          12,
+          17
+        ],
+        [
+          "rc3x",
+          4,
+          11,
+          14,
+          13
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "affine",
+          9,
+          14,
+          17,
+          15
+        ],
+        [
+          "rccx",
+          12,
+          13,
+          16
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "rc3x",
+          0,
+          10,
+          13,
+          16
+        ],
+        [
+          "rc3x",
+          8,
+          9,
+          17,
+          15
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "affine",
+          1,
+          10,
+          13,
+          16
+        ],
+        [
+          "rccx",
+          14,
+          17,
+          15
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "affine",
+          0,
+          8,
+          17,
+          15
+        ],
+        [
+          "rccx",
+          6,
+          13,
+          16
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "rc3x",
+          2,
+          6,
+          13,
+          16
+        ],
+        [
+          "rc3x",
+          3,
+          7,
+          17,
+          15
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "affine",
+          5,
+          14,
+          17,
+          15
+        ],
+        [
+          "affine",
+          4,
+          2,
+          13,
+          16
+        ]
+      ]
+    ]
+  ],
+  "provenance": null
+}

@@ -1,0 +1,15 @@
+{
+  "status": "exact semantic embeddings; native QASM pending",
+  "variable_order": [11, 9, 10, 5, 4, 2, 3, 1, 0, 8, 7, 6],
+  "state_width": 7,
+  "label_allocator": "branch-multiplicity-aware greedy completion",
+  "label_seeds_tested": 200,
+  "semantic_replay_inputs_each": 4096,
+  "pareto_points": [
+    {"label_seed": null, "transition_gray_path_mct": 1972, "adjacent_transpositions": 310, "transition_anf_terms": 2535, "terminal_anf_terms": 55, "terminal_depth": 2221, "terminal_cx": 1285},
+    {"label_seed": 119, "transition_gray_path_mct": 1702, "adjacent_transpositions": 254, "transition_anf_terms": 2717, "terminal_anf_terms": 55, "terminal_depth": 2235, "terminal_cx": 1254},
+    {"label_seed": 43, "transition_gray_path_mct": 1540, "adjacent_transpositions": 246, "transition_anf_terms": 2961, "terminal_anf_terms": 47, "terminal_depth": 1962, "terminal_cx": 1109},
+    {"label_seed": 22, "transition_gray_path_mct": 1633, "adjacent_transpositions": 243, "transition_anf_terms": 3053, "terminal_anf_terms": 56, "terminal_depth": 2445, "terminal_cx": 1395}
+  ],
+  "selected_control": {"label_seed": 43, "reason": "best combined state-transition MCT and measured terminal-tail point in the screen"}
+}

@@ -1,0 +1,18 @@
+{
+  "experiment": "bounded two-RCCX lookahead",
+  "seed": 524,
+  "beam_width": 16,
+  "layers": 6,
+  "proposal_limit": 4,
+  "proxy_order": 3,
+  "rccx_gates": 12,
+  "residual": 593,
+  "exact_affine_distance": 593,
+  "estimated_forward_depth": 77,
+  "compiled_forward_depth": 59,
+  "compiled_forward_cx": 34,
+  "target_marked_states": 1097,
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "note": "Heuristic search result only; no affine completion was found."
+}

@@ -1,0 +1,139 @@
+{
+  "experiment": "exact ESOP alternate-cover relative-phase two-clean completion",
+  "base_artifact": "double_seed42_b16x6_p4_depth59.json",
+  "base_affine_residual": 447,
+  "base_affine_combo": [
+    11,
+    12
+  ],
+  "corrections": [
+    [
+      11,
+      [
+        [
+          5,
+          false
+        ],
+        [
+          7,
+          true
+        ],
+        [
+          8,
+          true
+        ],
+        [
+          9,
+          false
+        ],
+        [
+          15,
+          true
+        ]
+      ]
+    ],
+    [
+      12,
+      [
+        2,
+        3,
+        4,
+        11
+      ]
+    ]
+  ],
+  "corrected_affine_residual": 0,
+  "corrected_affine_combo": [
+    11,
+    12
+  ],
+  "semantic_inputs_checked": 4096,
+  "midpoint_garbage_wires": [
+    13,
+    14,
+    16,
+    17
+  ],
+  "midpoint_garbage_nonzero": true,
+  "classifier_complete": true,
+  "oracle_exhaustively_verified": true,
+  "status": "exact classifier; 83-cube alternate-cover candidate",
+  "additional_correction": [
+    [
+      14,
+      [
+        [
+          4,
+          false
+        ],
+        [
+          10,
+          false
+        ]
+      ]
+    ],
+    [
+      17,
+      [
+        8,
+        9
+      ]
+    ],
+    [
+      11,
+      [
+        14,
+        17,
+        16
+      ]
+    ]
+  ],
+  "esop_terms": 83,
+  "esop_chart_wires": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    14,
+    15,
+    16
+  ],
+  "esop_cover_warmup_calls": 1,
+  "mcx_synthesis": "synth_mcx_2_clean_kg24 with middle CCX -> RCCX",
+  "clean_ancillas": [
+    13,
+    17
+  ],
+  "relative_phase_internal": true,
+  "target_wire": 12,
+  "compiled_forward_depth": 4326,
+  "compiled_forward_cx": 3629,
+  "transpilation": {
+    "basis_gates": [
+      "u3",
+      "cx"
+    ],
+    "qubits_initially_zero": false,
+    "optimization_level": 3,
+    "seed_transpiler": 0
+  },
+  "oracle_depth": 8559,
+  "oracle_cx": 7171,
+  "oracle_qasm_sha256": "9e1c6a59be7fe4af91dbd081e7afe062fa2d20d70dad674011e9f0390b089023",
+  "exhaustive_verification": {
+    "basis_inputs_checked": 4096,
+    "max_error": 1.185645420639957e-13,
+    "ancilla_error": 0.0,
+    "discarded_amplitude_bound": 1.3819464577271947e-12,
+    "peak_sparse_support": 256,
+    "verification_sha256": "9e1c6a59be7fe4af91dbd081e7afe062fa2d20d70dad674011e9f0390b089023"
+  }
+}

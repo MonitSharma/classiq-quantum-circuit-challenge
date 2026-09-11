@@ -1,0 +1,33 @@
+{
+  "experiment": "cold triple-RCCX beam seed-42",
+  "seed": 42,
+  "beam_width": 16,
+  "layers": 4,
+  "proposal_limit": 4,
+  "proxy_order": 3,
+  "triple_rccx": true,
+  "residual": 531,
+  "exact_affine_distance": 531,
+  "estimated_forward_depth": 77,
+  "target_marked_states": 1097,
+  "affine_solution": null,
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "elapsed_seconds": 772.9856519699097,
+  "semantic_hash": "0ea6aa837ca6db5d697b466011e3ab26",
+  "gates": [
+    ["rccx", 10, 11, 14],
+    ["rccx", 9, 14, 11],
+    ["rccx", 5, 11, 15],
+    ["rccx", 5, 15, 11],
+    ["rccx", 9, 15, 13],
+    ["rccx", 8, 13, 11],
+    ["rccx", 9, 15, 11],
+    ["rccx", 11, 14, 12],
+    ["rccx", 8, 12, 16],
+    ["rccx", 7, 16, 11],
+    ["rccx", 4, 13, 17],
+    ["rccx", 8, 17, 11]
+  ],
+  "note": "Cold seed-42 triple lookahead is weaker than the targeted seed-1 frontier and does not reach affine completion."
+}

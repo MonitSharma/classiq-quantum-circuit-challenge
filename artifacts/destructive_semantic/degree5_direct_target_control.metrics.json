@@ -1,0 +1,15 @@
+{
+  "experiment": "one high-order destructive correction on the direct target",
+  "base_artifact": "direct_wire_seed2024_extended.metrics.json",
+  "target_wire": 11,
+  "controls": [0, 2, 7, 8, 14],
+  "primitive": "five-control X",
+  "base_direct_mismatches": 513,
+  "corrected_direct_mismatches": 509,
+  "base_compiled_forward_depth": 113,
+  "corrected_compiled_forward_depth": 179,
+  "corrected_compiled_forward_cx": 140,
+  "transpilation": {"basis_gates": ["u3", "cx"], "qubits_initially_zero": false, "optimization_level": 3},
+  "classifier_complete": false,
+  "status": "semantic improvement rejected by native depth"
+}

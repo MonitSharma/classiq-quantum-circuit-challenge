@@ -1,0 +1,23 @@
+{
+  "source": "artifacts/phase_history/rank_product_seed.qasm",
+  "pass": "full_peephole",
+  "qasm": "artifacts/phase_history/rank_product_seed_tket.qasm",
+  "depth": 2380,
+  "cx_count": 1525,
+  "width": 18,
+  "qubits_initially_zero": false,
+  "candidates": [
+    {
+      "pass": "full_peephole",
+      "depth": 2380,
+      "cx_count": 1525,
+      "width": 18
+    },
+    {
+      "pass": "clifford_simp",
+      "depth": 2380,
+      "cx_count": 1525,
+      "width": 18
+    }
+  ]
+}

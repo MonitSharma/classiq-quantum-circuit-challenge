@@ -1,0 +1,14 @@
+{
+  "candidate": "high_order_affine_parallel_chain.metrics.json",
+  "target": "TARGET XOR q11 XOR q12",
+  "usable_semantic_signals": 15,
+  "residual_weight": 339,
+  "bounded_exact_xag": {
+    "and_nodes_0": "unsat",
+    "and_nodes_1": "unsat",
+    "and_nodes_2": "unsat",
+    "and_nodes_3": "unknown_after_60_seconds",
+    "and_nodes_4": "unknown_after_10_seconds"
+  },
+  "status": "no confirmed low-AND factorization"
+}

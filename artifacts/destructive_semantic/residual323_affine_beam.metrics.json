@@ -1,0 +1,25 @@
+{
+  "experiment": "three-layer affine-control beam from residual-323 fused chain",
+  "base_artifact": "high_order_affine_fused_tail.metrics.json",
+  "base_affine_residual": 323,
+  "operations": [
+    "plain RCCX",
+    "restored one-sided affine-control RCCX",
+    "restored two-sided affine-control RCCX",
+    "forward two-sided affine-control RCCX"
+  ],
+  "beam_width": 64,
+  "proposal_limits": {
+    "plain": 96,
+    "one_sided_affine": 96,
+    "two_sided_affine": 64,
+    "forward_two_sided_affine": 64
+  },
+  "layers": 3,
+  "distinct_descendants": [265, 17159, 17361],
+  "exact_leaders_rescored_per_layer": 32,
+  "best_exact_residual": 323,
+  "best_exact_combo": [11, 12],
+  "semantic_inputs_checked": 4096,
+  "status": "bounded affine-control beam; no improvement found"
+}

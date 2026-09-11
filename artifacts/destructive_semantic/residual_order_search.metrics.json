@@ -1,0 +1,20 @@
+{
+  "random_orders_screened": 1000,
+  "objective": "lexicographic(max_layer_states, max_fixed_bit_fanin, sum_layer_states)",
+  "baseline_order": [0, 1, 2, 3, 4, 5, 11, 8, 6, 7, 9, 10],
+  "baseline_layer_state_counts": [1, 2, 4, 8, 13, 15, 11, 12, 19, 19, 10, 4, 2],
+  "baseline_max_layer_states": 19,
+  "baseline_max_fanin": 9,
+  "best_order": [10, 9, 7, 11, 5, 8, 6, 0, 1, 2, 4, 3],
+  "best_layer_state_counts": [1, 2, 4, 8, 13, 17, 19, 12, 18, 18, 10, 4, 2],
+  "best_max_layer_states": 19,
+  "best_max_fanin": 5,
+  "best_minimum_distinguishing_garbage_bits": [0, 0, 0, 1, 3, 3, 2, 1, 2, 2, 2, 1],
+  "best_reversible_slot_order": [10, 5, 11, 4, 9, 8, 3, 1, 0, 2, 7, 6],
+  "best_reversible_slot_counts": [1, 2, 4, 7, 13, 20, 31, 45, 63, 73, 77, 81, 85],
+  "best_reversible_slot_peak": 85,
+  "best_reversible_slot_max_layer_states": 35,
+  "best_reversible_slot_max_fanin": 6,
+  "status": "exact_structural_search",
+  "note": "Order metrics were regenerated with the corrected residual extractor. The slot recurrence estimates the minimum number of tagged internal states needed by a layer-wise reversible branching embedding."
+}

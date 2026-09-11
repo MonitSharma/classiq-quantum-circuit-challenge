@@ -1,0 +1,22 @@
+{
+  "experiment": "lower-CX parallel clean-ancilla affine chain",
+  "base_artifact": "double_seed42_b16x6_p4_depth59.json",
+  "base_affine_residual": 447,
+  "base_affine_combo": [11, 12],
+  "corrections": [
+    {"target": 12, "controls": [2, 3, 4, 11], "workspace": 17},
+    {"target": 12, "controls": [7, 8, 10, 11], "workspace": 13},
+    {"target": 11, "controls": [5, 8, 10, 12], "workspace": 17}
+  ],
+  "corrected_affine_residual": 339,
+  "corrected_affine_combo": [11, 12],
+  "semantic_inputs_checked": 4096,
+  "clean_ancillas": [13, 17],
+  "clean_ancillas_restored": true,
+  "compiled_forward_depth": 98,
+  "compiled_forward_cx": 66,
+  "transpilation": {"basis_gates": ["u3", "cx"], "qubits_initially_zero": false, "optimization_level": 3},
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "status": "best depth/CX-screened incomplete classifier candidate"
+}

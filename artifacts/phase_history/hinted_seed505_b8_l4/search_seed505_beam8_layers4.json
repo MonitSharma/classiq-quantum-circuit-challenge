@@ -1,0 +1,93 @@
+{
+  "mode": "history_beam_diagnostic",
+  "seed": 505,
+  "beam_width": 8,
+  "layers": 4,
+  "proposal_limit": 32,
+  "max_parallel": 2,
+  "include_rc3x": true,
+  "completed_layer": 4,
+  "history_rank": 21,
+  "remainder_bits": 1097,
+  "target_in_span": false,
+  "estimated_forward_depth": 52,
+  "gates": [
+    [
+      "layer",
+      [
+        [
+          "rc3x",
+          0,
+          4,
+          11,
+          12
+        ],
+        [
+          "rc3x",
+          1,
+          5,
+          9,
+          16
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "rc3x",
+          1,
+          5,
+          12,
+          13
+        ],
+        [
+          "rc3x",
+          6,
+          7,
+          16,
+          15
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "rc3x",
+          0,
+          11,
+          15,
+          14
+        ],
+        [
+          "rc3x",
+          3,
+          7,
+          13,
+          17
+        ]
+      ]
+    ],
+    [
+      "layer",
+      [
+        [
+          "rc3x",
+          0,
+          7,
+          13,
+          17
+        ],
+        [
+          "rc3x",
+          2,
+          11,
+          15,
+          14
+        ]
+      ]
+    ]
+  ],
+  "provenance": null
+}

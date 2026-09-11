@@ -1,0 +1,35 @@
+{
+  "experiment": "short continuation screens from residual-323 fused chain",
+  "base_artifact": "high_order_affine_fused_tail.metrics.json",
+  "base_affine_residual": 323,
+  "semantic_inputs_checked": 4096,
+  "screens": {
+    "single_monomial_controls_degrees_2_through_5": {
+      "scope": "q11/q12 targets, all active-wire control combinations",
+      "improvement_found": false
+    },
+    "single_monomial_controls_degree_6": {
+      "best_residual": 315,
+      "best_controls": [1, 2, 3, 4, 9, 14],
+      "target": 11
+    },
+    "two_rccx_target_wire_sequences": {
+      "scope": "all 210 single RCCX choices for each of two target wires, two ordered steps",
+      "improvement_below_323": false
+    },
+    "two_degree5_target_corrections": {
+      "scope": "all 4710 ordered pairs of degree-five monomials targeting q11 or q12",
+      "improvement_below_323": false
+    },
+    "two_affine_form_product": {
+      "scope": "all pairs of XOR forms of up to three current wires, with complements",
+      "improvement_below_323": false
+    },
+    "three_affine_form_product": {
+      "scope": "300000 deterministic random triples of XOR forms of up to three current wires, with complements",
+      "improvement_below_323": false,
+      "sample_seed": 20260910
+    }
+  },
+  "status": "negative short-continuation screen; broader destructive search still required"
+}

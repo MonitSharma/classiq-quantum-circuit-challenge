@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/Classiq_2/artifacts/phase_history/rank_product_order_search_1000.qasm",
+  "sha256": "c96ecd26f8f5e7a6fca1d42d51b8806476f3e01bc5113ce7eb98b302a711e384",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 2348,
+  "cx_count": 1513,
+  "max_error": 2.751843197846481e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.9165403881018177e-13,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 8.776161909103394,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

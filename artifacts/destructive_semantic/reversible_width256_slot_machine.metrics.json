@@ -1,0 +1,15 @@
+{
+  "variable_order": [10, 5, 11, 4, 9, 8, 3, 1, 0, 2, 7, 6],
+  "initial_loaded_inputs": 6,
+  "remaining_controlled_input_bits": [3, 1, 0, 2, 7, 6],
+  "internal_state_width": 8,
+  "internal_state_capacity": 256,
+  "initial_slot_count": 64,
+  "minimum_slot_counts_after_each_remaining_bit": [64, 81, 103, 114, 118, 122, 126],
+  "peak_slot_count": 126,
+  "final_residual_slot_counts": {"zero": 77, "one": 49},
+  "controlled_permutation_layers": 6,
+  "adjacent_state_transpositions_before_decomposition": 554,
+  "status": "exact_semantic_embedding_model",
+  "note": "Each input-bit transition is injective on reachable tagged states and can be completed to an 8-bit permutation. No native U3/CX QASM has been generated yet."
+}

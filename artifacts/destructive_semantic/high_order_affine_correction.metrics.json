@@ -1,0 +1,21 @@
+{
+  "experiment": "clean-ancilla relative-phase high-order correction",
+  "base_artifact": "double_seed42_b16x6_p4_depth59.json",
+  "base_affine_residual": 447,
+  "base_affine_combo": [11, 12],
+  "correction": [
+    ["rc3x", 2, 3, 4, 17],
+    ["rc3x", 17, 8, 11, 12],
+    ["rc3x", 2, 3, 4, 17]
+  ],
+  "clean_ancilla": 17,
+  "corrected_affine_residual": 387,
+  "corrected_affine_combo": [11, 12],
+  "semantic_inputs_checked": 4096,
+  "compiled_forward_depth": 79,
+  "compiled_forward_cx": 50,
+  "transpilation": {"basis_gates": ["u3", "cx"], "qubits_initially_zero": false, "optimization_level": 3},
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "status": "strong incomplete classifier candidate"
+}

@@ -1,0 +1,7 @@
+{
+  "variable_order": [0, 1, 2, 3, 4, 5, 11, 8, 6, 7, 9, 10],
+  "max_fanin_by_layer": [1, 1, 1, 2, 4, 9, 6, 3, 2, 4, 4, 2],
+  "minimum_distinguishing_garbage_bits": [0, 0, 0, 1, 2, 4, 3, 2, 1, 2, 2, 1],
+  "status": "exact_structural_diagnostic",
+  "note": "For each layer and fixed consumed input bit, counts residual-state predecessors mapping to each child state. Required bits are ceil(log2(max fan-in))."
+}

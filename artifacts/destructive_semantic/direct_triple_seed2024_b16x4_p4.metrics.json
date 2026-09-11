@@ -1,0 +1,29 @@
+{
+  "seed": 2024,
+  "beam_width": 16,
+  "layers": 4,
+  "proposal_limit": 4,
+  "triple_rccx": true,
+  "direct_target": true,
+  "target_marked_states": 1097,
+  "estimated_depth": 63,
+  "rccx_count": 12,
+  "direct_target_mismatches": 589,
+  "exact_affine_distance": 589,
+  "semantic_hash": "0a19e2d1ccac650a119150b08fa9012c",
+  "status": "incomplete_negative_control",
+  "gates": [
+    ["rccx", 10, 11, 14],
+    ["rccx", 10, 14, 11],
+    ["rccx", 5, 11, 17],
+    ["rccx", 5, 17, 11],
+    ["rccx", 9, 17, 16],
+    ["rccx", 8, 16, 11],
+    ["rccx", 9, 16, 11],
+    ["rccx", 4, 17, 12],
+    ["rccx", 8, 12, 13],
+    ["rccx", 8, 12, 15],
+    ["rccx", 3, 13, 11],
+    ["rccx", 2, 15, 11]
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "parallel_rccx": 1,
+    "depth": 7,
+    "cx_count": 3,
+    "width": 18
+  },
+  {
+    "parallel_rccx": 2,
+    "depth": 7,
+    "cx_count": 6,
+    "width": 18
+  },
+  {
+    "parallel_rccx": 3,
+    "depth": 7,
+    "cx_count": 9,
+    "width": 18
+  },
+  {
+    "parallel_rccx": 4,
+    "depth": 7,
+    "cx_count": 12,
+    "width": 18
+  },
+  {
+    "parallel_rccx": 5,
+    "depth": 7,
+    "cx_count": 15,
+    "width": 18
+  },
+  {
+    "parallel_rccx": 6,
+    "depth": 7,
+    "cx_count": 18,
+    "width": 18
+  }
+]

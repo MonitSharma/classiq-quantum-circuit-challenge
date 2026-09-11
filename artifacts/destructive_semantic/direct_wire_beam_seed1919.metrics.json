@@ -1,0 +1,29 @@
+{
+  "experiment": "direct target-wire RCCX beam",
+  "seed": 1919,
+  "beam_width": 32,
+  "layers": 12,
+  "proposal_limit": 24,
+  "objective": "minimum direct Hamming mismatch over current wires",
+  "target_wire": 11,
+  "direct_target_wire_mismatches": 609,
+  "exact_affine_distance": 609,
+  "estimated_forward_depth": 70,
+  "target_marked_states": 1097,
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "gates": [
+    ["rccx", 10, 11, 17],
+    ["rccx", 10, 17, 11],
+    ["rccx", 5, 11, 15],
+    ["rccx", 5, 15, 11],
+    ["rccx", 9, 15, 11],
+    ["rccx", 8, 15, 12],
+    ["rccx", 9, 12, 11],
+    ["rccx", 1, 12, 16],
+    ["rccx", 4, 12, 11],
+    ["rccx", 3, 16, 13],
+    ["rccx", 2, 13, 11]
+  ],
+  "note": "Direct-wire optimization is distinct from affine-span completion; this shallow run is weaker than the residual-349 affine frontier."
+}

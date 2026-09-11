@@ -1,0 +1,29 @@
+{
+  "experiment": "greedy current-wire ESOP continuation",
+  "base_artifact": "high_order_affine_fused_tail.metrics.json",
+  "base_affine_residual": 323,
+  "selected_corrections": [
+    {
+      "target": 11,
+      "controls": [1, 2, 3, 4, 9, 14],
+      "residual_after": 315
+    },
+    {
+      "target": 12,
+      "controls": [2, 3, 4, 7, 8, 10, 11],
+      "residual_after": 307
+    }
+  ],
+  "semantic_inputs_checked": 4096,
+  "shared_factor": [2, 3, 4],
+  "factored_lowering": {
+    "compiled_forward_depth": 160,
+    "compiled_forward_cx": 117,
+    "basis_gates": ["u3", "cx"],
+    "qubits_initially_zero": false,
+    "optimization_level": 3
+  },
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "status": "semantic improvement rejected by native-depth screen"
+}

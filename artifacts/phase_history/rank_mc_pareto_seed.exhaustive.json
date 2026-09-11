@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/Classiq_2/artifacts/phase_history/rank_mc_pareto_seed.qasm",
+  "sha256": "8a69e458b35adf7d564b1adf63be44214b82e46396f3a1ce4328a74490c072a2",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 2402,
+  "cx_count": 1529,
+  "max_error": 2.9374159851624176e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.9451953623117602e-13,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 9.776344060897827,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}
