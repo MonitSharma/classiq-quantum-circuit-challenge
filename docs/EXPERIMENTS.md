@@ -50,6 +50,24 @@ hand-designed single-target network or qualitatively different operator-level
 construction is impossible. It does close the current cycle of proposing
 another conventional Boolean representation without a new architectural clue.
 
+## Final development-branch semantic screens merged into main (September 11, 2026)
+
+The latest online `development` branch is now part of the consolidated `main`.
+Its additional destructive-semantic work includes exhaustive self-testing,
+signed and higher-order affine controls, mixed controlled swaps/Fredkin moves,
+phase-retention diagnostics, exact-distance continuation, local ESOP ordering,
+and exact relative-phase completions. The source programs are under `src/`
+and their reports and exact diagnostic QASM files are under
+`artifacts/destructive_semantic/`.
+
+These results are preserved as research evidence, not promoted candidates:
+the approximate classifier trajectories remained difficult to complete exactly,
+while the exact relative-phase and controlled-swap screens did not produce a
+credible shallow native oracle. The exhaustive self-test independently checks
+the semantic implementation over all 4,096 inputs. See
+[`DESTRUCTIVE_SEMANTIC_SEARCH.md`](DESTRUCTIVE_SEMANTIC_SEARCH.md) for the
+full branch chronology and evidence levels.
+
 ## Nonlinear spectral conjugation: exact early closure (September 11, 2026)
 
 After closing the destructive-XAG route, a new branch tested whether a shallow

@@ -1,0 +1,23 @@
+{
+  "experiment": "exact reachable-state ESOP completion of saved residual-501 prefix",
+  "prefix_source": "combo_seed20260926_b32x8_p8.json",
+  "prefix_rccx_count": 16,
+  "prefix_estimated_depth": 98,
+  "target_wire": 12,
+  "residual_cover_inputs": 17,
+  "residual_cover_terms": 70,
+  "residual_cover_literals": 983,
+  "residual_semantic_states_checked": 4096,
+  "residual_semantic_mismatches": 0,
+  "lowering": "one-dirty-ancilla MCX for up to 16 controls; no-auxiliary HP24 for 17 controls",
+  "compiled_forward_depth": 34985,
+  "compiled_forward_cx": 20490,
+  "compiled_oracle_depth": 69848,
+  "compiled_oracle_cx": 40908,
+  "basis_gates": ["u3", "cx"],
+  "qubits_initially_zero": false,
+  "optimization_level": 3,
+  "status": "exact reachable-state classifier completion, not competitive",
+  "promoted": false,
+  "note": "The ESOP is exact on the 4096 reachable midpoint states, but generic high-control lowering is much deeper than the protected 6152-depth oracle. No protected artifact was modified."
+}

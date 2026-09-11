@@ -1,0 +1,26 @@
+{
+  "experiment": "signed-control RCCX screen",
+  "one_step_frontier": {
+    "base_artifact": "double_seed1_b64x10_p4_residual359.json",
+    "mutations_checked": 9792,
+    "exact_base_residual": 359,
+    "best_exact_residual": 359,
+    "improvement": false
+  },
+  "beam": {
+    "seed": 20261002,
+    "beam_width": 16,
+    "layers": 16,
+    "shortlist_per_state": 48,
+    "control_polarities": "all four signed products",
+    "exact_residual_by_layer": [827, 759, 703, 653, 647, 613, 613, 613, 613, 613, 613, 613, 613, 613, 613, 613],
+    "estimated_depth_by_layer": [9, 18, 27, 36, 45, 54, 63, 72, 81, 90, 99, 108, 117, 126, 135, 144],
+    "best_exact_residual": 613,
+    "best_estimated_depth": 54,
+    "affine_solution": null
+  },
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "target_marked_states": 1097,
+  "status": "signed controls form a distinct but stagnant basin"
+}

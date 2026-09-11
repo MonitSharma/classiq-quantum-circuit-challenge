@@ -1,0 +1,20 @@
+{
+  "experiment": "stochastic destructive higher-order parity-control beam",
+  "seed": 20261001,
+  "beam_width": 16,
+  "layers": 8,
+  "random_moves_per_state": 3000,
+  "control_parity_sizes": [2, 3, 4],
+  "control_supports_disjoint": true,
+  "completion_scoring": "cheap direct/pair residual with exact affine-distance diagnostic on the leader",
+  "leader_cheap_residual_by_layer": [827, 827, 759, 653, 653, 653, 647, 647],
+  "leader_exact_affine_residual_by_layer": [827, 827, 759, 653, 653, 653, 647, 647],
+  "leader_estimated_depth_by_layer": [10, 16, 25, 34, 42, 50, 59, 67],
+  "best_residual": 647,
+  "best_estimated_depth": 67,
+  "affine_solution": null,
+  "classifier_complete": false,
+  "oracle_exhaustively_verified": false,
+  "target_marked_states": 1097,
+  "status": "higher-order parity controls did not beat the existing affine-control basin"
+}

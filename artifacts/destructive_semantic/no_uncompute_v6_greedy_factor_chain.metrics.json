@@ -1,0 +1,20 @@
+{
+  "experiment": "greedy signed monomial factor chain from no-uncompute v6",
+  "base_artifact": "high_order_affine_no_uncompute_v6.metrics.json",
+  "base_exact_affine_residual": 197,
+  "final_exact_affine_residual": 63,
+  "affine_combo": [11, 12],
+  "correction_target": 11,
+  "correction_terms": 23,
+  "degree_range": [2, 7],
+  "semantic_states_checked": 4096,
+  "classifier_complete": false,
+  "lowering": "one-dirty-ancilla MCX for each signed monomial",
+  "compiled_forward_depth": 2449,
+  "compiled_forward_cx": 1380,
+  "basis_gates": ["u3", "cx"],
+  "qubits_initially_zero": false,
+  "optimization_level": 3,
+  "oracle_exhaustively_verified": false,
+  "status": "semantic improvement rejected by native depth"
+}

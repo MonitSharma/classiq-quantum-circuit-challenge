@@ -1,0 +1,27 @@
+{
+  "input_qasm": "/private/tmp/destructive_dc_esop_order11.qasm",
+  "input_qasm_sha256": "4e92430f0cffaf28f5f34beebddd29be384f7cfc0575b714f5440d9979d32cb4",
+  "rewrite": "pytket.FullPeepholeOptimise",
+  "input_pytket": {
+    "depth": 6164,
+    "gate_count": 13989,
+    "cx_count": 5893
+  },
+  "rewritten_pytket": {
+    "depth": 6152,
+    "gate_count": 13146,
+    "cx_count": 5889
+  },
+  "compiled_forward_depth": 6152,
+  "compiled_forward_cx": 5889,
+  "transpilation": {
+    "basis_gates": [
+      "u3",
+      "cx"
+    ],
+    "qubits_initially_zero": false,
+    "optimization_level": 3,
+    "seed_transpiler": 0
+  },
+  "oracle_qasm_sha256": "408012b6331392bc9da312373b6ae7e48b7b0f1788ab5e984ae504881465a241"
+}

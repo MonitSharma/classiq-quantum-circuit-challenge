@@ -1,0 +1,15 @@
+{
+  "experiment": "random arbitrary-parity RCCX control screen",
+  "seed": 20261003,
+  "base_artifact": "double_seed1_b64x10_p4_residual359.json",
+  "random_mutations": 100000,
+  "control_supports": "disjoint random subsets of one to eight current wires",
+  "cheap_shortlist": 256,
+  "exact_scored_shortlist": 256,
+  "base_exact_residual": 359,
+  "best_exact_residual": 359,
+  "best_affine_combo": [11, 12],
+  "affine_solution": null,
+  "classifier_complete": false,
+  "status": "no single arbitrary-parity mutation improved the frontier"
+}

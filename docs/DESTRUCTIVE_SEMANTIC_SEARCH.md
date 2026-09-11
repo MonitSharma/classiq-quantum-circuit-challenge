@@ -34,6 +34,12 @@ coordinate function visible.
 same semantic engine and checks all 4,096 inputs before any quantum oracle is
 constructed.
 
+The independent self-test `src/test_destructive_semantics.py` now exercises a
+96-operation random X/CX/RCCX history twice—once with scalar basis-state bits
+and once with the packed 4,096-bit semantic helpers. Both replays matched on
+every physical wire and every input. It also checks the 1,097-state target
+cardinality and a constant-plus-two-wire affine-span toy case.
+
 ## Initial validation sequence
 
 The first runs are intentionally small: primitive semantics, target cardinality,
@@ -889,3 +895,521 @@ Exhaustive verification covered all 4,096 inputs with max error
 `1.185645420639957e-13`, zero ancilla error, and discarded-amplitude bound
 `1.3819464577271947e-12`. This is the strongest verified destructive
 completion currently measured, though still noncompetitive.
+
+ A deterministic random single-swap search scored the complete `C† Z C`
+ oracle directly and found a further ordering improvement. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_local.py`; it measures
+ **3,747 / 3,095** for the forward classifier and **7,418 / 6,115** for the
+ complete oracle. The verified QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_local.qasm`
+ with SHA256
+ `c3f6abf681d54ad1104204b6a1ef6ee9cf3765629db358b8e263fe3cd300c9d8`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.731663258757493e-14`, zero ancilla error, discarded-amplitude bound
+ `1.0416137327337738e-12`, and peak sparse support 256. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
+## Alternate 84-cube cover screen (September 10, 2026)
+
+The toolchain alternates between an exact 83-cube and 84-cube Espresso cover.
+The 84-cube cover was evaluated with the same two-clean relative-phase
+lowering: its sorted order serialized to **8,700/7,303** depth/CX, and a
+200-move complete-oracle insertion/reversal search reached only **8,165/6,927**.
+This is a negative result; the 83-cube cover remains the active exact-cover
+family and the 84-cube candidate is not a new best.
+
+## Destructive nineteenth complete-oracle order search (September 10, 2026)
+
+A 200-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves19.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves19.qasm` with SHA256 `98e5f8e569627902d91ed2d6651ca5703b1a600c40fcc81b592dceb736fe5293`. The forward classifier is **3,430/2,889** and the complete oracle is **6,780/5,697** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `8.956417618622867e-14`, zero ancilla error, discarded-amplitude bound `9.286567255799592e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
+
+## Destructive eighteenth complete-oracle order search (September 10, 2026)
+
+A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves18.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves18.qasm` with SHA256 `dc079a57f1b8ce2ad17c85500c3a44e5ae066b48bdb3a9cc300d2c80641d3b3c`. The forward classifier is **3,443/2,894** and the complete oracle is **6,807/5,707** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `8.622652742461588e-14`, zero ancilla error, discarded-amplitude bound `9.33301339848141e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
+
+## Destructive seventeenth complete-oracle order search (September 10, 2026)
+
+A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves17.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves17.qasm` with SHA256 `9b0a259f361fe69790ae20e89ff0e7c2610dfc3da3b51c5ab74cc65124f0e4b9`. The forward classifier is **3,445/2,900** and the complete oracle is **6,814/5,719** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `8.797088423521596e-14`, ancilla error `5.359944321926805e-15`, discarded-amplitude bound `9.41215665475758e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
+
+## Destructive sixteenth complete-oracle order search (September 10, 2026)
+
+A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves16.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves16.qasm` with SHA256 `80f0f140ac2325375da2d94e0d89030e23266eab26b20e03541cb8c99080270d`. The forward classifier is **3,454/2,907** and the complete oracle is **6,828/5,733** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `8.966141423930125e-14`, ancilla error `5.4032143640665674e-15`, discarded-amplitude bound `9.477251829066001e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
+
+## Destructive fifteenth complete-oracle order search (September 10, 2026)
+
+A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves15.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves15.qasm` with SHA256 `843bfcd6c7d5ee3f5e88086ad31c3e3794f569a17e5130001b5cea56bc3486c9`. The forward classifier is **3,466/2,914** and the complete oracle is **6,852/5,747** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `8.926393342529894e-14`, zero ancilla error, discarded-amplitude bound `9.544618823574695e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
+
+## Destructive fourteenth complete-oracle order search (September 10, 2026)
+
+A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves14.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves14.qasm` with SHA256 `3a4c87a4ac4ac301bd977b69fe9f73ba15df16c26b5a232926124bf7d8263182`. The forward classifier is **3,467/2,915** and the complete oracle is **6,854/5,749** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `9.010374723394408e-14`, zero ancilla error, discarded-amplitude bound `9.330775596424445e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
+
+## Destructive thirteenth complete-oracle order search (September 10, 2026)
+
+A 100-move deterministic insertion/reversal search initialized from the prior verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves13.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves13.qasm` with SHA256 `feda8f0cacdd35d6670b4eb703590cbe8a4e93992b43f6adbac40e1301a0cefc`. The forward classifier is **3,467/2,917** and the complete oracle is **6,854/5,753** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `8.898318069658582e-14`, zero ancilla error, discarded-amplitude bound `9.493200925461926e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
+
+## Destructive twelfth complete-oracle order search (September 10, 2026)
+
+A 100-move deterministic insertion/reversal search initialized from the previous verified order and scored the complete oracle directly. The frozen source is `src/high_order_affine_exact_esop_clean2_rel_oracle_moves12.py`; the exact QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves12.qasm` with SHA256 `a7afb0a8af0e4a9eacd056cbd1b7509bc439b6bb6391ddd94c56fc517f289620`. The forward classifier is **3,483/2,928** and the complete oracle is **6,887/5,775** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `9.129949267455418e-14`, zero ancilla error, discarded-amplitude bound `9.400057039485976e-13`, and peak sparse support 128. This is the strongest verified result in this family, but remains noncompetitive and does not establish rank 1.
+
+ An eleventh insertion/reversal search, initialized from the prior moves order,
+ reduced the forward classifier to **3,496 / 2,934** and the complete oracle
+ to **6,913 / 5,787** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_moves11.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves11.qasm`
+ with SHA256
+ `00dbd7b93e909b967fad523ed3a02fb964a433af79c41e2f4cadf92a30237a69`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `9.013698285441724e-14`, zero ancilla error, discarded-amplitude bound
+ `9.479042934698458e-13`, and peak sparse support 128. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
+ A tenth insertion/reversal search, initialized from the prior moves order,
+ reduced the forward classifier to **3,550 / 2,975** and the complete oracle
+ to **7,017 / 5,869** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_moves10.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves10.qasm`
+ with SHA256
+ `4eb5a869e10ba71f3f9a7a6947b7c2a1ac21126acd02bab34b8cdd1beb6824d3`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `9.049381835646179e-14`, zero ancilla error, discarded-amplitude bound
+ `9.708059442523023e-13`, and peak sparse support 128. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
+ A ninth insertion/reversal search, initialized from the prior moves order,
+ reduced the forward classifier to **3,578 / 2,993** and the complete oracle
+ to **7,073 / 5,905** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_moves9.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves9.qasm`
+ with SHA256
+ `58b223763d1f847ca85e76ef40f8d3fc524af64aefcccc57f23a8e98ca0b5d92`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `9.443221962117954e-14`, zero ancilla error, discarded-amplitude bound
+ `9.778673200710018e-13`, and peak sparse support 128. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
+ An eighth insertion/reversal search, initialized from the prior moves order,
+ reduced the forward classifier to **3,600 / 3,006** and the complete oracle
+ to **7,126 / 5,937** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_moves8.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves8.qasm`
+ with SHA256
+ `298f99e822aeb91d24e20e7fe9e5d1d95cd3f8818bba0d2371158fda62cc1cf3`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `9.238896857051836e-14`, zero ancilla error, discarded-amplitude bound
+ `9.958111040736422e-13`, and peak sparse support 128. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
+ A seventh insertion/reversal search, initialized from the prior moves order,
+ reduced the forward classifier to **3,610 / 3,014** and the complete oracle
+ to **7,149 / 5,953** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_moves7.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves7.qasm`
+ with SHA256
+ `28cf4610dcd33f88a8b7397344c64f38ce991024e8eb8753793c8583b23b15b2`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.864851032082748e-14`, zero ancilla error, discarded-amplitude bound
+ `9.9983117824579e-13`, and peak sparse support 128. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
+ A sixth insertion/reversal search, initialized from the prior moves order,
+ reduced the forward classifier to **3,630 / 3,026** and the complete oracle
+ to **7,181 / 5,977** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_moves6.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves6.qasm`
+ with SHA256
+ `59c4effb0bfd320ebfcb719869ffd381041308957b30353656b0f0e4fc0cb567`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.683408018007638e-14`, zero ancilla error, discarded-amplitude bound
+ `1.001760522247469e-12`, and peak sparse support 128. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
+ A fifth insertion/reversal search, initialized from the prior moves order,
+ reduced the forward classifier to **3,630 / 3,026** and the complete oracle
+ to **7,182 / 5,977** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_moves5.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves5.qasm`
+ with SHA256
+ `7ea3dc61f01239010b2676a2bbff7312d0405fd0050fb8ca4c309c3ad572348c`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.66589344985811e-14`, zero ancilla error, discarded-amplitude bound
+ `1.0044465417017326e-12`, and peak sparse support 128. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
+ A fourth insertion/reversal search, initialized from the prior moves order,
+ reduced the forward classifier to **3,641 / 3,032** and the complete oracle
+ to **7,204 / 5,989** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_moves4.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves4.qasm`
+ with SHA256
+ `7c6fbac3aba8d0a78288baf4a4bdf6c6d3ffa1b244ad9dd1f2482e33ea603423`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.754479906318383e-14`, zero ancilla error, discarded-amplitude bound
+ `1.0089062559388834e-12`, and peak sparse support 128. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
+ A third insertion/reversal search, initialized from the prior moves order,
+ reduced the forward classifier to **3,658 / 3,049** and the complete oracle
+ to **7,243 / 6,023** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_moves3.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves3.qasm`
+ with SHA256
+ `65fe658947ef4490468ca99594d906dea0a3cdcf2d8a09fed759bac73299ae4f`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.480185504815267e-14`, zero ancilla error, discarded-amplitude bound
+ `1.0088640637855541e-12`, and peak sparse support 128. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
+ A second insertion/reversal search, initialized from the prior moves order,
+ reduced the forward classifier to **3,676 / 3,060** and the complete oracle
+ to **7,279 / 6,045** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_moves2.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves2.qasm`
+ with SHA256
+ `eb2735bbaa4617c392dc8798e08afb1a1a7b4fa22087e0d5a8ffda850c94fe24`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.861633341533916e-14`, ancilla error `5.251478504342831e-15`,
+ discarded-amplitude bound `1.0184711571506287e-12`, and peak sparse support
+ 128. This is the current strongest verified destructive completion, but remains
+ noncompetitive and does not establish rank 1.
+
+ A deterministic insertion/reversal search scored the complete oracle directly
+ and reduced the forward classifier to **3,690 / 3,068** and the complete
+ oracle to **7,307 / 6,061** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_moves.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves.qasm`
+ with SHA256
+ `c61a15360b61a1021894c8193b04e53c5d43a39d87f2287ec103df73ac699621`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.713440255290257e-14`, zero ancilla error, discarded-amplitude bound
+ `1.0240117044224524e-12`, and peak sparse support 256. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
+ A second deterministic random single-swap search, initialized from the prior
+ complete-oracle order, reduced the forward classifier to **3,719 / 3,079**
+ and the complete oracle to **7,367 / 6,083** depth/CX. The frozen source is
+ `src/high_order_affine_exact_esop_clean2_rel_oracle_local2.py`; the verified
+ QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_local2.qasm`
+ with SHA256
+ `611f8f7f92e94ad4b0bb0f570f3a05eb09ccd8bb4f9be4592f22fb553dd22107`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.91279548610909e-14`, ancilla error `5.559163521111997e-15`,
+ discarded-amplitude bound `1.0316187888679335e-12`, and peak sparse support
+ 256. This remains noncompetitive and does not establish rank 1.
+
+Reordering the 83 ESOP cubes by greedy shared-literal proximity further
+reduced the serialized classifier to **3,802 / 3,129** and the complete oracle
+to **7,534 / 6,195** depth/CX. The verified candidate is
+`src/high_order_affine_exact_esop_clean2_rel_ordered.py` with QASM
+`artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_ordered_oracle.qasm`
+and SHA256
+`c6a98ec8956db153e0dc263c6795907e864ae4a9e7e13cbadebdf8137292ea14`.
+Exhaustive verification covered all 4,096 inputs with max error
+`8.88692833082735e-14`, zero ancilla error, and discarded-amplitude bound
+`1.044782897852009e-12`. This is the strongest verified destructive
+completion currently measured, though still noncompetitive.
+
+ A bounded adjacent-swap descent from that order found a further compiler-aware
+ improvement without changing the v6 prefix, exact 83-cube cover, cleanup, or
+ relative-phase construction. The frozen order is implemented in
+ `src/high_order_affine_exact_esop_clean2_rel_local.py`. It measured **3,767 /
+ 3,109** for the forward classifier and **7,461 / 6,143** for the complete
+ oracle. The exact serialized QASM is
+ `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_local_oracle.qasm`
+ with SHA256
+ `3dcf8dde8caa6069371d8b4be233b92602541983b564061a71508f0a159de5e5`.
+ Exhaustive verification covered all 4,096 inputs with max error
+ `8.86795809782994e-14`, zero ancilla error, discarded-amplitude bound
+ `1.0434552156730549e-12`, and peak sparse support 256. This is the current
+ strongest verified destructive completion, but remains noncompetitive and does
+ not establish rank 1.
+
+## Verified pytket peephole rewrite of the complete oracle (September 10, 2026)
+
+`pytket.FullPeepholeOptimise` was applied to the exact serialized nineteenth-pass oracle, then the result was re-lowered through Qiskit to the required `u3`/`cx` basis. The reproducible driver is `src/pytket_peephole_oracle.py`; the rewritten QASM is `artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves19_peephole.qasm` with SHA256 `502aa04caca19427f733d6e2dc1c4b7ce8e0951d41b283f17e36c6bddcf39228`. It improves the oracle from **6,780/5,697** to **6,769/5,693** depth/CX. Exhaustive verification covered all 4,096 inputs with max error `1.4220683945409565e-13`, ancilla error `6.799055944770995e-15`, discarded-amplitude bound `2.4809831634384518e-12`, and peak sparse support 128. This is a verified circuit-level improvement, but remains noncompetitive and does not establish rank 1.
+
+## September 11 follow-up screens
+
+A randomized Espresso variable-order screen generated exact 77--80-cube
+residual covers, but the best complete candidate measured **7,790/6,497**
+depth/CX. A separate all-position screen for the affine q11-to-q12 CNOT
+found no depth improvement: all placements were 6,780 depth, with the best
+5,697 CX. These are negative diagnostics; the verified pytket artifact above
+remains authoritative and no new artifact was retained.
+
+## Invertible CNOT-basis ESOP screen
+
+The v6 prefix was given a six-CNOT invertible basis change on non-target chart
+wires before the exact ESOP correction, followed by its inverse. This produced
+an exact 73-cube/648-literal classifier. The reproducible implementation is
+`src/destructive_linear_basis_esop.py`; the verified QASM is
+`artifacts/destructive_semantic/destructive_linear_basis_esop.qasm`, with
+SHA256 `94849390470797d1d6be68ccc5331e4df321cc4db4decadee69232be987c1518`.
+It measured **7,602/6,373** depth/CX and passed all 4,096 inputs with maximum
+error `1.0331411199642256e-13` and zero ancilla leakage. A 120-move order
+screen reached 7,298/6,189, still above the 6,769/5,693 verified best, so this
+is a retained negative experiment rather than a replacement.
+
+## Reachable-state don't-care ESOP completion
+
+EXORCISM was given the 15-wire v6 semantic chart, constraining the 4,096
+reachable states and marking the other chart states as don't-cares. The exact
+53-cube/694-literal cover was ordered against the complete oracle; the
+reproducible builder is `src/destructive_dc_esop.py`. The pre-peephole oracle
+measured 6,739/6,495 depth/CX. The promoted pytket-rewritten QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`0ce30d3b5d95a4ed8d09738d5fe14a202192b751677b9c963a85ea6e36e87e9f`, at
+**6,727/6,491** depth/CX. Exhaustive verification covered all 4,096 inputs,
+with maximum error `1.051782074333784e-13` and ancilla error
+`7.217861607583946e-15`. This is the current verified destructive best, not a
+rank-1 result.
+
+The frozen 53-cube order was then continued with 250 deterministic
+insertion/reversal moves using seed `20260914`. The pre-peephole oracle reached
+6,483/6,233 depth/CX, and the promoted pytket-rewritten QASM reached
+**6,471/6,229**. The exact artifact is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`b2406cb5ab5ddebae2b81a4ef42fd270b71881fab4d5e5f9549fc030bb552fb8`. The
+matching exhaustive report covers all 4,096 inputs with maximum error
+`9.271857944426466e-14` and ancilla error `7.400714895795043e-15`.
+
+One further 200-move continuation with seed `20260915` reached 6,410/6,193
+before rewriting and **6,398/6,189** after pytket. The exact promoted QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`e6bf3c3b5607532d0f975337c0610db15419a44419ae15bb308f2ffe078214ee`. Its
+matching exhaustive report covers all 4,096 inputs with maximum error
+`7.919825282338308e-14` and ancilla error `6.80267858982627e-15`.
+
+A further 200-move continuation with seed `20260916` reached 6,377/6,173
+before rewriting and **6,365/6,169** after pytket. The exact promoted QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`a11677059ad7367e98b8e218e4a1037ca074f92b95875714bcf3e920fb9d3543`. Its
+matching exhaustive report covers all 4,096 inputs with maximum error
+`8.257226484998847e-14` and ancilla error `7.607617531031488e-15`.
+
+A fifth deterministic continuation with 300 insertion/reversal moves and seed
+`20260917` reached 6,324/6,113 before rewriting and **6,312/6,109** after
+pytket. The exact promoted QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`c927f4be647545a323aa7f0eb3a9e358663ab05201829240ffe14de3f1061d47`. Its
+matching exhaustive report covers all 4,096 inputs with maximum error
+`8.086090488533998e-14` and ancilla error `6.3083655384282156e-15`.
+
+A sixth deterministic continuation with 300 insertion/reversal moves and seed
+`20260918` reached 6,256/5,977 before rewriting and **6,244/5,973** after
+pytket. The exact promoted QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`907880ee29d873b3d95b52126a75f3508053b854454cb1f54e55d615e210528f`. Its
+matching exhaustive report covers all 4,096 inputs with maximum error
+`8.093769516197772e-14` and ancilla error `7.591599188635633e-15`.
+
+A seventh deterministic continuation with 300 insertion/reversal moves and
+seed `20260919` reached 6,239/5,953 before rewriting and **6,227/5,949**
+after pytket. The exact promoted QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`efc8b22722fe779ec03b5e51eb46e46819fe15bf7cc1800019a15eaaac3d444f`. Its
+matching exhaustive report covers all 4,096 inputs with maximum error
+`7.596400363095238e-14` and ancilla error `8.24059487550783e-15`.
+
+An eighth deterministic continuation with 300 insertion/reversal moves and
+seed `20260920` reached 6,194/5,925 before rewriting and **6,182/5,921**
+after pytket. The exact promoted QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`dd05de7a79e1276918192b4154806fa5644d8e98fdb2b8ad8e79644872861a7b`. Its
+matching exhaustive report covers all 4,096 inputs with maximum error
+`8.577915315269821e-14` and ancilla error `7.178307135744275e-15`.
+
+A ninth deterministic continuation with 300 insertion/reversal moves and seed
+`20260921` reached 6,185/5,901 before rewriting and **6,173/5,897** after
+pytket. The exact promoted QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`7bf6b5ed4480be32a2d2db40a987c23424f64ac4c07884a846fff3057ed03139`. Its
+matching exhaustive report covers all 4,096 inputs with maximum error
+`8.821462514035717e-14` and ancilla error `6.319108211598485e-15`.
+
+A tenth deterministic continuation with 300 insertion/reversal moves and seed
+`20260922` reached 6,179/5,903 before rewriting and **6,167/5,899** after
+pytket. The exact promoted QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`5c9b095bf8d9da10e82f71aa8d4335955eab89b040cab85106197d50f8b9f651`. Its
+matching exhaustive report covers all 4,096 inputs with maximum error
+`8.256783197156614e-14` and ancilla error `6.8313484986948394e-15`.
+
+An eleventh deterministic continuation with 300 insertion/reversal moves and
+seed `20260923` reached 6,164/5,893 before rewriting and **6,152/5,889**
+after pytket. The exact promoted QASM is
+`artifacts/destructive_semantic/destructive_dc_esop_peephole.qasm`, SHA256
+`408012b6331392bc9da312373b6ae7e48b7b0f1788ab5e984ae504881465a241`. Its
+matching exhaustive report covers all 4,096 inputs with maximum error
+`7.966577422597382e-14` and ancilla error `6.618821459495052e-15`.
+
+## Combined semantic-beam continuation (September 11, 2026)
+
+To revisit the brief's intended destructive-search direction, a fresh
+configuration combined the order-3 affine residual proxy, double-RCCX
+lookahead, Pareto beam retention, and guided semantic hints. The practical
+screen used seed `20260926`, beam 32, eight layers, and proposal limit 8.
+It reached exact affine residual **501** at estimated forward depth 98 after
+16 RCCX operations, with direct-target mismatch 501 and no affine completion.
+The selected state is preserved in
+`artifacts/destructive_semantic/combo_seed20260926_b32x8_p8.json`.
+This is a new destructive semantic trajectory, not a classifier or oracle;
+no QASM was promoted.
+
+## Exact ESOP completion screen (September 11, 2026)
+
+The saved residual-501 prefix was given an exact reachable-state correction
+using a 17-input ESOP cover generated from the current midpoint wires. The
+cover had 70 cubes and 983 literals and replayed with zero mismatches on all
+4,096 reachable states. High-control cubes were lowered with Qiskit's
+one-dirty-ancilla MCX synthesis where possible, falling back to the no-auxiliary
+decomposition for 17 controls. The resulting classifier compiled to depth
+34,985 and the complete conjugated oracle to depth **69,848** with 40,908 CX
+gates. This is functionally exact on the reachable classifier states but not
+competitive with the protected 6,152/5,889 oracle, so it was not promoted.
+Metrics are in
+`artifacts/destructive_semantic/saved_prefix_esop_completion.metrics.json`.
+
+## Exact-distance frontier continuation (September 11, 2026)
+
+To test whether proxy ranking was hiding an affine solution, the low-depth
+residual-359 frontier was continued for six layers with a beam of 16 and
+exact meet-in-the-middle affine-distance scoring on every selected child.
+The best residual moved only to **355**, while estimated forward depth grew
+from 140 to 161; no state entered the affine span. The retained history is
+recorded in
+`artifacts/destructive_semantic/exact_distance_continuation_seed20260929.metrics.json`.
+
+## Higher-order parity-control screen (September 11, 2026)
+
+A separate stochastic beam allowed each destructive RCCX move to use live
+parities of two to four disjoint current wires as both controls, with the
+control parities left destructive. With seed `20261001`, beam 16, eight
+layers, and 3,000 random moves per state, the best exact affine residual was
+647 at estimated depth 67. This matched the earlier two-sided affine-control
+basin and did not reach affine completion. The controlled result is recorded
+in `artifacts/destructive_semantic/higher_order_parity_beam_seed20261001.metrics.json`.
+
+## Signed-control RCCX screen (September 11, 2026)
+
+The semantic search was extended experimentally to include all four control
+polarities, since the exact ESOP uses complemented literals while the original
+beam only applied positive products. An exhaustive one-step scan from the
+residual-359 frontier checked 9,792 signed mutations and found no residual
+below 359. A separate signed beam found a distinct low-depth trajectory,
+reaching exact residual 613 at estimated depth 54, but it plateaued through
+16 layers and never reached affine completion. The full screen is recorded in
+`artifacts/destructive_semantic/signed_control_screen_seed20261002.metrics.json`.
+
+## Arbitrary-parity control screen (September 11, 2026)
+
+To test larger linear basis changes directly, 100,000 random RCCX mutations
+were sampled whose two controls were disjoint parities of one to eight current
+wires. The 256 best cheap candidates were exact-scored; none improved the
+residual-359 frontier or changed its best affine combination `[11, 12]`.
+This closes the single-step arbitrary-parity variant at that frontier. The
+screen is recorded in
+`artifacts/destructive_semantic/arbitrary_parity_screen_seed20261003.metrics.json`.
+
+## Greedy v6 residual factor chain (September 11, 2026)
+
+The retained-garbage v6 state was used as a factorization target rather than
+as an ESOP completion input. Greedily applying signed degree-2--7 monomials to
+q11 while preserving the affine combination `W11 XOR W12` reduced the exact
+residual from **197 to 63** over all 4,096 semantic states. Lowering the 23
+corrections with one-dirty-ancilla MCX blocks produced a forward circuit of
+**2,449/1,380** depth/CX, so the semantic improvement is not native-depth
+competitive and was not promoted. Metrics are in
+`artifacts/destructive_semantic/no_uncompute_v6_greedy_factor_chain.metrics.json`.
+
+## Global phase-edge retention (September 11, 2026)
+
+The next structural hypothesis was tested directly: combine all ten rank-factor
+products into one dependency graph and retain dirty intermediates across phase
+edges and across products, instead of clearing the six-ancilla pool after every
+factor. The combined graph had 91 nonlinear nodes and 87 GF(2)-surviving phase
+edges. The best bounded schedule (greedy shared-edge order) used 211 compute and
+211 uncompute actions with six live ancillas.
+
+The serialized U3/CX candidate measured **3,164/3,232** at width 18 and passed
+the exhaustive verifier on all 4,096 clean-ancilla inputs (maximum error
+`9.95e-14`, zero ancilla leakage). This is a verified negative result against
+the protected 524/950 oracle: global lifetime retention alone does not remove
+enough nonlinear work. The QASM was not promoted or retained in the repository;
+the exact SHA is recorded in
+`artifacts/destructive_semantic/global_phase_retention.metrics.json`.
+
+An exact 64-state canonicalization pass then attempted to merge equivalent
+nonlinear X/Y nodes across terms before scheduling. It found no merge: all 91
+nodes had distinct side-qualified truth tables, and the resulting serialized
+candidate was byte-identical. Thus this rank-term basis has no latent
+cross-term sharing for the retention scheduler to exploit.
+
+## Destructive Fredkin screen (September 11, 2026)
+
+The semantic move set was broadened with controlled swaps of current wire
+contents. A Fredkin update is reversible and was modeled exactly as
+`W[a] ^= W[c] & (W[a] XOR W[b])` and
+`W[b] ^= W[c] & (W[a] XOR W[b])`; its native lowering is
+`CX--RCCX--CX`, with the exact inverse reserved for any complete oracle.
+
+A deterministic beam-32, three-layer screen over all 2,448 physical Fredkin
+moves reached exact affine residuals **827, 759, 703**, respectively. The
+matched preserve-inputs ablation had only 240 legal moves and remained at
+residual **1,097**, because swapping two initially-zero ancillas cannot change
+their semantics. The unrestricted result is weaker than the existing
+destructive RCCX frontiers, so no circuit was lowered or promoted. Metrics are
+in `artifacts/destructive_semantic/fredkin_semantic_screen_seed20261004.metrics.json`;
+the reusable semantic implementation is `src/fredkin_semantic_screen.py`.
+
+A matched mixed screen added all 2,448 RCCX moves to the 2,448 Fredkin moves
+(4,896 proposals per state). It produced the identical exact residual sequence
+**827, 759, 703** through three layers, so the extra primitive did not escape
+the shallow basin. The result is recorded in
+`artifacts/destructive_semantic/fredkin_mixed_screen_seed20261005.metrics.json`.
+
+A deeper beam-32 continuation (five layers, 4,896 proposals per state) reached
+**827, 759, 703, 647, 639** exact residuals. It still did not approach the
+known residual-447 destructive frontier or enter the affine span, so the mixed
+Fredkin/RCCX family is closed at this bounded depth. The result is recorded in
+`artifacts/destructive_semantic/fredkin_mixed_screen_seed20261006.metrics.json`.
+
+## Higher-order controlled-swap screen (September 11, 2026)
+
+To test whether swapping two wires under a higher-order condition could escape
+the shallow Fredkin basin, one-step screens enumerated controlled swaps with
+two and three current-wire controls, together with all ordinary RCCX moves.
+The two-control screen covered 20,808 moves and the three-control screen
+88,128 moves. Both selected an ordinary RCCX as their best move and reached
+exact affine residual **827**, with no affine completion. This closes the
+single-move higher-order controlled-swap variant at the current frontier; no
+QASM was lowered. Results are in
+`artifacts/destructive_semantic/controlled_swap_screen_seed20261007.metrics.json`.
+
+A final one-step signed screen checked both positive and complemented control
+predicates for every physical controlled swap (4,896 variants). The best move
+was still a positive controlled swap with exact residual **827**; negative
+controls produced no improvement. This closes the signed controlled-swap
+variant without native lowering. Metrics are in
+`artifacts/destructive_semantic/signed_controlled_swap_screen_seed20261008.metrics.json`.

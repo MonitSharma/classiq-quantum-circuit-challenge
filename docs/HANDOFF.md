@@ -179,6 +179,16 @@ The recommended next phase is reverse engineering from leaderboard metrics and
 the challenge constraints. Full details are in
 [`RESEARCH_CLOSURE_2026-09-11.md`](RESEARCH_CLOSURE_2026-09-11.md).
 
+The latest `development` branch work is now also merged into `main`. It adds
+the exhaustive destructive-semantic self-test plus the final signed-control,
+higher-order parity, controlled-swap/Fredkin, phase-retention, local ESOP order,
+and exact completion screens under `artifacts/destructive_semantic/` and
+`src/`. Those experiments strengthened the earlier closure: shallow
+approximate destructive classifiers and exact relative-phase candidates were
+verified or exhaustively audited, but no exact sub-183 native oracle emerged.
+The detailed historical report is
+[`DESTRUCTIVE_SEMANTIC_SEARCH.md`](DESTRUCTIVE_SEMANTIC_SEARCH.md).
+
 ## Challenge and scoring
 
 Source: https://www.classiq.io/challenge, visited in the user's Safari. Last observed leaderboard (historical snapshot, refresh before making current claims):

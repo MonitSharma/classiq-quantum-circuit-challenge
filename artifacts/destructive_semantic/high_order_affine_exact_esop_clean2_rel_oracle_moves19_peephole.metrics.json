@@ -1,0 +1,39 @@
+{
+  "input_qasm": "artifacts/destructive_semantic/high_order_affine_exact_esop_clean2_rel_oracle_moves19.qasm",
+  "input_qasm_sha256": "98e5f8e569627902d91ed2d6651ca5703b1a600c40fcc81b592dceb736fe5293",
+  "rewrite": "pytket.FullPeepholeOptimise",
+  "input_pytket": {
+    "depth": 6780,
+    "gate_count": 13240,
+    "cx_count": 5697
+  },
+  "rewritten_pytket": {
+    "depth": 6769,
+    "gate_count": 12540,
+    "cx_count": 5693
+  },
+  "compiled_forward_depth": 6769,
+  "compiled_forward_cx": 5693,
+  "transpilation": {
+    "basis_gates": [
+      "u3",
+      "cx"
+    ],
+    "qubits_initially_zero": false,
+    "optimization_level": 3,
+    "seed_transpiler": 0
+  },
+  "oracle_qasm_sha256": "502aa04caca19427f733d6e2dc1c4b7ce8e0951d41b283f17e36c6bddcf39228",
+  "oracle_exhaustively_verified": true,
+  "verification": {
+    "basis_inputs_checked": 4096,
+    "width": 18,
+    "depth": 6769,
+    "cx_count": 5693,
+    "max_error": 1.4220683945409565e-13,
+    "ancilla_error": 6.799055944770995e-15,
+    "discarded_amplitude_bound": 2.4809831634384518e-12,
+    "peak_sparse_support": 128,
+    "report_sha256": "502aa04caca19427f733d6e2dc1c4b7ce8e0951d41b283f17e36c6bddcf39228"
+  }
+}
