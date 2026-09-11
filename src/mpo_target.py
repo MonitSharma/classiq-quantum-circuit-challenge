@@ -158,6 +158,13 @@ def analyze(order: Sequence[int] = DEFAULT_ORDER, output_dir: str | Path = "arti
     reconstructed = reconstruct_tt(cores)
     mpo = diagonal_mpo(cores)
 
+    xy_matrix = signs.reshape(64, 64).astype(np.float64)
+    xy_singular_values = np.linalg.svd(xy_matrix, compute_uv=False)
+    alternative_orders = {
+        "challenge_order": tuple(range(N_DATA)),
+        "reverse_order": tuple(reversed(range(N_DATA))),
+    }
+
     marked = int(np.count_nonzero(signs == -1))
     max_reconstruction_error = float(np.max(np.abs(reconstructed - tensor)))
     max_mpo_error = 0.0
@@ -187,6 +194,12 @@ def analyze(order: Sequence[int] = DEFAULT_ORDER, output_dir: str | Path = "arti
         "tensor_dtype": str(tensor.dtype),
         "decomposition_dtype": str(cores[0].dtype),
         "representation": "diagonal MPO from exact TT sign tensor",
+        "x_y_matrix_rank": int(np.linalg.matrix_rank(xy_matrix)),
+        "x_y_singular_values": [float(value) for value in xy_singular_values],
+        "alternative_tt_ranks": {
+            name: tt_ranks(ordered_tensor(candidate_order))
+            for name, candidate_order in alternative_orders.items()
+        },
     }
     (output_dir / "structural_report.json").write_text(json.dumps(report, indent=2) + "\n")
     np.save(output_dir / "target_signs.npy", signs)

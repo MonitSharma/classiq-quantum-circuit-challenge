@@ -35,6 +35,7 @@ The current deterministic report is
 | Maximum TT rank | 13 |
 | Maximum TT reconstruction error | `2.01e-13` |
 | Maximum diagonal-MPO basis-action error | `2.01e-13` |
+| Ordinary sign-matrix rank across x\|y | 11 |
 
 The decomposition is saved as `artifacts/mpo_native/target_tt.npz`; the
 diagonal MPO cores are saved separately as
@@ -47,6 +48,11 @@ MPO action is checked over every 12-bit basis string. This establishes the
 claimed tensor structure, but it does not establish a shallow circuit: MPO
 bond dimension is not a depth bound, and TT cores are not automatically
 unitary or isometric.
+
+The same report includes two comparison orders. The natural challenge order
+has maximum TT rank 17, and the reverse order also has maximum rank 17. Thus
+the rank-13 result is not a generic artifact of the tensor dimensions; the
+interleaved order is materially better for this target.
 
 ## Planned synthesis experiments
 
