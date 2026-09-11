@@ -89,6 +89,10 @@ has not been added as an implicit dependency or launched as a long-running
 experiment. The upstream README and implementation should be pinned and
 adapted only after a local target-objective smoke test.
 
+The source is locally inspected under `external/rqcopt-mpo/` at commit
+`95f0898f7baa6579de512eba8b00386bd6b05217`. It remains ignored from the main
+repository history; the commit pin is recorded here for reproducibility.
+
 The immediate local topology support is in `src/mpo_topologies.py`. It emits
 disjoint all-to-all matchings and TT-order brick-wall layers without inserting
 physical SWAPs. This separates topology generation from the eventual choice
