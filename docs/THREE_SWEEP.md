@@ -138,6 +138,20 @@ range. Its QASM and matching exhaustive report are
 The codebook search and labels are recorded in
 `artifacts/three_sweep/codebook_search.json`.
 
+## Transposed column-pair architecture
+
+The transposed geometry has only 15 ordered x-column pairs, so four code bits
+are sufficient when retaining `x5`. Its loader is the best loader measured in
+this campaign: **52 depth / 90 CX**, verified on all 64 x-inputs. However, the
+corresponding reachable-code y-phase decoder scores **10046 depth / 8436 CX**,
+with exhaustive verification and zero ancilla leakage. The cheaper loader
+therefore does not compensate for the more expensive transposed phase
+selection.
+
+Artifacts are under `artifacts/three_sweep/column_pair_loader/`; the complete
+verified decoder is `artifacts/three_sweep/column_decoder.qasm` with matching
+report `artifacts/three_sweep/column_decoder.exhaustive.json`.
+
 ## Decision rule
 
 The loader is promising at depth <=72 and is stopped for rank-1 purposes above
