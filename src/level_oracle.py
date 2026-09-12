@@ -285,13 +285,70 @@ def ucry(angle_tables, outputs, controls, seed=0):
     return qc
 
 
+def sparse_ucry(angle_tables, outputs, controls, seed=0):
+    """Uniformly controlled Ry that visits only the nonzero Walsh masks.
+
+    The dense block walks all 64 Gray masks, costing 128 layers.  A block whose
+    angle table has a sparse Walsh spectrum only has to visit the masks with a
+    nonzero coefficient, and the cost is then the length of a short closed walk
+    through those masks.  The load and unload blocks gain nothing (an odd-size
+    support forces a full spectrum) but the middle block is markedly sparser.
+    """
+    import numpy as np
+    n = len(controls)
+    N = 1 << n
+    qc = QuantumCircuit(18)
+    paths = []
+    for table in angle_tables:
+        a = np.array(table, dtype=float)
+        h = 1
+        while h < N:
+            for i in range(0, N, 2 * h):
+                lo = a[i:i + h].copy()
+                hi = a[i + h:i + 2 * h].copy()
+                a[i:i + h] = lo + hi
+                a[i + h:i + 2 * h] = lo - hi
+            h *= 2
+        coeff = a / N
+        masks = [m for m in range(N) if abs(coeff[m]) > 1e-14]
+        if 0 not in masks:
+            masks = [0] + masks
+        # greedy nearest-neighbour closed walk from mask 0
+        order = [0]
+        rest = [m for m in masks if m != 0]
+        cur = 0
+        while rest:
+            nxt = min(rest, key=lambda m: bin(m ^ cur).count('1'))
+            order.append(nxt)
+            rest.remove(nxt)
+            cur = nxt
+        paths.append((order, coeff))
+    steps = max(len(o) for o, _ in paths)
+    for idx in range(steps):
+        for b, t in enumerate(outputs):
+            order, coeff = paths[b]
+            if idx < len(order):
+                ang = float(coeff[order[idx]])
+                if abs(ang) > 1e-14:
+                    qc.ry(ang, t)
+        for b, t in enumerate(outputs):
+            order, _ = paths[b]
+            if idx < len(order):
+                cur = order[idx]
+                nxt = order[idx + 1] if idx + 1 < len(order) else 0
+                for bit in range(n):
+                    if (cur ^ nxt) >> bit & 1:
+                        qc.cx(controls[bit], t)
+    return qc
+
+
 def angle_table(targets):
     """pi * bit value, per output, indexed by the 6-bit control value."""
     import math
     return [[math.pi * ((t >> i) & 1) for i in range(64)] for t in targets]
 
 
-def build_merged(seed=0, opt=3, ytrip=None, xtrip=None):
+def build_merged(seed=0, opt=3, ytrip=None, xtrip=None, sparse=None):
     """Two passes sharing one middle multiplexer: load, K1, re-encode, K2, unload."""
     import numpy as np
     ytrip = ytrip or TRIPLE_DEFAULT
@@ -304,11 +361,12 @@ def build_merged(seed=0, opt=3, ytrip=None, xtrip=None):
     beta, _ = code_of(xtrip, LEVEL['v1'])
     k1 = k2 = kernel_terms(alpha, beta)
     qc = QuantumCircuit(18)
+    mid = sparse if sparse else ucry
     qc.compose(ucry(tabs['u1'], YA, YW, seed), inplace=True)
     qc.compose(ucry(tabs['v1'], XA, XW, seed + 7), inplace=True)
     emit_kernel(qc, k1, YA, XA)
-    qc.compose(ucry(tabs['u2'] - tabs['u1'], YA, YW, seed + 1), inplace=True)
-    qc.compose(ucry(tabs['v2'] - tabs['v1'], XA, XW, seed + 8), inplace=True)
+    qc.compose(mid(tabs['u2'] - tabs['u1'], YA, YW, seed + 1), inplace=True)
+    qc.compose(mid(tabs['v2'] - tabs['v1'], XA, XW, seed + 8), inplace=True)
     emit_kernel(qc, k2, YA, XA)
     qc.compose(ucry(-tabs['u2'], YA, YW, seed + 2), inplace=True)
     qc.compose(ucry(-tabs['v2'], XA, XW, seed + 9), inplace=True)

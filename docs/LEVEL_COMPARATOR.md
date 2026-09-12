@@ -248,3 +248,45 @@ Three ways out were tried and none closed:
 That third route is the one to finish. The pieces are all verified: the exact
 identity, the kernel synthesis, the emitter, and the fact that degree-3 code
 bits with the big class split exist.
+
+## Final round: four more routes closed
+
+Depth is the only ranked metric and the verified best is 456, which is
+`3 blocks x 128 + 2 kernels x 27 + 6`. Each of the three terms was attacked
+separately.
+
+**The 128 per block is forced.** A block's depth is the number of Gray steps
+times two, because each output wire carries one Ry and one CX per step. The
+number of steps is the Walsh support of the loaded table. For `u1` the level
+classes have sizes 47, 2, 2, 4, 4, 5, so levels 0 and 5 both have odd size; any
+code bit separating them covers an odd number of points and therefore has a full
+64-coefficient spectrum. At least one wire per block is full, and the block is
+the maximum over its wires.
+
+**Sparse Gray paths are worse, measured.** `level_oracle.sparse_ucry` visits only
+the nonzero masks along a greedy nearest-neighbour closed walk. The middle
+block's spectrum is 47-50 of 64, and a walk over 50 masks averaging two bits a
+move costs more CX than the 64 single-bit moves of the full Gray ladder. It
+measured **472**, against 456 for the dense ladder. Kept in the source as a
+recorded negative.
+
+**A two-block design is far worse.** Giving each side a four-bit class code - a
+raw data bit plus three loaded ones, which is enough for all eleven classes -
+removes the middle block entirely, leaving `2 x 128` plus both pass kernels on
+the same eight wires. But those kernels are eight-variable diagonals with no
+scratch. Annealing over the code labellings bottomed out at a combined ANF cost
+of **1900**, against about 72 for the two six-variable kernels. Dead.
+
+**The kernel is already minimal.** Because the block depth does not depend on the
+code, the code is free to choose purely for the kernel. Sweeping several hundred
+distinct cheap kernels over random code pairs and measuring transpiled depth
+found nothing below **27**, which is what the 456 build already uses.
+
+**Splitting a code bit across two wires does not apply.** A bit whose Walsh
+support could be halved would need `h = hA XOR hB` with each part independent of
+one direction, i.e. a vanishing second derivative `D_v1 D_v2 h`. Checked over all
+pairs of directions for all twelve code bits: only three of the twelve admit any
+such pair, and the block cost is the maximum over wires, so nothing is saved.
+
+The remaining gap is therefore entirely in the encoders, and the obstruction
+there is the register count recorded above, not the AND count.
