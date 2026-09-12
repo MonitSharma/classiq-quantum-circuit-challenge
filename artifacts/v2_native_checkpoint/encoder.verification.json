@@ -1,0 +1,33 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/v2_native_checkpoint/encoder.qasm",
+  "sha256": "2ae8fa8fb7d02e60ffd56b3e6f40fe4953dfb56315c1a7e03609c7c6938b54a7",
+  "width": 9,
+  "depth": 301,
+  "cx": 176,
+  "inputs_checked": 64,
+  "max_column_error": 1.887379141862766e-15,
+  "max_phase_sandwich_error": 3.774758283725532e-15,
+  "level_codes": {
+    "0": [
+      0
+    ],
+    "1": [
+      5,
+      6
+    ],
+    "2": [
+      2
+    ],
+    "3": [
+      3
+    ],
+    "4": [
+      1,
+      7
+    ],
+    "5": [
+      4
+    ]
+  },
+  "scope": "Encoder with input-dependent phases; all six data bits preserved. Not a complete oracle."
+}

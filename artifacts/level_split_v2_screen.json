@@ -1,0 +1,185 @@
+{
+  "name": "v2",
+  "degree": 3,
+  "bits": 3,
+  "cases": [
+    {
+      "split": [
+        0,
+        1
+      ],
+      "dimension": 11,
+      "status": "linear_impossible",
+      "collision": [
+        27,
+        2
+      ]
+    },
+    {
+      "split": [
+        0,
+        2
+      ],
+      "dimension": 1,
+      "status": "linear_impossible",
+      "collision": [
+        2,
+        0
+      ]
+    },
+    {
+      "split": [
+        0,
+        3
+      ],
+      "dimension": 2,
+      "status": "linear_impossible",
+      "collision": [
+        2,
+        0
+      ]
+    },
+    {
+      "split": [
+        0,
+        4
+      ],
+      "dimension": 1,
+      "status": "linear_impossible",
+      "collision": [
+        2,
+        0
+      ]
+    },
+    {
+      "split": [
+        0,
+        5
+      ],
+      "dimension": 12,
+      "status": "linear_impossible",
+      "collision": [
+        50,
+        27
+      ]
+    },
+    {
+      "split": [
+        1,
+        2
+      ],
+      "dimension": 10,
+      "status": "linear_impossible",
+      "collision": [
+        27,
+        2
+      ]
+    },
+    {
+      "split": [
+        1,
+        3
+      ],
+      "dimension": 12,
+      "status": "linear_impossible",
+      "collision": [
+        27,
+        2
+      ]
+    },
+    {
+      "split": [
+        1,
+        4
+      ],
+      "dimension": 13,
+      "status": "linear_impossible",
+      "collision": [
+        27,
+        2
+      ]
+    },
+    {
+      "split": [
+        1,
+        5
+      ],
+      "dimension": 31,
+      "status": "unsat",
+      "seconds": 1.0259095000801608
+    },
+    {
+      "split": [
+        2,
+        3
+      ],
+      "dimension": 2,
+      "status": "linear_impossible",
+      "collision": [
+        2,
+        0
+      ]
+    },
+    {
+      "split": [
+        2,
+        4
+      ],
+      "dimension": 1,
+      "status": "linear_impossible",
+      "collision": [
+        2,
+        0
+      ]
+    },
+    {
+      "split": [
+        2,
+        5
+      ],
+      "dimension": 11,
+      "status": "linear_impossible",
+      "collision": [
+        50,
+        0
+      ]
+    },
+    {
+      "split": [
+        3,
+        4
+      ],
+      "dimension": 2,
+      "status": "linear_impossible",
+      "collision": [
+        2,
+        0
+      ]
+    },
+    {
+      "split": [
+        3,
+        5
+      ],
+      "dimension": 13,
+      "status": "linear_impossible",
+      "collision": [
+        51,
+        27
+      ]
+    },
+    {
+      "split": [
+        4,
+        5
+      ],
+      "dimension": 13,
+      "status": "linear_impossible",
+      "collision": [
+        51,
+        27
+      ]
+    }
+  ],
+  "status": "unsat"
+}

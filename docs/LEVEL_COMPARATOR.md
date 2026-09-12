@@ -1,5 +1,30 @@
 # Level/comparator decomposition
 
+## September 12 native v2 checkpoint: verified but too deep
+
+The requested concrete encoder experiment produced a verified nine-qubit v2
+encoder at **301 depth / 176 CX**, missing the roughly 31-depth checkpoint.
+It screened 1,248 degree-5 code assignments and compiled 18 candidates. Six
+focused tests pass and replay reproduces the exact QASM hash. This is a
+negative result for the implemented split-code/ESOP lowering, not a general
+encoder-depth bound. No full-oracle integration was attempted; the verified
+456-depth best remains unchanged. See
+[V2_NATIVE_CHECKPOINT_2026-09-12.md](V2_NATIVE_CHECKPOINT_2026-09-12.md).
+
+
+## September 12 correction: degree-3 code route excluded for v2
+
+The new complete split-class screen excludes three-bit degree-at-most-three
+v2 level encodings, even allowing arbitrary classes to use multiple codes.
+Fourteen split pairs fail linear constraints; the remaining pair is UNSAT in
+two formulations/backends. The three independent checks pass. This supersedes
+the suggestion that the degree-3 code route merely needs completion.
+See [the reassessment](SUB180_REASSESSMENT_2026-09-12.md) for scope and evidence.
+The best documented depth remains 456/1140; the sparse candidate is now
+exhaustively verified at 472/1128 and is not an improvement. Sub-180 remains
+unfinished. The 524 and 456 artifacts are both preserved.
+
+
 Updated September 11, 2026.
 
 ## The exact identity
@@ -74,8 +99,8 @@ multiplexer blocks collapse to three. `src/level_oracle.py::build_merged`.
 SHA-256 `8e997e511d9fb043ad82896a7c873f5c3a1cca4cde0cce7bf5df5cba6c6c6e7c`,
 exhaustively verified on all 4,096 clean-ancilla inputs
 (`artifacts/456/level_merged_456.exhaustive.json`, max error 2.3e-14, zero
-ancilla leakage). Depth improves on the 524 fallback; CX count does not, so
-the 524 artifact stays protected until a candidate wins on both.
+ancilla leakage). Depth improves on the 524 fallback, making 456 the better result for the
+primary ranked metric despite its larger CX count. Both files stay preserved.
 
 ## Where the remaining depth is
 

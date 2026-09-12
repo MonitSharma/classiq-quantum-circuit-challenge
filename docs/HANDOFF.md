@@ -1,5 +1,30 @@
 # Continuation handoff
 
+## September 12 native v2 checkpoint: verified but too deep
+
+The requested concrete encoder experiment produced a verified nine-qubit v2
+encoder at **301 depth / 176 CX**, missing the roughly 31-depth checkpoint.
+It screened 1,248 degree-5 code assignments and compiled 18 candidates. Six
+focused tests pass and replay reproduces the exact QASM hash. This is a
+negative result for the implemented split-code/ESOP lowering, not a general
+encoder-depth bound. No full-oracle integration was attempted; the verified
+456-depth best remains unchanged. See
+[V2_NATIVE_CHECKPOINT_2026-09-12.md](V2_NATIVE_CHECKPOINT_2026-09-12.md).
+
+
+## September 12 correction: degree-3 code route excluded for v2
+
+The new complete split-class screen excludes three-bit degree-at-most-three
+v2 level encodings, even allowing arbitrary classes to use multiple codes.
+Fourteen split pairs fail linear constraints; the remaining pair is UNSAT in
+two formulations/backends. The three independent checks pass. This supersedes
+the suggestion that the degree-3 code route merely needs completion.
+See [the reassessment](SUB180_REASSESSMENT_2026-09-12.md) for scope and evidence.
+The best documented depth remains 456/1140; the sparse candidate is now
+exhaustively verified at 472/1128 and is not an improvement. Sub-180 remains
+unfinished. The 524 and 456 artifacts are both preserved.
+
+
 ## Level-encoder exact-enumeration checkpoint (September 11, 2026)
 
 The challenge page was refreshed in Safari. It explicitly ranks by **depth

@@ -1,5 +1,5 @@
 {
-  "codebook": "artifacts/three_sweep/codebook_deterministic.json",
+  "codebook": "/private/var/folders/tm/6bh1bn3x6pgfgp8nvpknylq40000gn/T/pytest-of-monitsharma/pytest-121/test_loader_basis_action0/codebook.json",
   "seed": 0,
   "depth": 64,
   "cx_count": 120,

@@ -1,0 +1,173 @@
+{
+  "name": "u1",
+  "degree": 3,
+  "bits": 3,
+  "cases": [
+    {
+      "split": [
+        0,
+        1
+      ],
+      "dimension": 31,
+      "status": "unsat",
+      "seconds": 0.8359616249799728
+    },
+    {
+      "split": [
+        0,
+        2
+      ],
+      "dimension": 31,
+      "status": "unsat",
+      "seconds": 1.2965576669666916
+    },
+    {
+      "split": [
+        0,
+        3
+      ],
+      "dimension": 33,
+      "status": "unsat",
+      "seconds": 6.2408864999888465
+    },
+    {
+      "split": [
+        0,
+        4
+      ],
+      "dimension": 33,
+      "status": "unsat",
+      "seconds": 4.221221041982062
+    },
+    {
+      "split": [
+        0,
+        5
+      ],
+      "dimension": 34,
+      "status": "timeout",
+      "seconds": 8.004887250019237
+    },
+    {
+      "split": [
+        1,
+        2
+      ],
+      "dimension": 2,
+      "status": "linear_impossible",
+      "collision": [
+        11,
+        0
+      ]
+    },
+    {
+      "split": [
+        1,
+        3
+      ],
+      "dimension": 2,
+      "status": "linear_impossible",
+      "collision": [
+        11,
+        0
+      ]
+    },
+    {
+      "split": [
+        1,
+        4
+      ],
+      "dimension": 3,
+      "status": "linear_impossible",
+      "collision": [
+        11,
+        0
+      ]
+    },
+    {
+      "split": [
+        1,
+        5
+      ],
+      "dimension": 2,
+      "status": "linear_impossible",
+      "collision": [
+        11,
+        0
+      ]
+    },
+    {
+      "split": [
+        2,
+        3
+      ],
+      "dimension": 1,
+      "status": "linear_impossible",
+      "collision": [
+        11,
+        0
+      ]
+    },
+    {
+      "split": [
+        2,
+        4
+      ],
+      "dimension": 2,
+      "status": "linear_impossible",
+      "collision": [
+        11,
+        0
+      ]
+    },
+    {
+      "split": [
+        2,
+        5
+      ],
+      "dimension": 1,
+      "status": "linear_impossible",
+      "collision": [
+        11,
+        0
+      ]
+    },
+    {
+      "split": [
+        3,
+        4
+      ],
+      "dimension": 2,
+      "status": "linear_impossible",
+      "collision": [
+        11,
+        0
+      ]
+    },
+    {
+      "split": [
+        3,
+        5
+      ],
+      "dimension": 1,
+      "status": "linear_impossible",
+      "collision": [
+        11,
+        0
+      ]
+    },
+    {
+      "split": [
+        4,
+        5
+      ],
+      "dimension": 2,
+      "status": "linear_impossible",
+      "collision": [
+        11,
+        0
+      ]
+    }
+  ],
+  "status": "unresolved"
+}
