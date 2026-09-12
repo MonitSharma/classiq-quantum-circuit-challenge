@@ -1,0 +1,44 @@
+[
+  {
+    "side": "y",
+    "degree": 2,
+    "raw": null,
+    "status": "unknown",
+    "seconds": 15.01070045796223
+  },
+  {
+    "side": "y",
+    "degree": 3,
+    "raw": null,
+    "status": "unknown",
+    "seconds": 15.006806084071286
+  },
+  {
+    "side": "y",
+    "degree": 3,
+    "raw": 5,
+    "status": "unknown",
+    "seconds": 15.006717915995978
+  },
+  {
+    "side": "x",
+    "degree": 2,
+    "raw": null,
+    "status": "unknown",
+    "seconds": 15.04041087499354
+  },
+  {
+    "side": "x",
+    "degree": 3,
+    "raw": null,
+    "status": "unknown",
+    "seconds": 15.062220499967225
+  },
+  {
+    "side": "x",
+    "degree": 3,
+    "raw": 5,
+    "status": "unknown",
+    "seconds": 15.006816791952588
+  }
+]

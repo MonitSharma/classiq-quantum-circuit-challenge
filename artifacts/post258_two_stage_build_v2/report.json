@@ -1,0 +1,29 @@
+{
+  "record": "artifacts/post258_two_stage_anf_v1/best_step400.json",
+  "kernel": {
+    "depth": 88,
+    "variant": "integer_anf",
+    "seed": -1,
+    "error": 1.4193009671542368e-14,
+    "cx": 203
+  },
+  "components": [
+    {
+      "depth": 77,
+      "seed": 0,
+      "sparse": false,
+      "open_walk": true,
+      "error": 1.5548877139323477e-15
+    },
+    {
+      "depth": 78,
+      "seed": 2,
+      "sparse": false,
+      "open_walk": true,
+      "error": 1.5651852675791243e-15
+    }
+  ],
+  "depth": 243,
+  "cx": 971,
+  "path": "artifacts/post258_two_stage_build_v2/two_stage_d243.qasm"
+}

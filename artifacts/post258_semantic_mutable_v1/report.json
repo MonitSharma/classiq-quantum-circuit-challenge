@@ -1,0 +1,58 @@
+{
+  "encoders": [
+    {
+      "side": 0,
+      "loader_depth": 76,
+      "flag_depth": 24,
+      "encoder_depth": 99,
+      "terms": [
+        68,
+        100,
+        140
+      ],
+      "settings": [
+        6,
+        false,
+        true
+      ],
+      "loader_error": 1.554520072736647e-15
+    },
+    {
+      "side": 1,
+      "loader_depth": 78,
+      "flag_depth": 31,
+      "encoder_depth": 108,
+      "terms": [
+        8,
+        34,
+        136,
+        144,
+        162,
+        208
+      ],
+      "settings": [
+        0,
+        false,
+        true
+      ],
+      "loader_error": 2.6821788200469194e-15
+    }
+  ],
+  "kernel_depth": 65,
+  "kernel_terms": [
+    146,
+    131,
+    39,
+    27,
+    180,
+    90,
+    216,
+    75,
+    54,
+    165,
+    201
+  ],
+  "depth": 279,
+  "cx": 986,
+  "path": "artifacts/post258_semantic_mutable_v1/mutable_d279.qasm"
+}

@@ -1,0 +1,12 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/243/two_stage_243.qasm",
+  "sha256": "adb3093877907683fd70dcf6bc3a4043f4b4dc2f6999ad118f8fc996d839f4f1",
+  "width": 18,
+  "depth": 243,
+  "cx_count": 971,
+  "random_dense_states": 3,
+  "max_error": 2.0449880973503482e-16,
+  "ancilla_error": 4.023661093457698e-17,
+  "normalization_error": 4.440892098500626e-15,
+  "verification": "Dense random inputs supported on all 4096 coordinates; probabilistic numerical check, not exhaustive operator proof"
+}

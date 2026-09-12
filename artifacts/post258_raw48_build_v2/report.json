@@ -1,0 +1,30 @@
+{
+  "record": "artifacts/post258_raw48_macro_v2/best_3925.json",
+  "kernel_file": null,
+  "components": [
+    {
+      "depth": 78,
+      "settings": [
+        0,
+        false,
+        true
+      ],
+      "error": 2.2233718382446963e-15,
+      "raw": 5
+    },
+    {
+      "depth": 78,
+      "settings": [
+        3,
+        false,
+        true
+      ],
+      "error": 2.0511947353510305e-15,
+      "raw": 4
+    }
+  ],
+  "kernel_depth": 71,
+  "depth": 226,
+  "cx": 959,
+  "path": "artifacts/post258_raw48_build_v2/raw_parity_d226.qasm"
+}

@@ -1,0 +1,517 @@
+{
+  "record": "artifacts/post258_two_stage_anf_v1/best_step400.json",
+  "rows": [
+    {
+      "seed": 0,
+      "depth": 104,
+      "cx": 182,
+      "path": "artifacts/post258_kernel_schedule_v1/kernel_seed0_d104.qasm",
+      "error": 1.3838269783191777e-14
+    },
+    {
+      "seed": 1,
+      "depth": 112,
+      "cx": 239
+    },
+    {
+      "seed": 2,
+      "depth": 115,
+      "cx": 191
+    },
+    {
+      "seed": 3,
+      "depth": 103,
+      "cx": 189,
+      "path": "artifacts/post258_kernel_schedule_v1/kernel_seed3_d103.qasm",
+      "error": 1.3777941993690071e-14
+    },
+    {
+      "seed": 4,
+      "depth": 104,
+      "cx": 196
+    },
+    {
+      "seed": 5,
+      "depth": 107,
+      "cx": 201
+    },
+    {
+      "seed": 6,
+      "depth": 114,
+      "cx": 195
+    },
+    {
+      "seed": 7,
+      "depth": 108,
+      "cx": 208
+    },
+    {
+      "seed": 8,
+      "depth": 114,
+      "cx": 199
+    },
+    {
+      "seed": 9,
+      "depth": 110,
+      "cx": 190
+    },
+    {
+      "seed": 10,
+      "depth": 110,
+      "cx": 206
+    },
+    {
+      "seed": 11,
+      "depth": 100,
+      "cx": 199,
+      "path": "artifacts/post258_kernel_schedule_v1/kernel_seed11_d100.qasm",
+      "error": 1.3903853108274032e-14
+    },
+    {
+      "seed": 12,
+      "depth": 103,
+      "cx": 183
+    },
+    {
+      "seed": 13,
+      "depth": 103,
+      "cx": 205
+    },
+    {
+      "seed": 14,
+      "depth": 109,
+      "cx": 224
+    },
+    {
+      "seed": 15,
+      "depth": 107,
+      "cx": 186
+    },
+    {
+      "seed": 16,
+      "depth": 102,
+      "cx": 188
+    },
+    {
+      "seed": 17,
+      "depth": 108,
+      "cx": 203
+    },
+    {
+      "seed": 18,
+      "depth": 108,
+      "cx": 200
+    },
+    {
+      "seed": 19,
+      "depth": 109,
+      "cx": 187
+    },
+    {
+      "seed": 20,
+      "depth": 106,
+      "cx": 194
+    },
+    {
+      "seed": 21,
+      "depth": 99,
+      "cx": 194,
+      "path": "artifacts/post258_kernel_schedule_v1/kernel_seed21_d99.qasm",
+      "error": 1.4491650183114763e-14
+    },
+    {
+      "seed": 22,
+      "depth": 112,
+      "cx": 196
+    },
+    {
+      "seed": 23,
+      "depth": 108,
+      "cx": 195
+    },
+    {
+      "seed": 24,
+      "depth": 124,
+      "cx": 197
+    },
+    {
+      "seed": 25,
+      "depth": 101,
+      "cx": 203
+    },
+    {
+      "seed": 26,
+      "depth": 123,
+      "cx": 190
+    },
+    {
+      "seed": 27,
+      "depth": 104,
+      "cx": 196
+    },
+    {
+      "seed": 28,
+      "depth": 89,
+      "cx": 191,
+      "path": "artifacts/post258_kernel_schedule_v1/kernel_seed28_d89.qasm",
+      "error": 1.4056528231933093e-14
+    },
+    {
+      "seed": 29,
+      "depth": 102,
+      "cx": 197
+    },
+    {
+      "seed": 30,
+      "depth": 115,
+      "cx": 199
+    },
+    {
+      "seed": 31,
+      "depth": 100,
+      "cx": 200
+    },
+    {
+      "seed": 32,
+      "depth": 105,
+      "cx": 208
+    },
+    {
+      "seed": 33,
+      "depth": 106,
+      "cx": 189
+    },
+    {
+      "seed": 34,
+      "depth": 97,
+      "cx": 182
+    },
+    {
+      "seed": 35,
+      "depth": 105,
+      "cx": 197
+    },
+    {
+      "seed": 36,
+      "depth": 99,
+      "cx": 210
+    },
+    {
+      "seed": 37,
+      "depth": 112,
+      "cx": 185
+    },
+    {
+      "seed": 38,
+      "depth": 105,
+      "cx": 202
+    },
+    {
+      "seed": 39,
+      "depth": 104,
+      "cx": 182
+    },
+    {
+      "seed": 40,
+      "depth": 105,
+      "cx": 206
+    },
+    {
+      "seed": 41,
+      "depth": 111,
+      "cx": 183
+    },
+    {
+      "seed": 42,
+      "depth": 102,
+      "cx": 181
+    },
+    {
+      "seed": 43,
+      "depth": 115,
+      "cx": 211
+    },
+    {
+      "seed": 44,
+      "depth": 91,
+      "cx": 183
+    },
+    {
+      "seed": 45,
+      "depth": 115,
+      "cx": 202
+    },
+    {
+      "seed": 46,
+      "depth": 114,
+      "cx": 191
+    },
+    {
+      "seed": 47,
+      "depth": 109,
+      "cx": 200
+    },
+    {
+      "seed": 48,
+      "depth": 104,
+      "cx": 198
+    },
+    {
+      "seed": 49,
+      "depth": 110,
+      "cx": 195
+    },
+    {
+      "seed": 50,
+      "depth": 97,
+      "cx": 193
+    },
+    {
+      "seed": 51,
+      "depth": 103,
+      "cx": 183
+    },
+    {
+      "seed": 52,
+      "depth": 117,
+      "cx": 184
+    },
+    {
+      "seed": 53,
+      "depth": 104,
+      "cx": 196
+    },
+    {
+      "seed": 54,
+      "depth": 108,
+      "cx": 192
+    },
+    {
+      "seed": 55,
+      "depth": 110,
+      "cx": 207
+    },
+    {
+      "seed": 56,
+      "depth": 109,
+      "cx": 194
+    },
+    {
+      "seed": 57,
+      "depth": 111,
+      "cx": 196
+    },
+    {
+      "seed": 58,
+      "depth": 100,
+      "cx": 187
+    },
+    {
+      "seed": 59,
+      "depth": 101,
+      "cx": 221
+    },
+    {
+      "seed": 60,
+      "depth": 102,
+      "cx": 190
+    },
+    {
+      "seed": 61,
+      "depth": 107,
+      "cx": 206
+    },
+    {
+      "seed": 62,
+      "depth": 106,
+      "cx": 208
+    },
+    {
+      "seed": 63,
+      "depth": 99,
+      "cx": 199
+    },
+    {
+      "seed": 64,
+      "depth": 115,
+      "cx": 191
+    },
+    {
+      "seed": 65,
+      "depth": 100,
+      "cx": 207
+    },
+    {
+      "seed": 66,
+      "depth": 99,
+      "cx": 171
+    },
+    {
+      "seed": 67,
+      "depth": 109,
+      "cx": 238
+    },
+    {
+      "seed": 68,
+      "depth": 98,
+      "cx": 180
+    },
+    {
+      "seed": 69,
+      "depth": 134,
+      "cx": 178
+    },
+    {
+      "seed": 70,
+      "depth": 106,
+      "cx": 191
+    },
+    {
+      "seed": 71,
+      "depth": 111,
+      "cx": 215
+    },
+    {
+      "seed": 72,
+      "depth": 100,
+      "cx": 231
+    },
+    {
+      "seed": 73,
+      "depth": 103,
+      "cx": 199
+    },
+    {
+      "seed": 74,
+      "depth": 112,
+      "cx": 189
+    },
+    {
+      "seed": 75,
+      "depth": 96,
+      "cx": 191
+    },
+    {
+      "seed": 76,
+      "depth": 112,
+      "cx": 203
+    },
+    {
+      "seed": 77,
+      "depth": 124,
+      "cx": 185
+    },
+    {
+      "seed": 78,
+      "depth": 100,
+      "cx": 184
+    },
+    {
+      "seed": 79,
+      "depth": 117,
+      "cx": 170
+    },
+    {
+      "seed": 80,
+      "depth": 99,
+      "cx": 201
+    },
+    {
+      "seed": 81,
+      "depth": 108,
+      "cx": 188
+    },
+    {
+      "seed": 82,
+      "depth": 102,
+      "cx": 206
+    },
+    {
+      "seed": 83,
+      "depth": 99,
+      "cx": 193
+    },
+    {
+      "seed": 84,
+      "depth": 110,
+      "cx": 205
+    },
+    {
+      "seed": 85,
+      "depth": 121,
+      "cx": 200
+    },
+    {
+      "seed": 86,
+      "depth": 111,
+      "cx": 204
+    },
+    {
+      "seed": 87,
+      "depth": 102,
+      "cx": 224
+    },
+    {
+      "seed": 88,
+      "depth": 93,
+      "cx": 195
+    },
+    {
+      "seed": 89,
+      "depth": 107,
+      "cx": 240
+    },
+    {
+      "seed": 90,
+      "depth": 95,
+      "cx": 199
+    },
+    {
+      "seed": 91,
+      "depth": 88,
+      "cx": 203,
+      "path": "artifacts/post258_kernel_schedule_v1/kernel_seed91_d88.qasm",
+      "error": 1.4193009671542368e-14
+    },
+    {
+      "seed": 92,
+      "depth": 101,
+      "cx": 187
+    },
+    {
+      "seed": 93,
+      "depth": 116,
+      "cx": 202
+    },
+    {
+      "seed": 94,
+      "depth": 115,
+      "cx": 196
+    },
+    {
+      "seed": 95,
+      "depth": 101,
+      "cx": 194
+    },
+    {
+      "seed": 96,
+      "depth": 103,
+      "cx": 191
+    },
+    {
+      "seed": 97,
+      "depth": 102,
+      "cx": 197
+    },
+    {
+      "seed": 98,
+      "depth": 112,
+      "cx": 202
+    },
+    {
+      "seed": 99,
+      "depth": 117,
+      "cx": 190
+    }
+  ]
+}

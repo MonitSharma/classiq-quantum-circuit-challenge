@@ -19,9 +19,9 @@ Run Python through `.venv/bin/python` from the workspace root. No new login shou
 
 Do not automatically rerun all old searches: some take substantial time and overwrite artifacts. `src/full_mux.py` as a script runs 200 seeds and overwrites the best QASM during its search. Prefer importing `build` and writing a new candidate filename.
 
-The user now requests active optimization toward lower depth without asking the
-community. The newest verified local result is depth 258 / CX 1188 / width 18,
-packaged with a matching gate-level QMOD in `artifacts/258/`. Read
-`docs/DISTRIBUTED_LOOKUP_258.md` for the distributed parity construction, exact
-replay, and remaining gap. The 183-depth target and rank-one objective remain
-unfinished. No background optimization or leaderboard monitoring is scheduled.
+The user requests active optimization to sub-180 without asking the community.
+The newest verified local result is depth 224 / CX 957 / width 18, packaged
+with a matching gate-level QMOD in `artifacts/224/`. Read
+`docs/POST258_RESEARCH.md` for parity-assisted class codes, exact replay, and
+remaining limitations. The sub-180 and rank-one objectives remain unfinished.
+No background optimization or leaderboard monitoring is scheduled.

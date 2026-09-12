@@ -1,0 +1,90 @@
+[
+  {
+    "side": "y",
+    "raw": 5,
+    "degree": [
+      2,
+      4,
+      4
+    ],
+    "status": "unknown",
+    "seconds": 10.009342959034257
+  },
+  {
+    "side": "y",
+    "raw": 5,
+    "degree": [
+      3,
+      3,
+      4
+    ],
+    "status": "unknown",
+    "seconds": 10.008516625035554
+  },
+  {
+    "side": "y",
+    "raw": 5,
+    "degree": [
+      2,
+      5,
+      5
+    ],
+    "status": "unknown",
+    "seconds": 10.008200082927942
+  },
+  {
+    "side": "y",
+    "raw": 5,
+    "degree": [
+      1,
+      6,
+      6
+    ],
+    "status": "unsat",
+    "seconds": 3.738608582993038
+  },
+  {
+    "side": "x",
+    "raw": 4,
+    "degree": [
+      2,
+      4,
+      4
+    ],
+    "status": "unknown",
+    "seconds": 10.007607875042595
+  },
+  {
+    "side": "x",
+    "raw": 4,
+    "degree": [
+      3,
+      3,
+      4
+    ],
+    "status": "unknown",
+    "seconds": 10.008935042074881
+  },
+  {
+    "side": "x",
+    "raw": 4,
+    "degree": [
+      2,
+      5,
+      5
+    ],
+    "status": "unknown",
+    "seconds": 10.003590833977796
+  },
+  {
+    "side": "x",
+    "raw": 4,
+    "degree": [
+      1,
+      6,
+      6
+    ],
+    "status": "unsat",
+    "seconds": 0.629521333030425
+  }
+]

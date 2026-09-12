@@ -1,0 +1,5330 @@
+[
+  {
+    "directions": [
+      1,
+      1
+    ],
+    "status": "unsat",
+    "seconds": 0.0062691670609638095
+  },
+  {
+    "directions": [
+      1,
+      2
+    ],
+    "status": "unsat",
+    "seconds": 0.010600624955259264
+  },
+  {
+    "directions": [
+      1,
+      3
+    ],
+    "status": "unsat",
+    "seconds": 0.009199499967508018
+  },
+  {
+    "directions": [
+      1,
+      4
+    ],
+    "status": "unsat",
+    "seconds": 0.006929625058546662
+  },
+  {
+    "directions": [
+      1,
+      6
+    ],
+    "status": "unsat",
+    "seconds": 0.034105375059880316
+  },
+  {
+    "directions": [
+      1,
+      12
+    ],
+    "status": "unsat",
+    "seconds": 0.011897124932147563
+  },
+  {
+    "directions": [
+      1,
+      16
+    ],
+    "status": "unsat",
+    "seconds": 0.005110124940983951
+  },
+  {
+    "directions": [
+      1,
+      20
+    ],
+    "status": "unsat",
+    "seconds": 0.00792120792903006
+  },
+  {
+    "directions": [
+      1,
+      32
+    ],
+    "status": "unsat",
+    "seconds": 0.06824404210783541
+  },
+  {
+    "directions": [
+      1,
+      33
+    ],
+    "status": "unsat",
+    "seconds": 0.05554929201025516
+  },
+  {
+    "directions": [
+      1,
+      34
+    ],
+    "status": "unsat",
+    "seconds": 0.0301997089991346
+  },
+  {
+    "directions": [
+      1,
+      35
+    ],
+    "status": "unsat",
+    "seconds": 0.03319333295803517
+  },
+  {
+    "directions": [
+      1,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.048332458012737334
+  },
+  {
+    "directions": [
+      1,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.040519208065234125
+  },
+  {
+    "directions": [
+      1,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.04781158396508545
+  },
+  {
+    "directions": [
+      1,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.04598462500143796
+  },
+  {
+    "directions": [
+      1,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.04993591702077538
+  },
+  {
+    "directions": [
+      1,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.08293487492483109
+  },
+  {
+    "directions": [
+      1,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.03838183404877782
+  },
+  {
+    "directions": [
+      1,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.030198332970030606
+  },
+  {
+    "directions": [
+      1,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.10381941706873477
+  },
+  {
+    "directions": [
+      1,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.03034741699229926
+  },
+  {
+    "directions": [
+      1,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.07835545809939504
+  },
+  {
+    "directions": [
+      1,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.04234908299986273
+  },
+  {
+    "directions": [
+      1,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.09404941694810987
+  },
+  {
+    "directions": [
+      1,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.06579983292613178
+  },
+  {
+    "directions": [
+      1,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.052743249922059476
+  },
+  {
+    "directions": [
+      1,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.041574458009563386
+  },
+  {
+    "directions": [
+      1,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.045531250070780516
+  },
+  {
+    "directions": [
+      1,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.03865441703237593
+  },
+  {
+    "directions": [
+      1,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.035543874953873456
+  },
+  {
+    "directions": [
+      1,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.04703529202379286
+  },
+  {
+    "directions": [
+      1,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.09791650006081909
+  },
+  {
+    "directions": [
+      1,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.06621995905879885
+  },
+  {
+    "directions": [
+      1,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.05005241697654128
+  },
+  {
+    "directions": [
+      1,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.05200749996583909
+  },
+  {
+    "directions": [
+      2,
+      2
+    ],
+    "status": "unsat",
+    "seconds": 0.001345458091236651
+  },
+  {
+    "directions": [
+      2,
+      3
+    ],
+    "status": "unsat",
+    "seconds": 0.0034322920255362988
+  },
+  {
+    "directions": [
+      2,
+      4
+    ],
+    "status": "unsat",
+    "seconds": 0.02462237502913922
+  },
+  {
+    "directions": [
+      2,
+      6
+    ],
+    "status": "unsat",
+    "seconds": 0.01574633305426687
+  },
+  {
+    "directions": [
+      2,
+      12
+    ],
+    "status": "unsat",
+    "seconds": 0.003097458044067025
+  },
+  {
+    "directions": [
+      2,
+      16
+    ],
+    "status": "unsat",
+    "seconds": 0.006678542005829513
+  },
+  {
+    "directions": [
+      2,
+      20
+    ],
+    "status": "unsat",
+    "seconds": 0.024930291925556958
+  },
+  {
+    "directions": [
+      2,
+      32
+    ],
+    "status": "unsat",
+    "seconds": 0.1216370000038296
+  },
+  {
+    "directions": [
+      2,
+      33
+    ],
+    "status": "unsat",
+    "seconds": 0.039778208010829985
+  },
+  {
+    "directions": [
+      2,
+      34
+    ],
+    "status": "unsat",
+    "seconds": 0.11799812503159046
+  },
+  {
+    "directions": [
+      2,
+      35
+    ],
+    "status": "unsat",
+    "seconds": 0.06611450004857033
+  },
+  {
+    "directions": [
+      2,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.08543466601986438
+  },
+  {
+    "directions": [
+      2,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.08714962506201118
+  },
+  {
+    "directions": [
+      2,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.04183666699100286
+  },
+  {
+    "directions": [
+      2,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.02792245801538229
+  },
+  {
+    "directions": [
+      2,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.058235625037923455
+  },
+  {
+    "directions": [
+      2,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.05539162503555417
+  },
+  {
+    "directions": [
+      2,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.050340999965555966
+  },
+  {
+    "directions": [
+      2,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.05108170793391764
+  },
+  {
+    "directions": [
+      2,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.05511454201769084
+  },
+  {
+    "directions": [
+      2,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.03510041697882116
+  },
+  {
+    "directions": [
+      2,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.03257533302530646
+  },
+  {
+    "directions": [
+      2,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.03665145905688405
+  },
+  {
+    "directions": [
+      2,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.07295545795932412
+  },
+  {
+    "directions": [
+      2,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.1258445840794593
+  },
+  {
+    "directions": [
+      2,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.07083137496374547
+  },
+  {
+    "directions": [
+      2,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.09811304206959903
+  },
+  {
+    "directions": [
+      2,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.07441420806571841
+  },
+  {
+    "directions": [
+      2,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.03488162497524172
+  },
+  {
+    "directions": [
+      2,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.040645583998411894
+  },
+  {
+    "directions": [
+      2,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.04268175002653152
+  },
+  {
+    "directions": [
+      2,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.07017262489534914
+  },
+  {
+    "directions": [
+      2,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.05972400004975498
+  },
+  {
+    "directions": [
+      2,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.07006699999328703
+  },
+  {
+    "directions": [
+      2,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.05754491698462516
+  },
+  {
+    "directions": [
+      3,
+      3
+    ],
+    "status": "unsat",
+    "seconds": 0.0021561249159276485
+  },
+  {
+    "directions": [
+      3,
+      4
+    ],
+    "status": "unsat",
+    "seconds": 0.005252750008367002
+  },
+  {
+    "directions": [
+      3,
+      6
+    ],
+    "status": "unsat",
+    "seconds": 0.010090333060361445
+  },
+  {
+    "directions": [
+      3,
+      12
+    ],
+    "status": "unsat",
+    "seconds": 0.039196666912175715
+  },
+  {
+    "directions": [
+      3,
+      16
+    ],
+    "status": "unsat",
+    "seconds": 0.009289833018556237
+  },
+  {
+    "directions": [
+      3,
+      20
+    ],
+    "status": "unsat",
+    "seconds": 0.00295075005851686
+  },
+  {
+    "directions": [
+      3,
+      32
+    ],
+    "status": "unsat",
+    "seconds": 0.06861595902591944
+  },
+  {
+    "directions": [
+      3,
+      33
+    ],
+    "status": "unsat",
+    "seconds": 0.06988116691354662
+  },
+  {
+    "directions": [
+      3,
+      34
+    ],
+    "status": "unsat",
+    "seconds": 0.04580045898910612
+  },
+  {
+    "directions": [
+      3,
+      35
+    ],
+    "status": "unsat",
+    "seconds": 0.05898470804095268
+  },
+  {
+    "directions": [
+      3,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.02671650005504489
+  },
+  {
+    "directions": [
+      3,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.14437758398707956
+  },
+  {
+    "directions": [
+      3,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.05806437507271767
+  },
+  {
+    "directions": [
+      3,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.02365025004837662
+  },
+  {
+    "directions": [
+      3,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.07203670800663531
+  },
+  {
+    "directions": [
+      3,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.06102074997033924
+  },
+  {
+    "directions": [
+      3,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.02479050005786121
+  },
+  {
+    "directions": [
+      3,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.05825020803604275
+  },
+  {
+    "directions": [
+      3,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.03220579191111028
+  },
+  {
+    "directions": [
+      3,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.02997858391609043
+  },
+  {
+    "directions": [
+      3,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.024868542095646262
+  },
+  {
+    "directions": [
+      3,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.032515083090402186
+  },
+  {
+    "directions": [
+      3,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.06594500003848225
+  },
+  {
+    "directions": [
+      3,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.11676087498199195
+  },
+  {
+    "directions": [
+      3,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.06508095806930214
+  },
+  {
+    "directions": [
+      3,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.06769245793111622
+  },
+  {
+    "directions": [
+      3,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.06668512499891222
+  },
+  {
+    "directions": [
+      3,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.05789795808959752
+  },
+  {
+    "directions": [
+      3,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.0682188750943169
+  },
+  {
+    "directions": [
+      3,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.04497508308850229
+  },
+  {
+    "directions": [
+      3,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.05782545800320804
+  },
+  {
+    "directions": [
+      3,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.08246545807924122
+  },
+  {
+    "directions": [
+      3,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.06299733300693333
+  },
+  {
+    "directions": [
+      3,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.05497958406340331
+  },
+  {
+    "directions": [
+      4,
+      4
+    ],
+    "status": "unsat",
+    "seconds": 0.0034946249797940254
+  },
+  {
+    "directions": [
+      4,
+      6
+    ],
+    "status": "unsat",
+    "seconds": 0.018325709039345384
+  },
+  {
+    "directions": [
+      4,
+      12
+    ],
+    "status": "unsat",
+    "seconds": 0.00884562497958541
+  },
+  {
+    "directions": [
+      4,
+      16
+    ],
+    "status": "unsat",
+    "seconds": 0.006007542018778622
+  },
+  {
+    "directions": [
+      4,
+      20
+    ],
+    "status": "unsat",
+    "seconds": 0.002531167003326118
+  },
+  {
+    "directions": [
+      4,
+      32
+    ],
+    "status": "unsat",
+    "seconds": 0.02362458303105086
+  },
+  {
+    "directions": [
+      4,
+      33
+    ],
+    "status": "unsat",
+    "seconds": 0.037007666076533496
+  },
+  {
+    "directions": [
+      4,
+      34
+    ],
+    "status": "unsat",
+    "seconds": 0.03576845896895975
+  },
+  {
+    "directions": [
+      4,
+      35
+    ],
+    "status": "unsat",
+    "seconds": 0.04903658293187618
+  },
+  {
+    "directions": [
+      4,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.03337716590613127
+  },
+  {
+    "directions": [
+      4,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.1534097499679774
+  },
+  {
+    "directions": [
+      4,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.03496041696052998
+  },
+  {
+    "directions": [
+      4,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.07765370793640614
+  },
+  {
+    "directions": [
+      4,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.055651583010330796
+  },
+  {
+    "directions": [
+      4,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.051475334097631276
+  },
+  {
+    "directions": [
+      4,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.04032370902132243
+  },
+  {
+    "directions": [
+      4,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.055508082965388894
+  },
+  {
+    "directions": [
+      4,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.03408987494185567
+  },
+  {
+    "directions": [
+      4,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.09996954107191414
+  },
+  {
+    "directions": [
+      4,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.0569651669356972
+  },
+  {
+    "directions": [
+      4,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.06784837495069951
+  },
+  {
+    "directions": [
+      4,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.08250925003085285
+  },
+  {
+    "directions": [
+      4,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.09177329204976559
+  },
+  {
+    "directions": [
+      4,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.18835199996829033
+  },
+  {
+    "directions": [
+      4,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.08893020893447101
+  },
+  {
+    "directions": [
+      4,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.06506908300798386
+  },
+  {
+    "directions": [
+      4,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.05877616594079882
+  },
+  {
+    "directions": [
+      4,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.07374999998137355
+  },
+  {
+    "directions": [
+      4,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.08681054203771055
+  },
+  {
+    "directions": [
+      4,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.0679383750539273
+  },
+  {
+    "directions": [
+      4,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.10536962503101677
+  },
+  {
+    "directions": [
+      4,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.0410201660124585
+  },
+  {
+    "directions": [
+      4,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.05469933291897178
+  },
+  {
+    "directions": [
+      6,
+      6
+    ],
+    "status": "unsat",
+    "seconds": 0.003123957896605134
+  },
+  {
+    "directions": [
+      6,
+      12
+    ],
+    "status": "unsat",
+    "seconds": 0.004246333031915128
+  },
+  {
+    "directions": [
+      6,
+      16
+    ],
+    "status": "unsat",
+    "seconds": 0.01018866605591029
+  },
+  {
+    "directions": [
+      6,
+      20
+    ],
+    "status": "unsat",
+    "seconds": 0.009514249977655709
+  },
+  {
+    "directions": [
+      6,
+      32
+    ],
+    "status": "unsat",
+    "seconds": 0.055603833054192364
+  },
+  {
+    "directions": [
+      6,
+      33
+    ],
+    "status": "unsat",
+    "seconds": 0.05531075003091246
+  },
+  {
+    "directions": [
+      6,
+      34
+    ],
+    "status": "unsat",
+    "seconds": 0.07056224998086691
+  },
+  {
+    "directions": [
+      6,
+      35
+    ],
+    "status": "unsat",
+    "seconds": 0.09312724997289479
+  },
+  {
+    "directions": [
+      6,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.04609662503935397
+  },
+  {
+    "directions": [
+      6,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.08231733296997845
+  },
+  {
+    "directions": [
+      6,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.04540179204195738
+  },
+  {
+    "directions": [
+      6,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.20240304106846452
+  },
+  {
+    "directions": [
+      6,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.04729749995749444
+  },
+  {
+    "directions": [
+      6,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.04185183299705386
+  },
+  {
+    "directions": [
+      6,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.03594808396883309
+  },
+  {
+    "directions": [
+      6,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.06406862509902567
+  },
+  {
+    "directions": [
+      6,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.06380329211242497
+  },
+  {
+    "directions": [
+      6,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.145706917042844
+  },
+  {
+    "directions": [
+      6,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.07020212500356138
+  },
+  {
+    "directions": [
+      6,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.06101166701409966
+  },
+  {
+    "directions": [
+      6,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.10332749993540347
+  },
+  {
+    "directions": [
+      6,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.09042841591872275
+  },
+  {
+    "directions": [
+      6,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.06061858299653977
+  },
+  {
+    "directions": [
+      6,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.037036458030343056
+  },
+  {
+    "directions": [
+      6,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.06740045896731317
+  },
+  {
+    "directions": [
+      6,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.04577012499794364
+  },
+  {
+    "directions": [
+      6,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.06346029206179082
+  },
+  {
+    "directions": [
+      6,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.04444641596637666
+  },
+  {
+    "directions": [
+      6,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.06550145801156759
+  },
+  {
+    "directions": [
+      6,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.08479487500153482
+  },
+  {
+    "directions": [
+      6,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.05997654201928526
+  },
+  {
+    "directions": [
+      6,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.0647176670609042
+  },
+  {
+    "directions": [
+      12,
+      12
+    ],
+    "status": "unsat",
+    "seconds": 0.0009553339332342148
+  },
+  {
+    "directions": [
+      12,
+      16
+    ],
+    "status": "unsat",
+    "seconds": 0.003706666990183294
+  },
+  {
+    "directions": [
+      12,
+      20
+    ],
+    "status": "unsat",
+    "seconds": 0.0063127909088507295
+  },
+  {
+    "directions": [
+      12,
+      32
+    ],
+    "status": "unsat",
+    "seconds": 0.060636207927018404
+  },
+  {
+    "directions": [
+      12,
+      33
+    ],
+    "status": "unsat",
+    "seconds": 0.06452983303461224
+  },
+  {
+    "directions": [
+      12,
+      34
+    ],
+    "status": "unsat",
+    "seconds": 0.052530457964167
+  },
+  {
+    "directions": [
+      12,
+      35
+    ],
+    "status": "unsat",
+    "seconds": 0.032701083924621344
+  },
+  {
+    "directions": [
+      12,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.08746129204519093
+  },
+  {
+    "directions": [
+      12,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.06009649997577071
+  },
+  {
+    "directions": [
+      12,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.07560404192190617
+  },
+  {
+    "directions": [
+      12,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.07438274996820837
+  },
+  {
+    "directions": [
+      12,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.04958529106806964
+  },
+  {
+    "directions": [
+      12,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.05720804096199572
+  },
+  {
+    "directions": [
+      12,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.06598587497137487
+  },
+  {
+    "directions": [
+      12,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.060079416958615184
+  },
+  {
+    "directions": [
+      12,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.045978749985806644
+  },
+  {
+    "directions": [
+      12,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.07780133304186165
+  },
+  {
+    "directions": [
+      12,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.037213125033304095
+  },
+  {
+    "directions": [
+      12,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.048187416046857834
+  },
+  {
+    "directions": [
+      12,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.06569804099854082
+  },
+  {
+    "directions": [
+      12,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.030425291042774916
+  },
+  {
+    "directions": [
+      12,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.06162420893087983
+  },
+  {
+    "directions": [
+      12,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.03673562500625849
+  },
+  {
+    "directions": [
+      12,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.03775170899461955
+  },
+  {
+    "directions": [
+      12,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.033159582992084324
+  },
+  {
+    "directions": [
+      12,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.06659404200036079
+  },
+  {
+    "directions": [
+      12,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.05149295902810991
+  },
+  {
+    "directions": [
+      12,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.0546678330283612
+  },
+  {
+    "directions": [
+      12,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.04169841704424471
+  },
+  {
+    "directions": [
+      12,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.05022941599600017
+  },
+  {
+    "directions": [
+      12,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.05430129205342382
+  },
+  {
+    "directions": [
+      16,
+      16
+    ],
+    "status": "unsat",
+    "seconds": 0.00613054190762341
+  },
+  {
+    "directions": [
+      16,
+      20
+    ],
+    "status": "unsat",
+    "seconds": 0.016873124986886978
+  },
+  {
+    "directions": [
+      16,
+      32
+    ],
+    "status": "unsat",
+    "seconds": 0.07369962509255856
+  },
+  {
+    "directions": [
+      16,
+      33
+    ],
+    "status": "unsat",
+    "seconds": 0.07887883298099041
+  },
+  {
+    "directions": [
+      16,
+      34
+    ],
+    "status": "unsat",
+    "seconds": 0.13538429094478488
+  },
+  {
+    "directions": [
+      16,
+      35
+    ],
+    "status": "unsat",
+    "seconds": 0.0689089159714058
+  },
+  {
+    "directions": [
+      16,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.04415299999527633
+  },
+  {
+    "directions": [
+      16,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.04239324992522597
+  },
+  {
+    "directions": [
+      16,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.10041595809161663
+  },
+  {
+    "directions": [
+      16,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.09321295795962214
+  },
+  {
+    "directions": [
+      16,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.061958624981343746
+  },
+  {
+    "directions": [
+      16,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.06778300006408244
+  },
+  {
+    "directions": [
+      16,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.05405437503941357
+  },
+  {
+    "directions": [
+      16,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.04772745806258172
+  },
+  {
+    "directions": [
+      16,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.052650249912403524
+  },
+  {
+    "directions": [
+      16,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.07106250000651926
+  },
+  {
+    "directions": [
+      16,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.032042792066931725
+  },
+  {
+    "directions": [
+      16,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.03298041608650237
+  },
+  {
+    "directions": [
+      16,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.050728167057968676
+  },
+  {
+    "directions": [
+      16,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.051603500032797456
+  },
+  {
+    "directions": [
+      16,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.0963114999467507
+  },
+  {
+    "directions": [
+      16,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.0995432089548558
+  },
+  {
+    "directions": [
+      16,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.05123400001320988
+  },
+  {
+    "directions": [
+      16,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.048303249990567565
+  },
+  {
+    "directions": [
+      16,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.04904775007162243
+  },
+  {
+    "directions": [
+      16,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.04918354097753763
+  },
+  {
+    "directions": [
+      16,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.09154458402190357
+  },
+  {
+    "directions": [
+      16,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.06047224998474121
+  },
+  {
+    "directions": [
+      16,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.0496205409290269
+  },
+  {
+    "directions": [
+      16,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.06219899991992861
+  },
+  {
+    "directions": [
+      20,
+      20
+    ],
+    "status": "unsat",
+    "seconds": 0.0011625830084085464
+  },
+  {
+    "directions": [
+      20,
+      32
+    ],
+    "status": "unsat",
+    "seconds": 0.04207524994853884
+  },
+  {
+    "directions": [
+      20,
+      33
+    ],
+    "status": "unsat",
+    "seconds": 0.05335549998562783
+  },
+  {
+    "directions": [
+      20,
+      34
+    ],
+    "status": "unsat",
+    "seconds": 0.03901845798827708
+  },
+  {
+    "directions": [
+      20,
+      35
+    ],
+    "status": "unsat",
+    "seconds": 0.06053024996072054
+  },
+  {
+    "directions": [
+      20,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.05876520904712379
+  },
+  {
+    "directions": [
+      20,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.061109916074201465
+  },
+  {
+    "directions": [
+      20,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.06676145899109542
+  },
+  {
+    "directions": [
+      20,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.05019395798444748
+  },
+  {
+    "directions": [
+      20,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.07882937497925013
+  },
+  {
+    "directions": [
+      20,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.05561729206237942
+  },
+  {
+    "directions": [
+      20,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.060644958983175457
+  },
+  {
+    "directions": [
+      20,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.06283466599415988
+  },
+  {
+    "directions": [
+      20,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.0780626250198111
+  },
+  {
+    "directions": [
+      20,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.05866841704118997
+  },
+  {
+    "directions": [
+      20,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.08853029098827392
+  },
+  {
+    "directions": [
+      20,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.08027050003875047
+  },
+  {
+    "directions": [
+      20,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.06612962496001273
+  },
+  {
+    "directions": [
+      20,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.056318291928619146
+  },
+  {
+    "directions": [
+      20,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.04562783392611891
+  },
+  {
+    "directions": [
+      20,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.06692487502004951
+  },
+  {
+    "directions": [
+      20,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.08309720910619944
+  },
+  {
+    "directions": [
+      20,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.09430791693739593
+  },
+  {
+    "directions": [
+      20,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.048972457996569574
+  },
+  {
+    "directions": [
+      20,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.04568462504539639
+  },
+  {
+    "directions": [
+      20,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.020970874931663275
+  },
+  {
+    "directions": [
+      20,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.030092582921497524
+  },
+  {
+    "directions": [
+      20,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.07116275001317263
+  },
+  {
+    "directions": [
+      20,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.18266845890320837
+  },
+  {
+    "directions": [
+      32,
+      32
+    ],
+    "status": "unsat",
+    "seconds": 0.07484354206826538
+  },
+  {
+    "directions": [
+      32,
+      33
+    ],
+    "status": "unsat",
+    "seconds": 0.31634041701909155
+  },
+  {
+    "directions": [
+      32,
+      34
+    ],
+    "status": "unsat",
+    "seconds": 0.17607899999711663
+  },
+  {
+    "directions": [
+      32,
+      35
+    ],
+    "status": "unsat",
+    "seconds": 0.13754991709720343
+  },
+  {
+    "directions": [
+      32,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.15587154205422848
+  },
+  {
+    "directions": [
+      32,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.22172825003508478
+  },
+  {
+    "directions": [
+      32,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.21428220893722028
+  },
+  {
+    "directions": [
+      32,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.25069274997804314
+  },
+  {
+    "directions": [
+      32,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.19866541703231633
+  },
+  {
+    "directions": [
+      32,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.14701041695661843
+  },
+  {
+    "directions": [
+      32,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.19090925005730242
+  },
+  {
+    "directions": [
+      32,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.13534662500023842
+  },
+  {
+    "directions": [
+      32,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.14011749997735023
+  },
+  {
+    "directions": [
+      32,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.1318901659687981
+  },
+  {
+    "directions": [
+      32,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.17291137494612485
+  },
+  {
+    "directions": [
+      32,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.11752479104325175
+  },
+  {
+    "directions": [
+      32,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.14820416597649455
+  },
+  {
+    "directions": [
+      32,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.13457104098051786
+  },
+  {
+    "directions": [
+      32,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.2969509590184316
+  },
+  {
+    "directions": [
+      32,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.23094849998597056
+  },
+  {
+    "directions": [
+      32,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.17820508393924683
+  },
+  {
+    "directions": [
+      32,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.24029387498740107
+  },
+  {
+    "directions": [
+      32,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.23177887499332428
+  },
+  {
+    "directions": [
+      32,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.1622286670608446
+  },
+  {
+    "directions": [
+      32,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.2231414580019191
+  },
+  {
+    "directions": [
+      32,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.13616850005928427
+  },
+  {
+    "directions": [
+      32,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.23971091699786484
+  },
+  {
+    "directions": [
+      32,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.10420841700397432
+  },
+  {
+    "directions": [
+      33,
+      33
+    ],
+    "status": "unsat",
+    "seconds": 0.04706370795611292
+  },
+  {
+    "directions": [
+      33,
+      34
+    ],
+    "status": "unsat",
+    "seconds": 0.15550233295653015
+  },
+  {
+    "directions": [
+      33,
+      35
+    ],
+    "status": "unsat",
+    "seconds": 0.27050191699527204
+  },
+  {
+    "directions": [
+      33,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.2005103750852868
+  },
+  {
+    "directions": [
+      33,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.1707240000832826
+  },
+  {
+    "directions": [
+      33,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.14094116596970707
+  },
+  {
+    "directions": [
+      33,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.2115350830135867
+  },
+  {
+    "directions": [
+      33,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.1381732919253409
+  },
+  {
+    "directions": [
+      33,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.2133433329872787
+  },
+  {
+    "directions": [
+      33,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.14249958388973027
+  },
+  {
+    "directions": [
+      33,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.18710445892065763
+  },
+  {
+    "directions": [
+      33,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.11552279198076576
+  },
+  {
+    "directions": [
+      33,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.1569778750417754
+  },
+  {
+    "directions": [
+      33,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.17432108405046165
+  },
+  {
+    "directions": [
+      33,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.17165441706310958
+  },
+  {
+    "directions": [
+      33,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.27050399989821017
+  },
+  {
+    "directions": [
+      33,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.20776020793709904
+  },
+  {
+    "directions": [
+      33,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.21238495805300772
+  },
+  {
+    "directions": [
+      33,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.21522020804695785
+  },
+  {
+    "directions": [
+      33,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.17723866691812873
+  },
+  {
+    "directions": [
+      33,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.2539901250274852
+  },
+  {
+    "directions": [
+      33,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.16439175000414252
+  },
+  {
+    "directions": [
+      33,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.2402655000332743
+  },
+  {
+    "directions": [
+      33,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.188875291030854
+  },
+  {
+    "directions": [
+      33,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.2025803750148043
+  },
+  {
+    "directions": [
+      33,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.12289137509651482
+  },
+  {
+    "directions": [
+      33,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.12665300001390278
+  },
+  {
+    "directions": [
+      34,
+      34
+    ],
+    "status": "unsat",
+    "seconds": 0.06280129204969853
+  },
+  {
+    "directions": [
+      34,
+      35
+    ],
+    "status": "unsat",
+    "seconds": 0.1664892080007121
+  },
+  {
+    "directions": [
+      34,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.13283920905087143
+  },
+  {
+    "directions": [
+      34,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.09535504097584635
+  },
+  {
+    "directions": [
+      34,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.11906483303755522
+  },
+  {
+    "directions": [
+      34,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.1829197920160368
+  },
+  {
+    "directions": [
+      34,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.1639294169144705
+  },
+  {
+    "directions": [
+      34,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.11801166599616408
+  },
+  {
+    "directions": [
+      34,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.19355004199314862
+  },
+  {
+    "directions": [
+      34,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.23030095803551376
+  },
+  {
+    "directions": [
+      34,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.10345166700426489
+  },
+  {
+    "directions": [
+      34,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.1594622089760378
+  },
+  {
+    "directions": [
+      34,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.13357754203025252
+  },
+  {
+    "directions": [
+      34,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.1395697909174487
+  },
+  {
+    "directions": [
+      34,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.12018354097381234
+  },
+  {
+    "directions": [
+      34,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.11612266593147069
+  },
+  {
+    "directions": [
+      34,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.09617599996272475
+  },
+  {
+    "directions": [
+      34,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.2158721659798175
+  },
+  {
+    "directions": [
+      34,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.22421083401422948
+  },
+  {
+    "directions": [
+      34,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.1194136249832809
+  },
+  {
+    "directions": [
+      34,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.22022799996193498
+  },
+  {
+    "directions": [
+      34,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.20071770797949284
+  },
+  {
+    "directions": [
+      34,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.21350091707427055
+  },
+  {
+    "directions": [
+      34,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.11403779196552932
+  },
+  {
+    "directions": [
+      34,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.20910058298613876
+  },
+  {
+    "directions": [
+      34,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.24717954196967185
+  },
+  {
+    "directions": [
+      35,
+      35
+    ],
+    "status": "unsat",
+    "seconds": 0.07330466597341001
+  },
+  {
+    "directions": [
+      35,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.1374767500674352
+  },
+  {
+    "directions": [
+      35,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.14202254090923816
+  },
+  {
+    "directions": [
+      35,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.13525470800232142
+  },
+  {
+    "directions": [
+      35,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.1721371670719236
+  },
+  {
+    "directions": [
+      35,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.1366837079403922
+  },
+  {
+    "directions": [
+      35,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.11494720901828259
+  },
+  {
+    "directions": [
+      35,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.22330487496219575
+  },
+  {
+    "directions": [
+      35,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.13839641597587615
+  },
+  {
+    "directions": [
+      35,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.07401008391752839
+  },
+  {
+    "directions": [
+      35,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.13166762504260987
+  },
+  {
+    "directions": [
+      35,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.13224566692952067
+  },
+  {
+    "directions": [
+      35,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.10620300006121397
+  },
+  {
+    "directions": [
+      35,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.2446155829820782
+  },
+  {
+    "directions": [
+      35,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.11850620794575661
+  },
+  {
+    "directions": [
+      35,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.10708662506658584
+  },
+  {
+    "directions": [
+      35,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.1729959169169888
+  },
+  {
+    "directions": [
+      35,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.1723709589568898
+  },
+  {
+    "directions": [
+      35,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.09158183296676725
+  },
+  {
+    "directions": [
+      35,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.08515112509485334
+  },
+  {
+    "directions": [
+      35,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.1957025839947164
+  },
+  {
+    "directions": [
+      35,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.24302799999713898
+  },
+  {
+    "directions": [
+      35,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.11754129105247557
+  },
+  {
+    "directions": [
+      35,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.1076029579853639
+  },
+  {
+    "directions": [
+      35,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.2863757919985801
+  },
+  {
+    "directions": [
+      36,
+      36
+    ],
+    "status": "unsat",
+    "seconds": 0.0685919999377802
+  },
+  {
+    "directions": [
+      36,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.18063550000078976
+  },
+  {
+    "directions": [
+      36,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.18810945807490498
+  },
+  {
+    "directions": [
+      36,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.1767009999603033
+  },
+  {
+    "directions": [
+      36,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.12709258298855275
+  },
+  {
+    "directions": [
+      36,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.28017508308403194
+  },
+  {
+    "directions": [
+      36,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.14228808390907943
+  },
+  {
+    "directions": [
+      36,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.2881979999365285
+  },
+  {
+    "directions": [
+      36,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.12760354194324464
+  },
+  {
+    "directions": [
+      36,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.11890395800583065
+  },
+  {
+    "directions": [
+      36,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.1196628330508247
+  },
+  {
+    "directions": [
+      36,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.14875758392736316
+  },
+  {
+    "directions": [
+      36,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.12091666704509407
+  },
+  {
+    "directions": [
+      36,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.10765462508425117
+  },
+  {
+    "directions": [
+      36,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.13110404193866998
+  },
+  {
+    "directions": [
+      36,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.09408187493681908
+  },
+  {
+    "directions": [
+      36,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.12001329194754362
+  },
+  {
+    "directions": [
+      36,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.135081332991831
+  },
+  {
+    "directions": [
+      36,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.17405629204586148
+  },
+  {
+    "directions": [
+      36,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.1978356250328943
+  },
+  {
+    "directions": [
+      36,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.09622887498699129
+  },
+  {
+    "directions": [
+      36,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.22929141693748534
+  },
+  {
+    "directions": [
+      36,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.20736641599796712
+  },
+  {
+    "directions": [
+      36,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.18778037501033396
+  },
+  {
+    "directions": [
+      37,
+      37
+    ],
+    "status": "unsat",
+    "seconds": 0.0468405419960618
+  },
+  {
+    "directions": [
+      37,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.15912316704634577
+  },
+  {
+    "directions": [
+      37,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.2312877089716494
+  },
+  {
+    "directions": [
+      37,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.21994641702622175
+  },
+  {
+    "directions": [
+      37,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.1822303329827264
+  },
+  {
+    "directions": [
+      37,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.2748706249985844
+  },
+  {
+    "directions": [
+      37,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.16583908291067928
+  },
+  {
+    "directions": [
+      37,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.24902191699948162
+  },
+  {
+    "directions": [
+      37,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.20538758300244808
+  },
+  {
+    "directions": [
+      37,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.16810129198711365
+  },
+  {
+    "directions": [
+      37,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.09077975002583116
+  },
+  {
+    "directions": [
+      37,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.13286945899017155
+  },
+  {
+    "directions": [
+      37,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.11210908298380673
+  },
+  {
+    "directions": [
+      37,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.16723791707772762
+  },
+  {
+    "directions": [
+      37,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.15098875004332513
+  },
+  {
+    "directions": [
+      37,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.2063727080821991
+  },
+  {
+    "directions": [
+      37,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.30318695795722306
+  },
+  {
+    "directions": [
+      37,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.17771816696040332
+  },
+  {
+    "directions": [
+      37,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.09282633289694786
+  },
+  {
+    "directions": [
+      37,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.15859258407726884
+  },
+  {
+    "directions": [
+      37,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.09932424989528954
+  },
+  {
+    "directions": [
+      37,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.23589062492828816
+  },
+  {
+    "directions": [
+      37,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.1467735409969464
+  },
+  {
+    "directions": [
+      38,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.08574804197996855
+  },
+  {
+    "directions": [
+      38,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.14219325000885874
+  },
+  {
+    "directions": [
+      38,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.11618000001180917
+  },
+  {
+    "directions": [
+      38,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.23239720799028873
+  },
+  {
+    "directions": [
+      38,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.10350850003305823
+  },
+  {
+    "directions": [
+      38,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.20187795802485198
+  },
+  {
+    "directions": [
+      38,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.2546421670122072
+  },
+  {
+    "directions": [
+      38,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.16032466699834913
+  },
+  {
+    "directions": [
+      38,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.2946874579647556
+  },
+  {
+    "directions": [
+      38,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.14310533308889717
+  },
+  {
+    "directions": [
+      38,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.09999691694974899
+  },
+  {
+    "directions": [
+      38,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.2302144579589367
+  },
+  {
+    "directions": [
+      38,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.14298162492923439
+  },
+  {
+    "directions": [
+      38,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.14138520800042897
+  },
+  {
+    "directions": [
+      38,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.17520895902998745
+  },
+  {
+    "directions": [
+      38,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.228138874983415
+  },
+  {
+    "directions": [
+      38,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.21035604202188551
+  },
+  {
+    "directions": [
+      38,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.25582712492905557
+  },
+  {
+    "directions": [
+      38,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.1162989999866113
+  },
+  {
+    "directions": [
+      38,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.3044391250004992
+  },
+  {
+    "directions": [
+      38,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.1298777920892462
+  },
+  {
+    "directions": [
+      38,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.19935183401685208
+  },
+  {
+    "directions": [
+      39,
+      39
+    ],
+    "status": "unsat",
+    "seconds": 0.08144766604527831
+  },
+  {
+    "directions": [
+      39,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.18794116599019617
+  },
+  {
+    "directions": [
+      39,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.3168208330171183
+  },
+  {
+    "directions": [
+      39,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.20106075005605817
+  },
+  {
+    "directions": [
+      39,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.15420808305498213
+  },
+  {
+    "directions": [
+      39,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.12910495907999575
+  },
+  {
+    "directions": [
+      39,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.150362457963638
+  },
+  {
+    "directions": [
+      39,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.2886226250557229
+  },
+  {
+    "directions": [
+      39,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.12076545797754079
+  },
+  {
+    "directions": [
+      39,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.09712575003504753
+  },
+  {
+    "directions": [
+      39,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.14503958402201533
+  },
+  {
+    "directions": [
+      39,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.134873541072011
+  },
+  {
+    "directions": [
+      39,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.16086649999488145
+  },
+  {
+    "directions": [
+      39,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.1329534170217812
+  },
+  {
+    "directions": [
+      39,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.1968316249549389
+  },
+  {
+    "directions": [
+      39,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.2129209580598399
+  },
+  {
+    "directions": [
+      39,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.2188712500501424
+  },
+  {
+    "directions": [
+      39,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.3059872080339119
+  },
+  {
+    "directions": [
+      39,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.22022850008215755
+  },
+  {
+    "directions": [
+      39,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.14423249999526888
+  },
+  {
+    "directions": [
+      39,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.18567725003231317
+  },
+  {
+    "directions": [
+      40,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.0505279169883579
+  },
+  {
+    "directions": [
+      40,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.26405579200945795
+  },
+  {
+    "directions": [
+      40,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.09673162503167987
+  },
+  {
+    "directions": [
+      40,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.11777183297090232
+  },
+  {
+    "directions": [
+      40,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.11065154196694493
+  },
+  {
+    "directions": [
+      40,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.09439250000286847
+  },
+  {
+    "directions": [
+      40,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.17627125000581145
+  },
+  {
+    "directions": [
+      40,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.15225308295339346
+  },
+  {
+    "directions": [
+      40,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.14914270804729313
+  },
+  {
+    "directions": [
+      40,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.1992837090510875
+  },
+  {
+    "directions": [
+      40,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.26601600006688386
+  },
+  {
+    "directions": [
+      40,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.15805266704410315
+  },
+  {
+    "directions": [
+      40,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.12438483303412795
+  },
+  {
+    "directions": [
+      40,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.2621799170738086
+  },
+  {
+    "directions": [
+      40,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.10403879208024591
+  },
+  {
+    "directions": [
+      40,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.22013145801611245
+  },
+  {
+    "directions": [
+      40,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.15479304094333202
+  },
+  {
+    "directions": [
+      40,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.1868803750257939
+  },
+  {
+    "directions": [
+      40,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.2061331250006333
+  },
+  {
+    "directions": [
+      40,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.1688743339618668
+  },
+  {
+    "directions": [
+      41,
+      41
+    ],
+    "status": "unsat",
+    "seconds": 0.07943441695533693
+  },
+  {
+    "directions": [
+      41,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.1053951249923557
+  },
+  {
+    "directions": [
+      41,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.21976500004529953
+  },
+  {
+    "directions": [
+      41,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.16155933402478695
+  },
+  {
+    "directions": [
+      41,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.12178924994077533
+  },
+  {
+    "directions": [
+      41,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.22001683292910457
+  },
+  {
+    "directions": [
+      41,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.19622783397790045
+  },
+  {
+    "directions": [
+      41,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.1947161250282079
+  },
+  {
+    "directions": [
+      41,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.21532033302355558
+  },
+  {
+    "directions": [
+      41,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.11692429205868393
+  },
+  {
+    "directions": [
+      41,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.15330425009597093
+  },
+  {
+    "directions": [
+      41,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.13756704202387482
+  },
+  {
+    "directions": [
+      41,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.17922708299010992
+  },
+  {
+    "directions": [
+      41,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.11195929197128862
+  },
+  {
+    "directions": [
+      41,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.2375165829434991
+  },
+  {
+    "directions": [
+      41,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.15235862496774644
+  },
+  {
+    "directions": [
+      41,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.21581362502183765
+  },
+  {
+    "directions": [
+      41,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.13472737499978393
+  },
+  {
+    "directions": [
+      41,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.27220008289441466
+  },
+  {
+    "directions": [
+      42,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.040473459055647254
+  },
+  {
+    "directions": [
+      42,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.2711927079362795
+  },
+  {
+    "directions": [
+      42,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.1487775829154998
+  },
+  {
+    "directions": [
+      42,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.20120029198005795
+  },
+  {
+    "directions": [
+      42,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.1497247499646619
+  },
+  {
+    "directions": [
+      42,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.20732733304612339
+  },
+  {
+    "directions": [
+      42,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.21752349997404963
+  },
+  {
+    "directions": [
+      42,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.2837758749956265
+  },
+  {
+    "directions": [
+      42,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.14684000005945563
+  },
+  {
+    "directions": [
+      42,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.17728120798710734
+  },
+  {
+    "directions": [
+      42,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.17340966605115682
+  },
+  {
+    "directions": [
+      42,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.10681891697458923
+  },
+  {
+    "directions": [
+      42,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.1626937499968335
+  },
+  {
+    "directions": [
+      42,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.36023704102262855
+  },
+  {
+    "directions": [
+      42,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.13917445892002434
+  },
+  {
+    "directions": [
+      42,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.2601036250125617
+  },
+  {
+    "directions": [
+      42,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.10108308400958776
+  },
+  {
+    "directions": [
+      42,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.16695066704414785
+  },
+  {
+    "directions": [
+      43,
+      43
+    ],
+    "status": "unsat",
+    "seconds": 0.06270312494598329
+  },
+  {
+    "directions": [
+      43,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.125594999990426
+  },
+  {
+    "directions": [
+      43,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.3320845830021426
+  },
+  {
+    "directions": [
+      43,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.13163641700521111
+  },
+  {
+    "directions": [
+      43,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.2713747499510646
+  },
+  {
+    "directions": [
+      43,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.14244283409789205
+  },
+  {
+    "directions": [
+      43,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.22667412494774908
+  },
+  {
+    "directions": [
+      43,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.1386092499596998
+  },
+  {
+    "directions": [
+      43,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.1418030000058934
+  },
+  {
+    "directions": [
+      43,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.11580862500704825
+  },
+  {
+    "directions": [
+      43,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.20164774998556823
+  },
+  {
+    "directions": [
+      43,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.17304370796773583
+  },
+  {
+    "directions": [
+      43,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.15029737493023276
+  },
+  {
+    "directions": [
+      43,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.15912300010677427
+  },
+  {
+    "directions": [
+      43,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.20075887499842793
+  },
+  {
+    "directions": [
+      43,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.18395191698800772
+  },
+  {
+    "directions": [
+      43,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.11586479190737009
+  },
+  {
+    "directions": [
+      44,
+      44
+    ],
+    "status": "unsat",
+    "seconds": 0.04926062503363937
+  },
+  {
+    "directions": [
+      44,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.12266016600187868
+  },
+  {
+    "directions": [
+      44,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.1952674580970779
+  },
+  {
+    "directions": [
+      44,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.14289120805915445
+  },
+  {
+    "directions": [
+      44,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.09747345803771168
+  },
+  {
+    "directions": [
+      44,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.11730079201515764
+  },
+  {
+    "directions": [
+      44,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.1615547080291435
+  },
+  {
+    "directions": [
+      44,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.13153458305168897
+  },
+  {
+    "directions": [
+      44,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.1826119590550661
+  },
+  {
+    "directions": [
+      44,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.1279020420042798
+  },
+  {
+    "directions": [
+      44,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.18798412499018013
+  },
+  {
+    "directions": [
+      44,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.22798512503504753
+  },
+  {
+    "directions": [
+      44,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.1432592080673203
+  },
+  {
+    "directions": [
+      44,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.21689229202456772
+  },
+  {
+    "directions": [
+      44,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.13697416603099555
+  },
+  {
+    "directions": [
+      44,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.24157783295959234
+  },
+  {
+    "directions": [
+      45,
+      45
+    ],
+    "status": "unsat",
+    "seconds": 0.07732608402147889
+  },
+  {
+    "directions": [
+      45,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.1708263331092894
+  },
+  {
+    "directions": [
+      45,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.1996848750859499
+  },
+  {
+    "directions": [
+      45,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.14962491590995342
+  },
+  {
+    "directions": [
+      45,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.18734070798382163
+  },
+  {
+    "directions": [
+      45,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.09369300003163517
+  },
+  {
+    "directions": [
+      45,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.19948379206471145
+  },
+  {
+    "directions": [
+      45,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.2732042910065502
+  },
+  {
+    "directions": [
+      45,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.13226962508633733
+  },
+  {
+    "directions": [
+      45,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.1328280420275405
+  },
+  {
+    "directions": [
+      45,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.23461033392231911
+  },
+  {
+    "directions": [
+      45,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.10010466701351106
+  },
+  {
+    "directions": [
+      45,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.18515604105778039
+  },
+  {
+    "directions": [
+      45,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.14889504190068692
+  },
+  {
+    "directions": [
+      45,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.16502924996893853
+  },
+  {
+    "directions": [
+      46,
+      46
+    ],
+    "status": "unsat",
+    "seconds": 0.05880112492013723
+  },
+  {
+    "directions": [
+      46,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.11843049991875887
+  },
+  {
+    "directions": [
+      46,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.1354161660419777
+  },
+  {
+    "directions": [
+      46,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.2035550830187276
+  },
+  {
+    "directions": [
+      46,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.18835524993482977
+  },
+  {
+    "directions": [
+      46,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.14695379207842052
+  },
+  {
+    "directions": [
+      46,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.12757437489926815
+  },
+  {
+    "directions": [
+      46,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.12934170803055167
+  },
+  {
+    "directions": [
+      46,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.11842066689860076
+  },
+  {
+    "directions": [
+      46,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.15597975009586662
+  },
+  {
+    "directions": [
+      46,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.11518712504766881
+  },
+  {
+    "directions": [
+      46,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.10986304201651365
+  },
+  {
+    "directions": [
+      46,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.15932395891286433
+  },
+  {
+    "directions": [
+      46,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.20542183401994407
+  },
+  {
+    "directions": [
+      47,
+      47
+    ],
+    "status": "unsat",
+    "seconds": 0.0692691250005737
+  },
+  {
+    "directions": [
+      47,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.21326012490317225
+  },
+  {
+    "directions": [
+      47,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.14101487502921373
+  },
+  {
+    "directions": [
+      47,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.19439958303701133
+  },
+  {
+    "directions": [
+      47,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.21254108403809369
+  },
+  {
+    "directions": [
+      47,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.11502841603942215
+  },
+  {
+    "directions": [
+      47,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.20421025005634874
+  },
+  {
+    "directions": [
+      47,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.18448012496810406
+  },
+  {
+    "directions": [
+      47,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.11075329105369747
+  },
+  {
+    "directions": [
+      47,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.22048741695471108
+  },
+  {
+    "directions": [
+      47,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.13467554096132517
+  },
+  {
+    "directions": [
+      47,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.20072833402082324
+  },
+  {
+    "directions": [
+      47,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.1716035419376567
+  },
+  {
+    "directions": [
+      52,
+      52
+    ],
+    "status": "unsat",
+    "seconds": 0.07638812507502735
+  },
+  {
+    "directions": [
+      52,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.17262395797297359
+  },
+  {
+    "directions": [
+      52,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.2289933330612257
+  },
+  {
+    "directions": [
+      52,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.23661599995102733
+  },
+  {
+    "directions": [
+      52,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.09110479196533561
+  },
+  {
+    "directions": [
+      52,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.13994508306495845
+  },
+  {
+    "directions": [
+      52,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.18468420894350857
+  },
+  {
+    "directions": [
+      52,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.13362729200161994
+  },
+  {
+    "directions": [
+      52,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.09985762508586049
+  },
+  {
+    "directions": [
+      52,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.17400500003714114
+  },
+  {
+    "directions": [
+      52,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.14384916692506522
+  },
+  {
+    "directions": [
+      52,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.25035716698039323
+  },
+  {
+    "directions": [
+      53,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.06620779202785343
+  },
+  {
+    "directions": [
+      53,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.118507832987234
+  },
+  {
+    "directions": [
+      53,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.21461358293890953
+  },
+  {
+    "directions": [
+      53,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.13206999993417412
+  },
+  {
+    "directions": [
+      53,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.10619458300061524
+  },
+  {
+    "directions": [
+      53,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.10036658309400082
+  },
+  {
+    "directions": [
+      53,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.12724929198157042
+  },
+  {
+    "directions": [
+      53,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.17098566598724574
+  },
+  {
+    "directions": [
+      53,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.1541728340089321
+  },
+  {
+    "directions": [
+      53,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.21058879198972136
+  },
+  {
+    "directions": [
+      53,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.3141497920732945
+  },
+  {
+    "directions": [
+      54,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.07002058404032141
+  },
+  {
+    "directions": [
+      54,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.10052866698242724
+  },
+  {
+    "directions": [
+      54,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.14343208307400346
+  },
+  {
+    "directions": [
+      54,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.07038937509059906
+  },
+  {
+    "directions": [
+      54,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.20280504098627716
+  },
+  {
+    "directions": [
+      54,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.18474254198372364
+  },
+  {
+    "directions": [
+      54,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.11828670895192772
+  },
+  {
+    "directions": [
+      54,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.15037904202472419
+  },
+  {
+    "directions": [
+      54,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.1395859170006588
+  },
+  {
+    "directions": [
+      54,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.1210081250173971
+  },
+  {
+    "directions": [
+      55,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.058625167002901435
+  },
+  {
+    "directions": [
+      55,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.12095270794816315
+  },
+  {
+    "directions": [
+      55,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.1348283749539405
+  },
+  {
+    "directions": [
+      55,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.11864483298268169
+  },
+  {
+    "directions": [
+      55,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.15903662506025285
+  },
+  {
+    "directions": [
+      55,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.11299091705586761
+  },
+  {
+    "directions": [
+      55,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.20077125006355345
+  },
+  {
+    "directions": [
+      55,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.14375983306672424
+  },
+  {
+    "directions": [
+      55,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.19059520796872675
+  },
+  {
+    "directions": [
+      56,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.066069292020984
+  },
+  {
+    "directions": [
+      56,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.12207899999339134
+  },
+  {
+    "directions": [
+      56,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.13821600005030632
+  },
+  {
+    "directions": [
+      56,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.10114170808810741
+  },
+  {
+    "directions": [
+      56,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.12129387503955513
+  },
+  {
+    "directions": [
+      56,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.11989691702183336
+  },
+  {
+    "directions": [
+      56,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.09362104197498411
+  },
+  {
+    "directions": [
+      56,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.13367091596592218
+  },
+  {
+    "directions": [
+      57,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.05622870801016688
+  },
+  {
+    "directions": [
+      57,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.11921020795125514
+  },
+  {
+    "directions": [
+      57,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.09620100003667176
+  },
+  {
+    "directions": [
+      57,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.09020370908547193
+  },
+  {
+    "directions": [
+      57,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.11074283299967647
+  },
+  {
+    "directions": [
+      57,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.09300162503495812
+  },
+  {
+    "directions": [
+      57,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.14018158300314099
+  },
+  {
+    "directions": [
+      58,
+      58
+    ],
+    "status": "unsat",
+    "seconds": 0.05798054102342576
+  },
+  {
+    "directions": [
+      58,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.06532241706736386
+  },
+  {
+    "directions": [
+      58,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.09820524998940527
+  },
+  {
+    "directions": [
+      58,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.17676662502344698
+  },
+  {
+    "directions": [
+      58,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.09041524992790073
+  },
+  {
+    "directions": [
+      58,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.09949525003321469
+  },
+  {
+    "directions": [
+      59,
+      59
+    ],
+    "status": "unsat",
+    "seconds": 0.03261762496549636
+  },
+  {
+    "directions": [
+      59,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.13170425000134856
+  },
+  {
+    "directions": [
+      59,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.11526416707783937
+  },
+  {
+    "directions": [
+      59,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.1885628750314936
+  },
+  {
+    "directions": [
+      59,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.1081873329821974
+  },
+  {
+    "directions": [
+      60,
+      60
+    ],
+    "status": "unsat",
+    "seconds": 0.07428966707084328
+  },
+  {
+    "directions": [
+      60,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.10801349999383092
+  },
+  {
+    "directions": [
+      60,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.09116420790087432
+  },
+  {
+    "directions": [
+      60,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.09302541706711054
+  },
+  {
+    "directions": [
+      61,
+      61
+    ],
+    "status": "unsat",
+    "seconds": 0.07842091703787446
+  },
+  {
+    "directions": [
+      61,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.08161350002046674
+  },
+  {
+    "directions": [
+      61,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.12495920807123184
+  },
+  {
+    "directions": [
+      62,
+      62
+    ],
+    "status": "unsat",
+    "seconds": 0.11992687499150634
+  },
+  {
+    "directions": [
+      62,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.12415862502530217
+  },
+  {
+    "directions": [
+      63,
+      63
+    ],
+    "status": "unsat",
+    "seconds": 0.08203354198485613
+  }
+]

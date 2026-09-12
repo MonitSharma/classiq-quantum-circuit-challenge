@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post258_raw16_build_v1/raw_parity_d244.qasm",
+  "sha256": "4f420fd20f22c664155787c5c9eca1e0be7fb963d9d4736e76f94e5683f0db34",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 244,
+  "cx_count": 983,
+  "max_error": 8.323584511055688e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.5309021447686234e-14,
+  "peak_sparse_support": 32,
+  "elapsed_seconds": 0.3404350280761719,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

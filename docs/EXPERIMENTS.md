@@ -1,5 +1,23 @@
 # Experiment history and failure notes
 
+Current best: **224 depth / 957 CX / 18 qubits**, `artifacts/224/`, with matching QMOD and exact-file exhaustive verification. SHA `14b9272a21fc9a8d47ce036daa2c45fe792e092f06078f3e7ad4dd14bb79371f`; fresh replay matches. See `POST258_RESEARCH.md` for the parity-assisted class codes and joint scheduling. Sub-180 remains unfinished.
+
+Earlier tie-breaker update: `artifacts/243_cx951/` is verified at **243 depth / 951 CX / 18 qubits**, with matching QMOD. SHA `38f5948a44d21c923ae740e64b968336898448ee01a30e85d81c583fe3dff696`. It supersedes 243/971 by CX count only; sub-180 remains unfinished. See `POST258_RESEARCH.md` for the further structural tests.
+
+## Earlier checkpoint: verified 243-depth two-stage oracle
+
+The renewed sub-180 investigation now has a verified **243/971/18** oracle,
+with a matching gate-level QMOD and independent dense checks in `artifacts/243/`.
+See [POST258_RESEARCH.md](POST258_RESEARCH.md). SHA:
+`adb3093877907683fd70dcf6bc3a4043f4b4dc2f6999ad118f8fc996d839f4f1`.
+The prior 258 package is preserved. The successful change is a raw-coordinate-
+assisted, four-bit-per-side class code: two loader stages, one eight-wire kernel.
+An integer phase lift and per-wire scheduling reduced the kernel from 107 to
+88 layers. All 4096 inputs and three dense states pass; replay matches the SHA.
+Sub-180 and rank one remain unfinished. The user explicitly asked to continue
+until a sub-180 method is found; this is an active optimization request, not a
+handoff-only task. No background automation or leaderboard monitor is scheduled.
+
 ## September 12 successful distributed lookup campaign
 
 Verified full-oracle progression: **391/1534**, **297/1340**, **272/1186**, then

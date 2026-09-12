@@ -1,0 +1,58 @@
+[
+  {
+    "shift": 0,
+    "depth": 258,
+    "cx": 165,
+    "error": 1.1982031223148406e-14,
+    "path": "artifacts/post258_aam_fixed_v1/kernel_shift0_d258.qasm"
+  },
+  {
+    "shift": 1,
+    "depth": 264,
+    "cx": 166,
+    "error": 1.1982031223148406e-14,
+    "path": "artifacts/post258_aam_fixed_v1/kernel_shift1_d264.qasm"
+  },
+  {
+    "shift": 2,
+    "depth": 256,
+    "cx": 161,
+    "error": 1.1946610832745233e-14,
+    "path": "artifacts/post258_aam_fixed_v1/kernel_shift2_d256.qasm"
+  },
+  {
+    "shift": 3,
+    "depth": 258,
+    "cx": 159,
+    "error": 1.1949617084534737e-14,
+    "path": "artifacts/post258_aam_fixed_v1/kernel_shift3_d258.qasm"
+  },
+  {
+    "shift": 4,
+    "depth": 260,
+    "cx": 158,
+    "error": 1.1965178173306636e-14,
+    "path": "artifacts/post258_aam_fixed_v1/kernel_shift4_d260.qasm"
+  },
+  {
+    "shift": 5,
+    "depth": 266,
+    "cx": 164,
+    "error": 1.1938919435463775e-14,
+    "path": "artifacts/post258_aam_fixed_v1/kernel_shift5_d266.qasm"
+  },
+  {
+    "shift": 6,
+    "depth": 268,
+    "cx": 168,
+    "error": 1.1964553653751902e-14,
+    "path": "artifacts/post258_aam_fixed_v1/kernel_shift6_d268.qasm"
+  },
+  {
+    "shift": 7,
+    "depth": 263,
+    "cx": 166,
+    "error": 1.1964553653751902e-14,
+    "path": "artifacts/post258_aam_fixed_v1/kernel_shift7_d263.qasm"
+  }
+]

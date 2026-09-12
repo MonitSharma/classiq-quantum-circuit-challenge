@@ -1,0 +1,30 @@
+{
+  "record": "artifacts/post258_raw48_macro_v1/best_17391.json",
+  "kernel_file": "artifacts/post258_raw48_nonlinear_v1/kernel11_d77.qasm",
+  "components": [
+    {
+      "depth": 78,
+      "settings": [
+        3,
+        false,
+        true
+      ],
+      "error": 1.117358783133978e-15,
+      "raw": 5
+    },
+    {
+      "depth": 78,
+      "settings": [
+        0,
+        false,
+        true
+      ],
+      "error": 1.7911221678720534e-15,
+      "raw": 4
+    }
+  ],
+  "kernel_depth": 77,
+  "depth": 233,
+  "cx": 948,
+  "path": "artifacts/post258_raw48_nonlinear_build_v1/raw_parity_d233.qasm"
+}

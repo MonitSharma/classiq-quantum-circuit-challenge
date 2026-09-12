@@ -1,0 +1,236 @@
+[
+  {
+    "directions": [
+      1,
+      29,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.13403275003656745
+  },
+  {
+    "directions": [
+      1,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.029523625038564205
+  },
+  {
+    "directions": [
+      8,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.04585325007792562
+  },
+  {
+    "directions": [
+      12,
+      19,
+      27
+    ],
+    "status": "unsat",
+    "seconds": 0.06884225003886968
+  },
+  {
+    "directions": [
+      12,
+      19,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.008160500088706613
+  },
+  {
+    "directions": [
+      12,
+      23,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.01532816607505083
+  },
+  {
+    "directions": [
+      12,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.00787212501745671
+  },
+  {
+    "directions": [
+      14,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.039105125004425645
+  },
+  {
+    "directions": [
+      16,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.14059970807284117
+  },
+  {
+    "directions": [
+      17,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.08640058303717524
+  },
+  {
+    "directions": [
+      18,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.1085296249948442
+  },
+  {
+    "directions": [
+      19,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.12027162499725819
+  },
+  {
+    "directions": [
+      23,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.12767870898824185
+  },
+  {
+    "directions": [
+      28,
+      29,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.2528447500662878
+  },
+  {
+    "directions": [
+      28,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.16813645791262388
+  },
+  {
+    "directions": [
+      29,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.09927812509704381
+  },
+  {
+    "directions": [
+      30,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.10772141604684293
+  },
+  {
+    "directions": [
+      31,
+      31,
+      31
+    ],
+    "status": "unsat",
+    "seconds": 0.10888425004668534
+  },
+  {
+    "directions": [
+      31,
+      31,
+      38
+    ],
+    "status": "unsat",
+    "seconds": 0.09829225006978959
+  },
+  {
+    "directions": [
+      31,
+      31,
+      40
+    ],
+    "status": "unsat",
+    "seconds": 0.0976235419511795
+  },
+  {
+    "directions": [
+      31,
+      31,
+      42
+    ],
+    "status": "unsat",
+    "seconds": 0.0749507499858737
+  },
+  {
+    "directions": [
+      31,
+      31,
+      53
+    ],
+    "status": "unsat",
+    "seconds": 0.1610249999212101
+  },
+  {
+    "directions": [
+      31,
+      31,
+      54
+    ],
+    "status": "unsat",
+    "seconds": 0.09576887497678399
+  },
+  {
+    "directions": [
+      31,
+      31,
+      55
+    ],
+    "status": "unsat",
+    "seconds": 0.08489983296021819
+  },
+  {
+    "directions": [
+      31,
+      31,
+      56
+    ],
+    "status": "unsat",
+    "seconds": 0.07270145893562585
+  },
+  {
+    "directions": [
+      31,
+      31,
+      57
+    ],
+    "status": "unsat",
+    "seconds": 0.13205941603519022
+  }
+]
