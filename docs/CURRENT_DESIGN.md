@@ -1,5 +1,18 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+**Current best is now 258/1188/18**, using the distributed phase implementation
+of the two-level-comparison identity. Its complete current design is
+[DISTRIBUTED_LOOKUP_258.md](DISTRIBUTED_LOOKUP_258.md), and the verified package
+with a matching QMOD is `artifacts/258/`. The remainder of this file describes
+the historical protected 524 fallback. The earlier architecture closures below
+are superseded where the new implementation demonstrates otherwise.
+
+Earlier audit (historical): [DEPTH_GAP_ANALYSIS_2026-09-12.md](DEPTH_GAP_ANALYSIS_2026-09-12.md)
+recorded the 456/1140 level circuit as the then-current local depth best; the 524 design
+below remains a preserved fallback. Pure rescheduling of the 456 artifact has
+a 389-depth per-wire floor. Alternative default-code UCG components remain
+127 depth each. No new best or rank-one solution was produced.
+
 ## September 12 native v2 checkpoint: verified but too deep
 
 The requested concrete encoder experiment produced a verified nine-qubit v2

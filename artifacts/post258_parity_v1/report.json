@@ -1,0 +1,56 @@
+[
+  {
+    "side": "u",
+    "stage": 0,
+    "seed": 0,
+    "depth": 109,
+    "cx": 265,
+    "error": 1.7792925071215808e-15,
+    "path": "artifacts/post258_parity_v1/u0_d109.qasm"
+  },
+  {
+    "side": "u",
+    "stage": 1,
+    "seed": 3,
+    "depth": 114,
+    "cx": 274,
+    "error": 1.7837184984155658e-15,
+    "path": "artifacts/post258_parity_v1/u1_d114.qasm"
+  },
+  {
+    "side": "u",
+    "stage": 2,
+    "seed": 3,
+    "depth": 115,
+    "cx": 292,
+    "error": 2.2237968295965893e-15,
+    "path": "artifacts/post258_parity_v1/u2_d115.qasm"
+  },
+  {
+    "side": "v",
+    "stage": 0,
+    "seed": 3,
+    "depth": 108,
+    "cx": 268,
+    "error": 2.221623612363403e-15,
+    "path": "artifacts/post258_parity_v1/v0_d108.qasm"
+  },
+  {
+    "side": "v",
+    "stage": 1,
+    "seed": 3,
+    "depth": 134,
+    "cx": 361,
+    "error": 2.230297741663346e-15,
+    "path": "artifacts/post258_parity_v1/v1_d134.qasm"
+  },
+  {
+    "side": "v",
+    "stage": 2,
+    "seed": 2,
+    "depth": 112,
+    "cx": 291,
+    "error": 1.7895006080725346e-15,
+    "path": "artifacts/post258_parity_v1/v2_d112.qasm"
+  }
+]

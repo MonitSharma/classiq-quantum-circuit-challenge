@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post258_independent_codes_v1/independent_codes_d480.qasm",
+  "sha256": "91046c07bd90465628cbe3ee0af6e8b8fa54fd2ecaf2deb20b2628bb88a025a0",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 480,
+  "cx_count": 1208,
+  "max_error": 8.223750408980663e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.972025663827239e-14,
+  "peak_sparse_support": 32,
+  "elapsed_seconds": 0.4391319751739502,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

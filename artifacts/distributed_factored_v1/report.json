@@ -1,0 +1,2775 @@
+[
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        56,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 233
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        20,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 234
+    },
+    "depth": 272,
+    "cx": 1186,
+    "kernel_depth": 20,
+    "path": "artifacts/distributed_factored_v1/candidate0_d272.qasm"
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        56,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 233
+    },
+    "x": {
+      "frame": [
+        3,
+        2,
+        4
+      ],
+      "triple": [
+        54,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 182
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 276,
+    "cx": 1198,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        56,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 233
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        5
+      ],
+      "triple": [
+        20,
+        34,
+        44
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1204,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        56,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 233
+    },
+    "x": {
+      "frame": [
+        5,
+        2,
+        4
+      ],
+      "triple": [
+        44,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 194
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1204,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        56,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 233
+    },
+    "x": {
+      "frame": [
+        1,
+        6,
+        4
+      ],
+      "triple": [
+        20,
+        26,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1198,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        56,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 233
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        6
+      ],
+      "triple": [
+        20,
+        34,
+        26
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 180
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1196,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        6,
+        4
+      ],
+      "triple": [
+        56,
+        18,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 190
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        20,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 234
+    },
+    "depth": 273,
+    "cx": 1196,
+    "kernel_depth": 20
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        6,
+        4
+      ],
+      "triple": [
+        56,
+        18,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 190
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        3,
+        2,
+        4
+      ],
+      "triple": [
+        54,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 182
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 276,
+    "cx": 1208,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        6,
+        4
+      ],
+      "triple": [
+        56,
+        18,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 190
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        5
+      ],
+      "triple": [
+        20,
+        34,
+        44
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1214,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        6,
+        4
+      ],
+      "triple": [
+        56,
+        18,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 190
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        5,
+        2,
+        4
+      ],
+      "triple": [
+        44,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 194
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1214,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        6,
+        4
+      ],
+      "triple": [
+        56,
+        18,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 190
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        1,
+        6,
+        4
+      ],
+      "triple": [
+        20,
+        26,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1208,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        6,
+        4
+      ],
+      "triple": [
+        56,
+        18,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 190
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        6
+      ],
+      "triple": [
+        20,
+        34,
+        26
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 180
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1206,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        6
+      ],
+      "triple": [
+        56,
+        52,
+        18
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 194
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        20,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 234
+    },
+    "depth": 273,
+    "cx": 1172,
+    "kernel_depth": 20
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        6
+      ],
+      "triple": [
+        56,
+        52,
+        18
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 194
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        3,
+        2,
+        4
+      ],
+      "triple": [
+        54,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 182
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 276,
+    "cx": 1184,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        6
+      ],
+      "triple": [
+        56,
+        52,
+        18
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 194
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        5
+      ],
+      "triple": [
+        20,
+        34,
+        44
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1190,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        6
+      ],
+      "triple": [
+        56,
+        52,
+        18
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 194
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        5,
+        2,
+        4
+      ],
+      "triple": [
+        44,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 194
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1190,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        6
+      ],
+      "triple": [
+        56,
+        52,
+        18
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 194
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        1,
+        6,
+        4
+      ],
+      "triple": [
+        20,
+        26,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1184,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        6
+      ],
+      "triple": [
+        56,
+        52,
+        18
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 194
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        6
+      ],
+      "triple": [
+        20,
+        34,
+        26
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 180
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1182,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        3,
+        4
+      ],
+      "triple": [
+        56,
+        12,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 180
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 180
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        20,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 234
+    },
+    "depth": 276,
+    "cx": 1154,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        3,
+        4
+      ],
+      "triple": [
+        56,
+        12,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 180
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 180
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        3,
+        2,
+        4
+      ],
+      "triple": [
+        54,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 182
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 277,
+    "cx": 1166,
+    "kernel_depth": 23
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        3,
+        4
+      ],
+      "triple": [
+        56,
+        12,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 180
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 180
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        5
+      ],
+      "triple": [
+        20,
+        34,
+        44
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1172,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        3,
+        4
+      ],
+      "triple": [
+        56,
+        12,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 180
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 180
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        5,
+        2,
+        4
+      ],
+      "triple": [
+        44,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 194
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1172,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        3,
+        4
+      ],
+      "triple": [
+        56,
+        12,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 180
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 180
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        1,
+        6,
+        4
+      ],
+      "triple": [
+        20,
+        26,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1166,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        3,
+        4
+      ],
+      "triple": [
+        56,
+        12,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 180
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 76,
+          "cx": 180
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        }
+      ],
+      "proxy": 236
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        6
+      ],
+      "triple": [
+        20,
+        34,
+        26
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 180
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1164,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        3,
+        2,
+        4
+      ],
+      "triple": [
+        12,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 194
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 192
+        }
+      ],
+      "proxy": 237
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        20,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 234
+    },
+    "depth": 277,
+    "cx": 1180,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        3,
+        2,
+        4
+      ],
+      "triple": [
+        12,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 194
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 192
+        }
+      ],
+      "proxy": 237
+    },
+    "x": {
+      "frame": [
+        3,
+        2,
+        4
+      ],
+      "triple": [
+        54,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 182
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 277,
+    "cx": 1192,
+    "kernel_depth": 23
+  },
+  {
+    "y": {
+      "frame": [
+        3,
+        2,
+        4
+      ],
+      "triple": [
+        12,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 194
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 192
+        }
+      ],
+      "proxy": 237
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        5
+      ],
+      "triple": [
+        20,
+        34,
+        44
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1198,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        3,
+        2,
+        4
+      ],
+      "triple": [
+        12,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 194
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 192
+        }
+      ],
+      "proxy": 237
+    },
+    "x": {
+      "frame": [
+        5,
+        2,
+        4
+      ],
+      "triple": [
+        44,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 194
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1198,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        3,
+        2,
+        4
+      ],
+      "triple": [
+        12,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 194
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 192
+        }
+      ],
+      "proxy": 237
+    },
+    "x": {
+      "frame": [
+        1,
+        6,
+        4
+      ],
+      "triple": [
+        20,
+        26,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1192,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        3,
+        2,
+        4
+      ],
+      "triple": [
+        12,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 4,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 194
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 192
+        }
+      ],
+      "proxy": 237
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        6
+      ],
+      "triple": [
+        20,
+        34,
+        26
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 180
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1190,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        5
+      ],
+      "triple": [
+        56,
+        52,
+        30
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 182
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        }
+      ],
+      "proxy": 237
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        20,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 234
+    },
+    "depth": 276,
+    "cx": 1178,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        5
+      ],
+      "triple": [
+        56,
+        52,
+        30
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 182
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        }
+      ],
+      "proxy": 237
+    },
+    "x": {
+      "frame": [
+        3,
+        2,
+        4
+      ],
+      "triple": [
+        54,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 182
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 277,
+    "cx": 1190,
+    "kernel_depth": 23
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        5
+      ],
+      "triple": [
+        56,
+        52,
+        30
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 182
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        }
+      ],
+      "proxy": 237
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        5
+      ],
+      "triple": [
+        20,
+        34,
+        44
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1196,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        5
+      ],
+      "triple": [
+        56,
+        52,
+        30
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 182
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        }
+      ],
+      "proxy": 237
+    },
+    "x": {
+      "frame": [
+        5,
+        2,
+        4
+      ],
+      "triple": [
+        44,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 194
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1196,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        5
+      ],
+      "triple": [
+        56,
+        52,
+        30
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 182
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        }
+      ],
+      "proxy": 237
+    },
+    "x": {
+      "frame": [
+        1,
+        6,
+        4
+      ],
+      "triple": [
+        20,
+        26,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1190,
+    "kernel_depth": 22
+  },
+  {
+    "y": {
+      "frame": [
+        1,
+        2,
+        5
+      ],
+      "triple": [
+        56,
+        52,
+        30
+      ],
+      "stages": [
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 182
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 200
+        }
+      ],
+      "proxy": 237
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        6
+      ],
+      "triple": [
+        20,
+        34,
+        26
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 180
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 238
+    },
+    "depth": 278,
+    "cx": 1188,
+    "kernel_depth": 22
+  }
+]

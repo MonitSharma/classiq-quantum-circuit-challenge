@@ -1,5 +1,13 @@
 # Complete method and research index
 
+**September 12 update: verified best is 258 depth / 1188 CX / 18 qubits.**
+[DISTRIBUTED_LOOKUP_258.md](DISTRIBUTED_LOOKUP_258.md) records the successful
+distributed parity lookup and 13-layer kernel construction. `artifacts/258/`
+contains exact QASM, matching QMOD, exhaustive and dense checks, and replay
+metadata. This supersedes older architecture closures and fallback-only status
+below. The original notebook and older best circuits remain preserved. No
+rank-one result or new challenge submission has been established.
+
 Updated September 11, 2026. This is the map of the Classiq logo-oracle
 research program. The chronological measurements and failure notes remain in
 [`EXPERIMENTS.md`](EXPERIMENTS.md); this file is the compact index for a new

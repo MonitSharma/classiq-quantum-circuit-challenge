@@ -1,0 +1,14 @@
+[
+  {
+    "name": "clifford",
+    "depth": 274,
+    "cx": 1186,
+    "path": "artifacts/distributed_tket_v1/clifford_d274.qasm"
+  },
+  {
+    "name": "peephole",
+    "depth": 284,
+    "cx": 1186,
+    "path": "artifacts/distributed_tket_v1/peephole_d284.qasm"
+  }
+]

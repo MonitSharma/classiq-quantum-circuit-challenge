@@ -1,5 +1,38 @@
 # Continuation handoff
 
+## Current best: verified 258-depth distributed lookup oracle
+
+September 12: active construction work reduced the verified best from 456 to
+**258 depth / 1188 CX / 18 qubits**. See
+[DISTRIBUTED_LOOKUP_258.md](DISTRIBUTED_LOOKUP_258.md). The protected package is
+`artifacts/258/`, including exact QASM, exhaustive and independent dense
+verification reports, matching gate-level QMOD, kernel, and replay recipe.
+SHA: `b2a2e8ac6a6d7ee2c2e4ec11bcca4b4ba4fe54aab15b11c71236efcecdca3066`.
+
+The successful changes distribute Walsh phases onto temporarily borrowed
+coordinate wires, use explicit three-layer parity-basis transitions, carry
+Gray-walk offsets across stages, and replace the old 27-layer kernel with an
+exact 13-layer construction. Five focused tests pass and a fresh replay matches
+the QASM SHA. This supersedes the older claims that the lookup construction or
+27-layer kernel could not improve. The earlier notebook and verified circuits
+remain intact. No new challenge submission was made; 183 and rank one remain
+unfinished. No optimization processes or monitors are intentionally left running.
+
+## Earlier September 12 depth-gap audit (historical)
+
+The latest user request is renewed code analysis and help reaching the observed
+183-depth leaderboard level; the older handoff-only task description is stale.
+See [DEPTH_GAP_ANALYSIS_2026-09-12.md](DEPTH_GAP_ANALYSIS_2026-09-12.md).
+The 456/1140 and 524/950 hashes and notebook metrics match. The 456 circuit has
+a fixed-wire scheduling floor of 389 (q16 gate touches). A proof extends the
+odd-population parity argument to a depth >=682 bound for X/CX/diagonal-only
+circuits with six basis-state ancillas, **not general U3/CX circuits**.
+Twelve default-code UCGate components verify but remain 127 depth each; no
+full candidate or new best was produced. Safari displays 183/789 as leader
+and Monit S. at rank 24, 524/950. No submission or background run was started.
+The report explicitly corrects overbroad older claims of architectural
+optimality; the 456 artifact was the best documented local oracle at that checkpoint.
+
 ## September 12 native v2 checkpoint: verified but too deep
 
 The requested concrete encoder experiment produced a verified nine-qubit v2

@@ -1,0 +1,30 @@
+{
+  "beam_width": 1000,
+  "steps": 14,
+  "records": [
+    {
+      "depth": 15,
+      "cx": 16,
+      "error": 7.753905292432095e-16,
+      "path": "artifacts/distributed_kernel_lifted/kernel_d15_cx16.qasm"
+    },
+    {
+      "depth": 14,
+      "cx": 16,
+      "error": 7.717769146712e-16,
+      "path": "artifacts/distributed_kernel_lifted/kernel_d14_cx16.qasm"
+    },
+    {
+      "depth": 14,
+      "cx": 15,
+      "error": 7.753905292432095e-16,
+      "path": "artifacts/distributed_kernel_lifted/kernel_d14_cx15.qasm"
+    },
+    {
+      "depth": 13,
+      "cx": 15,
+      "error": 7.7258647524294435e-16,
+      "path": "artifacts/distributed_kernel_lifted/kernel_d13_cx15.qasm"
+    }
+  ]
+}

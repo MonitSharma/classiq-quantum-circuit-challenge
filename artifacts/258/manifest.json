@@ -1,0 +1,14 @@
+{
+  "qasm": "distributed_level_258.qasm",
+  "qmod": "distributed_level_258.qmod",
+  "depth": 258,
+  "cx": 1188,
+  "width": 18,
+  "sha256": "b2a2e8ac6a6d7ee2c2e4ec11bcca4b4ba4fe54aab15b11c71236efcecdca3066",
+  "kernel_sha256": "8309b35c5cec2daef49c81cda0a6e267211835b43119ced304fd7798e265d54f",
+  "status": "Exhaustively verified packaged QASM; replay matches SHA; QMOD gate list checked",
+  "qmod_note": "Gate-level matching oracle plus 12-Hadamard synthesis harness; not resynthesized or submitted",
+  "qmod_oracle_gate_count": 2274,
+  "qmod_max_parameter_difference": 0,
+  "replay_sha256": "b2a2e8ac6a6d7ee2c2e4ec11bcca4b4ba4fe54aab15b11c71236efcecdca3066"
+}

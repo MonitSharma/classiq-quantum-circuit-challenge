@@ -1,0 +1,73 @@
+[
+  {
+    "code_index": 0,
+    "side": "u",
+    "stage": 0,
+    "depth": 82,
+    "cx": 228,
+    "seed": 0,
+    "error": 2.8869361895318807e-15
+  },
+  {
+    "code_index": 0,
+    "side": "u",
+    "stage": 1,
+    "depth": 80,
+    "cx": 210,
+    "seed": 18,
+    "error": 1.5583685209959704e-15
+  },
+  {
+    "code_index": 0,
+    "side": "u",
+    "stage": 2,
+    "depth": 82,
+    "cx": 228,
+    "seed": 0,
+    "error": 2.6766707502727392e-15
+  },
+  {
+    "code_index": 0,
+    "side": "v",
+    "stage": 0,
+    "depth": 82,
+    "cx": 202,
+    "seed": 7,
+    "error": 2.445659304442468e-15
+  },
+  {
+    "code_index": 0,
+    "side": "v",
+    "stage": 1,
+    "depth": 82,
+    "cx": 214,
+    "seed": 7,
+    "error": 2.2321621531191674e-15
+  },
+  {
+    "code_index": 0,
+    "side": "v",
+    "stage": 2,
+    "depth": 82,
+    "cx": 208,
+    "seed": 11,
+    "error": 2.2241663153851454e-15
+  },
+  {
+    "oracle": true,
+    "code_index": 0,
+    "depth": 297,
+    "cx": 1340,
+    "path": "artifacts/distributed_level_structured/code0_d297.qasm",
+    "ytriple": [
+      56,
+      52,
+      38
+    ],
+    "xtriple": [
+      20,
+      34,
+      56
+    ]
+  }
+]

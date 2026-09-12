@@ -1,0 +1,256 @@
+{
+  "notebook_sha256": "9a624d70f8d33e28ab65114b19cf5a02100b476330dbdba826e8a71d690fe3df",
+  "baselines": [
+    {
+      "path": "artifacts/456/level_merged_456.qasm",
+      "sha256": "8e997e511d9fb043ad82896a7c873f5c3a1cca4cde0cce7bf5df5cba6c6c6e7c",
+      "depth": 456,
+      "counts": {
+        "cx": 1140,
+        "u3": 1061
+      },
+      "touches": [
+        86,
+        50,
+        70,
+        156,
+        86,
+        86,
+        54,
+        60,
+        116,
+        116,
+        100,
+        110,
+        387,
+        370,
+        385,
+        386,
+        389,
+        334
+      ],
+      "cx_touches": [
+        86,
+        50,
+        70,
+        156,
+        86,
+        86,
+        54,
+        60,
+        116,
+        116,
+        100,
+        110,
+        206,
+        198,
+        202,
+        200,
+        202,
+        182
+      ],
+      "fixed_gate_touch_floor": 389,
+      "occupied_wire_slot_floor": 186,
+      "matching_exhaustive_report": true,
+      "notebook_metrics_match": true
+    },
+    {
+      "path": "artifacts/524/full_mux_feature_linear_tket_524.qasm",
+      "sha256": "7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147",
+      "depth": 524,
+      "counts": {
+        "cx": 950,
+        "u3": 823
+      },
+      "touches": [
+        56,
+        52,
+        36,
+        58,
+        81,
+        25,
+        98,
+        100,
+        110,
+        106,
+        130,
+        115,
+        245,
+        321,
+        240,
+        225,
+        405,
+        320
+      ],
+      "cx_touches": [
+        56,
+        52,
+        36,
+        50,
+        68,
+        22,
+        98,
+        100,
+        110,
+        106,
+        130,
+        114,
+        140,
+        166,
+        134,
+        128,
+        206,
+        184
+      ],
+      "fixed_gate_touch_floor": 405,
+      "occupied_wire_slot_floor": 152,
+      "matching_exhaustive_report": true,
+      "notebook_metrics_match": true
+    }
+  ],
+  "level_identity_mismatches": 0,
+  "notebook_predicate_mismatches": 0,
+  "marked_points": 1097,
+  "boolean_walsh_support": 4096,
+  "affine_diagonal_model_bound": {
+    "nonconstant_rotation_floor": 4095,
+    "cx_floor": 4083,
+    "width18_depth_floor": 682,
+    "scope": "X/CX/diagonal single-qubit gates, clean basis-state ancillas; excludes internal basis-changing gates"
+  },
+  "ucgate_default_code_components": [
+    {
+      "name": "u1",
+      "bit": 0,
+      "depth": 127,
+      "counts": {
+        "u3": 64,
+        "cx": 63
+      },
+      "monomial_error": 3.481830760267435e-14,
+      "basis_inputs_checked": 128
+    },
+    {
+      "name": "u1",
+      "bit": 1,
+      "depth": 127,
+      "counts": {
+        "u3": 64,
+        "cx": 63
+      },
+      "monomial_error": 3.3111319852487674e-14,
+      "basis_inputs_checked": 128
+    },
+    {
+      "name": "u1",
+      "bit": 2,
+      "depth": 127,
+      "counts": {
+        "u3": 64,
+        "cx": 63
+      },
+      "monomial_error": 3.6576888963988865e-14,
+      "basis_inputs_checked": 128
+    },
+    {
+      "name": "v1",
+      "bit": 0,
+      "depth": 127,
+      "counts": {
+        "u3": 64,
+        "cx": 63
+      },
+      "monomial_error": 1.9454104509218677e-14,
+      "basis_inputs_checked": 128
+    },
+    {
+      "name": "v1",
+      "bit": 1,
+      "depth": 127,
+      "counts": {
+        "u3": 64,
+        "cx": 63
+      },
+      "monomial_error": 4.480303605914741e-14,
+      "basis_inputs_checked": 128
+    },
+    {
+      "name": "v1",
+      "bit": 2,
+      "depth": 127,
+      "counts": {
+        "u3": 64,
+        "cx": 63
+      },
+      "monomial_error": 2.35968216232967e-14,
+      "basis_inputs_checked": 128
+    },
+    {
+      "name": "u2",
+      "bit": 0,
+      "depth": 127,
+      "counts": {
+        "u3": 64,
+        "cx": 63
+      },
+      "monomial_error": 2.8301161553402074e-14,
+      "basis_inputs_checked": 128
+    },
+    {
+      "name": "u2",
+      "bit": 1,
+      "depth": 127,
+      "counts": {
+        "u3": 64,
+        "cx": 63
+      },
+      "monomial_error": 3.133904400041661e-14,
+      "basis_inputs_checked": 128
+    },
+    {
+      "name": "u2",
+      "bit": 2,
+      "depth": 127,
+      "counts": {
+        "u3": 64,
+        "cx": 63
+      },
+      "monomial_error": 5.1306029496483034e-14,
+      "basis_inputs_checked": 128
+    },
+    {
+      "name": "v2",
+      "bit": 0,
+      "depth": 127,
+      "counts": {
+        "u3": 64,
+        "cx": 63
+      },
+      "monomial_error": 2.9516322600629987e-13,
+      "basis_inputs_checked": 128
+    },
+    {
+      "name": "v2",
+      "bit": 1,
+      "depth": 127,
+      "counts": {
+        "u3": 64,
+        "cx": 63
+      },
+      "monomial_error": 8.036140906645655e-14,
+      "basis_inputs_checked": 128
+    },
+    {
+      "name": "v2",
+      "bit": 2,
+      "depth": 127,
+      "counts": {
+        "u3": 64,
+        "cx": 63
+      },
+      "monomial_error": 1.9728300433783465e-14,
+      "basis_inputs_checked": 128
+    }
+  ],
+  "status": "Analysis and verified component negative result; no new full oracle"
+}

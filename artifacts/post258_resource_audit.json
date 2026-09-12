@@ -1,0 +1,29 @@
+{
+  "u": {
+    "parity_terms": [
+      192,
+      134,
+      192
+    ],
+    "fixed_representative_slot_floors": [
+      64,
+      44,
+      64
+    ]
+  },
+  "v": {
+    "parity_terms": [
+      168,
+      173,
+      171
+    ],
+    "fixed_representative_slot_floors": [
+      56,
+      57,
+      57
+    ]
+  },
+  "row_classes": 11,
+  "column_classes": 11,
+  "protected_qasm_sha256": "b2a2e8ac6a6d7ee2c2e4ec11bcca4b4ba4fe54aab15b11c71236efcecdca3066"
+}

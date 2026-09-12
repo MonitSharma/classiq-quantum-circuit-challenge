@@ -1,0 +1,78 @@
+{
+  "y": {
+    "frame": [
+      1,
+      2,
+      4
+    ],
+    "triple": [
+      56,
+      52,
+      38
+    ],
+    "stages": [
+      {
+        "seed": 0,
+        "sparse": false,
+        "open_walk": true,
+        "depth": 78,
+        "cx": 204
+      },
+      {
+        "seed": 1,
+        "sparse": false,
+        "open_walk": true,
+        "depth": 77,
+        "cx": 176
+      },
+      {
+        "seed": 0,
+        "sparse": false,
+        "open_walk": true,
+        "depth": 78,
+        "cx": 204
+      }
+    ],
+    "proxy": 233
+  },
+  "x": {
+    "frame": [
+      1,
+      2,
+      4
+    ],
+    "triple": [
+      20,
+      34,
+      56
+    ],
+    "stages": [
+      {
+        "seed": 2,
+        "sparse": false,
+        "open_walk": true,
+        "depth": 78,
+        "cx": 188
+      },
+      {
+        "seed": 1,
+        "sparse": false,
+        "open_walk": true,
+        "depth": 78,
+        "cx": 196
+      },
+      {
+        "seed": 0,
+        "sparse": false,
+        "open_walk": true,
+        "depth": 78,
+        "cx": 190
+      }
+    ],
+    "proxy": 234
+  },
+  "depth": 272,
+  "cx": 1186,
+  "kernel_depth": 20,
+  "path": "artifacts/distributed_factored_v1/candidate0_d272.qasm"
+}

@@ -1,5 +1,17 @@
 # Level/comparator decomposition
 
+## September 12 breakthrough: verified 258-depth implementation
+
+The identity in this document now has an exact **258/1188/18** implementation:
+see [DISTRIBUTED_LOOKUP_258.md](DISTRIBUTED_LOOKUP_258.md). Lookup phases are
+distributed across temporarily mixed coordinate/output wires rather than kept
+on the three output ancillas. The lookup stages measure 77–78 depth, and a
+factored parity-network kernel measures 13 depth. This concretely supersedes
+the older assertions below that 456 was a floor and the 27-layer kernel was
+minimal. Package `artifacts/258/` passes exhaustive and independent dense checks,
+has a matching gate-level QMOD, and reproduces its QASM hash through replay.
+The 183-depth benchmark remains unmatched; no submission is claimed.
+
 ## September 12 native v2 checkpoint: verified but too deep
 
 The requested concrete encoder experiment produced a verified nine-qubit v2
@@ -26,6 +38,13 @@ unfinished. The 524 and 456 artifacts are both preserved.
 
 
 Updated September 11, 2026.
+
+Audit note: [DEPTH_GAP_ANALYSIS_2026-09-12.md](DEPTH_GAP_ANALYSIS_2026-09-12.md)
+corrects the historical assertions below that 456 is a floor, that the natural
+split and 27-depth kernel are proven optimal, and that only AND-network
+encoders can improve the result. None is a general theorem. The measured
+fixed-wire floor of the protected 456 QASM is 389. The latest degree-three v2
+exclusion above supersedes the older proposed degree-three route below.
 
 ## The exact identity
 

@@ -1,0 +1,146 @@
+{
+  "depth": 480,
+  "cx": 1208,
+  "records": {
+    "u": {
+      "first": [
+        14,
+        24,
+        60
+      ],
+      "second": [
+        28,
+        14,
+        56
+      ],
+      "stages": [
+        142,
+        111,
+        141
+      ],
+      "total": 394
+    },
+    "v": {
+      "first": [
+        14,
+        20,
+        38
+      ],
+      "second": [
+        56,
+        12,
+        46
+      ],
+      "stages": [
+        140,
+        112,
+        139
+      ],
+      "total": 391
+    }
+  },
+  "components": [
+    {
+      "side": "u",
+      "stage": 0,
+      "depth": 78,
+      "cx": 180,
+      "seed": 0,
+      "sparse": false,
+      "open_walk": true,
+      "error": 1.9993716763159234e-15
+    },
+    {
+      "side": "u",
+      "stage": 1,
+      "depth": 74,
+      "cx": 178,
+      "seed": 15,
+      "sparse": false,
+      "open_walk": true,
+      "error": 1.1659771139739402e-15
+    },
+    {
+      "side": "u",
+      "stage": 2,
+      "depth": 78,
+      "cx": 170,
+      "seed": 0,
+      "sparse": false,
+      "open_walk": true,
+      "error": 1.7780913491106148e-15
+    },
+    {
+      "side": "v",
+      "stage": 0,
+      "depth": 78,
+      "cx": 188,
+      "seed": 0,
+      "sparse": false,
+      "open_walk": true,
+      "error": 2.006187407955513e-15
+    },
+    {
+      "side": "v",
+      "stage": 1,
+      "depth": 75,
+      "cx": 168,
+      "seed": 16,
+      "sparse": true,
+      "open_walk": false,
+      "error": 1.3395560858720407e-15
+    },
+    {
+      "side": "v",
+      "stage": 2,
+      "depth": 78,
+      "cx": 162,
+      "seed": 1,
+      "sparse": false,
+      "open_walk": true,
+      "error": 1.3859190010364339e-15
+    }
+  ],
+  "kernels": [
+    {
+      "depth": 125,
+      "cx": 80,
+      "terms": [
+        12,
+        20,
+        33,
+        36,
+        11,
+        13,
+        26,
+        28,
+        37,
+        41,
+        42,
+        44,
+        27,
+        45
+      ]
+    },
+    {
+      "depth": 127,
+      "cx": 82,
+      "terms": [
+        9,
+        12,
+        17,
+        36,
+        13,
+        19,
+        26,
+        37,
+        42,
+        44,
+        29,
+        43,
+        45
+      ]
+    }
+  ],
+  "qasm": "artifacts/post258_independent_codes_v1/independent_codes_d480.qasm"
+}

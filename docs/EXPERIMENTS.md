@@ -1,5 +1,39 @@
 # Experiment history and failure notes
 
+## September 12 successful distributed lookup campaign
+
+Verified full-oracle progression: **391/1534**, **297/1340**, **272/1186**, then
+**258/1188**, all width 18. Final package: `artifacts/258/`; SHA
+`b2a2e8ac6a6d7ee2c2e4ec11bcca4b4ba4fe54aab15b11c71236efcecdca3066`.
+All 4096 basis inputs pass; three independent dense Aer states pass; five
+component/operator tests pass. Exact replay reproduces the SHA. The new QMOD
+oracle has a checked gate-for-gate correspondence to the QASM.
+
+The same two-comparison identity is retained. Rotations are distributed over
+coordinate and output parity wires, basis transitions use explicit three-layer
+networks, Gray offsets are carried between sweeps, and the kernel is factored
+and synthesized to 13 depth. This is a material improvement over the previous
+456 best and overrules older broad architecture closures. No rank-one result
+or submission is claimed. Full derivation, bounded searches, negative controls,
+source map and reproduction: [DISTRIBUTED_LOOKUP_258.md](DISTRIBUTED_LOOKUP_258.md).
+
+## September 12 depth-gap audit and alternative UCG components
+
+`src/september12_depth_audit.py` checks the notebook predicate on all 4096
+points, the notebook metric parser against both protected QASMs, their report
+hashes, and the level identity. The 456 circuit's maximum wire-touch count is
+389, so pure rescheduling cannot reach 183. The companion report derives a
+restricted X/CX/diagonal-family depth bound of 682 at width 18; it is not a
+bound on general quantum circuits.
+
+The twelve default level-code bit functions were independently lowered using
+`UCGate(up_to_diagonal=True)`. Every component measures 127 depth / 63 CX /
+64 U3 and passes all 128 local basis states up to input-dependent phase after
+QASM serialization (maximum error about 2.96e-13). No full integration or
+new best is claimed. Results: `artifacts/september12_depth_audit_final.json`.
+See [the analysis](DEPTH_GAP_ANALYSIS_2026-09-12.md) for proof, limitations,
+leaderboard observations, and corrections to old architectural claims.
+
 ## September 12 native v2 checkpoint: verified but too deep
 
 The requested concrete encoder experiment produced a verified nine-qubit v2

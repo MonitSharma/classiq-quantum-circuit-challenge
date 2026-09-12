@@ -1,0 +1,215 @@
+[
+  {
+    "code_index": 0,
+    "side": "u",
+    "stage": 0,
+    "depth": 113,
+    "cx": 257,
+    "seed": 6,
+    "error": 2.4554146895412424e-15
+  },
+  {
+    "code_index": 0,
+    "side": "u",
+    "stage": 1,
+    "depth": 112,
+    "cx": 235,
+    "seed": 36,
+    "error": 1.794628215068328e-15
+  },
+  {
+    "code_index": 0,
+    "side": "u",
+    "stage": 2,
+    "depth": 113,
+    "cx": 257,
+    "seed": 6,
+    "error": 2.667423344314004e-15
+  },
+  {
+    "code_index": 0,
+    "side": "v",
+    "stage": 0,
+    "depth": 113,
+    "cx": 237,
+    "seed": 36,
+    "error": 2.4428452042582526e-15
+  },
+  {
+    "code_index": 0,
+    "side": "v",
+    "stage": 1,
+    "depth": 113,
+    "cx": 255,
+    "seed": 6,
+    "error": 2.2307127102794597e-15
+  },
+  {
+    "code_index": 0,
+    "side": "v",
+    "stage": 2,
+    "depth": 112,
+    "cx": 243,
+    "seed": 6,
+    "error": 2.223311766559544e-15
+  },
+  {
+    "oracle": true,
+    "code_index": 0,
+    "depth": 391,
+    "cx": 1534,
+    "path": "artifacts/distributed_level_v1/code0_d391.qasm",
+    "ytriple": [
+      56,
+      52,
+      38
+    ],
+    "xtriple": [
+      20,
+      34,
+      56
+    ]
+  },
+  {
+    "code_index": 1,
+    "side": "u",
+    "stage": 0,
+    "depth": 113,
+    "cx": 257,
+    "seed": 6,
+    "error": 2.6711463608931865e-15
+  },
+  {
+    "code_index": 1,
+    "side": "u",
+    "stage": 1,
+    "depth": 112,
+    "cx": 235,
+    "seed": 6,
+    "error": 1.3647162376574126e-15
+  },
+  {
+    "code_index": 1,
+    "side": "u",
+    "stage": 2,
+    "depth": 113,
+    "cx": 257,
+    "seed": 6,
+    "error": 2.6820481211060183e-15
+  },
+  {
+    "code_index": 1,
+    "side": "v",
+    "stage": 0,
+    "depth": 113,
+    "cx": 257,
+    "seed": 6,
+    "error": 2.6687031229810304e-15
+  },
+  {
+    "code_index": 1,
+    "side": "v",
+    "stage": 1,
+    "depth": 113,
+    "cx": 257,
+    "seed": 6,
+    "error": 2.000139880747185e-15
+  },
+  {
+    "code_index": 1,
+    "side": "v",
+    "stage": 2,
+    "depth": 113,
+    "cx": 233,
+    "seed": 6,
+    "error": 1.798434225233678e-15
+  },
+  {
+    "oracle": true,
+    "code_index": 1,
+    "depth": 571,
+    "cx": 1654,
+    "path": "artifacts/distributed_level_v1/code1_d571.qasm",
+    "ytriple": [
+      60,
+      50,
+      42
+    ],
+    "xtriple": [
+      56,
+      52,
+      38
+    ]
+  },
+  {
+    "code_index": 2,
+    "side": "u",
+    "stage": 0,
+    "depth": 113,
+    "cx": 257,
+    "seed": 6,
+    "error": 2.443672008670452e-15
+  },
+  {
+    "code_index": 2,
+    "side": "u",
+    "stage": 1,
+    "depth": 113,
+    "cx": 237,
+    "seed": 6,
+    "error": 1.575259600715977e-15
+  },
+  {
+    "code_index": 2,
+    "side": "u",
+    "stage": 2,
+    "depth": 113,
+    "cx": 257,
+    "seed": 6,
+    "error": 2.6709462170915137e-15
+  },
+  {
+    "code_index": 2,
+    "side": "v",
+    "stage": 0,
+    "depth": 112,
+    "cx": 247,
+    "seed": 6,
+    "error": 2.4443436645305756e-15
+  },
+  {
+    "code_index": 2,
+    "side": "v",
+    "stage": 1,
+    "depth": 113,
+    "cx": 251,
+    "seed": 6,
+    "error": 1.3487385329842026e-15
+  },
+  {
+    "code_index": 2,
+    "side": "v",
+    "stage": 2,
+    "depth": 113,
+    "cx": 237,
+    "seed": 6,
+    "error": 1.804930624835157e-15
+  },
+  {
+    "oracle": true,
+    "code_index": 2,
+    "depth": 541,
+    "cx": 1606,
+    "path": "artifacts/distributed_level_v1/code2_d541.qasm",
+    "ytriple": [
+      48,
+      60,
+      42
+    ],
+    "xtriple": [
+      36,
+      56,
+      10
+    ]
+  }
+]

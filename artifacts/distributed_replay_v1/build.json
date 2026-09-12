@@ -1,0 +1,132 @@
+{
+  "depth": 258,
+  "cx": 1188,
+  "width": 18,
+  "qasm": "artifacts/distributed_replay_v1/distributed_level_258.qasm",
+  "sha256": "b2a2e8ac6a6d7ee2c2e4ec11bcca4b4ba4fe54aab15b11c71236efcecdca3066",
+  "recipe": {
+    "y": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        56,
+        52,
+        38
+      ],
+      "stages": [
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 77,
+          "cx": 176
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 204
+        }
+      ],
+      "proxy": 233
+    },
+    "x": {
+      "frame": [
+        1,
+        2,
+        4
+      ],
+      "triple": [
+        20,
+        34,
+        56
+      ],
+      "stages": [
+        {
+          "seed": 2,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 188
+        },
+        {
+          "seed": 1,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 196
+        },
+        {
+          "seed": 0,
+          "sparse": false,
+          "open_walk": true,
+          "depth": 78,
+          "cx": 190
+        }
+      ],
+      "proxy": 234
+    },
+    "depth": 272,
+    "cx": 1186,
+    "kernel_depth": 20,
+    "path": "artifacts/distributed_factored_v1/candidate0_d272.qasm"
+  },
+  "component_checks": [
+    {
+      "side": "u",
+      "stage": 0,
+      "error": 2.8891267243219443e-15,
+      "depth": 78,
+      "basis_inputs": 512
+    },
+    {
+      "side": "v",
+      "stage": 0,
+      "error": 2.6677965505090578e-15,
+      "depth": 78,
+      "basis_inputs": 512
+    },
+    {
+      "side": "u",
+      "stage": 1,
+      "error": 1.5549291497603458e-15,
+      "depth": 77,
+      "basis_inputs": 512
+    },
+    {
+      "side": "v",
+      "stage": 1,
+      "error": 2.4428601369707327e-15,
+      "depth": 78,
+      "basis_inputs": 512
+    },
+    {
+      "side": "u",
+      "stage": 2,
+      "error": 3.1086778004677257e-15,
+      "depth": 78,
+      "basis_inputs": 512
+    },
+    {
+      "side": "v",
+      "stage": 2,
+      "error": 2.0069041504496613e-15,
+      "depth": 78,
+      "basis_inputs": 512
+    }
+  ],
+  "kernel_source": "artifacts/distributed_kernel_lifted/kernel_d13_cx15.qasm",
+  "kernel_sha256": "8309b35c5cec2daef49c81cda0a6e267211835b43119ced304fd7798e265d54f",
+  "status": "Candidate; requires exhaustive_verify.py before promotion"
+}
