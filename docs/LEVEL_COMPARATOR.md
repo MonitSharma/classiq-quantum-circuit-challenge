@@ -180,3 +180,71 @@ and close to the cheapest kernel found.
 factoring synthesiser: exact multiplicative-complexity synthesis of the four-
 and five-variable subfunctions, then a scheduler that packs three ANDs per
 layer using the two dead-wire tricks above.
+
+## AND-network encoders: how far this got, and the obstruction
+
+Depth is the only ranked metric, so the whole question is whether the four
+multiplexer-free encoders can be made shallow. The budget is
+`4E + 2K < 180`, and with the measured kernel `K = 27` that means `E <= 31`,
+about four AND layers.
+
+### What was built
+
+- `src/mc_small.py` — exhaustive minimal-AND synthesis for functions of four or
+  five variables, searching by AND count and enumerating the span at each step.
+  Every four-variable function has multiplicative complexity at most three, so
+  the sub-functions of a quadrant split are individually cheap; the point of the
+  joint search is to share products across the twelve sub-functions.
+- `src/level_and_encoder.py` — quadrant split `h = A + q.B + p.C + (p AND q).D`,
+  the op list, and three allocators. It also records two facts that make the
+  wiring cheaper than it looks: all four quadrant indicators are linear once one
+  of them is computed (`p AND q = p XOR (p AND NOT q)`), and a wire holding a
+  dead input is usable scratch whenever the product is later ANDed with a guard
+  that already implies that input's value.
+- `src/level_dimension_bound.py` — the resource accounting below.
+- `src/build_and_oracle.py` — assembly of the two-pass oracle from networks.
+
+### The measured numbers
+
+Quadrant splits and joint four-variable synthesis give, per encoder, three to
+five shared products and five to nine combining ANDs — 10 to 16 ANDs, which at
+three ANDs per layer is four to six layers, i.e. `E` around 30-45. That is the
+right range.
+
+The peak **register** requirement is what fails. Searching all 3,360 separating
+codes against all 15 splits (`peak.py` methodology, reproduced in the doc's
+history) gives minimum peaks of 9 registers for `v1` but 10 for `u1` and `u2`
+and 11 for `v2`, against the nine each side has.
+
+### The obstruction, stated exactly
+
+Every gate is reversible, so the eighteen register values are always a bijective
+image of the input; their span plus the constant has dimension at most 19 and
+starts at 13. At the kernel, `1 + 12 data + 6 code bits = 19` — exactly full. So
+a nonlinear intermediate can only exist if a data dimension is given up, and a
+data dimension can only be given up once no remaining AND needs it as an
+operand. Concretely: each side can hold three extra nonlinear values, the code
+bits alone are three, and the encoders need four to five at their peak.
+
+Three ways out were tried and none closed:
+
+1. **Share the ancilla pool** (`allocate_joint`). The two sides' peaks can be
+   staggered, but both passes need more than six ancillas at once.
+2. **Uncompute and recompute products.** Re-applying an RCCX frees a dimension.
+   This makes allocation feasible in principle but inflates the AND count to
+   about 30 per encoder, which puts `E` back near 100.
+3. **Exploit the split of the big level class.** A code value's preimage only
+   has to fit the junk wires, so the 47-element level-0 class may use three code
+   values; that frees enough room for a clean ancilla and gives the code bits a
+   large design space. Degree-2 code bits turn out to be impossible (their
+   class-signature space has dimension 1-2, and separating five classes needs 3)
+   but **degree-3 code bits exist** — the signature space is dimension 4-5 for
+   every encoder. Degree 3 means AND depth 2. What blocks it is that the big
+   class must then avoid the five small classes' code values on 47 points, and
+   no targeted construction for that was found in time. `T1 AND c_j` forces the
+   big class onto a single code and restores the six-junk-wire requirement,
+   undoing the saving.
+
+That third route is the one to finish. The pieces are all verified: the exact
+identity, the kernel synthesis, the emitter, and the fact that degree-3 code
+bits with the big class split exist.
