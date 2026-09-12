@@ -1,5 +1,25 @@
 # Continuation handoff
 
+## Level-encoder exact-enumeration checkpoint (September 11, 2026)
+
+The challenge page was refreshed in Safari. It explicitly ranks by **depth
+first**, with **CX count only as the tie-breaker**. The live top entries observed
+there were 183/789, 188/451, 190/389, 191/374, and 195/432 (all width 18), so
+the verified 456/1140 level circuit is a depth improvement over the protected
+524/950 fallback but is not close to the current rank-1 score.
+
+The first exact small-operand synthesizer is `src/level_encoder_search_exact.py`.
+It enumerates all XORs of up to three current registers and complements, then
+checks every resulting state for an exactly separating code triple before
+residual ranking. A bounded `u1` run with beam 4 and nine AND layers reached
+residual 21 after 47 seconds and found no replayable separating network. The
+original stochastic search and all verified QASM artifacts are unchanged. This
+is a search-policy checkpoint, not an impossibility result.
+
+The serialized 456 QASM was also screened with 20 Qiskit transpiler seeds and
+two pytket rewrite passes. The best remained **456/1140**; full peephole was
+458/1140. These local cleanup routes are closed for now.
+
 The complete cross-branch research index is [`METHOD_INDEX.md`](METHOD_INDEX.md).
 It summarizes every method family, experiment, research reference, evidence
 level, and closure decision; this handoff retains the operational details and

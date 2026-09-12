@@ -1,5 +1,30 @@
 # Experiment history and failure notes
 
+## Level-encoder exact product screen (September 11, 2026)
+
+To address the open step in `docs/LEVEL_COMPARATOR.md`,
+`src/level_encoder_search_exact.py` was added as a companion to the stochastic
+beam. It exhaustively enumerates the operand family consisting of XORs of up
+to three live registers, optionally complemented, and performs an exact
+separating-triple completion check at each expansion. A bounded `u1` run
+(beam 4, nine AND layers, 47 seconds) reached residual 21 and produced no
+replayable network. The run is a bounded negative search result only; it does
+not close the level-encoder architecture. The original search and protected
+artifacts were preserved.
+
+The live challenge page confirms that depth is the primary metric and CX is a
+tie-breaker, not a combined objective. Its refreshed leaderboard showed a
+current leader at 183 depth / 789 CX.
+
+## Serialized-QASM cleanup screen (September 11, 2026)
+
+The verified 456 QASM was passed through Qiskit `u3`/`cx` transpilation with
+20 transpiler seeds, plus pytket `CliffordSimp` and `FullPeepholeOptimise`
+followed by the required Qiskit lowering. All seeds and Clifford simplification
+reproduced **456/1140**; full peephole was slightly worse at **458/1140**.
+No serialized cleanup reduced the protected depth, so further effort should
+target the multiplexer architecture rather than local rewriting.
+
 For a cross-branch inventory of every method family, source file, research
 reference, result type, and disposition, see [`METHOD_INDEX.md`](METHOD_INDEX.md).
 This file remains the detailed chronological lab notebook; entries below are
