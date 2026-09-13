@@ -1,0 +1,5 @@
+{
+  "status": "invalid_adapter_output",
+  "solver_conclusion": null,
+  "note": "Pseudo-Boolean cardinality atoms were not expanded before CNF export; apparent SAT failed witness extraction and must not be used. Superseded by card2bv-checked v2 with validated positive controls."
+}

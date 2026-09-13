@@ -1,0 +1,21 @@
+{
+  "sha256": "63333fade2e7e38c9a4edf333888c26bdac234c04e955fd6a624c0ea6e714c30",
+  "kernel_sha256": "e77383070b2a46069ddd0b3df529941f50c264a7b6e1027c46b50c102ef78c0e",
+  "depth": 196,
+  "cx": 858,
+  "width": 18,
+  "kernel_depth": 43,
+  "kernel_cx": 89,
+  "kernel_max_error": 6.2134857887676706e-15,
+  "beam": {
+    "seed": 209,
+    "beam": 64,
+    "branch": 14,
+    "alpha": 5.0,
+    "timew": 0.35
+  },
+  "encoder_seeds": {
+    "y": 99,
+    "x": 155
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post196_quadratic_block_basis.py",
+    "--outdir",
+    "artifacts/post196_block_basis",
+    "--restarts",
+    "12"
+  ],
+  "seconds": 13.005999666987918,
+  "limit_seconds": 150.0
+}

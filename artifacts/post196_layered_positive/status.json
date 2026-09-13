@@ -1,0 +1,4 @@
+{
+  "status": "invalid_prototype",
+  "reason": "Initial tactic-only model reconstruction failed original-constraint validation; corrected adapter and positive control in positive_v2."
+}

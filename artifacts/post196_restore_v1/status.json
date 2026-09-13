@@ -1,0 +1,4 @@
+{
+  "status": "invalid_prototype",
+  "reason": "Initial prototype failed its identity-restoration assertion; fixed in v2; no candidate exported."
+}

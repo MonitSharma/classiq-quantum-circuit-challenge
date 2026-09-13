@@ -1,0 +1,16 @@
+{
+  "global_permutation_representatives": 30,
+  "global_permutation_status": "all unsat",
+  "conditional_linear_frames_completed": 77,
+  "conditional_linear_frames_status": {
+    "sat": 0,
+    "unsat": 77,
+    "unknown": 0
+  },
+  "conditional_frame_total": 168,
+  "conditional_batch_wall_limit_seconds": 100,
+  "positive_controls": [
+    "artifacts/post221_cofactor_degree5_cadical_v2/report.json",
+    "artifacts/post221_kernel_degree5_y_cadical_v2/report.json"
+  ]
+}

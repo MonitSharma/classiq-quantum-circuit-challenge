@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post196_nonlinear_two_frame.py",
+    "--outdir",
+    "artifacts/post196_nonlinear_y",
+    "--side",
+    "y"
+  ],
+  "seconds": 80.75519054092001,
+  "limit_seconds": 150.0
+}

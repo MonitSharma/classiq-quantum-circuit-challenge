@@ -1,0 +1,5 @@
+{
+  "status": "adapter_assertion_failed",
+  "solver_conclusion": null,
+  "note": "Unexpanded bit-vector distinctness was caught before calling the SAT solver. Superseded by v2."
+}

@@ -58,8 +58,38 @@ def transformed(triple, frame):
 
 
 def native(raw):
-    return transpile(raw, basis_gates=['u3', 'cx'], qubits_initially_zero=False,
-                     optimization_level=3, seed_transpiler=0)
+    compiled = transpile(raw, basis_gates=['u3', 'cx'], qubits_initially_zero=False,
+                         optimization_level=3, seed_transpiler=0)
+    return materialize_output_layout(compiled)
+
+
+def materialize_output_layout(compiled):
+    """Keep logical wire identities when serializing or composing a subcircuit.
+
+    QASM2 and compose do not apply TranspileLayout. Elided permutations must
+    therefore be restored as real gates, even with initially_zero=False.
+    """
+    n = compiled.num_qubits
+    if compiled.layout is None:
+        return compiled
+    assert compiled.layout.initial_index_layout() == list(range(n)), \
+        'Unexpected input placement; output-only correction is insufficient'
+    positions = compiled.layout.final_index_layout()
+    assert sorted(positions) == list(range(n))
+    if positions == list(range(n)):
+        return compiled
+    out = QuantumCircuit(n)
+    out.compose(compiled, inplace=True)
+    contents = [positions.index(i) for i in range(n)]
+    for logical in range(n):
+        other = contents.index(logical)
+        if other != logical:
+            out.cx(logical, other)
+            out.cx(other, logical)
+            out.cx(logical, other)
+            contents[logical], contents[other] = contents[other], contents[logical]
+    assert contents == list(range(n))
+    return out
 
 
 def side_candidates(side, seeds, keep):

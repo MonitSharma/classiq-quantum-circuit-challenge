@@ -1,0 +1,13 @@
+{
+  "status": "failed",
+  "returncode": 1,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post196_layered_cadical.py",
+    "--outdir",
+    "artifacts/post196_layered_positive",
+    "--positive-control"
+  ],
+  "seconds": 13.814808499999344,
+  "limit_seconds": 30.0
+}

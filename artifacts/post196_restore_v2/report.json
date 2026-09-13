@@ -1,0 +1,290 @@
+{
+  "seeds": 10000,
+  "original_suffix": 14,
+  "best": [
+    196,
+    858
+  ],
+  "rows": [
+    {
+      "seed": 669,
+      "kernel_depth": 44,
+      "kernel_cx": 87,
+      "depth": 197,
+      "cx": 857
+    },
+    {
+      "seed": 123,
+      "kernel_depth": 44,
+      "kernel_cx": 88,
+      "depth": 197,
+      "cx": 858
+    },
+    {
+      "seed": 621,
+      "kernel_depth": 44,
+      "kernel_cx": 91,
+      "depth": 197,
+      "cx": 861
+    },
+    {
+      "seed": 117,
+      "kernel_depth": 45,
+      "kernel_cx": 87,
+      "depth": 198,
+      "cx": 857
+    },
+    {
+      "seed": 92,
+      "kernel_depth": 45,
+      "kernel_cx": 88,
+      "depth": 198,
+      "cx": 858
+    },
+    {
+      "seed": 93,
+      "kernel_depth": 45,
+      "kernel_cx": 91,
+      "depth": 198,
+      "cx": 861
+    },
+    {
+      "seed": 114,
+      "kernel_depth": 45,
+      "kernel_cx": 92,
+      "depth": 198,
+      "cx": 861
+    },
+    {
+      "seed": 957,
+      "kernel_depth": 45,
+      "kernel_cx": 93,
+      "depth": 198,
+      "cx": 863
+    },
+    {
+      "seed": 2875,
+      "kernel_depth": 46,
+      "kernel_cx": 87,
+      "depth": 199,
+      "cx": 857
+    },
+    {
+      "seed": 128,
+      "kernel_depth": 46,
+      "kernel_cx": 88,
+      "depth": 199,
+      "cx": 858
+    },
+    {
+      "seed": 135,
+      "kernel_depth": 46,
+      "kernel_cx": 91,
+      "depth": 199,
+      "cx": 860
+    },
+    {
+      "seed": 0,
+      "kernel_depth": 46,
+      "kernel_cx": 92,
+      "depth": 199,
+      "cx": 861
+    },
+    {
+      "seed": 102,
+      "kernel_depth": 46,
+      "kernel_cx": 93,
+      "depth": 199,
+      "cx": 862
+    },
+    {
+      "seed": 225,
+      "kernel_depth": 46,
+      "kernel_cx": 94,
+      "depth": 199,
+      "cx": 864
+    },
+    {
+      "seed": 2574,
+      "kernel_depth": 46,
+      "kernel_cx": 95,
+      "depth": 198,
+      "cx": 864
+    },
+    {
+      "seed": 54,
+      "kernel_depth": 47,
+      "kernel_cx": 87,
+      "depth": 200,
+      "cx": 857
+    },
+    {
+      "seed": 72,
+      "kernel_depth": 47,
+      "kernel_cx": 88,
+      "depth": 200,
+      "cx": 858
+    },
+    {
+      "seed": 56,
+      "kernel_depth": 47,
+      "kernel_cx": 89,
+      "depth": 200,
+      "cx": 859
+    },
+    {
+      "seed": 21,
+      "kernel_depth": 46,
+      "kernel_cx": 90,
+      "depth": 199,
+      "cx": 860
+    },
+    {
+      "seed": 66,
+      "kernel_depth": 47,
+      "kernel_cx": 91,
+      "depth": 200,
+      "cx": 861
+    },
+    {
+      "seed": 75,
+      "kernel_depth": 47,
+      "kernel_cx": 94,
+      "depth": 200,
+      "cx": 863
+    },
+    {
+      "seed": 51,
+      "kernel_depth": 47,
+      "kernel_cx": 95,
+      "depth": 200,
+      "cx": 865
+    },
+    {
+      "seed": 401,
+      "kernel_depth": 48,
+      "kernel_cx": 87,
+      "depth": 201,
+      "cx": 857
+    },
+    {
+      "seed": 155,
+      "kernel_depth": 48,
+      "kernel_cx": 90,
+      "depth": 201,
+      "cx": 860
+    },
+    {
+      "seed": 2,
+      "kernel_depth": 48,
+      "kernel_cx": 91,
+      "depth": 201,
+      "cx": 861
+    },
+    {
+      "seed": 12,
+      "kernel_depth": 48,
+      "kernel_cx": 92,
+      "depth": 201,
+      "cx": 862
+    },
+    {
+      "seed": 3,
+      "kernel_depth": 48,
+      "kernel_cx": 93,
+      "depth": 201,
+      "cx": 863
+    },
+    {
+      "seed": 192,
+      "kernel_depth": 48,
+      "kernel_cx": 94,
+      "depth": 201,
+      "cx": 863
+    },
+    {
+      "seed": 6,
+      "kernel_depth": 48,
+      "kernel_cx": 95,
+      "depth": 201,
+      "cx": 865
+    },
+    {
+      "seed": 57,
+      "kernel_depth": 48,
+      "kernel_cx": 96,
+      "depth": 201,
+      "cx": 865
+    },
+    {
+      "seed": 199,
+      "kernel_depth": 49,
+      "kernel_cx": 89,
+      "depth": 202,
+      "cx": 859
+    },
+    {
+      "seed": 100,
+      "kernel_depth": 49,
+      "kernel_cx": 88,
+      "depth": 202,
+      "cx": 858
+    },
+    {
+      "seed": 17,
+      "kernel_depth": 49,
+      "kernel_cx": 91,
+      "depth": 202,
+      "cx": 860
+    },
+    {
+      "seed": 61,
+      "kernel_depth": 49,
+      "kernel_cx": 90,
+      "depth": 202,
+      "cx": 860
+    },
+    {
+      "seed": 36,
+      "kernel_depth": 49,
+      "kernel_cx": 93,
+      "depth": 202,
+      "cx": 863
+    },
+    {
+      "seed": 33,
+      "kernel_depth": 49,
+      "kernel_cx": 94,
+      "depth": 202,
+      "cx": 864
+    },
+    {
+      "seed": 87,
+      "kernel_depth": 49,
+      "kernel_cx": 95,
+      "depth": 202,
+      "cx": 865
+    },
+    {
+      "seed": 294,
+      "kernel_depth": 49,
+      "kernel_cx": 96,
+      "depth": 202,
+      "cx": 866
+    },
+    {
+      "seed": 510,
+      "kernel_depth": 49,
+      "kernel_cx": 97,
+      "depth": 202,
+      "cx": 866
+    },
+    {
+      "seed": 7713,
+      "kernel_depth": 49,
+      "kernel_cx": 98,
+      "depth": 202,
+      "cx": 868
+    }
+  ]
+}

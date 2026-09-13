@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "/tmp/post196_layered_debug.py",
+    "--outdir",
+    "artifacts/post196_layered_debug",
+    "--positive-control"
+  ],
+  "seconds": 14.152070375042967,
+  "limit_seconds": 40.0
+}

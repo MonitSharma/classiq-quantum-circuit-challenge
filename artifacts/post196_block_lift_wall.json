@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post196_quadratic_block_lift.py",
+    "--outdir",
+    "artifacts/post196_block_lift",
+    "--restarts",
+    "20"
+  ],
+  "seconds": 16.847453583031893,
+  "limit_seconds": 100.0
+}

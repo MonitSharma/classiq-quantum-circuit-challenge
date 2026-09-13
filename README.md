@@ -1,18 +1,18 @@
 # Classiq challenge optimization workspace
 
-The objective is sub-180 depth and rank 1 in the [Classiq challenge](https://www.classiq.io/challenge). Work is unfinished. The lowest verified local depth is **221**, with **944 CX gates and 18 qubits**. The exact standalone U3/CX QASM passes all 4096 coordinate inputs, three dense-state checks, and an identical-hash replay. No rank-1 or sub-180 result is claimed.
+The objective is sub-180 depth and rank 1 in the [Classiq challenge](https://www.classiq.io/challenge). Work is unfinished. The lowest verified local depth is **218**, with **897 CX gates and 18 qubits**. The exact standalone U3/CX QASM passes all 4096 coordinate inputs, three dense-state checks, and an identical-hash replay. No rank-1 or sub-180 result is claimed.
 
-Start with [the handoff](docs/HANDOFF.md), [experiment history](docs/EXPERIMENTS.md), and [current research](docs/POST224_REVIEW_AND_EXPERIMENTS.md). [AGENTS.md](AGENTS.md) records the essential correctness constraints. Historical results below remain preserved.
+Start with [the handoff](docs/HANDOFF.md), [experiment history](docs/EXPERIMENTS.md), and [current research](docs/POST221_RESEARCH.md). [AGENTS.md](AGENTS.md) records the essential correctness constraints. Historical results below remain preserved.
 
 ## Lowest verified depth
 
-- [221-depth QASM](artifacts/221/two_stage_221.qasm)
-- [Matching gate-level QMOD](artifacts/221/two_stage_221.qmod); its main adds preparation Hadamards, which are absent from the oracle QASM.
-- [Exhaustive verification](artifacts/221/two_stage_221.exhaustive.json)
-- [Dense-state verification](artifacts/221/two_stage_221.verification.json)
-- [Package and replay recipe](artifacts/221/README.md)
-- SHA-256 `4f9fa6232930777426ac4f8118155780471f111c31435e7578175170035e313f`
-- Method: parity-assisted class codes using y5 and x4 XOR x5, a 69-layer kernel, and relative-phase lookup boundaries.
+- [218-depth QASM](artifacts/218/two_stage_218.qasm)
+- [Matching gate-level QMOD](artifacts/218/two_stage_218.qmod); its main adds preparation Hadamards, which are absent from the oracle QASM.
+- [Exhaustive verification](artifacts/218/two_stage_218.exhaustive.json)
+- [Dense-state verification](artifacts/218/two_stage_218.verification.json)
+- [Package and replay recipe](artifacts/218/README.md)
+- SHA-256 `3a685c32ea0d78637be1a575c91e6c7d13db0efdbf37a8f794fb44e7fb024a88`
+- Method: parity-assisted class codes using y5 and x4 XOR x5, a 66-layer kernel, and relative-phase lookup boundaries.
 
 
 ## Historical protected 524-depth artifact
@@ -37,8 +37,8 @@ are indexed in [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md).
 Run from this directory:
 
 ```sh
-OPENBLAS_NUM_THREADS=1 .venv/bin/python src/exhaustive_verify.py artifacts/221/two_stage_221.qasm
-OPENBLAS_NUM_THREADS=1 .venv/bin/python src/verify.py artifacts/221/two_stage_221.qasm 3
+OPENBLAS_NUM_THREADS=1 .venv/bin/python src/exhaustive_verify.py artifacts/218/two_stage_218.qasm
+OPENBLAS_NUM_THREADS=1 .venv/bin/python src/verify.py artifacts/218/two_stage_218.qasm 3
 ```
 
 The packaged reports record successful exhaustive checking on all 4,096 inputs and dense random-state checks. Neither command submits anything.

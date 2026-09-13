@@ -1,0 +1,14 @@
+{
+  "status": "externally_timed_out",
+  "solver_conclusion": null,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post196_nonlinear_two_frame.py",
+    "--outdir",
+    "artifacts/post196_nonlinear_x",
+    "--side",
+    "x"
+  ],
+  "seconds": 150.01291520800442,
+  "limit_seconds": 150.0
+}

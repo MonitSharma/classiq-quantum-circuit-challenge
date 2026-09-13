@@ -1,0 +1,64 @@
+{
+  "depth": 196,
+  "gates": {
+    "cx": 858,
+    "u3": 789
+  },
+  "wire_slots": 2505,
+  "capacity": 3528,
+  "occupancy": 0.7100340136054422,
+  "occupancy_lower_bound": 140,
+  "slots_to_remove_for_depth99": 723,
+  "kernel_bound_counterexample": {
+    "parity_terms": 8,
+    "width": 8,
+    "actual_depth": 1,
+    "claimed_bound": 3.0
+  },
+  "actual_row_completion_counterexample": {
+    "a": 6385,
+    "b": 4710,
+    "free": [
+      3,
+      9,
+      12
+    ],
+    "implemented_minimum": 43,
+    "full_completion_minimum": 40,
+    "winner": 4540,
+    "options": [
+      419,
+      434,
+      421,
+      436,
+      451,
+      466,
+      453,
+      468,
+      2339,
+      2354,
+      2341,
+      2356,
+      2371,
+      2386,
+      2373,
+      2388,
+      1187,
+      1202,
+      1189,
+      1204,
+      1219,
+      1234,
+      1221,
+      1236,
+      3107,
+      3122,
+      3109,
+      3124,
+      3139,
+      3154,
+      3141,
+      3156
+    ]
+  }
+}

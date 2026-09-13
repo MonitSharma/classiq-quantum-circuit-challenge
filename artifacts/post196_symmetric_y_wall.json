@@ -1,0 +1,14 @@
+{
+  "status": "externally_timed_out",
+  "solver_conclusion": null,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post196_symmetric_encoder.py",
+    "--side",
+    "y",
+    "--outdir",
+    "artifacts/post196_symmetric_y"
+  ],
+  "seconds": 180.01391020789742,
+  "limit_seconds": 180.0
+}

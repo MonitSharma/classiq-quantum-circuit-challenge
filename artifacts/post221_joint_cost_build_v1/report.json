@@ -1,0 +1,274 @@
+[
+  {
+    "index": 0,
+    "depth": 237,
+    "cx": 891,
+    "encoders": [
+      {
+        "depth": 75,
+        "seed": 15,
+        "sparse": false
+      },
+      {
+        "depth": 77,
+        "seed": 12,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 85,
+    "path": "artifacts/post221_joint_cost_build_v1/joint_d237_cx891.qasm"
+  },
+  {
+    "index": 1,
+    "depth": 237,
+    "cx": 891,
+    "encoders": [
+      {
+        "depth": 75,
+        "seed": 15,
+        "sparse": false
+      },
+      {
+        "depth": 77,
+        "seed": 12,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 85
+  },
+  {
+    "index": 2,
+    "depth": 237,
+    "cx": 891,
+    "encoders": [
+      {
+        "depth": 75,
+        "seed": 15,
+        "sparse": false
+      },
+      {
+        "depth": 77,
+        "seed": 12,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 85
+  },
+  {
+    "index": 3,
+    "depth": 237,
+    "cx": 891,
+    "encoders": [
+      {
+        "depth": 75,
+        "seed": 15,
+        "sparse": false
+      },
+      {
+        "depth": 77,
+        "seed": 12,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 85
+  },
+  {
+    "index": 4,
+    "depth": 237,
+    "cx": 891,
+    "encoders": [
+      {
+        "depth": 75,
+        "seed": 15,
+        "sparse": false
+      },
+      {
+        "depth": 77,
+        "seed": 12,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 85
+  },
+  {
+    "index": 5,
+    "depth": 237,
+    "cx": 891,
+    "encoders": [
+      {
+        "depth": 75,
+        "seed": 15,
+        "sparse": false
+      },
+      {
+        "depth": 77,
+        "seed": 12,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 85
+  },
+  {
+    "index": 6,
+    "depth": 237,
+    "cx": 891,
+    "encoders": [
+      {
+        "depth": 75,
+        "seed": 15,
+        "sparse": false
+      },
+      {
+        "depth": 77,
+        "seed": 12,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 85
+  },
+  {
+    "index": 7,
+    "depth": 237,
+    "cx": 891,
+    "encoders": [
+      {
+        "depth": 75,
+        "seed": 15,
+        "sparse": false
+      },
+      {
+        "depth": 77,
+        "seed": 12,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 85
+  },
+  {
+    "index": 8,
+    "depth": 240,
+    "cx": 864,
+    "encoders": [
+      {
+        "depth": 73,
+        "seed": 7,
+        "sparse": true
+      },
+      {
+        "depth": 77,
+        "seed": 3,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 86
+  },
+  {
+    "index": 9,
+    "depth": 244,
+    "cx": 881,
+    "encoders": [
+      {
+        "depth": 73,
+        "seed": 7,
+        "sparse": true
+      },
+      {
+        "depth": 76,
+        "seed": 3,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 92
+  },
+  {
+    "index": 10,
+    "depth": 244,
+    "cx": 881,
+    "encoders": [
+      {
+        "depth": 73,
+        "seed": 7,
+        "sparse": true
+      },
+      {
+        "depth": 76,
+        "seed": 3,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 92
+  },
+  {
+    "index": 11,
+    "depth": 224,
+    "cx": 931,
+    "encoders": [
+      {
+        "depth": 77,
+        "seed": 11,
+        "sparse": false
+      },
+      {
+        "depth": 77,
+        "seed": 3,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 71,
+    "path": "artifacts/post221_joint_cost_build_v1/joint_d224_cx931.qasm"
+  },
+  {
+    "index": 12,
+    "depth": 241,
+    "cx": 924,
+    "encoders": [
+      {
+        "depth": 76,
+        "seed": 6,
+        "sparse": false
+      },
+      {
+        "depth": 74,
+        "seed": 2,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 90
+  },
+  {
+    "index": 13,
+    "depth": 243,
+    "cx": 883,
+    "encoders": [
+      {
+        "depth": 76,
+        "seed": 4,
+        "sparse": false
+      },
+      {
+        "depth": 76,
+        "seed": 23,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 92
+  },
+  {
+    "index": 14,
+    "depth": 245,
+    "cx": 900,
+    "encoders": [
+      {
+        "depth": 76,
+        "seed": 4,
+        "sparse": false
+      },
+      {
+        "depth": 76,
+        "seed": 3,
+        "sparse": false
+      }
+    ],
+    "kernel_depth": 93
+  }
+]

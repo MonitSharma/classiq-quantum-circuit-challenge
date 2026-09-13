@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post196_layered_cadical.py",
+    "--outdir",
+    "artifacts/post196_layered_positive_v2",
+    "--positive-control"
+  ],
+  "seconds": 14.311849999940023,
+  "limit_seconds": 30.0
+}

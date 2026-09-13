@@ -1,0 +1,21 @@
+{
+  "degree": 4,
+  "permutation": [
+    0,
+    1,
+    2,
+    4,
+    6,
+    5,
+    7,
+    3
+  ],
+  "perm_index": 21,
+  "fixed": "x",
+  "status": "unsat",
+  "backend": "cadical195",
+  "clauses": 8552,
+  "variables": 1175,
+  "constraints": 67,
+  "seconds": 1.232016499969177
+}

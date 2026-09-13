@@ -1,0 +1,124 @@
+{
+  "screened": 12096,
+  "rows": [
+    {
+      "move": [
+        2,
+        32,
+        0,
+        0,
+        0
+      ],
+      "cost": 60.5,
+      "seed": 0,
+      "depth": 110,
+      "cx": 165,
+      "change_depth": 7,
+      "core_depth": 98,
+      "error": 3.7751664318895325e-15,
+      "path": "artifacts/post221_affine_toffoli_v2/kernel_d110_cx165.qasm"
+    },
+    {
+      "move": [
+        2,
+        32,
+        0,
+        0,
+        0
+      ],
+      "cost": 60.5,
+      "seed": 3,
+      "depth": 97,
+      "cx": 159,
+      "change_depth": 7,
+      "core_depth": 84,
+      "error": 4.1213057840373734e-15,
+      "path": "artifacts/post221_affine_toffoli_v2/kernel_d97_cx159.qasm"
+    },
+    {
+      "move": [
+        2,
+        32,
+        0,
+        0,
+        0
+      ],
+      "cost": 60.5,
+      "seed": 11,
+      "depth": 94,
+      "cx": 169,
+      "change_depth": 7,
+      "core_depth": 81,
+      "error": 3.640697806408652e-15,
+      "path": "artifacts/post221_affine_toffoli_v2/kernel_d94_cx169.qasm"
+    },
+    {
+      "move": [
+        2,
+        32,
+        0,
+        0,
+        0
+      ],
+      "cost": 60.5,
+      "seed": 21,
+      "depth": 90,
+      "cx": 161,
+      "change_depth": 7,
+      "core_depth": 77,
+      "error": 3.4913803366726063e-15,
+      "path": "artifacts/post221_affine_toffoli_v2/kernel_d90_cx161.qasm"
+    },
+    {
+      "move": [
+        2,
+        32,
+        0,
+        0,
+        0
+      ],
+      "cost": 60.5,
+      "seed": 28,
+      "depth": 90,
+      "cx": 160,
+      "change_depth": 7,
+      "core_depth": 77,
+      "error": 3.651913023402784e-15,
+      "path": "artifacts/post221_affine_toffoli_v2/kernel_d90_cx160.qasm"
+    },
+    {
+      "move": [
+        2,
+        32,
+        0,
+        0,
+        0
+      ],
+      "cost": 60.5,
+      "seed": 91,
+      "depth": 87,
+      "cx": 171,
+      "change_depth": 7,
+      "core_depth": 76,
+      "error": 3.768332563426007e-15,
+      "path": "artifacts/post221_affine_toffoli_v2/kernel_d87_cx171.qasm"
+    },
+    {
+      "move": [
+        32,
+        64,
+        0,
+        1,
+        0
+      ],
+      "cost": 64.0,
+      "seed": 11,
+      "depth": 82,
+      "cx": 151,
+      "change_depth": 7,
+      "core_depth": 70,
+      "error": 3.946039333398009e-15,
+      "path": "artifacts/post221_affine_toffoli_v2/kernel_d82_cx151.qasm"
+    }
+  ]
+}

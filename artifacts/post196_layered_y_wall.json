@@ -1,0 +1,14 @@
+{
+  "status": "externally_timed_out",
+  "solver_conclusion": null,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post196_layered_cadical.py",
+    "--outdir",
+    "artifacts/post196_layered_y",
+    "--side",
+    "y"
+  ],
+  "seconds": 120.00640729092993,
+  "limit_seconds": 120.0
+}

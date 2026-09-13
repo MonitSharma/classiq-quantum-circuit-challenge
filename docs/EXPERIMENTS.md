@@ -1,6 +1,12 @@
 # Experiment history and failure notes
 
-Current best, September 13: **221 depth / 944 CX / 18 qubits**, `artifacts/221/`, matching literal QMOD and exact-file exhaustive verification. SHA `4f9fa6232930777426ac4f8118155780471f111c31435e7578175170035e313f`; fresh replay matches. Joint selection of relative-phase encoders (y seed 99, x seed 151) improves the complete circuit by one layer and one CX. All 221 Pareto timing combinations from 160 seeds per side were compiled; none beat 221. See `artifacts/221/README.md`. Sub-180 and rank one remain unfinished.
+Latest audit: [POST196_FLOOR_AUDIT.md](POST196_FLOOR_AUDIT.md) corrects the purported architectural floor, fixes omitted free bits in the frontier code, and records a 94-term row-code counterexample. Best full circuit remains 196 / 858.
+
+Latest objective: **sub-100 and rank one**. The 196-depth baseline has been independently reproduced and exhaustively rechecked. The leader observed in Safari is 142 / 557 / 18. Read [POST196_RESEARCH.md](POST196_RESEARCH.md) for the output-layout correctness fix and new bounded searches. No improved complete circuit or rank-one result is claimed.
+
+Historical best, September 13: **218 depth / 897 CX / 18 qubits**, `artifacts/218/`, exact-file exhaustive verification, dense checks, matching literal QMOD, and identical-hash kernel/oracle replay. SHA `3a685c32ea0d78637be1a575c91e6c7d13db0efdbf37a8f794fb44e7fb024a88`. Integer full-turn cube additions reduce the kernel from 69 to 66 layers. See `POST221_RESEARCH.md` and `artifacts/218/README.md`. Sub-180 and rank one remain unresolved; this is an intermediate result.
+
+Previous best, September 13: **221 depth / 944 CX / 18 qubits**, `artifacts/221/`, matching literal QMOD and exact-file exhaustive verification. SHA `4f9fa6232930777426ac4f8118155780471f111c31435e7578175170035e313f`; fresh replay matches. Joint selection of relative-phase encoders (y seed 99, x seed 151) improves the complete circuit by one layer and one CX. All 221 Pareto timing combinations from 160 seeds per side were compiled; none beat 221. See `artifacts/221/README.md`. Sub-180 and rank one remain unfinished.
 
 Previous best, September 13: **222 depth / 945 CX / 18 qubits**, `artifacts/222/`, matching QMOD and exact-file exhaustive verification. SHA `6c8ff19470da3d6550d1741d502065e1ace10c72cb4c9d62aa4683703a344031`; fresh replay matches. Read `POST224_REVIEW_AND_EXPERIMENTS.md` for the relative-phase boundary change, tested in-place witnesses, and corrections to proposed depth floors. Sub-180 remains unfinished.
 

@@ -1,0 +1,7 @@
+{
+  "status": "externally_terminated",
+  "degree": 3,
+  "fixed": "none",
+  "solver_conclusion": null,
+  "note": "The in-process timer did not bound the native solver call. The two task-owned processes were explicitly terminated. Use src/run_bounded.py for future runs."
+}

@@ -1,0 +1,16 @@
+{
+  "degree": 4,
+  "frame": [
+    1,
+    6,
+    5
+  ],
+  "frame_index": 13,
+  "fixed": "x",
+  "status": "unsat",
+  "backend": "cadical195",
+  "clauses": 8200,
+  "variables": 1131,
+  "constraints": 67,
+  "seconds": 1.227689916966483
+}

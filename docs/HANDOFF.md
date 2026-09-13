@@ -1,6 +1,26 @@
 # Continuation handoff
 
-Current best, September 13: **221 depth / 944 CX / 18 qubits**, `artifacts/221/`, matching literal QMOD and exact-file exhaustive verification. SHA `4f9fa6232930777426ac4f8118155780471f111c31435e7578175170035e313f`; fresh replay matches. Joint selection of relative-phase encoders (y seed 99, x seed 151) improves the complete circuit by one layer and one CX. All 221 Pareto timing combinations from 160 seeds per side were compiled; none beat 221. See `artifacts/221/README.md`. Sub-180 and rank one remain unfinished.
+Leaderboard update, September 13: the reported leader is now **142 depth**, and the
+user's target is **sub-100**. The verified local best is **196 depth / 858 CX / 18
+qubits**, `artifacts/196/`, with exhaustive verification, five dense checks, a
+matching literal QMOD and a deterministic rebuild
+(`src/build_two_stage_196.py`). SHA `63333fade2e7e38c9a4edf333888c26bdac234c04e955fd6a624c0ea6e714c30`.
+
+The latest floor analysis has been audited: its universal exclusion of 142 is
+not proved. The frontier search omitted free completion bits (a real 97-term
+row code improves to 94 terms), and its bounded shortlists cannot establish an
+all-code frontier. Correct occupancy is 71.0%, with a 140-layer occupancy lower
+bound for the existing gate multiset. See [POST196_FLOOR_AUDIT.md](POST196_FLOOR_AUDIT.md).
+This does not produce a better oracle; avoid repeating old sweeps without a
+new mechanism.
+
+Latest objective: **sub-100 and rank one**. The 196-depth baseline has been independently reproduced and exhaustively rechecked. The leader observed in Safari is 142 / 557 / 18. Read [POST196_RESEARCH.md](POST196_RESEARCH.md) for the output-layout correctness fix and new bounded searches. No improved complete circuit or rank-one result is claimed.
+
+Current best, September 13: **196 depth / 858 CX / 18 qubits**, `artifacts/196/`, exact-file exhaustive verification, five dense checks, matching literal QMOD, and a deterministic rebuild. SHA `63333fade2e7e38c9a4edf333888c26bdac234c04e955fd6a624c0ea6e714c30`. The gain is a beam-search schedule for the eight-wire phase kernel (66/123 -> 43/89) plus encoder-seed reselection; the class codes and integer lift are unchanged from `artifacts/218`. `docs/POST218_RESEARCH.md` records the improvement, the loader floor argument, and seven failed variants. Sub-180 and rank one remain unresolved; this is an intermediate result.
+
+Historical best, September 13: **218 depth / 897 CX / 18 qubits**, `artifacts/218/`, exact-file exhaustive verification, dense checks, matching literal QMOD, and identical-hash kernel/oracle replay. SHA `3a685c32ea0d78637be1a575c91e6c7d13db0efdbf37a8f794fb44e7fb024a88`. Integer full-turn cube additions reduce the kernel from 69 to 66 layers. See `POST221_RESEARCH.md` and `artifacts/218/README.md`. Sub-180 and rank one remain unresolved; this is an intermediate result.
+
+Previous best, September 13: **221 depth / 944 CX / 18 qubits**, `artifacts/221/`, matching literal QMOD and exact-file exhaustive verification. SHA `4f9fa6232930777426ac4f8118155780471f111c31435e7578175170035e313f`; fresh replay matches. Joint selection of relative-phase encoders (y seed 99, x seed 151) improves the complete circuit by one layer and one CX. All 221 Pareto timing combinations from 160 seeds per side were compiled; none beat 221. See `artifacts/221/README.md`. Sub-180 and rank one remain unfinished.
 
 Previous best, September 13: **222 depth / 945 CX / 18 qubits**, `artifacts/222/`, matching QMOD and exact-file exhaustive verification. SHA `6c8ff19470da3d6550d1741d502065e1ace10c72cb4c9d62aa4683703a344031`; fresh replay matches. Read `POST224_REVIEW_AND_EXPERIMENTS.md` for the relative-phase boundary change, tested in-place witnesses, and corrections to proposed depth floors. Sub-180 remains unfinished.
 
