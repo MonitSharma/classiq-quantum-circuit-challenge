@@ -1,0 +1,24 @@
+[
+  {
+    "enabled": false,
+    "depth": 25,
+    "cx": 44,
+    "width": 11,
+    "clean_helpers": 2,
+    "seed": 8,
+    "kernel_depth": 10,
+    "inputs_checked": 512,
+    "error": 1.0824674490095276e-15
+  },
+  {
+    "enabled": true,
+    "depth": 36,
+    "cx": 70,
+    "width": 12,
+    "clean_helpers": 2,
+    "seed": 28,
+    "kernel_depth": 21,
+    "inputs_checked": 1024,
+    "error": 1.2325475812854655e-15
+  }
+]

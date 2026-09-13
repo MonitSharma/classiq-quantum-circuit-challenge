@@ -1,0 +1,14 @@
+{
+  "subsets": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "model": 4,
+  "mandatory_cx_on_low_wire0": 12,
+  "example_depth": 13,
+  "gl6_size": 20158709760
+}

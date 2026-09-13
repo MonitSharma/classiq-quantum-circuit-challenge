@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post196_cubic_block_basis.py",
+    "--outdir",
+    "artifacts/post196_cubic_block",
+    "--restarts",
+    "20"
+  ],
+  "seconds": 9.984557416988537,
+  "limit_seconds": 90.0
+}

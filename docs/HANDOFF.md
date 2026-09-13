@@ -1,5 +1,110 @@
 # Continuation handoff
 
+Leaderboard leader **142**; user target sub-100 and rank one. Verified best is
+**196 / 858 / 18**, `artifacts/196/`, SHA
+`63333fade2e7e38c9a4edf333888c26bdac234c04e955fd6a624c0ea6e714c30`.
+
+Read [`POST196_FLOOR_AUDIT.md`](POST196_FLOOR_AUDIT.md),
+[`ARITHMETIC_MIDDLE_PROBE.md`](ARITHMETIC_MIDDLE_PROBE.md) and
+[`NONLINEAR_LOADER_PROBE.md`](NONLINEAR_LOADER_PROBE.md) first; then
+[`POST196_SLACK_PROFILE.md`](POST196_SLACK_PROFILE.md), which is the current
+picture and supersedes the estimates in
+[`POST196_FLOOR_ANALYSIS.md`](POST196_FLOOR_ANALYSIS.md).
+
+**Where the 196 layers are, measured rather than modelled.** The loader's 77 is
+exactly its own floor: the binding host needs all eight low masks in a frame, so
+it performs 8 rotations plus a length-8 closed tour = 16 operations = 16 layers,
+four frames give 64, plus 13 layers of frame skeleton. The compiled loader hits
+77 on the nose, at 81.7% occupancy, with its busiest control wire carrying 56 of
+the 193 CX. **There is no loader slack.** All reachable slack is the kernel: 43
+against an occupancy bound of 24-31.
+
+**The frame bound was loose and is now tightened.** The audit's counterexample --
+six hosts each needing low masks {0,1}, where low wire 0 alone needs twelve CX --
+returned 4 against a true 13. A per-wire contention term now closes that case.
+Rescoring every saved candidate with the tightened bound **retracts the earlier
+"balanced codes beat 77" result**: they all return 77, which is why they had
+measured 70-72 and 225-233 rather than the predicted 61-68.
+
+Closed this round, with the nature of each closure stated: affine relabelling of
+the loaded code bits is **exhaustive** over its 10,752-element group and every
+map gives 77/90; no rank-2 quadratic splits either side's classes four/four, so
+the cheapest route to a two-output lookup is shut; the cheapest class-splitting
+bit at all has Walsh support 23 (row) and 18 (column), over all cell subsets.
+Kernel scheduling resisted A*-style ranking, wider CX layers, high hit weights,
+and an anneal over integer lifts scored by compiled depth (which found 46, worse
+than 43).
+
+So this staging's floor is `2 * 77 + 31 = 185`, conditional on the frame
+skeleton, the current code and the current kernel representation. 142 is below
+it. Nothing here proves a general limit, but every scheduling avenue tried is
+now exhausted, and the remaining candidates are structural: break the 16-layer
+binding host, or avoid the four-frame skeleton.
+
+Latest construction experiment: nonlinear coordinate preconditioning screened
+12,007 tables and compiled a correct **204 / 891 / 18** oracle, which loses to
+196. All 4,096 inputs pass. See [NONLINEAR_LOADER_PROBE.md](NONLINEAR_LOADER_PROBE.md)
+for the search scope and exact-file report. Seven targeted tests pass; no jobs
+remain running. The protected 196 circuit is unchanged.
+
+Leaderboard: the reported leader is **142**; the user's target is sub-100 and rank
+one. The verified local best is **196 depth / 858 CX / 18 qubits**,
+`artifacts/196/`, SHA `63333fade2e7e38c9a4edf333888c26bdac234c04e955fd6a624c0ea6e714c30`,
+rebuilt deterministically by `src/build_two_stage_196.py`.
+
+**Read [`POST196_FLOOR_AUDIT.md`](POST196_FLOOR_AUDIT.md) and
+[`ARITHMETIC_MIDDLE_PROBE.md`](ARITHMETIC_MIDDLE_PROBE.md) before
+[`POST196_FLOOR_ANALYSIS.md`](POST196_FLOOR_ANALYSIS.md).** The analysis file
+previously claimed that the two-stage architecture was closed and that 142 was
+excluded. Both claims were wrong and are now corrected in place:
+
+* its frame cost function is a *lower bound*, not the schedule cost. The audit's
+  counterexample -- six hosts each needing low masks {0, 1}, where low wire 0
+  alone needs twelve CX -- returned 4 against a true 13. A per-wire contention
+  term has been added (`max_k sum_hosts 2 * [subset touches bit k]`, valid because
+  a closed tour from 0 toggles each visited bit an even nonzero number of times);
+  it now returns 12 there, and `tests/test_post196_frame_bound.py` keeps it honest;
+* the claimed general kernel floor `3 * T / 8` is false -- eight singleton
+  parities are depth 1, not 3. Use `ceil((T + 2 * max(0, T - n)) / n)`;
+* occupancy is 71.0% (858 CX, 789 U3, 2,505 slots, bound 140), not 65%;
+* annealing certifies nothing about global optimality over labels or `GL(6,2)`.
+
+What survives is weaker but still useful: the bound is 77 on the recorded codes
+and the compiled loaders achieve 77, so those codes are optimal *within this
+frame design*; and no annealed label set or sampled wire basis beat them.
+
+The literal-radius-plus-band hybrid has a resource obstacle, but this does not
+close all hybrids. Unused radius patterns can encode empty and rectangle-only
+modes in three loaded bits, with code zero carrying exceptions distinguished by
+y5. Decoding those modes and handling the exceptions still costs gates. No
+competitive complete implementation has been demonstrated. See the encoding
+example in [NONLINEAR_LOADER_PROBE.md](NONLINEAR_LOADER_PROBE.md).
+
+Leaderboard: the reported leader is **142**; the user's target is sub-100 and rank
+one. The verified local best is **196 depth / 858 CX / 18 qubits**,
+`artifacts/196/`, SHA `63333fade2e7e38c9a4edf333888c26bdac234c04e955fd6a624c0ea6e714c30`,
+rebuilt deterministically by `src/build_two_stage_196.py`.
+
+Latest measured arithmetic result: a four-bit phase comparator with two clean
+helpers improves from 65 to **25** layers, or 69 to **36** with an enable bit.
+Both exact serialized components pass all their input states. They are not
+logo oracles. See [ARITHMETIC_MIDDLE_PROBE.md](ARITHMETIC_MIDDLE_PROBE.md) for
+artifacts, the remaining integration costs, and a new frame-model audit.
+
+The frame model is not an exact scheduler: a six-host counterexample predicts
+4 but needs at least 12 CX layers on one low wire. Annealing does not certify
+an optimum over labels or GL(6,2). The 196 best is verified; the claimed
+architecture-wide closure is not.
+
+
+The leaderboard's lower CX counts motivate searching for fewer-gate
+constructions, but do not identify the private submissions' algorithms.
+Arithmetic is one hypothesis. The earlier roughly 85-layer estimate for its
+middle was not a measured full implementation; the verified 25/36-layer
+comparator components leave loading, geometry guards, and exceptions unresolved.
+
+Current milestone: **sub-140 first**, then further reduction toward rank one. See [SUB140_SEARCH.md](SUB140_SEARCH.md) for the new Boolean, quadratic-feature, and conditional-loading experiments. Best verified full circuit remains 196 / 858 / 18.
+
 Leaderboard update, September 13: the reported leader is now **142 depth**, and the
 user's target is **sub-100**. The verified local best is **196 depth / 858 CX / 18
 qubits**, `artifacts/196/`, with exhaustive verification, five dense checks, a

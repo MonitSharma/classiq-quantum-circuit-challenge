@@ -1,0 +1,32 @@
+[
+  {
+    "n": 3,
+    "enabled": false,
+    "depth": 49,
+    "cx": 29,
+    "width": 7,
+    "error": 6.391766228255842e-16
+  },
+  {
+    "n": 4,
+    "enabled": false,
+    "depth": 65,
+    "cx": 39,
+    "width": 9,
+    "error": 8.91218395686645e-16
+  },
+  {
+    "n": 4,
+    "enabled": true,
+    "depth": 69,
+    "cx": 41,
+    "width": 10,
+    "error": 8.835485312501384e-16
+  },
+  {
+    "component": "reflection_and_fold",
+    "depth": 10,
+    "cx": 10,
+    "width": 7
+  }
+]

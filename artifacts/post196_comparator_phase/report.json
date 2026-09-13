@@ -1,0 +1,23 @@
+[
+  {
+    "n": 3,
+    "enabled": false,
+    "depth": 41,
+    "cx": 25,
+    "diagonal_depth": 7
+  },
+  {
+    "n": 4,
+    "enabled": false,
+    "depth": 57,
+    "cx": 35,
+    "diagonal_depth": 7
+  },
+  {
+    "n": 4,
+    "enabled": true,
+    "depth": 63,
+    "cx": 43,
+    "diagonal_depth": 12
+  }
+]

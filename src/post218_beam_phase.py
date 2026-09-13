@@ -53,7 +53,7 @@ def _legal(mask, guard):
     return guard == 0 or (mask & guard).bit_count() <= 1
 
 
-def _layers(st, rng, count, alpha, timew, noise, guard=0):
+def _layers(st, rng, count, alpha, timew, noise, guard=0, fill=1):
     """Candidate CX layers for one step, as lists of (control, target)."""
     n = len(st.basis)
     masks = sorted(st.remaining)
@@ -84,7 +84,7 @@ def _layers(st, rng, count, alpha, timew, noise, guard=0):
         for value, a, b in order:
             if a in used or b in used or value < -1e8:
                 continue
-            if layer and value <= 0:
+            if len(layer) >= fill and value <= 0:
                 continue
             layer.append((a, b))
             used.update((a, b))
@@ -126,8 +126,19 @@ def _circuit(n, ops):
     return q
 
 
+def _estimate(st, n):
+    """Optimistic layers still needed: gate occupancy plus coordinate distance."""
+    if not st.remaining:
+        return 0.0
+    left = len(st.remaining)
+    # every outstanding parity still costs one rotation and at least one CX
+    occupancy = (3.0 * left) / n
+    spread = _potential(st) / max(1, n)
+    return max(occupancy, spread)
+
+
 def psynth(n, targets, seed=0, beam=12, branch=6, alpha=4.0, timew=0.25, noise=1.0,
-           global_phase=0.0, guard=0):
+           global_phase=0.0, guard=0, fill=1, horizon=0.0):
     """Synthesise exp(i * sum_m targets[m] * parity_m) as CX + Rz at low depth."""
     rng = random.Random(seed)
     start = _State(tuple(1 << w for w in range(n)), tuple(1 << w for w in range(n)),
@@ -143,7 +154,7 @@ def psynth(n, targets, seed=0, beam=12, branch=6, alpha=4.0, timew=0.25, noise=1
             if not st.remaining:
                 pool.append(st)
                 continue
-            for layer in _layers(st, rng, branch, alpha, timew, noise, guard):
+            for layer in _layers(st, rng, branch, alpha, timew, noise, guard, fill):
                 pool.append(_apply(st, layer, targets))
         seen, uniq = set(), []
         for st in pool:
@@ -152,7 +163,13 @@ def psynth(n, targets, seed=0, beam=12, branch=6, alpha=4.0, timew=0.25, noise=1
                 continue
             seen.add(key)
             uniq.append(st)
-        uniq.sort(key=lambda s: (len(s.remaining), _potential(s), max(s.times)))
+        if horizon:
+            # A*-style: committed depth plus an optimistic estimate of the rest,
+            # instead of greedily preferring whichever branch cleared most terms
+            uniq.sort(key=lambda s: (max(s.times) + horizon * _estimate(s, n),
+                                     len(s.remaining), _potential(s)))
+        else:
+            uniq.sort(key=lambda s: (len(s.remaining), _potential(s), max(s.times)))
         states = uniq[:beam]
     best = None
     for st in states:

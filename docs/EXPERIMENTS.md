@@ -1,5 +1,14 @@
 # Experiment history and failure notes
 
+Latest nonlinear-coordinate experiment: 12,007 screened tables, best native
+loaders 81/81 depth, best complete circuit **204 / 891 / 18**, all 4,096 inputs
+verified. It does not improve 196. See [NONLINEAR_LOADER_PROBE.md](NONLINEAR_LOADER_PROBE.md).
+Seven targeted tests pass. No background search remains running.
+
+New arithmetic component result: verified four-bit comparator **25 depth**, or **36 enabled**, using two clean helpers. Full logo best remains 196. Read [ARITHMETIC_MIDDLE_PROBE.md](ARITHMETIC_MIDDLE_PROBE.md) before interpreting the latest frame-model claims.
+
+Current milestone: **sub-140 first**, then further reduction toward rank one. See [SUB140_SEARCH.md](SUB140_SEARCH.md) for the new Boolean, quadratic-feature, and conditional-loading experiments. Best verified full circuit remains 196 / 858 / 18.
+
 Latest audit: [POST196_FLOOR_AUDIT.md](POST196_FLOOR_AUDIT.md) corrects the purported architectural floor, fixes omitted free bits in the frontier code, and records a 94-term row-code counterexample. Best full circuit remains 196 / 858.
 
 Latest objective: **sub-100 and rank one**. The 196-depth baseline has been independently reproduced and exhaustively rechecked. The leader observed in Safari is 142 / 557 / 18. Read [POST196_RESEARCH.md](POST196_RESEARCH.md) for the output-layout correctness fix and new bounded searches. No improved complete circuit or rank-one result is claimed.

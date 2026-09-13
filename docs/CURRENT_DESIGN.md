@@ -1,5 +1,13 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+Latest nonlinear-coordinate experiment: correct complete circuit **204 / 891 / 18**,
+exhaustively verified, so best remains **196 / 858 / 18**. See
+[NONLINEAR_LOADER_PROBE.md](NONLINEAR_LOADER_PROBE.md). No rank-one result is claimed.
+
+New arithmetic component result: verified four-bit comparator **25 depth**, or **36 enabled**, using two clean helpers. Full logo best remains 196. Read [ARITHMETIC_MIDDLE_PROBE.md](ARITHMETIC_MIDDLE_PROBE.md) before interpreting the latest frame-model claims.
+
+Current milestone: **sub-140 first**, then further reduction toward rank one. See [SUB140_SEARCH.md](SUB140_SEARCH.md) for the new Boolean, quadratic-feature, and conditional-loading experiments. Best verified full circuit remains 196 / 858 / 18.
+
 Status, September 13: leader observed at 142, target sub-100, local verified
 best **196 / 858 / 18**. The claimed universal floor in the latest side analysis
 is invalid; read [POST196_FLOOR_AUDIT.md](POST196_FLOOR_AUDIT.md). No lower-depth

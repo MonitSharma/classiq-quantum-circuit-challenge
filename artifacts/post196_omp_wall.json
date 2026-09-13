@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post196_quadratic_omp.py",
+    "--outdir",
+    "artifacts/post196_omp",
+    "--steps",
+    "900"
+  ],
+  "seconds": 7.310852291993797,
+  "limit_seconds": 150.0
+}

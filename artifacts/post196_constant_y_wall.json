@@ -1,0 +1,14 @@
+{
+  "status": "externally_timed_out",
+  "solver_conclusion": null,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post196_class_constant_encoder.py",
+    "--side",
+    "y",
+    "--outdir",
+    "artifacts/post196_constant_y"
+  ],
+  "seconds": 180.0214220000198,
+  "limit_seconds": 180.0
+}

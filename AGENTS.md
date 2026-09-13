@@ -20,7 +20,7 @@ Run Python through `.venv/bin/python` from the workspace root. No new login shou
 
 Do not automatically rerun all old searches: some take substantial time and overwrite artifacts. `src/full_mux.py` as a script runs 200 seeds and overwrites the best QASM during its search. Prefer importing `build` and writing a new candidate filename.
 
-The user requests active optimization to sub-100 and rank one without asking the community.
+The user requests active optimization to sub-140 first, then further reduction and rank one, without asking the community. Read `docs/SUB140_SEARCH.md` for the latest experiments.
 The newest verified local result is depth 196 / CX 858 / width 18, packaged
 with a matching gate-level QMOD in `artifacts/196/`. Read
 `artifacts/196/README.md` for the beam-scheduled phase kernel, exact replay, and

@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post196_conditional_codes.py",
+    "--outdir",
+    "artifacts/post196_conditional",
+    "--seeds",
+    "4"
+  ],
+  "seconds": 5.3153505839873105,
+  "limit_seconds": 150.0
+}

@@ -1,0 +1,284 @@
+{
+ "seed": 2,
+ "steps": 7000,
+ "x_rho": 16,
+ "loader_floor": 63,
+ "per_side_floor": [
+  63,
+  63
+ ],
+ "kernel_terms": 138,
+ "predicted": 199.1,
+ "ycode": [
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  0,
+  4,
+  8,
+  8,
+  10,
+  10,
+  14,
+  14,
+  14,
+  14,
+  14,
+  10,
+  10,
+  8,
+  8,
+  4,
+  0,
+  12,
+  2,
+  2,
+  2,
+  15,
+  15,
+  15,
+  13,
+  9,
+  11,
+  11,
+  3,
+  3,
+  3,
+  3,
+  3,
+  11,
+  11,
+  9,
+  13,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  7,
+  7,
+  7,
+  7,
+  7,
+  7,
+  7,
+  7,
+  7,
+  7
+ ],
+ "xcode": [
+  6,
+  6,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  3,
+  3,
+  3,
+  3,
+  3,
+  10,
+  4,
+  8,
+  8,
+  12,
+  12,
+  14,
+  14,
+  14,
+  14,
+  14,
+  12,
+  12,
+  8,
+  8,
+  4,
+  13,
+  3,
+  11,
+  1,
+  1,
+  15,
+  15,
+  15,
+  15,
+  15,
+  1,
+  1,
+  11,
+  3,
+  7,
+  7
+ ],
+ "improvements": [
+  {
+   "step": 1,
+   "loader_floor": 77,
+   "kernel_terms": 172,
+   "predicted": 245.2
+  },
+  {
+   "step": 5,
+   "loader_floor": 77,
+   "kernel_terms": 169,
+   "predicted": 243.6
+  },
+  {
+   "step": 6,
+   "loader_floor": 77,
+   "kernel_terms": 164,
+   "predicted": 240.9
+  },
+  {
+   "step": 18,
+   "loader_floor": 77,
+   "kernel_terms": 156,
+   "predicted": 236.7
+  },
+  {
+   "step": 24,
+   "loader_floor": 77,
+   "kernel_terms": 154,
+   "predicted": 235.6
+  },
+  {
+   "step": 33,
+   "loader_floor": 77,
+   "kernel_terms": 153,
+   "predicted": 235.1
+  },
+  {
+   "step": 65,
+   "loader_floor": 77,
+   "kernel_terms": 144,
+   "predicted": 230.3
+  },
+  {
+   "step": 357,
+   "loader_floor": 69,
+   "kernel_terms": 171,
+   "predicted": 228.6
+  },
+  {
+   "step": 359,
+   "loader_floor": 69,
+   "kernel_terms": 169,
+   "predicted": 227.6
+  },
+  {
+   "step": 387,
+   "loader_floor": 69,
+   "kernel_terms": 167,
+   "predicted": 226.5
+  },
+  {
+   "step": 390,
+   "loader_floor": 67,
+   "kernel_terms": 174,
+   "predicted": 226.2
+  },
+  {
+   "step": 397,
+   "loader_floor": 65,
+   "kernel_terms": 163,
+   "predicted": 216.4
+  },
+  {
+   "step": 425,
+   "loader_floor": 67,
+   "kernel_terms": 153,
+   "predicted": 215.1
+  },
+  {
+   "step": 446,
+   "loader_floor": 65,
+   "kernel_terms": 159,
+   "predicted": 214.3
+  },
+  {
+   "step": 453,
+   "loader_floor": 67,
+   "kernel_terms": 150,
+   "predicted": 213.5
+  },
+  {
+   "step": 457,
+   "loader_floor": 65,
+   "kernel_terms": 150,
+   "predicted": 209.5
+  },
+  {
+   "step": 1359,
+   "loader_floor": 63,
+   "kernel_terms": 156,
+   "predicted": 208.7
+  },
+  {
+   "step": 1416,
+   "loader_floor": 63,
+   "kernel_terms": 154,
+   "predicted": 207.6
+  },
+  {
+   "step": 2893,
+   "loader_floor": 65,
+   "kernel_terms": 144,
+   "predicted": 206.3
+  },
+  {
+   "step": 2926,
+   "loader_floor": 65,
+   "kernel_terms": 143,
+   "predicted": 205.8
+  },
+  {
+   "step": 2935,
+   "loader_floor": 63,
+   "kernel_terms": 143,
+   "predicted": 201.8
+  },
+  {
+   "step": 2957,
+   "loader_floor": 63,
+   "kernel_terms": 141,
+   "predicted": 200.7
+  },
+  {
+   "step": 3005,
+   "loader_floor": 63,
+   "kernel_terms": 138,
+   "predicted": 199.1
+  }
+ ]
+}

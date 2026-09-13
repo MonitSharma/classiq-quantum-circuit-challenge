@@ -1,0 +1,7 @@
+{
+  "status": "externally_timed_out",
+  "solver_conclusion": null,
+  "full_input_domain": 64,
+  "layers": 3,
+  "wall_report": "artifacts/post196_constant_x_wall.json"
+}
