@@ -1,6 +1,10 @@
 # Lower-depth oracle synthesis
 
-The best fully verified local circuit is now **224 depth, 957 CX, and 18
+Current best, September 13: **221 depth / 944 CX / 18 qubits**, `artifacts/221/`, matching literal QMOD and exact-file exhaustive verification. SHA `4f9fa6232930777426ac4f8118155780471f111c31435e7578175170035e313f`; fresh replay matches. Joint selection of relative-phase encoders (y seed 99, x seed 151) improves the complete circuit by one layer and one CX. All 221 Pareto timing combinations from 160 seeds per side were compiled; none beat 221. See `artifacts/221/README.md`. Sub-180 and rank one remain unfinished.
+
+Previous best, September 13: **222 depth / 945 CX / 18 qubits**, `artifacts/222/`, matching QMOD and exact-file exhaustive verification. SHA `6c8ff19470da3d6550d1741d502065e1ace10c72cb4c9d62aa4683703a344031`; fresh replay matches. Read `POST224_REVIEW_AND_EXPERIMENTS.md` for the relative-phase boundary change, tested in-place witnesses, and corrections to proposed depth floors. Sub-180 remains unfinished.
+
+The earlier 224-depth checkpoint is **224 depth, 957 CX, and 18
 qubits** in `artifacts/224/`. It uses parity-assisted class encoders and a
 69-layer phase kernel. This removes 34 layers from the protected 258/1188
 package. Neither 183 nor sub-180 has been reached, and no new challenge

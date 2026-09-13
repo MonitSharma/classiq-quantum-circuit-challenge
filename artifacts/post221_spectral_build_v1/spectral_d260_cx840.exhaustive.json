@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post221_spectral_build_v1/spectral_d260_cx840.qasm",
+  "sha256": "57216293ff3f1bb3a456c6c04adf7edf65b585f4f6469936c36a101079168a6e",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 260,
+  "cx_count": 840,
+  "max_error": 1.3410450279438007e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 7.30899992205824e-15,
+  "peak_sparse_support": 8,
+  "elapsed_seconds": 0.13173985481262207,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

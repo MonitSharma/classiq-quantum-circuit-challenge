@@ -1,6 +1,10 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
-Current best: **224 depth / 957 CX / 18 qubits**, `artifacts/224/`, with matching QMOD and exact-file exhaustive verification. SHA `14b9272a21fc9a8d47ce036daa2c45fe792e092f06078f3e7ad4dd14bb79371f`; fresh replay matches. See `POST258_RESEARCH.md` for the parity-assisted class codes and joint scheduling. Sub-180 remains unfinished.
+Current best, September 13: **221 depth / 944 CX / 18 qubits**, `artifacts/221/`, matching literal QMOD and exact-file exhaustive verification. SHA `4f9fa6232930777426ac4f8118155780471f111c31435e7578175170035e313f`; fresh replay matches. Joint selection of relative-phase encoders (y seed 99, x seed 151) improves the complete circuit by one layer and one CX. All 221 Pareto timing combinations from 160 seeds per side were compiled; none beat 221. See `artifacts/221/README.md`. Sub-180 and rank one remain unfinished.
+
+Previous best, September 13: **222 depth / 945 CX / 18 qubits**, `artifacts/222/`, matching QMOD and exact-file exhaustive verification. SHA `6c8ff19470da3d6550d1741d502065e1ace10c72cb4c9d62aa4683703a344031`; fresh replay matches. Read `POST224_REVIEW_AND_EXPERIMENTS.md` for the relative-phase boundary change, tested in-place witnesses, and corrections to proposed depth floors. Sub-180 remains unfinished.
+
+Earlier best: **224 depth / 957 CX / 18 qubits**, `artifacts/224/`, with matching QMOD and exact-file exhaustive verification. SHA `14b9272a21fc9a8d47ce036daa2c45fe792e092f06078f3e7ad4dd14bb79371f`; fresh replay matches. See `POST258_RESEARCH.md` for the parity-assisted class codes and joint scheduling. Sub-180 remains unfinished.
 
 Earlier tie-breaker update: `artifacts/243_cx951/` is verified at **243 depth / 951 CX / 18 qubits**, with matching QMOD. SHA `38f5948a44d21c923ae740e64b968336898448ee01a30e85d81c583fe3dff696`. It supersedes 243/971 by CX count only; sub-180 remains unfinished. See `POST258_RESEARCH.md` for the further structural tests.
 
@@ -18,7 +22,7 @@ Sub-180 and rank one remain unfinished. The user explicitly asked to continue
 until a sub-180 method is found; this is an active optimization request, not a
 handoff-only task. No background automation or leaderboard monitor is scheduled.
 
-**Current best is now 258/1188/18**, using the distributed phase implementation
+**Earlier best was 258/1188/18**, using the distributed phase implementation
 of the two-level-comparison identity. Its complete current design is
 [DISTRIBUTED_LOOKUP_258.md](DISTRIBUTED_LOOKUP_258.md), and the verified package
 with a matching QMOD is `artifacts/258/`. The remainder of this file describes

@@ -1,0 +1,47 @@
+{
+  "encoders": [
+    {
+      "side": 0,
+      "seed": 11,
+      "depth": 77,
+      "removed": [
+        [
+          4,
+          8
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "subspace_error": 2.4424906541753444e-15
+    },
+    {
+      "side": 1,
+      "seed": 3,
+      "depth": 77,
+      "removed": [
+        [
+          4,
+          8
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "subspace_error": 1.9984014443252818e-15
+    }
+  ],
+  "depth": 222,
+  "cx": 945,
+  "path": "artifacts/post224_relative_lookup_v1/relative_lookup_d222.qasm"
+}

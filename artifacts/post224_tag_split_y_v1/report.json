@@ -1,0 +1,346 @@
+{
+  "side": "y",
+  "degree": 3,
+  "rows": [
+    {
+      "index": 0,
+      "tag": {
+        "target": 5,
+        "a": 8,
+        "b": 16,
+        "linear": 16,
+        "tag": "18374967950370078720",
+        "counts": [
+          6,
+          8
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 1.1564532500924543
+    },
+    {
+      "index": 1,
+      "tag": {
+        "target": 5,
+        "a": 8,
+        "b": 20,
+        "linear": 8,
+        "tag": "1152905011663998720",
+        "counts": [
+          7,
+          7
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5017858750652522
+    },
+    {
+      "index": 2,
+      "tag": {
+        "target": 5,
+        "a": 12,
+        "b": 20,
+        "linear": 24,
+        "tag": "17293822633795649520",
+        "counts": [
+          6,
+          8
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5060370829887688
+    },
+    {
+      "index": 3,
+      "tag": {
+        "target": 5,
+        "a": 4,
+        "b": 16,
+        "linear": 0,
+        "tag": "1085367509943582720",
+        "counts": [
+          7,
+          8
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.505716499988921
+    },
+    {
+      "index": 4,
+      "tag": {
+        "target": 4,
+        "a": 8,
+        "b": 36,
+        "linear": 0,
+        "tag": "17365615181106769920",
+        "counts": [
+          7,
+          8
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5059679159894586
+    },
+    {
+      "index": 5,
+      "tag": {
+        "target": 5,
+        "a": 12,
+        "b": 16,
+        "linear": 16,
+        "tag": "1148699379688734720",
+        "counts": [
+          7,
+          8
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5013784999027848
+    },
+    {
+      "index": 6,
+      "tag": {
+        "target": 5,
+        "a": 14,
+        "b": 16,
+        "linear": 0,
+        "tag": "4378624736691486720",
+        "counts": [
+          7,
+          8
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 1.066899250028655
+    },
+    {
+      "index": 7,
+      "tag": {
+        "target": 5,
+        "a": 4,
+        "b": 24,
+        "linear": 12,
+        "tag": "17365598752840155120",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 1.0555274169892073
+    },
+    {
+      "index": 8,
+      "tag": {
+        "target": 4,
+        "a": 12,
+        "b": 36,
+        "linear": 36,
+        "tag": "18442240538775121920",
+        "counts": [
+          7,
+          8
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5043333750218153
+    },
+    {
+      "index": 9,
+      "tag": {
+        "target": 5,
+        "a": 2,
+        "b": 20,
+        "linear": 22,
+        "tag": "3472278627608952060",
+        "counts": [
+          7,
+          8
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5057935829972848
+    },
+    {
+      "index": 10,
+      "tag": {
+        "target": 5,
+        "a": 6,
+        "b": 18,
+        "linear": 20,
+        "tag": "13889104563291553020",
+        "counts": [
+          7,
+          8
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5067914159735665
+    },
+    {
+      "index": 11,
+      "tag": {
+        "target": 1,
+        "a": 1,
+        "b": 44,
+        "linear": 13,
+        "tag": "14527708171506967350",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5059836660511792
+    },
+    {
+      "index": 12,
+      "tag": {
+        "target": 3,
+        "a": 6,
+        "b": 50,
+        "linear": 52,
+        "tag": "287315856285697020",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5077959169866517
+    },
+    {
+      "index": 13,
+      "tag": {
+        "target": 1,
+        "a": 21,
+        "b": 44,
+        "linear": 53,
+        "tag": "3932549998814272710",
+        "counts": [
+          7,
+          8
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.506154374917969
+    },
+    {
+      "index": 14,
+      "tag": {
+        "target": 3,
+        "a": 2,
+        "b": 4,
+        "linear": 0,
+        "tag": "4593741714853740480",
+        "counts": [
+          8,
+          8
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5060736669693142
+    },
+    {
+      "index": 15,
+      "tag": {
+        "target": 5,
+        "a": 1,
+        "b": 2,
+        "linear": 0,
+        "tag": "8608480568017455240",
+        "counts": [
+          8,
+          8
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 0.4483454169239849
+    },
+    {
+      "index": 16,
+      "tag": {
+        "target": 3,
+        "a": 4,
+        "b": 18,
+        "linear": 0,
+        "tag": "14929502862075510720",
+        "counts": [
+          8,
+          8
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.505466083995998
+    },
+    {
+      "index": 17,
+      "tag": {
+        "target": 3,
+        "a": 4,
+        "b": 16,
+        "linear": 36,
+        "tag": "72040070554587120",
+        "counts": [
+          8,
+          8
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5060076660010964
+    },
+    {
+      "index": 18,
+      "tag": {
+        "target": 3,
+        "a": 6,
+        "b": 32,
+        "linear": 32,
+        "tag": "4378410075228798720",
+        "counts": [
+          8,
+          8
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 0.936616166960448
+    },
+    {
+      "index": 19,
+      "tag": {
+        "target": 5,
+        "a": 4,
+        "b": 8,
+        "linear": 12,
+        "tag": "4222193369153520",
+        "counts": [
+          8,
+          8
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5059509999118745
+    }
+  ]
+}

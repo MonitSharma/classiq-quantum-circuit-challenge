@@ -1,0 +1,27 @@
+{
+  "record": "artifacts/post224_or_tag_search_v1/best_25941.json",
+  "encoders": [
+    {
+      "depth": 78,
+      "settings": [
+        0,
+        false,
+        true
+      ],
+      "error": 2.6691044563696147e-15
+    },
+    {
+      "depth": 84,
+      "settings": [
+        3,
+        false,
+        true
+      ],
+      "error": 1.7764980871452137e-15
+    }
+  ],
+  "kernel_depth": 78,
+  "depth": 245,
+  "cx": 948,
+  "path": "artifacts/post224_or_tag_build_v1/or_tag_d245.qasm"
+}

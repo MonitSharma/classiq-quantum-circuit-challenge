@@ -1,0 +1,23 @@
+[
+  {
+    "method": "PauliSimp",
+    "depth": 1779,
+    "cx": 1270,
+    "path": "artifacts/post221_global_rewrites_v2/PauliSimp_d1779.qasm",
+    "seconds": 16.635247125057504
+  },
+  {
+    "method": "GreedyPauliSimp",
+    "depth": 654,
+    "cx": 1053,
+    "path": "artifacts/post221_global_rewrites_v2/GreedyPauliSimp_d654.qasm",
+    "seconds": 8.71466049994342
+  },
+  {
+    "method": "zx_full",
+    "depth": 1970,
+    "cx": 2667,
+    "path": "artifacts/post221_global_rewrites_v2/zx_full_d1970.qasm",
+    "seconds": 24.65061762498226
+  }
+]

@@ -9,6 +9,6 @@
   "ancilla_error": 0.0,
   "discarded_amplitude_bound": 1.2407956168092782e-14,
   "peak_sparse_support": 16,
-  "elapsed_seconds": 0.21816492080688477,
+  "elapsed_seconds": 0.2703371047973633,
   "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
 }

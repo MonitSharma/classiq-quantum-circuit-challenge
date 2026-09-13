@@ -1,0 +1,45 @@
+[
+  {
+    "method": "FullPeepholeOptimise",
+    "depth": 243,
+    "cx": 917,
+    "path": "artifacts/post221_global_rewrites_v1/FullPeepholeOptimise_d243.qasm",
+    "seconds": 12.437926457962021
+  },
+  {
+    "method": "CliffordSimp",
+    "depth": 234,
+    "cx": 918,
+    "path": "artifacts/post221_global_rewrites_v1/CliffordSimp_d234.qasm",
+    "seconds": 0.5279739170800894
+  },
+  {
+    "method": "OptimisePhaseGadgets",
+    "depth": 224,
+    "cx": 944,
+    "path": "artifacts/post221_global_rewrites_v1/OptimisePhaseGadgets_d224.qasm",
+    "seconds": 0.40110483299940825
+  },
+  {
+    "method": "PauliSimp",
+    "error": "RuntimeError('Predicate requirements are not satisfied: GateSetPredicate:{ H CX Z CY X S PauliExpBox CZ Y PhasedX Vdg PhasedXX ZZPhase V TwinPhasedX SWAP Rz Rx Ry ZZMax Sdg Tdg YYPhase XXPhase T PhaseGadget Measure SX SXdg }')",
+    "seconds": 0.10535766696557403
+  },
+  {
+    "method": "GreedyPauliSimp",
+    "error": "RuntimeError('Predicate requirements are not satisfied: GateSetPredicate:{ Phase Reset ClExpr H CX Z Y PhasedX RNGSeed CZ PauliExpBox CY X S RNGBound Vdg PhasedXX ZZPhase V TwinPhasedX SWAP Conditional SetBits Rz Rx Ry ZZMax Sdg RNGIndex Tdg YYPhase JobShotNum XXPhase T RNGNum PhaseGadget ClassicalTransform Measure ExplicitModifier TK1 PauliExpPairBox PauliExpCommutingSetBox ExplicitPredicate CopyBits RangePredicate MultiBit WASM }')",
+    "seconds": 0.10564525006338954
+  },
+  {
+    "method": "teleport",
+    "depth": 304,
+    "cx": 944,
+    "path": "artifacts/post221_global_rewrites_v1/teleport_d304.qasm",
+    "seconds": 21.320225959061645
+  },
+  {
+    "method": "zx_full",
+    "error": "QASM2ParseError(\"<input>:4,0: 'swap' is not defined in this scope\")",
+    "seconds": 24.869203459005803
+  }
+]

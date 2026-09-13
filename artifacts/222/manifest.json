@@ -1,0 +1,12 @@
+{
+  "depth": 222,
+  "cx": 945,
+  "width": 18,
+  "qasm": "two_stage_222.qasm",
+  "qmod": "two_stage_222.qmod",
+  "sha256": "6c8ff19470da3d6550d1741d502065e1ace10c72cb4c9d62aa4683703a344031",
+  "kernel_sha256": "b17e842ab96917cc72f684292e3ebf23098293c564e7010f7c3dc9744027880a",
+  "qmod_gate_match": true,
+  "qmod_gate_count": 1749,
+  "qmod_note": "Literal gate-level matching oracle; main includes a 12-Hadamard synthesis harness. Not cloud-resynthesized or submitted."
+}

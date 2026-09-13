@@ -1,0 +1,10 @@
+{
+  "seed": 0,
+  "steps": 20000,
+  "identities": [
+    128,
+    128
+  ],
+  "improvements": [],
+  "final_global_phase_units": 0
+}

@@ -1,0 +1,346 @@
+{
+  "side": "x",
+  "degree": 3,
+  "rows": [
+    {
+      "index": 0,
+      "tag": {
+        "target": 4,
+        "a": 8,
+        "b": 32,
+        "linear": 40,
+        "tag": "281470698520320",
+        "counts": [
+          7,
+          6
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5026795830344781
+    },
+    {
+      "index": 1,
+      "tag": {
+        "target": 4,
+        "a": 2,
+        "b": 32,
+        "linear": 34,
+        "tag": "281471540776140",
+        "counts": [
+          7,
+          7
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5059424169594422
+    },
+    {
+      "index": 2,
+      "tag": {
+        "target": 4,
+        "a": 4,
+        "b": 32,
+        "linear": 36,
+        "tag": "281470934446320",
+        "counts": [
+          7,
+          7
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5057692079572007
+    },
+    {
+      "index": 3,
+      "tag": {
+        "target": 4,
+        "a": 6,
+        "b": 32,
+        "linear": 38,
+        "tag": "281473966095420",
+        "counts": [
+          7,
+          7
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5059978750068694
+    },
+    {
+      "index": 4,
+      "tag": {
+        "target": 4,
+        "a": 10,
+        "b": 32,
+        "linear": 42,
+        "tag": "281474107651020",
+        "counts": [
+          7,
+          7
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5147829999914393
+    },
+    {
+      "index": 5,
+      "tag": {
+        "target": 4,
+        "a": 12,
+        "b": 32,
+        "linear": 44,
+        "tag": "281474709262320",
+        "counts": [
+          7,
+          7
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5057601250009611
+    },
+    {
+      "index": 6,
+      "tag": {
+        "target": 4,
+        "a": 14,
+        "b": 32,
+        "linear": 46,
+        "tag": "281471701205820",
+        "counts": [
+          7,
+          7
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5059674169169739
+    },
+    {
+      "index": 7,
+      "tag": {
+        "target": 4,
+        "a": 1,
+        "b": 32,
+        "linear": 1,
+        "tag": "18446462600164518570",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 0.3387848329730332
+    },
+    {
+      "index": 8,
+      "tag": {
+        "target": 4,
+        "a": 2,
+        "b": 32,
+        "linear": 2,
+        "tag": "18446462599591873740",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 0.3362979169469327
+    },
+    {
+      "index": 9,
+      "tag": {
+        "target": 4,
+        "a": 4,
+        "b": 32,
+        "linear": 4,
+        "tag": "18446462598985543920",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 0.38364641601219773
+    },
+    {
+      "index": 10,
+      "tag": {
+        "target": 4,
+        "a": 8,
+        "b": 32,
+        "linear": 8,
+        "tag": "18446462598749617920",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 0.19882954191416502
+    },
+    {
+      "index": 11,
+      "tag": {
+        "target": 2,
+        "a": 10,
+        "b": 16,
+        "linear": 8,
+        "tag": "4340361665355452400",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5058094579726458
+    },
+    {
+      "index": 12,
+      "tag": {
+        "target": 3,
+        "a": 4,
+        "b": 32,
+        "linear": 48,
+        "tag": "1148681852211429120",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5138446250930429
+    },
+    {
+      "index": 13,
+      "tag": {
+        "target": 4,
+        "a": 1,
+        "b": 32,
+        "linear": 33,
+        "tag": "281472113420970",
+        "counts": [
+          7,
+          8
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 1.466178083093837
+    },
+    {
+      "index": 14,
+      "tag": {
+        "target": 2,
+        "a": 10,
+        "b": 48,
+        "linear": 2,
+        "tag": "4340361664612285500",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unknown",
+      "degree": 3,
+      "seconds": 1.5055965000065044
+    },
+    {
+      "index": 15,
+      "tag": {
+        "target": 4,
+        "a": 3,
+        "b": 32,
+        "linear": 3,
+        "tag": "18446462601309808230",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 0.7637082079891115
+    },
+    {
+      "index": 16,
+      "tag": {
+        "target": 4,
+        "a": 5,
+        "b": 32,
+        "linear": 5,
+        "tag": "18446462601511918170",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 0.4197362919803709
+    },
+    {
+      "index": 17,
+      "tag": {
+        "target": 4,
+        "a": 6,
+        "b": 32,
+        "linear": 6,
+        "tag": "18446462602017193020",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 0.4403663750272244
+    },
+    {
+      "index": 18,
+      "tag": {
+        "target": 4,
+        "a": 9,
+        "b": 32,
+        "linear": 9,
+        "tag": "18446462601590560170",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 0.29085200000554323
+    },
+    {
+      "index": 19,
+      "tag": {
+        "target": 4,
+        "a": 10,
+        "b": 32,
+        "linear": 10,
+        "tag": "18446462602158748620",
+        "counts": [
+          8,
+          7
+        ]
+      },
+      "status": "unsat",
+      "degree": 3,
+      "seconds": 0.31662399997003376
+    }
+  ]
+}

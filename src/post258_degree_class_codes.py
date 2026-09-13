@@ -5,16 +5,16 @@ import z3
 import two_stage_oracle as t
 
 
-def run(outdir,timeout,profiles=False):
+def run(outdir,timeout,profiles=False,xmask=16):
     assert not outdir.exists();outdir.mkdir(parents=True)
     rows=[]
-    for side,cls,raw in [('y',t.ROWCLS,5),('x',t.COLCLS,4)]:
+    for side,cls,raw in [('y',t.ROWCLS,32),('x',t.COLCLS,xmask)]:
         for degree in ([(2,4,4),(3,3,4),(2,5,5),(1,6,6)] if profiles else [3,4,5]):
             code=[z3.BitVec(f'{side}_{degree}_{i}',3) for i in range(64)]
             s=z3.Solver();s.set(timeout=timeout)
             for a in range(64):
                 for b in range(a):
-                    if ((a^b)>>raw&1)==0 and cls[a]!=cls[b]:s.add(code[a]!=code[b])
+                    if (((a^b)&raw).bit_count()%2)==0 and cls[a]!=cls[b]:s.add(code[a]!=code[b])
             s.add(code[0]==0)
             for mask in range(64):
                 if not isinstance(degree,tuple) and mask.bit_count()<=degree:continue
@@ -25,7 +25,7 @@ def run(outdir,timeout,profiles=False):
                     for bit,d in enumerate(degree):
                         if mask.bit_count()>d:s.add(z3.Extract(bit,bit,value)==0)
                 else:s.add(value==0)
-            start=time.monotonic();status=s.check();row=dict(side=side,raw=raw,degree=degree,status=str(status),seconds=time.monotonic()-start)
+            start=time.monotonic();status=s.check();row=dict(side=side,raw_mask=raw,degree=degree,status=str(status),seconds=time.monotonic()-start)
             if status==z3.sat:
                 labels=[s.model().eval(c).as_long() for c in code];anf=labels.copy()
                 for bit in range(6):
@@ -39,4 +39,4 @@ def run(outdir,timeout,profiles=False):
             (outdir/'report.json').write_text(json.dumps(rows,indent=2)+'\n')
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--outdir',type=Path,required=True);p.add_argument('--timeout-ms',type=int,default=10000);p.add_argument('--profiles',action='store_true');a=p.parse_args();run(a.outdir,a.timeout_ms,a.profiles)
+    p=argparse.ArgumentParser();p.add_argument('--outdir',type=Path,required=True);p.add_argument('--timeout-ms',type=int,default=10000);p.add_argument('--profiles',action='store_true');p.add_argument('--xmask',type=int,default=16);a=p.parse_args();run(a.outdir,a.timeout_ms,a.profiles,a.xmask)

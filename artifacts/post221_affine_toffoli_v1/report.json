@@ -1,0 +1,192 @@
+{
+  "screened": 12096,
+  "rows": [
+    {
+      "move": [
+        2,
+        32,
+        0,
+        0,
+        0
+      ],
+      "cost": 60.5,
+      "seed": 0,
+      "depth": 170,
+      "cx": 223,
+      "change_depth": 37,
+      "core_depth": 98,
+      "error": 3.4844027277880974e-15,
+      "path": "artifacts/post221_affine_toffoli_v1/kernel_d170_cx223.qasm"
+    },
+    {
+      "move": [
+        2,
+        32,
+        0,
+        0,
+        0
+      ],
+      "cost": 60.5,
+      "seed": 3,
+      "depth": 158,
+      "cx": 219,
+      "change_depth": 37,
+      "core_depth": 84,
+      "error": 3.942464333787022e-15,
+      "path": "artifacts/post221_affine_toffoli_v1/kernel_d158_cx219.qasm"
+    },
+    {
+      "move": [
+        2,
+        32,
+        0,
+        0,
+        0
+      ],
+      "cost": 60.5,
+      "seed": 11,
+      "depth": 155,
+      "cx": 229,
+      "change_depth": 37,
+      "core_depth": 81,
+      "error": 3.759357688582985e-15,
+      "path": "artifacts/post221_affine_toffoli_v1/kernel_d155_cx229.qasm"
+    },
+    {
+      "move": [
+        2,
+        32,
+        0,
+        0,
+        0
+      ],
+      "cost": 60.5,
+      "seed": 21,
+      "depth": 151,
+      "cx": 221,
+      "change_depth": 37,
+      "core_depth": 77,
+      "error": 3.569600321799346e-15,
+      "path": "artifacts/post221_affine_toffoli_v1/kernel_d151_cx221.qasm"
+    },
+    {
+      "move": [
+        2,
+        32,
+        0,
+        0,
+        0
+      ],
+      "cost": 60.5,
+      "seed": 28,
+      "depth": 151,
+      "cx": 220,
+      "change_depth": 37,
+      "core_depth": 77,
+      "error": 3.801125154660574e-15,
+      "path": "artifacts/post221_affine_toffoli_v1/kernel_d151_cx220.qasm"
+    },
+    {
+      "move": [
+        2,
+        32,
+        0,
+        0,
+        0
+      ],
+      "cost": 60.5,
+      "seed": 91,
+      "depth": 148,
+      "cx": 229,
+      "change_depth": 37,
+      "core_depth": 76,
+      "error": 3.760469034439039e-15,
+      "path": "artifacts/post221_affine_toffoli_v1/kernel_d148_cx229.qasm"
+    },
+    {
+      "move": [
+        32,
+        64,
+        3,
+        0,
+        1
+      ],
+      "cost": 64.0,
+      "seed": 0,
+      "depth": 132,
+      "cx": 223,
+      "change_depth": 19,
+      "core_depth": 94,
+      "error": 3.2433479742456436e-15,
+      "path": "artifacts/post221_affine_toffoli_v1/kernel_d132_cx223.qasm"
+    },
+    {
+      "move": [
+        32,
+        64,
+        3,
+        0,
+        1
+      ],
+      "cost": 64.0,
+      "seed": 3,
+      "depth": 116,
+      "cx": 210,
+      "change_depth": 19,
+      "core_depth": 78,
+      "error": 3.142900885728826e-15,
+      "path": "artifacts/post221_affine_toffoli_v1/kernel_d116_cx210.qasm"
+    },
+    {
+      "move": [
+        32,
+        64,
+        3,
+        0,
+        1
+      ],
+      "cost": 64.0,
+      "seed": 91,
+      "depth": 113,
+      "cx": 231,
+      "change_depth": 19,
+      "core_depth": 75,
+      "error": 3.090348396409935e-15,
+      "path": "artifacts/post221_affine_toffoli_v1/kernel_d113_cx231.qasm"
+    },
+    {
+      "move": [
+        32,
+        64,
+        3,
+        1,
+        0
+      ],
+      "cost": 69.0,
+      "seed": 28,
+      "depth": 113,
+      "cx": 229,
+      "change_depth": 19,
+      "core_depth": 75,
+      "error": 4.478236063051533e-15,
+      "path": "artifacts/post221_affine_toffoli_v1/kernel_d113_cx229.qasm"
+    },
+    {
+      "move": [
+        2,
+        8,
+        5,
+        1,
+        1
+      ],
+      "cost": 70.5,
+      "seed": 11,
+      "depth": 111,
+      "cx": 200,
+      "change_depth": 19,
+      "core_depth": 74,
+      "error": 2.7207087023701892e-15,
+      "path": "artifacts/post221_affine_toffoli_v1/kernel_d111_cx200.qasm"
+    }
+  ]
+}

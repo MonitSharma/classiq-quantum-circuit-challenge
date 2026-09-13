@@ -1,20 +1,21 @@
 # Classiq challenge optimization workspace
 
-The objective is to reach rank 1 in the [Classiq challenge](https://www.classiq.io/challenge). Work is unfinished. The lowest verified **depth** is now **456** (CX 1140, 18 qubits) from the level/comparator architecture in [docs/LEVEL_COMPARATOR.md](docs/LEVEL_COMPARATOR.md); the lowest verified **CX count** remains the protected **depth 524, 950 CX** artifact. The live page refreshed September 11, 2026 showed Hyun-Jung K. at 183 / 789, with depth primary and CX as the tie-breaker. Nothing has been submitted, and no rank-1 claim is made. See the [research review](docs/RESEARCH_REVIEW_2026-09-09.md) for the repository audit and prior experiments.
+The objective is sub-180 depth and rank 1 in the [Classiq challenge](https://www.classiq.io/challenge). Work is unfinished. The lowest verified local depth is **221**, with **944 CX gates and 18 qubits**. The exact standalone U3/CX QASM passes all 4096 coordinate inputs, three dense-state checks, and an identical-hash replay. No rank-1 or sub-180 result is claimed.
 
-Handoff updated September 10, 2026 (Asia/Singapore). Start with [the handoff](docs/HANDOFF.md), then read [the experiment history](docs/EXPERIMENTS.md) and [the current design](docs/CURRENT_DESIGN.md). [AGENTS.md](AGENTS.md) records essential correctness constraints for a new agent.
+Start with [the handoff](docs/HANDOFF.md), [experiment history](docs/EXPERIMENTS.md), and [current research](docs/POST224_REVIEW_AND_EXPERIMENTS.md). [AGENTS.md](AGENTS.md) records the essential correctness constraints. Historical results below remain preserved.
 
 ## Lowest verified depth
 
-- Circuit: [artifacts/456/level_merged_456.qasm](artifacts/456/level_merged_456.qasm) — depth 456, CX 1140, width 18
-- Exhaustive verification: [artifacts/456/level_merged_456.exhaustive.json](artifacts/456/level_merged_456.exhaustive.json)
-- SHA-256 `8e997e511d9fb043ad82896a7c873f5c3a1cca4cde0cce7bf5df5cba6c6c6e7c`
-- Source: [src/level_oracle.py](src/level_oracle.py), `build_merged`
-- Method: `logo(x,y) = [u1(y)+v1(x) >= 6] XOR [u2(y)+v2(x) >= 6]`, two three-bit
-  level comparisons. See [docs/LEVEL_COMPARATOR.md](docs/LEVEL_COMPARATOR.md).
-- It does **not** supersede the 524 artifact on CX count, so both are kept.
+- [221-depth QASM](artifacts/221/two_stage_221.qasm)
+- [Matching gate-level QMOD](artifacts/221/two_stage_221.qmod); its main adds preparation Hadamards, which are absent from the oracle QASM.
+- [Exhaustive verification](artifacts/221/two_stage_221.exhaustive.json)
+- [Dense-state verification](artifacts/221/two_stage_221.verification.json)
+- [Package and replay recipe](artifacts/221/README.md)
+- SHA-256 `4f9fa6232930777426ac4f8118155780471f111c31435e7578175170035e313f`
+- Method: parity-assisted class codes using y5 and x4 XOR x5, a 69-layer kernel, and relative-phase lookup boundaries.
 
-## Best protected artifact
+
+## Historical protected 524-depth artifact
 
 - Circuit: [artifacts/524/full_mux_feature_linear_tket_524.qasm](artifacts/524/full_mux_feature_linear_tket_524.qasm) — depth 524, CX 950
 - Exhaustive verification: [artifacts/524/full_mux_feature_linear_tket_524.exhaustive.json](artifacts/524/full_mux_feature_linear_tket_524.exhaustive.json)
@@ -28,8 +29,7 @@ Handoff updated September 10, 2026 (Asia/Singapore). Start with [the handoff](do
 
 The exact protected QASM SHA-256 is `7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147`. The matching logical QMOD is packaged at `artifacts/524/full_mux_feature_linear_tket_524.qmod`.
 
-The six-feature UCR load/phase/unload architecture is formally closed for
-competition optimization. Detailed methods, measurements, and failure reasons
+Earlier architecture closure statements are historical; the verified 258-to-224 improvements supersede broad claims that distributed lookup cannot improve. Detailed methods, measurements, and failure reasons
 are indexed in [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md).
 
 ## Verify locally
@@ -37,8 +37,8 @@ are indexed in [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md).
 Run from this directory:
 
 ```sh
-OPENBLAS_NUM_THREADS=1 .venv/bin/python src/exhaustive_verify.py artifacts/524/full_mux_feature_linear_tket_524.qasm
-OPENBLAS_NUM_THREADS=1 .venv/bin/python src/verify.py artifacts/524/full_mux_feature_linear_tket_524.qasm 5
+OPENBLAS_NUM_THREADS=1 .venv/bin/python src/exhaustive_verify.py artifacts/221/two_stage_221.qasm
+OPENBLAS_NUM_THREADS=1 .venv/bin/python src/verify.py artifacts/221/two_stage_221.qasm 3
 ```
 
 The packaged reports record successful exhaustive checking on all 4,096 inputs and dense random-state checks. Neither command submits anything.
