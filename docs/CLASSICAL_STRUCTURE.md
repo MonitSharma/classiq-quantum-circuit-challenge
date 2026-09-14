@@ -187,3 +187,68 @@ Sub-180 needs `m=1`, which is proven infeasible, or a synthesis ratio near 1.0,
 which nothing here has achieved.  The floors above are floors for oracles
 factored through a per-side class code; the observed 183 leader must use a
 different factorisation.
+
+---
+
+# Post-190 closure map and the rotation bound
+
+## The bound that matters
+
+Every Rz needs one CX to place its parity on a host wire. On `W` wires a layer
+holds `c` CX (2c wires) and `r` Rz (r wires) with `2c + r <= W`, so throughput is
+`min(c,r) = floor(W/3)`.  On all 18 wires that is **6 rotations per layer** — an
+absolute ceiling for any part of any circuit.
+
+| architecture | encoding rot | kernel rot | total | floor at rate 6 | real floor |
+|---|---|---|---|---|---|
+| current (1 linear + 3 ancilla) | 768 | 117 | 885 | 148 | **186** |
+| in-place (2 wires + 2 ancilla)  | 640 | 195 | 835 | 139 | **172** |
+
+**The current architecture cannot reach 142 at any synthesis quality**: 885
+rotations need >= 148 layers even with perfect rate-6 packing on all 18 wires.
+This is independent of scheduling, codes, or kernel tricks.
+
+A 142-layer circuit therefore needs <= ~850 total rotations *and* near-rate-6
+packing throughout.  The kernel can never pack at rate 6 — its parities live on
+8 code wires plus at most 2 free ancillas (10 wires, rate 3), because freeing
+more ancillas requires `m=1`, which is UNSAT on both sides.
+
+## Why the encoding rotation count is irreducible
+
+1. 11 row and 11 column classes force 4 code bits per side (fewer cannot
+   separate; more widens the kernel, and a 10-wire kernel measures K=842).
+2. No code bit depends on fewer than 6 parities — exhaustive over all 63 raw
+   masks on both sides.
+3. Not even **one** of the three ancilla bits can be cheap: for every (mask,
+   subspace) pair, the groups `(raw, b1)` exceed 4 classes.  So `3 x 64`
+   rotations per side per block is irreducible.
+
+Only in-place code wires dodge (2)–(3), because they ride on a wire that already
+carries a coordinate, so they cost `2^|S|` for the update function rather than
+2^6 for the bit.
+
+## Everything closed, with the measurement that closed it
+
+| route | verdict |
+|---|---|
+| direct 12-bit phase polynomial | Walsh support 4096/4096 -> floor 683 |
+| single-flag geometry Boolean (idea 1) | 22 predicate bits x 64 rot = 235-layer compute vs 69 budget |
+| predicates + CZ (idea 2) | same 11 CZ terms, 5 blocks, worse than 190 |
+| CZ-product rank-10 | colspace ∩ affine = 0 and ∩ deg<=2 = 0; needs >= 4 rounds |
+| classical cube synthesis | 10-16 cubes/table -> 300+ layers/block |
+| 5 code bits / 10-wire kernel | K=842 -> kernel floor 281 |
+| k=3 in-place + 1 ancilla | UNSAT: 88 y-subspaces, 296 x-subspaces |
+| one cheap ancilla bit | infeasible both sides |
+| pure-K anneal, current arch | converges to K=118 vs the 117 already in use |
+
+The four logo regions are exactly pairwise disjoint (zero overlapping cells), so
+`logo = R1 xor R2' xor D1 xor D2`; the disk staircases have rank 5 and 4, giving
+11 CZ terms.  The class-code kernel executes all 11 simultaneously in 59 layers,
+which is why materialising them as bits (235 layers) loses badly.
+
+## Standing position
+
+190 is 98% of the 187 floor of its architecture — that architecture is finished.
+The in-place encoding is the only construction with a lower floor (172), worth
+roughly 5-15 layers in practice once its sequential in-place stages are paid for.
+142 is not reachable by anything in this family.

@@ -1,5 +1,26 @@
 # Experiment history and failure notes
 
+## Latest bounded follow-up: nonlinear phases and local windows
+
+See `docs/POST190_NONLINEAR_AND_WINDOWS.md`. Best remains **190/857/18**.
+A 673-case nonlinear/LP screen reduced phase support to 51 but the best full
+alternative was 200/859, exhaustively verified. 240 local window trials did not
+improve 190. Corrected x-tag and inverse-Walsh/phase-unit errors in the older
+reachable-lift experiment; corrected eight-start search retained 63 terms.
+Old runs using those erroneous helpers do not establish architectural limits.
+Four focused tests pass; all runs finished and protected QASM hash unchanged.
+
+
+## Structural alternatives after 190
+
+Best remains 190 / 857 / 18. The direct Boolean compute/Z/uncompute template
+fits a conditional 139-layer budget but has no full-logo witness. Mixed-coordinate
+screens (200,046 cases) found no new qualifying partition. Degree-four split-class
+codes exist for both current raw tags; degree-three models are UNSAT, but the
+degree-four witnesses do not supply cheap native encoders or kernels. Three
+focused tests pass. See [POST190_NEW_ARCHITECTURES.md](POST190_NEW_ARCHITECTURES.md)
+for exact scope, timeouts and artifacts. No background search remains running.
+
 ## September 14: reachable-domain phase-lift probe after 190
 
 The protected **190 / 857** package is unchanged. A new probe,

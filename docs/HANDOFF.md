@@ -1,5 +1,25 @@
 # Continuation handoff
 
+## Latest bounded follow-up: nonlinear phases and local windows
+
+See `docs/POST190_NONLINEAR_AND_WINDOWS.md`. Best remains **190/857/18**.
+A 673-case nonlinear/LP screen reduced phase support to 51 but the best full
+alternative was 200/859, exhaustively verified. 240 local window trials did not
+improve 190. Corrected x-tag and inverse-Walsh/phase-unit errors in the older
+reachable-lift experiment; corrected eight-start search retained 63 terms.
+Old runs using those erroneous helpers do not establish architectural limits.
+Four focused tests pass; all runs finished and protected QASM hash unchanged.
+
+
+Latest structural research: read [POST190_NEW_ARCHITECTURES.md](POST190_NEW_ARCHITECTURES.md).
+The 190 best is unchanged. A direct compute/Z/uncompute template has a
+**conditional 139-layer budget**, but no satisfying full-logo circuit was found.
+The 16-sample witness failed 2,047 full inputs; 32-sample Z3 and a bounded
+CaDiCaL attempt timed out. Do not present the template as a sub-140 circuit.
+New degree-four split-class codes are verified, but are not shallow encoders;
+their selected kernel has 255 principal phase terms. Mixed-coordinate screens
+found no new qualifying partition. Three focused tests pass; no jobs remain running.
+
 Leaderboard leader **142**; target sub-140 then rank one. Verified best is now
 **190 depth / 857 CX / 18 qubits**, `artifacts/190/`, SHA
 `f8f6aec7835f6fe4e28023e2736553eb029d3522b1ea724a1e0d74213b41f549`. All 4,096

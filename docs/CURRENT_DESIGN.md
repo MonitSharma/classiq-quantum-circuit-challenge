@@ -1,5 +1,23 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+## Latest bounded follow-up: nonlinear phases and local windows
+
+See `docs/POST190_NONLINEAR_AND_WINDOWS.md`. Best remains **190/857/18**.
+A 673-case nonlinear/LP screen reduced phase support to 51 but the best full
+alternative was 200/859, exhaustively verified. 240 local window trials did not
+improve 190. Corrected x-tag and inverse-Walsh/phase-unit errors in the older
+reachable-lift experiment; corrected eight-start search retained 63 terms.
+Old runs using those erroneous helpers do not establish architectural limits.
+Four focused tests pass; all runs finished and protected QASM hash unchanged.
+
+
+Current verified best is **190 / 857 / 18**, `artifacts/190/`, SHA
+`f8f6aec7835f6fe4e28023e2736553eb029d3522b1ea724a1e0d74213b41f549`.
+The latest work investigates structurally different direct Boolean oracles;
+its 139-layer template is unsolved and is not a submission artifact. See
+[POST190_NEW_ARCHITECTURES.md](POST190_NEW_ARCHITECTURES.md). Earlier entries
+below are historical checkpoints.
+
 Latest: **193 / 853 / 18**, `artifacts/193_cx853/`, a CX tie-breaker gain only.
 Depth is unchanged. Exact-file exhaustive verification, five dense checks and
 matching QMOD pass. See [POST193_CX_REFINEMENT.md](POST193_CX_REFINEMENT.md).
