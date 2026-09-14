@@ -440,3 +440,77 @@ rotation economics (a feature costs `2^w`) together with the class structure.
 With it forced, the bounds recorded above are the bounds of the problem as this
 repository formulates it: encoding >= 768 rotations, kernel rate <= 3, minimum
 K = 117, hence >= 187 layers, and 190 is 98% of that.
+
+---
+
+# Leaderboard evidence, and what it rules out (2026-09-14)
+
+Top-5 leaderboard, all width 18:
+
+| rank | depth | CX | reading |
+|---|---|---|---|
+| 1 | 142 | 557 | between the two families |
+| 2 | 166 | **348** | Boolean family |
+| 3 | 175 | **352** | Boolean family |
+| 4 | 177 | 736 | multiplexer family |
+| 5 | 178 | 782 | multiplexer family |
+| (us) | 190 | 857 | multiplexer family |
+
+A phase-polynomial multiplexer needs one CX per rotation, so its CX count is
+pinned near 850 -- our 857 matches the model exactly.  Ranks 4-5 sit in that same
+family.  **Ranks 2-3 at ~350 CX cannot be multiplexers**: ~350 CX is about 58
+Toffolis, i.e. roughly **29 AND gates in the compute stage**.
+
+## Classiq synthesis is NOT the winners' method
+
+Faithfully reproducing the baseline model and synthesizing it today gives
+**depth 5874 / CX 3906** -- an order of magnitude worse than our hand-built
+circuits.  And `artifacts/531` (the repo's "initial submission, rank 21") is
+`full_mux_531`: a Qiskit multiplexer build passed through pytket, *not* Classiq
+synthesis; its own README says it "is not expected to synthesize back to" that
+depth.  So there is no calibration point where Classiq synthesis produced a good
+result, and the hypothesis that the winners simply compile a better model through
+it is **falsified**.
+
+## A Classiq expression bug (worth reporting upstream)
+
+`control((a & b) | (c & d), ...)` -- an OR of two *range* predicates -- is
+rejected server-side with
+
+    Control condition 'False' must be a qubit, an array of qubits,
+    or a quantum Boolean expression, but is bool
+
+The generated qmod is correct (all ten controls render properly); the collapse
+happens during server-side expansion.  Isolated minimal cases:
+
+| form | result |
+|---|---|
+| `(y==12) \| (y==26)` inline | OK, depth 379 |
+| same built via a variable | OK, depth 379 |
+| same inside a loop | OK, depth 379 |
+| `((y>=15)&(y<=16)) \| ((y>=22)&(y<=23))` | **FAIL** |
+| OR written before the AND | **FAIL** |
+| `((y>=29)&(y<=53)) & ~((y>=39)&(y<=43))` | OK, depth 970 |
+| two separate `control` statements | OK, depth 472 |
+
+Workarounds exist (complement form, or splitting the control), both costly.
+
+Also measured: the disk predicates `(x-55)**2 + (y-41)**2 <= 42` need **82
+qubits** as a single OR and **39** as four disjoint regions, against the
+18-qubit cap.  Classiq's arithmetic engine is not a route here.
+
+## The target, now derived from data rather than modelling
+
+Reaching the Boolean family needs logo computed in roughly **29 AND gates**.
+Measured for comparison: Qiskit `IntegerComparator` (carry-chain) costs ~55 CX
+per threshold, and the oracle needs ~39 distinct thresholds -- **2147 CX for the
+predicates alone**, six times rank-2's entire budget.  Cube-cover + MCX is worse
+still (a full incremental Boolean oracle measures depth 2890 / CX 1516).
+
+So the winners are not computing thresholds independently.  They must share one
+chain across the **nested** interval families
+
+    x[32,48] ⊃ x[33,47] ⊃ x[34,46] ⊃ x[36,44] ⊃ x[38,42]     (disk D2)
+    x[50,60] ⊃ x[51,59] ⊃ x[53,57]                            (disk D1)
+
+i.e. compute a shared *level* per coordinate, not 39 separate comparators.
