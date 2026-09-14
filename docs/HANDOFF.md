@@ -1,5 +1,43 @@
 # Continuation handoff
 
+Leaderboard leader **142**; target sub-140 then rank one. Verified best is now
+**190 depth / 857 CX / 18 qubits**, `artifacts/190/`, SHA
+`f8f6aec7835f6fe4e28023e2736553eb029d3522b1ea724a1e0d74213b41f549`. All 4,096
+basis inputs pass at 7.78e-15 with zero ancilla error, five dense random states
+pass at 2.16e-16, and `src/build_permuted_oracle_package.py --package
+artifacts/190` replays the package to the same SHA. The 196, 193/853, 192 and 191
+packages are preserved.
+
+This round was **193 -> 190**, from widening the endpoint search's configuration
+grid rather than from any structural change; see
+[`POST193_ENDPOINT_GRID.md`](POST193_ENDPOINT_GRID.md).
+
+Profile the circuit before optimising it. The loaders finish between layers 73
+and 77, all eight kernel wires arrive at 75-77, the kernel spans about 36, and
+`max_w (forward[w] + span + inverse[mapping[w]])` reproduces the compiled depth
+exactly. So the oracle is `77 + span + 77`, the busiest wire's 181 gate slots are
+*not* binding, and only the span is reducible. The asymmetric forward/inverse
+loader search, rerun against the shipped kernel over 16,113 gauge-compatible
+pairs, predicts a minimum composed depth equal to whatever the span already gives
+-- it cannot help until the span moves.
+
+Two beam options existed but had never been combined with the relaxed endpoint
+contract: `horizon`, which ranks beam states by committed depth plus an
+optimistic remainder, and `fill`, which allows wider CX layers. Adding both, and
+recomputing arrival times from the loaders the package actually ships rather than
+the ones the earlier sweep assumed, produced 192, then 191, then 190. Every
+winner sat on the previous grid's boundary, so the grid was pushed until it
+stopped paying; the useful region is beams 96-128, branch 18-22, alpha 5-7,
+timew 1.0-1.4, horizon 1.5-2.2, fill 2-3, and 190 appears there at roughly one
+run in a hundred.
+
+The loaders remain at their own floor: for the codes this package uses, Walsh
+support is 174 and 175, the frame-cost bound returns 77, and the compiled loaders
+are 77. The kernel's gate-occupancy bound is near 29 against a span of 36, so the
+span still has room. Nothing here touches
+[`ADDRESS_WIDTH_CLOSURE.md`](ADDRESS_WIDTH_CLOSURE.md): sub-140 still needs a
+different descriptor, not a better schedule.
+
 ## Latest: 193 depth, CX reduced to 853
 
 The current best package is `artifacts/193_cx853/`: **193 / 853 / 18**, SHA

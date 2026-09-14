@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post221_kernel_degree_cadical_v2.py",
+    "--degree",
+    "4",
+    "--fixed",
+    "x",
+    "--timeout-ms",
+    "55000",
+    "--outdir",
+    "artifacts/post190_degree4_x_v1"
+  ],
+  "seconds": 55.850317667005584,
+  "limit_seconds": 70.0
+}

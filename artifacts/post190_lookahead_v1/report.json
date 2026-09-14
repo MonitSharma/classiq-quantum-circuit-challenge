@@ -1,0 +1,360 @@
+{
+  "best": [
+    190,
+    857
+  ],
+  "rows": [
+    {
+      "seed": 0,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 197,
+      "cx": 870
+    },
+    {
+      "seed": 1,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 195,
+      "cx": 860
+    },
+    {
+      "seed": 2,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 192,
+      "cx": 861
+    },
+    {
+      "seed": 3,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 196,
+      "cx": 868
+    },
+    {
+      "seed": 4,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 195,
+      "cx": 862
+    },
+    {
+      "seed": 5,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 194,
+      "cx": 863
+    },
+    {
+      "seed": 6,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 193,
+      "cx": 868
+    },
+    {
+      "seed": 7,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 193,
+      "cx": 866
+    },
+    {
+      "seed": 8,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 197,
+      "cx": 869
+    },
+    {
+      "seed": 9,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 195,
+      "cx": 867
+    },
+    {
+      "seed": 10,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 196,
+      "cx": 863
+    },
+    {
+      "seed": 11,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 197,
+      "cx": 866
+    },
+    {
+      "seed": 12,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 196,
+      "cx": 865
+    },
+    {
+      "seed": 13,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 197,
+      "cx": 861
+    },
+    {
+      "seed": 14,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 196,
+      "cx": 869
+    },
+    {
+      "seed": 15,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 194,
+      "cx": 861
+    },
+    {
+      "seed": 16,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 194,
+      "cx": 863
+    },
+    {
+      "seed": 17,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 193,
+      "cx": 859
+    },
+    {
+      "seed": 18,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 192,
+      "cx": 859
+    },
+    {
+      "seed": 19,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 195,
+      "cx": 860
+    },
+    {
+      "seed": 20,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 195,
+      "cx": 864
+    },
+    {
+      "seed": 21,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 196,
+      "cx": 862
+    },
+    {
+      "seed": 22,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 196,
+      "cx": 867
+    },
+    {
+      "seed": 23,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 193,
+      "cx": 867
+    },
+    {
+      "seed": 24,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 194,
+      "cx": 861
+    },
+    {
+      "seed": 25,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 195,
+      "cx": 861
+    },
+    {
+      "seed": 26,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 194,
+      "cx": 862
+    },
+    {
+      "seed": 27,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 196,
+      "cx": 870
+    },
+    {
+      "seed": 28,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 194,
+      "cx": 862
+    },
+    {
+      "seed": 29,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 195,
+      "cx": 863
+    },
+    {
+      "seed": 30,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 196,
+      "cx": 864
+    },
+    {
+      "seed": 31,
+      "beam": 96,
+      "branch": 22,
+      "alpha": 6.0,
+      "timew": 1.4,
+      "horizon": 1.5,
+      "fill": 2,
+      "depth": 195,
+      "cx": 867
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "completion": "completion_169.npy",
+    "seed": 0,
+    "kernel_depth": 94,
+    "cx": 206
+  },
+  {
+    "completion": "completion_169.npy",
+    "seed": 1,
+    "kernel_depth": 93,
+    "cx": 202
+  },
+  {
+    "completion": "completion_169.npy",
+    "seed": 2,
+    "kernel_depth": 90,
+    "cx": 203
+  },
+  {
+    "completion": "completion_169.npy",
+    "seed": 3,
+    "kernel_depth": 96,
+    "cx": 209
+  },
+  {
+    "completion": "completion_169.npy",
+    "seed": 4,
+    "kernel_depth": 94,
+    "cx": 206
+  },
+  {
+    "completion": "completion_169.npy",
+    "seed": 5,
+    "kernel_depth": 97,
+    "cx": 209
+  },
+  {
+    "completion": "completion_250.npy",
+    "seed": 0,
+    "kernel_depth": 133,
+    "cx": 290
+  },
+  {
+    "completion": "completion_250.npy",
+    "seed": 1,
+    "kernel_depth": 131,
+    "cx": 289
+  },
+  {
+    "completion": "completion_250.npy",
+    "seed": 2,
+    "kernel_depth": 131,
+    "cx": 290
+  },
+  {
+    "completion": "completion_250.npy",
+    "seed": 3,
+    "kernel_depth": 134,
+    "cx": 291
+  },
+  {
+    "completion": "completion_250.npy",
+    "seed": 4,
+    "kernel_depth": 130,
+    "cx": 289
+  },
+  {
+    "completion": "completion_250.npy",
+    "seed": 5,
+    "kernel_depth": 137,
+    "cx": 295
+  }
+]

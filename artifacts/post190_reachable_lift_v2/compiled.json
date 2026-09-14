@@ -1,0 +1,38 @@
+[
+  {
+    "completion": "completion_220.npy",
+    "seed": 0,
+    "kernel_depth": 122,
+    "cx": 266
+  },
+  {
+    "completion": "completion_220.npy",
+    "seed": 1,
+    "kernel_depth": 121,
+    "cx": 261
+  },
+  {
+    "completion": "completion_220.npy",
+    "seed": 2,
+    "kernel_depth": 122,
+    "cx": 258
+  },
+  {
+    "completion": "completion_220.npy",
+    "seed": 3,
+    "kernel_depth": 119,
+    "cx": 261
+  },
+  {
+    "completion": "completion_220.npy",
+    "seed": 4,
+    "kernel_depth": 118,
+    "cx": 259
+  },
+  {
+    "completion": "completion_220.npy",
+    "seed": 5,
+    "kernel_depth": 120,
+    "cx": 256
+  }
+]

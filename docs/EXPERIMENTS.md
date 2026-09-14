@@ -1,5 +1,98 @@
 # Experiment history and failure notes
 
+## September 14: reachable-domain phase-lift probe after 190
+
+The protected **190 / 857** package is unchanged. A new probe,
+`src/post190_reachable_lift_beam.py`, searched arbitrary completions on
+codewords unreachable by the loaders together with even integer Boolean lifts,
+then rescored candidates using the shipped 298/506 arrival profile. The best
+completion had 169 nonconstant Walsh terms, but its best full serialized
+composition was **251 / 978**, worse than 190, so it was not promoted or
+exhaustively verified. The first scratch versions briefly used a Boolean-sign
+phase extractor and are invalid; v5 uses the saved unwrapped phase recipe.
+This closes this particular free-completion/lift heuristic, not all possible
+phase representations.
+
+An exact rewrite probe, `src/post190_kernel_rewrites.py`, applied Pytket's
+phase-gadget, Clifford, and peephole passes to the protected kernel. Every
+accepted rewrite remained 38 layers / 90 CX and composed to exactly **190 / 857**;
+no rewrite was promoted. PyZX did not accept the QASM2 dialect because of an
+unsupported serialized `swap` instruction.
+
+The endpoint-aware continuation was resumed at grid index 87 and completed 40
+fresh configurations (`artifacts/post190_joint_v4`). It produced no depth below
+190; the best remained **190 / 857**. This extends the prior bounded endpoint
+evidence without changing the protected package.
+
+An asymmetric compute/uncompute loader search against the 190 kernel completed
+32,038 gauge-compatible pairs and compiled the best 500 (`artifacts/post190_asym_v1`).
+The best predicted depth was 191 and no compiled candidate beat **190 / 857**;
+the loader-pair lever is therefore exhausted for this kernel under the current
+relative-loader family.
+
+Qiskit kernel-boundary recompilation across 32 synthesis seeds likewise
+reproduced **190 / 857** every time (`artifacts/post190_kernel_seed_v1`). A
+whole-oracle Pytket `FullPeepholeOptimise` pass changed the serialized depth to
+193 before/native replay and did not preserve an improvement;
+`artifacts/post190_full_rewrites_v1` contains the partial rewrite output. No
+rewrite candidate was promoted.
+
+PyZX full reduction was retried with extracted SWAPs expanded through
+`to_basic_gates()` (`src/post190_pyzx_basic.py`). The resulting exact circuit
+compiled to **1796 / 2716**, substantially worse than 190, and was not
+promoted. The failed legacy-QASM SWAP import is now distinguished from this
+completed negative result.
+
+The corrected external SAT adapter was rerun against the 190 class-code family
+with a degree-4 kernel, fixed x labels, and free y labels. CaDiCaL completed
+with **UNSAT** (137,859 clauses, 22,691 variables, 55.2 seconds), recorded in
+`artifacts/post190_degree4_x_v1/report.json` with its external guard report.
+This is scoped to that fixed-label degree-4 family and is not a general lower
+bound; no circuit candidate was produced.
+
+The endpoint beam was then rerun with wider filler-layer caps **2, 3, 4, 6,
+and 8** (`artifacts/post190_widefill_v1`). Forty configurations completed;
+the candidates ranged from 193 to 196 depth and none beat **190 / 857**. This
+closes the wider-fill variant of the current phase scheduler.
+
+A single-RCCX conjugation screen over 672 control/target/polarity cases was
+also run against the exact 190 phase recipe (`src/post190_rccx_phase_conjugation.py`).
+No transformed spectrum met the 64-term native-synthesis cutoff, so no exact
+candidate was generated; this is only a bounded screen, not a closure of
+nonlinear conjugations generally.
+
+A new two-step-lookahead beam scheduler (`src/post190_lookahead_beam.py`) was
+run for 32 seeds with the shipped loader arrival profile and relaxed output
+permutation. It reproduced **190 / 857** throughout; explicit next-parity
+lookahead did not reduce the kernel span.
+
+An arrival-aware endpoint variant, using the actual per-wire 298/506 loader
+times as initial kernel times, completed 30 configurations with 600 suffix
+trials each (`artifacts/post190_arrival_aware_v1`). It also finished at
+**190 / 857**; no candidate was promoted.
+
+The exhaustive affine code-basis screen (`src/post196_code_affine.py`) was
+rerun as `artifacts/post190_code_affine_v1`: all 10,752 invertible/shift/raw-mix
+maps per side were evaluated. The best proxy retained 77-layer loader floors
+but required a 90-term Boolean kernel, predicting 197.2 layers, so it was not
+compiled or promoted. This closes the affine code-basis family for the current
+190 architecture; it is not a bound on nonlinear descriptors.
+
+The reversible mutable-coordinate prototype (`src/post258_semantic_mutable.py`)
+was run with four loader seeds and exhaustively verified as
+`artifacts/post190_mutable_v1/mutable_d284.qasm`. It achieved **284 / 949**:
+the semantic encoders measured 100 and 108 layers, overwhelming the 69-layer
+kernel. The construction is correct but not competitive, so it was not
+promoted.
+
+The nonlinear relative-phase kernel probe (`src/post258_kernel_nonlinear.py`)
+was run from the 190 class-code predicate in
+`artifacts/post190_kernel_nonlinear_v1`. Its proxy search reduced polynomial
+cost, but exact native kernels measured 71--77 layers (and 138--168 CX), far
+above the protected kernel's roughly 38 layers. It was rejected before full
+composition; this reinforces that proxy polynomial cost is not a depth
+certificate.
+
 Latest continuation: depth remains **193**, CX improves **857 → 853** with a
 40-depth/85-CX kernel and loader seeds 298/506. Package: `artifacts/193_cx853/`.
 All 4,096 inputs, five dense states, matching QMOD and fourteen targeted tests

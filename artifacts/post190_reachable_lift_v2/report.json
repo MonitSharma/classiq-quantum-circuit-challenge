@@ -1,0 +1,73 @@
+{
+  "care": 169,
+  "candidates": 16,
+  "steps": 3000,
+  "best_terms": 220,
+  "rows": [
+    {
+      "trial": 0,
+      "terms": 220,
+      "best": true
+    },
+    {
+      "trial": 1,
+      "terms": 233
+    },
+    {
+      "trial": 2,
+      "terms": 229
+    },
+    {
+      "trial": 3,
+      "terms": 222
+    },
+    {
+      "trial": 4,
+      "terms": 229
+    },
+    {
+      "trial": 5,
+      "terms": 225
+    },
+    {
+      "trial": 6,
+      "terms": 224
+    },
+    {
+      "trial": 7,
+      "terms": 225
+    },
+    {
+      "trial": 8,
+      "terms": 223
+    },
+    {
+      "trial": 9,
+      "terms": 227
+    },
+    {
+      "trial": 10,
+      "terms": 221
+    },
+    {
+      "trial": 11,
+      "terms": 224
+    },
+    {
+      "trial": 12,
+      "terms": 235
+    },
+    {
+      "trial": 13,
+      "terms": 225
+    },
+    {
+      "trial": 14,
+      "terms": 225
+    },
+    {
+      "trial": 15,
+      "terms": 229
+    }
+  ]
+}

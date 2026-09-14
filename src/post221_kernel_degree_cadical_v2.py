@@ -7,8 +7,8 @@ from post258_raw_parity_codes import cells
 from post258_two_stage_anf import decode,encode
 import two_stage_oracle as ts
 
-def run(degree,fixed,timeout):
- out=Path(f'artifacts/post221_kernel_degree{degree}_{fixed}_cadical_v2');assert not out.exists();out.mkdir();base=json.loads(Path('artifacts/221/class_codes.json').read_text());yc,xc=cells(ts.ROWCLS,32),cells(ts.COLCLS,48);s=z3.Solver();s.set(timeout=timeout);labs=[]
+def run(degree,fixed,timeout,out=None):
+ out=Path(out) if out else Path(f'artifacts/post221_kernel_degree{degree}_{fixed}_cadical_v2');assert not out.exists();out.mkdir();base=json.loads(Path('artifacts/190/class_codes.json').read_text());yc,xc=cells(ts.ROWCLS,32),cells(ts.COLCLS,48);s=z3.Solver();s.set(timeout=timeout);labs=[]
  for side,cc in [('y',yc),('x',xc)]:
   lab={k:z3.Concat(*[z3.If(z3.Bool(f'label_{side}_{i}_{b}'),z3.BitVecVal(1,1),z3.BitVecVal(0,1)) for b in reversed(range(3))]) for i,k in enumerate(cc)};labs.append(lab)
   for bit in [0,1]:
@@ -57,4 +57,4 @@ def run(degree,fixed,timeout):
   row.update(ymask=32,xmask=48,ylab=encode(labels[0]),xlab=encode(labels[1]),terms=selected)
  (out/'report.json').write_text(json.dumps(row,indent=2)+'\n')
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--degree',type=int,default=3);p.add_argument('--fixed',choices=['x','y','none'],default='none');p.add_argument('--timeout-ms',type=int,default=55000);a=p.parse_args();run(a.degree,a.fixed,a.timeout_ms)
+ p=argparse.ArgumentParser();p.add_argument('--degree',type=int,default=3);p.add_argument('--fixed',choices=['x','y','none'],default='none');p.add_argument('--timeout-ms',type=int,default=55000);p.add_argument('--outdir',type=Path);a=p.parse_args();run(a.degree,a.fixed,a.timeout_ms,a.outdir)

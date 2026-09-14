@@ -1,0 +1,9 @@
+{
+  "degree": 4,
+  "fixed": "x",
+  "status": "unsat",
+  "backend": "cadical195",
+  "clauses": 137859,
+  "variables": 22691,
+  "seconds": 55.24198487494141
+}

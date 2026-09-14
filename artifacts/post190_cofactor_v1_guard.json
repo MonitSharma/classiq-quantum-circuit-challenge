@@ -1,0 +1,14 @@
+{
+  "status": "failed",
+  "returncode": 1,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post221_kernel_cofactor_cadical_v2.py",
+    "--degree",
+    "4",
+    "--timeout-ms",
+    "55000"
+  ],
+  "seconds": 0.34896270907483995,
+  "limit_seconds": 70.0
+}

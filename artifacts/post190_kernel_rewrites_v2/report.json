@@ -1,0 +1,34 @@
+[
+  {
+    "method": "FullPeepholeOptimise",
+    "depth": 38,
+    "cx": 90,
+    "equiv": true,
+    "full_depth": 190,
+    "full_cx": 857
+  },
+  {
+    "method": "CliffordSimp",
+    "depth": 38,
+    "cx": 90,
+    "equiv": true,
+    "full_depth": 190,
+    "full_cx": 857
+  },
+  {
+    "method": "OptimisePhaseGadgets",
+    "depth": 38,
+    "cx": 90,
+    "equiv": true,
+    "full_depth": 190,
+    "full_cx": 857
+  },
+  {
+    "method": "pytket_error",
+    "error": "RuntimeError('Predicate requirements are not satisfied: GateSetPredicate:{ H CX Z CY X S PauliExpBox CZ Y PhasedX Vdg PhasedXX ZZPhase V TwinPhasedX SWAP Rz Rx Ry ZZMax Sdg Tdg YYPhase XXPhase T PhaseGadget Measure SX SXdg }')"
+  },
+  {
+    "method": "pyzx_error",
+    "error": "QASM2ParseError(\"<input>:4,0: 'swap' is not defined in this scope\")"
+  }
+]
