@@ -1,5 +1,33 @@
 # Continuation handoff
 
+## Latest: 193 depth, CX reduced to 853
+
+The current best package is `artifacts/193_cx853/`: **193 / 853 / 18**, SHA
+`4dbd4993f7d1e807b5ae2908f9580d70070f247a4496140b858f08c95ce82709`.
+**Depth did not improve in this continuation.** The new phase beam accounts for
+free ancilla ordering during final selection, and loader seeds are now 298/506.
+Read [POST193_CX_REFINEMENT.md](POST193_CX_REFINEMENT.md). All 4,096 inputs and
+five dense states pass; QMOD matches; fourteen targeted tests pass.
+Compiler replay uses `src/build_permuted_oracle_package.py --package artifacts/193_cx853`.
+Older verified packages remain intact. No jobs or monitors are running.
+
+## September 14: verified improvement to 193
+
+Current best is **193 depth / 857 CX / 18 qubits**, packaged with a matching
+literal QMOD in `artifacts/193/`. SHA
+`5c00b23d9ea061b8b3062caac17ae2de0ab8457a4705ecc3eea8c1eed49a1bec`.
+Read [POST193_RESEARCH.md](POST193_RESEARCH.md) first. The 196 package is preserved.
+All 4,096 inputs and five dense random states pass; replay matches the exact
+SHA; eleven targeted tests pass. No submission or rank-one result is claimed.
+
+The gain combines a new 63-term phase representation with kernel restoration
+up to a physical permutation of the clean ancillas and a matching rewired
+uncompute. **The new kernel alone is not diagonal.** Use
+`src/build_two_stage_193.py` and its saved recipe; do not substitute it into the
+old symmetric builder without the uncompute mapping. No jobs remain running.
+
+## Earlier 196-depth checkpoint and address-width analysis
+
 Leaderboard leader **142**; target sub-140 then rank one. Verified best remains
 **196 / 858 / 18**, `artifacts/196/`, SHA
 `63333fade2e7e38c9a4edf333888c26bdac234c04e955fd6a624c0ea6e714c30`.

@@ -1,5 +1,19 @@
 # Experiment history and failure notes
 
+Latest continuation: depth remains **193**, CX improves **857 → 853** with a
+40-depth/85-CX kernel and loader seeds 298/506. Package: `artifacts/193_cx853/`.
+All 4,096 inputs, five dense states, matching QMOD and fourteen targeted tests
+pass. See [POST193_CX_REFINEMENT.md](POST193_CX_REFINEMENT.md) for the endpoint
+beam, phase-compatible loader search and bounded failures. No jobs remain running.
+
+September 14: **193 depth / 857 CX / 18 qubits**, verified on all 4,096 inputs
+and five dense states, with matching QMOD and identical-hash replay. Reweighted
+care-state phase LP reduces the kernel from 69 to 63 nonconstant terms; allowing
+ancilla permutation at the kernel exit and rewiring the inverse loaders reduces
+the full circuit from 196 to 193. Eleven targeted tests pass. See
+[POST193_RESEARCH.md](POST193_RESEARCH.md). No jobs are running; no submission
+or leaderboard result is claimed. Earlier 196 files are preserved.
+
 Latest nonlinear-coordinate experiment: 12,007 screened tables, best native
 loaders 81/81 depth, best complete circuit **204 / 891 / 18**, all 4,096 inputs
 verified. It does not improve 196. See [NONLINEAR_LOADER_PROBE.md](NONLINEAR_LOADER_PROBE.md).

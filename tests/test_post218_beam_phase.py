@@ -61,3 +61,31 @@ def test_matches_the_verified_196_kernel_spectrum():
     q = psynth(8, targets, seed=209, beam=64, branch=14, alpha=5.0, timew=0.35,
                global_phase=float(co[0]))
     assert _diagonal_error(q, phases) < 1e-10
+
+
+def test_boundary_times_change_scheduling_not_the_unitary():
+    phases = np.random.default_rng(914).normal(size=16)
+    co = walsh(phases)
+    q = psynth(4, {m: float(co[m]) for m in range(1,16)},
+               seed=9, beam=8, branch=5, global_phase=float(co[0]),
+               initial_times=[0,4,1,3], final_times=[3,0,5,1])
+    assert _diagonal_error(q, phases) < 1e-10
+
+
+def test_custom_finalizer_receives_all_phases_and_correct_basis():
+    from depth_parity_network import restore
+    phases = np.random.default_rng(193).normal(size=16)
+    co = walsh(phases)
+    calls = []
+    def finish(q, basis):
+        actual = [1 << i for i in range(4)]
+        emitted = []
+        for inst in q.data:
+            wires = [q.find_bit(w).index for w in inst.qubits]
+            if inst.operation.name == 'cx':actual[wires[1]] ^= actual[wires[0]]
+            else:emitted.append(actual[wires[0]])
+        assert actual == basis and sorted(emitted) == list(range(1,16))
+        q = q.compose(restore(basis.copy(),4));calls.append(True)
+        return (q.depth(),q.size()),q
+    q = psynth(4,{m:float(co[m]) for m in range(1,16)},global_phase=float(co[0]),finalize=finish)
+    assert calls and _diagonal_error(q,phases)<1e-10

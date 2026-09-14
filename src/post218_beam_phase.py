@@ -138,11 +138,15 @@ def _estimate(st, n):
 
 
 def psynth(n, targets, seed=0, beam=12, branch=6, alpha=4.0, timew=0.25, noise=1.0,
-           global_phase=0.0, guard=0, fill=1, horizon=0.0):
+           global_phase=0.0, guard=0, fill=1, horizon=0.0,
+           initial_times=None, final_times=None, finalize=None):
     """Synthesise exp(i * sum_m targets[m] * parity_m) as CX + Rz at low depth."""
     rng = random.Random(seed)
+    arrival = tuple(initial_times) if initial_times is not None else (0,) * n
+    departure = tuple(final_times) if final_times is not None else (0,) * n
+    assert len(arrival) == len(departure) == n
     start = _State(tuple(1 << w for w in range(n)), tuple(1 << w for w in range(n)),
-                   frozenset(targets), (), (0,) * n)
+                   frozenset(targets), (), arrival)
     _flush(start, targets)
     states = [start]
     steps = 0
@@ -176,9 +180,27 @@ def psynth(n, targets, seed=0, beam=12, branch=6, alpha=4.0, timew=0.25, noise=1
         if st.remaining:
             continue
         q = _circuit(n, st.ops)
+        if finalize is not None:
+            # A caller may finish the linear network under a different, explicit
+            # output contract (e.g. a permutation followed by rewired uncompute).
+            # The callback owns that contract and returns its complete score.
+            q.global_phase = global_phase
+            score, q = finalize(q, list(st.basis))
+            if best is None or score < best[0]:
+                best = (score, q)
+            continue
         q.compose(restore(list(st.basis), n), inplace=True)
         q.global_phase = global_phase
-        score = (q.depth(), q.size())
+        if initial_times is None and final_times is None:
+            score = (q.depth(), q.size())
+        else:
+            times = list(arrival)
+            for inst in q.data:
+                wires = [q.find_bit(w).index for w in inst.qubits]
+                end = max(times[w] for w in wires) + 1
+                for w in wires:
+                    times[w] = end
+            score = (max(a+b for a,b in zip(times, departure)), q.size())
         if best is None or score < best[0]:
             best = (score, q)
     assert best is not None, 'no complete schedule in the final beam'

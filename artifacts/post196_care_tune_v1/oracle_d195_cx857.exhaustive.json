@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post196_care_tune_v1/oracle_d195_cx857.qasm",
+  "sha256": "36a5d4606bd71c4fbf09fd9e8b2cf5d3f63bd64914aa70ff3a7b5eaeffa417f3",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 195,
+  "cx_count": 857,
+  "max_error": 6.93067338409286e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.1371996995789103e-14,
+  "peak_sparse_support": 16,
+  "elapsed_seconds": 0.1972188949584961,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

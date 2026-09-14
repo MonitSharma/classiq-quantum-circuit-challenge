@@ -1,0 +1,488 @@
+{
+  "best": [
+    196,
+    858
+  ],
+  "rows": [
+    {
+      "candidate": 0,
+      "seed": 209,
+      "support": 63,
+      "depth": 203,
+      "cx": 863,
+      "kernel_depth": 50
+    },
+    {
+      "candidate": 0,
+      "seed": 14,
+      "support": 63,
+      "depth": 200,
+      "cx": 863,
+      "kernel_depth": 46
+    },
+    {
+      "candidate": 0,
+      "seed": 19,
+      "support": 63,
+      "depth": 199,
+      "cx": 858,
+      "kernel_depth": 45
+    },
+    {
+      "candidate": 0,
+      "seed": 47,
+      "support": 63,
+      "depth": 197,
+      "cx": 860,
+      "kernel_depth": 45
+    },
+    {
+      "candidate": 0,
+      "seed": 83,
+      "support": 63,
+      "depth": 205,
+      "cx": 871,
+      "kernel_depth": 51
+    },
+    {
+      "candidate": 0,
+      "seed": 113,
+      "support": 63,
+      "depth": 203,
+      "cx": 871,
+      "kernel_depth": 50
+    },
+    {
+      "candidate": 1,
+      "seed": 209,
+      "support": 66,
+      "depth": 201,
+      "cx": 866,
+      "kernel_depth": 47
+    },
+    {
+      "candidate": 1,
+      "seed": 14,
+      "support": 66,
+      "depth": 203,
+      "cx": 861,
+      "kernel_depth": 49
+    },
+    {
+      "candidate": 1,
+      "seed": 19,
+      "support": 66,
+      "depth": 200,
+      "cx": 861,
+      "kernel_depth": 46
+    },
+    {
+      "candidate": 1,
+      "seed": 47,
+      "support": 66,
+      "depth": 204,
+      "cx": 870,
+      "kernel_depth": 51
+    },
+    {
+      "candidate": 1,
+      "seed": 83,
+      "support": 66,
+      "depth": 200,
+      "cx": 864,
+      "kernel_depth": 46
+    },
+    {
+      "candidate": 1,
+      "seed": 113,
+      "support": 66,
+      "depth": 203,
+      "cx": 865,
+      "kernel_depth": 49
+    },
+    {
+      "candidate": 2,
+      "seed": 209,
+      "support": 66,
+      "depth": 207,
+      "cx": 869,
+      "kernel_depth": 53
+    },
+    {
+      "candidate": 2,
+      "seed": 14,
+      "support": 66,
+      "depth": 204,
+      "cx": 870,
+      "kernel_depth": 52
+    },
+    {
+      "candidate": 2,
+      "seed": 19,
+      "support": 66,
+      "depth": 208,
+      "cx": 869,
+      "kernel_depth": 56
+    },
+    {
+      "candidate": 2,
+      "seed": 47,
+      "support": 66,
+      "depth": 202,
+      "cx": 872,
+      "kernel_depth": 49
+    },
+    {
+      "candidate": 2,
+      "seed": 83,
+      "support": 66,
+      "depth": 206,
+      "cx": 870,
+      "kernel_depth": 52
+    },
+    {
+      "candidate": 2,
+      "seed": 113,
+      "support": 66,
+      "depth": 204,
+      "cx": 870,
+      "kernel_depth": 50
+    },
+    {
+      "candidate": 3,
+      "seed": 209,
+      "support": 67,
+      "depth": 205,
+      "cx": 875,
+      "kernel_depth": 51
+    },
+    {
+      "candidate": 3,
+      "seed": 14,
+      "support": 67,
+      "depth": 202,
+      "cx": 870,
+      "kernel_depth": 49
+    },
+    {
+      "candidate": 3,
+      "seed": 19,
+      "support": 67,
+      "depth": 207,
+      "cx": 869,
+      "kernel_depth": 53
+    },
+    {
+      "candidate": 3,
+      "seed": 47,
+      "support": 67,
+      "depth": 205,
+      "cx": 874,
+      "kernel_depth": 53
+    },
+    {
+      "candidate": 3,
+      "seed": 83,
+      "support": 67,
+      "depth": 202,
+      "cx": 870,
+      "kernel_depth": 49
+    },
+    {
+      "candidate": 3,
+      "seed": 113,
+      "support": 67,
+      "depth": 204,
+      "cx": 868,
+      "kernel_depth": 51
+    },
+    {
+      "candidate": 4,
+      "seed": 209,
+      "support": 67,
+      "depth": 208,
+      "cx": 870,
+      "kernel_depth": 54
+    },
+    {
+      "candidate": 4,
+      "seed": 14,
+      "support": 67,
+      "depth": 204,
+      "cx": 869,
+      "kernel_depth": 52
+    },
+    {
+      "candidate": 4,
+      "seed": 19,
+      "support": 67,
+      "depth": 205,
+      "cx": 875,
+      "kernel_depth": 51
+    },
+    {
+      "candidate": 4,
+      "seed": 47,
+      "support": 67,
+      "depth": 203,
+      "cx": 865,
+      "kernel_depth": 49
+    },
+    {
+      "candidate": 4,
+      "seed": 83,
+      "support": 67,
+      "depth": 208,
+      "cx": 875,
+      "kernel_depth": 54
+    },
+    {
+      "candidate": 4,
+      "seed": 113,
+      "support": 67,
+      "depth": 207,
+      "cx": 874,
+      "kernel_depth": 53
+    },
+    {
+      "candidate": 5,
+      "seed": 209,
+      "support": 67,
+      "depth": 200,
+      "cx": 866,
+      "kernel_depth": 48
+    },
+    {
+      "candidate": 5,
+      "seed": 14,
+      "support": 67,
+      "depth": 202,
+      "cx": 866,
+      "kernel_depth": 50
+    },
+    {
+      "candidate": 5,
+      "seed": 19,
+      "support": 67,
+      "depth": 203,
+      "cx": 868,
+      "kernel_depth": 50
+    },
+    {
+      "candidate": 5,
+      "seed": 47,
+      "support": 67,
+      "depth": 205,
+      "cx": 871,
+      "kernel_depth": 52
+    },
+    {
+      "candidate": 5,
+      "seed": 83,
+      "support": 67,
+      "depth": 206,
+      "cx": 871,
+      "kernel_depth": 54
+    },
+    {
+      "candidate": 5,
+      "seed": 113,
+      "support": 67,
+      "depth": 203,
+      "cx": 869,
+      "kernel_depth": 51
+    },
+    {
+      "candidate": 6,
+      "seed": 209,
+      "support": 68,
+      "depth": 205,
+      "cx": 873,
+      "kernel_depth": 52
+    },
+    {
+      "candidate": 6,
+      "seed": 14,
+      "support": 68,
+      "depth": 200,
+      "cx": 870,
+      "kernel_depth": 47
+    },
+    {
+      "candidate": 6,
+      "seed": 19,
+      "support": 68,
+      "depth": 203,
+      "cx": 869,
+      "kernel_depth": 50
+    },
+    {
+      "candidate": 6,
+      "seed": 47,
+      "support": 68,
+      "depth": 205,
+      "cx": 869,
+      "kernel_depth": 52
+    },
+    {
+      "candidate": 6,
+      "seed": 83,
+      "support": 68,
+      "depth": 207,
+      "cx": 877,
+      "kernel_depth": 54
+    },
+    {
+      "candidate": 6,
+      "seed": 113,
+      "support": 68,
+      "depth": 205,
+      "cx": 870,
+      "kernel_depth": 52
+    },
+    {
+      "candidate": 7,
+      "seed": 209,
+      "support": 68,
+      "depth": 208,
+      "cx": 878,
+      "kernel_depth": 55
+    },
+    {
+      "candidate": 7,
+      "seed": 14,
+      "support": 68,
+      "depth": 205,
+      "cx": 873,
+      "kernel_depth": 51
+    },
+    {
+      "candidate": 7,
+      "seed": 19,
+      "support": 68,
+      "depth": 207,
+      "cx": 876,
+      "kernel_depth": 53
+    },
+    {
+      "candidate": 7,
+      "seed": 47,
+      "support": 68,
+      "depth": 207,
+      "cx": 871,
+      "kernel_depth": 53
+    },
+    {
+      "candidate": 7,
+      "seed": 83,
+      "support": 68,
+      "depth": 206,
+      "cx": 866,
+      "kernel_depth": 52
+    },
+    {
+      "candidate": 7,
+      "seed": 113,
+      "support": 68,
+      "depth": 207,
+      "cx": 872,
+      "kernel_depth": 54
+    },
+    {
+      "candidate": 8,
+      "seed": 209,
+      "support": 68,
+      "depth": 206,
+      "cx": 873,
+      "kernel_depth": 53
+    },
+    {
+      "candidate": 8,
+      "seed": 14,
+      "support": 68,
+      "depth": 207,
+      "cx": 868,
+      "kernel_depth": 54
+    },
+    {
+      "candidate": 8,
+      "seed": 19,
+      "support": 68,
+      "depth": 208,
+      "cx": 871,
+      "kernel_depth": 54
+    },
+    {
+      "candidate": 8,
+      "seed": 47,
+      "support": 68,
+      "depth": 204,
+      "cx": 871,
+      "kernel_depth": 51
+    },
+    {
+      "candidate": 8,
+      "seed": 83,
+      "support": 68,
+      "depth": 207,
+      "cx": 869,
+      "kernel_depth": 54
+    },
+    {
+      "candidate": 8,
+      "seed": 113,
+      "support": 68,
+      "depth": 208,
+      "cx": 868,
+      "kernel_depth": 54
+    },
+    {
+      "candidate": 9,
+      "seed": 209,
+      "support": 68,
+      "depth": 205,
+      "cx": 867,
+      "kernel_depth": 52
+    },
+    {
+      "candidate": 9,
+      "seed": 14,
+      "support": 68,
+      "depth": 203,
+      "cx": 871,
+      "kernel_depth": 49
+    },
+    {
+      "candidate": 9,
+      "seed": 19,
+      "support": 68,
+      "depth": 205,
+      "cx": 871,
+      "kernel_depth": 53
+    },
+    {
+      "candidate": 9,
+      "seed": 47,
+      "support": 68,
+      "depth": 202,
+      "cx": 865,
+      "kernel_depth": 49
+    },
+    {
+      "candidate": 9,
+      "seed": 83,
+      "support": 68,
+      "depth": 206,
+      "cx": 871,
+      "kernel_depth": 53
+    },
+    {
+      "candidate": 9,
+      "seed": 113,
+      "support": 68,
+      "depth": 206,
+      "cx": 875,
+      "kernel_depth": 53
+    }
+  ]
+}

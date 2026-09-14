@@ -1,5 +1,17 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+Latest: **193 / 853 / 18**, `artifacts/193_cx853/`, a CX tie-breaker gain only.
+Depth is unchanged. Exact-file exhaustive verification, five dense checks and
+matching QMOD pass. See [POST193_CX_REFINEMENT.md](POST193_CX_REFINEMENT.md).
+
+Current best, September 14: **193 / 857 / 18**, exact-file exhaustive verification,
+five dense checks, matching QMOD and deterministic replay in `artifacts/193/`.
+The new kernel is phase plus an ancilla permutation; inverse encoders are
+rewired accordingly. See [POST193_RESEARCH.md](POST193_RESEARCH.md) and
+`src/build_two_stage_193.py`. Sub-140 and rank one remain unfinished.
+
+The following 196 entries are historical checkpoints.
+
 Latest nonlinear-coordinate experiment: correct complete circuit **204 / 891 / 18**,
 exhaustively verified, so best remains **196 / 858 / 18**. See
 [NONLINEAR_LOADER_PROBE.md](NONLINEAR_LOADER_PROBE.md). No rank-one result is claimed.

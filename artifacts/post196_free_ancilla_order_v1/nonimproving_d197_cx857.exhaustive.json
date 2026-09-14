@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post196_free_ancilla_order_v1/nonimproving_d197_cx857.qasm",
+  "sha256": "8ca83ef9394e2d24a8f129b9d9985a5272005a0434fd9835f0dea568fba27523",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 197,
+  "cx_count": 857,
+  "max_error": 8.879479192349835e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.3911206026539229e-14,
+  "peak_sparse_support": 32,
+  "elapsed_seconds": 0.31450533866882324,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}
