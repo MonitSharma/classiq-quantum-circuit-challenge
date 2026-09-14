@@ -28,14 +28,15 @@ def xor_chain(cnf, pool, lits, const):
         return ('lit', z)
     return ('lit', acc)
 
-def build(targets, k):
+def build(targets, k, chain=False):
     pool = IDPool(); cnf = []
     inp_tt = [[(t >> i) & 1 for t in range(NR)] for i in range(6)]
     # signal values: inputs are constants, gates are variables
     val = [('const', inp_tt[i]) for i in range(6)]
-    sa = []; sb = []
+    sa = []; sb = []; outs = []
     for j in range(k):
         navail = 6 + j
+        lo = (6 + j - 1) if (chain and j > 0) else 0   # chain: inputs + prev gate only
         A = [pool.id() for _ in range(navail)]; ca = pool.id()
         B = [pool.id() for _ in range(navail)]; cb = pool.id()
         sa.append((A, ca)); sb.append((B, cb))
@@ -45,7 +46,7 @@ def build(targets, k):
         for t in range(NR):
             def side(sel, c):
                 lits = []
-                for i in range(navail):
+                for i in list(range(6)) + list(range(max(6, lo), navail)):
                     kind, v = val[i]
                     if kind == 'const':
                         if v[t]: lits.append(sel[i])
@@ -70,6 +71,7 @@ def build(targets, k):
         val.append(('var', gv))
     for m, tgt in enumerate(targets):
         nav = len(val); O = [pool.id() for _ in range(nav)]; co = pool.id()
+        outs.append((O, co))
         for t in range(NR):
             lits = []
             for i in range(nav):
@@ -89,16 +91,24 @@ def build(targets, k):
                 z = pool.id(); a = lk[1]
                 cnf += [[-z, a, co], [-z, -a, -co], [z, -a, co], [z, a, -co]]
             cnf.append([z] if tgt[t] else [-z])
-    return cnf, pool
+    return cnf, pool, sa, sb, outs
 
-def solve(targets, k, timeout):
-    cnf, pool = build(targets, k)
+def solve(targets, k, timeout, want_model=False, chain=False):
+    cnf, pool, sa, sb, outs = build(targets, k, chain)
     s = Cadical153(bootstrap_with=cnf)
     t0 = time.time()
     r = s.solve()
     el = time.time() - t0
+    wit = None
+    if r and want_model:
+        mod = set(l for l in s.get_model() if l > 0)
+        def dec(sel, c):
+            return ([i for i, v in enumerate(sel) if v in mod], c in mod)
+        wit = {'k': k,
+               'gates': [{'a': dec(*sa[j]), 'b': dec(*sb[j])} for j in range(k)],
+               'outs': [dec(*o) for o in outs]}
     s.delete()
-    return ('SAT' if r else 'UNSAT'), el, len(cnf)
+    return ('SAT' if r else 'UNSAT'), el, (wit if want_model else len(cnf))
 
 if __name__ == '__main__':
     F = json.load(open(sys.argv[1]))
