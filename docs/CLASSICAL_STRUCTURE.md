@@ -340,3 +340,58 @@ hold the current design's K at 117.  No in-place family tested realises them: th
 `d4` family caps at 16 cells, and `1 linear + 1 in-place` is infeasible outright.
 That gap — a realisable in-place family reaching 13-14 cells — is the only live
 thread left in this framework.
+
+---
+
+# The 13-14 cell in-place construction: found, and priced
+
+The open thread was whether a *realisable* in-place family could reach the 13-14
+cells that unrestricted permutations achieve.  **It can.**
+
+All 24 permutations of {0,1}^2 are affine (S_4 = AGL(2,2)), so the in-place
+families form a cost hierarchy.  Writing the two block-wire updates as
+
+    a' = a XOR u0(f) XOR u1(f)*b        b' = b XOR v0(f) XOR v1(f)*a
+
+| family | condition | perms | rotations | stages | y feasible |
+|---|---|---|---|---|---|
+| shift | u1=v1=0 | 4 | 32 | 1 | **no** (complete search, all 504 subspaces) |
+| simultaneous | u1*v1=0 | 12 | 64 | 2 | **yes, 14 cells**, gen (17,32) |
+| triangular | any | 16 | 64 | 2 | yes, 14 cells, gen (17,33) |
+| full | all affine | 24 | 96 | 3 | yes, 14 cells, gen (8,33) |
+
+x reaches 14 cells with the same `simultaneous` family at gen (23,32).
+
+## Why it does not pay off
+
+Each update is a uniformly-controlled X whose controls are the *other* block wire
+plus the four free wires — five wires, so **32 rotations each**, and since each is
+a control of the other they cannot merge: **64 rotations in 2 stages**.  (An
+earlier note in this session priced this family at 48 rotations in 1 stage; that
+was wrong and the projection built on it was too optimistic.)
+
+    current   192 rotations, ONE 3-target multiplexer      -> 69 layers/block
+    in-place  64 (2 in-place stages) + 128 (2-bit load)    -> 77 layers/block
+              = the same 192 rotations, but in three stages
+
+The kernel does improve: two ancillas are freed, lifting its packing rate from 2
+to 3, and K anneals to **154** (stable across two independent seeds).
+`117/2 = 58.5` becomes `154/3 = 51.3`, saving about 7 layers.  But the encoding
+gives back 4-8 layers to stage fragmentation.
+
+| per-stage ramp | current model | in-place model | projected |
+|---|---|---|---|
+| 4 layers | 200 (actual 190) | 208 | 198 |
+| 3 layers | 198 | 202 | 194 |
+| 2 layers | 196 | 196 | 190 |
+
+**Break-even at best.**  The variant that would have won is the shift family
+(32 rotations in one stage, 160 rotations total, ~62 layers/block), and that is
+infeasible for y under a complete search with no cell cap at all.
+
+## Standing conclusion
+
+The last live thread in this framework is closed.  190 stands.  Reaching 142
+requires either K <= 42 (measured minimum 117) or a 576-rotation encoding
+(exhaustively infeasible for y) — so it needs a factorisation that is not a
+per-side class code.
