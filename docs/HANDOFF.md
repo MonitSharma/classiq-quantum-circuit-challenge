@@ -1,5 +1,43 @@
 # Continuation handoff
 
+Leaderboard leader **142**; target sub-140 then rank one. Verified best remains
+**196 / 858 / 18**, `artifacts/196/`, SHA
+`63333fade2e7e38c9a4edf333888c26bdac234c04e955fd6a624c0ea6e714c30`.
+
+**The strongest measurement in this repository is address width.** A three-output
+lookup costs **77** layers at six address bits, **48** at five, **33** at four.
+Every earlier search moved Walsh terms around *inside* a six-address lookup,
+where 77 is provably the frame design's floor; narrowing the address is worth 29
+layers per side, far more than any scheduling gain.
+
+**And it is now closed for a four-wire descriptor**, which is what the eight-wire
+kernel requires. See [`ADDRESS_WIDTH_CLOSURE.md`](ADDRESS_WIDTH_CLOSURE.md). Split
+`z = (A, R)` into `k` address bits and a residual; the most general descriptor is
+`(p address bits, f_A(R), m clean bits)` with `p + (6-k) + m = 4`, where `f_A` may
+be a different invertible map per address, produced by the lookup itself and
+written onto the dirty coordinate wires. Only different-address pairs can collide,
+so the whole question is whether the address patterns fall into at most
+`2^(k-2)` equivalence classes:
+
+| k | budget | row needs | column needs |
+|---:|---:|---:|---:|
+| 4 | 4 | 12 | 11 |
+| 5 | 8 | 14 | 13 |
+| 6 | 16 | 11 | 11 |
+
+Only `k = 6` fits. For a two-bit residual the maps ran over the full affine
+group, and `|AGL(2,2)| = 24 = 4!`, so every permutation of the four residual
+states was allowed -- the widest per-address freedom there is -- and the counts
+do not move. This closes the pre-map route *and* the dirty-lookup-output route at
+once, because the criterion is stated on the descriptor rather than on a
+construction. `tests/test_post196_address_width.py` keeps it honest.
+
+Screen any future proposal with that criterion first: it is one line, and it is
+where the last three routes died. Widening to a five-wire descriptor does admit
+`k = 5`, but then roughly 28 of 32 descriptor values are used per side, the kernel
+loses its don't-care freedom, and the measured outcome of that regime was 711
+terms at 382 layers.
+
 Leaderboard leader **142**; user target sub-100 and rank one. Verified best is
 **196 / 858 / 18**, `artifacts/196/`, SHA
 `63333fade2e7e38c9a4edf333888c26bdac234c04e955fd6a624c0ea6e714c30`.

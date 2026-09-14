@@ -1,0 +1,654 @@
+{
+ "y": [
+  {
+   "address_bits": [
+    0,
+    3,
+    4,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 12,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 12,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "address_width": 4,
+   "code_values_needed": 13,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 13,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    3,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 13,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 13,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    4,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 13,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 12,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    2,
+    3,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 13,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 13,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 13,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 13,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    1,
+    3,
+    4,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 13,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 13,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 13,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 13,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "address_width": 4,
+   "code_values_needed": 14,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 14,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 14,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 13,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    3,
+    4
+   ],
+   "address_width": 4,
+   "code_values_needed": 14,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 14,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    2,
+    3,
+    4
+   ],
+   "address_width": 4,
+   "code_values_needed": 14,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 14,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    2,
+    4,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 14,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 14,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "address_width": 4,
+   "code_values_needed": 14,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 14,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 14,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 14,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    2,
+    3,
+    4,
+    5
+   ],
+   "address_width": 5,
+   "code_values_needed": 14,
+   "budget": 8,
+   "feasible": false,
+   "kind": "translation"
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    2,
+    3,
+    5
+   ],
+   "address_width": 5,
+   "code_values_needed": 15,
+   "budget": 8,
+   "feasible": false,
+   "kind": "translation"
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    3,
+    4,
+    5
+   ],
+   "address_width": 5,
+   "code_values_needed": 16,
+   "budget": 8,
+   "feasible": false,
+   "kind": "translation"
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "address_width": 5,
+   "code_values_needed": 17,
+   "budget": 8,
+   "feasible": false,
+   "kind": "translation"
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    2,
+    4,
+    5
+   ],
+   "address_width": 5,
+   "code_values_needed": 17,
+   "budget": 8,
+   "feasible": false,
+   "kind": "translation"
+  },
+  {
+   "address_bits": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "address_width": 5,
+   "code_values_needed": 17,
+   "budget": 8,
+   "feasible": false,
+   "kind": "translation"
+  }
+ ],
+ "x": [
+  {
+   "address_bits": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 11,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 11,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    4,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 11,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 11,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    2,
+    3,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 11,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 11,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    2,
+    4,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 11,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 11,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    3,
+    4,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 11,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 11,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 11,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 11,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    3,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 12,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 12,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 12,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 12,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    1,
+    3,
+    4,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 12,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 12,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "address_width": 4,
+   "code_values_needed": 12,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 12,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "address_width": 4,
+   "code_values_needed": 13,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 12,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "address_width": 4,
+   "code_values_needed": 13,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 13,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    3,
+    4
+   ],
+   "address_width": 4,
+   "code_values_needed": 13,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 13,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    2,
+    3,
+    4
+   ],
+   "address_width": 4,
+   "code_values_needed": 13,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 13,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    2,
+    4,
+    5
+   ],
+   "address_width": 5,
+   "code_values_needed": 13,
+   "budget": 8,
+   "feasible": false,
+   "kind": "translation"
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    3,
+    4,
+    5
+   ],
+   "address_width": 5,
+   "code_values_needed": 13,
+   "budget": 8,
+   "feasible": false,
+   "kind": "translation"
+  },
+  {
+   "address_bits": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "address_width": 4,
+   "code_values_needed": 14,
+   "budget": 4,
+   "feasible": false,
+   "kind": "translation",
+   "affine_code_values_needed": 14,
+   "affine_feasible": false,
+   "affine_maps": 24
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "address_width": 5,
+   "code_values_needed": 15,
+   "budget": 8,
+   "feasible": false,
+   "kind": "translation"
+  },
+  {
+   "address_bits": [
+    0,
+    1,
+    2,
+    3,
+    5
+   ],
+   "address_width": 5,
+   "code_values_needed": 15,
+   "budget": 8,
+   "feasible": false,
+   "kind": "translation"
+  },
+  {
+   "address_bits": [
+    0,
+    2,
+    3,
+    4,
+    5
+   ],
+   "address_width": 5,
+   "code_values_needed": 15,
+   "budget": 8,
+   "feasible": false,
+   "kind": "translation"
+  },
+  {
+   "address_bits": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "address_width": 5,
+   "code_values_needed": 17,
+   "budget": 8,
+   "feasible": false,
+   "kind": "translation"
+  }
+ ]
+}
