@@ -1,0 +1,14 @@
+{
+  "n6_classes.txt": {
+    "bytes": 12133334,
+    "sha256": "855b7ea02a9a3950415cf3c508751ef527dd179e65d4f7ea83c0264567665151"
+  },
+  "n6_circ.txt": {
+    "bytes": 36460895,
+    "sha256": "111b10dbf6358bdf858c2c24004f6002ab8b55de2067153ac0d61b6d4131dec8"
+  },
+  "n6_slp_mc5.txt.gz": {
+    "bytes": 13531832,
+    "sha256": "2267ee82695023fc56a7a85b2cefc876304ae7e1780b3b4e65a4640823c93d24"
+  }
+}

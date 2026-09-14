@@ -1,0 +1,8 @@
+f110021 = x3x4x6+x2x3+x1x3x4x6+x1x2x5x6+x1x2x3x4x5
+T = (A0 L : L) (A1 L : L) (A2 L : L) (A3 L : 0 1) (A4 2 : 0 3)
+a0 = (1+x3) * (1+x3+x2)                            # a0 = 1+x3+x2+x2x3
+a1 = (x5+x2) * (x2)                                # a1 = x2+x2x5
+a2 = (1+x3+x1) * (x4+x3+x2)                        # a2 = x4+x3x4+x2+x2x3+x1x4+x1x3+x1x2
+a3 = (x1) * (a0+a1+x6+x4+x3+x2)                    # a3 = x1+x1x6+x1x4+x1x2+x1x2x5+x1x2x3
+a4 = (a2+x6) * (a0+a3+x6+x4+x3)                    # a4 = x3x4x6+x1x3x4x6+x1x2x5x6+x1x2x3x4x5
+f  = a4+a0+1+x3+x2

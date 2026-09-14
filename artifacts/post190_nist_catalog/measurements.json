@@ -1,0 +1,416 @@
+{
+  "y0": {
+    "status": "found",
+    "states": 342,
+    "toggles": 11,
+    "path": [
+      {
+        "node": 0,
+        "before": [],
+        "frame": [
+          0,
+          0,
+          0
+        ],
+        "after": [
+          1
+        ]
+      },
+      {
+        "node": 1,
+        "before": [
+          1
+        ],
+        "frame": [
+          1,
+          0,
+          0
+        ],
+        "after": [
+          2,
+          1
+        ]
+      },
+      {
+        "node": 2,
+        "before": [
+          2,
+          1
+        ],
+        "frame": [
+          2,
+          1,
+          0
+        ],
+        "after": [
+          4,
+          2,
+          1
+        ]
+      },
+      {
+        "node": 3,
+        "before": [
+          4,
+          2,
+          1
+        ],
+        "frame": [
+          4,
+          3,
+          1
+        ],
+        "after": [
+          9,
+          4,
+          3
+        ]
+      },
+      {
+        "node": 4,
+        "before": [
+          9,
+          4,
+          3
+        ],
+        "frame": [
+          9,
+          4,
+          3
+        ],
+        "after": [
+          19,
+          9,
+          4
+        ]
+      },
+      {
+        "node": 0,
+        "before": [
+          19,
+          9,
+          4
+        ],
+        "frame": [
+          19,
+          9,
+          4
+        ],
+        "after": [
+          19,
+          9,
+          5
+        ]
+      },
+      {
+        "node": 1,
+        "before": [
+          19,
+          9,
+          5
+        ],
+        "frame": [
+          19,
+          9,
+          5
+        ],
+        "after": [
+          19,
+          9,
+          7
+        ]
+      },
+      {
+        "node": 2,
+        "before": [
+          19,
+          9,
+          7
+        ],
+        "frame": [
+          19,
+          9,
+          7
+        ],
+        "after": [
+          16,
+          9,
+          3
+        ]
+      },
+      {
+        "node": 3,
+        "before": [
+          16,
+          9,
+          3
+        ],
+        "frame": [
+          16,
+          3,
+          9
+        ],
+        "after": [
+          16,
+          2,
+          1
+        ]
+      },
+      {
+        "node": 1,
+        "before": [
+          16,
+          2,
+          1
+        ],
+        "frame": [
+          16,
+          1,
+          2
+        ],
+        "after": [
+          16,
+          1
+        ]
+      },
+      {
+        "node": 0,
+        "before": [
+          16,
+          1
+        ],
+        "frame": [
+          17,
+          0,
+          1
+        ],
+        "after": [
+          17
+        ]
+      }
+    ],
+    "verification": {
+      "depth": 127,
+      "cx": 121,
+      "width": 9,
+      "max_error": 2.6583118989211275e-15,
+      "basis_inputs_checked": 64,
+      "phase_oracle_depth": 243
+    }
+  },
+  "y1": {
+    "status": "exhausted_restricted_model",
+    "states": 130
+  },
+  "y2": {
+    "status": "exhausted_restricted_model",
+    "states": 242
+  },
+  "x0": {
+    "status": "found",
+    "states": 342,
+    "toggles": 11,
+    "path": [
+      {
+        "node": 0,
+        "before": [],
+        "frame": [
+          0,
+          0,
+          0
+        ],
+        "after": [
+          1
+        ]
+      },
+      {
+        "node": 1,
+        "before": [
+          1
+        ],
+        "frame": [
+          1,
+          0,
+          0
+        ],
+        "after": [
+          2,
+          1
+        ]
+      },
+      {
+        "node": 2,
+        "before": [
+          2,
+          1
+        ],
+        "frame": [
+          2,
+          1,
+          0
+        ],
+        "after": [
+          4,
+          2,
+          1
+        ]
+      },
+      {
+        "node": 3,
+        "before": [
+          4,
+          2,
+          1
+        ],
+        "frame": [
+          4,
+          3,
+          1
+        ],
+        "after": [
+          9,
+          4,
+          3
+        ]
+      },
+      {
+        "node": 4,
+        "before": [
+          9,
+          4,
+          3
+        ],
+        "frame": [
+          9,
+          4,
+          3
+        ],
+        "after": [
+          19,
+          9,
+          4
+        ]
+      },
+      {
+        "node": 0,
+        "before": [
+          19,
+          9,
+          4
+        ],
+        "frame": [
+          19,
+          9,
+          4
+        ],
+        "after": [
+          19,
+          9,
+          5
+        ]
+      },
+      {
+        "node": 1,
+        "before": [
+          19,
+          9,
+          5
+        ],
+        "frame": [
+          19,
+          9,
+          5
+        ],
+        "after": [
+          19,
+          9,
+          7
+        ]
+      },
+      {
+        "node": 2,
+        "before": [
+          19,
+          9,
+          7
+        ],
+        "frame": [
+          20,
+          9,
+          7
+        ],
+        "after": [
+          20,
+          9,
+          3
+        ]
+      },
+      {
+        "node": 3,
+        "before": [
+          20,
+          9,
+          3
+        ],
+        "frame": [
+          29,
+          3,
+          9
+        ],
+        "after": [
+          28,
+          2,
+          1
+        ]
+      },
+      {
+        "node": 1,
+        "before": [
+          28,
+          2,
+          1
+        ],
+        "frame": [
+          28,
+          1,
+          2
+        ],
+        "after": [
+          28,
+          1
+        ]
+      },
+      {
+        "node": 0,
+        "before": [
+          28,
+          1
+        ],
+        "frame": [
+          28,
+          0,
+          1
+        ],
+        "after": [
+          28
+        ]
+      }
+    ],
+    "verification": {
+      "depth": 124,
+      "cx": 120,
+      "width": 9,
+      "max_error": 2.2557275795341683e-15,
+      "basis_inputs_checked": 64,
+      "phase_oracle_depth": 231
+    }
+  },
+  "x1": {
+    "status": "exhausted_restricted_model",
+    "states": 242
+  },
+  "x2": {
+    "status": "exhausted_restricted_model",
+    "states": 242
+  }
+}

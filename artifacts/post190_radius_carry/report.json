@@ -1,0 +1,16 @@
+{
+  "lookup": {
+    "depth": 77,
+    "cx": 173,
+    "seed": 7,
+    "basis_inputs_checked": 64,
+    "magnitude_error": 1.9984014443252818e-15
+  },
+  "encoder_depth": 85,
+  "interval_depth": 1649,
+  "interval_cx": 1030,
+  "disk_depth": 1817,
+  "depth": 3303,
+  "cx": 2471,
+  "width": 18
+}

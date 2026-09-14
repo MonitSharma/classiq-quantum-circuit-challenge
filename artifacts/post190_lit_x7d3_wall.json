@@ -1,0 +1,18 @@
+{
+  "status": "externally_timed_out",
+  "solver_conclusion": null,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post190_literature_xag.py",
+    "--side",
+    "x",
+    "--k",
+    "7",
+    "--depth",
+    "3",
+    "--outdir",
+    "artifacts/post190_lit_x7d3"
+  ],
+  "seconds": 45.01579070906155,
+  "limit_seconds": 45.0
+}

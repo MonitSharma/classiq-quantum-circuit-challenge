@@ -1,5 +1,26 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+## Joint reversible free-label search
+
+See `docs/POST190_JOINT_REVERSIBLE.md`. Added actual nine-wire synthesis with
+free four-bit class labels, optional within-class splitting, and fresh-kernel
+composition from actual encoder outputs. Six bounded probes found no full
+witness; two sampled SAT circuits failed the full domain and were rejected.
+Composition control is 201/866/18, verified on all 4096 inputs, not a gain.
+Three focused tests pass. New jobs finished; protected 190/857/18 is unchanged.
+
+
+## Literature-guided search and NIST witnesses
+
+See `docs/POST190_LITERATURE_CATALOG.md`. Four normal-form SAT probes timed out
+without a conclusion. The public NIST catalogue supplied five-AND witnesses
+for all six protected code bits, each checked on all 64 inputs. Selected
+witnesses merge to 15 ANDs (x) / 14 (y). Two individual predicates lower into
+nine wires at 124/127 layers; four exhaust only the restricted scheduler model.
+No full-oracle improvement: protected 190/857/18 and SHA are unchanged.
+Two SAT-control tests and one catalogue regression test pass. New jobs finished.
+
+
 ## Register-aware implementation completed
 
 See `docs/POST190_REGISTER_IMPLEMENTATION.md`. Added finite three-ancilla

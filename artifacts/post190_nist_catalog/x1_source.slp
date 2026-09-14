@@ -1,0 +1,8 @@
+f9675 = x2x3x4x5+x1x4+x1x3x4+x1x3x4x6+x1x2+x1x2x6+x1x2x5+x1x2x5x6+x1x2x3+x1x2x3x4x5x6
+T = (A0 L : L) (A1 L : L) (A2 L : L) (A3 0 : 1) (A4 2 : 3)
+a0 = (x6+x5+x2+x1) * (x6+x5+x3+x2)                 # a0 = x6+x5+x3x6+x3x5+x2+x2x3+x1x6+x1x5+x1x3+x1x2
+a1 = (x5+x3+x2) * (x6+x5+x4+x3+x1)                 # a1 = x5+x5x6+x4x5+x3+x3x6+x3x4+x2x6+x2x5+x2x4+x2x3+x1x5+x1x3+x1x2
+a2 = (x4+x2) * (1+x4+x1)                           # a2 = x2+x2x4+x1x4+x1x2
+a3 = (a0+1+x5) * (a1+x4+x3+x2+x1)                  # a3 = x5+x5x6+x4+x4x6+x4x5+x4x5x6+x3x6+x3x5+x3x4+x3x4x6+x3x4x5+x3x4x5x6+x2x5+x2x4+x2x4x6+x2x4x5+x2x3x6+x2x3x5+x2x3x5x6+x2x3x4x6+x1+x1x5x6+x1x4x6+x1x4x5x6+x1x3+x1x3x5x6+x1x3x4x6+x1x2x6+x1x2x5+x1x2x5x6+x1x2x4x6+x1x2x3
+a4 = (a2+1+x2) * (a3+1+x4+x3+x1)                   # a4 = 1+x5+x5x6+x4x6+x4x5+x4x5x6+x3+x3x6+x3x5+x3x4+x3x4x6+x3x4x5+x3x4x5x6+x2x5+x2x4+x2x4x6+x2x4x5+x2x3x6+x2x3x5+x2x3x5x6+x2x3x4x6+x2x3x4x5+x1x5x6+x1x4+x1x4x6+x1x4x5x6+x1x3+x1x3x5x6+x1x3x4+x1x2+x1x2x4x6+x1x2x3x4x5x6
+f  = a4+a3+1+x4+x3+x1

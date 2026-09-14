@@ -1,0 +1,60 @@
+{
+  "original": {
+    "depth": 95,
+    "cx": 71,
+    "width": 11,
+    "checked_inputs": 64,
+    "phase_inverse_error": 2.8605438676802743e-15,
+    "collisions": {
+      "sign_mag": 3,
+      "mag_only": 13,
+      "with_y5": 0
+    }
+  },
+  "disk_y5": {
+    "depth": 74,
+    "cx": 56,
+    "width": 9,
+    "checked_inputs": 64,
+    "phase_inverse_error": 2.904350559608495e-15,
+    "disk_predicate_pairs_checked": 4096
+  },
+  "square_interval_cardinality": 25,
+  "raw_descriptor_widths": {
+    "band_mag": 5,
+    "band_sign_mag": 6,
+    "band_sign_mag_y5": 7
+  },
+  "radii_from_abs_dx": {
+    "72": [
+      8,
+      8,
+      8,
+      7,
+      7,
+      6,
+      6,
+      4,
+      2
+    ],
+    "42": [
+      6,
+      6,
+      6,
+      5,
+      5,
+      4,
+      2
+    ]
+  },
+  "radius_minus_one_codes": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "empty_radius_code": 0,
+  "protected_sha256": "f8f6aec7835f6fe4e28023e2736553eb029d3522b1ea724a1e0d74213b41f549"
+}
