@@ -1,0 +1,69 @@
+# Benchmark "scratch/square" written by ABC on Mon Sep 14 01:47:16 2026
+.model scratch/square
+.inputs i0 i1 i2 i3 i4 i5 i6 i7 i8 i9 i10 i11
+.outputs out
+.names i6 i7 new_n14
+01 1
+.names i6 new_n14 new_n15
+00 1
+.names i11 new_n15 new_n16
+00 1
+.names i9 new_n16 new_n17
+11 1
+.names i9 i11 new_n18
+01 1
+.names i7 new_n18 new_n19
+01 1
+.names new_n17 new_n19 new_n20
+00 1
+.names i8 new_n20 new_n21
+10 1
+.names i8 new_n18 new_n22
+01 1
+.names new_n21 new_n22 new_n23
+00 1
+.names i10 new_n23 new_n24
+10 1
+.names i10 i11 new_n25
+01 1
+.names new_n24 new_n25 new_n26
+00 1
+.names i3 i4 new_n27
+11 1
+.names i2 new_n27 new_n28
+01 1
+.names i2 i4 new_n29
+10 1
+.names new_n28 new_n29 new_n30
+00 1
+.names i1 new_n30 new_n31
+00 1
+.names i2 i4 new_n32
+01 1
+.names i0 new_n32 new_n33
+01 1
+.names new_n29 new_n33 new_n34
+00 1
+.names i1 new_n34 new_n35
+10 1
+.names i2 i4 new_n36
+00 1
+.names new_n35 new_n36 new_n37
+00 1
+.names i3 new_n37 new_n38
+10 1
+.names i1 i4 new_n39
+10 1
+.names i4 new_n39 new_n40
+00 1
+.names i3 new_n40 new_n41
+00 1
+.names new_n38 new_n41 new_n42
+00 1
+.names new_n31 new_n42 new_n43
+01 1
+.names new_n26 new_n43 new_n44
+00 1
+.names i5 new_n44 out
+01 1
+.end

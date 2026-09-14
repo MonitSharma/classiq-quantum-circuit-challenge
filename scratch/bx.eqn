@@ -1,0 +1,15 @@
+# Equations for "scratch/bx" written by ABC on Mon Sep 14 02:00:20 2026
+INORDER = x0 x1 x2 x3 x4 x5;
+OUTORDER = out;
+n8 = !x0 * !x1;
+n9 = !x2 * !x3;
+n10 = n8 * n9;
+n11 = x4 * !n10;
+n12 = x5 * !n11;
+n13 = x0 * x1;
+n14 = !x2 * !n13;
+n15 = x3 * x4;
+n16 = !x5 * n15;
+n17 = !n14 * n16;
+out = n12 + n17;
+
