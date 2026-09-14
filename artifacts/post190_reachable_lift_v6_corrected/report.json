@@ -1,0 +1,41 @@
+{
+  "care": 182,
+  "candidates": 8,
+  "steps": 3000,
+  "best_terms": 63,
+  "rows": [
+    {
+      "trial": 0,
+      "terms": 63,
+      "best": true
+    },
+    {
+      "trial": 1,
+      "terms": 63
+    },
+    {
+      "trial": 2,
+      "terms": 63
+    },
+    {
+      "trial": 3,
+      "terms": 63
+    },
+    {
+      "trial": 4,
+      "terms": 63
+    },
+    {
+      "trial": 5,
+      "terms": 63
+    },
+    {
+      "trial": 6,
+      "terms": 63
+    },
+    {
+      "trial": 7,
+      "terms": 63
+    }
+  ]
+}

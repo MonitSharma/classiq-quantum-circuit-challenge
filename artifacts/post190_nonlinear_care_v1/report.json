@@ -1,0 +1,250 @@
+{
+  "best": [
+    190,
+    857
+  ],
+  "care": 182,
+  "screened": 673,
+  "compiled": [
+    {
+      "move": [
+        3,
+        7,
+        1,
+        0,
+        1
+      ],
+      "support": 51,
+      "seed": 56,
+      "depth": 209,
+      "cx": 868,
+      "kernel_depth": 57,
+      "care_error": 7.950472408453903e-14
+    },
+    {
+      "move": [
+        3,
+        7,
+        1,
+        0,
+        1
+      ],
+      "support": 51,
+      "seed": 123,
+      "depth": 208,
+      "cx": 860,
+      "kernel_depth": 56,
+      "care_error": 7.970271893284753e-14
+    },
+    {
+      "move": [
+        3,
+        7,
+        1,
+        1,
+        0
+      ],
+      "support": 51,
+      "seed": 56,
+      "depth": 205,
+      "cx": 865,
+      "kernel_depth": 53,
+      "care_error": 7.918257334797799e-14
+    },
+    {
+      "move": [
+        3,
+        7,
+        1,
+        1,
+        0
+      ],
+      "support": 51,
+      "seed": 123,
+      "depth": 207,
+      "cx": 859,
+      "kernel_depth": 55,
+      "care_error": 7.944058936719182e-14
+    },
+    {
+      "move": [
+        1,
+        5,
+        3,
+        0,
+        0
+      ],
+      "support": 52,
+      "seed": 56,
+      "depth": 205,
+      "cx": 863,
+      "kernel_depth": 53,
+      "care_error": 8.757056708118765e-14
+    },
+    {
+      "move": [
+        1,
+        5,
+        3,
+        0,
+        0
+      ],
+      "support": 52,
+      "seed": 123,
+      "depth": 200,
+      "cx": 859,
+      "kernel_depth": 48,
+      "care_error": 8.77610676317464e-14
+    },
+    {
+      "move": [
+        1,
+        5,
+        3,
+        1,
+        0
+      ],
+      "support": 52,
+      "seed": 56,
+      "depth": 203,
+      "cx": 859,
+      "kernel_depth": 51,
+      "care_error": 2.080780394809065e-13
+    },
+    {
+      "move": [
+        1,
+        5,
+        3,
+        1,
+        0
+      ],
+      "support": 52,
+      "seed": 123,
+      "depth": 206,
+      "cx": 864,
+      "kernel_depth": 54,
+      "care_error": 2.0774982018254313e-13
+    },
+    {
+      "move": [
+        1,
+        5,
+        3,
+        0,
+        1
+      ],
+      "support": 54,
+      "seed": 56,
+      "depth": 206,
+      "cx": 857,
+      "kernel_depth": 54,
+      "care_error": 7.718214303248415e-14
+    },
+    {
+      "move": [
+        1,
+        5,
+        3,
+        0,
+        1
+      ],
+      "support": 54,
+      "seed": 123,
+      "depth": 205,
+      "cx": 858,
+      "kernel_depth": 53,
+      "care_error": 7.70502626015543e-14
+    },
+    {
+      "move": [
+        1,
+        7,
+        3,
+        0,
+        0
+      ],
+      "support": 54,
+      "seed": 56,
+      "depth": 209,
+      "cx": 867,
+      "kernel_depth": 57,
+      "care_error": 7.510270568928067e-14
+    },
+    {
+      "move": [
+        1,
+        7,
+        3,
+        0,
+        0
+      ],
+      "support": 54,
+      "seed": 123,
+      "depth": 207,
+      "cx": 863,
+      "kernel_depth": 55,
+      "care_error": 7.551446998971503e-14
+    },
+    {
+      "move": [
+        1,
+        7,
+        3,
+        1,
+        0
+      ],
+      "support": 56,
+      "seed": 56,
+      "depth": 203,
+      "cx": 866,
+      "kernel_depth": 51,
+      "care_error": 1.3363299207703016e-13
+    },
+    {
+      "move": [
+        1,
+        7,
+        3,
+        1,
+        0
+      ],
+      "support": 56,
+      "seed": 123,
+      "depth": 206,
+      "cx": 868,
+      "kernel_depth": 54,
+      "care_error": 1.3378868140464294e-13
+    },
+    {
+      "move": [
+        2,
+        7,
+        3,
+        0,
+        0
+      ],
+      "support": 59,
+      "seed": 56,
+      "depth": 208,
+      "cx": 863,
+      "kernel_depth": 56,
+      "care_error": 2.496418760032204e-13
+    },
+    {
+      "move": [
+        2,
+        7,
+        3,
+        0,
+        0
+      ],
+      "support": 59,
+      "seed": 123,
+      "depth": 210,
+      "cx": 870,
+      "kernel_depth": 58,
+      "care_error": 2.498774827573097e-13
+    }
+  ]
+}

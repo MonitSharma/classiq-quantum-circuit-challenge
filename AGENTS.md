@@ -1,5 +1,7 @@
 # Instructions for agents continuing this workspace
 
+Current protected best is now **190 / 857 / 18**, `artifacts/190/`, as confirmed in `docs/HANDOFF.md`. Use `src/build_permuted_oracle_package.py --package artifacts/190` for replay. Read `docs/POST190_NEW_ARCHITECTURES.md` for the latest structural research. Its 139-layer direct Boolean template is unsolved and is not a submission circuit. No jobs remain running.
+
 Read `docs/HANDOFF.md`, `docs/EXPERIMENTS.md`, and `docs/CURRENT_DESIGN.md` before continuing. The user's objective is rank 1 in the Classiq challenge. Do not report that objective achieved based only on a local circuit improvement.
 
 ## Correctness and preservation

@@ -1,0 +1,289 @@
+{
+  "best": [
+    190,
+    857
+  ],
+  "cases": 672,
+  "rows": [
+    {
+      "move": [
+        1,
+        3,
+        0,
+        0,
+        0
+      ],
+      "kernel_depth": 67,
+      "kernel_cx": 114,
+      "depth": 219,
+      "cx": 882,
+      "equiv": true
+    },
+    {
+      "move": [
+        1,
+        3,
+        0,
+        0,
+        1
+      ],
+      "kernel_depth": 62,
+      "kernel_cx": 105,
+      "depth": 214,
+      "cx": 873,
+      "equiv": true
+    },
+    {
+      "move": [
+        1,
+        3,
+        0,
+        1,
+        0
+      ],
+      "kernel_depth": 69,
+      "kernel_cx": 109,
+      "depth": 221,
+      "cx": 877,
+      "equiv": true
+    },
+    {
+      "move": [
+        1,
+        3,
+        0,
+        1,
+        1
+      ],
+      "kernel_depth": 69,
+      "kernel_cx": 120,
+      "depth": 221,
+      "cx": 888,
+      "equiv": true
+    },
+    {
+      "move": [
+        1,
+        7,
+        4,
+        0,
+        0
+      ],
+      "kernel_depth": 63,
+      "kernel_cx": 105,
+      "depth": 217,
+      "cx": 873,
+      "equiv": true
+    },
+    {
+      "move": [
+        1,
+        7,
+        4,
+        0,
+        1
+      ],
+      "kernel_depth": 64,
+      "kernel_cx": 112,
+      "depth": 218,
+      "cx": 880,
+      "equiv": true
+    },
+    {
+      "move": [
+        1,
+        7,
+        4,
+        1,
+        0
+      ],
+      "kernel_depth": 62,
+      "kernel_cx": 105,
+      "depth": 216,
+      "cx": 873,
+      "equiv": true
+    },
+    {
+      "move": [
+        1,
+        7,
+        4,
+        1,
+        1
+      ],
+      "kernel_depth": 69,
+      "kernel_cx": 105,
+      "depth": 223,
+      "cx": 873,
+      "equiv": true
+    },
+    {
+      "move": [
+        3,
+        6,
+        4,
+        0,
+        0
+      ],
+      "kernel_depth": 66,
+      "kernel_cx": 116,
+      "depth": 220,
+      "cx": 884,
+      "equiv": true
+    },
+    {
+      "move": [
+        3,
+        6,
+        4,
+        0,
+        1
+      ],
+      "kernel_depth": 65,
+      "kernel_cx": 108,
+      "depth": 219,
+      "cx": 876,
+      "equiv": true
+    },
+    {
+      "move": [
+        3,
+        6,
+        4,
+        1,
+        0
+      ],
+      "kernel_depth": 60,
+      "kernel_cx": 104,
+      "depth": 214,
+      "cx": 872,
+      "equiv": true
+    },
+    {
+      "move": [
+        3,
+        6,
+        4,
+        1,
+        1
+      ],
+      "kernel_depth": 65,
+      "kernel_cx": 110,
+      "depth": 219,
+      "cx": 878,
+      "equiv": true
+    },
+    {
+      "move": [
+        5,
+        6,
+        4,
+        0,
+        0
+      ],
+      "kernel_depth": 70,
+      "kernel_cx": 113,
+      "depth": 224,
+      "cx": 881,
+      "equiv": true
+    },
+    {
+      "move": [
+        5,
+        6,
+        4,
+        0,
+        1
+      ],
+      "kernel_depth": 64,
+      "kernel_cx": 113,
+      "depth": 218,
+      "cx": 881,
+      "equiv": true
+    },
+    {
+      "move": [
+        5,
+        6,
+        4,
+        1,
+        0
+      ],
+      "kernel_depth": 65,
+      "kernel_cx": 107,
+      "depth": 219,
+      "cx": 875,
+      "equiv": true
+    },
+    {
+      "move": [
+        5,
+        6,
+        4,
+        1,
+        1
+      ],
+      "kernel_depth": 68,
+      "kernel_cx": 105,
+      "depth": 222,
+      "cx": 873,
+      "equiv": true
+    },
+    {
+      "move": [
+        6,
+        7,
+        4,
+        0,
+        0
+      ],
+      "kernel_depth": 63,
+      "kernel_cx": 113,
+      "depth": 217,
+      "cx": 880,
+      "equiv": true
+    },
+    {
+      "move": [
+        6,
+        7,
+        4,
+        0,
+        1
+      ],
+      "kernel_depth": 65,
+      "kernel_cx": 113,
+      "depth": 219,
+      "cx": 881,
+      "equiv": true
+    },
+    {
+      "move": [
+        6,
+        7,
+        4,
+        1,
+        0
+      ],
+      "kernel_depth": 60,
+      "kernel_cx": 104,
+      "depth": 214,
+      "cx": 871,
+      "equiv": true
+    },
+    {
+      "move": [
+        6,
+        7,
+        4,
+        1,
+        1
+      ],
+      "kernel_depth": 65,
+      "kernel_cx": 105,
+      "depth": 219,
+      "cx": 873,
+      "equiv": true
+    }
+  ]
+}

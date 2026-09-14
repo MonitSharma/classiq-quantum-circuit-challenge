@@ -1,0 +1,12 @@
+[
+  {
+    "side": "x",
+    "status": "unknown",
+    "seconds": 15.02711796760559,
+    "samples": 16,
+    "stages": 6,
+    "cx_layers": 2,
+    "depth_ceiling": 70,
+    "reason": "timeout"
+  }
+]

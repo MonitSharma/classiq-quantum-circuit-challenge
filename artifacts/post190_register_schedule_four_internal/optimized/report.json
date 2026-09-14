@@ -1,0 +1,145 @@
+{
+  "status": "found",
+  "states": 12150,
+  "toggles": 8,
+  "path": [
+    {
+      "node": 0,
+      "before": [],
+      "frame": [
+        0,
+        0,
+        0
+      ],
+      "after": [
+        1
+      ]
+    },
+    {
+      "node": 1,
+      "before": [
+        1
+      ],
+      "frame": [
+        1,
+        0,
+        0
+      ],
+      "after": [
+        2,
+        1
+      ]
+    },
+    {
+      "node": 2,
+      "before": [
+        2,
+        1
+      ],
+      "frame": [
+        2,
+        1,
+        0
+      ],
+      "after": [
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "node": 1,
+      "before": [
+        4,
+        2,
+        1
+      ],
+      "frame": [
+        4,
+        1,
+        2
+      ],
+      "after": [
+        4,
+        1
+      ]
+    },
+    {
+      "node": 4,
+      "before": [
+        4,
+        1
+      ],
+      "frame": [
+        4,
+        0,
+        1
+      ],
+      "after": [
+        17,
+        4
+      ]
+    },
+    {
+      "node": 3,
+      "before": [
+        17,
+        4
+      ],
+      "frame": [
+        17,
+        4,
+        0
+      ],
+      "after": [
+        17,
+        8,
+        4
+      ]
+    },
+    {
+      "node": 6,
+      "before": [
+        17,
+        8,
+        4
+      ],
+      "frame": [
+        17,
+        4,
+        8
+      ],
+      "after": [
+        72,
+        17,
+        4
+      ]
+    },
+    {
+      "node": 5,
+      "before": [
+        72,
+        17,
+        4
+      ],
+      "frame": [
+        72,
+        17,
+        4
+      ],
+      "after": [
+        72,
+        36,
+        17
+      ]
+    }
+  ],
+  "verification": {
+    "depth": 75,
+    "cx": 51,
+    "width": 9,
+    "max_error": 1.0677783136387644e-15,
+    "basis_inputs_checked": 64,
+    "phase_oracle_depth": 137
+  }
+}

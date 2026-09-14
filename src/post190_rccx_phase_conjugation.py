@@ -20,8 +20,13 @@ def equiv(a,b):
 def run(out):
     assert not out.exists(); out.mkdir(parents=True)
     recipe=json.loads(Path('artifacts/193_cx853/phase_search_recipe.json').read_text())
-    co=np.asarray(recipe['co'],float)*math.pi; phases=walsh(co)
-    base=qasm2.load('artifacts/190/kernel.qasm'); codes=json.loads(Path('artifacts/190/class_codes.json').read_text())
+    co=np.asarray(recipe['co'],float)*math.pi; phases=walsh(co)*len(co)
+    # The shipped kernel exits in a physical ancilla permutation. A diagonal
+    # candidate must be compared with the phase recipe, not that permutation.
+    base=QuantumCircuit(8)
+    from qiskit.circuit.library import DiagonalGate
+    base.append(DiagonalGate(np.exp(1j*phases)),range(8))
+    codes=json.loads(Path('artifacts/190/class_codes.json').read_text())
     enc=encoders(codes,298,506); best=(190,857); rows=[]
     cases=[]
     for a,b,t in itertools.permutations(range(8),3):
@@ -45,7 +50,10 @@ def run(out):
         score=(q.depth(),q.count_ops().get('cx',0)); row=dict(move=[a,b,t,oa,ob],kernel_depth=qk.depth(),kernel_cx=qk.count_ops().get('cx',0),depth=score[0],cx=score[1],equiv=True)
         rows.append(row)
         if score<best:
-            best=score; p=out/f'oracle_d{score[0]}_cx{score[1]}.qasm';p.write_text(qasm2.dumps(q));row['path']=str(p);print('IMPROVEMENT',row,flush=True)
+            p=out/f'oracle_d{score[0]}_cx{score[1]}.qasm';p.write_text(qasm2.dumps(q))
+            from exhaustive_verify import exhaustive
+            exhaustive(p)
+            best=score;row['path']=str(p);print('IMPROVEMENT',row,flush=True)
         if index%32==0: print('index',index,'best',best,'last',score,flush=True)
     (out/'report.json').write_text(json.dumps(dict(best=best,cases=len(cases),rows=rows),indent=2)+'\n'); print('done',best,flush=True)
 if __name__=='__main__': run(Path('artifacts/post190_rccx_phase_v3'))

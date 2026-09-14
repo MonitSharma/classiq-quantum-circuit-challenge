@@ -1,0 +1,1 @@
+This intermediate run fixed the permutation comparison only. Its inverse-Walsh phase scaling remained wrong, so these are not verified logo-oracle results. Use the fully corrected v5 run and docs/POST190_NONLINEAR_AND_WINDOWS.md.

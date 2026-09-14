@@ -1,5 +1,18 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+## Register-aware implementation completed
+
+See `docs/POST190_REGISTER_IMPLEMENTATION.md`. Added finite three-ancilla
+register-span scheduling, quantum-checked lowering, direct nine-wire reversible
+search, and full protected-kernel composition with exhaustive verification.
+A synthetic four-internal-node/seven-AND witness fits nine wires in eight
+nonlinear toggles (75 encoder layers); this is NOT a logo improvement.
+The bounded 48/70-layer direct searches produced no full witness; a partial
+SAT circuit failed 47 inputs and was rejected. Four focused tests pass and
+full baseline replay matches the protected SHA exactly. Best stays 190/857.
+All new runs finished; external searches were left untouched.
+
+
 ## Latest bounded follow-up: nonlinear phases and local windows
 
 See `docs/POST190_NONLINEAR_AND_WINDOWS.md`. Best remains **190/857/18**.

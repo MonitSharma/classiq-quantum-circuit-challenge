@@ -1,0 +1,9 @@
+{
+  "parallel_rz_depth": 1,
+  "parallel_rz_count": 18,
+  "full_six_input_AND_compute_depth": 17,
+  "AND_compute_cx": 15,
+  "AND_nodes": 5,
+  "AND_basis_inputs_checked": 64,
+  "logo_gf2_matrix_rank": 10
+}

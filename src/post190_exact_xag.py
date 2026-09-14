@@ -93,7 +93,9 @@ def build(targets, k, chain=False):
             cnf.append([z] if tgt[t] else [-z])
     return cnf, pool, sa, sb, outs
 
-def solve(targets, k, timeout, want_model=False, chain=False):
+def solve(targets, k, want_model=False, chain=False):
+    # NOTE: no wall-clock bound here; pysat's solve() blocks in C.
+    # Use src/run_bounded.py as an external guard.
     cnf, pool, sa, sb, outs = build(targets, k, chain)
     s = Cadical153(bootstrap_with=cnf)
     t0 = time.time()
@@ -114,14 +116,14 @@ if __name__ == '__main__':
     F = json.load(open(sys.argv[1]))
     # sanity: a function with known small MC
     maj = [1 if ((t & 1) + ((t >> 1) & 1) + ((t >> 2) & 1)) >= 2 else 0 for t in range(NR)]
-    r, el, nc = solve([maj], 1, 60)
+    r, el, nc = solve([maj], 1)
     print(f'control MAJ3 at k=1: {r} ({el:.1f}s, {nc} clauses)  [expect UNSAT]')
-    r, el, nc = solve([maj], 2, 60)
+    r, el, nc = solve([maj], 2)
     print(f'control MAJ3 at k=2: {r} ({el:.1f}s, {nc} clauses)  [expect SAT]')
     for side in ('y', 'x'):
         tg = [F[f'{side}{b}'] for b in range(3)]
         print(f'--- {side} side (protected labels)', flush=True)
         for k in range(3, 10):
-            r, el, nc = solve(tg, k, 0)
+            r, el, nc = solve(tg, k)
             print(f'   k={k:2d}: {r:6s} ({el:6.1f}s, {nc} clauses)', flush=True)
             if r == 'SAT': break

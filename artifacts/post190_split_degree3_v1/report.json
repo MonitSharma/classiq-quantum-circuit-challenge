@@ -1,0 +1,16 @@
+[
+  {
+    "side": "y",
+    "raw_mask": 32,
+    "degree": 3,
+    "status": "unsat",
+    "seconds": 0.09758520126342773
+  },
+  {
+    "side": "x",
+    "raw_mask": 48,
+    "degree": 3,
+    "status": "unsat",
+    "seconds": 0.8577680587768555
+  }
+]

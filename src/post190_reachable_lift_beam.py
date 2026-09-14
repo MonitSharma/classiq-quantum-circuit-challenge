@@ -27,7 +27,7 @@ def reachable(codes):
         yv = ((y >> 5) & 1)
         yc = yl[((y & 32).bit_count() & 1, ts.ROWCLS[y])]
         for x in range(64):
-            xv = ((x >> 4) & 1)
+            xv = (x & 48).bit_count() & 1
             xc = xl[(((x & 48).bit_count() & 1), ts.COLCLS[x])]
             out.add(yv | (yc << 1) | (xv << 4) | (xc << 5))
     return sorted(out)
@@ -39,13 +39,14 @@ def coeff(values):
 
 
 def phase_values(path):
+    """Return unwrapped phase in units of pi, matching coeff's input units."""
     # The 190 package is a later schedule of the same 63-term phase recipe;
     # use the saved coefficients as the canonical, unwrapped representation.
     recipe = Path('artifacts/193_cx853/phase_search_recipe.json')
     if recipe.exists():
         from depth_parity_network import walsh
         co = np.asarray(json.loads(recipe.read_text())['co'], float) * math.pi
-        return walsh(co)
+        return walsh(co) * len(co) / math.pi
     from qiskit.quantum_info import Operator
     op = Operator(qasm2.load(path)).data
     # The packaged kernel intentionally exits in a physical ancilla
@@ -78,11 +79,14 @@ def run(outdir, candidates, steps, seed):
     best = None; rows = []
     for trial in range(candidates):
         cur = base.copy()
+        champion = base.copy(); champion_score, _ = score(base)
         # Start from a few random free-domain completions; then anneal exact
         # null moves. The current Boolean completion is always retained.
         for w in free:
-            if rng.random() < .05: cur[w] = rng.randrange(2)
-        cur_score, _ = score(cur); champion = cur.copy(); champion_score = cur_score
+            if trial and rng.random() < .05: cur[w] = rng.randrange(2)
+        cur_score, _ = score(cur)
+        if cur_score < champion_score:
+            champion, champion_score = cur.copy(), cur_score
         for step in range(steps):
             nxt = cur.copy()
             if rng.random() < .45:

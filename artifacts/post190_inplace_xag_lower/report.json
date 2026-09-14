@@ -1,0 +1,11 @@
+{
+  "and_count": 3,
+  "outputs": 3,
+  "width": 9,
+  "encoder_depth": 24,
+  "encoder_cx": 22,
+  "oracle_depth": 33,
+  "oracle_cx": 31,
+  "basis_inputs_checked": 64,
+  "max_error": 1.247457973265988e-15
+}

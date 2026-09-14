@@ -1,0 +1,12 @@
+{
+  "status": "externally_timed_out",
+  "solver_conclusion": null,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post190_direct_boolean_cadical.py",
+    "--outdir",
+    "artifacts/post190_direct_boolean_cadical_v1"
+  ],
+  "seconds": 45.01289854198694,
+  "limit_seconds": 45.0
+}

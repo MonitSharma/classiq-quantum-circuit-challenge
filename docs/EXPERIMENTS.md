@@ -1,5 +1,42 @@
 # Experiment history and failure notes
 
+## Register-aware implementation completed
+
+See `docs/POST190_REGISTER_IMPLEMENTATION.md`. Added finite three-ancilla
+register-span scheduling, quantum-checked lowering, direct nine-wire reversible
+search, and full protected-kernel composition with exhaustive verification.
+A synthetic four-internal-node/seven-AND witness fits nine wires in eight
+nonlinear toggles (75 encoder layers); this is NOT a logo improvement.
+The bounded 48/70-layer direct searches produced no full witness; a partial
+SAT circuit failed 47 inputs and was rejected. Four focused tests pass and
+full baseline replay matches the protected SHA exactly. Best stays 190/857.
+All new runs finished; external searches were left untouched.
+
+
+## Stronger fixed-label bound and improved witness lowering
+
+Read `docs/POST190_XAG_DEGREE_CERTIFICATE.md`. The protected labels require
+**at least six ANDs per side**, by rank-three degree>=5 output components and
+the scalar degree bound. With AND-depth<=3, at least **seven** are required.
+All six running scratchpad target functions were checked against the protected
+labels. No running process was touched; liveness could not be inspected.
+The supplied synthetic k=3 witness now lowers to **24 layers/22 CX/9 wires**,
+versus its naive 41/42/14; its full synthetic oracle passes all 64 inputs.
+This is a compiler improvement, NOT a new logo circuit. 190/857 stands.
+
+
+## Side-analysis audit and next Boolean probe
+
+Read `docs/POST190_SIDE_ANALYSIS_AUDIT.md` before using the attached side
+analysis as a closure map. Reproduced counterexamples invalidate universal
+six-rotations-per-layer and 64-rotations-per-six-input-predicate claims.
+The full logo matrix has GF(2) rank ten. Annealing and private leaderboard CX
+counts do not prove the claimed algorithm families or global minima.
+A free-label shared-XAG probe at 4–6 ANDs per side returned six timeouts;
+no witness, UNSAT certificate, or new oracle. Positive-control test passes.
+190/857 remains protected. All runs finished.
+
+
 ## Latest bounded follow-up: nonlinear phases and local windows
 
 See `docs/POST190_NONLINEAR_AND_WINDOWS.md`. Best remains **190/857/18**.

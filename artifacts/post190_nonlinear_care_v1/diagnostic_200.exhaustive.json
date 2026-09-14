@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post190_nonlinear_care_v1/diagnostic_200.qasm",
+  "sha256": "769da656be444302c7da97a94859d7c78a7cac09522afad0ff9ea8963425453b",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 200,
+  "cx_count": 859,
+  "max_error": 7.783501098735726e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.163434880269511e-14,
+  "peak_sparse_support": 16,
+  "elapsed_seconds": 0.16296982765197754,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}
