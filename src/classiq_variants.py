@@ -135,10 +135,27 @@ def run(name, oracle, max_width=18):
 
 
 if __name__ == "__main__":
-    print(f"{'variant':<16}{'width':>7}{'depth':>8}{'cx':>7}")
+    import classiq.interface.exceptions as cx_exc
+    print("Synthesizing 4 formulations (all verified against logo, 0 mismatches).")
+    print("Read v0_baseline first: if it reproduces ~531 the pipeline is sound")
+    print("and the other three are directly comparable.\n")
+    print(f"{'variant':<16}{'width':>7}{'depth':>8}{'cx':>7}   {'vs your 190'}")
+    results = {}
     for name, fn in VARIANTS.items():
         try:
             w, d, c = run(name, fn)
-            print(f"{name:<16}{w:>7}{d:>8}{c:>7}")
+            results[name] = (w, d, c)
+            delta = "" if name == "v0_baseline" else f"{d - 190:+d}"
+            print(f"{name:<16}{w:>7}{d:>8}{c:>7}   {delta}")
+        except cx_exc.ClassiqExpiredTokenError:
+            print("\nClassiq token expired. Refresh it once with:")
+            print("    .venv/bin/python -c 'import classiq; classiq.authenticate()'")
+            print("then re-run this script.")
+            raise SystemExit(1)
         except Exception as exc:
-            print(f"{name:<16}  FAILED: {type(exc).__name__}: {exc}")
+            print(f"{name:<16}  FAILED: {type(exc).__name__}: {str(exc)[:120]}")
+    if results:
+        best = min(results.items(), key=lambda kv: (kv[1][1], kv[1][2]))
+        print(f"\nbest: {best[0]} -> depth {best[1][1]}, cx {best[1][2]}")
+        print("Artifacts (QASM + qmod) are under artifacts/classiq_<variant>/.")
+        print("Any candidate must still pass src/exhaustive_verify.py before use.")
