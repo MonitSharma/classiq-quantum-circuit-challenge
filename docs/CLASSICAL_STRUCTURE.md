@@ -283,3 +283,60 @@ family cannot reach 142 at any synthesis quality (885 rotations >= 148 layers at
 perfect rate-6 packing, and the kernel is permanently capped at rate 3 because
 freeing more than two ancillas needs m=1, UNSAT on both sides).  Any 142 circuit
 does not load a per-side class code.
+
+---
+
+# Fresh start: pricing the AND-network route, and the two routes to 142
+
+## The AND-network route, priced correctly
+
+An earlier dismissal of the geometry-specific Boolean construction used the wrong
+cost model — it priced predicate bits at the UCRy cost (64 rotations each).  A
+Boolean circuit computes them with AND gates, whose profile is different:
+a Toffoli/RCCX is ~6 CX + ~4-7 single-qubit gates on 3 wires, depth ~6, and
+floor(18/3)=6 run in parallel, so depth ~ 2N layers for N ANDs in the compute
+stage.  **Beating 142 needs N <= 71.**
+
+Counting a careful geometry-specific construction:
+
+| piece | ANDs |
+|---|---|
+| D2: constant-subtract + abs + thermometer, both coordinates | ~44 |
+| D1: same | ~40 |
+| R1, R2': four comparators each, sharing `[x>=27] = not [x<=26]` | ~59 |
+| staircase products (rank 5 + rank 4) and rectangle ANDs | ~13 |
+| **total** | **~156** |
+
+That is 2.2x over budget, and consistent with the repository's own XAG result
+(`destructive_xag_register_pressure.json`: 97 AND nodes, minimum peak registers
+22 against 18 wires).  The AND route is not competitive — the earlier conclusion
+was right for the wrong reason.
+
+## The decisive arithmetic
+
+    depth = encoding_rotations / 6  +  K / kernel_rate
+
+Encoding is pinned at 768 rotations (4 code bits per side, 3 of them at 64
+rotations, 1 free linear feature — all three facts proven exhaustively above).
+Kernel rate is capped at 3, because freeing more than two ancillas requires m=1
+code bits, UNSAT on all 88 y-subspaces and all 296 x-subspaces.
+
+**Route A — cheap kernel.** 768/6 = 128 layers, leaving 14 for the kernel, so
+K <= 42 at rate 3 (K <= 28 at rate 2).  The measured minimum is **K = 117**,
+converged independently by two separate anneals.  Needs a kernel ~3x sparser
+than exists.  Blocked.
+
+**Route B — cheap encoding.**  576 rotations (1 linear + 1 in-place at 16
+rotations + 2 ancilla) gives 96 layers and a kernel budget of K <= 138 at rate 3
+— comfortably achievable.  **This configuration would reach 142.**  But it is
+exhaustively infeasible for y: all 651 two-dimensional subspaces fail, even at a
+cap of 16 cells.  Blocked.
+
+## New this round
+
+Low cell counts *are* achievable with unrestricted permutations — y at 14 cells
+(gen 17,32) and x at 13 (gen 23,36), i.e. the same 182/256 reachable entries that
+hold the current design's K at 117.  No in-place family tested realises them: the
+`d4` family caps at 16 cells, and `1 linear + 1 in-place` is infeasible outright.
+That gap — a realisable in-place family reaching 13-14 cells — is the only live
+thread left in this framework.
