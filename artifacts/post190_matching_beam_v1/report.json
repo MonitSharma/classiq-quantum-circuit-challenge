@@ -1,0 +1,107 @@
+{
+  "best": [
+    190,
+    857
+  ],
+  "rows": [
+    {
+      "seed": 0,
+      "beam": 96,
+      "branch": 18,
+      "alpha": 6.0,
+      "timew": 1.2,
+      "horizon": 1.5,
+      "fill": 3,
+      "depth": 195,
+      "cx": 868
+    },
+    {
+      "seed": 1,
+      "beam": 96,
+      "branch": 18,
+      "alpha": 6.0,
+      "timew": 1.2,
+      "horizon": 1.5,
+      "fill": 3,
+      "depth": 195,
+      "cx": 868
+    },
+    {
+      "seed": 2,
+      "beam": 96,
+      "branch": 18,
+      "alpha": 6.0,
+      "timew": 1.2,
+      "horizon": 1.5,
+      "fill": 3,
+      "depth": 196,
+      "cx": 871
+    },
+    {
+      "seed": 3,
+      "beam": 96,
+      "branch": 18,
+      "alpha": 6.0,
+      "timew": 1.2,
+      "horizon": 1.5,
+      "fill": 3,
+      "depth": 193,
+      "cx": 866
+    },
+    {
+      "seed": 4,
+      "beam": 96,
+      "branch": 18,
+      "alpha": 6.0,
+      "timew": 1.2,
+      "horizon": 1.5,
+      "fill": 3,
+      "depth": 193,
+      "cx": 866
+    },
+    {
+      "seed": 5,
+      "beam": 96,
+      "branch": 18,
+      "alpha": 6.0,
+      "timew": 1.2,
+      "horizon": 1.5,
+      "fill": 3,
+      "depth": 195,
+      "cx": 869
+    },
+    {
+      "seed": 6,
+      "beam": 96,
+      "branch": 18,
+      "alpha": 6.0,
+      "timew": 1.2,
+      "horizon": 1.5,
+      "fill": 3,
+      "depth": 196,
+      "cx": 873
+    },
+    {
+      "seed": 7,
+      "beam": 96,
+      "branch": 18,
+      "alpha": 6.0,
+      "timew": 1.2,
+      "horizon": 1.5,
+      "fill": 3,
+      "depth": 194,
+      "cx": 864
+    },
+    {
+      "seed": 8,
+      "beam": 96,
+      "branch": 18,
+      "alpha": 6.0,
+      "timew": 1.2,
+      "horizon": 1.5,
+      "fill": 3,
+      "depth": 196,
+      "cx": 870
+    }
+  ]
+}

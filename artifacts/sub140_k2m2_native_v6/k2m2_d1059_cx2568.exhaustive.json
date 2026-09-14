@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/sub140_k2m2_native_v6/k2m2_d1059_cx2568.qasm",
+  "sha256": "099b11777ec741eba6c64562a6e6cfd390d986b9f24f604cd07e0db7e2d3b485",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 1059,
+  "cx_count": 2568,
+  "max_error": 1.1110920262373687e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 5.4604732977980307e-14,
+  "peak_sparse_support": 32,
+  "elapsed_seconds": 0.753209114074707,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

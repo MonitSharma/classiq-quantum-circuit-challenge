@@ -1,0 +1,128 @@
+{
+  "best": [
+    190,
+    857
+  ],
+  "rows": [
+    {
+      "seed": 0,
+      "depth": 194,
+      "cx": 864,
+      "meta": {
+        "rounds": 28,
+        "complete_round": 26,
+        "states": 765
+      }
+    },
+    {
+      "seed": 1,
+      "depth": 195,
+      "cx": 865,
+      "meta": {
+        "rounds": 31,
+        "complete_round": 29,
+        "states": 766
+      }
+    },
+    {
+      "seed": 2,
+      "depth": 196,
+      "cx": 866,
+      "meta": {
+        "rounds": 28,
+        "complete_round": 27,
+        "states": 764
+      }
+    },
+    {
+      "seed": 3,
+      "depth": 196,
+      "cx": 866,
+      "meta": {
+        "rounds": 27,
+        "complete_round": 27,
+        "states": 738
+      }
+    },
+    {
+      "seed": 4,
+      "depth": 197,
+      "cx": 872,
+      "meta": {
+        "rounds": 32,
+        "complete_round": 29,
+        "states": 768
+      }
+    },
+    {
+      "seed": 5,
+      "depth": 193,
+      "cx": 861,
+      "meta": {
+        "rounds": 23,
+        "complete_round": 23,
+        "states": 624
+      }
+    },
+    {
+      "seed": 6,
+      "depth": 194,
+      "cx": 870,
+      "meta": {
+        "rounds": 32,
+        "complete_round": 31,
+        "states": 762
+      }
+    },
+    {
+      "seed": 7,
+      "depth": 195,
+      "cx": 862,
+      "meta": {
+        "rounds": 32,
+        "complete_round": 28,
+        "states": 764
+      }
+    },
+    {
+      "seed": 8,
+      "depth": 195,
+      "cx": 867,
+      "meta": {
+        "rounds": 33,
+        "complete_round": 29,
+        "states": 766
+      }
+    },
+    {
+      "seed": 9,
+      "depth": 195,
+      "cx": 862,
+      "meta": {
+        "rounds": 32,
+        "complete_round": 27,
+        "states": 768
+      }
+    },
+    {
+      "seed": 10,
+      "depth": 194,
+      "cx": 866,
+      "meta": {
+        "rounds": 32,
+        "complete_round": 30,
+        "states": 768
+      }
+    },
+    {
+      "seed": 11,
+      "depth": 198,
+      "cx": 872,
+      "meta": {
+        "rounds": 36,
+        "complete_round": 36,
+        "states": 767
+      }
+    }
+  ]
+}

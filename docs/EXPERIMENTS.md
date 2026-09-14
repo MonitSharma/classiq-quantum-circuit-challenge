@@ -66,6 +66,22 @@ run for 32 seeds with the shipped loader arrival profile and relaxed output
 permutation. It reproduced **190 / 857** throughout; explicit next-parity
 lookahead did not reduce the kernel span.
 
+An explicit disjoint-matching beam (`src/post190_matching_beam.py`) replaced
+the scheduler's greedy CX-layer construction with enumerated matchings among
+the top 14 edges. The partial report in `artifacts/post190_matching_beam_v1`
+shows 193--196-depth candidates and no improvement before the run was stopped
+for cost; it remains an exploratory negative result, not a complete search
+closure.
+
+The proposed exact-matching follow-up was then implemented as
+`src/post190_exact_matching_beam.py`. It enumerates all **5,936** directed
+disjoint matchings on eight wires, retains four timing-Pareto states per logical
+state, and continues incomplete states after the first completion. Twelve
+seeds completed in `artifacts/post190_exact_matching_v1`; results were
+193--198 depth and the best remained **190 / 857**. Thus the timing-collapse
+and early-stop hypotheses were tested directly for this phase set without
+changing the protected package.
+
 An arrival-aware endpoint variant, using the actual per-wire 298/506 loader
 times as initial kernel times, completed 30 configurations with 600 suffix
 trials each (`artifacts/post190_arrival_aware_v1`). It also finished at
@@ -2481,3 +2497,168 @@ retraction, not finite differences. Fidelity moved from `0.1724585425` to
 candidate or an exact full-oracle result; it only confirms stable gradients
 for a genuinely nonlocal operator objective. A multi-layer optimizer with a
 fixed differentiable tensor-network coordinate system is still required.
+## 2026-09-14 structural pivot: direct affine-projection probes
+
+The search was intentionally moved away from endpoint scheduling and toward
+promised-subspace 9-wire destructive encoders.  A new isolated harness,
+`src/sub140_projection_anneal.py`, applies arbitrary CX/RCCX circuits to the
+64 promised inputs and scores the exact requirement that four affine output
+functions separate every pair of distinct classes.  This tests the proposed
+architecture's semantic bottleneck directly; it does not assume that the
+first four physical wires are the descriptors.
+
+Two 50-second stochastic campaigns completed.  The best greedy projection
+screen left 38 class-distinct conflicts on y and 35 on x with circuits of at
+most 18 gates.  No exact four-affine projection witness was found, and no
+native encoder or oracle candidate was generated.  These are negative
+heuristic results, not impossibility claims.  The corresponding raw reports
+are under `artifacts/sub140_projection_anneal_y_v3/` and
+`artifacts/sub140_projection_anneal_x_v3/`.
+
+The existing fixed-group three-layer SAT formulation was also rerun in a new
+isolated pair of directories.  It found sampled partial witnesses but then
+returned `unknown` while adding collision counterexamples on both sides;
+there is no SAT proof and no candidate.  The next structural search must
+encode arbitrary disjoint nonlinear placements and affine output projection
+jointly, with native-depth screening applied to finalists.
+
+## 2026-09-14 class-only descriptor assignment screen
+
+`src/sub140_class_label_anneal.py` searches injective 4-bit labels for the
+eleven row/column equivalence classes, then computes the exact six-variable
+ANF of each descriptor bit.  This removes the current architecture's fixed
+raw-coordinate bit and tests whether a four-bit class-only descriptor has a
+cheaper Boolean specification.
+
+The bounded runs found a y assignment with 50 total ANF terms, split
+10/26/8/6 across its bits, and an x assignment with 55 terms, split 14/11/20/10.
+Both have maximum ANF degree six.  These are semantic hypotheses only: they
+still require reversible synthesis with six arbitrary dirty inputs and three
+clean ancillas.  No depth or correctness claim follows until that synthesis
+and the full standalone oracle are verified.
+
+## 2026-09-14 raw-plus-global-label native probe
+
+`src/sub140_raw_plus_global_labels.py` tested a less ambitious variant: retain
+one raw coordinate bit as a descriptor and assign a single global 3-bit label
+to each class, with labels required to distinguish classes within each raw
+half.  Valid semantic labelings were found quickly, but direct ANF-term to
+MCX lowering was catastrophically expensive.  The best serialized forward
+encoders measured approximately **1355 depth / 764 CX** on y and **1345 depth /
+761 CX** on x.  No full oracle was built or promoted.
+
+This closes only the naïve independent-MCX implementation.  The saved label
+assignments remain useful inputs for shared-XAG or borrowed-dirty-wire
+synthesis; without shared nonlinear nodes, global labels do not improve the
+native objective.
+
+## 2026-09-14 shared-XAG follow-up
+
+`src/sub140_shared_label_xag.py` fed the best raw-plus-global label functions
+directly into the existing exact multi-output affine-AND solver.  No exact
+shared network with at most eight AND nodes was returned for either side
+within the bounded solver budget.  This is not an UNSAT result, but it removes
+the currently available cheap shared-XAG lowering route for those hypotheses.
+No native candidate or full oracle was generated.
+
+The same saved assignments were then tested with the shared-XAG solver at an
+expanded bound of twelve AND nodes (`artifacts/sub140_shared_label_xag_*_v2`).
+Neither side returned an exact network within the bounded per-node solver
+budget.  These remain timeout/upper-bound observations, not UNSAT results;
+the practical conclusion is that descriptor assignment and reversible
+synthesis should now be searched jointly.
+
+A longer y-side replay of the same twelve-node bound
+(`artifacts/sub140_shared_label_xag_y_v3.json`, 10 seconds per node count)
+also returned no exact network.  This strengthens the negative evidence for
+that fixed assignment, while still not proving a general lower bound or
+excluding larger/shared architectures.
+
+## 2026-09-14 exact kernel-frame conjugation
+
+`src/sub140_kernel_frame_conjugation.py` searched 24 shallow CNOT frames on
+all eight descriptor wires.  The transformed phase polynomials were exact by
+construction and some isolated kernels fell to 46 layers, but the best fused
+encoder/frame/kernel/uncompute composition was **199 / 859**, worse than the
+protected **190 / 857**.  The frame overhead dominates, so this boundary
+conjugation family was not promoted.
+
+## 2026-09-14 nested-feature shared-XAG screen
+
+The existing multi-output XAG solver was run against the repository's nested
+feature bank (`R0,R1`, `R1,R2`, `A,B`, and `A,B,V`) at an eight-AND bound with
+8-second per-bound timeouts.  All four rows returned
+`unknown_or_above_bound`; no exact compact feature network was found and no
+native lowering was attempted.  This is a bounded negative result, not an
+impossibility proof.
+
+As a compiler-boundary control, the exact serialized 190-depth QASM was
+retranspiled with twelve independent Qiskit seeds using the required
+`u3,cx`, `qubits_initially_zero=False` settings.  Every replay remained
+**190 / 857**.  This confirms that ordinary post-serialization fusion is not
+an untested easy improvement for the protected baseline.
+
+The best single-frame case was then combined with 64 encoder-seed pairs
+(`y=0..7`, `x=0..7`).  The best fused replay was **202 / 868**, so encoder
+seed variation did not recover the earlier 199-depth screen result or improve
+the protected baseline.  This seed/frame variant was not promoted.
+
+The canonical full-affine-layer solver was extended to four nonlinear layers
+and rerun independently on x and y (`artifacts/sub140_layered_*_v2`).  Each
+side produced a sampled partial witness, then returned `unknown` while adding
+collision counterexamples.  No exact encoder or native candidate resulted;
+increasing nonlinear depth alone is therefore insufficient for this model.
+
+## 2026-09-14 direct full-coordinate phase probe
+
+A loader-free architecture was tested by synthesizing the logo directly as a
+12-variable phase polynomial.  Its Walsh spectrum contains all **4095**
+nonconstant terms; the current beam parity synthesizer did not finish within
+the bounded interactive run and was interrupted safely.  No QASM was
+generated.  The naïve direct-spectrum architecture is therefore not viable;
+it would need a structured geometric decomposition before further work.
+
+An ancilla-aware destructive-XAG scheduler was started against the existing
+shared-rank graph, but its current implementation has no internal deadline
+and spent several minutes in rank-cache expansion without emitting a result.
+Both the 500-state and reduced 50-state beams were interrupted safely; no
+semantic or native result was produced.  Future runs require an external
+deadline and smaller incremental checkpoints before this scheduler is useful.
+
+The scheduler was then patched with a real monotonic deadline and rerun with
+beam width 20 (25 seconds) and beam width 5 (55 seconds).  The narrow run
+completed budgets 4, 8, and 12 without timeout; all reached rank 19 but none
+found affine phase support for the logo.  The result is a clean negative for
+the current shared-rank graph/scheduler combination, not a general lower
+bound on destructive XAGs.
+
+The legacy structured geometric alternatives were also benchmarked.  The
+32-seed five-output geometric multiplexer reached **545 / 945** at best, and
+the six-shell construction reached **614 depth** at best over eight seeds.
+Both are exact construction families but substantially worse than the
+protected 190-depth oracle; neither was promoted.
+
+The existing two-in-place/two-ancilla feasibility search was rerun.  It found
+general row-dependent permutation witnesses for both sides (`artifacts/sub140_k2m2_v1.json`).
+The y-side shift-only restriction was infeasible; the x-side shift-only case
+reproduced the known construction.  The general witnesses are not yet native
+circuits because each row requires a controlled two-bit affine permutation.
+The theoretical resource split is retained as an implementation target, but
+no 172-depth estimate is claimed as a measured result.
+
+The first native lowering of the general witnesses was then corrected for
+coordinate-basis direction and repository x/y placement.  Its independent
+UCR-per-operation form measured 1370/2276 and passed exhaustive verification.
+Grouping the row-conditioned flips into shared multi-output UCR blocks reduced
+the exact candidate to **1110/2760**, also exhaustively verified at
+`artifacts/sub140_k2m2_native_v5/k2m2_d1110_cx2760.qasm`.  It remains far
+above 190 and is not promoted, but establishes a correct lower-cost lowering
+for this architecture.
+
+A targeted seed sweep over the grouped permutation UCRs and the two-output
+kernel found **1043 / 2546** at y seed base 3, x seed base 1, kernel seed 14.
+The serialized candidate passed exhaustive verification with zero ancilla
+leakage, maximum error about 1.1e-14, and QASM SHA
+`8c11f230bf1d0de7dba4b65b1b7afaffbefd5efd32e8f87ac7d4683f9f9effd4`.
+It remains an experimental result because it is still far above the verified
+190-depth baseline.

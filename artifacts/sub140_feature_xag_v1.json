@@ -1,0 +1,40 @@
+{
+  "backend": "bounded_shared_multioutput_xag",
+  "max_and": 8,
+  "timeout_ms_per_bound": 8000,
+  "rows": [
+    {
+      "features": [
+        "R0",
+        "R1"
+      ],
+      "result": null,
+      "status": "unknown_or_above_bound"
+    },
+    {
+      "features": [
+        "R1",
+        "R2"
+      ],
+      "result": null,
+      "status": "unknown_or_above_bound"
+    },
+    {
+      "features": [
+        "A",
+        "B"
+      ],
+      "result": null,
+      "status": "unknown_or_above_bound"
+    },
+    {
+      "features": [
+        "A",
+        "B",
+        "V"
+      ],
+      "result": null,
+      "status": "unknown_or_above_bound"
+    }
+  ]
+}

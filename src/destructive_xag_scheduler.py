@@ -206,14 +206,21 @@ def _score(prepared: Prepared, state: State, frontier: int) -> tuple:
     return (-frontier, state.recomputations, state.evaluations, rank_now, len(state.resident))
 
 
-def search(prepared: Prepared, budget: int, beam_width: int = 2000) -> dict:
+def search(prepared: Prepared, budget: int, beam_width: int = 2000,
+           deadline: float | None = None) -> dict:
     initial = State(INPUTS, 0, 0, 0, tuple())
     beam = [initial]
     best = initial
     seen_keys = set()
     for _ in range(len(prepared.parsed.nodes) * 3):
+        if deadline is not None and __import__('time').monotonic() >= deadline:
+            return _result(prepared, budget, best, False, None, beam_width,
+                           timed_out=True)
         candidates: list[State] = []
         for state in beam:
+            if deadline is not None and __import__('time').monotonic() >= deadline:
+                return _result(prepared, budget, best, False, None, beam_width,
+                               timed_out=True)
             support = phase_support(prepared, state.resident)
             if support is not None:
                 best = state
@@ -235,7 +242,9 @@ def search(prepared: Prepared, budget: int, beam_width: int = 2000) -> dict:
     return _result(prepared, budget, best, False, None, beam_width)
 
 
-def _result(prepared: Prepared, budget: int, state: State, success: bool, support: list[int] | None, beam_width: int) -> dict:
+def _result(prepared: Prepared, budget: int, state: State, success: bool,
+            support: list[int] | None, beam_width: int,
+            timed_out: bool = False) -> dict:
     return {
         "search_type": "bounded_beam_heuristic",
         "exact_semantic_verification": True,
@@ -245,6 +254,7 @@ def _result(prepared: Prepared, budget: int, state: State, success: bool, suppor
         "budget": budget,
         "beam_width": beam_width,
         "success": success,
+        "timed_out": timed_out,
         "phase_support": support,
         "maximum_rank": max([13, *(event["rank"] for event in state.trace)]),
         "total_and_evaluations": state.evaluations,
@@ -257,15 +267,23 @@ def _result(prepared: Prepared, budget: int, state: State, success: bool, suppor
 
 def main() -> None:
     import argparse
+    import time
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--xag", type=Path, default=ROOT / "artifacts/multiplicative_depth/seeds/shared_rank.xag")
     parser.add_argument("--budgets", type=int, nargs="*", default=[0, 4, 8, 12, 20, 30])
     parser.add_argument("--beam-width", type=int, default=2000)
+    parser.add_argument("--seconds", type=float, default=60.0)
     parser.add_argument("--out", type=Path, default=ROOT / "artifacts/destructive_xag_scheduler.json")
     args = parser.parse_args()
     prepared = prepare(args.xag)
-    results = [search(prepared, budget, args.beam_width) for budget in args.budgets]
+    deadline = time.monotonic() + args.seconds
+    results = []
+    for budget in args.budgets:
+        result = search(prepared, budget, args.beam_width, deadline)
+        results.append(result)
+        if result["timed_out"]:
+            break
     report = {"budgets": results}
     args.out.write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({

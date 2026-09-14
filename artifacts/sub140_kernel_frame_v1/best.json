@@ -1,0 +1,18 @@
+{
+  "trial": 11,
+  "frame": [
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      7
+    ]
+  ],
+  "frame_gates": 2,
+  "kernel_depth": 46,
+  "full_depth": 199,
+  "full_cx": 859,
+  "terms": 63
+}

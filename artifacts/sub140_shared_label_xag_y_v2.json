@@ -1,0 +1,10 @@
+{
+  "side": "y",
+  "labels": "artifacts/sub140_raw_global_y_v1/best.json",
+  "targets": [
+    17943960563376128,
+    264398438430720,
+    140668919842816
+  ],
+  "result": null
+}
