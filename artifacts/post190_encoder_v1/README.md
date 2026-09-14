@@ -103,3 +103,41 @@ slack against its own representation**, independent of any Boolean rewrite.
 
 That is a smaller prize than a Boolean encoder but far more likely to land, and
 it is measured against the protected package rather than inferred.
+
+## The scheduling route is closed (measured)
+
+Layer-by-layer occupancy of the protected encoder
+(`src/post190_encoder_occupancy.py`):
+
+* depth 83, 389 CX, 365 u3, mean wire occupancy 77%
+* the dominant layer profiles are `cx=6,u3=6` (15 layers) and `cx=6,u3=5` (18) --
+  `2*6+6 = 18` wires, i.e. **the busy layers are already at the ceiling**
+* **17 layers carry zero rotations**; 10 carry zero CX
+
+Those 17 pure-CX layers are the basis transitions, and they are *not* recoverable
+slack. During a transition every host is occupied by CX; the only free wires are
+the three sources, which hold bare address bits, while every needed parity
+contains an output bit. So nothing can rotate during a transition.
+
+With three sources each host reaches only `2^3 = 8` parities per basis, and
+`6 hosts x 8 = 48` per basis, so covering 192 requires **four bases and three
+transitions**. Wanting 3 rotations/layer forces 3 CX + 3 Rz, hence 6 hosts and 3
+sources on 9 wires -- the structure already in use. The transitions are therefore
+structural, not a scheduling artefact:
+
+    78 per side = 64 (rotations at the ceiling) + ~14 (transitions + prologue)
+
+A parameter search over 12 seeds x 21 high-splits x 3 walk modes
+(`src/post190_sweep_param_search.py`) returns **depth 78 for every single
+combination** on both sides; only the CX count varies (194-204). The composed
+encoder measures 83.
+
+**Correction to the previous note in this file:** the claim of "roughly 19 layers
+of scheduling slack" was wrong. The busy layers were already saturated and the
+17 pure-CX layers are irreducible in this multiplexer family. The protected 190
+sits essentially at this architecture's floor, and no scheduling saving is
+available.
+
+This leaves the Boolean encoder as the only route with upside: a k=4-6 XAG per
+side, if it exists and can be scheduled with three pebbles, would plausibly fit
+the 50-layer encoder budget (a Toffoli is ~6 layers).
