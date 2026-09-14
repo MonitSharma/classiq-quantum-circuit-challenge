@@ -395,3 +395,48 @@ The last live thread in this framework is closed.  190 stands.  Reaching 142
 requires either K <= 42 (measured minimum 117) or a 576-rotation encoding
 (exhaustively infeasible for y) — so it needs a factorisation that is not a
 per-side class code.
+
+---
+
+# Joint encoding: measured, and closed
+
+The last untested assumption was that the oracle must factor through two
+*independent per-side* class codes.  The alternative: features that read wires
+from **both** registers.
+
+A feature on `w` wires costs `2^w` rotations, so a fully joint feature (12 wires)
+costs 4096 and is hopeless.  But a feature on **six wires split across the two
+registers** costs 64 — exactly what a per-side bit costs today.  If six such
+mixed features determined logo, the phase would live on 6 wires instead of 8:
+
+    today   6 ancilla bits + 2 free linear features -> 8-wire phase, K=117, rate 2 -> 59
+    joint   6 mixed features determine logo         -> 6-wire phase, K' <= 63, rate 2 -> <= 32
+            encoding identical (6 x 64 x 2 = 768 rotations)     -> floor <= 160
+
+So everything reduced to one question: **is there a logo-preserving 6-bit
+compression in which each bit reads only six of the twelve wires?**
+
+`src/joint_compression_search.py` anneals the six truth tables directly, scoring
+`sum over fibres of min(#logo0, #logo1)` — zero means feasible.
+
+| feature supports | mixing | best cost |
+|---|---|---|
+| per-side 3+3 (known impossible, calibration) | none | **51** |
+| 5 x-wires + 1 y-wire (and mirror) | lightest | 95 |
+| 4 x-wires + 2 y-wires (and mirror) | light | 97 |
+| 3 x-wires + 3 y-wires balanced | heavy | 256 |
+
+**Mixing monotonically makes it worse.**  The reason is structural: the 11 row
+and column classes need the full six-bit resolution of their own coordinate, so
+every wire a feature spends on the other register is resolution lost where it is
+needed.  Joint encoding buys nothing and costs accuracy — and even the zero-mixing
+case sits 51 collisions away from feasible, which is the already-known fact that
+a 3+3 code cannot separate 11 classes.
+
+## Standing conclusion
+
+The per-side class code is not an arbitrary modelling choice; it is forced by the
+rotation economics (a feature costs `2^w`) together with the class structure.
+With it forced, the bounds recorded above are the bounds of the problem as this
+repository formulates it: encoding >= 768 rotations, kernel rate <= 3, minimum
+K = 117, hence >= 187 layers, and 190 is 98% of that.
