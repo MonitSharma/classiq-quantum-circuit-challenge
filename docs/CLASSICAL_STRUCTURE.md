@@ -252,3 +252,34 @@ which is why materialising them as bits (235 layers) loses badly.
 The in-place encoding is the only construction with a lower floor (172), worth
 roughly 5-15 layers in practice once its sequential in-place stages are paid for.
 142 is not reachable by anything in this family.
+
+## Correction: the in-place encoding is not worth building
+
+The 172 floor for the in-place encoding assumes one well-packed stage.  It is
+actually **three sequential stages** (in-place 1, in-place 2, the two-bit load),
+and small stages cannot sustain the packing rate — each pays ramp-up.
+
+Calibrating against the measured 190 build (`structured_ucry` does 192 rotations
+in ~65 layers = 2.95 rot/layer, i.e. it saturates the rate-3 bound on a big stage):
+
+| design | encoding/block | kernel | total |
+|---|---|---|---|
+| current (1 linear + 3 ancilla), K=117 | 69 | 61 | 200 |
+| in-place (2 wires + 2 ancilla), K=195 | 66 | 68 | 201 |
+| in-place with the two steps overlapped | 62 | 68 | 193 |
+
+The rotation saving (192 -> 160 per block per side) is given back by stage
+fragmentation, and the in-place kernel is worse (K=195 against 117) because its
+16 cells per side leave no don't-cares.  **Net gain: approximately zero.**
+
+Also measured: the hybrid (y on the current encoding for its 13 cells, x
+in-place to free one ancilla and reach kernel rate 3) anneals to K=191, floor
+181 — still worse than leaving both sides alone once fragmentation is paid.
+
+### Standing conclusion
+
+190 is within a few layers of the best this architecture family offers, and the
+family cannot reach 142 at any synthesis quality (885 rotations >= 148 layers at
+perfect rate-6 packing, and the kernel is permanently capped at rate 3 because
+freeing more than two ancillas needs m=1, UNSAT on both sides).  Any 142 circuit
+does not load a per-side class code.
