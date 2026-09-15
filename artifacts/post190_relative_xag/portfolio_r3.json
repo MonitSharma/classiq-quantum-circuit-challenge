@@ -1,0 +1,281 @@
+[
+  {
+    "source": "artifacts/post190_information_space/quotient_x/frontier.json",
+    "index": 0,
+    "side": "x",
+    "prefix_depth": 43,
+    "result": {
+      "status": "UNSAT",
+      "prefix_hash": "a89ecb88a7cbfa7635e90806e5804631078e6a7a7580052b2c6bb908de36a54d",
+      "affine_rank": 10,
+      "goal_quotients": [
+        "0x5594555616bd685",
+        "0x3166f0208f0f0f3"
+      ],
+      "goal_quotient_rank": 2,
+      "affine_forms": 1024,
+      "unordered_base_pairs": 524800,
+      "distinct_product_truth_tables": 170688,
+      "distinct_nonzero_product_classes": 42077,
+      "g_coset_buckets": 42077,
+      "g_bucket_histogram": {
+        "1": 42077
+      },
+      "max_bucket_size": 1,
+      "base_only_collisions": 0,
+      "p_w_pairs_checked": 0,
+      "p_w_g_tests": 129260544,
+      "successful_memberships": 0,
+      "elapsed": 1.6972000000532717,
+      "membership_hits": []
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_x/frontier.json",
+    "index": 1,
+    "side": "x",
+    "prefix_depth": 44,
+    "result": {
+      "status": "UNSAT",
+      "prefix_hash": "a89ecb88a7cbfa7635e90806e5804631078e6a7a7580052b2c6bb908de36a54d",
+      "affine_rank": 10,
+      "goal_quotients": [
+        "0x3502a3501fb2083",
+        "0x3166f0208f0f0f3"
+      ],
+      "goal_quotient_rank": 2,
+      "affine_forms": 1024,
+      "unordered_base_pairs": 524800,
+      "distinct_product_truth_tables": 169922,
+      "distinct_nonzero_product_classes": 41723,
+      "g_coset_buckets": 41723,
+      "g_bucket_histogram": {
+        "1": 41723
+      },
+      "max_bucket_size": 1,
+      "base_only_collisions": 0,
+      "p_w_pairs_checked": 0,
+      "p_w_g_tests": 128173056,
+      "successful_memberships": 0,
+      "elapsed": 1.6805615000193939,
+      "membership_hits": []
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_x/frontier.json",
+    "index": 2,
+    "side": "x",
+    "prefix_depth": 41,
+    "result": {
+      "status": "UNSAT",
+      "prefix_hash": "a89ecb88a7cbfa7635e90806e5804631078e6a7a7580052b2c6bb908de36a54d",
+      "affine_rank": 10,
+      "goal_quotients": [
+        "0x3502a3501fb2083",
+        "0x3166f0208f0f0f3"
+      ],
+      "goal_quotient_rank": 2,
+      "affine_forms": 1024,
+      "unordered_base_pairs": 524800,
+      "distinct_product_truth_tables": 173740,
+      "distinct_nonzero_product_classes": 43425,
+      "g_coset_buckets": 43425,
+      "g_bucket_histogram": {
+        "1": 43425
+      },
+      "max_bucket_size": 1,
+      "base_only_collisions": 0,
+      "p_w_pairs_checked": 0,
+      "p_w_g_tests": 133401600,
+      "successful_memberships": 0,
+      "elapsed": 1.7044530420098454,
+      "membership_hits": []
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_y/frontier.json",
+    "index": 0,
+    "side": "y",
+    "prefix_depth": 38,
+    "result": {
+      "status": "UNSAT",
+      "prefix_hash": "d49fe3f0905e393df052dbaff018152f25d91bb6bce714b106f030d26db8b231",
+      "affine_rank": 10,
+      "goal_quotients": [
+        "0x306708ff77ff",
+        "0xf8707ff0fff"
+      ],
+      "goal_quotient_rank": 2,
+      "affine_forms": 1024,
+      "unordered_base_pairs": 524800,
+      "distinct_product_truth_tables": 172974,
+      "distinct_nonzero_product_classes": 43043,
+      "g_coset_buckets": 43043,
+      "g_bucket_histogram": {
+        "1": 43043
+      },
+      "max_bucket_size": 1,
+      "base_only_collisions": 0,
+      "p_w_pairs_checked": 0,
+      "p_w_g_tests": 132228096,
+      "successful_memberships": 0,
+      "elapsed": 1.7208552079973742,
+      "membership_hits": []
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_y/frontier.json",
+    "index": 1,
+    "side": "y",
+    "prefix_depth": 38,
+    "result": {
+      "status": "UNSAT",
+      "prefix_hash": "d49fe3f0905e393df052dbaff018152f25d91bb6bce714b106f030d26db8b231",
+      "affine_rank": 10,
+      "goal_quotients": [
+        "0x306708ff77ff",
+        "0xf8707ff0fff"
+      ],
+      "goal_quotient_rank": 2,
+      "affine_forms": 1024,
+      "unordered_base_pairs": 524800,
+      "distinct_product_truth_tables": 172974,
+      "distinct_nonzero_product_classes": 43043,
+      "g_coset_buckets": 43043,
+      "g_bucket_histogram": {
+        "1": 43043
+      },
+      "max_bucket_size": 1,
+      "base_only_collisions": 0,
+      "p_w_pairs_checked": 0,
+      "p_w_g_tests": 132228096,
+      "successful_memberships": 0,
+      "elapsed": 1.713419207953848,
+      "membership_hits": []
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_y/frontier.json",
+    "index": 2,
+    "side": "y",
+    "prefix_depth": 39,
+    "result": {
+      "status": "UNSAT",
+      "prefix_hash": "d49fe3f0905e393df052dbaff018152f25d91bb6bce714b106f030d26db8b231",
+      "affine_rank": 10,
+      "goal_quotients": [
+        "0x306708ff77ff",
+        "0xf8707ff0fff"
+      ],
+      "goal_quotient_rank": 2,
+      "affine_forms": 1024,
+      "unordered_base_pairs": 524800,
+      "distinct_product_truth_tables": 173740,
+      "distinct_nonzero_product_classes": 43425,
+      "g_coset_buckets": 43425,
+      "g_bucket_histogram": {
+        "1": 43425
+      },
+      "max_bucket_size": 1,
+      "base_only_collisions": 0,
+      "p_w_pairs_checked": 0,
+      "p_w_g_tests": 133401600,
+      "successful_memberships": 0,
+      "elapsed": 1.786161084077321,
+      "membership_hits": []
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/comparison_cached/B/frontier.json",
+    "index": 0,
+    "side": "y",
+    "prefix_depth": 60,
+    "result": {
+      "status": "UNSAT",
+      "prefix_hash": "8d2f2be73c7467c84ae75f9a7f78844d553beb132cbb61f134417ecf0d26eb66",
+      "affine_rank": 10,
+      "goal_quotients": [
+        "0x3f40171cc19fff",
+        "0x3fe00f007800"
+      ],
+      "goal_quotient_rank": 2,
+      "affine_forms": 1024,
+      "unordered_base_pairs": 524800,
+      "distinct_product_truth_tables": 172974,
+      "distinct_nonzero_product_classes": 43053,
+      "g_coset_buckets": 43053,
+      "g_bucket_histogram": {
+        "1": 43053
+      },
+      "max_bucket_size": 1,
+      "base_only_collisions": 0,
+      "p_w_pairs_checked": 0,
+      "p_w_g_tests": 132258816,
+      "successful_memberships": 0,
+      "elapsed": 1.7556716669350863,
+      "membership_hits": []
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/comparison_cached/B/frontier.json",
+    "index": 1,
+    "side": "y",
+    "prefix_depth": 63,
+    "result": {
+      "status": "UNSAT",
+      "prefix_hash": "8d2f2be73c7467c84ae75f9a7f78844d553beb132cbb61f134417ecf0d26eb66",
+      "affine_rank": 10,
+      "goal_quotients": [
+        "0x3f40171cc19fff",
+        "0x3fe00f007800"
+      ],
+      "goal_quotient_rank": 2,
+      "affine_forms": 1024,
+      "unordered_base_pairs": 524800,
+      "distinct_product_truth_tables": 172974,
+      "distinct_nonzero_product_classes": 43053,
+      "g_coset_buckets": 43053,
+      "g_bucket_histogram": {
+        "1": 43053
+      },
+      "max_bucket_size": 1,
+      "base_only_collisions": 0,
+      "p_w_pairs_checked": 0,
+      "p_w_g_tests": 132258816,
+      "successful_memberships": 0,
+      "elapsed": 1.7436496670125052,
+      "membership_hits": []
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/comparison_cached/B/frontier.json",
+    "index": 2,
+    "side": "y",
+    "prefix_depth": 64,
+    "result": {
+      "status": "UNSAT",
+      "prefix_hash": "8d2f2be73c7467c84ae75f9a7f78844d553beb132cbb61f134417ecf0d26eb66",
+      "affine_rank": 10,
+      "goal_quotients": [
+        "0x3f40171cc19fff",
+        "0x3fe00f007800"
+      ],
+      "goal_quotient_rank": 2,
+      "affine_forms": 1024,
+      "unordered_base_pairs": 524800,
+      "distinct_product_truth_tables": 172208,
+      "distinct_nonzero_product_classes": 42671,
+      "g_coset_buckets": 42671,
+      "g_bucket_histogram": {
+        "1": 42671
+      },
+      "max_bucket_size": 1,
+      "base_only_collisions": 0,
+      "p_w_pairs_checked": 0,
+      "p_w_g_tests": 131085312,
+      "successful_memberships": 0,
+      "elapsed": 1.7052734580356628,
+      "membership_hits": []
+    }
+  }
+]

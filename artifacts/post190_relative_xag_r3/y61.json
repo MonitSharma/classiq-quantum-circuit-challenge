@@ -1,0 +1,25 @@
+{
+  "status": "UNSAT",
+  "prefix_hash": "8d2f2be73c7467c84ae75f9a7f78844d553beb132cbb61f134417ecf0d26eb66",
+  "affine_rank": 10,
+  "goal_quotients": [
+    "0x3f40171cc19fff",
+    "0x3fe00f007800"
+  ],
+  "goal_quotient_rank": 2,
+  "affine_forms": 1024,
+  "unordered_base_pairs": 524800,
+  "distinct_product_truth_tables": 172974,
+  "distinct_nonzero_product_classes": 43053,
+  "g_coset_buckets": 43053,
+  "g_bucket_histogram": {
+    "1": 43053
+  },
+  "max_bucket_size": 1,
+  "base_only_collisions": 0,
+  "p_w_pairs_checked": 44086272,
+  "p_w_g_tests": 132258816,
+  "successful_memberships": 0,
+  "elapsed": 1.8490663330303505,
+  "membership_hits": []
+}
