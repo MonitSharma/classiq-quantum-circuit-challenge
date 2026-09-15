@@ -29,3 +29,16 @@ buckets and zero membership hits. Full JSON reports are in
 The saved prefix metadata and protected `artifacts/190/` package are unchanged.
 No r=4 search has been promoted yet; the next experiment is the requested
 depth-2 stage-pattern search (1+3, 2+2, 3+1), with no generic r=4 expansion.
+
+## Initial depth-2 symbolic probe
+
+`src/post190_relative_depth2_sat.py` now provides the exact Z3 BitVec(64)
+stage-bounded formulation. It models simultaneous gates by exposing only
+earlier-stage products to later-stage operands and constrains both missing
+outputs to the final affine span. The first Y38 run used 20 seconds per r=4
+pattern; 1+3, 2+2, and 3+1 all returned `UNKNOWN` on timeout. These are not
+UNSAT results. The saved run is `artifacts/post190_relative_depth2/y0.json`.
+
+The next run should profile/strengthen this symbolic encoding on the shallow
+Y and X prefixes, then continue to r=5 (2+3, 3+2) and r=6 (3+3) only after
+the r=4 patterns have been given adequate bounded solver runs.

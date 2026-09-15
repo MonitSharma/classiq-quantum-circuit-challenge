@@ -1,0 +1,36 @@
+{
+  "prefix_depth": 38,
+  "prefix_hash": "d49fe3f0905e393df052dbaff018152f25d91bb6bce714b106f030d26db8b231",
+  "patterns": {
+    "1+3": {
+      "status": "UNKNOWN",
+      "pattern": [
+        1,
+        3
+      ],
+      "timeout_seconds": 20.0,
+      "solving_time": 20.01780475000851,
+      "models": []
+    },
+    "2+2": {
+      "status": "UNKNOWN",
+      "pattern": [
+        2,
+        2
+      ],
+      "timeout_seconds": 20.0,
+      "solving_time": 20.012672333978117,
+      "models": []
+    },
+    "3+1": {
+      "status": "UNKNOWN",
+      "pattern": [
+        3,
+        1
+      ],
+      "timeout_seconds": 20.0,
+      "solving_time": 20.01680583297275,
+      "models": []
+    }
+  }
+}
