@@ -1,8 +1,16 @@
 # Instructions for agents continuing this workspace
 
-Current protected best is now **188 / 855 / 18**, `artifacts/188/`, as confirmed in `docs/HANDOFF.md`. Use `src/build_rescheduled_oracle.py --package artifacts/188 --outdir <new-directory>` for replay. Read `docs/POST190_COMMUTING_SCHEDULE.md` for the verified gate-ordering improvement and fixed-gate solver limits. The previous `artifacts/190/` remains preserved. Read `docs/POST190_NEW_ARCHITECTURES.md` for structural research; its 139-layer direct Boolean template is unsolved and is not a submission circuit. No jobs remain running. Rank one is unfinished; the user's September 15 screenshot shows a 137-depth leader.
+Current protected best is now **185 / 854 / 18**, `artifacts/185/`, as confirmed in `docs/HANDOFF.md`. Use `src/build_bridge_oracle.py --package artifacts/185 --outdir <new-directory>` for replay. Read `docs/POST186_CNOT_REWRITES.md` for the new identities, phase-network probes, and fixed-gate solver limits. The previous 186, 188 and 190 packages remain preserved. Read `docs/POST190_NEW_ARCHITECTURES.md` for structural research; its 139-layer direct Boolean template is unsolved and is not a submission circuit. Rank one is unfinished; the user's September 15 screenshot shows a 137-depth leader.
 
 Read `docs/HANDOFF.md`, `docs/EXPERIMENTS.md`, and `docs/CURRENT_DESIGN.md` before continuing. The user's objective is rank 1 in the Classiq challenge. Do not report that objective achieved based only on a local circuit improvement.
+
+The user's latest steering is to prioritize depth reductions over CNOT savings.
+Allow more CX when it helps depth; do not spend follow-up rounds primarily on
+CX tie-breakers. The 188/853 and 195/859 alternatives are historical experiments.
+Read `docs/POST185_DEPTH_CAMPAIGN.md` for the latest depth-only searches.
+They did not beat 185; neutral critical-gate proxy changes are not depth gains.
+Do not rerun their completed sweeps automatically. Joint phase-placement
+optimality is restricted to its recorded parity network and block boundaries.
 
 ## Correctness and preservation
 
@@ -13,7 +21,7 @@ Read `docs/HANDOFF.md`, `docs/EXPERIMENTS.md`, and `docs/CURRENT_DESIGN.md` befo
 - Score the exact serialized, standalone QASM in the `u3`/`cx` basis, with at most 18 qubits. State-preparation Hadamards are not part of the oracle.
 - Run `src/exhaustive_verify.py` on each proposed new best. Match the verification report SHA to the actual file. Do not mistake an old report for validation of an overwritten file.
 - Relative-phase gates require a justified compute/phase/uncompute construction; lower depth alone does not establish correctness.
-- `artifacts/188/two_stage_188.qmod` is the literal gate-matching companion to the latest verified QASM; its main adds preparation Hadamards. The preserved 190, 193/853, 193/857 and 196 packages retain their own companions. Older experimental QMODs must not be assumed to match newer QASMs.
+- `artifacts/185/two_stage_185.qmod` is the literal gate-matching companion to the latest verified QASM; its main adds preparation Hadamards. The preserved 186, 188, 190, 193/853, 193/857 and 196 packages retain their own companions. Older experimental QMODs must not be assumed to match newer QASMs.
 - The 193 kernel includes a physical ancilla permutation. Use its saved uncompute mapping and `src/build_two_stage_193.py`; inserting it into the old symmetric builder is incorrect.
 - Keep this documentation current when a new best or material failure is established. Distinguish verified results, historical measurements, hypotheses, and pending work.
 

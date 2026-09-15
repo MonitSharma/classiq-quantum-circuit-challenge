@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post188_phasepoly_probe.py",
+    "--source",
+    "artifacts/post188_phasepoly_exact_v1/oracle_d186_cx855.qasm",
+    "--repo",
+    "/tmp/classiq-PhasePoly-20260915",
+    "--outdir",
+    "artifacts/post186_phasepoly_merge_v2",
+    "--method",
+    "rotation_merging",
+    "--group",
+    "1"
+  ],
+  "seconds": 1.6723307500360534,
+  "limit_seconds": 60.0
+}

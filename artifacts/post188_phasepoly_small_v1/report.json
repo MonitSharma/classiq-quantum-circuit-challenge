@@ -1,0 +1,12 @@
+{
+  "source": "artifacts/188/two_stage_188.qasm",
+  "source_sha256": "f8f7e73ad2d48daa31a29a354e2287347b90e59d460f9e7d271495850635e46e",
+  "repository": "/tmp/classiq-PhasePoly-20260915",
+  "commit": "03c278fe522bd509e4a3c9ba814c0e09239a4279",
+  "method": "row_heap",
+  "heap": 1,
+  "ends": 1,
+  "group": 2,
+  "conversion_depth": 188,
+  "conversion_cx": 855
+}

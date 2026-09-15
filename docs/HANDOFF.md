@@ -1,5 +1,83 @@
 # Continuation handoff
 
+## September16: audit-before-testing literature search
+
+Read `docs/POST185_METHOD_SEARCH.md` before proposing another method. Audited
+existing code/docs against current primary research, then implemented two
+concrete gaps: larger SAT phase-network synthesis and CZ-frame direction
+optimization.105 six/seven-wire SAT windows found one isolated5→4-layer
+replacement, but full depth stays185.9,600 CZ-direction proposals plus exact
+joint direction models likewise do not beat185 after global scheduling.
+Eight focused tests pass.57 complete output files have matching-hash exhaustive
+reports; protected185/854/18 remains unchanged. All jobs finished; no submission.
+Timeouts and fixed-model optima are not global depth bounds. New sources:
+`src/post185_sat_phase_blocks.py`, `src/post185_cz_orientation.py`.
+
+## September 16: side-research audit and five-variable loaders
+
+Read `docs/POST185_FIVE_ADDRESS_AUDIT.md`. Reproduced five-variable encoders,
+including an x loader at 60 layers, and searched labels jointly with nine/
+ten-wire phase kernels. Tested both-axis and asymmetric variants, then direct
+reachable-state LP phase completions: 16,592 label proposals, twelve full
+QASMs passing all 4,096 inputs. Best in this experimental family is265/911;
+protected185/854/18 is unchanged. The side note's156-layer floor is not proved,
+and the saved protected kernel is38 layers/87 CX, not29. Nine focused tests
+pass. Reusable script `src/post185_five_address.py`; saved witnesses include
+coefficients and complete descriptors. All jobs finished; no submission.
+
+## Latest depth-focused follow-up: 185 remains protected
+
+Read `docs/POST185_DEPTH_CAMPAIGN.md`. The user emphasized depth over CX count.
+Completed multi-rewrite walks, 600 dirty-mediator rewrites, 400 restored-label
+compilations, 290 strict 184-layer tests, 420 deadline-aware local windows,
+and joint phase placement/global scheduling. No verified sub-185 circuit was
+found. Neutral retiming reduces a critical-gate proxy, not actual depth.
+The phase-placement model reaches fixed-model optimum185 with 867 occurrence
+choices; this is not a global depth lower bound. Three solver cases and one
+four-wire window remain unresolved at their limits. Thirty-one focused tests
+pass, and `artifacts/185/package_audit.json` confirms matching QASM, reports,
+QMOD, and identical replay. Preserve 185/854/18 and prioritize larger structural
+depth changes rather than CX tie-breakers. No submission or monitor was made.
+The final PhasePoly composition gives verified186/854, not a gain. All jobs
+from this continuation are finished.
+
+## September 15: verified 185 / 854 / 18 through new CNOT identities
+
+Current protected best is **185 depth / 854 CX / 18 qubits**, `artifacts/185/`,
+SHA `ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8`.
+Read `docs/POST186_CNOT_REWRITES.md`. Three exact CNOT rewrites, native fusion,
+and scheduling improve 186/855 to 185/854, U3 763. All 4,096 inputs, five dense
+states, gate-matching QMOD, and identical-hash replay pass. Use the new builder
+`src/build_bridge_oracle.py --package artifacts/185 --outdir <new-directory>`;
+the rescheduling-only builder cannot apply the identities. Twenty-one focused
+tests pass. Exact three-wire search (12,000 attempts) and context-scored four/
+five-wire phase networks (150/160 completed windows) did not improve their
+input circuits. The optional beam step limit records nonconvergence safely.
+The user has now emphasized **depth over CNOT savings**: allow extra CX and
+focus subsequent experiments on shorter depth. No submission or live-rank
+check was made; the screenshot's 137-depth leader remains ahead.
+
+## September 15: verified 186 / 855 / 18 through phase reordering
+
+Current protected best is **186 depth / 855 CX / 18 qubits**, `artifacts/186/`,
+SHA `5e7f8f165928e965cc47d5b697def0681a79aa6432b8d94302374fd071f25ac6`.
+Read `docs/POST188_PHASE_REORDERING.md`. Checked H/Rz conversion, PhasePoly
+rotation-level reordering, native fusion, and exact scheduling improve 188/855
+to 186/855, with 770 U3 gates. All 4,096 inputs and five dense states pass;
+literal QMOD matches all 1,625 gates. Replay needs no external optimizer:
+`src/build_rescheduled_oracle.py --package artifacts/186 --outdir <new-directory>`.
+Fresh replay matches the hash and passes all inputs. Six focused tests pass.
+Joint modular loaders, sparse-code/kernel combinations, and Pauli synthesis
+did not beat this result. The old balanced-code blanket floor-77 claim was
+not reproduced; actual alternative loaders are 71–76, but their complete
+oracles are slower. A previous 193/853 circuit now reaches 188/853, still behind
+186/855 on depth. Fixed-graph optima are not global oracle bounds. All earlier
+packages remain preserved. No submission or live-rank check was performed;
+the screenshot's leader is 137/561. Rank one remains unfinished.
+Final split-phase, native-inverse, and nonlinear-candidate checks did not beat
+186; the nonlinear alternative improves 200 to 195. All jobs are finished;
+no background optimization or leaderboard monitor was created.
+
 ## September 15: verified 188 / 855 / 18 through commuting-gate scheduling
 
 Current protected best is **188 depth / 855 CX / 18 qubits**, `artifacts/188/`,

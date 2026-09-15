@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post185_sat_blocks_exact_v1/oracle_d185_cx854.qasm",
+  "sha256": "831acbad20d09f2fe518021a58700efa63675c86d7813d258ee8ea387316c9f9",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 185,
+  "cx_count": 854,
+  "max_error": 6.247677358896723e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 2.023900059506875e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 1.1341497898101807,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

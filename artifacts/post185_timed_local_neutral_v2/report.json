@@ -1,0 +1,7532 @@
+{
+  "source": "artifacts/185/two_stage_185.qasm",
+  "source_sha256": "ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8",
+  "best_depth": 185,
+  "critical_count": 1096,
+  "neutral": true,
+  "attempts": 2558,
+  "windows": 240,
+  "seconds": 30.921789790969342,
+  "history": [
+    {
+      "wires": [
+        1,
+        2,
+        14
+      ],
+      "selected": [
+        1225,
+        1226,
+        1234,
+        1242
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        35,
+        38,
+        38
+      ],
+      "search": {
+        "status": "found",
+        "visited": 128,
+        "deadline": 41
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate16_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        3,
+        5,
+        13
+      ],
+      "selected": [
+        999,
+        1000,
+        1001,
+        1003
+      ],
+      "arrival": [
+        0,
+        3,
+        2
+      ],
+      "departure": [
+        55,
+        53,
+        54
+      ],
+      "search": {
+        "status": "found",
+        "visited": 58,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate25_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        3,
+        5,
+        15
+      ],
+      "selected": [
+        548,
+        549,
+        550,
+        551
+      ],
+      "arrival": [
+        3,
+        1,
+        0
+      ],
+      "departure": [
+        145,
+        147,
+        144
+      ],
+      "search": {
+        "status": "found",
+        "visited": 48,
+        "deadline": 150
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate46_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        11,
+        15,
+        16
+      ],
+      "selected": [
+        768,
+        769,
+        770,
+        771
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        101,
+        98,
+        99
+      ],
+      "search": {
+        "status": "found",
+        "visited": 47,
+        "deadline": 102
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate81_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        3,
+        13,
+        15
+      ],
+      "selected": [
+        999,
+        1018,
+        1019,
+        1021
+      ],
+      "arrival": [
+        0,
+        2,
+        3
+      ],
+      "departure": [
+        53,
+        56,
+        54
+      ],
+      "search": {
+        "status": "found",
+        "visited": 37,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate158_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        0,
+        3,
+        15
+      ],
+      "selected": [
+        464,
+        465,
+        466,
+        467
+      ],
+      "arrival": [
+        0,
+        5,
+        4
+      ],
+      "departure": [
+        162,
+        162,
+        161
+      ],
+      "search": {
+        "status": "found",
+        "visited": 47,
+        "deadline": 169
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate166_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1349,
+        1350,
+        1351,
+        1352,
+        1353,
+        1354,
+        1355
+      ],
+      "arrival": [
+        0,
+        3,
+        3
+      ],
+      "departure": [
+        52,
+        51,
+        52
+      ],
+      "search": {
+        "status": "found",
+        "visited": 1081,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate209_d185_cx854.qasm"
+    }
+  ],
+  "rows": [
+    {
+      "wires": [
+        4,
+        12,
+        17
+      ],
+      "selected": [
+        772,
+        774,
+        776,
+        780,
+        784
+      ],
+      "arrival": [
+        2,
+        1,
+        0
+      ],
+      "departure": [
+        98,
+        99,
+        101
+      ],
+      "search": {
+        "status": "found",
+        "visited": 62,
+        "deadline": 103
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        16,
+        17
+      ],
+      "selected": [
+        1024,
+        1034,
+        1035,
+        1051
+      ],
+      "arrival": [
+        1,
+        2,
+        0
+      ],
+      "departure": [
+        60,
+        58,
+        60
+      ],
+      "search": {
+        "status": "found",
+        "visited": 34,
+        "deadline": 63
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        12,
+        15,
+        16
+      ],
+      "selected": [
+        738,
+        741,
+        742,
+        745,
+        747
+      ],
+      "arrival": [
+        1,
+        0,
+        1
+      ],
+      "departure": [
+        106,
+        107,
+        106
+      ],
+      "search": {
+        "status": "found",
+        "visited": 153,
+        "deadline": 110
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1034,
+        1041,
+        1050,
+        1051,
+        1056
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        54,
+        57,
+        57
+      ],
+      "search": {
+        "status": "found",
+        "visited": 257,
+        "deadline": 61
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        3,
+        15
+      ],
+      "selected": [
+        942,
+        950,
+        955,
+        961
+      ],
+      "arrival": [
+        1,
+        2,
+        0
+      ],
+      "departure": [
+        67,
+        66,
+        67
+      ],
+      "search": {
+        "status": "found",
+        "visited": 34,
+        "deadline": 70
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        4,
+        13
+      ],
+      "selected": [
+        987,
+        997,
+        1008,
+        1016
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        62,
+        64,
+        61
+      ],
+      "search": {
+        "status": "found",
+        "visited": 80,
+        "deadline": 65
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        14
+      ],
+      "selected": [
+        1485,
+        1487,
+        1495,
+        1496,
+        1507
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        11,
+        10,
+        11
+      ],
+      "search": {
+        "status": "found",
+        "visited": 75,
+        "deadline": 13
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        11,
+        12
+      ],
+      "selected": [
+        1439,
+        1443,
+        1446,
+        1455
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        16,
+        16,
+        15
+      ],
+      "search": {
+        "status": "found",
+        "visited": 27,
+        "deadline": 18
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        9,
+        11,
+        12
+      ],
+      "selected": [
+        1273,
+        1282,
+        1283,
+        1291
+      ],
+      "arrival": [
+        0,
+        6,
+        5
+      ],
+      "departure": [
+        33,
+        32,
+        33
+      ],
+      "search": {
+        "status": "found",
+        "visited": 38,
+        "deadline": 40
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        7,
+        17
+      ],
+      "selected": [
+        1197,
+        1201,
+        1212,
+        1219,
+        1230
+      ],
+      "arrival": [
+        2,
+        0,
+        1
+      ],
+      "departure": [
+        42,
+        39,
+        40
+      ],
+      "search": {
+        "status": "found",
+        "visited": 151,
+        "deadline": 46
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        8,
+        11,
+        12
+      ],
+      "selected": [
+        1379,
+        1388,
+        1389,
+        1400
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        23,
+        22,
+        23
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 25
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        14
+      ],
+      "selected": [
+        1101,
+        1102,
+        1112,
+        1113,
+        1124
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        50,
+        50,
+        49
+      ],
+      "search": {
+        "status": "found",
+        "visited": 81,
+        "deadline": 52
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        5,
+        16,
+        17
+      ],
+      "selected": [
+        376,
+        385,
+        386,
+        387
+      ],
+      "arrival": [
+        0,
+        2,
+        1
+      ],
+      "departure": [
+        145,
+        144,
+        144
+      ],
+      "search": {
+        "status": "found",
+        "visited": 28,
+        "deadline": 148
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        5,
+        14,
+        17
+      ],
+      "selected": [
+        562,
+        567,
+        570,
+        571
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        125,
+        124,
+        126
+      ],
+      "search": {
+        "status": "found",
+        "visited": 27,
+        "deadline": 128
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        16
+      ],
+      "selected": [
+        209,
+        218,
+        219,
+        230
+      ],
+      "arrival": [
+        0,
+        5,
+        5
+      ],
+      "departure": [
+        162,
+        162,
+        161
+      ],
+      "search": {
+        "status": "found",
+        "visited": 61,
+        "deadline": 169
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        10,
+        16
+      ],
+      "selected": [
+        1069,
+        1071,
+        1074,
+        1084
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        54,
+        53,
+        54
+      ],
+      "search": {
+        "status": "found",
+        "visited": 27,
+        "deadline": 56
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        14
+      ],
+      "selected": [
+        1225,
+        1226,
+        1234,
+        1242
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        35,
+        38,
+        38
+      ],
+      "search": {
+        "status": "found",
+        "visited": 128,
+        "deadline": 41
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate16_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        1,
+        2,
+        14
+      ],
+      "selected": [
+        1268,
+        1269,
+        1270,
+        1271
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        0,
+        0,
+        1
+      ],
+      "search": {
+        "status": "found",
+        "visited": 67,
+        "deadline": 4
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        1,
+        15
+      ],
+      "selected": [
+        1084,
+        1091,
+        1092,
+        1093
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        33,
+        42,
+        39
+      ],
+      "search": {
+        "status": "found",
+        "visited": 29,
+        "deadline": 43
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        1,
+        15
+      ],
+      "selected": [
+        1063,
+        1083,
+        1084,
+        1091
+      ],
+      "arrival": [
+        1,
+        3,
+        0
+      ],
+      "departure": [
+        44,
+        42,
+        41
+      ],
+      "search": {
+        "status": "found",
+        "visited": 26,
+        "deadline": 46
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        16
+      ],
+      "selected": [
+        486,
+        487,
+        490,
+        493
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        160,
+        160,
+        159
+      ],
+      "search": {
+        "status": "found",
+        "visited": 41,
+        "deadline": 162
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        13,
+        16,
+        17
+      ],
+      "selected": [
+        762,
+        763,
+        764,
+        767
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        103,
+        102,
+        104
+      ],
+      "search": {
+        "status": "found",
+        "visited": 52,
+        "deadline": 106
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        5
+      ],
+      "selected": [
+        708,
+        709,
+        710,
+        714
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        114,
+        115,
+        115
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 117
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        15
+      ],
+      "selected": [
+        1267,
+        1268,
+        1270,
+        1273
+      ],
+      "arrival": [
+        3,
+        4,
+        0
+      ],
+      "departure": [
+        3,
+        2,
+        3
+      ],
+      "search": {
+        "status": "found",
+        "visited": 36,
+        "deadline": 8
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        4,
+        5
+      ],
+      "selected": [
+        571,
+        572,
+        573,
+        574
+      ],
+      "arrival": [
+        7,
+        0,
+        5
+      ],
+      "departure": [
+        142,
+        144,
+        141
+      ],
+      "search": {
+        "status": "found",
+        "visited": 30,
+        "deadline": 150
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        3,
+        5,
+        13
+      ],
+      "selected": [
+        999,
+        1000,
+        1001,
+        1003
+      ],
+      "arrival": [
+        0,
+        3,
+        2
+      ],
+      "departure": [
+        55,
+        53,
+        54
+      ],
+      "search": {
+        "status": "found",
+        "visited": 58,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate25_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        4,
+        5,
+        13
+      ],
+      "selected": [
+        1003,
+        1004,
+        1005,
+        1006
+      ],
+      "arrival": [
+        0,
+        5,
+        5
+      ],
+      "departure": [
+        52,
+        51,
+        52
+      ],
+      "search": {
+        "status": "found",
+        "visited": 68,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        5,
+        13
+      ],
+      "selected": [
+        1161,
+        1162,
+        1170,
+        1173
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        23,
+        23,
+        22
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 25
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        9,
+        11,
+        12
+      ],
+      "selected": [
+        1507,
+        1508,
+        1509,
+        1510,
+        1511
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        16,
+        19,
+        19
+      ],
+      "search": {
+        "status": "found",
+        "visited": 257,
+        "deadline": 23
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        5,
+        17
+      ],
+      "selected": [
+        721,
+        722,
+        726,
+        738
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        113,
+        113,
+        114
+      ],
+      "search": {
+        "status": "found",
+        "visited": 47,
+        "deadline": 116
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        8,
+        10,
+        16
+      ],
+      "selected": [
+        1292,
+        1293,
+        1294,
+        1295
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        64,
+        64,
+        65
+      ],
+      "search": {
+        "status": "found",
+        "visited": 47,
+        "deadline": 67
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        11,
+        17
+      ],
+      "selected": [
+        744,
+        745,
+        746,
+        747
+      ],
+      "arrival": [
+        1,
+        1,
+        0
+      ],
+      "departure": [
+        106,
+        107,
+        110
+      ],
+      "search": {
+        "status": "found",
+        "visited": 84,
+        "deadline": 112
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        11,
+        13,
+        17
+      ],
+      "selected": [
+        787,
+        788,
+        792,
+        793
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        99,
+        97,
+        98
+      ],
+      "search": {
+        "status": "found",
+        "visited": 72,
+        "deadline": 101
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        9,
+        10,
+        11
+      ],
+      "selected": [
+        919,
+        920,
+        922,
+        923
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        68,
+        68,
+        67
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 70
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        8,
+        11,
+        12
+      ],
+      "selected": [
+        1456,
+        1457,
+        1458,
+        1459
+      ],
+      "arrival": [
+        0,
+        2,
+        1
+      ],
+      "departure": [
+        30,
+        30,
+        31
+      ],
+      "search": {
+        "status": "found",
+        "visited": 48,
+        "deadline": 34
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        12,
+        13,
+        15
+      ],
+      "selected": [
+        819,
+        820,
+        823,
+        824
+      ],
+      "arrival": [
+        1,
+        2,
+        0
+      ],
+      "departure": [
+        90,
+        89,
+        90
+      ],
+      "search": {
+        "status": "found",
+        "visited": 34,
+        "deadline": 93
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        15,
+        17
+      ],
+      "selected": [
+        509,
+        510,
+        517,
+        518
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        157,
+        153,
+        157
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 159
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        2,
+        3
+      ],
+      "selected": [
+        1140,
+        1141,
+        1142,
+        1143
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        26,
+        26,
+        24
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 28
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        7,
+        10
+      ],
+      "selected": [
+        1395,
+        1396,
+        1397,
+        1398
+      ],
+      "arrival": [
+        1,
+        0,
+        1
+      ],
+      "departure": [
+        43,
+        39,
+        43
+      ],
+      "search": {
+        "status": "found",
+        "visited": 64,
+        "deadline": 46
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        11,
+        13,
+        16
+      ],
+      "selected": [
+        764,
+        767,
+        768,
+        769
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        101,
+        103,
+        100
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 104
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        8,
+        9,
+        12
+      ],
+      "selected": [
+        1501,
+        1506,
+        1507,
+        1510
+      ],
+      "arrival": [
+        0,
+        2,
+        0
+      ],
+      "departure": [
+        24,
+        22,
+        20
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 25
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        4,
+        14
+      ],
+      "selected": [
+        1110,
+        1114,
+        1115,
+        1122
+      ],
+      "arrival": [
+        0,
+        7,
+        5
+      ],
+      "departure": [
+        34,
+        32,
+        31
+      ],
+      "search": {
+        "status": "found",
+        "visited": 30,
+        "deadline": 40
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        14
+      ],
+      "selected": [
+        932,
+        933,
+        934,
+        948
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        68,
+        69,
+        69
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 71
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        14
+      ],
+      "selected": [
+        961,
+        962,
+        963,
+        964
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        63,
+        62,
+        63
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 65
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        3,
+        4,
+        15
+      ],
+      "selected": [
+        510,
+        511,
+        512,
+        517
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        154,
+        156,
+        153
+      ],
+      "search": {
+        "status": "found",
+        "visited": 49,
+        "deadline": 158
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        12,
+        14
+      ],
+      "selected": [
+        748,
+        749,
+        750,
+        751
+      ],
+      "arrival": [
+        0,
+        3,
+        1
+      ],
+      "departure": [
+        104,
+        102,
+        102
+      ],
+      "search": {
+        "status": "found",
+        "visited": 72,
+        "deadline": 107
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        3,
+        5,
+        15
+      ],
+      "selected": [
+        548,
+        549,
+        550,
+        551
+      ],
+      "arrival": [
+        3,
+        1,
+        0
+      ],
+      "departure": [
+        145,
+        147,
+        144
+      ],
+      "search": {
+        "status": "found",
+        "visited": 48,
+        "deadline": 150
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate46_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        6,
+        11,
+        12
+      ],
+      "selected": [
+        1284,
+        1285,
+        1289,
+        1290
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        65,
+        65,
+        64
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 67
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        4,
+        16
+      ],
+      "selected": [
+        713,
+        715,
+        716,
+        717
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        73,
+        114,
+        111
+      ],
+      "search": {
+        "status": "found",
+        "visited": 29,
+        "deadline": 115
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        9,
+        11,
+        12
+      ],
+      "selected": [
+        1460,
+        1461,
+        1462,
+        1463
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        29,
+        28,
+        29
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 31
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        3,
+        5,
+        15
+      ],
+      "selected": [
+        1096,
+        1123,
+        1124,
+        1129
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        33,
+        37,
+        32
+      ],
+      "search": {
+        "status": "found",
+        "visited": 28,
+        "deadline": 38
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        3,
+        15
+      ],
+      "selected": [
+        1020,
+        1021,
+        1022,
+        1025,
+        1032
+      ],
+      "arrival": [
+        0,
+        7,
+        7
+      ],
+      "departure": [
+        52,
+        51,
+        52
+      ],
+      "search": {
+        "status": "found",
+        "visited": 82,
+        "deadline": 61
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        8,
+        9,
+        12
+      ],
+      "selected": [
+        1494,
+        1500,
+        1501,
+        1506
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        24,
+        26,
+        23
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 27
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1434,
+        1435,
+        1436,
+        1437,
+        1438,
+        1439
+      ],
+      "arrival": [
+        0,
+        3,
+        4
+      ],
+      "departure": [
+        33,
+        32,
+        33
+      ],
+      "search": {
+        "status": "found",
+        "visited": 564,
+        "deadline": 40
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        5,
+        13,
+        15
+      ],
+      "selected": [
+        1000,
+        1001,
+        1002,
+        1018
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        53,
+        54,
+        55
+      ],
+      "search": {
+        "status": "found",
+        "visited": 24,
+        "deadline": 56
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        8,
+        9,
+        11
+      ],
+      "selected": [
+        1316,
+        1320,
+        1321,
+        1322
+      ],
+      "arrival": [
+        0,
+        3,
+        1
+      ],
+      "departure": [
+        62,
+        60,
+        58
+      ],
+      "search": {
+        "status": "found",
+        "visited": 26,
+        "deadline": 64
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        2,
+        16
+      ],
+      "selected": [
+        404,
+        405,
+        406,
+        408
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        175,
+        174,
+        175
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 177
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        7,
+        10
+      ],
+      "selected": [
+        1606,
+        1607,
+        1609,
+        1610
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        3,
+        2,
+        2
+      ],
+      "search": {
+        "status": "found",
+        "visited": 45,
+        "deadline": 5
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        16
+      ],
+      "selected": [
+        698,
+        699,
+        702,
+        705
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        116,
+        116,
+        115
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 118
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        13
+      ],
+      "selected": [
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006
+      ],
+      "arrival": [
+        0,
+        3,
+        3
+      ],
+      "departure": [
+        52,
+        51,
+        52
+      ],
+      "search": {
+        "status": "found",
+        "visited": 1081,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        7,
+        16
+      ],
+      "selected": [
+        1281,
+        1282,
+        1286,
+        1291
+      ],
+      "arrival": [
+        2,
+        0,
+        3
+      ],
+      "departure": [
+        68,
+        68,
+        67
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 72
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        4,
+        15
+      ],
+      "selected": [
+        1130,
+        1149,
+        1150,
+        1159
+      ],
+      "arrival": [
+        3,
+        7,
+        0
+      ],
+      "departure": [
+        31,
+        27,
+        26
+      ],
+      "search": {
+        "status": "found",
+        "visited": 36,
+        "deadline": 35
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        2,
+        14
+      ],
+      "selected": [
+        1139,
+        1140,
+        1142,
+        1144
+      ],
+      "arrival": [
+        0,
+        3,
+        2
+      ],
+      "departure": [
+        27,
+        26,
+        27
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 31
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        5,
+        16,
+        17
+      ],
+      "selected": [
+        648,
+        662,
+        663,
+        664
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        125,
+        128,
+        126
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 129
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        16
+      ],
+      "selected": [
+        627,
+        628,
+        629,
+        630
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        132,
+        130,
+        132
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 134
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        3,
+        15
+      ],
+      "selected": [
+        1206,
+        1207,
+        1210,
+        1211,
+        1222
+      ],
+      "arrival": [
+        0,
+        5,
+        4
+      ],
+      "departure": [
+        14,
+        14,
+        13
+      ],
+      "search": {
+        "status": "found",
+        "visited": 154,
+        "deadline": 21
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        17
+      ],
+      "selected": [
+        485,
+        486,
+        487,
+        498
+      ],
+      "arrival": [
+        2,
+        1,
+        0
+      ],
+      "departure": [
+        160,
+        161,
+        161
+      ],
+      "search": {
+        "status": "found",
+        "visited": 36,
+        "deadline": 164
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1282,
+        1283,
+        1288,
+        1291
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        67,
+        66,
+        67
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 69
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        3,
+        15,
+        17
+      ],
+      "selected": [
+        460,
+        462,
+        463,
+        465
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        164,
+        163,
+        166
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 167
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        4,
+        13
+      ],
+      "selected": [
+        929,
+        936,
+        937,
+        943
+      ],
+      "arrival": [
+        2,
+        0,
+        1
+      ],
+      "departure": [
+        70,
+        72,
+        69
+      ],
+      "search": {
+        "status": "found",
+        "visited": 42,
+        "deadline": 74
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        16
+      ],
+      "selected": [
+        433,
+        434,
+        437,
+        438
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        172,
+        172,
+        171
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 174
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        16,
+        17
+      ],
+      "selected": [
+        1328,
+        1329,
+        1332,
+        1335
+      ],
+      "arrival": [
+        1,
+        2,
+        0
+      ],
+      "departure": [
+        60,
+        58,
+        60
+      ],
+      "search": {
+        "status": "found",
+        "visited": 34,
+        "deadline": 63
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        17
+      ],
+      "selected": [
+        455,
+        456,
+        457,
+        458,
+        459
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        164,
+        167,
+        167
+      ],
+      "search": {
+        "status": "found",
+        "visited": 257,
+        "deadline": 171
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        9,
+        10,
+        16
+      ],
+      "selected": [
+        1496,
+        1497,
+        1498,
+        1512
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        23,
+        22,
+        23
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 25
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        14,
+        15
+      ],
+      "selected": [
+        998,
+        1007,
+        1008,
+        1013,
+        1018
+      ],
+      "arrival": [
+        2,
+        3,
+        0
+      ],
+      "departure": [
+        54,
+        53,
+        55
+      ],
+      "search": {
+        "status": "found",
+        "visited": 63,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        12,
+        14,
+        15
+      ],
+      "selected": [
+        819,
+        824,
+        825,
+        829
+      ],
+      "arrival": [
+        1,
+        3,
+        0
+      ],
+      "departure": [
+        91,
+        89,
+        88
+      ],
+      "search": {
+        "status": "found",
+        "visited": 26,
+        "deadline": 93
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        3,
+        15
+      ],
+      "selected": [
+        370,
+        371,
+        372,
+        373,
+        374
+      ],
+      "arrival": [
+        0,
+        2,
+        2
+      ],
+      "departure": [
+        181,
+        180,
+        181
+      ],
+      "search": {
+        "status": "found",
+        "visited": 77,
+        "deadline": 185
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        13,
+        14
+      ],
+      "selected": [
+        1036,
+        1037,
+        1042,
+        1043
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        47,
+        46,
+        47
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 49
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        14
+      ],
+      "selected": [
+        1050,
+        1051,
+        1056,
+        1057,
+        1060
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        44,
+        44,
+        43
+      ],
+      "search": {
+        "status": "found",
+        "visited": 68,
+        "deadline": 46
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        14
+      ],
+      "selected": [
+        1193,
+        1194,
+        1195,
+        1196,
+        1199,
+        1200,
+        1201
+      ],
+      "arrival": [
+        0,
+        3,
+        3
+      ],
+      "departure": [
+        14,
+        14,
+        13
+      ],
+      "search": {
+        "status": "found",
+        "visited": 1601,
+        "deadline": 21
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        16
+      ],
+      "selected": [
+        577,
+        578,
+        581,
+        584
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        141,
+        141,
+        140
+      ],
+      "search": {
+        "status": "found",
+        "visited": 41,
+        "deadline": 143
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        11,
+        15,
+        16
+      ],
+      "selected": [
+        768,
+        769,
+        770,
+        771
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        101,
+        98,
+        99
+      ],
+      "search": {
+        "status": "found",
+        "visited": 47,
+        "deadline": 102
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate81_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        4,
+        5,
+        16
+      ],
+      "selected": [
+        390,
+        391,
+        394,
+        395
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        180,
+        180,
+        179
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 182
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1381,
+        1382,
+        1386,
+        1389
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        48,
+        47,
+        48
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 50
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        12,
+        17
+      ],
+      "selected": [
+        778,
+        779,
+        780,
+        781
+      ],
+      "arrival": [
+        3,
+        1,
+        0
+      ],
+      "departure": [
+        98,
+        99,
+        101
+      ],
+      "search": {
+        "status": "found",
+        "visited": 30,
+        "deadline": 103
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        11,
+        12
+      ],
+      "selected": [
+        1469,
+        1470,
+        1475,
+        1476
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        27,
+        26,
+        27
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 29
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        14
+      ],
+      "selected": [
+        1066,
+        1067,
+        1068,
+        1082
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        42,
+        42,
+        41
+      ],
+      "search": {
+        "status": "found",
+        "visited": 41,
+        "deadline": 44
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        14
+      ],
+      "selected": [
+        931,
+        932,
+        935,
+        948
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        70,
+        70,
+        69
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 72
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        16
+      ],
+      "selected": [
+        613,
+        614,
+        617,
+        620
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        135,
+        135,
+        134
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 137
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        14,
+        17
+      ],
+      "selected": [
+        814,
+        815,
+        816,
+        817
+      ],
+      "arrival": [
+        3,
+        3,
+        0
+      ],
+      "departure": [
+        90,
+        90,
+        93
+      ],
+      "search": {
+        "status": "found",
+        "visited": 24,
+        "deadline": 95
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        7,
+        8,
+        17
+      ],
+      "selected": [
+        1547,
+        1548,
+        1551,
+        1552,
+        1561
+      ],
+      "arrival": [
+        5,
+        0,
+        4
+      ],
+      "departure": [
+        14,
+        14,
+        13
+      ],
+      "search": {
+        "status": "found",
+        "visited": 167,
+        "deadline": 21
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        5,
+        17
+      ],
+      "selected": [
+        445,
+        446,
+        450,
+        454
+      ],
+      "arrival": [
+        0,
+        2,
+        1
+      ],
+      "departure": [
+        171,
+        170,
+        171
+      ],
+      "search": {
+        "status": "found",
+        "visited": 34,
+        "deadline": 174
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        13
+      ],
+      "selected": [
+        927,
+        928,
+        929,
+        930,
+        931,
+        935,
+        936
+      ],
+      "arrival": [
+        34,
+        0,
+        35
+      ],
+      "departure": [
+        71,
+        70,
+        71
+      ],
+      "search": {
+        "status": "found",
+        "visited": 747,
+        "deadline": 109
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        4
+      ],
+      "selected": [
+        667,
+        668,
+        669,
+        670
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        121,
+        120,
+        123
+      ],
+      "search": {
+        "status": "found",
+        "visited": 28,
+        "deadline": 124
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        4,
+        13
+      ],
+      "selected": [
+        978,
+        981,
+        982,
+        985
+      ],
+      "arrival": [
+        0,
+        4,
+        2
+      ],
+      "departure": [
+        62,
+        60,
+        58
+      ],
+      "search": {
+        "status": "found",
+        "visited": 27,
+        "deadline": 65
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        3,
+        15
+      ],
+      "selected": [
+        500,
+        501,
+        505,
+        506
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        158,
+        157,
+        158
+      ],
+      "search": {
+        "status": "found",
+        "visited": 63,
+        "deadline": 160
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        5,
+        13
+      ],
+      "selected": [
+        1161,
+        1162,
+        1170,
+        1173
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        23,
+        23,
+        22
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 25
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        2,
+        16
+      ],
+      "selected": [
+        593,
+        594,
+        595,
+        597
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        137,
+        137,
+        136
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 139
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        17
+      ],
+      "selected": [
+        478,
+        479,
+        480,
+        481,
+        484,
+        485,
+        498
+      ],
+      "arrival": [
+        0,
+        3,
+        3
+      ],
+      "departure": [
+        162,
+        162,
+        161
+      ],
+      "search": {
+        "status": "found",
+        "visited": 1601,
+        "deadline": 169
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        7,
+        16
+      ],
+      "selected": [
+        1281,
+        1282,
+        1286,
+        1291
+      ],
+      "arrival": [
+        2,
+        0,
+        3
+      ],
+      "departure": [
+        68,
+        68,
+        67
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 72
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        11,
+        15,
+        17
+      ],
+      "selected": [
+        805,
+        806,
+        807,
+        812,
+        817
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        94,
+        92,
+        93
+      ],
+      "search": {
+        "status": "found",
+        "visited": 101,
+        "deadline": 96
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        9,
+        10,
+        16
+      ],
+      "selected": [
+        1496,
+        1497,
+        1498,
+        1512
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        23,
+        22,
+        23
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 25
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        17
+      ],
+      "selected": [
+        485,
+        486,
+        487,
+        498
+      ],
+      "arrival": [
+        2,
+        1,
+        0
+      ],
+      "departure": [
+        160,
+        161,
+        161
+      ],
+      "search": {
+        "status": "found",
+        "visited": 36,
+        "deadline": 164
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        3,
+        15
+      ],
+      "selected": [
+        1020,
+        1021,
+        1022,
+        1025,
+        1032
+      ],
+      "arrival": [
+        0,
+        7,
+        7
+      ],
+      "departure": [
+        52,
+        51,
+        52
+      ],
+      "search": {
+        "status": "found",
+        "visited": 82,
+        "deadline": 61
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1394,
+        1395,
+        1398,
+        1399
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        44,
+        43,
+        44
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 46
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        15
+      ],
+      "selected": [
+        945,
+        946,
+        965,
+        966,
+        988
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        66,
+        66,
+        62
+      ],
+      "search": {
+        "status": "found",
+        "visited": 68,
+        "deadline": 68
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        13
+      ],
+      "selected": [
+        982,
+        983,
+        984,
+        985,
+        986
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        54,
+        57,
+        57
+      ],
+      "search": {
+        "status": "found",
+        "visited": 257,
+        "deadline": 61
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1352,
+        1353,
+        1354,
+        1355
+      ],
+      "arrival": [
+        0,
+        5,
+        5
+      ],
+      "departure": [
+        52,
+        51,
+        52
+      ],
+      "search": {
+        "status": "found",
+        "visited": 68,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        11,
+        16,
+        17
+      ],
+      "selected": [
+        831,
+        832,
+        833,
+        834,
+        837,
+        838
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        88,
+        89,
+        87
+      ],
+      "search": {
+        "status": "found",
+        "visited": 316,
+        "deadline": 92
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        11,
+        13,
+        17
+      ],
+      "selected": [
+        754,
+        755,
+        756,
+        757,
+        758,
+        759
+      ],
+      "arrival": [
+        1,
+        0,
+        1
+      ],
+      "departure": [
+        104,
+        104,
+        106
+      ],
+      "search": {
+        "status": "found",
+        "visited": 314,
+        "deadline": 109
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        12,
+        16
+      ],
+      "selected": [
+        780,
+        781,
+        782,
+        784
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        98,
+        98,
+        97
+      ],
+      "search": {
+        "status": "found",
+        "visited": 41,
+        "deadline": 100
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        9,
+        11,
+        12
+      ],
+      "selected": [
+        1583,
+        1584,
+        1588,
+        1589
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        6,
+        6,
+        5
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 8
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        8,
+        17
+      ],
+      "selected": [
+        1514,
+        1521,
+        1522,
+        1523
+      ],
+      "arrival": [
+        1,
+        3,
+        0
+      ],
+      "departure": [
+        23,
+        16,
+        20
+      ],
+      "search": {
+        "status": "found",
+        "visited": 30,
+        "deadline": 25
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        14
+      ],
+      "selected": [
+        932,
+        933,
+        934,
+        948
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        68,
+        69,
+        69
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 71
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        2,
+        14
+      ],
+      "selected": [
+        957,
+        958,
+        959,
+        960
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        63,
+        64,
+        65
+      ],
+      "search": {
+        "status": "found",
+        "visited": 47,
+        "deadline": 67
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        16
+      ],
+      "selected": [
+        434,
+        435,
+        436,
+        438
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        170,
+        171,
+        171
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 173
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        17
+      ],
+      "selected": [
+        665,
+        666,
+        672,
+        676
+      ],
+      "arrival": [
+        0,
+        5,
+        5
+      ],
+      "departure": [
+        124,
+        123,
+        124
+      ],
+      "search": {
+        "status": "found",
+        "visited": 68,
+        "deadline": 131
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        1,
+        2
+      ],
+      "selected": [
+        1047,
+        1049,
+        1050,
+        1051
+      ],
+      "arrival": [
+        0,
+        2,
+        0
+      ],
+      "departure": [
+        47,
+        45,
+        44
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 48
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        9,
+        12,
+        16
+      ],
+      "selected": [
+        1307,
+        1308,
+        1312,
+        1313
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        62,
+        62,
+        61
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 64
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        5,
+        16
+      ],
+      "selected": [
+        494,
+        495,
+        496,
+        497
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        157,
+        156,
+        157
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 159
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        7,
+        9,
+        11
+      ],
+      "selected": [
+        1302,
+        1303,
+        1306,
+        1311
+      ],
+      "arrival": [
+        0,
+        1,
+        2
+      ],
+      "departure": [
+        63,
+        64,
+        63
+      ],
+      "search": {
+        "status": "found",
+        "visited": 65,
+        "deadline": 67
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1536,
+        1537,
+        1540,
+        1541,
+        1542
+      ],
+      "arrival": [
+        0,
+        5,
+        4
+      ],
+      "departure": [
+        14,
+        14,
+        13
+      ],
+      "search": {
+        "status": "found",
+        "visited": 154,
+        "deadline": 21
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        12
+      ],
+      "selected": [
+        1468,
+        1469,
+        1474,
+        1476
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        28,
+        28,
+        27
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 30
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        13
+      ],
+      "selected": [
+        928,
+        929,
+        930,
+        931,
+        935,
+        936
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        71,
+        70,
+        71
+      ],
+      "search": {
+        "status": "found",
+        "visited": 370,
+        "deadline": 74
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        4,
+        14
+      ],
+      "selected": [
+        932,
+        948,
+        949,
+        956
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        68,
+        70,
+        67
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 71
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        17
+      ],
+      "selected": [
+        739,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        752
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        108,
+        75,
+        109
+      ],
+      "search": {
+        "status": "found",
+        "visited": 988,
+        "deadline": 114
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1422,
+        1423,
+        1424,
+        1425,
+        1426
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        35,
+        38,
+        38
+      ],
+      "search": {
+        "status": "found",
+        "visited": 257,
+        "deadline": 42
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        5,
+        17
+      ],
+      "selected": [
+        420,
+        421,
+        428,
+        431
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        175,
+        174,
+        175
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 177
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        5,
+        16,
+        17
+      ],
+      "selected": [
+        461,
+        478,
+        479,
+        484
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        164,
+        166,
+        163
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 167
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        4,
+        17
+      ],
+      "selected": [
+        420,
+        431,
+        432,
+        444
+      ],
+      "arrival": [
+        0,
+        2,
+        0
+      ],
+      "departure": [
+        176,
+        174,
+        173
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 177
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        3,
+        15
+      ],
+      "selected": [
+        448,
+        449,
+        451,
+        452
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        164,
+        167,
+        167
+      ],
+      "search": {
+        "status": "found",
+        "visited": 128,
+        "deadline": 170
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        3,
+        14
+      ],
+      "selected": [
+        1057,
+        1058,
+        1059,
+        1060
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        43,
+        42,
+        43
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 45
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        12,
+        14,
+        17
+      ],
+      "selected": [
+        851,
+        854,
+        856,
+        857
+      ],
+      "arrival": [
+        0,
+        2,
+        0
+      ],
+      "departure": [
+        82,
+        83,
+        85
+      ],
+      "search": {
+        "status": "found",
+        "visited": 29,
+        "deadline": 86
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        4
+      ],
+      "selected": [
+        623,
+        624,
+        625,
+        626
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        132,
+        130,
+        134
+      ],
+      "search": {
+        "status": "found",
+        "visited": 28,
+        "deadline": 135
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        11,
+        13,
+        17
+      ],
+      "selected": [
+        809,
+        810,
+        811,
+        817
+      ],
+      "arrival": [
+        2,
+        2,
+        0
+      ],
+      "departure": [
+        91,
+        91,
+        93
+      ],
+      "search": {
+        "status": "found",
+        "visited": 22,
+        "deadline": 95
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        5,
+        13,
+        15
+      ],
+      "selected": [
+        1096,
+        1097,
+        1098,
+        1103
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        35,
+        34,
+        35
+      ],
+      "search": {
+        "status": "found",
+        "visited": 73,
+        "deadline": 38
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        3,
+        17
+      ],
+      "selected": [
+        635,
+        636,
+        638,
+        643
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        132,
+        130,
+        132
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 134
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        7,
+        9,
+        12
+      ],
+      "selected": [
+        1489,
+        1490,
+        1494,
+        1500
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        26,
+        26,
+        25
+      ],
+      "search": {
+        "status": "found",
+        "visited": 41,
+        "deadline": 28
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        11,
+        13,
+        15
+      ],
+      "selected": [
+        757,
+        758,
+        759,
+        760,
+        761
+      ],
+      "arrival": [
+        0,
+        0,
+        2
+      ],
+      "departure": [
+        102,
+        104,
+        103
+      ],
+      "search": {
+        "status": "found",
+        "visited": 76,
+        "deadline": 106
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        8,
+        11,
+        12
+      ],
+      "selected": [
+        1501,
+        1502,
+        1505,
+        1506
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        23,
+        22,
+        23
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 25
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        5
+      ],
+      "selected": [
+        708,
+        709,
+        710,
+        714
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        114,
+        115,
+        115
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 117
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        3,
+        15
+      ],
+      "selected": [
+        462,
+        463,
+        464,
+        465,
+        466,
+        467
+      ],
+      "arrival": [
+        0,
+        3,
+        3
+      ],
+      "departure": [
+        162,
+        162,
+        161
+      ],
+      "search": {
+        "status": "found",
+        "visited": 363,
+        "deadline": 169
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        13,
+        15,
+        16
+      ],
+      "selected": [
+        764,
+        765,
+        766,
+        767
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        101,
+        101,
+        102
+      ],
+      "search": {
+        "status": "found",
+        "visited": 49,
+        "deadline": 104
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        16
+      ],
+      "selected": [
+        577,
+        578,
+        581,
+        584
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        141,
+        141,
+        140
+      ],
+      "search": {
+        "status": "found",
+        "visited": 41,
+        "deadline": 143
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        14
+      ],
+      "selected": [
+        1115,
+        1116,
+        1117,
+        1122
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        30,
+        31,
+        31
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 33
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        9,
+        16
+      ],
+      "selected": [
+        1541,
+        1542,
+        1543,
+        1544
+      ],
+      "arrival": [
+        1,
+        3,
+        0
+      ],
+      "departure": [
+        14,
+        12,
+        11
+      ],
+      "search": {
+        "status": "found",
+        "visited": 26,
+        "deadline": 16
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1282,
+        1283,
+        1288,
+        1291
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        67,
+        66,
+        67
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 69
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        14
+      ],
+      "selected": [
+        990,
+        991,
+        992,
+        993,
+        994
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        54,
+        57,
+        57
+      ],
+      "search": {
+        "status": "found",
+        "visited": 257,
+        "deadline": 61
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        13
+      ],
+      "selected": [
+        944,
+        945,
+        946,
+        947
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        67,
+        66,
+        67
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 69
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        8,
+        16
+      ],
+      "selected": [
+        1576,
+        1577,
+        1578,
+        1579
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        6,
+        8,
+        5
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 9
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        16
+      ],
+      "selected": [
+        520,
+        521,
+        524,
+        528
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        154,
+        154,
+        153
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 156
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        4,
+        13
+      ],
+      "selected": [
+        1023,
+        1027,
+        1028,
+        1031
+      ],
+      "arrival": [
+        0,
+        2,
+        0
+      ],
+      "departure": [
+        51,
+        49,
+        48
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 52
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        1,
+        3
+      ],
+      "selected": [
+        1206,
+        1207,
+        1208,
+        1209
+      ],
+      "arrival": [
+        0,
+        7,
+        5
+      ],
+      "departure": [
+        15,
+        13,
+        11
+      ],
+      "search": {
+        "status": "found",
+        "visited": 30,
+        "deadline": 21
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        4
+      ],
+      "selected": [
+        1009,
+        1010,
+        1011,
+        1012
+      ],
+      "arrival": [
+        0,
+        5,
+        7
+      ],
+      "departure": [
+        53,
+        50,
+        51
+      ],
+      "search": {
+        "status": "found",
+        "visited": 31,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        16
+      ],
+      "selected": [
+        651,
+        652,
+        653,
+        654,
+        655,
+        656,
+        661
+      ],
+      "arrival": [
+        0,
+        3,
+        3
+      ],
+      "departure": [
+        124,
+        124,
+        123
+      ],
+      "search": {
+        "status": "found",
+        "visited": 1601,
+        "deadline": 131
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        5
+      ],
+      "selected": [
+        1065,
+        1066,
+        1067,
+        1069
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        42,
+        43,
+        43
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 45
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        4
+      ],
+      "selected": [
+        531,
+        532,
+        533,
+        534
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        151,
+        149,
+        153
+      ],
+      "search": {
+        "status": "found",
+        "visited": 28,
+        "deadline": 154
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        15,
+        16
+      ],
+      "selected": [
+        783,
+        784,
+        785,
+        786
+      ],
+      "arrival": [
+        1,
+        0,
+        1
+      ],
+      "departure": [
+        95,
+        97,
+        94
+      ],
+      "search": {
+        "status": "found",
+        "visited": 53,
+        "deadline": 99
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        3,
+        13,
+        15
+      ],
+      "selected": [
+        999,
+        1018,
+        1019,
+        1021
+      ],
+      "arrival": [
+        0,
+        2,
+        3
+      ],
+      "departure": [
+        53,
+        56,
+        54
+      ],
+      "search": {
+        "status": "found",
+        "visited": 37,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate158_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        13,
+        14,
+        15
+      ],
+      "selected": [
+        826,
+        827,
+        829,
+        830
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        87,
+        86,
+        87
+      ],
+      "search": {
+        "status": "found",
+        "visited": 26,
+        "deadline": 89
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        10,
+        16,
+        17
+      ],
+      "selected": [
+        1526,
+        1534,
+        1535,
+        1540
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        16,
+        15,
+        18
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 19
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1423,
+        1424,
+        1425,
+        1426
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        35,
+        38,
+        38
+      ],
+      "search": {
+        "status": "found",
+        "visited": 107,
+        "deadline": 41
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        3,
+        15
+      ],
+      "selected": [
+        1125,
+        1126,
+        1129,
+        1130,
+        1149
+      ],
+      "arrival": [
+        3,
+        1,
+        0
+      ],
+      "departure": [
+        31,
+        29,
+        28
+      ],
+      "search": {
+        "status": "found",
+        "visited": 271,
+        "deadline": 36
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        5,
+        13
+      ],
+      "selected": [
+        1071,
+        1072,
+        1075,
+        1076
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        42,
+        41,
+        42
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 44
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        14
+      ],
+      "selected": [
+        892,
+        893,
+        894,
+        897,
+        899
+      ],
+      "arrival": [
+        0,
+        39,
+        39
+      ],
+      "departure": [
+        71,
+        70,
+        71
+      ],
+      "search": {
+        "status": "found",
+        "visited": 114,
+        "deadline": 112
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        14,
+        15,
+        17
+      ],
+      "selected": [
+        795,
+        796,
+        804,
+        806
+      ],
+      "arrival": [
+        1,
+        2,
+        0
+      ],
+      "departure": [
+        96,
+        95,
+        96
+      ],
+      "search": {
+        "status": "found",
+        "visited": 44,
+        "deadline": 99
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        3,
+        15
+      ],
+      "selected": [
+        464,
+        465,
+        466,
+        467
+      ],
+      "arrival": [
+        0,
+        5,
+        4
+      ],
+      "departure": [
+        162,
+        162,
+        161
+      ],
+      "search": {
+        "status": "found",
+        "visited": 47,
+        "deadline": 169
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate166_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        8,
+        11,
+        12
+      ],
+      "selected": [
+        1553,
+        1554,
+        1555,
+        1558
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        12,
+        12,
+        11
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 14
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1435,
+        1436,
+        1437,
+        1438,
+        1439
+      ],
+      "arrival": [
+        0,
+        5,
+        5
+      ],
+      "departure": [
+        33,
+        32,
+        33
+      ],
+      "search": {
+        "status": "found",
+        "visited": 80,
+        "deadline": 40
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        8,
+        16
+      ],
+      "selected": [
+        1292,
+        1295,
+        1296,
+        1299
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        64,
+        66,
+        63
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 67
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        5,
+        15
+      ],
+      "selected": [
+        607,
+        608,
+        609,
+        610
+      ],
+      "arrival": [
+        1,
+        2,
+        0
+      ],
+      "departure": [
+        134,
+        133,
+        134
+      ],
+      "search": {
+        "status": "found",
+        "visited": 34,
+        "deadline": 137
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1296,
+        1297,
+        1298,
+        1299
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        63,
+        62,
+        63
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 65
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        16
+      ],
+      "selected": [
+        627,
+        628,
+        629,
+        630
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        132,
+        130,
+        132
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 134
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        13
+      ],
+      "selected": [
+        1064,
+        1065,
+        1069,
+        1070
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        44,
+        43,
+        44
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 46
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        16
+      ],
+      "selected": [
+        558,
+        559,
+        560,
+        561,
+        562,
+        563,
+        568
+      ],
+      "arrival": [
+        0,
+        3,
+        3
+      ],
+      "departure": [
+        143,
+        143,
+        142
+      ],
+      "search": {
+        "status": "found",
+        "visited": 1601,
+        "deadline": 150
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        14
+      ],
+      "selected": [
+        1193,
+        1194,
+        1195,
+        1196,
+        1199,
+        1200,
+        1201
+      ],
+      "arrival": [
+        0,
+        3,
+        3
+      ],
+      "departure": [
+        14,
+        14,
+        13
+      ],
+      "search": {
+        "status": "found",
+        "visited": 1601,
+        "deadline": 21
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        5,
+        16
+      ],
+      "selected": [
+        494,
+        495,
+        496,
+        497
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        157,
+        156,
+        157
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 159
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        4,
+        17
+      ],
+      "selected": [
+        445,
+        454,
+        455,
+        458
+      ],
+      "arrival": [
+        0,
+        3,
+        1
+      ],
+      "departure": [
+        172,
+        170,
+        168
+      ],
+      "search": {
+        "status": "found",
+        "visited": 26,
+        "deadline": 174
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1563,
+        1564,
+        1568,
+        1575
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        10,
+        10,
+        9
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 12
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        4,
+        5
+      ],
+      "selected": [
+        480,
+        481,
+        482,
+        483
+      ],
+      "arrival": [
+        7,
+        0,
+        5
+      ],
+      "departure": [
+        161,
+        163,
+        160
+      ],
+      "search": {
+        "status": "found",
+        "visited": 30,
+        "deadline": 169
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        1,
+        2
+      ],
+      "selected": [
+        1224,
+        1228,
+        1229,
+        1230
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        9,
+        11,
+        8
+      ],
+      "search": {
+        "status": "found",
+        "visited": 41,
+        "deadline": 12
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        4
+      ],
+      "selected": [
+        667,
+        668,
+        669,
+        670
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        121,
+        120,
+        123
+      ],
+      "search": {
+        "status": "found",
+        "visited": 28,
+        "deadline": 124
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        7,
+        8,
+        17
+      ],
+      "selected": [
+        1545,
+        1546,
+        1547,
+        1548,
+        1551,
+        1552,
+        1561
+      ],
+      "arrival": [
+        3,
+        0,
+        3
+      ],
+      "departure": [
+        14,
+        14,
+        13
+      ],
+      "search": {
+        "status": "found",
+        "visited": 1542,
+        "deadline": 21
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        1,
+        3
+      ],
+      "selected": [
+        1206,
+        1207,
+        1208,
+        1209
+      ],
+      "arrival": [
+        0,
+        7,
+        5
+      ],
+      "departure": [
+        15,
+        13,
+        11
+      ],
+      "search": {
+        "status": "found",
+        "visited": 30,
+        "deadline": 21
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        11,
+        12
+      ],
+      "selected": [
+        1383,
+        1384,
+        1387,
+        1388
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        46,
+        45,
+        46
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 48
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        16
+      ],
+      "selected": [
+        486,
+        487,
+        490,
+        493
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        160,
+        160,
+        159
+      ],
+      "search": {
+        "status": "found",
+        "visited": 41,
+        "deadline": 162
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        3,
+        4,
+        5
+      ],
+      "selected": [
+        411,
+        412,
+        413,
+        417
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        175,
+        176,
+        176
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 178
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        16
+      ],
+      "selected": [
+        433,
+        434,
+        437,
+        438
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        172,
+        172,
+        171
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 174
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        9,
+        11,
+        12
+      ],
+      "selected": [
+        1529,
+        1530,
+        1531,
+        1532,
+        1533
+      ],
+      "arrival": [
+        0,
+        5,
+        4
+      ],
+      "departure": [
+        14,
+        14,
+        13
+      ],
+      "search": {
+        "status": "found",
+        "visited": 154,
+        "deadline": 21
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        4,
+        13
+      ],
+      "selected": [
+        929,
+        936,
+        937,
+        943
+      ],
+      "arrival": [
+        2,
+        0,
+        1
+      ],
+      "departure": [
+        70,
+        72,
+        69
+      ],
+      "search": {
+        "status": "found",
+        "visited": 42,
+        "deadline": 74
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        1,
+        15
+      ],
+      "selected": [
+        1033,
+        1044,
+        1045,
+        1061
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        49,
+        51,
+        47
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 52
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        2,
+        3
+      ],
+      "selected": [
+        501,
+        502,
+        504,
+        505
+      ],
+      "arrival": [
+        1,
+        2,
+        0
+      ],
+      "departure": [
+        157,
+        156,
+        157
+      ],
+      "search": {
+        "status": "found",
+        "visited": 34,
+        "deadline": 160
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        17
+      ],
+      "selected": [
+        741,
+        742,
+        743,
+        744,
+        745,
+        752
+      ],
+      "arrival": [
+        1,
+        1,
+        0
+      ],
+      "departure": [
+        108,
+        75,
+        109
+      ],
+      "search": {
+        "status": "found",
+        "visited": 179,
+        "deadline": 113
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        5,
+        13
+      ],
+      "selected": [
+        951,
+        952,
+        954,
+        955
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        65,
+        64,
+        65
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 67
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        7,
+        8,
+        17
+      ],
+      "selected": [
+        1547,
+        1548,
+        1551,
+        1552,
+        1561
+      ],
+      "arrival": [
+        5,
+        0,
+        4
+      ],
+      "departure": [
+        14,
+        14,
+        13
+      ],
+      "search": {
+        "status": "found",
+        "visited": 167,
+        "deadline": 21
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        17
+      ],
+      "selected": [
+        612,
+        613,
+        617,
+        621
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        136,
+        135,
+        136
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 138
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        9,
+        11,
+        12
+      ],
+      "selected": [
+        1442,
+        1443,
+        1444,
+        1445,
+        1449,
+        1450
+      ],
+      "arrival": [
+        0,
+        3,
+        4
+      ],
+      "departure": [
+        33,
+        32,
+        33
+      ],
+      "search": {
+        "status": "found",
+        "visited": 564,
+        "deadline": 40
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1534,
+        1535,
+        1536,
+        1537,
+        1540,
+        1541,
+        1542
+      ],
+      "arrival": [
+        0,
+        3,
+        3
+      ],
+      "departure": [
+        14,
+        14,
+        13
+      ],
+      "search": {
+        "status": "found",
+        "visited": 1601,
+        "deadline": 21
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        16
+      ],
+      "selected": [
+        490,
+        491,
+        492,
+        493
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        159,
+        158,
+        159
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 161
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        8,
+        17
+      ],
+      "selected": [
+        1514,
+        1521,
+        1522,
+        1523
+      ],
+      "arrival": [
+        1,
+        3,
+        0
+      ],
+      "departure": [
+        23,
+        16,
+        20
+      ],
+      "search": {
+        "status": "found",
+        "visited": 30,
+        "deadline": 25
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        16,
+        17
+      ],
+      "selected": [
+        1421,
+        1422,
+        1425,
+        1429
+      ],
+      "arrival": [
+        1,
+        2,
+        0
+      ],
+      "departure": [
+        41,
+        39,
+        40
+      ],
+      "search": {
+        "status": "found",
+        "visited": 46,
+        "deadline": 44
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        8,
+        16
+      ],
+      "selected": [
+        1576,
+        1577,
+        1578,
+        1579
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        6,
+        8,
+        5
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 9
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        17
+      ],
+      "selected": [
+        685,
+        686,
+        692,
+        695
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        120,
+        119,
+        120
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 122
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        3,
+        15,
+        17
+      ],
+      "selected": [
+        460,
+        462,
+        463,
+        464
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        163,
+        164,
+        166
+      ],
+      "search": {
+        "status": "found",
+        "visited": 35,
+        "deadline": 167
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        3,
+        5,
+        15
+      ],
+      "selected": [
+        1096,
+        1123,
+        1124,
+        1129
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        33,
+        37,
+        32
+      ],
+      "search": {
+        "status": "found",
+        "visited": 28,
+        "deadline": 38
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        14,
+        17
+      ],
+      "selected": [
+        772,
+        773,
+        774,
+        775
+      ],
+      "arrival": [
+        1,
+        2,
+        0
+      ],
+      "departure": [
+        100,
+        101,
+        102
+      ],
+      "search": {
+        "status": "found",
+        "visited": 110,
+        "deadline": 105
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        4,
+        17
+      ],
+      "selected": [
+        519,
+        529,
+        530,
+        543
+      ],
+      "arrival": [
+        0,
+        2,
+        0
+      ],
+      "departure": [
+        156,
+        154,
+        153
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 157
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        12,
+        14,
+        15
+      ],
+      "selected": [
+        819,
+        824,
+        825,
+        829
+      ],
+      "arrival": [
+        1,
+        3,
+        0
+      ],
+      "departure": [
+        91,
+        89,
+        88
+      ],
+      "search": {
+        "status": "found",
+        "visited": 26,
+        "deadline": 93
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        12,
+        15,
+        16
+      ],
+      "selected": [
+        734,
+        735,
+        736,
+        737
+      ],
+      "arrival": [
+        1,
+        1,
+        0
+      ],
+      "departure": [
+        104,
+        104,
+        106
+      ],
+      "search": {
+        "status": "found",
+        "visited": 20,
+        "deadline": 107
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        6,
+        10,
+        16
+      ],
+      "selected": [
+        1349,
+        1350,
+        1351,
+        1352,
+        1353,
+        1354,
+        1355
+      ],
+      "arrival": [
+        0,
+        3,
+        3
+      ],
+      "departure": [
+        52,
+        51,
+        52
+      ],
+      "search": {
+        "status": "found",
+        "visited": 1081,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854,
+      "path": "artifacts/post185_timed_local_neutral_v2/candidate209_d185_cx854.qasm"
+    },
+    {
+      "wires": [
+        3,
+        15,
+        17
+      ],
+      "selected": [
+        549,
+        550,
+        553,
+        556
+      ],
+      "arrival": [
+        2,
+        1,
+        0
+      ],
+      "departure": [
+        145,
+        144,
+        148
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 149
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        11,
+        15,
+        17
+      ],
+      "selected": [
+        804,
+        805,
+        806,
+        807,
+        812,
+        817
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        94,
+        92,
+        93
+      ],
+      "search": {
+        "status": "found",
+        "visited": 282,
+        "deadline": 97
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        17
+      ],
+      "selected": [
+        741,
+        742,
+        743,
+        744,
+        745,
+        752
+      ],
+      "arrival": [
+        1,
+        1,
+        0
+      ],
+      "departure": [
+        108,
+        75,
+        109
+      ],
+      "search": {
+        "status": "found",
+        "visited": 179,
+        "deadline": 113
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        14
+      ],
+      "selected": [
+        1110,
+        1111,
+        1112,
+        1113,
+        1114
+      ],
+      "arrival": [
+        0,
+        5,
+        5
+      ],
+      "departure": [
+        33,
+        32,
+        33
+      ],
+      "search": {
+        "status": "found",
+        "visited": 80,
+        "deadline": 40
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        16
+      ],
+      "selected": [
+        376,
+        377,
+        378,
+        379,
+        382,
+        385
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        181,
+        180,
+        181
+      ],
+      "search": {
+        "status": "found",
+        "visited": 561,
+        "deadline": 185
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        1,
+        14
+      ],
+      "selected": [
+        1131,
+        1138,
+        1139,
+        1144
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        28,
+        30,
+        27
+      ],
+      "search": {
+        "status": "found",
+        "visited": 80,
+        "deadline": 31
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        5,
+        13
+      ],
+      "selected": [
+        1161,
+        1162,
+        1170,
+        1173
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        23,
+        23,
+        22
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 25
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        15,
+        16
+      ],
+      "selected": [
+        783,
+        784,
+        785,
+        786
+      ],
+      "arrival": [
+        1,
+        0,
+        1
+      ],
+      "departure": [
+        95,
+        97,
+        94
+      ],
+      "search": {
+        "status": "found",
+        "visited": 53,
+        "deadline": 99
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        17
+      ],
+      "selected": [
+        456,
+        457,
+        458,
+        459
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        164,
+        167,
+        167
+      ],
+      "search": {
+        "status": "found",
+        "visited": 107,
+        "deadline": 170
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        7,
+        8,
+        17
+      ],
+      "selected": [
+        1547,
+        1548,
+        1551,
+        1552,
+        1561
+      ],
+      "arrival": [
+        5,
+        0,
+        4
+      ],
+      "departure": [
+        14,
+        14,
+        13
+      ],
+      "search": {
+        "status": "found",
+        "visited": 167,
+        "deadline": 21
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        7,
+        10,
+        17
+      ],
+      "selected": [
+        1526,
+        1545,
+        1546,
+        1551
+      ],
+      "arrival": [
+        1,
+        0,
+        0
+      ],
+      "departure": [
+        16,
+        18,
+        15
+      ],
+      "search": {
+        "status": "found",
+        "visited": 28,
+        "deadline": 19
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        13
+      ],
+      "selected": [
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006
+      ],
+      "arrival": [
+        0,
+        3,
+        3
+      ],
+      "departure": [
+        52,
+        51,
+        52
+      ],
+      "search": {
+        "status": "found",
+        "visited": 1081,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        4,
+        17
+      ],
+      "selected": [
+        685,
+        695,
+        696,
+        706
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        119,
+        121,
+        118
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 122
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        1,
+        14
+      ],
+      "selected": [
+        949,
+        956,
+        957,
+        960
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        66,
+        68,
+        65
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 69
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        16
+      ],
+      "selected": [
+        558,
+        559,
+        560,
+        561,
+        562,
+        563,
+        568
+      ],
+      "arrival": [
+        0,
+        3,
+        3
+      ],
+      "departure": [
+        143,
+        143,
+        142
+      ],
+      "search": {
+        "status": "found",
+        "visited": 1601,
+        "deadline": 150
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        12,
+        15,
+        17
+      ],
+      "selected": [
+        846,
+        847,
+        851,
+        854
+      ],
+      "arrival": [
+        2,
+        1,
+        0
+      ],
+      "departure": [
+        84,
+        84,
+        85
+      ],
+      "search": {
+        "status": "found",
+        "visited": 69,
+        "deadline": 88
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        13,
+        14
+      ],
+      "selected": [
+        774,
+        775,
+        776,
+        777
+      ],
+      "arrival": [
+        1,
+        2,
+        0
+      ],
+      "departure": [
+        100,
+        99,
+        99
+      ],
+      "search": {
+        "status": "found",
+        "visited": 71,
+        "deadline": 103
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        11,
+        13,
+        17
+      ],
+      "selected": [
+        756,
+        757,
+        758,
+        759
+      ],
+      "arrival": [
+        0,
+        2,
+        1
+      ],
+      "departure": [
+        104,
+        104,
+        106
+      ],
+      "search": {
+        "status": "found",
+        "visited": 32,
+        "deadline": 108
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        2,
+        4,
+        5
+      ],
+      "selected": [
+        666,
+        667,
+        668,
+        672
+      ],
+      "arrival": [
+        2,
+        1,
+        0
+      ],
+      "departure": [
+        122,
+        123,
+        123
+      ],
+      "search": {
+        "status": "found",
+        "visited": 36,
+        "deadline": 126
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        5,
+        13
+      ],
+      "selected": [
+        1003,
+        1004,
+        1005,
+        1006
+      ],
+      "arrival": [
+        0,
+        5,
+        5
+      ],
+      "departure": [
+        52,
+        51,
+        52
+      ],
+      "search": {
+        "status": "found",
+        "visited": 68,
+        "deadline": 59
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        9,
+        11,
+        12
+      ],
+      "selected": [
+        1556,
+        1557,
+        1558,
+        1559,
+        1560
+      ],
+      "arrival": [
+        0,
+        0,
+        0
+      ],
+      "departure": [
+        10,
+        10,
+        9
+      ],
+      "search": {
+        "status": "found",
+        "visited": 68,
+        "deadline": 12
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        13,
+        14
+      ],
+      "selected": [
+        1152,
+        1153,
+        1157,
+        1158
+      ],
+      "arrival": [
+        0,
+        0,
+        1
+      ],
+      "departure": [
+        24,
+        24,
+        23
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 26
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        2,
+        16
+      ],
+      "selected": [
+        560,
+        561,
+        562,
+        563,
+        568
+      ],
+      "arrival": [
+        0,
+        5,
+        4
+      ],
+      "departure": [
+        143,
+        143,
+        142
+      ],
+      "search": {
+        "status": "found",
+        "visited": 154,
+        "deadline": 150
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        4,
+        15,
+        17
+      ],
+      "selected": [
+        509,
+        510,
+        517,
+        518
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        157,
+        153,
+        157
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 159
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        13,
+        14
+      ],
+      "selected": [
+        1036,
+        1037,
+        1042,
+        1043
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        47,
+        46,
+        47
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 49
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        8,
+        9,
+        17
+      ],
+      "selected": [
+        1581,
+        1591,
+        1592,
+        1604
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        7,
+        9,
+        6
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 10
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        5,
+        13
+      ],
+      "selected": [
+        1037,
+        1038,
+        1041,
+        1042
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        46,
+        45,
+        46
+      ],
+      "search": {
+        "status": "found",
+        "visited": 33,
+        "deadline": 48
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        0,
+        4,
+        17
+      ],
+      "selected": [
+        622,
+        634,
+        635,
+        643
+      ],
+      "arrival": [
+        2,
+        0,
+        0
+      ],
+      "departure": [
+        133,
+        135,
+        132
+      ],
+      "search": {
+        "status": "found",
+        "visited": 25,
+        "deadline": 136
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        12,
+        14,
+        15
+      ],
+      "selected": [
+        733,
+        734,
+        735,
+        736
+      ],
+      "arrival": [
+        3,
+        0,
+        2
+      ],
+      "departure": [
+        104,
+        106,
+        104
+      ],
+      "search": {
+        "status": "found",
+        "visited": 30,
+        "deadline": 109
+      },
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "wires": [
+        1,
+        3,
+        15
+      ],
+      "selected": [
+        380,
+        381,
+        383,
+        384
+      ],
+      "arrival": [
+        0,
+        1,
+        0
+      ],
+      "departure": [
+        179,
+        178,
+        176
+      ],
+      "search": {
+        "status": "found",
+        "visited": 45,
+        "deadline": 181
+      },
+      "depth": 185,
+      "cx": 854
+    }
+  ]
+}

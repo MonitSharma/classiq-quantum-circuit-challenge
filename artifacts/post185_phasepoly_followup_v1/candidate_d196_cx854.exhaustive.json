@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post185_phasepoly_followup_v1/candidate_d196_cx854.qasm",
+  "sha256": "9f7b2e4e9d8b9ee02495fb16deed0ee00876781dadc859cc07b8a758d872c3d0",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 196,
+  "cx_count": 854,
+  "max_error": 7.55306141825897e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.4230551608693905e-14,
+  "peak_sparse_support": 32,
+  "elapsed_seconds": 0.44046902656555176,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post185_phase_placement_commuting_v2/candidate_d185_cx854.qasm",
+  "sha256": "0ed693e6ada87b8698134009c261cf1ee4889df17cb7eeb1643c4facd13280bb",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 185,
+  "cx_count": 854,
+  "max_error": 6.4394197808342954e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 2.2412567101482996e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 1.1437287330627441,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

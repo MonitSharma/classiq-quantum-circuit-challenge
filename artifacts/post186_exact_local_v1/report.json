@@ -1,0 +1,19 @@
+{
+  "source": "artifacts/186/two_stage_186.qasm",
+  "source_sha256": "5e7f8f165928e965cc47d5b697def0681a79aa6432b8d94302374fd071f25ac6",
+  "initial": [
+    186,
+    855,
+    1625
+  ],
+  "best": [
+    186,
+    855,
+    1625
+  ],
+  "attempts": 12000,
+  "replacements_scored": 21,
+  "seconds": 28.362823583069257,
+  "cache": "CacheInfo(hits=2052, misses=102, maxsize=8192, currsize=102)",
+  "history": []
+}

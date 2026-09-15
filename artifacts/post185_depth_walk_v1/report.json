@@ -1,0 +1,68 @@
+{
+  "source": "artifacts/185/two_stage_185.qasm",
+  "source_sha256": "ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8",
+  "objective": "Depth, then critical-path gate count; CX only constrained by resource cap",
+  "cx_slack": 100,
+  "attempts": 1764,
+  "accepted": 107,
+  "restarts": 12,
+  "best_depth": 185,
+  "seconds": 120.10515383305028,
+  "history": [],
+  "retained": [
+    {
+      "depth": 185,
+      "critical_gates": 1104,
+      "path": "artifacts/post185_depth_walk_v1/portfolio326_d185.qasm",
+      "trace": [
+        {
+          "move": [
+            185,
+            190,
+            "left"
+          ],
+          "shuffle_seed": null
+        },
+        {
+          "move": [
+            454,
+            463,
+            "right"
+          ],
+          "shuffle_seed": null
+        }
+      ]
+    },
+    {
+      "depth": 185,
+      "critical_gates": 1441,
+      "path": "artifacts/post185_depth_walk_v1/portfolio1294_d185.qasm",
+      "trace": [
+        {
+          "move": [
+            1598,
+            1607,
+            "right"
+          ],
+          "shuffle_seed": 21
+        },
+        {
+          "move": [
+            17,
+            18,
+            "right"
+          ],
+          "shuffle_seed": 18
+        },
+        {
+          "move": [
+            1271,
+            1272,
+            "left"
+          ],
+          "shuffle_seed": null
+        }
+      ]
+    }
+  ]
+}

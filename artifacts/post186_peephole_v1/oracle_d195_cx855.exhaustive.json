@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post186_peephole_v1/oracle_d195_cx855.qasm",
+  "sha256": "7779f5b7463375b6e20e0d782ae527841853e4536605615c210dc47154f2bf2e",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 195,
+  "cx_count": 855,
+  "max_error": 1.0822184238547546e-14,
+  "ancilla_error": 4.305893253473308e-15,
+  "discarded_amplitude_bound": 7.373730261200733e-14,
+  "peak_sparse_support": 32,
+  "elapsed_seconds": 0.2942311763763428,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

@@ -1,0 +1,70 @@
+{
+  "source": "artifacts/193_cx853/two_stage_193.qasm",
+  "source_sha256": "4dbd4993f7d1e807b5ae2908f9580d70070f247a4496140b858f08c95ce82709",
+  "repository": "/tmp/classiq-PhasePoly-20260915",
+  "commit": "03c278fe522bd509e4a3c9ba814c0e09239a4279",
+  "method": "rotation_merging",
+  "heap": 32,
+  "ends": 8,
+  "group": 1,
+  "conversion_depth": 193,
+  "conversion_cx": 853,
+  "phasepoly": {
+    "circuit_name": "classiq188",
+    "label": "0",
+    "success": true,
+    "failure_stage": "",
+    "error_type": "",
+    "error": "",
+    "rotation_merging_time": 0.2419420831138268,
+    "circuit_partitioning_time": 0.0,
+    "synthesis_time": 0.0,
+    "data_io_time": 0.02923791599459946,
+    "total_time": 0.2797179160406813,
+    "input_circuit_info": {
+      "qiskit_info": {
+        "cx": 853,
+        "rz": 761,
+        "h": 24
+      },
+      "gates(always weighted)": 1638,
+      "weighted_cx": 853,
+      "rz_gate": 761,
+      "t_gate": 6,
+      "h_gate": 24,
+      "x_gate": 0,
+      "just_cx": 853,
+      "swap": 0,
+      "depth": 193,
+      "weighted_depth": 193
+    },
+    "circuit_info": {
+      "qiskit_info": {
+        "cx": 853,
+        "rz": 761,
+        "h": 24
+      },
+      "gates(always weighted)": 1638,
+      "weighted_cx": 853,
+      "rz_gate": 761,
+      "t_gate": 6,
+      "h_gate": 24,
+      "x_gate": 0,
+      "just_cx": 853,
+      "swap": 0,
+      "depth": 197,
+      "weighted_depth": 197
+    },
+    "total_reduction": 0,
+    "cx_reduction": 0,
+    "rz_reduction": 0,
+    "t_reduction": 0,
+    "warnings": []
+  },
+  "candidate": {
+    "depth": 195,
+    "cx": 853,
+    "u3": 771,
+    "path": "artifacts/post186_merge_portfolio_v2_193_cx853/candidate_d195_cx853.qasm"
+  }
+}

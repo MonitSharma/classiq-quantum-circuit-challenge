@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post185_bridge_exact_7/oracle_d185_cx857.qasm",
+  "sha256": "83c3f18e4581dcc3a011e93fb0db3ae48236532fa1bcb2bbd11bb5a15f00c262",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 185,
+  "cx_count": 857,
+  "max_error": 6.247294637107705e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.941909666537282e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 1.1151111125946045,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

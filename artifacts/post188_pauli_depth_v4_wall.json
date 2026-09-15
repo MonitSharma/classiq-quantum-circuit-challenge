@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post188_global_pauli.py",
+    "--outdir",
+    "artifacts/post188_pauli_depth_v4",
+    "--depth-weight",
+    "0.8",
+    "--discount",
+    "0.5",
+    "--seed",
+    "1",
+    "--seconds",
+    "20"
+  ],
+  "seconds": 21.512083292007446,
+  "limit_seconds": 65.0
+}

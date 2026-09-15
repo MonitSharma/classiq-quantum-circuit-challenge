@@ -1,0 +1,16 @@
+{
+  "depth": 185,
+  "cx": 854,
+  "width": 18,
+  "qasm": "two_stage_185.qasm",
+  "qmod": "two_stage_185.qmod",
+  "sha256": "ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8",
+  "kernel_sha256": "c1f784c64b7e8377413161ea23cb407bbe5f712d6843f6400f6444601e99da76",
+  "qmod_gate_match": true,
+  "qmod_gate_count": 1617,
+  "qmod_note": "Literal gate-level matching oracle; main includes a 12-Hadamard synthesis harness. Not cloud-resynthesized or submitted.",
+  "u3": 763,
+  "replay_script": "src/build_bridge_oracle.py",
+  "bridge_recipe": "bridge_recipe.json",
+  "status": "Verified local improvement; not submitted"
+}

@@ -1,5 +1,12 @@
 # Complete method and research index
 
+**Current, September16:185/854/18**, `artifacts/185/`. Older “current best”
+paragraphs below are historical. Read HANDOFF for protected replay.
+`POST185_METHOD_SEARCH.md` is the latest audit-before-testing index: literature
+search followed by larger SAT phase-block synthesis and CZ-direction search.
+These do not beat185. Five-variable loader follow-up is separately recorded
+in `POST185_FIVE_ADDRESS_AUDIT.md` and also does not beat185.
+
 Current best, September 13: **218 depth / 897 CX / 18 qubits**, `artifacts/218/`, exact-file exhaustive verification, dense checks, matching literal QMOD, and identical-hash kernel/oracle replay. SHA `3a685c32ea0d78637be1a575c91e6c7d13db0efdbf37a8f794fb44e7fb024a88`. Integer full-turn cube additions reduce the kernel from 69 to 66 layers. See `POST221_RESEARCH.md` and `artifacts/218/README.md`. Sub-180 and rank one remain unresolved; this is an intermediate result.
 
 Previous best, September 13: **221 depth / 944 CX / 18 qubits**, `artifacts/221/`, matching literal QMOD and exact-file exhaustive verification. SHA `4f9fa6232930777426ac4f8118155780471f111c31435e7578175170035e313f`; fresh replay matches. Joint selection of relative-phase encoders (y seed 99, x seed 151) improves the complete circuit by one layer and one CX. All 221 Pareto timing combinations from 160 seeds per side were compiled; none beat 221. See `artifacts/221/README.md`. Sub-180 and rank one remain unfinished.

@@ -1,0 +1,15 @@
+{
+  "family": "protected",
+  "side": "y",
+  "weight": 1.0,
+  "seed": 0,
+  "original": {
+    "depth": 77,
+    "cx": 193
+  },
+  "depth": 184,
+  "cx": 222,
+  "error": 8.520422077257652e-15,
+  "path": "artifacts/post188_loader_pauli_y/loader_d184_cx222.qasm",
+  "seconds": 2.2592492500552908
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "label": "expanded",
+    "source": "artifacts/post186_split_exact_v1/oracle_d188_cx855.qasm",
+    "inverse": false,
+    "path": "artifacts/post186_native_variants_v1/expanded.qasm",
+    "depth": 186,
+    "cx": 855,
+    "u3": 771
+  },
+  {
+    "label": "split_fused",
+    "source": "artifacts/post186_split_fused_exact_v1/oracle_d187_cx855.qasm",
+    "inverse": false,
+    "path": "artifacts/post186_native_variants_v1/split_fused.qasm",
+    "depth": 187,
+    "cx": 855,
+    "u3": 772
+  },
+  {
+    "label": "inverse",
+    "source": "artifacts/186/two_stage_186.qasm",
+    "inverse": true,
+    "path": "artifacts/post186_native_variants_v1/inverse.qasm",
+    "depth": 186,
+    "cx": 855,
+    "u3": 770
+  }
+]

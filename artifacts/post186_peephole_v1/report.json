@@ -1,0 +1,42 @@
+{
+  "source": "artifacts/186/two_stage_186.qasm",
+  "source_sha256": "5e7f8f165928e965cc47d5b697def0681a79aa6432b8d94302374fd071f25ac6",
+  "config": {
+    "discount_rate": 0.7,
+    "depth_weight": 1.0,
+    "max_lookahead": 200,
+    "max_tqe_candidates": 100,
+    "seed": 0,
+    "allow_zzphase": false,
+    "thread_timeout": 20,
+    "only_reduce": false,
+    "trials": 1
+  },
+  "method": "peephole",
+  "implicit_permutation_materialized": {
+    "q[0]": "q[0]",
+    "q[1]": "q[1]",
+    "q[2]": "q[2]",
+    "q[3]": "q[3]",
+    "q[4]": "q[4]",
+    "q[5]": "q[5]",
+    "q[6]": "q[6]",
+    "q[7]": "q[7]",
+    "q[8]": "q[8]",
+    "q[9]": "q[9]",
+    "q[10]": "q[10]",
+    "q[11]": "q[11]",
+    "q[12]": "q[12]",
+    "q[13]": "q[13]",
+    "q[14]": "q[14]",
+    "q[15]": "q[15]",
+    "q[16]": "q[16]",
+    "q[17]": "q[17]"
+  },
+  "depth": 195,
+  "cx": 855,
+  "u3": 771,
+  "width": 18,
+  "path": "artifacts/post186_peephole_v1/oracle_d195_cx855.qasm",
+  "seconds": 12.027978917001747
+}

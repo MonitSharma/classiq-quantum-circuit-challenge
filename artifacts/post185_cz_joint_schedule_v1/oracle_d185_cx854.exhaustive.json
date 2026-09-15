@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post185_cz_joint_schedule_v1/oracle_d185_cx854.qasm",
+  "sha256": "670ebe92efeea8757f313d46fe8d51e1e65635f4bbb1c81c17bb67533dc5ae21",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 185,
+  "cx_count": 854,
+  "max_error": 5.840619962552305e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.941986204437642e-13,
+  "peak_sparse_support": 2048,
+  "elapsed_seconds": 31.312631130218506,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

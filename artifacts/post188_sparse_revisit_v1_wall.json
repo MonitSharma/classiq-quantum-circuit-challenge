@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post188_sparse_code_revisit.py",
+    "--outdir",
+    "artifacts/post188_sparse_revisit_v1",
+    "--seeds",
+    "12",
+    "--integrate"
+  ],
+  "seconds": 33.66983662499115,
+  "limit_seconds": 180.0
+}

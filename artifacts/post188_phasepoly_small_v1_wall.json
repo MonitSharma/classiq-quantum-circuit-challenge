@@ -1,0 +1,20 @@
+{
+  "status": "externally_timed_out",
+  "solver_conclusion": null,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post188_phasepoly_probe.py",
+    "--repo",
+    "/tmp/classiq-PhasePoly-20260915",
+    "--outdir",
+    "artifacts/post188_phasepoly_small_v1",
+    "--heap",
+    "1",
+    "--ends",
+    "1",
+    "--group",
+    "2"
+  ],
+  "seconds": 90.00537975004409,
+  "limit_seconds": 90.0
+}

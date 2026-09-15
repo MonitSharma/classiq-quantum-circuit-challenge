@@ -1,0 +1,128 @@
+[
+  {
+    "variant": "both",
+    "x_direction": 4,
+    "loader_depths": [
+      65,
+      67
+    ],
+    "kernel_depth": 430,
+    "depth": 559,
+    "cx": 1554,
+    "verification": 4096,
+    "sha256": "d4c7f78c4e92df76d21cd5affc55b272a7b4f16aa6a2f148e6b496b8bb14b89b",
+    "path": "artifacts/post185_five_address_v1/compiled0/oracle_d559_cx1554.qasm"
+  },
+  {
+    "variant": "both",
+    "x_direction": 55,
+    "loader_depths": [
+      65,
+      60
+    ],
+    "kernel_depth": 411,
+    "depth": 539,
+    "cx": 1430,
+    "verification": 4096,
+    "sha256": "b80e60019d0403b8f28fee20a79b1a7f09eeeaea23fadb0f8a4e2d336a57b82d",
+    "path": "artifacts/post185_five_address_v1/compiled1/oracle_d539_cx1430.qasm"
+  },
+  {
+    "variant": "both",
+    "x_direction": 59,
+    "loader_depths": [
+      70,
+      69
+    ],
+    "kernel_depth": 399,
+    "depth": 536,
+    "cx": 1480,
+    "verification": 4096,
+    "sha256": "9f3c159d9e75a6d72ece05ed3c2f90b3b13e19c12ca6df577d60df77ce606e17",
+    "path": "artifacts/post185_five_address_v1/compiled2/oracle_d536_cx1480.qasm"
+  },
+  {
+    "variant": "x",
+    "x_direction": 4,
+    "loader_depths": [
+      77,
+      67
+    ],
+    "kernel_depth": 193,
+    "depth": 346,
+    "cx": 1030,
+    "verification": 4096,
+    "sha256": "a1e7ac34b395301e37109cb12922c7abfbd654af5c25d4cf2c84b8e17160848c",
+    "path": "artifacts/post185_five_address_v1/compiled3/oracle_d346_cx1030.qasm"
+  },
+  {
+    "variant": "x",
+    "x_direction": 55,
+    "loader_depths": [
+      77,
+      73
+    ],
+    "kernel_depth": 154,
+    "depth": 307,
+    "cx": 1002,
+    "verification": 4096,
+    "sha256": "68079e4e81ea7c29c238dc0fa4299677cda39a5fda42df2034ef70dcbf893046",
+    "path": "artifacts/post185_five_address_v1/compiled4/oracle_d307_cx1002.qasm"
+  },
+  {
+    "variant": "x",
+    "x_direction": 59,
+    "loader_depths": [
+      77,
+      71
+    ],
+    "kernel_depth": 155,
+    "depth": 308,
+    "cx": 986,
+    "verification": 4096,
+    "sha256": "0e8df4b18684ce87e8aad84d8b1e373d0e840f99d058919efc546efd917c12b4",
+    "path": "artifacts/post185_five_address_v1/compiled5/oracle_d308_cx986.qasm"
+  },
+  {
+    "variant": "y",
+    "x_direction": 4,
+    "loader_depths": [
+      71,
+      77
+    ],
+    "kernel_depth": 237,
+    "depth": 390,
+    "cx": 1180,
+    "verification": 4096,
+    "sha256": "ea212b1af13e88ffeef44356586b7c0f150d1eff537b63d3050f4183191f8445",
+    "path": "artifacts/post185_five_address_v1/compiled6/oracle_d390_cx1180.qasm"
+  },
+  {
+    "variant": "y",
+    "x_direction": 55,
+    "loader_depths": [
+      70,
+      77
+    ],
+    "kernel_depth": 237,
+    "depth": 390,
+    "cx": 1180,
+    "verification": 4096,
+    "sha256": "7469c9a9288f49c84772ebc6b32fa2c9c4d25a29b306918bd18508a0a6a82520",
+    "path": "artifacts/post185_five_address_v1/compiled7/oracle_d390_cx1180.qasm"
+  },
+  {
+    "variant": "y",
+    "x_direction": 59,
+    "loader_depths": [
+      69,
+      77
+    ],
+    "kernel_depth": 241,
+    "depth": 393,
+    "cx": 1169,
+    "verification": 4096,
+    "sha256": "2b0314201ad003a74129dd36c0731c3cc20e2d8d20e4791cbabc66dc76c85099",
+    "path": "artifacts/post185_five_address_v1/compiled8/oracle_d393_cx1169.qasm"
+  }
+]

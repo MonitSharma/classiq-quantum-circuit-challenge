@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post186_split_exact_v1/oracle_d188_cx855.qasm",
+  "sha256": "511765f841969d58c3f4ec7776ce66db7af06cded9634782d05274b6e87a6a2e",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 188,
+  "cx_count": 855,
+  "max_error": 6.686890804498363e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.9909335992840583e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 2.3417110443115234,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

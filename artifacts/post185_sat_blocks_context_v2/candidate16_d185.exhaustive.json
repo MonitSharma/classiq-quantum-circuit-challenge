@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post185_sat_blocks_context_v2/candidate16_d185.qasm",
+  "sha256": "881350fa5e2b8015faf88a72c2d1c61e41fc8f94c471deda2ee33ad74cbc0cde",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 185,
+  "cx_count": 854,
+  "max_error": 7.134776044119121e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.4888625157022288e-14,
+  "peak_sparse_support": 32,
+  "elapsed_seconds": 0.29210424423217773,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

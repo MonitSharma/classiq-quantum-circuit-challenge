@@ -1,0 +1,12 @@
+{
+  "sha256": "5e7f8f165928e965cc47d5b697def0681a79aa6432b8d94302374fd071f25ac6",
+  "depth": 186,
+  "cx": 855,
+  "u3": 770,
+  "width": 18,
+  "matched_exhaustive_report": true,
+  "matched_dense_report": true,
+  "identical_replay": true,
+  "qmod_gate_match": true,
+  "preserved_188_and_190": true
+}

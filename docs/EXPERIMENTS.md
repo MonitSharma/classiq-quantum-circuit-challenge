@@ -1,5 +1,65 @@
 # Experiment history and failure notes
 
+## September16: HOPPS-inspired larger SAT blocks and CZ-direction synthesis
+
+Audited previous methods before implementation; see `POST185_METHOD_SEARCH.md`
+for the source/document matrix and primary research links. Larger SAT blocks
+were not previously implemented (old exact BFS covered3/4 wires);105 new6/7-wire
+tests yield one isolated5→4-layer improvement and39 verified185-depth outputs.
+CZ-frame reordering and9,600 direction proposals, then exact joint direction
+optimization and global scheduling, produce no sub185 circuit. Two initial
+scheduling probes and25 SAT cases are unresolved at their limits. Eight focused
+tests pass.57 full-output reports pass exact-file hash audits. All jobs finished.
+
+## September 16: five-variable loader and larger-kernel closure attempt
+
+`docs/POST185_FIVE_ADDRESS_AUDIT.md` records16,592 label proposals and twelve
+serialized complete oracles, all verified on4,096 inputs. A60-layer loader is
+real, but larger kernels dominate: best full oracle265/911 after randomized
+reachable-state phase completion (initial comparable witness307/1002).
+Both-axis compression improves539 to473 within that family, still worse.
+Protected185/854/18 and its SHA are unchanged. Nine focused tests pass.
+The side note's156-layer floor and29-layer saved kernel claims were corrected;
+none of this is a general impossibility proof. All campaign jobs finished.
+
+## Latest: depth-focused searches preserve 185 / 854
+
+Read `docs/POST185_DEPTH_CAMPAIGN.md`: 1,764 stochastic proposals, 50 solver
+branches, 600 dirty-mediator candidates, 400 restored-label compilations,
+290 strict-depth tests, and 420 deadline-aware windows found no sub-185
+candidate. Phase occurrence/scheduling models also optimize to185 within their
+restricted scope. Extra CX was permitted; none of these objectives minimizes
+CX. Three solver cases and one four-wire window are unresolved at their limits.
+Thirty-one focused tests pass; exact-file package audit passes. No submission
+or rank-one result is claimed. Neutral critical-path proxy reductions are not
+depth improvements.
+
+## September 15: new CNOT rewrites yield verified 185 / 854
+
+See `docs/POST186_CNOT_REWRITES.md`. Evaluated 881 single-identity rewrites
+across three sweeps, then exactly scheduled 27 selected circuits. The protected
+result is 185/854/18, U3 763, in `artifacts/185/`; all 4,096 inputs, five dense
+states, literal QMOD, and deterministic rewrite replay pass. Twenty-one focused
+tests pass. Exact three-wire phase synthesis scored 21 local replacements from
+12,000 attempts without a full gain. Context-scored phase synthesis completed
+150 four-wire and 160 five-wire windows without a gain. A nonconvergent initial
+probe led to an optional step limit and checkpointed failure reporting; it is
+not an impossibility result. The latest user steering prioritizes depth over
+CX tie-breaker gains; higher CX is acceptable when depth improves.
+
+## September 15: verified 186 / 855 through phase reordering and fusion
+
+See `docs/POST188_PHASE_REORDERING.md`. The 188 source expands into H/Rz/CX,
+is reordered by PhasePoly, then safely lowered and exactly scheduled. Final
+186/855/18, U3 770, passes all 4,096 inputs and five dense states; gate-matching
+QMOD and identical-hash replay are in `artifacts/186/`. Six focused tests pass.
+Four previous sources become 188/857, 189/862, 188/853, and 191/858 after the
+same method. Joint phase-lift loaders and depth-weighted Pauli synthesis regress;
+six sparse-code/kernel combinations give verified full depths 209–224. Actual
+71–76-layer sparse loaders disprove the old blanket measurement of 77 for every
+saved balanced label set, but do not improve the complete oracle. No global
+optimality, sub-140 circuit, live rank, or submission is claimed.
+
 ## September 15: verified 188 / 855 through commuting-gate scheduling
 
 See `docs/POST190_COMMUTING_SCHEDULE.md`. Built a conservative commutation DAG,

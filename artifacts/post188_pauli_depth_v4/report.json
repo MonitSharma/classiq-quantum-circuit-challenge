@@ -1,0 +1,41 @@
+{
+  "source": "artifacts/188/two_stage_188.qasm",
+  "source_sha256": "f8f7e73ad2d48daa31a29a354e2287347b90e59d460f9e7d271495850635e46e",
+  "config": {
+    "discount_rate": 0.5,
+    "depth_weight": 0.8,
+    "max_lookahead": 200,
+    "max_tqe_candidates": 100,
+    "seed": 1,
+    "allow_zzphase": false,
+    "thread_timeout": 20,
+    "only_reduce": false,
+    "trials": 1
+  },
+  "implicit_permutation_materialized": {
+    "q[0]": "q[0]",
+    "q[1]": "q[1]",
+    "q[2]": "q[2]",
+    "q[3]": "q[3]",
+    "q[4]": "q[4]",
+    "q[5]": "q[5]",
+    "q[6]": "q[6]",
+    "q[7]": "q[7]",
+    "q[8]": "q[8]",
+    "q[9]": "q[9]",
+    "q[10]": "q[10]",
+    "q[11]": "q[11]",
+    "q[12]": "q[12]",
+    "q[13]": "q[13]",
+    "q[14]": "q[14]",
+    "q[15]": "q[15]",
+    "q[16]": "q[16]",
+    "q[17]": "q[17]"
+  },
+  "depth": 188,
+  "cx": 855,
+  "u3": 773,
+  "width": 18,
+  "path": "artifacts/post188_pauli_depth_v4/oracle_d188_cx855.qasm",
+  "seconds": 20.30606574995909
+}

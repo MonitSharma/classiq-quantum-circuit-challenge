@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post188_loader_pauli.py",
+    "--side",
+    "y",
+    "--outdir",
+    "artifacts/post188_loader_pauli_y"
+  ],
+  "seconds": 4.173889166908339,
+  "limit_seconds": 65.0
+}

@@ -139,7 +139,7 @@ def _estimate(st, n):
 
 def psynth(n, targets, seed=0, beam=12, branch=6, alpha=4.0, timew=0.25, noise=1.0,
            global_phase=0.0, guard=0, fill=1, horizon=0.0,
-           initial_times=None, final_times=None, finalize=None):
+           initial_times=None, final_times=None, finalize=None, max_steps=4000):
     """Synthesise exp(i * sum_m targets[m] * parity_m) as CX + Rz at low depth."""
     rng = random.Random(seed)
     arrival = tuple(initial_times) if initial_times is not None else (0,) * n
@@ -152,7 +152,7 @@ def psynth(n, targets, seed=0, beam=12, branch=6, alpha=4.0, timew=0.25, noise=1
     steps = 0
     while states[0].remaining:
         steps += 1
-        assert steps < 4000, 'phase schedule did not converge'
+        assert steps < max_steps, 'phase schedule did not converge'
         pool = []
         for st in states:
             if not st.remaining:

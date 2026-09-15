@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post188_global_pauli.py",
+    "--source",
+    "artifacts/186/two_stage_186.qasm",
+    "--outdir",
+    "artifacts/post186_peephole_v1",
+    "--method",
+    "peephole"
+  ],
+  "seconds": 13.290941457962617,
+  "limit_seconds": 60.0
+}

@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post186_merge_exact_196/oracle_d191_cx858.qasm",
+  "sha256": "2a332f4bb66c2cbcb667401e6ca16f58f000809336bf2c99d72f10f5c2a67f2b",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 191,
+  "cx_count": 858,
+  "max_error": 6.931562558948542e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.915107866444023e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 1.1184749603271484,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

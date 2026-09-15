@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post188_sparse_revisit_v1/candidate5_d224_cx820.qasm",
+  "sha256": "425f2ce7ca7cc5ed978f74559df627d7bd86c13248706d6081bcf154acdd4cb4",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 224,
+  "cx_count": 820,
+  "max_error": 6.28406651015859e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 7.38042085785331e-15,
+  "peak_sparse_support": 8,
+  "elapsed_seconds": 0.20385313034057617,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

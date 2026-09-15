@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post185_five_address_care_v2_4/oracle_d265_cx911.qasm",
+  "sha256": "d77de38e9cc442af232bc34acba7a4355d006e54fdc38c3bc2fd6b70f089680b",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 265,
+  "cx_count": 911,
+  "max_error": 7.758046686660923e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 9.535687930332069e-15,
+  "peak_sparse_support": 16,
+  "elapsed_seconds": 0.21480488777160645,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

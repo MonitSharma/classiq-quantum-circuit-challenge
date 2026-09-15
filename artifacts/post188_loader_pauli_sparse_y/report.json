@@ -1,0 +1,20 @@
+{
+  "family": "sparse",
+  "side": "y",
+  "weight": 1.0,
+  "seed": 0,
+  "original": {
+    "seed": 0,
+    "sparse": false,
+    "opened": true,
+    "raw_bit": 5,
+    "depth": 71,
+    "cx": 151,
+    "error": 9.992007221626409e-16
+  },
+  "depth": 107,
+  "cx": 149,
+  "error": 5.401096145375165e-15,
+  "path": "artifacts/post188_loader_pauli_sparse_y/loader_d107_cx149.qasm",
+  "seconds": 1.5624151250813156
+}

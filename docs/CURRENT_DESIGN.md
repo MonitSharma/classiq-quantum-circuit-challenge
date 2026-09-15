@@ -1,5 +1,49 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+Latest method audit: `docs/POST185_METHOD_SEARCH.md`. Primary-source research
+was checked against existing implementations before larger SAT phase-block and
+CZ-direction synthesis were attempted. Neither changes the185/854/18 best.
+Eight focused tests pass; all57 completed output files pass exhaustive/hash
+checks. Local block depth savings are not full-oracle improvements. No jobs
+remain running.
+
+September16 follow-up: `docs/POST185_FIVE_ADDRESS_AUDIT.md` reproduces a60-layer
+compressed loader but finds no complete-oracle gain. Twelve QASMs pass all
+4,096 inputs; best experimental family result265/911. Protected185/854/18
+remains unchanged. The saved kernel is38/87, and a156-layer architecture-wide
+floor is not proved. Nine focused tests pass; no jobs remain running.
+
+Latest follow-up: `docs/POST185_DEPTH_CAMPAIGN.md` records new depth-only
+searches, including extra-CX rewrites and joint phase placement. No sub-185
+oracle emerged. Protected185/854/18 is unchanged; 31 focused tests and the
+hash/QMOD/replay package audit pass. Restricted-model optima do not establish
+a global depth bound. The user continues to prioritize depth over CX.
+
+## September 15 current best: 185 / 854 / 18
+
+`artifacts/185/` is the protected local oracle, SHA
+`ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8`.
+Exact three-wire CNOT identities change the interaction network, exposing
+fusions and shorter schedules. Three rewrites improve 186/855 to 185/854,
+with 763 U3 gates. All 4,096 inputs, five dense states, literal QMOD, and
+identical-hash replay pass. Use `src/build_bridge_oracle.py --package
+artifacts/185 --outdir <new-directory>`. Read `docs/POST186_CNOT_REWRITES.md`.
+Twenty-one focused tests pass. The user's latest priority is reducing depth,
+even with higher CX; rank one remains unfinished and nothing was submitted.
+
+## September 15 current best: 186 / 855 / 18
+
+`artifacts/186/` is the protected local oracle, SHA
+`5e7f8f165928e965cc47d5b697def0681a79aa6432b8d94302374fd071f25ac6`.
+Phase-level reordering exposes new native U3 fusions; exact scheduling reaches
+186/855 with 770 U3 gates. The coordinate-code architecture is unchanged.
+All 4,096 inputs and five dense states pass, QMOD matches all gates, and
+`src/build_rescheduled_oracle.py --package artifacts/186 --outdir <new-directory>`
+replays the exact hash. Read `docs/POST188_PHASE_REORDERING.md` for structural
+experiments, the 188/853 lower-CX alternative, and correctness limits. Six focused
+tests pass. Rank one remains unfinished; no new submission was made. Earlier
+"current best" entries below are historical checkpoints.
+
 ## September 15 current best: 188 / 855 / 18
 
 `artifacts/188/` is the current protected full oracle, SHA

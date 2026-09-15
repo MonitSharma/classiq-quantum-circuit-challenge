@@ -1,0 +1,349 @@
+{
+  "verified_count": 57,
+  "protected_sha256": "ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8",
+  "best_depth": 185,
+  "outputs": [
+    {
+      "path": "artifacts/post185_sat_blocks_v1/candidate38_d185.qasm",
+      "sha256": "d022fe5009425c6ccce890115fef55cb12e2baf6da6f1585fc863410d2283223",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate7_d185.qasm",
+      "sha256": "a65e25808fe8c6289313b8fcaa8f32b8ba89b10cdb02cc4f8f2ba7cd68e31c56",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate26_d185.qasm",
+      "sha256": "936f94797f6f70d4d1af8d7d18198e0a5fd6e01f27001190b757c26ac3e45edc",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate2_d185.qasm",
+      "sha256": "5c41faacb169b09c43a6f9b25caa48ad1c78b6de8d5dc05a1b0f04c5499e33f9",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate23_d185.qasm",
+      "sha256": "ebe72ee41fed061e0702cdb21249c927dd6529d933caaabd7f3740fbd5eb260c",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate14_d185.qasm",
+      "sha256": "881350fa5e2b8015faf88a72c2d1c61e41fc8f94c471deda2ee33ad74cbc0cde",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate29_d185.qasm",
+      "sha256": "b43db4a141e00aa095ea0b235698de496b4d33a36bf07bd78c1ae82746afc730",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate8_d185.qasm",
+      "sha256": "fcde1d461e33bce9d2657bdc22b086cdd7f21d285f8587b95d7b2617e4f3a14e",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate42_d185.qasm",
+      "sha256": "0663ace467ed91c0a4b18c0fc32157e464fa0a684d4c6b1e2ef2a34a7ee62a72",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate34_d185.qasm",
+      "sha256": "529bd0a6a4cb6ccd500f011ab791203ea01391eac566b7dbee5eb1b3636c66d8",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate15_d185.qasm",
+      "sha256": "ddc764676aa39daa9b32b0fd8dec98dec1025aa4ffe35ad8aa6e9915388a1f67",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate10_d185.qasm",
+      "sha256": "87b4ad8d8e03c529c4353194d9b91dc6ae1de388b312e452e6711791f879e1e8",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate9_d185.qasm",
+      "sha256": "50032c59bc25e0307926302530e1169e3a57b1b44079def04a4d71a529d0bc2b",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate28_d185.qasm",
+      "sha256": "50b4e3a2a7a69d08fad9e3c6556836f1e0964952f59b964ad708a5742aff35d7",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate22_d185.qasm",
+      "sha256": "d022fe5009425c6ccce890115fef55cb12e2baf6da6f1585fc863410d2283223",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate3_d185.qasm",
+      "sha256": "d502c41f2a466b3d1e336aa2797757cb9cb683b2eb9b090788d78a9642c97042",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate30_d185.qasm",
+      "sha256": "9334daa30e671f77787e2cff5b4d24e7c1da29921361358056e077cb559304be",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate35_d185.qasm",
+      "sha256": "7f014224b7173fb38a580b93ffdd323719fae42efeed4a0c92e0e860a787c922",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate43_d185.qasm",
+      "sha256": "c4b50a68a3f0ee304f4554e0ea48b059483cc3ba12e9b171d011006d0be2ec89",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate40_d185.qasm",
+      "sha256": "fcde1d461e33bce9d2657bdc22b086cdd7f21d285f8587b95d7b2617e4f3a14e",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate39_d185.qasm",
+      "sha256": "52e28d9cd78ba38dcfb0f88b749f3df05edd8e4e0820c6c48b739a56aa7c1d1a",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate36_d185.qasm",
+      "sha256": "a65e25808fe8c6289313b8fcaa8f32b8ba89b10cdb02cc4f8f2ba7cd68e31c56",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate21_d185.qasm",
+      "sha256": "16e6af4733e27971dc456ed97586c2b0f629452ec49a796f103aba70074042c4",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate0_d185.qasm",
+      "sha256": "ebe72ee41fed061e0702cdb21249c927dd6529d933caaabd7f3740fbd5eb260c",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate19_d185.qasm",
+      "sha256": "e4d0b6ffa11b8ca2118920ea19189b888b638069df00eaaade7a724d5f18f5a0",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate24_d185.qasm",
+      "sha256": "cfc6db9e718658e305a2a904ab1d6526b15a16f1b2675a6551a5a5772dd70e8f",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate5_d185.qasm",
+      "sha256": "456c6ab68cad6675cb21872d575801775dbc36626b76756f7b18e1ae78ef9242",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate13_d185.qasm",
+      "sha256": "785bd37c61792c227e572a7a275045fbe33f04f5a97b31ec583adaf2dcdd2e4a",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate16_d185.qasm",
+      "sha256": "881350fa5e2b8015faf88a72c2d1c61e41fc8f94c471deda2ee33ad74cbc0cde",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate37_d185.qasm",
+      "sha256": "0663ace467ed91c0a4b18c0fc32157e464fa0a684d4c6b1e2ef2a34a7ee62a72",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate32_d185.qasm",
+      "sha256": "4f90e3f5cf92ff8ea0049240a30fd9a46a5a18aa28989ad01af5016d3ccc0d96",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate44_d185.qasm",
+      "sha256": "d6713de8ba4ea6b47c0eb7b3f33b6b4e63839d6c7bb8e70e45b99fa487037802",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate41_d185.qasm",
+      "sha256": "9c6a000b6ccf6ba88cd223d3e0a37fe89ce190544d52063605ab46c7137833ba",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate38_d185.qasm",
+      "sha256": "f75cd6f33f18d8b7ec81bbd2f2a5b5b418d9bcf35369b8bf41143ca6180491b2",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate17_d185.qasm",
+      "sha256": "cbe94497f989dc8323841bfad26f535b1a1860393b21e98b77d5951a64e8919d",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate18_d185.qasm",
+      "sha256": "699f7bbc1c1f8484bdbe3f09e69c841973f8c57272ce85dfe318f76f364c995a",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate1_d185.qasm",
+      "sha256": "50b4e3a2a7a69d08fad9e3c6556836f1e0964952f59b964ad708a5742aff35d7",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate20_d185.qasm",
+      "sha256": "ec929bf256d3410250c29f846b5ebac07692ce981a39fcf61b6965bb23ac953c",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_context_v2/candidate4_d185.qasm",
+      "sha256": "32bb0ea04bf0ae7c39caac253ea2f2e3d474c5c64c2b18456d2f1eb3dd0b4a82",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_sat_blocks_exact_v1/oracle_d185_cx854.qasm",
+      "sha256": "831acbad20d09f2fe518021a58700efa63675c86d7813d258ee8ea387316c9f9",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_orientation_v1/candidate4_d199.qasm",
+      "sha256": "8f96ba58e1251b871ef7f8a9b0f852be1283fa21fec7c9acd69dfd379834497c",
+      "depth": 199,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_orientation_v1/candidate2_d194.qasm",
+      "sha256": "74a3209f7e28e15d4a3f10dac2e6dcd0134830900eb2cb5ac11bae248ccbbbd7",
+      "depth": 194,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_orientation_v1/candidate6_d193.qasm",
+      "sha256": "ec6ccae64a5bfad0b3b83b23f3002e9a8c2c45b100ba9db51e496ac046da4352",
+      "depth": 193,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_orientation_v1/candidate5_d212.qasm",
+      "sha256": "804dad80087507af16d92d1903a0548ce7e474854fe38377017925bd28e76e02",
+      "depth": 212,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_orientation_v1/candidate7_d198.qasm",
+      "sha256": "6f61f84b3ba4b32246b105d1501b927f29ecc1c515f98a911fb7f72929a7b95b",
+      "depth": 198,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_orientation_v1/candidate0_d185.qasm",
+      "sha256": "416bd4faee12a524d669d151591558f63cc79f8e0bb591a7a13c736095ef19e3",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_orientation_v1/candidate1_d194.qasm",
+      "sha256": "503d5e5521cd527d28bb895a337cd29b6385d9fe7b2b0d96a7fe282b5ead0953",
+      "depth": 194,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_orientation_v1/candidate3_d197.qasm",
+      "sha256": "0d3c7dadce49d6e9d5f0e51999986d442843b2cc0192e55c88d6b848422491ec",
+      "depth": 197,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_exact_1/oracle_d189_cx854.qasm",
+      "sha256": "1cc976cd22efb05e728b570318180f36e20c8246debf1a97bd48e9fd77b9b7bf",
+      "depth": 189,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_exact_6/oracle_d187_cx854.qasm",
+      "sha256": "7b091f30cd09daff88fb4e3c4ea0269c37c2d42fa1356594d2adf3f1941328a4",
+      "depth": 187,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_exact_7/oracle_d189_cx854.qasm",
+      "sha256": "23585deb7fb581a7e2007d94e413550a45034b230c18504252b7d71c21fa36b4",
+      "depth": 189,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_exact_6_deeper/oracle_d185_cx854.qasm",
+      "sha256": "8907489cdc2ed8a35588b09d6d24edf5be1a21dfcc50b5df09e07b9fc3204d83",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_exact_directions_v1/candidate6_d192.qasm",
+      "sha256": "3c261633a46841e8273604475865260d212cd6cd9e28d5207e8550ba78dc5a4c",
+      "depth": 192,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_exact_directions_v1/candidate7_d198.qasm",
+      "sha256": "72198ce0eddffc15e1e52ad40b7fa1187c82e732614cb1c88a82507aac956241",
+      "depth": 198,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_exact_directions_v1/candidate0_d185.qasm",
+      "sha256": "92d68f332e5e499ec7d198e0d368b753a8fa42eb43a4f5d02516bf3138723850",
+      "depth": 185,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_exact_directions_v1/candidate1_d193.qasm",
+      "sha256": "6eaae7d417665fda29e767133be6a20b1379971dc1fd836926497890f65d7a80",
+      "depth": 193,
+      "cx": 854
+    },
+    {
+      "path": "artifacts/post185_cz_joint_schedule_v1/oracle_d185_cx854.qasm",
+      "sha256": "670ebe92efeea8757f313d46fe8d51e1e65635f4bbb1c81c17bb67533dc5ae21",
+      "depth": 185,
+      "cx": 854
+    }
+  ]
+}

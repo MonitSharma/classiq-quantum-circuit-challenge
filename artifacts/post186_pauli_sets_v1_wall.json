@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post188_global_pauli.py",
+    "--source",
+    "artifacts/186/two_stage_186.qasm",
+    "--outdir",
+    "artifacts/post186_pauli_sets_v1",
+    "--method",
+    "pauli_sets"
+  ],
+  "seconds": 22.744919374934398,
+  "limit_seconds": 60.0
+}

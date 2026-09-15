@@ -14,6 +14,11 @@ from depth_parity_network import walsh          # noqa: E402
 from post218_beam_phase import psynth           # noqa: E402
 
 
+def test_step_limit_rejects_an_incomplete_phase_network():
+    with pytest.raises(AssertionError, match='phase schedule did not converge'):
+        psynth(3, {3: .37}, max_steps=1)
+
+
 def _diagonal_error(circuit, phases):
     op = Operator(qasm2.loads(qasm2.dumps(circuit))).data
     want = np.diag(np.exp(1j * phases))
