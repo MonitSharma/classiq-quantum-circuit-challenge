@@ -1,0 +1,175 @@
+{
+  "status": "beam_exhausted_or_step_limit",
+  "expanded": 44632,
+  "closure_rejections": 0,
+  "history": [
+    {
+      "step": 1,
+      "available_goals": 1,
+      "held_seed_products": 1,
+      "depth": 8,
+      "expanded": 98
+    },
+    {
+      "step": 2,
+      "available_goals": 1,
+      "held_seed_products": 2,
+      "depth": 13,
+      "expanded": 1512
+    },
+    {
+      "step": 3,
+      "available_goals": 1,
+      "held_seed_products": 3,
+      "depth": 15,
+      "expanded": 4543
+    },
+    {
+      "step": 4,
+      "available_goals": 1,
+      "held_seed_products": 2,
+      "depth": 21,
+      "expanded": 7882
+    },
+    {
+      "step": 5,
+      "available_goals": 2,
+      "held_seed_products": 1,
+      "depth": 35,
+      "expanded": 11144
+    },
+    {
+      "step": 6,
+      "available_goals": 2,
+      "held_seed_products": 1,
+      "depth": 40,
+      "expanded": 14224
+    },
+    {
+      "step": 7,
+      "available_goals": 2,
+      "held_seed_products": 2,
+      "depth": 44,
+      "expanded": 15743
+    },
+    {
+      "step": 8,
+      "available_goals": 2,
+      "held_seed_products": 1,
+      "depth": 47,
+      "expanded": 17031
+    },
+    {
+      "step": 9,
+      "available_goals": 2,
+      "held_seed_products": 2,
+      "depth": 53,
+      "expanded": 18473
+    },
+    {
+      "step": 10,
+      "available_goals": 2,
+      "held_seed_products": 1,
+      "depth": 57,
+      "expanded": 19782
+    },
+    {
+      "step": 11,
+      "available_goals": 2,
+      "held_seed_products": 1,
+      "depth": 62,
+      "expanded": 21049
+    },
+    {
+      "step": 12,
+      "available_goals": 2,
+      "held_seed_products": 1,
+      "depth": 68,
+      "expanded": 22393
+    },
+    {
+      "step": 13,
+      "available_goals": 2,
+      "held_seed_products": 1,
+      "depth": 73,
+      "expanded": 23590
+    },
+    {
+      "step": 14,
+      "available_goals": 2,
+      "held_seed_products": 0,
+      "depth": 77,
+      "expanded": 24822
+    },
+    {
+      "step": 15,
+      "available_goals": 2,
+      "held_seed_products": 0,
+      "depth": 82,
+      "expanded": 26110
+    },
+    {
+      "step": 16,
+      "available_goals": 2,
+      "held_seed_products": 1,
+      "depth": 84,
+      "expanded": 27566
+    },
+    {
+      "step": 17,
+      "available_goals": 2,
+      "held_seed_products": 0,
+      "depth": 91,
+      "expanded": 29645
+    },
+    {
+      "step": 18,
+      "available_goals": 2,
+      "held_seed_products": 0,
+      "depth": 98,
+      "expanded": 32396
+    },
+    {
+      "step": 19,
+      "available_goals": 2,
+      "held_seed_products": 1,
+      "depth": 105,
+      "expanded": 35091
+    },
+    {
+      "step": 20,
+      "available_goals": 2,
+      "held_seed_products": 0,
+      "depth": 112,
+      "expanded": 37751
+    },
+    {
+      "step": 21,
+      "available_goals": 2,
+      "held_seed_products": 0,
+      "depth": 119,
+      "expanded": 40019
+    },
+    {
+      "step": 22,
+      "available_goals": 2,
+      "held_seed_products": 0,
+      "depth": 122,
+      "expanded": 41888
+    },
+    {
+      "step": 23,
+      "available_goals": 2,
+      "held_seed_products": 1,
+      "depth": 129,
+      "expanded": 43281
+    },
+    {
+      "step": 24,
+      "available_goals": 2,
+      "held_seed_products": 0,
+      "depth": 136,
+      "expanded": 44632
+    }
+  ]
+}

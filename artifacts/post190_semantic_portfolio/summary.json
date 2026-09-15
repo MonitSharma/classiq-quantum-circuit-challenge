@@ -1,0 +1,86 @@
+[
+  {
+    "file": "artifacts/post190_nist_variants/x_candidate_0.json",
+    "status": "beam_exhausted_or_step_limit",
+    "expanded": 25613,
+    "max_available_goals": 2,
+    "best": null
+  },
+  {
+    "file": "artifacts/post190_nist_variants/x_candidate_1.json",
+    "status": "beam_exhausted_or_step_limit",
+    "expanded": 21462,
+    "max_available_goals": 2,
+    "best": null
+  },
+  {
+    "file": "artifacts/post190_nist_variants/x_candidate_2.json",
+    "status": "beam_exhausted_or_step_limit",
+    "expanded": 27888,
+    "max_available_goals": 2,
+    "best": null
+  },
+  {
+    "file": "artifacts/post190_nist_variants/x_candidate_3.json",
+    "status": "beam_exhausted_or_step_limit",
+    "expanded": 28287,
+    "max_available_goals": 2,
+    "best": null
+  },
+  {
+    "file": "artifacts/post190_nist_variants/y_candidate_0.json",
+    "status": "beam_exhausted_or_step_limit",
+    "expanded": 22379,
+    "max_available_goals": 2,
+    "best": null
+  },
+  {
+    "file": "artifacts/post190_nist_variants/y_candidate_1.json",
+    "status": "beam_exhausted_or_step_limit",
+    "expanded": 18634,
+    "max_available_goals": 2,
+    "best": null
+  },
+  {
+    "file": "artifacts/post190_nist_variants/y_candidate_2.json",
+    "status": "beam_exhausted_or_step_limit",
+    "expanded": 17241,
+    "max_available_goals": 1,
+    "best": null
+  },
+  {
+    "file": "artifacts/post190_nist_variants/y_candidate_3.json",
+    "status": "beam_exhausted_or_step_limit",
+    "expanded": 26789,
+    "max_available_goals": 2,
+    "best": null
+  },
+  {
+    "file": "artifacts/post190_nist_variants/y_candidate_4.json",
+    "status": "beam_exhausted_or_step_limit",
+    "expanded": 18711,
+    "max_available_goals": 1,
+    "best": null
+  },
+  {
+    "file": "artifacts/post190_nist_variants/y_candidate_5.json",
+    "status": "beam_exhausted_or_step_limit",
+    "expanded": 18942,
+    "max_available_goals": 1,
+    "best": null
+  },
+  {
+    "file": "artifacts/post190_nist_variants/y_candidate_6.json",
+    "status": "beam_exhausted_or_step_limit",
+    "expanded": 25739,
+    "max_available_goals": 2,
+    "best": null
+  },
+  {
+    "file": "artifacts/post190_nist_variants/y_candidate_7.json",
+    "status": "beam_exhausted_or_step_limit",
+    "expanded": 17885,
+    "max_available_goals": 2,
+    "best": null
+  }
+]

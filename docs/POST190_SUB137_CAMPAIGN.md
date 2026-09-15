@@ -1,5 +1,15 @@
 # Direct Boolean route: audit reproduced, encoding rebuilt, and where it stops
 
+## Correction: sub-135 remains an unbuilt target
+
+Read `docs/POST190_CAMPAIGN_AUDIT.md` before the campaign claims below.
+The 62-node Boolean network and 5131-depth oracle are supported by current files,
+but no 48–50-depth encoder or sub-135 oracle exists in the inspected artifacts.
+The new pebbler preserves all12 inputs; it does not implement coordinate reuse.
+The seven-times-RCCX-batch-count lower bound is invalid under native interleaving.
+Best remains190/857/18. Next: seeded nine-wire lowering with free output placement.
+
+
 Protected best unchanged: **190 depth / 857 CX / 18 qubits**, `artifacts/190/`.
 
 ## The audit's checkable claims all reproduce

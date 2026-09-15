@@ -1,5 +1,26 @@
 # Continuation handoff
 
+## Seeded register campaign: exact x14/y13, no new native best
+
+Read `docs/POST190_SEEDED_REGISTER_CAMPAIGN.md`. Independently recreated x15→14
+ANDs, and improved y14→13 by broader NIST affine enumeration. Both match all64
+inputs; levels are x[8,3,3], y[6,4,3]. Added exact-function mutable nine-wire
+scheduling with free output placement and spectator mixing. No complete
+sub77 encoder emerged from the bounded searches. Free-output composition
+control196/866/18 passes all4096 inputs; it is not a gain. Six focused tests
+pass, all new jobs finished, protected190/857/18 unchanged.
+
+
+## Correction: sub-135 remains an unbuilt target
+
+Read `docs/POST190_CAMPAIGN_AUDIT.md` before the campaign claims below.
+The 62-node Boolean network and 5131-depth oracle are supported by current files,
+but no 48–50-depth encoder or sub-135 oracle exists in the inspected artifacts.
+The new pebbler preserves all12 inputs; it does not implement coordinate reuse.
+The seven-times-RCCX-batch-count lower bound is invalid under native interleaving.
+Best remains190/857/18. Next: seeded nine-wire lowering with free output placement.
+
+
 ## Direct in-place Boolean compiler and 30,048 NIST 6-cut database
 
 See `docs/POST190_SUB137_CAMPAIGN.md`. Executed both requested components:

@@ -1,0 +1,122 @@
+{
+  "x": {
+    "best_and_count": 14,
+    "triples_checked": 32,
+    "candidates": [
+      {
+        "file": "x_candidate_0.json",
+        "indices": [
+          2,
+          3,
+          0
+        ],
+        "and_count": 14
+      },
+      {
+        "file": "x_candidate_1.json",
+        "indices": [
+          3,
+          3,
+          1
+        ],
+        "and_count": 14
+      },
+      {
+        "file": "x_candidate_2.json",
+        "indices": [
+          3,
+          3,
+          0
+        ],
+        "and_count": 14
+      },
+      {
+        "file": "x_candidate_3.json",
+        "indices": [
+          2,
+          3,
+          1
+        ],
+        "and_count": 14
+      }
+    ]
+  },
+  "y": {
+    "best_and_count": 13,
+    "triples_checked": 2882,
+    "candidates": [
+      {
+        "file": "y_candidate_0.json",
+        "indices": [
+          15,
+          0,
+          98
+        ],
+        "and_count": 13
+      },
+      {
+        "file": "y_candidate_1.json",
+        "indices": [
+          15,
+          0,
+          108
+        ],
+        "and_count": 13
+      },
+      {
+        "file": "y_candidate_2.json",
+        "indices": [
+          4,
+          0,
+          82
+        ],
+        "and_count": 13
+      },
+      {
+        "file": "y_candidate_3.json",
+        "indices": [
+          8,
+          0,
+          82
+        ],
+        "and_count": 13
+      },
+      {
+        "file": "y_candidate_4.json",
+        "indices": [
+          13,
+          0,
+          108
+        ],
+        "and_count": 13
+      },
+      {
+        "file": "y_candidate_5.json",
+        "indices": [
+          13,
+          0,
+          98
+        ],
+        "and_count": 13
+      },
+      {
+        "file": "y_candidate_6.json",
+        "indices": [
+          5,
+          0,
+          82
+        ],
+        "and_count": 13
+      },
+      {
+        "file": "y_candidate_7.json",
+        "indices": [
+          14,
+          0,
+          98
+        ],
+        "and_count": 13
+      }
+    ]
+  }
+}
