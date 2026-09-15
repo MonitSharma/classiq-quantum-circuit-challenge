@@ -1,0 +1,74 @@
+[
+  {
+    "source": "artifacts/post190_information_space/quotient_y/frontier.json",
+    "index": 0,
+    "side": "y",
+    "coverage_count": 3,
+    "coverage_mask": 50,
+    "checkpoints": 37
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_y/frontier.json",
+    "index": 1,
+    "side": "y",
+    "coverage_count": 3,
+    "coverage_mask": 50,
+    "checkpoints": 38
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_y/frontier.json",
+    "index": 2,
+    "side": "y",
+    "coverage_count": 3,
+    "coverage_mask": 50,
+    "checkpoints": 39
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_x/frontier.json",
+    "index": 0,
+    "side": "x",
+    "coverage_count": 1,
+    "coverage_mask": 2,
+    "checkpoints": 34
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_x/frontier.json",
+    "index": 1,
+    "side": "x",
+    "coverage_count": 1,
+    "coverage_mask": 2,
+    "checkpoints": 34
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_x/frontier.json",
+    "index": 2,
+    "side": "x",
+    "coverage_count": 1,
+    "coverage_mask": 2,
+    "checkpoints": 33
+  },
+  {
+    "source": "artifacts/post190_information_space/comparison_cached/B/frontier.json",
+    "index": 0,
+    "side": "y",
+    "coverage_count": 3,
+    "coverage_mask": 14,
+    "checkpoints": 52
+  },
+  {
+    "source": "artifacts/post190_information_space/comparison_cached/B/frontier.json",
+    "index": 1,
+    "side": "y",
+    "coverage_count": 3,
+    "coverage_mask": 14,
+    "checkpoints": 56
+  },
+  {
+    "source": "artifacts/post190_information_space/comparison_cached/B/frontier.json",
+    "index": 2,
+    "side": "y",
+    "coverage_count": 3,
+    "coverage_mask": 14,
+    "checkpoints": 53
+  }
+]

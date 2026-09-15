@@ -1,0 +1,7 @@
+{
+  "grid_cells": 1221,
+  "maximum_terms_at_cell": 3,
+  "union_terms": 3,
+  "forward_monotone_coverage": 3,
+  "forward_inverse_coverage": 3
+}

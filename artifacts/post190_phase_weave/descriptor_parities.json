@@ -1,0 +1,94 @@
+{
+  "y": {
+    "side": "y",
+    "raw_bit": 5,
+    "descriptor_bits": [
+      "0xffffffff00000000",
+      "0xcf9808ff8800",
+      "0x3f4017e33e6000",
+      "0xf07807fff000"
+    ],
+    "parities": [
+      "0x0",
+      "0xffffffff00000000",
+      "0xcf9808ff8800",
+      "0xffff306708ff8800",
+      "0x3f4017e33e6000",
+      "0xffc0bfe8e33e6000",
+      "0x3f8f8febc1e800",
+      "0xffc07070ebc1e800",
+      "0xf07807fff000",
+      "0xffff0f8707fff000",
+      "0x3fe00f007800",
+      "0xffffc01f0f007800",
+      "0x3fb06fe4c19000",
+      "0xffc04f90e4c19000",
+      "0x3f7ff7ec3e1800",
+      "0xffc08008ec3e1800"
+    ],
+    "parity_hashes": [
+      "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
+      "5981693c8df83eea16da42a0f748facb299546688544a0c2887ed5ffbf086e86",
+      "d3bcba9101db49b083b7a2f7c0f6d86ead58f1a37ee7e00f9710fc12c0f1ea9b",
+      "1cad38ac134f1a01e27aca8a3a59328694ccfc330f4f651c740a317b178f8677",
+      "ff4808748111a832b954bf20bd0edb1b395069aa14eb465222b22e7863e53aef",
+      "09584a4b4a0681426cf2f5f0c9bd11f55106f116dd51c4c37fe9ebf19de03205",
+      "7e77b5e7d6ce1129ca0faf5d02e2450f05a55742ecb87f39d6c34edad2c25c29",
+      "281ce4fb59152f0b75287b2dab3a4945fe527ca34a81897fd2a90f11ef06055c",
+      "741020850f8df5fcf3e2c2dce00d7b452629a2336431d01ed0af14390b3673ef",
+      "7d4ff9cfc2de5757b5edd0c6ffa8d83e93fdfe88e7b553dc23e0ebf44d8f2b4c",
+      "0856bc32bad1be49e16d138d973e771c1b9720d88cd8edf409caf1f74ca87a24",
+      "62bbeb8cc148ec8a31a5e3980f49a028c9e3d14580d02f876d4e263cb588dfce",
+      "9c9c48aa41ecedc43b1e89874fdbdf948219708d196d88df8dc0cc232770e242",
+      "fad02b444e44701e97c9ff6f4bd81714877b09571a691825b0e4fc9af15af38b",
+      "b73707582b5fc3ed825bf732767aaeaf21fb925d46242aa0b55ec7db922f9534",
+      "0a6c1a9e9cdfa9918def72684e9ece60eeb7301da38347c77bc71449c542d568"
+    ]
+  },
+  "x": {
+    "side": "x",
+    "raw_bit": 4,
+    "descriptor_bits": [
+      "0xffff0000ffff0000",
+      "0x20030001f8000000",
+      "0x3",
+      "0x1000107fffffc"
+    ],
+    "parities": [
+      "0x0",
+      "0xffff0000ffff0000",
+      "0x20030001f8000000",
+      "0xdffc000107ff0000",
+      "0x3",
+      "0xffff0000ffff0003",
+      "0x20030001f8000003",
+      "0xdffc000107ff0003",
+      "0x1000107fffffc",
+      "0xfffe0001f800fffc",
+      "0x20020000fffffffc",
+      "0xdffd00000000fffc",
+      "0x1000107ffffff",
+      "0xfffe0001f800ffff",
+      "0x20020000ffffffff",
+      "0xdffd00000000ffff"
+    ],
+    "parity_hashes": [
+      "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
+      "b978f97a664cc8fae883c8185c0e72e4c16c3be1fb8901b5306b20fdb24a34b4",
+      "6d16fa84d66ce970418ebdb8652328b29a0da1b50a66809e1d9c7819edcdc200",
+      "2f8616a949bdb5d4d9ab40ddfc338fefe4d677b40cd654ec25ea42ab6ded94cd",
+      "35be322d094f9d154a8aba4733b8497f180353bd7ae7b0a15f90b586b549f28b",
+      "246ed26deb808160e1d7acade54789bed61d5e62341ba7fb49339bbf0a293a71",
+      "da3e3df1ac67946a83f52d00d1e1ef092f697557132e39ed9000e15424ed2a3b",
+      "6263a1f0c8e52530f7913f4dab1da1e322288190ef77214f150c341acef43389",
+      "1705f9818498843fb6e61516c599fac0f6ac95af68b5cc3074d2a845ba9ef8f6",
+      "dd03b1cecb107dcb21b65e810a0f43c5ee85c313f104b034be77dc2f2ddf3f95",
+      "40ee3b95a89d1069dcc88471f37ecc06a086b2201964fd4eb207362ff6632cf7",
+      "363ede1dc36a678947fe3e745f5e8d565d5cffc927b84e3cb0dcf1c2db43f372",
+      "2caae1887295092118496171eb39671cb593bcf4d292520cd2876ef1e6243b19",
+      "0b66668ba8e8b7eeddd2106db51f87ecbf44cc8bbe9a3ad3a4cb7405140afff7",
+      "ff43ee3dd038b4125ba2bf3390b97827510b62c9ff91088a324766e4e6a17a66",
+      "30ce176d5583c7eab9a34a2300c6e61b4fd2cf528bf3d734139be39dbdb38b6b"
+    ]
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "source": "artifacts/post190_information_space/quotient_y/frontier.json",
+  "index": 0,
+  "side": "y",
+  "prefix_hash": "d49fe3f0905e393df052dbaff018152f25d91bb6bce714b106f030d26db8b231",
+  "checkpoint_count": 37,
+  "coverage_mask": 50,
+  "coverage_count": 3,
+  "checkpoints": [
+    {
+      "step": 0,
+      "depth": null,
+      "available_mask": 50,
+      "available": [
+        1,
+        4,
+        5
+      ],
+      "literal": []
+    },
+    {
+      "step": 1,
+      "depth": null,
+      "available_mask": 50,
+      "available": [
+        1,
+        4,
+        5
+      ],
+      "literal": []
+    },
+    {
+      "step": 2,
+      "depth": null,
+      "available_mask": 50,
+      "available": [
+        1,
+        4,
+        5
+      ],
+      "literal": []
+    },
+    {
+      "step": 3,
+      "depth": null,
+      "available_mask": 2,
+      "available": [
+        1
+      ],
+      "literal": []
+    },
+    {
+      "step": 4,
+      "depth": null,
+      "available_mask": 2,
+      "available": [
+        1
+      ],
+      "literal": []
+    },
+    {
+      "step": 5,
+      "depth": null,
+      "available_mask": 2,
+      "available": [
+        1
+      ],
+      "literal": []
+    },
+    {
+      "step": 6,
+      "depth": null,
+      "available_mask": 2,
+      "available": [
+        1
+      ],
+      "literal": []
+    },
+    {
+      "step": 7,
+      "depth": null,
+      "available_mask": 2,
+      "available": [
+        1
+      ],
+      "literal": []
+    },
+    {
+      "step": 8,
+      "depth": null,
+      "available_mask": 2,
+      "available": [
+        1
+      ],
+      "literal": []
+    },
+    {
+      "step": 9,
+      "depth": null,
+      "available_mask": 2,
+      "available": [
+        1
+      ],
+      "literal": []
+    },
+    {
+      "step": 10,
+      "depth": null,
+      "available_mask": 2,
+      "available": [
+        1
+      ],
+      "literal": []
+    },
+    {
+      "step": 11,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 12,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 13,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 14,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 15,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 16,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 17,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 18,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 19,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 20,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 21,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 22,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 23,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 24,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 25,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 26,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 27,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 28,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 29,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 30,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 31,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 32,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 33,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 34,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 35,
+      "depth": null,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    },
+    {
+      "step": 36,
+      "depth": 38,
+      "available_mask": 0,
+      "available": [],
+      "literal": []
+    }
+  ]
+}
