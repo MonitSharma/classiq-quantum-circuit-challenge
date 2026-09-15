@@ -1,5 +1,25 @@
 # Experiment history and failure notes
 
+## September 15: verified 188 / 855 through commuting-gate scheduling
+
+See `docs/POST190_COMMUTING_SCHEDULE.md`. Built a conservative commutation DAG,
+stochastic layer scheduler, and exact CP-SAT layer model. The initial 2,000
+trials improved 190/857 to 189/857. A 13-source portfolio (96 trials each)
+identified the old 191/855 as a better source; scheduling and native fusion
+gave 189/855, followed by exact scheduling to **188/855/18**. Further fusion
+leaves 773 U3 gates. Six bounded exact runs returned OPTIMAL for their fixed
+gate/dependency models, not for arbitrary equivalent circuits.
+
+Packaged in `artifacts/188/`, SHA
+`f8f7e73ad2d48daa31a29a354e2287347b90e59d460f9e7d271495850635e46e`.
+All 4,096 inputs and five dense states pass; QMOD matches all 1,628 gates;
+recorded-permutation replay has the identical hash. Four focused tests pass.
+The exact old 190 file has a 176-gate busiest wire, correcting the older 181
+count. Original notebook and earlier best artifacts are preserved. No new
+encoder, sub-140 circuit, submission, or rank-one result was produced. All
+jobs finished. Replay uses `src/build_rescheduled_oracle.py`, not the old
+permuted-kernel builder. Earlier best-circuit entries below are historical.
+
 ## True joint-stage campaign: verified generator, no new logo encoder
 
 Read `docs/POST190_JOINT_STAGE_CAMPAIGN.md`. Implemented simultaneous width2/3

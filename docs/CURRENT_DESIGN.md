@@ -1,5 +1,19 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+## September 15 current best: 188 / 855 / 18
+
+`artifacts/188/` is the current protected full oracle, SHA
+`f8f7e73ad2d48daa31a29a354e2287347b90e59d460f9e7d271495850635e46e`.
+The coordinate-code architecture is unchanged. Commuting-gate scheduling and
+native one-qubit fusion improve the prior 191/855 source to 188/855; the
+submitted 190/857 package remains preserved. All 4,096 inputs and five dense
+states pass, literal QMOD matches, and the saved gate permutations replay to
+the same hash with `src/build_rescheduled_oracle.py --package artifacts/188
+--outdir <new-directory>`. Read `docs/POST190_COMMUTING_SCHEDULE.md` for the
+13-source portfolio and fixed-graph exact-scheduling limits. Four focused
+tests pass. No submission or rank-one result is claimed; the user's screenshot
+shows a 137-depth leader. All "current best" entries below are historical.
+
 ## True joint-stage campaign: verified generator, no new logo encoder
 
 Read `docs/POST190_JOINT_STAGE_CAMPAIGN.md`. Implemented simultaneous width2/3

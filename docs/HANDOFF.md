@@ -1,5 +1,23 @@
 # Continuation handoff
 
+## September 15: verified 188 / 855 / 18 through commuting-gate scheduling
+
+Current protected best is **188 depth / 855 CX / 18 qubits**, `artifacts/188/`,
+SHA `f8f7e73ad2d48daa31a29a354e2287347b90e59d460f9e7d271495850635e46e`.
+Read `docs/POST190_COMMUTING_SCHEDULE.md`. A conservative commutation DAG,
+13-circuit portfolio, exact CP-SAT scheduling, and native U3 fusion improved
+the previous 191/855 source to 188/855. All 4,096 inputs and five dense states
+pass; the QMOD matches every gate. Deterministic replay:
+`src/build_rescheduled_oracle.py --package artifacts/188 --outdir <new-directory>`.
+Its saved schedule is required; the old permuted-package builder alone does
+not reproduce it. The original notebook and 190 package remain preserved.
+Four focused tests pass. Exact scheduling optima apply only to each fixed
+commutation graph. The exact 190 file's busiest wire has 176 gates, correcting
+the older 181 count. No new 50-layer encoder or sub-140 circuit was built.
+The user's screenshot shows a 137/561 leader; no live rank or submission was
+checked. Rank one remains unfinished. All jobs finished, no automation created.
+Earlier "current best" entries below are historical checkpoints.
+
 ## True joint-stage campaign: verified generator, no new logo encoder
 
 Read `docs/POST190_JOINT_STAGE_CAMPAIGN.md`. Implemented simultaneous width2/3

@@ -1,0 +1,120 @@
+[
+  {
+    "source": "artifacts/190/two_stage_190.qasm",
+    "source_sha256": "f8f6aec7835f6fe4e28023e2736553eb029d3522b1ea724a1e0d74213b41f549",
+    "original_depth": 190,
+    "depth": 189,
+    "cx": 857,
+    "trials": 96,
+    "u3": 775
+  },
+  {
+    "source": "artifacts/191/two_stage_191.qasm",
+    "source_sha256": "b941bbba20927ca6e5bc05484193dc5578fb2f7ede3a8611bdc622690b346ece",
+    "original_depth": 191,
+    "depth": 189,
+    "cx": 855,
+    "trials": 96,
+    "u3": 781,
+    "path": "artifacts/post190_schedule_portfolio_v1/candidate1_d189_cx855.qasm"
+  },
+  {
+    "source": "artifacts/192/two_stage_192.qasm",
+    "source_sha256": "1a8d82717997d03bef441477c91525f0255ff066b333bbd3a84fb2996aed72a6",
+    "original_depth": 192,
+    "depth": 191,
+    "cx": 862,
+    "trials": 96,
+    "u3": 781
+  },
+  {
+    "source": "artifacts/193/two_stage_193.qasm",
+    "source_sha256": "5c00b23d9ea061b8b3062caac17ae2de0ab8457a4705ecc3eea8c1eed49a1bec",
+    "original_depth": 193,
+    "depth": 191,
+    "cx": 857,
+    "trials": 96,
+    "u3": 776
+  },
+  {
+    "source": "artifacts/193_cx853/two_stage_193.qasm",
+    "source_sha256": "4dbd4993f7d1e807b5ae2908f9580d70070f247a4496140b858f08c95ce82709",
+    "original_depth": 193,
+    "depth": 190,
+    "cx": 853,
+    "trials": 96,
+    "u3": 782
+  },
+  {
+    "source": "artifacts/196/two_stage_196.qasm",
+    "source_sha256": "63333fade2e7e38c9a4edf333888c26bdac234c04e955fd6a624c0ea6e714c30",
+    "original_depth": 196,
+    "depth": 193,
+    "cx": 858,
+    "trials": 96,
+    "u3": 787
+  },
+  {
+    "source": "artifacts/post193_asymmetric_loaders_v1/oracle_d193_cx854.qasm",
+    "source_sha256": "cb3502027f93f59a761e0219682b796cf7ddacda20435435d3ca5431d913a73c",
+    "original_depth": 193,
+    "depth": 190,
+    "cx": 854,
+    "trials": 96,
+    "u3": 784
+  },
+  {
+    "source": "artifacts/post193_endpoint_beam_v1/oracle_d193_cx855.qasm",
+    "source_sha256": "715381b10803faaf2890618d648f23b9d9d42461f067bba0e08462155016c3f2",
+    "original_depth": 193,
+    "depth": 190,
+    "cx": 855,
+    "trials": 96,
+    "u3": 781
+  },
+  {
+    "source": "artifacts/post193_joint_v4/oracle_d192_cx859.qasm",
+    "source_sha256": "7225aca864dbacce427a5bba7e4c2c4121b4d7fa1f2f84f80a5a9a7524951248",
+    "original_depth": 192,
+    "depth": 191,
+    "cx": 859,
+    "trials": 96,
+    "u3": 781
+  },
+  {
+    "source": "artifacts/post193_joint_v4/oracle_d192_cx860.qasm",
+    "source_sha256": "98edcbafda855aa89728f229d2b7819e435eedb8dbe2203c788802cc31286cb5",
+    "original_depth": 192,
+    "depth": 191,
+    "cx": 860,
+    "trials": 96,
+    "u3": 783
+  },
+  {
+    "source": "artifacts/post193_joint_v5/oracle_d190_cx859.qasm",
+    "source_sha256": "e6964f30ef5970995451eecdf1aa47152222d4556d7a2fe3aab80479f750728f",
+    "original_depth": 190,
+    "depth": 189,
+    "cx": 859,
+    "trials": 96,
+    "u3": 782
+  },
+  {
+    "source": "artifacts/post195_care_free_order_v1/oracle_d194_cx862.qasm",
+    "source_sha256": "e6e805c89007bb393c48feb333d683408350e9e09853f7821cd46ad91b6b88d9",
+    "original_depth": 194,
+    "depth": 193,
+    "cx": 862,
+    "trials": 96,
+    "u3": 782
+  },
+  {
+    "source": "artifacts/post196_care_tune_v1/oracle_d195_cx857.qasm",
+    "source_sha256": "36a5d4606bd71c4fbf09fd9e8b2cf5d3f63bd64914aa70ff3a7b5eaeffa417f3",
+    "original_depth": 195,
+    "depth": 192,
+    "cx": 857,
+    "trials": 96,
+    "u3": 778
+  }
+]

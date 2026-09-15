@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post190_schedule_portfolio_v1/candidate1_d189_cx855.qasm",
+  "sha256": "4c10b7079febd5cf23d8ab0ea482789abae709a233b7c7a96f16aa74fbef318f",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 189,
+  "cx_count": 855,
+  "max_error": 7.996728950919642e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.4311876409908286e-14,
+  "peak_sparse_support": 32,
+  "elapsed_seconds": 0.28847312927246094,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}
