@@ -1,0 +1,151 @@
+{
+  "care_words": 121,
+  "plain_best": 50,
+  "screen_best": 33,
+  "compiled": [
+    {
+      "move": null,
+      "support": 50,
+      "kernel_depth": 42,
+      "kernel_cx": 77,
+      "kernel_u3": 50,
+      "care_error": 9.187122361918869e-14
+    },
+    {
+      "move": null,
+      "support": 51,
+      "kernel_depth": 38,
+      "kernel_cx": 75,
+      "kernel_u3": 51,
+      "care_error": 3.6832318148909996e-14
+    },
+    {
+      "move": null,
+      "support": 51,
+      "kernel_depth": 39,
+      "kernel_cx": 88,
+      "kernel_u3": 51,
+      "care_error": 1.1831714802871487e-13
+    },
+    {
+      "move": null,
+      "support": 51,
+      "kernel_depth": 42,
+      "kernel_cx": 95,
+      "kernel_u3": 51,
+      "care_error": 6.204364558715985e-15
+    },
+    {
+      "move": [
+        2,
+        6,
+        1,
+        1,
+        1
+      ],
+      "support": 33,
+      "kernel_depth": 42,
+      "kernel_cx": 67,
+      "kernel_u3": 48,
+      "care_error": 1.023951298512e-15
+    },
+    {
+      "move": [
+        2,
+        6,
+        1,
+        0,
+        0
+      ],
+      "support": 34,
+      "kernel_depth": 45,
+      "kernel_cx": 67,
+      "kernel_u3": 42,
+      "care_error": 7.243060997933924e-14
+    },
+    {
+      "move": [
+        2,
+        6,
+        1,
+        1,
+        0
+      ],
+      "support": 34,
+      "kernel_depth": 43,
+      "kernel_cx": 76,
+      "kernel_u3": 43,
+      "care_error": 8.015840991835039e-14
+    },
+    {
+      "move": [
+        2,
+        6,
+        5,
+        1,
+        1
+      ],
+      "support": 34,
+      "kernel_depth": 42,
+      "kernel_cx": 73,
+      "kernel_u3": 49,
+      "care_error": 1.4717156783076513e-14
+    },
+    {
+      "move": [
+        0,
+        2,
+        5,
+        0,
+        1
+      ],
+      "support": 36,
+      "kernel_depth": 47,
+      "kernel_cx": 75,
+      "kernel_u3": 47,
+      "care_error": 4.771235116366785e-14
+    },
+    {
+      "move": [
+        0,
+        2,
+        5,
+        1,
+        0
+      ],
+      "support": 36,
+      "kernel_depth": 44,
+      "kernel_cx": 75,
+      "kernel_u3": 47,
+      "care_error": 1.984647873387927e-14
+    },
+    {
+      "move": [
+        0,
+        2,
+        5,
+        1,
+        1
+      ],
+      "support": 36,
+      "kernel_depth": 49,
+      "kernel_cx": 80,
+      "kernel_u3": 51,
+      "care_error": 8.326857719803522e-14
+    },
+    {
+      "move": [
+        4,
+        6,
+        1,
+        1,
+        0
+      ],
+      "support": 36,
+      "kernel_depth": 48,
+      "kernel_cx": 79,
+      "kernel_u3": 48,
+      "care_error": 1.6045513627138276e-13
+    }
+  ]
+}
