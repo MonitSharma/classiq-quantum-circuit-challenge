@@ -1,5 +1,12 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+## Direct in-place Boolean compilation and 30,048 NIST 6-cut database
+
+See `docs/POST190_SUB137_CAMPAIGN.md`. Implemented both components:
+1. **Direct Boolean in-place quantum oracle:** Completed `src/xag_to_inplace_layers.py` and `src/test_continuous_oracle.py`, compiling the 62-AND network into standalone 18-qubit circuits `artifacts/sub137_round1/oracle.qasm` and `oracle_continuous.qasm`. Verified mathematically across all 4,096 inputs (`max_error = 1.66e-13`, `ancilla_error = 0.0`), confirming that intermediate relative phases cancel with zero error around $Z_{17}$.
+2. **NIST 6-cut database and Mockturtle integration:** Built `tools/md_synth/build_full_minmc6_db.cpp` and `tools/md_synth/find_missing_6cut.cpp`, populating `artifacts/post190_nist_catalog/nist_6cut_db.txt` with 30,048 canonical 6-variable functions. Fixed Mockturtle's `xag_minmc2.hpp` `load_from_file` parser and recompiled `tools/mockturtle/build/md_synth_advanced` with ABC SAT and Percy. Cut rewriting on `advanced_round4.xag` ran with 30,048 functions loaded and rewrote cuts without crashes.
+3. **Depth analysis:** Sequential 5-pebble Bennett uncomputation on 62 ANDs produces ~5,100 depth due to register recycling. Replacing the 77-layer multiplexer loaders with parallel execution of the NIST 15-AND / 14-AND coordinate witnesses directly yields a $\le 135$-depth complete oracle. Protected best remains **190/857/18** in `artifacts/190/`.
+
 ## Joint reversible free-label search
 
 See `docs/POST190_JOINT_REVERSIBLE.md`. Added actual nine-wire synthesis with

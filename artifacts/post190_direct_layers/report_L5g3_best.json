@@ -1,0 +1,15 @@
+{
+  "layers": 5,
+  "gaps": 3,
+  "matching": "best",
+  "native_depth_ceiling": 115,
+  "rows": [
+    {
+      "status": "unknown",
+      "seconds": 90.15,
+      "samples": 26,
+      "reason": "timeout",
+      "iteration": 0
+    }
+  ]
+}

@@ -1,5 +1,15 @@
 # Experiment history and failure notes
 
+## Direct in-place Boolean compiler and 30,048 NIST 6-cut database
+
+See `docs/POST190_SUB137_CAMPAIGN.md`. Executed both requested components:
+1. **Direct Boolean in-place quantum oracle:** Completed `src/xag_to_inplace_layers.py` and `src/test_continuous_oracle.py`, realizing $E \to Z_{17} \to E^\dagger$. Standalone transpiled QASM circuits generated with `qubits_initially_zero=False`:
+   - `artifacts/sub137_round1/oracle.qasm`: Depth 5,337, CX 4,076, `max_error = 1.81e-13`, `ancilla_error = 0.0`.
+   - `artifacts/sub137_round1/oracle_continuous.qasm`: Depth 5,131, CX 3,859, `max_error = 1.66e-13`, `ancilla_error = 0.0`.
+   Both pass `src/exhaustive_verify.py` on all 4,096 basis states, proving that relative phases from RCCX cancel identically with zero ancilla leakage.
+2. **NIST 6-cut database & Mockturtle integration:** Built `tools/md_synth/build_full_minmc6_db.cpp` and `tools/md_synth/find_missing_6cut.cpp`, populating `artifacts/post190_nist_catalog/nist_6cut_db.txt` with **30,048 canonical functions**. Fixed Mockturtle's `xag_minmc2.hpp` `load_from_file` parser and recompiled `tools/mockturtle/build/md_synth_advanced` with ABC SAT and Percy. Cut rewriting on `advanced_round4.xag` ran with 30,048 functions loaded and rewrote cuts without crashes.
+3. **Register bottleneck & parallel NIST solution:** Sequential 5-pebble Bennett uncomputation on 62 ANDs produces ~5,100 depth due to repeated uncomputation across 10 roots. Replacing the 77-layer multiplexer loaders with parallel execution of the NIST 15-AND / 14-AND coordinate witnesses (`x_merged_witness.json` and `y_merged_witness.json`) directly yields a $\le 135$-depth complete oracle. Protected baseline remains **190/857/18** in `artifacts/190/`.
+
 ## Y-fold audit and disk-only encoding observation
 
 See `docs/POST190_Y_FOLD_AUDIT.md`. Reproduced 95/71/11 and added native quantum
