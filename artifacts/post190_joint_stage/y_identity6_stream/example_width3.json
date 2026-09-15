@@ -1,0 +1,154 @@
+{
+  "initial": {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0",
+      "0xff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00",
+      "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+      "0xffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000",
+      "0xffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffff00000000000000000000000000000000",
+      "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0",
+      "0xff00ff00ff00ff00",
+      "0xffff0000ffff0000",
+      "0xffffffff00000000",
+      "0x0",
+      "0x0",
+      "0x0"
+    ],
+    "times": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ops": [],
+    "stages": 0,
+    "nonlinear_operations": 0,
+    "nonlinear_dependency_depth": 0,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 7,
+      "remaining": 9,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x9669699669969669",
+      "0x5555555555555555",
+      "0x3333333333333333",
+      "0xf0f0f0f0f0f0f0f",
+      "0xff00ff00ff00ff",
+      "0xffff0000ffff",
+      "0xffffffff"
+    ]
+  },
+  "path": [
+    {
+      "selected_products": [
+        0,
+        1,
+        2
+      ],
+      "control_aliases": [
+        552,
+        536,
+        532,
+        112,
+        58,
+        35
+      ],
+      "H": [
+        64,
+        34,
+        18,
+        10,
+        6,
+        1
+      ],
+      "spectators": [],
+      "quotient_representatives": [
+        2,
+        128,
+        256
+      ],
+      "ordered_quotient_basis": [
+        1,
+        2,
+        4
+      ],
+      "targets": [
+        2,
+        128,
+        256
+      ],
+      "frame": [
+        552,
+        536,
+        532,
+        112,
+        58,
+        35,
+        2,
+        128,
+        256
+      ],
+      "full_products": [
+        "0xff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ff",
+        "0xf0f0000000000f0f00000f0ff0f00000f0f0000000000f0f00000f0ff0f00000f0f0000000000f0f00000f0ff0f00000f0f0000000000f0f00000f0ff0f00000",
+        "0x11888811442222441188881144222244118888114422224411888811442222441188881144222244118888114422224411888811442222441188881144222244"
+      ],
+      "successor_span": [
+        "0x871e117722bb4b2d77ee1e78d24b442278e1ee88dd44b4d28811e1872db4bbdd78e1ee88dd44b4d28811e1872db4bbdd871e117722bb4b2d77ee1e78d24b4422",
+        "0x4422224411888811442222441188881144222244118888114422224411888811bbddddbbee7777eebbddddbbee7777eebbddddbbee7777eebbddddbbee7777ee",
+        "0x2244442288111188224444228811118822444422881111882244442288111188ddbbbbdd77eeee77ddbbbbdd77eeee77ddbbbbdd77eeee77ddbbbbdd77eeee77",
+        "0x1177771144dddd441177771144dddd441177771144dddd441177771144dddd44ee8888eebb2222bbee8888eebb2222bbee8888eebb2222bbee8888eebb2222bb",
+        "0xf0f00000000f0f00000f0f00f0f0000f0f0ffffffff0f0fffff0f0ff0f0ffff0f0f00000000f0f00000f0f00f0f0000f0f0ffffffff0f0fffff0f0ff0f0ffff",
+        "0xff0000ffff00ff00ff0000ffff00ff00ff0000ffff00ff00ff0000ffff00ff00ff0000ffff00ff00ff0000ffff00ff00ff0000ffff00ff00ff0000ffff00ff",
+        "0xf00f0ff0ffff0f0f00ff00ff0f0fffff0ff0f00f0000f0f0ff00ff00f0f00000f00f0ff0ffff0f0f00ff00ff0f0fffff0ff0f00f0000f0f0ff00ff00f0f0",
+        "0xf0ff0f000000f0ffffffffff0f0fffff0f00f0ffffff0f0000000000f0f00000f0ff0f000000f0ffffffffff0f0fffff0f00f0ffffff0f0000000000f0f",
+        "0xff00ffffff000000ff00ffffff000000ff00ffffff000000ff00ffffff000000ff00ffffff000000ff00ffffff000000ff00ffffff000000ff00ffffff",
+        "0xffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff"
+      ]
+    }
+  ],
+  "final_values": [
+    "0xff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ff",
+    "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+    "0xf0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0f",
+    "0xffff00000000ffff0000ffffffff0000ffff00000000ffff0000ffffffff0000ffff00000000ffff0000ffffffff0000ffff00000000ffff0000ffffffff0000",
+    "0x33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc",
+    "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+    "0x33cccccccccccc3333cccccccccccc3333cccccccccccc3333cccccccccccc3333cccccccccccc3333cccccccccccc3333cccccccccccc3333cccccccccccc33",
+    "0xf0ffffffffff0f0fffff0f00f0ffffff0f0000000000f0f00000f0ff0f000000f0ffffffffff0f0fffff0f00f0ffffff0f0000000000f0f00000f0ff0f00000",
+    "0xee7777eebbddddbbee7777eebbddddbbee7777eebbddddbbee7777eebbddddbb1188881144222244118888114422224411888811442222441188881144222244"
+  ]
+}

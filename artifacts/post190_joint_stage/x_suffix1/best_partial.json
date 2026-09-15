@@ -1,0 +1,426 @@
+{
+  "origin": 0,
+  "initial": {
+    "full_values": [
+      "0x66999966669999666699996666999966669999666699996666999966669999666699996666999966669999666699996666999966669999666699996666999966",
+      "0xf0f00f0f0f0ff0f0f0f00f0f0f0ff0f0f0f00f0f0f0ff0f0f0f00f0f0f0ff0f0f0f00f0f0f0ff0f0f0f00f0f0f0ff0f0f0f00f0f0f0ff0f0f0f00f0f0f0ff0f0",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff",
+      "0xcc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33cc33",
+      "0x40233bfdf80d4fe08c10f7ce343e83d373ef0831cbc17c2cbfdcc40207f2b01f40233bfdf80d4fe08c10f7ce343e83d373ef0831cbc17c2cbfdcc40207f2b01f",
+      "0x3310f73108f00f0fccdcc4fd3b0ff0f0cc233b02c40ff0f033ef08cef7f00f0f7333ccccf0fd40ef40cc33330f317323bfcc33330fce8cdc8c33ccccf002bf10",
+      "0x8ceff731cb3e7cd340dc3b02070db0e0bf23c4fdf8f24f1f731008ce34c1832c8ceff731cb3e7cd340dc3b02070db0e0bf23c4fdf8f24f1f731008ce34c1832c",
+      "0x3333cccccccc33333333cccccccc33333333cccccccc33333333cccccccc33333333cccccccc33333333cccccccc33333333cccccccc33333333cccccccc3333",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff000000ff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffff"
+    ],
+    "clean_values": [
+      "0x6699996666999966",
+      "0xf0f00f0f0f0ff0f0",
+      "0xffffffff",
+      "0xcc33cc33cc33cc33",
+      "0xbfdcc40207f2b01f",
+      "0x8c33ccccf002bf10",
+      "0x731008ce34c1832c",
+      "0x3333cccccccc3333",
+      "0xff00000000ffffff"
+    ],
+    "times": [
+      33,
+      35,
+      20,
+      24,
+      42,
+      43,
+      29,
+      30,
+      40
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          5,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          2
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          2,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          3,
+          4,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          7
+        ]
+      ],
+      [
+        "ccx",
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          7
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          8,
+          4,
+          5
+        ]
+      ]
+    ],
+    "stages": 6,
+    "nonlinear_operations": 6,
+    "nonlinear_dependency_depth": 5,
+    "metrics": {
+      "present": [
+        0,
+        3
+      ],
+      "missing": [
+        1,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [
+        2
+      ],
+      "ready": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        10,
+        11
+      ],
+      "clean_rank": 10,
+      "remaining": 6,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x831f073e3b317323",
+      "0x400000003c3173dc",
+      "0x26455d646194d686",
+      "0x1555555569642689",
+      "0xf0f0f0f0f0f0f0f",
+      "0xdc3b023b3cc33c",
+      "0x233b023bc3c33c",
+      "0xff000000ff00",
+      "0xff000000ff",
+      "0xffffffff"
+    ]
+  },
+  "path": [
+    {
+      "selected_products": [
+        0,
+        1,
+        2
+      ],
+      "control_aliases": [
+        134,
+        4,
+        1,
+        2,
+        140,
+        208
+      ],
+      "H": [
+        128,
+        80,
+        8,
+        4,
+        2,
+        1
+      ],
+      "spectators": [],
+      "quotient_representatives": [
+        16,
+        32,
+        256
+      ],
+      "ordered_quotient_basis": [
+        2,
+        5,
+        3
+      ],
+      "targets": [
+        32,
+        272,
+        48
+      ],
+      "frame": [
+        134,
+        4,
+        1,
+        2,
+        140,
+        208,
+        32,
+        272,
+        48
+      ],
+      "full_products": [
+        "0x3c3c3c3c000000003c3c3c3c000000003c3c3c3c000000003c3c3c3c000000003c3c3c3c000000003c3c3c3c000000003c3c3c3c000000003c3c3c3c",
+        "0x60900906060990606090090606099060609009060609906060900906060990606090090606099060609009060609906060900906060990606090090606099060",
+        "0xff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000"
+      ],
+      "successor_span": [
+        "0x831f07c1070d4fe04f2ccbf2cb3e83d3b0d3340d34c17c2c7ce0f83ef8f2b01f831f07c1070d4fe04f2ccbf2cb3e83d3b0d3340d34c17c2c7ce0f83ef8f2b01f",
+        "0x400000ff3c31732373ffff00c3fd40ef8cffff00c302bf10bf0000ff3cce8cdc00233b02c43c3cc3ffef08cef7c3c33cff10f73108c3c33c00dcc4fd3b3c3cc3",
+        "0x204c32fb0104207fec7ffec8cd37ec4c1380013732c813b3dfb3cd04fefbdf80dfb3cd04fefbdf801380013732c813b3ec7ffec8cd37ec4c204c32fb0104207f",
+        "0x135c3a3535c8ecb320a3c5caca04df7fdfa3c5cacafb2080ec5c3a353537134cac80fe37323a5cac534ccdfb01c5a35353b33204fec5a353ac7f01c8cd3a5cac",
+        "0x906609053a3c5ca0906609053a3c5ca0906609053a3c5ca0906609053a3c5caf6f99f6fac5c3a35f6f99f6fac5c3a35f6f99f6fac5c3a35f6f99f6fac5c3a35",
+        "0x6096f9f5caccac506096f9f5caccac506096f9f5caccac506096f9f5caccac5f9f69060a353353af9f69060a353353af9f69060a353353af9f69060a353353a",
+        "0xdc3b020700ff00ff1008ce34ff00ffffeff731cbff00ff0023c4fdf800ff0040ff00ffff0db0e07300ff0000c1832c8c00ff00003e7cd3bfff00fffff24f1f",
+        "0x233bfd07ffffffffef083134000000ff10f7cecb00000000dcc402f8ffffff40000000fff2b01f73ffffff003e83d38cffffff00c17c2cbf000000ff0d4fe0",
+        "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff",
+        "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff"
+      ]
+    }
+  ],
+  "final_values": [
+    "0xc3c3c3c33c3c3c3cc3c3c3c33c3c3c3cc3c3c3c33c3c3c3cc3c3c3c33c3c3c3cc3c3c3c33c3c3c3cc3c3c3c33c3c3c3cc3c3c3c33c3c3c3cc3c3c3c33c3c3c3c",
+    "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff",
+    "0x66999966669999666699996666999966669999666699996666999966669999666699996666999966669999666699996666999966669999666699996666999966",
+    "0xf0f00f0f0f0ff0f0f0f00f0f0f0ff0f0f0f00f0f0f0ff0f0f0f00f0f0f0ff0f0f0f00f0f0f0ff0f0f0f00f0f0f0ff0f0f0f00f0f0f0ff0f0f0f00f0f0f0ff0f0",
+    "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+    "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000",
+    "0x3310f73134cc3333ccdcc4fd0733cccccc233b02f833cccc33ef08cecbcc33337333ccccccc17cd340cc3333330d4f1fbfcc333333f2b0e08c33cccccc3e832c",
+    "0x204ccd040104df80ec7f0137cd3713b31380fec832c8ec4cdfb332fbfefb207fdfb332fbfefb207f1380fec832c8ec4cec7f0137cd3713b3204ccd040104df80",
+    "0x8c33cccc0ffd40efbfcc3333f031732340cc3333f0ce8cdc7333cccc0f02bf10cc10f731f7f00f0f33dcc4fdc40ff0f033233b023b0ff0f0ccef08ce08f00f0f"
+  ],
+  "metrics": {
+    "present": [
+      0,
+      3
+    ],
+    "missing": [
+      1,
+      2
+    ],
+    "rank_deficit": 2,
+    "held": [
+      4
+    ],
+    "ready": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      10,
+      11
+    ],
+    "clean_rank": 10,
+    "remaining": 6,
+    "inputs": 6
+  }
+}

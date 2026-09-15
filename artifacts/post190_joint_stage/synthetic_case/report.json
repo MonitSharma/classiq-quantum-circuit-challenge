@@ -1,0 +1,59 @@
+{
+  "status": "semantic_complete",
+  "elapsed": 0.001588708022609353,
+  "states_expanded": 1,
+  "product_triples_considered": 1,
+  "independent_alias_combinations": 1,
+  "width3_independent_control_sets": 1,
+  "H_subspaces_enumerated": 1,
+  "transitions_generated": 1,
+  "width3_transitions": 1,
+  "best_goal_rank_improvement": 3,
+  "width3_best_rank_improvement": 3,
+  "width3_rank_improving_transitions": 1,
+  "width3_rank_improving_control_sets": 1,
+  "width3_unique_successors": 1,
+  "unique_full_spans": 2,
+  "expanded_depths": {
+    "0": 1
+  },
+  "queued_unexpanded": 0,
+  "best_metrics": {
+    "present": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "missing": [],
+    "rank_deficit": 0,
+    "held": [
+      0,
+      1,
+      2
+    ],
+    "ready": [],
+    "clean_rank": 10,
+    "remaining": 0,
+    "inputs": 6
+  },
+  "best_suffix_stages": 1,
+  "queue_limited": false,
+  "encoder": {
+    "depth": 15,
+    "cx": 24,
+    "width": 9,
+    "outputs": [
+      6,
+      7,
+      8,
+      5
+    ],
+    "checked_inputs": 64,
+    "inverse_phase_error": 6.938893903907228e-16,
+    "sha256": "82a7661524ba4899d934e9ac44b6296e7bcbec20e15502ad90a17104d89f3956",
+    "nonlinear_operations": 3,
+    "joint_suffix_stages": 1,
+    "prefix_stages": 0
+  }
+}

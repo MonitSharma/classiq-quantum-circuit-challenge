@@ -1,0 +1,181 @@
+{
+  "origin": 0,
+  "initial": {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0",
+      "0xff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00",
+      "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+      "0xffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000",
+      "0xffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffff00000000000000000000000000000000",
+      "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0",
+      "0xff00ff00ff00ff00",
+      "0xffff0000ffff0000",
+      "0xffffffff00000000",
+      "0x0",
+      "0x0",
+      "0x0"
+    ],
+    "times": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ops": [],
+    "stages": 0,
+    "nonlinear_operations": 0,
+    "nonlinear_dependency_depth": 0,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 7,
+      "remaining": 9,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x9669699669969669",
+      "0x5555555555555555",
+      "0x3333333333333333",
+      "0xf0f0f0f0f0f0f0f",
+      "0xff00ff00ff00ff",
+      "0xffff0000ffff",
+      "0xffffffff"
+    ]
+  },
+  "path": [
+    {
+      "selected_products": [
+        2,
+        6,
+        10
+      ],
+      "control_aliases": [
+        58,
+        35,
+        32,
+        536,
+        533,
+        9
+      ],
+      "H": [
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "spectators": [],
+      "quotient_representatives": [
+        64,
+        128,
+        256
+      ],
+      "ordered_quotient_basis": [
+        1,
+        2,
+        4
+      ],
+      "targets": [
+        64,
+        128,
+        256
+      ],
+      "frame": [
+        58,
+        35,
+        32,
+        536,
+        533,
+        9,
+        64,
+        128,
+        256
+      ],
+      "full_products": [
+        "0x11888811442222441188881144222244118888114422224411888811442222441188881144222244118888114422224411888811442222441188881144222244",
+        "0xff0000ff00000000ff0000ff00000000ff0000ff00000000ff0000ff00000000ff0000ff00000000ff0000ff00000000ff0000ff00000000ff0000ff00000000",
+        "0x500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0"
+      ],
+      "successor_span": [
+        "0x82414e7228141bd87dbeb18dd7ebe42782414e7228141bd87dbeb18dd7ebe4277dbeb18dd7ebe42782414e7228141bd87dbeb18dd7ebe42782414e7228141bd8",
+        "0x417d72b1142827e4be828d4eebd7d81bbe828d4eebd7d81b417d72b1142827e4be828d4eebd7d81b417d72b1142827e4417d72b1142827e4be828d4eebd7d81b",
+        "0x2244442277111177ddbbbbdd88eeee88ddbbbbdd88eeee8822444422771111772244442277111177ddbbbbdd88eeee88ddbbbbdd88eeee882244442277111177",
+        "0x1177771144222244ee8888eebbddddbbee8888eebbddddbb11777711442222441177771144222244ee8888eebbddddbbee8888eebbddddbb1177771144222244",
+        "0xa505ffa0a505ffa0a505ffa0a505ffa0a505ffa0a505ffa0a505ffa0a505ffaf5afa005f5afa005f5afa005f5afa005f5afa005f5afa005f5afa005f5afa005",
+        "0x55f50f5055f50f5055f50f5055f50f5055f50f5055f50f5055f50f5055f50f5faa0af0afaa0af0afaa0af0afaa0af0afaa0af0afaa0af0afaa0af0afaa0af0a",
+        "0xff00ff0000ffff00ff00ff0000ffffff00ff00ffff0000ff00ff00ffff000000ff00ff0000ffff00ff00ff0000ffffff00ff00ffff0000ff00ff00ffff0000",
+        "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff",
+        "0xff0000ff00000000ff0000ffffffffff00ffff00ffffffff00ffff0000000000ff0000ff00000000ff0000ffffffffff00ffff00ffffffff00ffff00",
+        "0xffff000000000000ffff00ffffffffff0000ffffffffffff0000ff0000000000ffff000000000000ffff00ffffffffff0000ffffffffffff0000ff"
+      ]
+    }
+  ],
+  "final_values": [
+    "0x33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc",
+    "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+    "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+    "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+    "0x5a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a5",
+    "0x55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa",
+    "0xee7777eebbddddbb1188881144222244ee7777eebbddddbb1188881144222244ee7777eebbddddbb1188881144222244ee7777eebbddddbb1188881144222244",
+    "0xffff00ffffffff00ffff00ffffffffff0000ff00000000ff0000ff0000000000ffff00ffffffff00ffff00ffffffffff0000ff00000000ff0000ff00000000",
+    "0xaff5fa5faff5fa5faff5fa5faff5fa5faff5fa5faff5fa5faff5fa5faff5fa5f500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0"
+  ],
+  "metrics": {
+    "present": [
+      3
+    ],
+    "missing": [
+      0,
+      1,
+      2
+    ],
+    "rank_deficit": 3,
+    "held": [
+      2,
+      6,
+      10
+    ],
+    "ready": [
+      0,
+      1,
+      5,
+      8,
+      11
+    ],
+    "clean_rank": 10,
+    "remaining": 8,
+    "inputs": 6
+  }
+}

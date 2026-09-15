@@ -1,0 +1,50 @@
+{
+  "status": "exhausted_requested_depth",
+  "elapsed": 1.3837658750126138,
+  "states_expanded": 1,
+  "product_triples_considered": 4,
+  "independent_alias_combinations": 7,
+  "width3_independent_control_sets": 2,
+  "H_subspaces_enumerated": 777,
+  "transitions_generated": 4986,
+  "width3_transitions": 336,
+  "best_goal_rank_improvement": 0,
+  "width3_best_rank_improvement": 0,
+  "width3_unique_successors": 336,
+  "relaxed_bound_pruned_successors": 4986,
+  "suspended_expansions": 19,
+  "product_pairs_considered": 6,
+  "width2_independent_control_sets": 5,
+  "width2_transitions": 4650,
+  "width2_unique_successors": 4650,
+  "unique_full_spans": 4987,
+  "expanded_depths": {
+    "0": 1
+  },
+  "queued_unexpanded": 0,
+  "best_metrics": {
+    "present": [
+      0,
+      3
+    ],
+    "missing": [
+      1,
+      2
+    ],
+    "rank_deficit": 2,
+    "held": [
+      3
+    ],
+    "ready": [
+      2,
+      5,
+      6,
+      11
+    ],
+    "clean_rank": 10,
+    "remaining": 5,
+    "inputs": 3
+  },
+  "best_suffix_stages": 0,
+  "queue_limited": false
+}

@@ -1,0 +1,12 @@
+{
+  "witness": "artifacts/post190_nist_variants_wide/y_candidate_0.json",
+  "side": "y",
+  "frontier": null,
+  "prefix_index": 0,
+  "outdir": "artifacts/post190_joint_stage/y_identity5",
+  "stages": 5,
+  "seconds": 20.0,
+  "policy": "best",
+  "max_states": 200000,
+  "widths": "3,2"
+}

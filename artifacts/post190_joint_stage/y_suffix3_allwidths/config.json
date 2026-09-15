@@ -1,0 +1,14 @@
+{
+  "witness": "artifacts/post190_nist_variants_wide/y_candidate_0.json",
+  "side": "y",
+  "frontier": "artifacts/post190_information_space/comparison_cached/B/frontier.json",
+  "prefix_index": 0,
+  "outdir": "artifacts/post190_joint_stage/y_suffix3_allwidths",
+  "stages": 3,
+  "seconds": 30.0,
+  "policy": "best",
+  "max_states": 20000,
+  "widths": "3,2,1",
+  "burst": 256,
+  "relaxed_prune": true
+}

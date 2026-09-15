@@ -1,0 +1,51 @@
+{
+  "status": "timeout",
+  "elapsed": 30.0001484999666,
+  "states_expanded": 26,
+  "product_triples_considered": 328,
+  "independent_alias_combinations": 309,
+  "width3_independent_control_sets": 93,
+  "H_subspaces_enumerated": 33573,
+  "transitions_generated": 216397,
+  "width3_transitions": 15517,
+  "best_goal_rank_improvement": 0,
+  "width3_best_rank_improvement": 0,
+  "width3_unique_successors": 6888,
+  "product_pairs_considered": 267,
+  "width2_independent_control_sets": 216,
+  "width2_transitions": 200880,
+  "width2_unique_successors": 124667,
+  "unique_full_spans": 131502,
+  "expanded_depths": {
+    "0": 1,
+    "1": 10,
+    "2": 7,
+    "3": 8
+  },
+  "queued_unexpanded": 110818,
+  "best_metrics": {
+    "present": [
+      0,
+      3
+    ],
+    "missing": [
+      1,
+      2
+    ],
+    "rank_deficit": 2,
+    "held": [
+      3
+    ],
+    "ready": [
+      2,
+      5,
+      6,
+      11
+    ],
+    "clean_rank": 10,
+    "remaining": 5,
+    "inputs": 3
+  },
+  "best_suffix_stages": 0,
+  "queue_limited": false
+}

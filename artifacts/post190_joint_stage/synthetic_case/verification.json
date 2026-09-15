@@ -1,0 +1,17 @@
+{
+  "depth": 15,
+  "cx": 24,
+  "width": 9,
+  "outputs": [
+    6,
+    7,
+    8,
+    5
+  ],
+  "checked_inputs": 64,
+  "inverse_phase_error": 6.938893903907228e-16,
+  "sha256": "82a7661524ba4899d934e9ac44b6296e7bcbec20e15502ad90a17104d89f3956",
+  "nonlinear_operations": 3,
+  "joint_suffix_stages": 1,
+  "prefix_stages": 0
+}

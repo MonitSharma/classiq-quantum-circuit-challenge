@@ -1,0 +1,26 @@
+{
+  "witness_sha256": "dbf6c64ffad9512d4ef0cd49dcedf9b2d7ead0128dc6c1ca9bb34efa5ee2fa52",
+  "prefix_frontier_sha256": "8d2f2be73c7467c84ae75f9a7f78844d553beb132cbb61f134417ecf0d26eb66",
+  "prefix_index": 0,
+  "first_successor_remaining_stage_bound_histogram": {
+    "4": 5008,
+    "3": 486
+  },
+  "minimum_total_suffix_stages": 4,
+  "stats": {
+    "states_expanded": 1,
+    "product_triples_considered": 4,
+    "independent_alias_combinations": 11,
+    "width3_independent_control_sets": 2,
+    "H_subspaces_enumerated": 1285,
+    "transitions_generated": 5494,
+    "width3_transitions": 336,
+    "product_pairs_considered": 6,
+    "width2_independent_control_sets": 5,
+    "width2_transitions": 4650,
+    "products_considered": 4,
+    "width1_independent_control_sets": 4,
+    "width1_transitions": 508
+  },
+  "scope": "This saved prefix; distinct fixed witness products; widths1,2,3; arbitrary full affine frames and dirty targets. Not other labels, products, or prefixes."
+}

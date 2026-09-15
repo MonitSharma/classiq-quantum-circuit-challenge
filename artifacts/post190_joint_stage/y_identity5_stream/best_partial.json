@@ -1,0 +1,382 @@
+{
+  "origin": 0,
+  "initial": {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0",
+      "0xff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00",
+      "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+      "0xffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000",
+      "0xffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffff00000000000000000000000000000000",
+      "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0",
+      "0xff00ff00ff00ff00",
+      "0xffff0000ffff0000",
+      "0xffffffff00000000",
+      "0x0",
+      "0x0",
+      "0x0"
+    ],
+    "times": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ops": [],
+    "stages": 0,
+    "nonlinear_operations": 0,
+    "nonlinear_dependency_depth": 0,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 7,
+      "remaining": 9,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x9669699669969669",
+      "0x5555555555555555",
+      "0x3333333333333333",
+      "0xf0f0f0f0f0f0f0f",
+      "0xff00ff00ff00ff",
+      "0xffff0000ffff",
+      "0xffffffff"
+    ]
+  },
+  "path": [
+    {
+      "selected_products": [
+        0,
+        2,
+        10
+      ],
+      "control_aliases": [
+        552,
+        536,
+        58,
+        35,
+        533,
+        9
+      ],
+      "H": [
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "spectators": [],
+      "quotient_representatives": [
+        64,
+        128,
+        256
+      ],
+      "ordered_quotient_basis": [
+        1,
+        2,
+        4
+      ],
+      "targets": [
+        64,
+        128,
+        256
+      ],
+      "frame": [
+        552,
+        536,
+        58,
+        35,
+        533,
+        9,
+        64,
+        128,
+        256
+      ],
+      "full_products": [
+        "0xff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ff",
+        "0x11888811442222441188881144222244118888114422224411888811442222441188881144222244118888114422224411888811442222441188881144222244",
+        "0x500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0"
+      ],
+      "successor_span": [
+        "0x82414e7228141bd882414e7228141bd87dbeb18dd7ebe4277dbeb18dd7ebe4277dbeb18dd7ebe4277dbeb18dd7ebe42782414e7228141bd882414e7228141bd8",
+        "0x417d724e1428271bbe828db1ebd7d8e4be828db1ebd7d8e4417d724e1428271bbe828db1ebd7d8e4417d724e1428271b417d724e1428271bbe828db1ebd7d8e4",
+        "0x2244442277eeee772244442277eeee77ddbbbbdd88111188ddbbbbdd881111882244442277eeee772244442277eeee77ddbbbbdd88111188ddbbbbdd88111188",
+        "0x1177771144dddd441177771144dddd44ee8888eebb2222bbee8888eebb2222bb1177771144dddd441177771144dddd44ee8888eebb2222bbee8888eebb2222bb",
+        "0xa505f050aafa005f5afa0faf5505ffa0a505f050aafa005f5afa0faf5505ffaf5afa0faf5505ffa0a505f050aafa005f5afa0faf5505ffa0a505f050aafa005",
+        "0x55f500a05a0af0afaa0aff5fa5f50f5055f500a05a0af0afaa0aff5fa5f50f5faa0aff5fa5f50f5055f500a05a0af0afaa0aff5fa5f50f5055f500a05a0af0a",
+        "0xff00000000ff00ff00ffffffff00ff00ff00000000ff00ff00ffffffff00ff00ff00000000ff00ff00ffffffff00ff00ff00000000ff00ff00ffffffff00ff",
+        "0xff0000ff0000ffff00ffff00ffff0000ff0000ff0000ffff00ffff00ffff0000ff0000ff0000ffff00ffff00ffff0000ff0000ff0000ffff00ffff00ffff",
+        "0xff00ffffffffffff00ff000000000000ff00ffffffffffff00ff000000000000ff00ffffffffffff00ff000000000000ff00ffffffffffff00ff000000",
+        "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff"
+      ]
+    },
+    {
+      "selected_products": [
+        0,
+        2,
+        10
+      ],
+      "control_aliases": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "H": [
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "spectators": [],
+      "quotient_representatives": [
+        64,
+        128,
+        256
+      ],
+      "ordered_quotient_basis": [
+        1,
+        4,
+        6
+      ],
+      "targets": [
+        64,
+        256,
+        384
+      ],
+      "frame": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        256,
+        384
+      ],
+      "full_products": [
+        "0xff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ff",
+        "0x11888811442222441188881144222244118888114422224411888811442222441188881144222244118888114422224411888811442222441188881144222244",
+        "0x500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0"
+      ],
+      "successor_span": [
+        "0x82414e7228141bd87dbeb18dd7ebe42782414e7228141bd87dbeb18dd7ebe4277dbeb18dd7ebe42782414e7228141bd87dbeb18dd7ebe42782414e7228141bd8",
+        "0x417d72b114d7d8e4417d72b114d7d8e4417d72b114d7d8e4417d72b114d7d8e4be828d4eeb28271bbe828d4eeb28271bbe828d4eeb28271bbe828d4eeb28271b",
+        "0x2244442277eeee772244442277eeee77ddbbbbdd88111188ddbbbbdd88111188ddbbbbdd88111188ddbbbbdd881111882244442277eeee772244442277eeee77",
+        "0x1177771144dddd441177771144dddd44ee8888eebb2222bbee8888eebb2222bbee8888eebb2222bbee8888eebb2222bb1177771144dddd441177771144dddd44",
+        "0xa505ffa0a505ffa0a505ffa0a505ffaf5afa005f5afa005f5afa005f5afa0050a505ffa0a505ffa0a505ffa0a505ffaf5afa005f5afa005f5afa005f5afa005",
+        "0x55f50f5055f50f5055f50f5055f50f5faa0af0afaa0af0afaa0af0afaa0af0a055f50f5055f50f5055f50f5055f50f5faa0af0afaa0af0afaa0af0afaa0af0a",
+        "0xff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff",
+        "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff",
+        "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff",
+        "0xffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff"
+      ]
+    },
+    {
+      "selected_products": [
+        0,
+        1,
+        2
+      ],
+      "control_aliases": [
+        1,
+        2,
+        542,
+        67,
+        4,
+        8
+      ],
+      "H": [
+        64,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "spectators": [],
+      "quotient_representatives": [
+        32,
+        128,
+        256
+      ],
+      "ordered_quotient_basis": [
+        2,
+        3,
+        5
+      ],
+      "targets": [
+        128,
+        160,
+        288
+      ],
+      "frame": [
+        1,
+        2,
+        542,
+        67,
+        4,
+        8,
+        128,
+        160,
+        288
+      ],
+      "full_products": [
+        "0xff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ff",
+        "0xf0f0000000000f0f00000f0ff0f00000f0f0000000000f0f00000f0ff0f00000f0f0000000000f0f00000f0ff0f00000f0f0000000000f0f00000f0ff0f00000",
+        "0x11888811442222441188881144222244118888114422224411888811442222441188881144222244118888114422224411888811442222441188881144222244"
+      ],
+      "successor_span": [
+        "0x8241417d271be42772b14e72d7ebeb287dbebe82d8e41bd88d4eb18d281414d78241417d271be42772b14e72d7ebeb287dbebe82d8e41bd88d4eb18d281414d7",
+        "0x417d724e1428271b417d724e1428271bbe828db1ebd7d8e4be828db1ebd7d8e4417d724e1428271b417d724e1428271bbe828db1ebd7d8e4be828db1ebd7d8e4",
+        "0x271b1428724e417d271b1428724e417d271b1428724e417d271b1428724e417dd8e4ebd78db1be82d8e4ebd78db1be82d8e4ebd78db1be82d8e4ebd78db1be82",
+        "0x1428271b417d724e1428271b417d724eebd7d8e4be828db1ebd7d8e4be828db11428271b417d724e1428271b417d724eebd7d8e4be828db1ebd7d8e4be828db1",
+        "0xf0f00ff00ff0f0f0000f00f0ff0ffff0f0f00ff00ff0f0f0000f00f0ff0ffff0f0f00ff00ff0f0f0000f00f0ff0ffff0f0f00ff00ff0f0f0000f00f0ff0ffff",
+        "0xff00ff00ff00ff00ff00ff00ff00ffff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff00ff00ff00ff00ff00ff00ff00ff",
+        "0xf00f0ff0ffff0f0f00ff00ff0f0f0000f00f0ff0ffff0f0f00ff00ff0f0f0000f00f0ff0ffff0f0f00ff00ff0f0f0000f00f0ff0ffff0f0f00ff00ff0f0f",
+        "0xff00ff000000f0fff0000fff0f0fffff00ff00ffffff0f000ffff000f0ffffff00ff00ffffff0f000ffff000f0f00000ff00ff000000f0fff0000fff0f0",
+        "0xffffffff00000000ffffffffffffffff00000000ffffffff00000000ffffffff00000000ffffffff0000000000000000ffffffff00000000ffffffff",
+        "0xffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff"
+      ]
+    },
+    {
+      "selected_products": [
+        0,
+        2,
+        10
+      ],
+      "control_aliases": [
+        1,
+        2,
+        16,
+        32,
+        566,
+        256
+      ],
+      "H": [
+        256,
+        32,
+        16,
+        4,
+        2,
+        1
+      ],
+      "spectators": [],
+      "quotient_representatives": [
+        8,
+        64,
+        128
+      ],
+      "ordered_quotient_basis": [
+        2,
+        1,
+        6
+      ],
+      "targets": [
+        64,
+        8,
+        192
+      ],
+      "frame": [
+        1,
+        2,
+        16,
+        32,
+        566,
+        256,
+        64,
+        8,
+        192
+      ],
+      "full_products": [
+        "0xff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ffff000000000000ff",
+        "0x11888811442222441188881144222244118888114422224411888811442222441188881144222244118888114422224411888811442222441188881144222244",
+        "0x500a05a0500a05a0500a05a0500a05a00a50a0050a50a0050a50a0050a50a0050a50a0050a50a0050a50a0050a50a005500a05a0500a05a0500a05a0500a05a0"
+      ],
+      "successor_span": [
+        "0x8241418227e41bd88d4eb17228ebeb28d81be4277dbebe7dd71414d772b14e8dd81be4277dbebe7dd71414d772b14e8d8241418227e41bd88d4eb17228ebeb28",
+        "0x417d72b114d7d8e4417d72b114d7d8e4417d72b114d7d8e4417d72b114d7d8e4be828d4eeb28271bbe828d4eeb28271bbe828d4eeb28271bbe828d4eeb28271b",
+        "0x2244442277eeee77ddbbbbdd88111188ddbbbbdd881111882244442277eeee77ddbbbbdd881111882244442277eeee772244442277eeee77ddbbbbdd88111188",
+        "0x1177771144dddd44ee8888eebb2222bb1177771144dddd44ee8888eebb2222bb1177771144dddd44ee8888eebb2222bb1177771144dddd44ee8888eebb2222bb",
+        "0xa50500a05a05ffafaa05f05f55050f5500af5af5ffafa5fa0fafaa0af0af550500af5af5ffafa5fa0fafaa0af0af5500a50500a05a05ffafaa05f05f55050f5",
+        "0x55f50f5055f50f5faa0af0afaa0af0a055f50f5055f50f5faa0af0afaa0af0afaa0af0afaa0af0a055f50f5055f50f5faa0af0afaa0af0a055f50f5055f50f5",
+        "0xff00ff00ff00ff00ff00ff00ff00ffff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff00ff00ff00ff00ff00ff00ff00ff",
+        "0xf00f0ff0ffff0f0f00ff00ff0f0f5a5a55aa55aa5a5a5555a55a5aa5aaaaa5a5aa55aa55a5a5aaaa5aa5a55a5555ffff0ff0f00f0000f0f0ff00ff00f0f0",
+        "0xff00ff000000f0fff0000fff0f0a5a555aaaa555a5aaaaaa55aa55aaaaa5a5aaa5555aaa5a555555aa55aa55555fffff00ff00ffffff0f000ffff000f0f",
+        "0xffffffff00000000ffffffffffffffff00000000ffffffff00000000ffffffff00000000ffffffff0000000000000000ffffffff00000000ffffffff"
+      ]
+    }
+  ],
+  "final_values": [
+    "0xff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ff",
+    "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+    "0x33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc",
+    "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+    "0x5a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a5",
+    "0x55aa55aa55aa55aa55aa55aa55aa55aaaa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa5555aa55aa55aa55aa55aa55aa55aa55aa",
+    "0xbe7d724eebd7d81bbe7d724eebd7d81bbe7d724eebd7d81bbe7d724eebd7d81b41828db1142827e441828db1142827e441828db1142827e441828db1142827e4",
+    "0xee7788114422ddbb118877eebbdd2244ee7788114422ddbb118877eebbdd2244ee7788114422ddbb118877eebbdd2244ee7788114422ddbb118877eebbdd2244",
+    "0xa50500a05a05ffafaa05f05f55050f5500af5af5ffafa5fa0fafaa0af0af550500af5af5ffafa5fa0fafaa0af0af5500a50500a05a05ffafaa05f05f55050f5"
+  ],
+  "metrics": {
+    "present": [
+      3
+    ],
+    "missing": [
+      0,
+      1,
+      2
+    ],
+    "rank_deficit": 3,
+    "held": [
+      2,
+      10
+    ],
+    "ready": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      11
+    ],
+    "clean_rank": 10,
+    "remaining": 7,
+    "inputs": 6
+  }
+}

@@ -1,5 +1,18 @@
 # Experiment history and failure notes
 
+## True joint-stage campaign: verified generator, no new logo encoder
+
+Read `docs/POST190_JOINT_STAGE_CAMPAIGN.md`. Implemented simultaneous width2/3
+control selection, exact H and quotient enumeration, full-span semantic search,
+and physical replay. All5,494 first successors of the saved Y prefix certify
+at least4 further stages are needed from that prefix in the fixed-product model.
+The extended four-stage search reached456,886 full spans and timed out without
+completion; this is not a global impossibility result. Protected190/857/18 is
+unchanged. Synthetic joint encoder15/24/9 is a positive control only. Focused
+suite23 passes; full suite174 passes plus the existing phase-factorization test
+failure. All campaign jobs finished.
+
+
 ## Information-space campaign: pruning flaw measured, no new complete encoder
 
 Read `docs/POST190_INFORMATION_SPACE_CAMPAIGN.md`. Legacy span dedup discarded
