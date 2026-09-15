@@ -4,7 +4,21 @@ import argparse, copy, hashlib, json, math, random, time
 from pathlib import Path
 from destructive_semantic_search import (ALL_ONES, N_WIRES, TARGET,
     affine_distance_proxy, affine_span_solution, apply_cx_semantic,
-    apply_rccx_semantic, initial_wire_truth_tables, semantic_hash)
+    apply_rccx_semantic, exact_affine_distance, initial_wire_truth_tables,
+    semantic_hash)
+
+def schedule_from_gates(gates):
+    """Pack an ordered flat gate list into legal layers without reordering."""
+    layers=[]
+    for gate in gates:
+        wires=set(gate[1:])
+        placed=False
+        for item in layers:
+            used={q for g in item['gates'] for q in g[1:]}
+            if not used.intersection(wires):
+                item['gates'].append(list(gate)); placed=True; break
+        if not placed: layers.append({'gates':[list(gate)]})
+    return layers
 
 def apply_item(wires,item):
     out=wires
@@ -36,14 +50,22 @@ def schedule_hash(schedule): return hashlib.blake2b(json.dumps(schedule,sort_key
 def random_layer(rng,n=18,max_gates=6):
  wires=list(range(n));rng.shuffle(wires); gates=[]
  for _ in range(rng.randint(0,max_gates)):
-  if len(wires)<3:break
-  a,b,t=wires[:3];wires=wires[3:]
-  if rng.random()<.35:gates.append(['cx',a,b])
-  else:gates.append(['rccx',a,b,t])
+  if rng.random()<.35:
+   if len(wires)<2:break
+   a,b=wires[:2];wires=wires[2:]; gates.append(['cx',a,b])
+  else:
+   if len(wires)<3:break
+   a,b,t=wires[:3];wires=wires[3:]; gates.append(['rccx',a,b,t])
  return {'gates':gates}
 def random_schedule(rng,layers=7): return [random_layer(rng) for _ in range(layers)]
-def mutate(schedule,rng):
- out=copy.deepcopy(schedule); k=rng.randrange(len(out)); kind=rng.random()
+def mutate(schedule,rng,mode='full'):
+ out=copy.deepcopy(schedule)
+ if mode=='tail':
+  k=rng.randrange(max(0,3*len(out)//4),len(out)); kind=.5
+ elif mode in ('single_global','global_single'):
+  k=rng.randrange(len(out)); kind=.5
+ else:
+  k=rng.randrange(len(out)); kind=rng.random()
  if kind<.35: out[k]=random_layer(rng)
  elif kind<.7:
   gates=out[k]['gates'][:]
@@ -65,10 +87,29 @@ def score(wires,target=TARGET):
  exact=0 if affine_span_solution(wires,target) is not None else 1
  residual,combo=affine_distance_proxy(wires,target,max_order=2)
  return (exact,residual),{'proxy_residual':residual,'combo':combo,'semantic_hash':semantic_hash(wires)}
-def anneal(schedule,target=TARGET,seconds=10,iterations=10000,temperature=20.,cooling=.9995,seed=0):
+def exact_metrics(schedule,target=TARGET):
+ state,_=replay(schedule)
+ residual,combo=exact_affine_distance(state,target)
+ return {'exact_residual':residual,'exact_combo':combo,
+         'semantic_hash':semantic_hash(state)}
+
+def native_metrics(schedule):
+ """Compile the complete schedule in the challenge's u3/cx basis."""
+ from qiskit import QuantumCircuit, transpile
+ qc=QuantumCircuit(N_WIRES)
+ for item in schedule:
+  for gate in item['gates']:
+   if gate[0]=='cx': qc.cx(gate[1],gate[2])
+   else: qc.rccx(gate[1],gate[2],gate[3])
+ out=transpile(qc,basis_gates=['u3','cx'],optimization_level=3,
+               qubits_initially_zero=False)
+ return {'native_depth':out.depth(),'native_cx':out.count_ops().get('cx',0),
+         'native_width':out.num_qubits}
+
+def anneal(schedule,target=TARGET,seconds=10,iterations=10000,temperature=20.,cooling=.9995,seed=0,mode='full'):
  rng=random.Random(seed); current=copy.deepcopy(schedule); state,boundaries=replay(current); key,metrics=score(state,target); best=(key,metrics,current,state); accepted_uphill=0; rejected_uphill=0; accepted_early=0; accepted_blocks=0; start=time.monotonic(); it=0
  while it<iterations and time.monotonic()-start<seconds:
-  trial,first=mutate(current,rng); nstate,nb=cached_replay(trial,boundaries,first); nkey,nmetrics=score(nstate,target); delta=(nkey[0]-key[0])*10000+nkey[1]-key[1]
+  trial,first=mutate(current,rng,mode=mode); nstate,nb=cached_replay(trial,boundaries,first); nkey,nmetrics=score(nstate,target); delta=(nkey[0]-key[0])*10000+nkey[1]-key[1]
   accept=delta<=0 or rng.random()<math.exp(-delta/max(.001,temperature))
   if accept:
    if delta>0:accepted_uphill+=1

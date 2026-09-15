@@ -1,0 +1,1654 @@
+{
+  "experiment": "POST190 whole-schedule closure",
+  "cache": {
+    "depth59": [
+      {
+        "first_changed": 0,
+        "full_seconds_median": 0.00042633304838091135,
+        "cached_seconds_median": 0.0004220410482957959,
+        "speedup": 1.0101696271072365,
+        "full_spread": 2.1582935005426407e-05,
+        "cached_spread": 4.624994471669197e-05
+      },
+      {
+        "first_changed": 2,
+        "full_seconds_median": 0.0004188750172033906,
+        "cached_seconds_median": 0.00030804192647337914,
+        "speedup": 1.3597987196057535,
+        "full_spread": 8.999952115118504e-06,
+        "cached_spread": 7.500057108700275e-06
+      },
+      {
+        "first_changed": 4,
+        "full_seconds_median": 0.0004259999841451645,
+        "cached_seconds_median": 0.00021583400666713715,
+        "speedup": 1.9737389428263215,
+        "full_spread": 1.6418052837252617e-05,
+        "cached_spread": 1.1458061635494232e-05
+      },
+      {
+        "first_changed": 6,
+        "full_seconds_median": 0.00043583393562585115,
+        "cached_seconds_median": 0.00016070890706032515,
+        "speedup": 2.7119463606472825,
+        "full_spread": 4.6001048758625984e-05,
+        "cached_spread": 3.1540985219180584e-05
+      },
+      {
+        "first_changed": 9,
+        "full_seconds_median": 0.00042516703251749277,
+        "cached_seconds_median": 1.4874967746436596e-05,
+        "speedup": 28.58271962433966,
+        "full_spread": 2.6958994567394257e-05,
+        "cached_spread": 1.291045919060707e-06
+      }
+    ],
+    "depth84": [
+      {
+        "first_changed": 0,
+        "full_seconds_median": 0.0005860000383108854,
+        "cached_seconds_median": 0.0006067500216886401,
+        "speedup": 0.9658014295244595,
+        "full_spread": 5.129212513566017e-05,
+        "cached_spread": 3.3207936212420464e-05
+      },
+      {
+        "first_changed": 3,
+        "full_seconds_median": 0.000630625057965517,
+        "cached_seconds_median": 0.00040708400774747133,
+        "speedup": 1.549127565720332,
+        "full_spread": 2.933293581008911e-05,
+        "cached_spread": 3.554194699972868e-05
+      },
+      {
+        "first_changed": 6,
+        "full_seconds_median": 0.0006065000779926777,
+        "cached_seconds_median": 0.00028033298440277576,
+        "speedup": 2.163498809406148,
+        "full_spread": 4.112499300390482e-05,
+        "cached_spread": 2.0458828657865524e-05
+      },
+      {
+        "first_changed": 9,
+        "full_seconds_median": 0.0005761249922215939,
+        "cached_seconds_median": 0.00011583301238715649,
+        "speedup": 4.973754721115017,
+        "full_spread": 9.862496517598629e-05,
+        "cached_spread": 9.209034033119678e-06
+      },
+      {
+        "first_changed": 12,
+        "full_seconds_median": 0.0005948339821770787,
+        "cached_seconds_median": 1.6042031347751617e-05,
+        "speedup": 37.07971698113207,
+        "full_spread": 3.654207102954388e-05,
+        "cached_spread": 4.749977961182594e-06
+      }
+    ]
+  },
+  "basins": {
+    "depth59": {
+      "source": "artifacts/destructive_semantic/double_seed42_b16x6_p4_depth59.json",
+      "layers": 9,
+      "gates": 12,
+      "recorded_depth": 59,
+      "recorded_exact_residual": 447,
+      "runs": {
+        "tail": [
+          {
+            "seed": 0,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2779,
+            "elapsed": 0.4501058330060914,
+            "uphill_accepted": 70,
+            "uphill_rejected": 126,
+            "early_accepted": 0,
+            "block_accepted": 1512
+          },
+          {
+            "seed": 1,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2786,
+            "elapsed": 0.45006066595669836,
+            "uphill_accepted": 49,
+            "uphill_rejected": 117,
+            "early_accepted": 0,
+            "block_accepted": 1462
+          },
+          {
+            "seed": 2,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2784,
+            "elapsed": 0.4501592500600964,
+            "uphill_accepted": 46,
+            "uphill_rejected": 129,
+            "early_accepted": 0,
+            "block_accepted": 1423
+          },
+          {
+            "seed": 3,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2798,
+            "elapsed": 0.45013450004626065,
+            "uphill_accepted": 56,
+            "uphill_rejected": 115,
+            "early_accepted": 0,
+            "block_accepted": 1520
+          },
+          {
+            "seed": 4,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2807,
+            "elapsed": 0.45005574997048825,
+            "uphill_accepted": 44,
+            "uphill_rejected": 107,
+            "early_accepted": 0,
+            "block_accepted": 1506
+          },
+          {
+            "seed": 5,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2819,
+            "elapsed": 0.45009587495587766,
+            "uphill_accepted": 56,
+            "uphill_rejected": 110,
+            "early_accepted": 0,
+            "block_accepted": 1374
+          },
+          {
+            "seed": 6,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2809,
+            "elapsed": 0.45000008400529623,
+            "uphill_accepted": 67,
+            "uphill_rejected": 107,
+            "early_accepted": 0,
+            "block_accepted": 1440
+          },
+          {
+            "seed": 7,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2816,
+            "elapsed": 0.45002345799002796,
+            "uphill_accepted": 48,
+            "uphill_rejected": 129,
+            "early_accepted": 0,
+            "block_accepted": 1573
+          }
+        ],
+        "single_global": [
+          {
+            "seed": 0,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2554,
+            "elapsed": 0.45002645801287144,
+            "uphill_accepted": 7,
+            "uphill_rejected": 4,
+            "early_accepted": 1136,
+            "block_accepted": 1497
+          },
+          {
+            "seed": 1,
+            "proxy": 659,
+            "exact": 659,
+            "iterations": 2644,
+            "elapsed": 0.4500730420695618,
+            "uphill_accepted": 11,
+            "uphill_rejected": 4,
+            "early_accepted": 1171,
+            "block_accepted": 1417
+          },
+          {
+            "seed": 2,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2516,
+            "elapsed": 0.4501893329434097,
+            "uphill_accepted": 18,
+            "uphill_rejected": 21,
+            "early_accepted": 1136,
+            "block_accepted": 1395
+          },
+          {
+            "seed": 3,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2564,
+            "elapsed": 0.450094208936207,
+            "uphill_accepted": 15,
+            "uphill_rejected": 8,
+            "early_accepted": 1144,
+            "block_accepted": 1482
+          },
+          {
+            "seed": 4,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2621,
+            "elapsed": 0.4500078340061009,
+            "uphill_accepted": 15,
+            "uphill_rejected": 16,
+            "early_accepted": 1154,
+            "block_accepted": 1471
+          },
+          {
+            "seed": 5,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2625,
+            "elapsed": 0.4500696670729667,
+            "uphill_accepted": 8,
+            "uphill_rejected": 1,
+            "early_accepted": 1191,
+            "block_accepted": 1428
+          },
+          {
+            "seed": 6,
+            "proxy": 537,
+            "exact": 537,
+            "iterations": 2616,
+            "elapsed": 0.45018587505910546,
+            "uphill_accepted": 14,
+            "uphill_rejected": 13,
+            "early_accepted": 1153,
+            "block_accepted": 1436
+          },
+          {
+            "seed": 7,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2615,
+            "elapsed": 0.45010854105930775,
+            "uphill_accepted": 13,
+            "uphill_rejected": 5,
+            "early_accepted": 1197,
+            "block_accepted": 1516
+          }
+        ],
+        "full": [
+          {
+            "seed": 0,
+            "proxy": 633,
+            "exact": 633,
+            "iterations": 2498,
+            "elapsed": 0.45004970801528543,
+            "uphill_accepted": 11,
+            "uphill_rejected": 11,
+            "early_accepted": 1176,
+            "block_accepted": 1668
+          },
+          {
+            "seed": 1,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2473,
+            "elapsed": 0.45006208308041096,
+            "uphill_accepted": 30,
+            "uphill_rejected": 15,
+            "early_accepted": 1184,
+            "block_accepted": 1675
+          },
+          {
+            "seed": 2,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2461,
+            "elapsed": 0.45014312502462417,
+            "uphill_accepted": 16,
+            "uphill_rejected": 7,
+            "early_accepted": 1200,
+            "block_accepted": 1721
+          },
+          {
+            "seed": 3,
+            "proxy": 537,
+            "exact": 537,
+            "iterations": 2470,
+            "elapsed": 0.4501582079101354,
+            "uphill_accepted": 19,
+            "uphill_rejected": 8,
+            "early_accepted": 1174,
+            "block_accepted": 1702
+          },
+          {
+            "seed": 4,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2480,
+            "elapsed": 0.45009037503041327,
+            "uphill_accepted": 11,
+            "uphill_rejected": 11,
+            "early_accepted": 1244,
+            "block_accepted": 1690
+          },
+          {
+            "seed": 5,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2487,
+            "elapsed": 0.45004670799244195,
+            "uphill_accepted": 13,
+            "uphill_rejected": 4,
+            "early_accepted": 1194,
+            "block_accepted": 1653
+          },
+          {
+            "seed": 6,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2495,
+            "elapsed": 0.4500023329164833,
+            "uphill_accepted": 26,
+            "uphill_rejected": 28,
+            "early_accepted": 1169,
+            "block_accepted": 1657
+          },
+          {
+            "seed": 7,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2511,
+            "elapsed": 0.45011970889754593,
+            "uphill_accepted": 25,
+            "uphill_rejected": 28,
+            "early_accepted": 1177,
+            "block_accepted": 1701
+          }
+        ]
+      },
+      "elites": {
+        "tail": {
+          "seed": 0,
+          "proxy": 565,
+          "exact_residual": 565,
+          "exact_combo": [
+            11,
+            14
+          ],
+          "semantic_hash": "002e2e5b008be73ff3912f0472e060e6",
+          "native_depth": 43,
+          "native_cx": 35,
+          "native_width": 18,
+          "schedule": [
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  10,
+                  11
+                ],
+                [
+                  "rccx",
+                  8,
+                  16,
+                  14
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  10,
+                  11,
+                  15
+                ],
+                [
+                  "rccx",
+                  5,
+                  14,
+                  16
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  15,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  11,
+                  14
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  4,
+                  14,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  10,
+                  14,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "cx",
+                  2,
+                  6
+                ],
+                [
+                  "rccx",
+                  1,
+                  17,
+                  12
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  16,
+                  10,
+                  14
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  10,
+                  15
+                ],
+                [
+                  "rccx",
+                  4,
+                  9,
+                  6
+                ]
+              ]
+            }
+          ]
+        },
+        "single_global": {
+          "seed": 6,
+          "proxy": 537,
+          "exact_residual": 537,
+          "exact_combo": [
+            11,
+            12
+          ],
+          "semantic_hash": "3333c59fc5c8d16165455e6d532c13e0",
+          "native_depth": 44,
+          "native_cx": 34,
+          "native_width": 18,
+          "schedule": [
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  10,
+                  11
+                ],
+                [
+                  "rccx",
+                  8,
+                  16,
+                  14
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  10,
+                  11,
+                  15
+                ],
+                [
+                  "rccx",
+                  5,
+                  14,
+                  16
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  15,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  11,
+                  14
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  4,
+                  14,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  16,
+                  7
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  16,
+                  11
+                ],
+                [
+                  "rccx",
+                  9,
+                  14,
+                  12
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  11,
+                  14,
+                  12
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  12,
+                  15,
+                  11
+                ]
+              ]
+            }
+          ]
+        },
+        "full": {
+          "seed": 3,
+          "proxy": 537,
+          "exact_residual": 537,
+          "exact_combo": [
+            11,
+            12
+          ],
+          "semantic_hash": "45f316e0aadb45bbcd123eda011b7b9a",
+          "native_depth": 51,
+          "native_cx": 34,
+          "native_width": 18,
+          "schedule": [
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  10,
+                  11
+                ],
+                [
+                  "rccx",
+                  8,
+                  16,
+                  14
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  10,
+                  11,
+                  15
+                ],
+                [
+                  "rccx",
+                  5,
+                  14,
+                  16
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  15,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  11,
+                  14
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  4,
+                  14,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  7,
+                  11,
+                  13
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  16,
+                  11
+                ],
+                [
+                  "rccx",
+                  9,
+                  14,
+                  12
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  11,
+                  14,
+                  12
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  12,
+                  15,
+                  11
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "best_exact_across_modes": {
+        "seed": 6,
+        "proxy": 537,
+        "exact": 537,
+        "iterations": 2616,
+        "elapsed": 0.45018587505910546,
+        "uphill_accepted": 14,
+        "uphill_rejected": 13,
+        "early_accepted": 1153,
+        "block_accepted": 1436
+      }
+    },
+    "depth84": {
+      "source": "artifacts/destructive_semantic/double_seed1_b64x9_p4_depth84.json",
+      "layers": 12,
+      "gates": 18,
+      "recorded_depth": 84,
+      "recorded_exact_residual": 379,
+      "runs": {
+        "tail": [
+          {
+            "seed": 0,
+            "proxy": 679,
+            "exact": 679,
+            "iterations": 2587,
+            "elapsed": 0.4501170840812847,
+            "uphill_accepted": 98,
+            "uphill_rejected": 66,
+            "early_accepted": 0,
+            "block_accepted": 1405
+          },
+          {
+            "seed": 1,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2585,
+            "elapsed": 0.4501330419443548,
+            "uphill_accepted": 101,
+            "uphill_rejected": 62,
+            "early_accepted": 0,
+            "block_accepted": 1364
+          },
+          {
+            "seed": 2,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2605,
+            "elapsed": 0.4501519169425592,
+            "uphill_accepted": 119,
+            "uphill_rejected": 90,
+            "early_accepted": 0,
+            "block_accepted": 1413
+          },
+          {
+            "seed": 3,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2601,
+            "elapsed": 0.450155874947086,
+            "uphill_accepted": 97,
+            "uphill_rejected": 68,
+            "early_accepted": 0,
+            "block_accepted": 1584
+          },
+          {
+            "seed": 4,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2589,
+            "elapsed": 0.450006291968748,
+            "uphill_accepted": 106,
+            "uphill_rejected": 64,
+            "early_accepted": 0,
+            "block_accepted": 1328
+          },
+          {
+            "seed": 5,
+            "proxy": 679,
+            "exact": 679,
+            "iterations": 2573,
+            "elapsed": 0.4500724580138922,
+            "uphill_accepted": 88,
+            "uphill_rejected": 78,
+            "early_accepted": 0,
+            "block_accepted": 1356
+          },
+          {
+            "seed": 6,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2600,
+            "elapsed": 0.4500552089884877,
+            "uphill_accepted": 114,
+            "uphill_rejected": 56,
+            "early_accepted": 0,
+            "block_accepted": 1304
+          },
+          {
+            "seed": 7,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2591,
+            "elapsed": 0.4500952499220148,
+            "uphill_accepted": 90,
+            "uphill_rejected": 64,
+            "early_accepted": 0,
+            "block_accepted": 1421
+          }
+        ],
+        "single_global": [
+          {
+            "seed": 0,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2424,
+            "elapsed": 0.45003133395221084,
+            "uphill_accepted": 8,
+            "uphill_rejected": 4,
+            "early_accepted": 1238,
+            "block_accepted": 1338
+          },
+          {
+            "seed": 1,
+            "proxy": 679,
+            "exact": 679,
+            "iterations": 2446,
+            "elapsed": 0.4500865830341354,
+            "uphill_accepted": 10,
+            "uphill_rejected": 1,
+            "early_accepted": 1245,
+            "block_accepted": 1399
+          },
+          {
+            "seed": 2,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2441,
+            "elapsed": 0.45004195894580334,
+            "uphill_accepted": 6,
+            "uphill_rejected": 2,
+            "early_accepted": 1206,
+            "block_accepted": 1315
+          },
+          {
+            "seed": 3,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2463,
+            "elapsed": 0.45007658400572836,
+            "uphill_accepted": 5,
+            "uphill_rejected": 5,
+            "early_accepted": 1288,
+            "block_accepted": 1270
+          },
+          {
+            "seed": 4,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2385,
+            "elapsed": 0.4500196250155568,
+            "uphill_accepted": 13,
+            "uphill_rejected": 32,
+            "early_accepted": 1225,
+            "block_accepted": 1387
+          },
+          {
+            "seed": 5,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2413,
+            "elapsed": 0.4501373750390485,
+            "uphill_accepted": 12,
+            "uphill_rejected": 7,
+            "early_accepted": 1159,
+            "block_accepted": 1329
+          },
+          {
+            "seed": 6,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2480,
+            "elapsed": 0.4500066669424996,
+            "uphill_accepted": 9,
+            "uphill_rejected": 2,
+            "early_accepted": 1239,
+            "block_accepted": 1320
+          },
+          {
+            "seed": 7,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2377,
+            "elapsed": 0.45010516699403524,
+            "uphill_accepted": 16,
+            "uphill_rejected": 9,
+            "early_accepted": 1176,
+            "block_accepted": 1469
+          }
+        ],
+        "full": [
+          {
+            "seed": 0,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2302,
+            "elapsed": 0.4500814159400761,
+            "uphill_accepted": 8,
+            "uphill_rejected": 0,
+            "early_accepted": 1245,
+            "block_accepted": 1507
+          },
+          {
+            "seed": 1,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2261,
+            "elapsed": 0.4500958330463618,
+            "uphill_accepted": 10,
+            "uphill_rejected": 13,
+            "early_accepted": 1162,
+            "block_accepted": 1501
+          },
+          {
+            "seed": 2,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2269,
+            "elapsed": 0.45007999998051673,
+            "uphill_accepted": 18,
+            "uphill_rejected": 12,
+            "early_accepted": 1222,
+            "block_accepted": 1609
+          },
+          {
+            "seed": 3,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2285,
+            "elapsed": 0.45014358300250024,
+            "uphill_accepted": 19,
+            "uphill_rejected": 16,
+            "early_accepted": 1206,
+            "block_accepted": 1514
+          },
+          {
+            "seed": 4,
+            "proxy": 565,
+            "exact": 565,
+            "iterations": 2284,
+            "elapsed": 0.45010145800188184,
+            "uphill_accepted": 11,
+            "uphill_rejected": 0,
+            "early_accepted": 1255,
+            "block_accepted": 1547
+          },
+          {
+            "seed": 5,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2264,
+            "elapsed": 0.45009933307301253,
+            "uphill_accepted": 16,
+            "uphill_rejected": 8,
+            "early_accepted": 1200,
+            "block_accepted": 1553
+          },
+          {
+            "seed": 6,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2242,
+            "elapsed": 0.45017779199406505,
+            "uphill_accepted": 19,
+            "uphill_rejected": 3,
+            "early_accepted": 1171,
+            "block_accepted": 1525
+          },
+          {
+            "seed": 7,
+            "proxy": 683,
+            "exact": 683,
+            "iterations": 2277,
+            "elapsed": 0.45009945798665285,
+            "uphill_accepted": 18,
+            "uphill_rejected": 53,
+            "early_accepted": 1151,
+            "block_accepted": 1462
+          }
+        ]
+      },
+      "elites": {
+        "tail": {
+          "seed": 1,
+          "proxy": 565,
+          "exact_residual": 565,
+          "exact_combo": [
+            13,
+            17
+          ],
+          "semantic_hash": "53d4ede72de0f0349b81959c12aba863",
+          "native_depth": 61,
+          "native_cx": 67,
+          "native_width": 18,
+          "schedule": [
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  10,
+                  11
+                ],
+                [
+                  "rccx",
+                  8,
+                  13,
+                  16
+                ],
+                [
+                  "rccx",
+                  7,
+                  12,
+                  15
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  10,
+                  11,
+                  14
+                ],
+                [
+                  "rccx",
+                  5,
+                  13,
+                  17
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  14,
+                  11
+                ],
+                [
+                  "rccx",
+                  4,
+                  17,
+                  13
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  11,
+                  13
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  10,
+                  13,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  4,
+                  13,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  17,
+                  13
+                ],
+                [
+                  "rccx",
+                  4,
+                  16,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  16,
+                  11
+                ],
+                [
+                  "rccx",
+                  8,
+                  13,
+                  12
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  10,
+                  11,
+                  13
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  16,
+                  13
+                ],
+                [
+                  "cx",
+                  11,
+                  17
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  11,
+                  14,
+                  17
+                ],
+                [
+                  "rccx",
+                  12,
+                  0,
+                  15
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "cx",
+                  15,
+                  0
+                ],
+                [
+                  "rccx",
+                  6,
+                  9,
+                  3
+                ],
+                [
+                  "rccx",
+                  17,
+                  8,
+                  4
+                ],
+                [
+                  "rccx",
+                  16,
+                  12,
+                  7
+                ],
+                [
+                  "rccx",
+                  11,
+                  10,
+                  1
+                ],
+                [
+                  "rccx",
+                  2,
+                  13,
+                  5
+                ]
+              ]
+            }
+          ]
+        },
+        "single_global": {
+          "seed": 3,
+          "proxy": 565,
+          "exact_residual": 565,
+          "exact_combo": [
+            11
+          ],
+          "semantic_hash": "b13e6db8db672757748d27ae75401125",
+          "native_depth": 66,
+          "native_cx": 50,
+          "native_width": 18,
+          "schedule": [
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  10,
+                  11
+                ],
+                [
+                  "rccx",
+                  8,
+                  13,
+                  16
+                ],
+                [
+                  "rccx",
+                  7,
+                  12,
+                  15
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  10,
+                  11,
+                  14
+                ],
+                [
+                  "rccx",
+                  5,
+                  13,
+                  17
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  14,
+                  11
+                ],
+                [
+                  "rccx",
+                  4,
+                  17,
+                  13
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  11,
+                  13
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  10,
+                  13,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  4,
+                  13,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  17,
+                  13
+                ],
+                [
+                  "rccx",
+                  4,
+                  16,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  16,
+                  11
+                ],
+                [
+                  "rccx",
+                  8,
+                  13,
+                  12
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  17,
+                  1,
+                  13
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  13,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  15,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  15,
+                  17,
+                  11
+                ]
+              ]
+            }
+          ]
+        },
+        "full": {
+          "seed": 4,
+          "proxy": 565,
+          "exact_residual": 565,
+          "exact_combo": [
+            11
+          ],
+          "semantic_hash": "93c925b787b1bbbcf6f9cb24edc832d0",
+          "native_depth": 54,
+          "native_cx": 60,
+          "native_width": 18,
+          "schedule": [
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  10,
+                  11
+                ],
+                [
+                  "rccx",
+                  8,
+                  13,
+                  16
+                ],
+                [
+                  "rccx",
+                  7,
+                  12,
+                  15
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  10,
+                  11,
+                  14
+                ],
+                [
+                  "rccx",
+                  5,
+                  13,
+                  17
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  14,
+                  11
+                ],
+                [
+                  "rccx",
+                  4,
+                  17,
+                  13
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  11,
+                  13
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  10,
+                  13,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  4,
+                  13,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "cx",
+                  7,
+                  8
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  3,
+                  1,
+                  9
+                ],
+                [
+                  "rccx",
+                  8,
+                  6,
+                  10
+                ],
+                [
+                  "rccx",
+                  16,
+                  15,
+                  12
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  17,
+                  5,
+                  14
+                ],
+                [
+                  "rccx",
+                  2,
+                  15,
+                  12
+                ],
+                [
+                  "rccx",
+                  13,
+                  10,
+                  8
+                ],
+                [
+                  "rccx",
+                  4,
+                  16,
+                  11
+                ],
+                [
+                  "rccx",
+                  7,
+                  1,
+                  6
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  5,
+                  13,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  9,
+                  15,
+                  11
+                ]
+              ]
+            },
+            {
+              "gates": [
+                [
+                  "rccx",
+                  15,
+                  17,
+                  11
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "best_exact_across_modes": {
+        "seed": 1,
+        "proxy": 565,
+        "exact": 565,
+        "iterations": 2585,
+        "elapsed": 0.4501330419443548,
+        "uphill_accepted": 101,
+        "uphill_rejected": 62,
+        "early_accepted": 0,
+        "block_accepted": 1364
+      }
+    }
+  },
+  "controls": {
+    "depth59": {
+      "exact_start": {
+        "exact_residual": 683,
+        "exact_combo": [
+          11,
+          14
+        ],
+        "semantic_hash": "bb05a9d9155200bf17befcfca487c227"
+      },
+      "native": {
+        "native_depth": 45,
+        "native_cx": 32,
+        "native_width": 18
+      }
+    },
+    "depth84": {
+      "exact_start": {
+        "exact_residual": 683,
+        "exact_combo": [
+          11
+        ],
+        "semantic_hash": "4ef4ff5f96525a36fab33ed69d7d23f6"
+      },
+      "native": {
+        "native_depth": 66,
+        "native_cx": 50,
+        "native_width": 18
+      }
+    }
+  }
+}
