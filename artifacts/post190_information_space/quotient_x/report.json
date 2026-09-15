@@ -1,0 +1,188 @@
+{
+  "status": "timeout",
+  "expanded": 138978,
+  "unique_semantic_spans": 106440,
+  "elapsed": 30.043458292027935,
+  "maximum_goals": 2,
+  "best_rank_deficit": 2,
+  "best_suffix_estimate": 6,
+  "maximum_held_products": 3,
+  "history": [
+    {
+      "step": 1,
+      "expanded": 128,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        7
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10,
+        11
+      ],
+      "clean_rank": 8,
+      "remaining": 9,
+      "inputs": 6
+    },
+    {
+      "step": 2,
+      "expanded": 3912,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        10,
+        11
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        12
+      ],
+      "clean_rank": 9,
+      "remaining": 8,
+      "inputs": 6
+    },
+    {
+      "step": 3,
+      "expanded": 20364,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        2,
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        7,
+        8,
+        10,
+        11
+      ],
+      "clean_rank": 10,
+      "remaining": 8,
+      "inputs": 6
+    },
+    {
+      "step": 4,
+      "expanded": 58210,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        10,
+        11
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 6
+    },
+    {
+      "step": 5,
+      "expanded": 103350,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        6,
+        7,
+        8
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        9,
+        10,
+        11
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 6
+    },
+    {
+      "step": 6,
+      "expanded": 138978,
+      "present": [
+        0,
+        3
+      ],
+      "missing": [
+        1,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [
+        2
+      ],
+      "ready": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        10,
+        11
+      ],
+      "clean_rank": 10,
+      "remaining": 6,
+      "inputs": 6
+    }
+  ],
+  "limitation": "Semantic quotient, no depth-optimality claim; bounded beam and aliases."
+}

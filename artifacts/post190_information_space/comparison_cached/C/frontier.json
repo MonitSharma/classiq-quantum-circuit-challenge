@@ -1,0 +1,4254 @@
+[
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0x66666666999999999999999966666666999999996666666666666666999999999999999966666666666666669999999966666666999999999999999966666666",
+      "0x96699669966996696996699669966996966996699669966969966996699669969669966996699669699669966996699696699669966996696996699669966996",
+      "0xffff0000ffff00ff0000ffff0000ff00ffff0000ffff00ff0000ffff0000ff00ffff0000ffff00ff0000ffff0000ff00ffff0000ffff00ff0000ffff0000ff",
+      "0xff00ff00ffff000000ff00ffffff0000ffff0000ff00ff00ffff000000ff00ffffff0000ff00ff00ffff000000ff00ffff00ff00ffff000000ff00ffffff0000",
+      "0xff00ff0000ff00ff00ff00ffff00ff00ff00ff0000ff00ff00ff00ffff00ff0000ff00ffff00ff00ff00ff0000ff00ff00ff00ffff00ff00ff00ff0000ff00ff",
+      "0xf99ff99f6ff66ff609900990600660066ff66ff6f99ff99f60066006099009906ff66ff6f99ff99f6006600609900990f99ff99f6ff66ff60990099060066006",
+      "0xffffffff00000000ffffffff0000000000000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffffffffffff00000000ffffffff00000000",
+      "0xf0f00ffff00f0f00f0fff0000fff0f00f0f00ffff00f0f00f0fff0000fff0f000ff0f0ff0f0ff00ff000f0ff0f000ff00ff0f0ff0f0ff00ff000f0ff0f000ff"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0x9999999966666666",
+      "0x6996699669966996",
+      "0xff0000ffff0000ff",
+      "0xff00ffffff0000",
+      "0xff00ff0000ff00ff",
+      "0x990099060066006",
+      "0xffffffff00000000",
+      "0xff000f0ff0f000ff"
+    ],
+    "times": [
+      8,
+      15,
+      13,
+      18,
+      12,
+      16,
+      16,
+      10,
+      19
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          5,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          3,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          1
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          1,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          5,
+          3,
+          8
+        ]
+      ]
+    ],
+    "stages": 4,
+    "nonlinear_operations": 4,
+    "nonlinear_dependency_depth": 3,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x90096006096f069f",
+      "0x533553353a5cc5a3",
+      "0x3333333333333333",
+      "0x96f069f6f0960f9",
+      "0x66006606f0990f6",
+      "0xff00ff0000ffff",
+      "0xf00f0f0f00ff",
+      "0xff00f0fff00",
+      "0xff0000ff",
+      "0xffff00"
+    ]
+  },
+  {
+    "full_values": [
+      "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+      "0xffff0000ffff0000ffff0000ffff00ff0000ffff0000ffff0000ffff0000ff00ffff0000ffff0000ffff0000ffff00ff0000ffff0000ffff0000ffff0000ff",
+      "0xf0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0f",
+      "0xddbb442277ee1188ddbb442277ee11884422ddbb118877ee4422ddbb118877eeddbb442277ee1188ddbb442277ee11884422ddbb118877ee4422ddbb118877ee",
+      "0xff00ffff00ff0000ff00ffff00ff00ff00ff0000ff00ffff00ff0000ff00ff00ff00ffff00ff0000ff00ffff00ff00ff00ff0000ff00ffff00ff0000ff00ff",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+      "0xff00f0f00f0f00ff00ff0f0ff0f0ff0000fff0f00f0fff00ff000f0ff0f000ffff00f0f00f0f00ff00ff0f0ff0f0ff0000fff0f00f0fff00ff000f0ff0f000ff",
+      "0xcc3333cc33cccc33cc3333cc33cccc3333cccc33cc3333cc33cccc33cc3333cccc3333cc33cccc33cc3333cc33cccc3333cccc33cc3333cc33cccc33cc3333cc",
+      "0xaff5fa5faff5fa5faff5fa5faff5fa5faff5fa5faff5fa5faff5fa5faff5fa5f500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0"
+    ],
+    "clean_values": [
+      "0x9999999966666666",
+      "0xff0000ffff0000ff",
+      "0xf0f00f0ff0f00f0f",
+      "0x4422ddbb118877ee",
+      "0xff00ff0000ff00ff",
+      "0xffffffff00000000",
+      "0xff000f0ff0f000ff",
+      "0x33cccc33cc3333cc",
+      "0x500a05a0500a05a0"
+    ],
+    "times": [
+      14,
+      20,
+      7,
+      15,
+      18,
+      13,
+      21,
+      14,
+      8
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          3,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          0
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          0,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          1
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          1
+        ]
+      ],
+      [
+        "ccx",
+        [
+          4,
+          1,
+          6
+        ]
+      ]
+    ],
+    "stages": 4,
+    "nonlinear_operations": 4,
+    "nonlinear_dependency_depth": 4,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        2,
+        10
+      ],
+      "ready": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        11
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x8241418227e41bd8",
+      "0x417d72b114d7d8e4",
+      "0x2244442277eeee77",
+      "0x1177771144dddd44",
+      "0xa50500a05a05ffa",
+      "0x55f50f5055f50f5",
+      "0xff00ff00ff00ff",
+      "0xf00f0ff0ffff",
+      "0xff00ff00000",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+      "0x69966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996",
+      "0xff00ffff0000ff00ff00ffff0000ff00ff00ffff0000ff00ff00ffff0000ff000000ff00ff00ffff0000ff00ff00ffff0000ff00ff00ffff0000ff00ff00ffff",
+      "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+      "0xffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff00000000",
+      "0xf66ff66f9ff99ff9f66ff66f9ff99ff909900990600660060990099060066006f66ff66f9ff99ff9f66ff66f9ff99ff909900990600660060990099060066006",
+      "0xff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff00ff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ff"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0x9999999966666666",
+      "0x6996699669966996",
+      "0xff00ff00ffff",
+      "0xff0000ffff0000ff",
+      "0xffffffff00000000",
+      "0xff0000ff00000000",
+      "0x990099060066006",
+      "0xff00ff0000ff00ff"
+    ],
+    "times": [
+      3,
+      11,
+      9,
+      13,
+      12,
+      7,
+      8,
+      12,
+      10
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          5,
+          4,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          1
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          1,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          8
+        ]
+      ],
+      [
+        "x",
+        [
+          8
+        ]
+      ],
+      [
+        "ccx",
+        [
+          8,
+          4,
+          3
+        ]
+      ]
+    ],
+    "stages": 3,
+    "nonlinear_operations": 3,
+    "nonlinear_dependency_depth": 2,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        0,
+        5,
+        6
+      ],
+      "ready": [
+        1,
+        2,
+        7,
+        8,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x90096f090660f960",
+      "0x533553353a5cc5a3",
+      "0x3333333333333333",
+      "0x96f096f60069ff9",
+      "0x66006606f0990f6",
+      "0xff00000000ff00",
+      "0xff000000ff00",
+      "0xff000000ff",
+      "0xff0000ff",
+      "0xffff00"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0x44dddd44ee8888ee44dddd44ee8888eedd4444dd88eeee88dd4444dd88eeee8844dddd44ee8888ee44dddd44ee8888eedd4444dd88eeee88dd4444dd88eeee88",
+      "0xf0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0f",
+      "0x55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff0000",
+      "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+      "0xfffff0f00f0fffff00000f0ff0f00000fffff0f00f0fffff00000f0ff0f00000fffff0f00f0fffff00000f0ff0f00000fffff0f00f0fffff00000f0ff0f00000",
+      "0xcc3333cc33cccc33cc3333cc33cccc3333cccc33cc3333cc33cccc33cc3333cccc3333cc33cccc33cc3333cc33cccc3333cccc33cc3333cc33cccc33cc3333cc",
+      "0xaff5fa5faff5fa5faff5fa5faff5fa5faff5fa5faff5fa5faff5fa5faff5fa5f500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xdd4444dd88eeee88",
+      "0xf0f00f0ff0f00f0f",
+      "0x55aa55aa55aa55aa",
+      "0xffffffff0000",
+      "0x9999999966666666",
+      "0xf0ff0f00000",
+      "0x33cccc33cc3333cc",
+      "0x500a05a0500a05a0"
+    ],
+    "times": [
+      8,
+      14,
+      7,
+      8,
+      10,
+      13,
+      10,
+      11,
+      8
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          3,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          5,
+          1
+        ]
+      ]
+    ],
+    "stages": 3,
+    "nonlinear_operations": 3,
+    "nonlinear_dependency_depth": 3,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        1,
+        2,
+        10
+      ],
+      "ready": [
+        0,
+        5,
+        6,
+        11
+      ],
+      "clean_rank": 10,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x8241417d271be427",
+      "0x417d72b114d7d8e4",
+      "0x2244442277eeee77",
+      "0x1177771144dddd44",
+      "0xa5050f5055fa005",
+      "0x55f50f5055f50f5",
+      "0xff00ff00ff00ff",
+      "0xf0f00f0f0000",
+      "0xf0f0f0fffff",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcaaccaac5cc55cc5c55cc55caccaacca5cc55cc5caaccaacaccaaccac55cc55c5cc55cc5caaccaacaccaaccac55cc55ccaaccaac5cc55cc5c55cc55caccaacca",
+      "0x96699669966996696996699669966996966996699669966969966996699669969669966996699669699669966996699696699669966996696996699669966996",
+      "0xffff0000ffff00ff0000ffff0000ff00ffff0000ffff00ff0000ffff0000ff00ffff0000ffff00ff0000ffff0000ff00ffff0000ffff00ff0000ffff0000ff",
+      "0xff00ff00ffff000000ff00ffffff0000ffff0000ff00ff00ffff000000ff00ffffff0000ff00ff00ffff000000ff00ffff00ff00ffff000000ff00ffffff0000",
+      "0xffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffff0000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff0000",
+      "0x66666666999999999999999966666666999999996666666666666666999999999999999966666666666666669999999966666666999999999999999966666666",
+      "0xffffffff00000000ffffffff0000000000000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffffffffffff00000000ffffffff00000000",
+      "0xf0ffffffffff0f00f0ffffffffff0f00f0ffffffffff0f00f0ffffffffff0f000000f0ff0f0000000000f0ff0f0000000000f0ff0f0000000000f0ff0f00000"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xc55cc55caccaacca",
+      "0x6996699669966996",
+      "0xff0000ffff0000ff",
+      "0xff00ffffff0000",
+      "0xffffffff0000",
+      "0x9999999966666666",
+      "0xffffffff00000000",
+      "0xf0ff0f00000"
+    ],
+    "times": [
+      7,
+      16,
+      13,
+      12,
+      12,
+      8,
+      15,
+      10,
+      8
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          5,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          3,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          6
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          6,
+          1
+        ]
+      ]
+    ],
+    "stages": 3,
+    "nonlinear_operations": 3,
+    "nonlinear_dependency_depth": 3,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        1,
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        2,
+        7,
+        8,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x900960f9096f0660",
+      "0x533553353a5cc5a3",
+      "0x3333333333333333",
+      "0x96f06606f096006",
+      "0x66006606f0990f6",
+      "0xff00ff0000ffff",
+      "0xf0f00f0f0000",
+      "0xf0f0f0fffff",
+      "0xff0000ff",
+      "0xffff00"
+    ]
+  },
+  {
+    "full_values": [
+      "0xf0ff0f00f0ff0f0f0f00f0ff0f00f0f0f0ff0f00f0ff0f0f0f00f0ff0f00f0f0f0ff0f00f0ff0f0f0f00f0ff0f00f0f0f0ff0f00f0ff0f0f0f00f0ff0f00f0f",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0x96699669966996696996699669966996966996699669966969966996699669969669966996699669699669966996699696699669966996696996699669966996",
+      "0xff00ffff0000ff000000ff00ff00ffffff00ffff0000ff000000ff00ff00ffffff00ffff0000ff000000ff00ff00ffffff00ffff0000ff000000ff00ff00ffff",
+      "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+      "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+      "0xfff00ff00fff000ff0ff0000ff0ff00ff000ffff000ff0ff00f00ff00f00ff00fff00ff00fff000ff0ff0000ff0ff00ff000ffff000ff0ff00f00ff00f00ff",
+      "0xffffffff0000ffff00000000ffffffff00000000ffff0000ffffffff00000000ffffffff0000ffff00000000ffffffff00000000ffff0000ffffffff0000",
+      "0x6ff66ff6f99ff99ff66ff66f9ff99ff96ff66ff6f99ff99ff66ff66f9ff99ff99009900906600660099009906006600690099009066006600990099060066006"
+    ],
+    "clean_values": [
+      "0xf0f00f0ff0f00f0f",
+      "0xcccccccccccccccc",
+      "0x6996699669966996",
+      "0xff00ff00ffff",
+      "0xff0000ffff0000ff",
+      "0x9999999966666666",
+      "0xff00f00ff00f00ff",
+      "0xffffffff0000",
+      "0x990099060066006"
+    ],
+    "times": [
+      13,
+      6,
+      10,
+      9,
+      10,
+      11,
+      16,
+      15,
+      12
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          3,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          6
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          4,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          5
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          5,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          7,
+          6
+        ]
+      ]
+    ],
+    "stages": 3,
+    "nonlinear_operations": 3,
+    "nonlinear_dependency_depth": 3,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        0,
+        1,
+        5
+      ],
+      "ready": [
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x900960060990f99f",
+      "0x533553353aa33aa3",
+      "0x3333333333333333",
+      "0x96f06606ff69f06",
+      "0x66006606ff66ff6",
+      "0xff00000000ff00",
+      "0xf00f0ff0ffff",
+      "0xf0f0f0fffff",
+      "0xff00ffffff",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa5555aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa",
+      "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+      "0x69966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996",
+      "0xff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00",
+      "0x5a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a5",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+      "0xffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff00000000",
+      "0xf66ff66f9ff99ff9f66ff66f9ff99ff909900990600660060990099060066006f66ff66f9ff99ff9f66ff66f9ff99ff909900990600660060990099060066006",
+      "0xf5af5ffaf5af5ffaf5af5ffaf5af5ffaf5af5ffaf5af5ffaf5af5ffaf5af5ffa500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0"
+    ],
+    "clean_values": [
+      "0x55aa55aa55aa55aa",
+      "0x9999999966666666",
+      "0x6996699669966996",
+      "0xff00ff00ff00ff00",
+      "0x5a5aa5a55a5aa5a5",
+      "0xffffffff00000000",
+      "0xff0000ff00000000",
+      "0x990099060066006",
+      "0x500a05a0500a05a0"
+    ],
+    "times": [
+      15,
+      12,
+      10,
+      10,
+      13,
+      9,
+      8,
+      12,
+      16
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          5,
+          4,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          1
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          1,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          0
+        ]
+      ],
+      [
+        "ccx",
+        [
+          4,
+          0,
+          8
+        ]
+      ]
+    ],
+    "stages": 3,
+    "nonlinear_operations": 3,
+    "nonlinear_dependency_depth": 3,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        5,
+        6,
+        10
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        7,
+        8
+      ],
+      "clean_rank": 10,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x90096ff60660f99f",
+      "0x500a05a0500a05a0",
+      "0x300c65a65965f330",
+      "0x96f096f60069ff9",
+      "0x55f50f5055f50f5",
+      "0x33f56956a56c003",
+      "0xff00ff0000ffff",
+      "0xffff0000ffff",
+      "0xff0000ff",
+      "0xffff00"
+    ]
+  },
+  {
+    "full_values": [
+      "0x5a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a5",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0x55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa",
+      "0xff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00",
+      "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+      "0xaff505a0500afa5faff505a0500afa5faff505a0500afa5faff505a0500afa5f500afa5faff505a0500afa5faff505a0500afa5faff505a0500afa5faff505a0",
+      "0xffffffffffff00ff000000000000ffffffff0000ffffff000000ffff000000ffffff0000ffffff000000ffff00000000ffffffffffff00ff000000000000ff",
+      "0xff00ff0000ff00ffff00ff0000ff00ff00ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff0000ff00ffff00ff00ff00ff0000ff00ffff00ff0000ff00ff",
+      "0xf0ffffffffff0f00f0ffffffffff0f00f0ffffffffff0f00f0ffffffffff0f000000f0ff0f0000000000f0ff0f0000000000f0ff0f0000000000f0ff0f00000"
+    ],
+    "clean_values": [
+      "0x5a5aa5a55a5aa5a5",
+      "0xcccccccccccccccc",
+      "0x55aa55aa55aa55aa",
+      "0xff00ff00ff00ff00",
+      "0xff0000ffff0000ff",
+      "0x500afa5faff505a0",
+      "0xff000000000000ff",
+      "0xff00ff0000ff00ff",
+      "0xf0ff0f00000"
+    ],
+    "times": [
+      12,
+      0,
+      14,
+      8,
+      12,
+      15,
+      13,
+      10,
+      8
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          5,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          7
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          4,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          2,
+          5
+        ]
+      ]
+    ],
+    "stages": 3,
+    "nonlinear_operations": 3,
+    "nonlinear_dependency_depth": 2,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        0,
+        1,
+        10
+      ],
+      "ready": [
+        2,
+        3,
+        5,
+        6
+      ],
+      "clean_rank": 10,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x9336366c63c63963",
+      "0x500a055f50f5fa5f",
+      "0x3333333333333333",
+      "0xa50500a05a05ffa",
+      "0x55f500a05a0af0a",
+      "0xff00000000ff00",
+      "0xf00f0ff0ffff",
+      "0xf0f0f0fffff",
+      "0xff00ffffff",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0",
+      "0x69966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996",
+      "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+      "0xffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff00000000",
+      "0xf66ff66f9ff99ff9f66ff66f9ff99ff909900990600660060990099060066006f66ff66f9ff99ff9f66ff66f9ff99ff909900990600660060990099060066006",
+      "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "clean_values": [
+      "0x9999999966666666",
+      "0xcccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0",
+      "0x6996699669966996",
+      "0xff0000ffff0000ff",
+      "0xffffffff00000000",
+      "0xff0000ff00000000",
+      "0x990099060066006",
+      "0x0"
+    ],
+    "times": [
+      11,
+      4,
+      4,
+      9,
+      7,
+      6,
+      8,
+      12,
+      0
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          5,
+          4,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          0
+        ]
+      ],
+      [
+        "ccx",
+        [
+          3,
+          0,
+          7
+        ]
+      ]
+    ],
+    "stages": 2,
+    "nonlinear_operations": 2,
+    "nonlinear_dependency_depth": 2,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        10
+      ],
+      "clean_rank": 9,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x90096ff60660f99f",
+      "0x533553353a5cc5a3",
+      "0x3333333333333333",
+      "0x96f096f60069ff9",
+      "0x66006606f0990f6",
+      "0xff00ff0000ffff",
+      "0xffff0000ffff",
+      "0xff0000ff",
+      "0xffff00"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa5555aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0x5a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a5",
+      "0xee887711bb22dd44ee887711bb22dd44dd44bb227711ee88dd44bb227711ee88dd44bb227711ee88dd44bb227711ee88ee887711bb22dd44ee887711bb22dd44",
+      "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+      "0x33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc",
+      "0xffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff00000000",
+      "0x99999999666666669999999966666666666666669999999966666666999999996666666699999999666666669999999999999999666666669999999966666666",
+      "0xf5af5ffaf5af5ffaf5af5ffaf5af5ffaf5af5ffaf5af5ffaf5af5ffaf5af5ffa500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0"
+    ],
+    "clean_values": [
+      "0x55aa55aa55aa55aa",
+      "0xcccccccccccccccc",
+      "0x5a5aa5a55a5aa5a5",
+      "0xee887711bb22dd44",
+      "0xff0000ffff0000ff",
+      "0x33cccc33cc3333cc",
+      "0xff0000ff00000000",
+      "0x9999999966666666",
+      "0x500a05a0500a05a0"
+    ],
+    "times": [
+      12,
+      6,
+      9,
+      18,
+      11,
+      15,
+      8,
+      17,
+      12
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          5,
+          4,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          0
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          0,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          7
+        ]
+      ],
+      [
+        "x",
+        [
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          5,
+          7,
+          3
+        ]
+      ]
+    ],
+    "stages": 3,
+    "nonlinear_operations": 3,
+    "nonlinear_dependency_depth": 3,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        2,
+        6,
+        10
+      ],
+      "ready": [
+        0,
+        1,
+        5,
+        8,
+        11
+      ],
+      "clean_rank": 10,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x82414e7228141bd8",
+      "0x417d72b1142827e4",
+      "0x2244442277111177",
+      "0x1177771144222244",
+      "0xa505ffa0a505ffa",
+      "0x55f50f5055f50f5",
+      "0xff00ff0000ffff",
+      "0xffff0000ffff",
+      "0xff0000ff",
+      "0xffff00"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0xf0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0f",
+      "0xff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00",
+      "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+      "0xff00ff0000ffff00ff00ff0000ffffffff0000ff00ff00ffff0000ff00ff000000ffff00ff00ff0000ffff00ff00ffff00ff00ffff0000ff00ff00ffff0000",
+      "0xffffffffffff00ff000000000000ffffffff0000ffffff000000ffff000000ffffff0000ffffff000000ffff00000000ffffffffffff00ff000000000000ff",
+      "0xffffffff00000000ffffffff0000000000000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffffffffffff00000000ffffffff00000000",
+      "0xf0ffffffffff0f00f0ffffffffff0f00f0ffffffffff0f00f0ffffffffff0f000000f0ff0f0000000000f0ff0f0000000000f0ff0f0000000000f0ff0f00000"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0xf0f00f0ff0f00f0f",
+      "0xff00ff00ff00ff00",
+      "0xff0000ffff0000ff",
+      "0xff00ff00ffff0000",
+      "0xff000000000000ff",
+      "0xffffffff00000000",
+      "0xf0ff0f00000"
+    ],
+    "times": [
+      0,
+      0,
+      5,
+      11,
+      17,
+      18,
+      13,
+      15,
+      8
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          5,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          7
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          4,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          7
+        ]
+      ],
+      [
+        "x",
+        [
+          7
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          4,
+          5
+        ]
+      ]
+    ],
+    "stages": 3,
+    "nonlinear_operations": 3,
+    "nonlinear_dependency_depth": 3,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        0,
+        1,
+        6
+      ],
+      "ready": [
+        2,
+        3,
+        5,
+        8,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x9669666666669669",
+      "0x5555555555555555",
+      "0x3333333333333333",
+      "0xf0f00000000f0f0",
+      "0xff00000000ff00",
+      "0xf00f0f0f00ff",
+      "0xf0f0f0fffff",
+      "0xff000000ff",
+      "0xff0000ff",
+      "0xffff00"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0x5a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a5",
+      "0x55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa",
+      "0x33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc",
+      "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+      "0xffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000",
+      "0xaff5fa5faff5fa5faff5fa5faff5fa5f500a05a0500a05a0500a05a0500a05a0aff5fa5faff5fa5faff5fa5faff5fa5f500a05a0500a05a0500a05a0500a05a0",
+      "0xee7777eebbddddbbee7777eebbddddbbee7777eebbddddbbee7777eebbddddbb1188881144222244118888114422224411888811442222441188881144222244"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0x5a5aa5a55a5aa5a5",
+      "0x55aa55aa55aa55aa",
+      "0x33cccc33cc3333cc",
+      "0x9999999966666666",
+      "0x0",
+      "0x500a05a0500a05a0",
+      "0x1188881144222244"
+    ],
+    "times": [
+      6,
+      5,
+      5,
+      8,
+      9,
+      11,
+      0,
+      8,
+      12
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          3,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          4,
+          5,
+          8
+        ]
+      ]
+    ],
+    "stages": 2,
+    "nonlinear_operations": 2,
+    "nonlinear_dependency_depth": 2,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        2,
+        10
+      ],
+      "ready": [
+        0,
+        1,
+        5,
+        6,
+        11
+      ],
+      "clean_rank": 9,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x82414e7228141bd8",
+      "0x417d72b114d7d8e4",
+      "0x2244442277eeee77",
+      "0x1177771144dddd44",
+      "0xa505ffa0a505ffa",
+      "0x55f50f5055f50f5",
+      "0xff00ff00ff00ff",
+      "0xffff0000ffff",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0xf0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0f",
+      "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+      "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000",
+      "0xffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffff0000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff0000",
+      "0xff00ff0000ff00ff00ff00ffff00ff00ff00ff0000ff00ff00ff00ffff00ff0000ff00ffff00ff00ff00ff0000ff00ff00ff00ffff00ff00ff00ff0000ff00ff",
+      "0xffffffffffff00ffffff0000ffffffff000000000000ff000000ffff000000ffffff0000ffffff00ffffffffffff00000000ffff000000ff000000000000ff",
+      "0xf0ffffffffff0f00f0ffffffffff0f00f0ffffffffff0f00f0ffffffffff0f000000f0ff0f0000000000f0ff0f0000000000f0ff0f0000000000f0ff0f00000"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0xf0f00f0ff0f00f0f",
+      "0xff0000ffff0000ff",
+      "0xffff0000ffff0000",
+      "0xffffffff0000",
+      "0xff00ff0000ff00ff",
+      "0xff000000000000ff",
+      "0xf0ff0f00000"
+    ],
+    "times": [
+      0,
+      0,
+      5,
+      12,
+      4,
+      8,
+      10,
+      13,
+      8
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          5,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          6
+        ]
+      ],
+      [
+        "x",
+        [
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          3,
+          7
+        ]
+      ]
+    ],
+    "stages": 2,
+    "nonlinear_operations": 2,
+    "nonlinear_dependency_depth": 2,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        0,
+        1
+      ],
+      "ready": [
+        2,
+        3,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 9,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x9669666666669669",
+      "0x5555555555555555",
+      "0x3333333333333333",
+      "0xf0f00000000f0f0",
+      "0xff00000000ff00",
+      "0xf00f0ff0ffff",
+      "0xf0f0f0fffff",
+      "0xff00ffffff",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0xf0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0f",
+      "0xff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00",
+      "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000",
+      "0xffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffff0000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff0000",
+      "0xff00ff0000ff00ff00ff00ffff00ff00ff00ff0000ff00ff00ff00ffff00ff0000ff00ffff00ff00ff00ff0000ff00ff00ff00ffff00ff00ff00ff0000ff00ff",
+      "0xffff0000ffff0000ffff0000ffff00ff0000ffff0000ffff0000ffff0000ff00ffff0000ffff0000ffff0000ffff00ff0000ffff0000ffff0000ffff0000ff",
+      "0xf0f00ffff00f0f00ff0ffffffff0ff0f00ffffffffff00f0f0fff0000fff0f000ff0f0ff0f0ff000000f00ff00f000000000ff00ff00000ff000f0ff0f000ff"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0xf0f00f0ff0f00f0f",
+      "0xff00ff00ff00ff00",
+      "0xffff0000ffff0000",
+      "0xffffffff0000",
+      "0xff00ff0000ff00ff",
+      "0xff0000ffff0000ff",
+      "0xff000f0ff0f000ff"
+    ],
+    "times": [
+      0,
+      0,
+      5,
+      2,
+      4,
+      8,
+      12,
+      14,
+      15
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          5,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        "x",
+        [
+          6
+        ]
+      ],
+      [
+        "x",
+        [
+          7
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          8
+        ]
+      ]
+    ],
+    "stages": 2,
+    "nonlinear_operations": 2,
+    "nonlinear_dependency_depth": 2,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 8,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x9669666666669669",
+      "0x5555555555555555",
+      "0x3333333333333333",
+      "0xf0f00ff00ff0f0f",
+      "0xff00ff00ff00ff",
+      "0xf00f0ff0ffff",
+      "0xff00ff00000",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+      "0x2db44bd287e11e78d24bb42d781ee187b42dd24be187781e4bd22db41e7887e12db44bd287e11e78d24bb42d781ee187b42dd24be187781e4bd22db41e7887e1",
+      "0xdb24bd42817e18e7669966996699669924db42bd7e81e7189966996699669966bd42db2418e7817e00ff00ffff00ff0042bd24dbe7187e81ff00ff0000ff00ff",
+      "0x2b2bb2b28e8ee8e86969969696966969d4d44d4d7171171796966969696996964d4dd4d4171771710f0ff0f00f0ff0f0b2b22b2be8e88e8ef0f00f0ff0f00f0f",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff0000",
+      "0xf66ff66f06600660ee7777ee442222446ff66ff66006600677eeee77224444226ff66ff66006600677eeee7722444422f66ff66f06600660ee7777ee44222244",
+      "0x755157ead5aba2baf330c00303c030f38aaea8152a545d450ccf3ffcfc3fcf0c1aa7a1854a525b25055faff5fa5faf0ae5585e7ab5ada4dafaa0500a05a050f5",
+      "0xc66393c9399c6c369c39366c63c6c993399c6c36c66393c963c6c9939c39366cc66393c9399c6c369c39366c63c6c993399c6c36c66393c963c6c9939c39366c",
+      "0x699669969669966933cccc33cc3333cc9669966969966996cc3333cc33cccc339669966969966996cc3333cc33cccc33699669969669966933cccc33cc3333cc"
+    ],
+    "clean_values": [
+      "0x9999999966666666",
+      "0x4bd22db41e7887e1",
+      "0xff00ff0000ff00ff",
+      "0xf0f00f0ff0f00f0f",
+      "0xffffffff0000",
+      "0xee7777ee44222244",
+      "0xfaa0500a05a050f5",
+      "0x63c6c9939c39366c",
+      "0x33cccc33cc3333cc"
+    ],
+    "times": [
+      61,
+      58,
+      58,
+      62,
+      64,
+      51,
+      65,
+      62,
+      59
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          3,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          0
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          0,
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          0,
+          8
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          1
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          0,
+          6
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          0,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          6
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          6,
+          7
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          8
+        ]
+      ],
+      [
+        "ccx",
+        [
+          8,
+          0,
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          6
+        ]
+      ],
+      [
+        "ccx",
+        [
+          8,
+          0,
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          8,
+          0,
+          7
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          1
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          3,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          6
+        ]
+      ],
+      [
+        "ccx",
+        [
+          8,
+          0,
+          1
+        ]
+      ],
+      [
+        "ccx",
+        [
+          8,
+          0,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          3,
+          4,
+          6
+        ]
+      ]
+    ],
+    "stages": 22,
+    "nonlinear_operations": 22,
+    "nonlinear_dependency_depth": 12,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        0,
+        2,
+        10
+      ],
+      "ready": [
+        1,
+        5,
+        6,
+        11
+      ],
+      "clean_rank": 10,
+      "remaining": 8,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x82414e7228141bd8",
+      "0x417d724e1428271b",
+      "0x2244442277eeee77",
+      "0x1177771144dddd44",
+      "0xa505f050aafa005",
+      "0x55f500a05a0af0a",
+      "0xff00000000ff00",
+      "0xff0000ff0000",
+      "0xff00ffffff",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0xf0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0f",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0x5a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a5",
+      "0x55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa",
+      "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000",
+      "0xf0fffff00000f0ffffff0f0f0f000000f0fffff00000f0ffffff0f0f0f000000f0fffff00000f0ffffff0f0f0f000000f0fffff00000f0ffffff0f0f0f00000",
+      "0xffff00000000ffff0000ffffffff0000ffff00000000ffff0000ffffffff0000ffff00000000ffff0000ffffffff0000ffff00000000ffff0000ffffffff0000",
+      "0xaff5fa5faff5fa5faff5fa5faff5fa5f500a05a0500a05a0500a05a0500a05a0aff5fa5faff5fa5faff5fa5faff5fa5f500a05a0500a05a0500a05a0500a05a0",
+      "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "clean_values": [
+      "0xf0f00f0ff0f00f0f",
+      "0xcccccccccccccccc",
+      "0x5a5aa5a55a5aa5a5",
+      "0x55aa55aa55aa55aa",
+      "0xffff0000ffff0000",
+      "0xfffff0f0f0f00000",
+      "0xffffffff0000",
+      "0x500a05a0500a05a0",
+      "0x0"
+    ],
+    "times": [
+      7,
+      0,
+      6,
+      7,
+      3,
+      10,
+      9,
+      8,
+      0
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          3,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          6
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          6,
+          5
+        ]
+      ]
+    ],
+    "stages": 2,
+    "nonlinear_operations": 2,
+    "nonlinear_dependency_depth": 2,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        1,
+        10
+      ],
+      "ready": [
+        0,
+        2,
+        5,
+        6
+      ],
+      "clean_rank": 9,
+      "remaining": 9,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x9336366c63c63963",
+      "0x500a05a0500a05a0",
+      "0x3333333333333333",
+      "0xa5050f5055fa005",
+      "0x55f50f5055f50f5",
+      "0xff00ff00ff00ff",
+      "0xf0f00f0f0000",
+      "0xf0f0f0fffff",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0",
+      "0xff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00",
+      "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+      "0xffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000",
+      "0xffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffff00000000000000000000000000000000",
+      "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0",
+      "0xff00ff00ff00ff00",
+      "0xffff0000ffff0000",
+      "0xffffffff00000000",
+      "0x0",
+      "0x0",
+      "0x0"
+    ],
+    "times": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ops": [],
+    "stages": 0,
+    "nonlinear_operations": 0,
+    "nonlinear_dependency_depth": 0,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 7,
+      "remaining": 9,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x9669699669969669",
+      "0x5555555555555555",
+      "0x3333333333333333",
+      "0xf0f0f0f0f0f0f0f",
+      "0xff00ff00ff00ff",
+      "0xffff0000ffff",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa5555aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0x5a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a5",
+      "0xff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00",
+      "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+      "0xffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff00000000",
+      "0xf5af5ffaf5af5ffaf5af5ffaf5af5ffa0a50a0050a50a0050a50a0050a50a005aff5fa5faff5fa5faff5fa5faff5fa5f500a05a0500a05a0500a05a0500a05a0",
+      "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "clean_values": [
+      "0x55aa55aa55aa55aa",
+      "0xcccccccccccccccc",
+      "0x5a5aa5a55a5aa5a5",
+      "0xff00ff00ff00ff00",
+      "0xff0000ffff0000ff",
+      "0xffffffff00000000",
+      "0xff0000ff00000000",
+      "0x500a05a0500a05a0",
+      "0x0"
+    ],
+    "times": [
+      11,
+      0,
+      9,
+      3,
+      8,
+      5,
+      8,
+      12,
+      2
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          5,
+          4,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          0
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          0,
+          7
+        ]
+      ]
+    ],
+    "stages": 2,
+    "nonlinear_operations": 2,
+    "nonlinear_dependency_depth": 2,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        6,
+        10
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        8
+      ],
+      "clean_rank": 9,
+      "remaining": 9,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x933639636c36399c",
+      "0x500a05a0500a05a0",
+      "0x3333333333333333",
+      "0xa505ffa0a505ffa",
+      "0x55f50f5055f50f5",
+      "0xff00ff0000ffff",
+      "0xffff0000ffff",
+      "0xff0000ff",
+      "0xffff00"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0xf0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0f",
+      "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+      "0xffffffff00000000ffffffff0000ffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffff0000ffffffff00000000ffffffff0000",
+      "0xffffffff00000000ffffffffffffffff00000000ffffffff0000000000000000ffffffff00000000ffffffffffffffff00000000ffffffff00000000",
+      "0xffffffff00ffff0000000000ff0000ff00ffff00ffffffffff0000ff00000000ffffffff00ffff0000000000ff0000ff00ffff00ffffffffff0000ff00000000",
+      "0xffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffff00000000000000000000000000000000",
+      "0xfffff0f00f0ffffffffff0f00f0fffff0f0ffffffffff0f00f0ffffffffff0f0f0f0000000000f0ff0f0000000000f0f00000f0ff0f0000000000f0ff0f00000"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0xf0f00f0ff0f00f0f",
+      "0xff0000ffff0000ff",
+      "0xffffffff0000",
+      "0xffffffff00000000",
+      "0xff0000ff00000000",
+      "0x0",
+      "0xf0ff0f00000"
+    ],
+    "times": [
+      0,
+      0,
+      9,
+      7,
+      11,
+      6,
+      8,
+      1,
+      12
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          7,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          5,
+          3,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          8
+        ]
+      ]
+    ],
+    "stages": 2,
+    "nonlinear_operations": 2,
+    "nonlinear_dependency_depth": 2,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        1,
+        6
+      ],
+      "ready": [
+        0,
+        2,
+        5,
+        8,
+        10
+      ],
+      "clean_rank": 9,
+      "remaining": 9,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x9669669966669696",
+      "0x5555555555555555",
+      "0x3333333333333333",
+      "0xf0f00000000f0f0",
+      "0xff00ff0000ffff",
+      "0xf0f00f0f0000",
+      "0xf0f0f0fffff",
+      "0xff0000ff",
+      "0xffff00"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0x96699669966996696996699669966996966996699669966969966996699669969669966996699669699669966996699696699669966996696996699669966996",
+      "0xff00ffff0000ff000000ff00ff00ffffff00ffff0000ff000000ff00ff00ffffff00ffff0000ff000000ff00ff00ffffff00ffff0000ff000000ff00ff00ffff",
+      "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+      "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+      "0xff00ffff00ff00ff00ff0000ff00ff00ff00ffff00ff00ff00ff0000ff00ff00ff00ffff00ff00ff00ff0000ff00ff00ff00ffff00ff00ff00ff0000ff00ff",
+      "0xffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffff00000000000000000000000000000000",
+      "0x6ff66ff6f99ff99ff66ff66f9ff99ff96ff66ff6f99ff99ff66ff66f9ff99ff99009900906600660099009906006600690099009066006600990099060066006"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0x6996699669966996",
+      "0xff00ff00ffff",
+      "0xff0000ffff0000ff",
+      "0x9999999966666666",
+      "0xff00ff0000ff00ff",
+      "0x0",
+      "0x990099060066006"
+    ],
+    "times": [
+      4,
+      5,
+      9,
+      9,
+      8,
+      11,
+      7,
+      0,
+      12
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          3,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          6
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          4,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          5
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          5,
+          8
+        ]
+      ]
+    ],
+    "stages": 2,
+    "nonlinear_operations": 2,
+    "nonlinear_dependency_depth": 2,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        0,
+        5
+      ],
+      "ready": [
+        1,
+        2,
+        6,
+        7,
+        10
+      ],
+      "clean_rank": 9,
+      "remaining": 9,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x90096f09069f0660",
+      "0x533553353aa33aa3",
+      "0x3333333333333333",
+      "0x96f096f60f960f9",
+      "0x66006606ff66ff6",
+      "0xff00000000ff00",
+      "0xff0000ff0000",
+      "0xff00ffffff",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+      "0xf0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0f00f0f",
+      "0x33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc33cccc33cc3333cc",
+      "0xffff00000000ffffffff00000000ffff0000ffffffff00000000ffffffff0000ffff00000000ffffffff00000000ffff0000ffffffff00000000ffffffff0000",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+      "0xee7777eebbddddbb1188881144222244ee7777eebbddddbb1188881144222244ee7777eebbddddbb1188881144222244ee7777eebbddddbb1188881144222244",
+      "0xffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffff00000000000000000000000000000000",
+      "0xf0ffffffffff0f00f0ffffffffff0f0fffff0f00f0ffffffffff0f00f0ffffff0f0000000000f0ff0f0000000000f0f00000f0ff0f0000000000f0ff0f00000"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0x9999999966666666",
+      "0xf0f00f0ff0f00f0f",
+      "0x33cccc33cc3333cc",
+      "0xffffffff0000",
+      "0xffffffff00000000",
+      "0x1188881144222244",
+      "0x0",
+      "0xf0ff0f00000"
+    ],
+    "times": [
+      2,
+      9,
+      8,
+      7,
+      10,
+      5,
+      10,
+      4,
+      11
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          1,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          1
+        ]
+      ],
+      [
+        "ccx",
+        [
+          3,
+          1,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          4,
+          8
+        ]
+      ]
+    ],
+    "stages": 2,
+    "nonlinear_operations": 2,
+    "nonlinear_dependency_depth": 1,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        1,
+        2
+      ],
+      "ready": [
+        0,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 9,
+      "remaining": 9,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x871e11882244b4d2",
+      "0x4422224411888811",
+      "0x2244442277eeee77",
+      "0x1177771144dddd44",
+      "0xf0f00000000f0f0",
+      "0xff00ff00ff00ff",
+      "0xf0f00f0f0000",
+      "0xf0f0f0fffff",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0",
+      "0xff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00",
+      "0xff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ff",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+      "0xffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff0000000000ffff00ffffffffff0000ff00000000",
+      "0xffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffff00000000000000000000000000000000",
+      "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0",
+      "0xff00ff00ff00ff00",
+      "0xff0000ffff0000ff",
+      "0xffffffff00000000",
+      "0xff0000ff00000000",
+      "0x0",
+      "0x0"
+    ],
+    "times": [
+      0,
+      0,
+      0,
+      1,
+      7,
+      5,
+      8,
+      0,
+      0
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          5,
+          4,
+          6
+        ]
+      ]
+    ],
+    "stages": 1,
+    "nonlinear_operations": 1,
+    "nonlinear_dependency_depth": 1,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        8,
+        10
+      ],
+      "clean_rank": 8,
+      "remaining": 9,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x9669699669696969",
+      "0x5555555555555555",
+      "0x3333333333333333",
+      "0xf0f0f0f0f0f0f0f",
+      "0xff00ff0000ffff",
+      "0xffff0000ffff",
+      "0xff0000ff",
+      "0xffff00"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0",
+      "0x69966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996699669966996",
+      "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000",
+      "0x99999999666666669999999966666666999999996666666699999999666666669999999966666666999999996666666699999999666666669999999966666666",
+      "0xf66ff66f9ff99ff90990099060066006f66ff66f9ff99ff90990099060066006f66ff66f9ff99ff90990099060066006f66ff66f9ff99ff90990099060066006",
+      "0xffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffff00000000000000000000000000000000",
+      "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0xf0f0f0f0f0f0f0f0",
+      "0x6996699669966996",
+      "0xffff0000ffff0000",
+      "0x9999999966666666",
+      "0x990099060066006",
+      "0x0",
+      "0x0"
+    ],
+    "times": [
+      2,
+      3,
+      3,
+      6,
+      0,
+      8,
+      9,
+      0,
+      0
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          3,
+          5,
+          6
+        ]
+      ]
+    ],
+    "stages": 1,
+    "nonlinear_operations": 1,
+    "nonlinear_dependency_depth": 1,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        5
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        6,
+        7,
+        10
+      ],
+      "clean_rank": 8,
+      "remaining": 9,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x90096ff60660f99f",
+      "0x533553353aa33aa3",
+      "0x3333333333333333",
+      "0x96f096f60f960f9",
+      "0x66006606ff66ff6",
+      "0xff00ff00ff00ff",
+      "0xffff0000ffff",
+      "0xffffffff"
+    ]
+  },
+  {
+    "full_values": [
+      "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "0x5a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a55a5aa5a5",
+      "0x55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa55aa",
+      "0xffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000",
+      "0xffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000ffffffff00000000",
+      "0xffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000ffffffffffffffff0000000000000000",
+      "0xffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffff00000000000000000000000000000000",
+      "0xaff5fa5faff5fa5faff5fa5faff5fa5faff5fa5faff5fa5faff5fa5faff5fa5f500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0500a05a0"
+    ],
+    "clean_values": [
+      "0xaaaaaaaaaaaaaaaa",
+      "0xcccccccccccccccc",
+      "0x5a5aa5a55a5aa5a5",
+      "0x55aa55aa55aa55aa",
+      "0xffff0000ffff0000",
+      "0xffffffff00000000",
+      "0x0",
+      "0x0",
+      "0x500a05a0500a05a0"
+    ],
+    "times": [
+      2,
+      0,
+      5,
+      7,
+      2,
+      0,
+      0,
+      0,
+      8
+    ],
+    "ops": [
+      [
+        "cx",
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    ],
+    "stages": 1,
+    "nonlinear_operations": 1,
+    "nonlinear_dependency_depth": 1,
+    "metrics": {
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        10
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "clean_rank": 8,
+      "remaining": 9,
+      "inputs": 6
+    },
+    "full_affine_rank": 10,
+    "clean_basis": [
+      "0x933639636cc9c69c",
+      "0x500a05a0500a05a0",
+      "0x3333333333333333",
+      "0xa505ffa0a505ffa",
+      "0x55f50f5055f50f5",
+      "0xff00ff00ff00ff",
+      "0xffff0000ffff",
+      "0xffffffff"
+    ]
+  }
+]

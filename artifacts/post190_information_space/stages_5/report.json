@@ -1,0 +1,160 @@
+{
+  "status": "bounded_search_finished",
+  "elapsed": 6.735422125086188,
+  "expanded": 90583,
+  "unique_semantic_spans": 5257,
+  "accepted_physical_states": 87683,
+  "maximum_goals": 1,
+  "best_rank_deficit": 3,
+  "maximum_held_products": 3,
+  "best_suffix_estimate": 7,
+  "history": [
+    {
+      "step": 1,
+      "expanded": 672,
+      "depth": 8,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        8,
+        10
+      ],
+      "clean_rank": 8,
+      "remaining": 9,
+      "inputs": 6
+    },
+    {
+      "step": 2,
+      "expanded": 22312,
+      "depth": 12,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        10
+      ],
+      "clean_rank": 9,
+      "remaining": 8,
+      "inputs": 6
+    },
+    {
+      "step": 3,
+      "expanded": 50629,
+      "depth": 21,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 6
+    },
+    {
+      "step": 4,
+      "expanded": 69831,
+      "depth": 24,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 6
+    },
+    {
+      "step": 5,
+      "expanded": 90583,
+      "depth": 24,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 6
+    }
+  ]
+}

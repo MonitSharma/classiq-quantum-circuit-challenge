@@ -1,5 +1,16 @@
 # Continuation handoff
 
+## Information-space campaign: pruning flaw measured, no new complete encoder
+
+Read `docs/POST190_INFORMATION_SPACE_CAMPAIGN.md`. Legacy span dedup discarded
+1,108 of7,215 colliding states with better measured future exposure/materialization
+cost. Added full512-input semantics, physical/Pareto retention, affine frames,
+semantic hyperplane search, packed moves and saved-prefix repair. Bounded A–E,
+X14/Y13 and5–7-stage tests found no complete encoder. Best saved prefixes still
+have2/4 goals.16 focused tests pass. Protected190/857/18 remains unchanged;
+partial44/61-depth circuits are not usable loaders. All campaign jobs finished.
+
+
 ## Seeded register campaign: exact x14/y13, no new native best
 
 Read `docs/POST190_SEEDED_REGISTER_CAMPAIGN.md`. Independently recreated x15→14
@@ -35,7 +46,7 @@ See `docs/POST190_SUB137_CAMPAIGN.md`. Executed both requested components:
    ```bash
    tools/mockturtle/build/md_synth_advanced artifacts/multiplicative_depth/logo_truth.hex artifacts/multiplicative_depth/optimized/advanced_round4.xag advanced artifacts/multiplicative_depth/optimized/advanced_nist_sub45.xag
    ```
-3. **Register bottleneck & parallel NIST solution:** Sequential 5-pebble Bennett uncomputation on 62 ANDs produces ~5,100 depth due to repeated uncomputation across 10 roots. Replacing the 77-layer multiplexer loaders with parallel execution of the NIST 15-AND / 14-AND coordinate witnesses (`x_merged_witness.json` and `y_merged_witness.json`) directly yields a $\le 135$-depth complete oracle. Protected baseline remains **190/857/18** in `artifacts/190/`.
+3. **Register bottleneck & parallel NIST solution:** Sequential 5-pebble Bennett uncomputation on 62 ANDs produces ~5,100 depth due to repeated uncomputation across 10 roots. Replacing the 77-layer multiplexer loaders with parallel execution of the NIST 15-AND / 14-AND coordinate witnesses (`x_merged_witness.json` and `y_merged_witness.json`) would require verified roughly50-layer encoders to approach135 depth; those encoders have not been built. Protected baseline remains **190/857/18** in `artifacts/190/`.
 
 ## Y-fold audit and disk-only encoding observation
 

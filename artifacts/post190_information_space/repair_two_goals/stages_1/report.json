@@ -1,0 +1,39 @@
+{
+  "status": "bounded_search_finished",
+  "elapsed": 0.9720578340347856,
+  "expanded": 10127,
+  "unique_semantic_spans": 1690,
+  "accepted_physical_states": 10030,
+  "maximum_goals": 2,
+  "best_rank_deficit": 2,
+  "maximum_held_products": 1,
+  "best_suffix_estimate": 5,
+  "history": [
+    {
+      "step": 1,
+      "expanded": 10127,
+      "depth": 69,
+      "present": [
+        0,
+        3
+      ],
+      "missing": [
+        1,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [
+        3
+      ],
+      "ready": [
+        2,
+        5,
+        6,
+        11
+      ],
+      "clean_rank": 10,
+      "remaining": 5,
+      "inputs": 3
+    }
+  ]
+}

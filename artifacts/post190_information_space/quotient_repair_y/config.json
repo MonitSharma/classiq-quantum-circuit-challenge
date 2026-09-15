@@ -1,0 +1,10 @@
+{
+  "witness": "artifacts/post190_nist_variants_wide/y_candidate_0.json",
+  "side": "y",
+  "seconds": 60.0,
+  "beam": 32,
+  "steps": 8,
+  "seed": 0,
+  "aliases": 1,
+  "frontier": "artifacts/post190_information_space/comparison_cached/B/frontier.json"
+}

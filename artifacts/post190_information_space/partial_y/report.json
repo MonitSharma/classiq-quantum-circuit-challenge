@@ -1,0 +1,210 @@
+[
+  {
+    "depth": 61,
+    "cx": 66,
+    "width": 9,
+    "outputs": [
+      3,
+      4
+    ],
+    "checked_inputs": 64,
+    "inverse_phase_error": 1.5481392799765228e-15,
+    "complete": false,
+    "present_goal_indices": [
+      0,
+      3
+    ],
+    "missing_goal_indices": [
+      1,
+      2
+    ],
+    "rank_deficit": 2,
+    "nonlinear_operations": 9,
+    "stages": 9,
+    "nonlinear_dependency_depth": 8,
+    "sha256": "08340d1e450c1206b090b75c7a2b3958ca4512dab7c85c533dc97df712bb70dd",
+    "source_index": 0
+  },
+  {
+    "depth": 64,
+    "cx": 69,
+    "width": 9,
+    "outputs": [
+      5,
+      7
+    ],
+    "checked_inputs": 64,
+    "inverse_phase_error": 9.934346647853924e-16,
+    "complete": false,
+    "present_goal_indices": [
+      0,
+      3
+    ],
+    "missing_goal_indices": [
+      1,
+      2
+    ],
+    "rank_deficit": 2,
+    "nonlinear_operations": 10,
+    "stages": 10,
+    "nonlinear_dependency_depth": 9,
+    "sha256": "74d090d931989ca4a44c88b6bd9cd2826b899bb7f133c2ee07013c865129a9ee",
+    "source_index": 1
+  },
+  {
+    "depth": 62,
+    "cx": 69,
+    "width": 9,
+    "outputs": [
+      6,
+      4
+    ],
+    "checked_inputs": 64,
+    "inverse_phase_error": 1.1141866883070655e-15,
+    "complete": false,
+    "present_goal_indices": [
+      0,
+      3
+    ],
+    "missing_goal_indices": [
+      1,
+      2
+    ],
+    "rank_deficit": 2,
+    "nonlinear_operations": 10,
+    "stages": 10,
+    "nonlinear_dependency_depth": 9,
+    "sha256": "737ec774cddb954bc6478a31744af0f510d9735f363bf0bee024eb0bf28d6dd6",
+    "source_index": 2
+  },
+  {
+    "depth": 66,
+    "cx": 71,
+    "width": 9,
+    "outputs": [
+      3,
+      4
+    ],
+    "checked_inputs": 64,
+    "inverse_phase_error": 1.5481392799765228e-15,
+    "complete": false,
+    "present_goal_indices": [
+      0,
+      3
+    ],
+    "missing_goal_indices": [
+      1,
+      2
+    ],
+    "rank_deficit": 2,
+    "nonlinear_operations": 10,
+    "stages": 10,
+    "nonlinear_dependency_depth": 9,
+    "sha256": "173e502245bfa9cd25da0cd576a15bdd94d68c00e8f5c5d8b2cc02c8c0c36e91",
+    "source_index": 3
+  },
+  {
+    "depth": 69,
+    "cx": 75,
+    "width": 9,
+    "outputs": [
+      4,
+      7
+    ],
+    "checked_inputs": 64,
+    "inverse_phase_error": 9.964986097963504e-16,
+    "complete": false,
+    "present_goal_indices": [
+      0,
+      3
+    ],
+    "missing_goal_indices": [
+      1,
+      2
+    ],
+    "rank_deficit": 2,
+    "nonlinear_operations": 11,
+    "stages": 11,
+    "nonlinear_dependency_depth": 10,
+    "sha256": "4954baea8ff8df41d3cb12749236bb8b854abb460b1cafe3851c902fc20e123a",
+    "source_index": 4
+  },
+  {
+    "depth": 66,
+    "cx": 74,
+    "width": 9,
+    "outputs": [
+      3,
+      4
+    ],
+    "checked_inputs": 64,
+    "inverse_phase_error": 1.5481392799765228e-15,
+    "complete": false,
+    "present_goal_indices": [
+      0,
+      3
+    ],
+    "missing_goal_indices": [
+      1,
+      2
+    ],
+    "rank_deficit": 2,
+    "nonlinear_operations": 10,
+    "stages": 10,
+    "nonlinear_dependency_depth": 9,
+    "sha256": "a9069e35b8df6dd01286aef3c7fc32a48499c9b1864c71eb81fd0a0e89587680",
+    "source_index": 5
+  },
+  {
+    "depth": 67,
+    "cx": 75,
+    "width": 9,
+    "outputs": [
+      6,
+      4
+    ],
+    "checked_inputs": 64,
+    "inverse_phase_error": 1.4602703977091184e-15,
+    "complete": false,
+    "present_goal_indices": [
+      0,
+      3
+    ],
+    "missing_goal_indices": [
+      1,
+      2
+    ],
+    "rank_deficit": 2,
+    "nonlinear_operations": 11,
+    "stages": 11,
+    "nonlinear_dependency_depth": 10,
+    "sha256": "275670fb335c65327834e06efebc5e82937279704f8bef879cbba1d6d1c441cc",
+    "source_index": 6
+  },
+  {
+    "depth": 66,
+    "cx": 77,
+    "width": 9,
+    "outputs": [
+      3,
+      7
+    ],
+    "checked_inputs": 64,
+    "inverse_phase_error": 9.820925191391734e-16,
+    "complete": false,
+    "present_goal_indices": [
+      0,
+      3
+    ],
+    "missing_goal_indices": [
+      1,
+      2
+    ],
+    "rank_deficit": 2,
+    "nonlinear_operations": 11,
+    "stages": 11,
+    "nonlinear_dependency_depth": 10,
+    "sha256": "e164cad4aad0f5244ed539cfd90d5c172d93ee8ab6817180569812010917a8c0",
+    "source_index": 7
+  }
+]

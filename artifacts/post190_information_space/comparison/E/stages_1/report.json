@@ -1,0 +1,43 @@
+{
+  "status": "timeout",
+  "elapsed": 3.807016458013095,
+  "expanded": 17927,
+  "unique_semantic_spans": 1369,
+  "accepted_physical_states": 17501,
+  "maximum_goals": 1,
+  "best_rank_deficit": 3,
+  "maximum_held_products": 3,
+  "best_suffix_estimate": 7,
+  "history": [
+    {
+      "step": 1,
+      "expanded": 17927,
+      "depth": 21,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 6
+    }
+  ]
+}

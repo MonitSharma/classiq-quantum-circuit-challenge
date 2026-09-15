@@ -1,0 +1,649 @@
+{
+  "status": "bounded_search_finished",
+  "elapsed": 4.086444834014401,
+  "expanded": 27447,
+  "unique_semantic_spans": 12486,
+  "accepted_physical_states": 13429,
+  "maximum_goals": 2,
+  "best_rank_deficit": 2,
+  "maximum_held_products": 2,
+  "best_suffix_estimate": 6,
+  "history": [
+    {
+      "step": 1,
+      "expanded": 84,
+      "depth": 8,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        8,
+        10
+      ],
+      "clean_rank": 8,
+      "remaining": 9,
+      "inputs": 6
+    },
+    {
+      "step": 2,
+      "expanded": 1092,
+      "depth": 13,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        10
+      ],
+      "clean_rank": 9,
+      "remaining": 8,
+      "inputs": 6
+    },
+    {
+      "step": 3,
+      "expanded": 3031,
+      "depth": 17,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        2,
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        7,
+        8,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 8,
+      "inputs": 6
+    },
+    {
+      "step": 4,
+      "expanded": 5201,
+      "depth": 22,
+      "present": [
+        3
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "rank_deficit": 3,
+      "held": [
+        5,
+        6
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 6
+    },
+    {
+      "step": 5,
+      "expanded": 7364,
+      "depth": 35,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [
+        7
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        9,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 6,
+      "inputs": 6
+    },
+    {
+      "step": 6,
+      "expanded": 9324,
+      "depth": 40,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [
+        7
+      ],
+      "ready": [
+        0,
+        1,
+        5,
+        6,
+        9
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 4
+    },
+    {
+      "step": 7,
+      "expanded": 10094,
+      "depth": 47,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [
+        7,
+        9
+      ],
+      "ready": [
+        0,
+        1,
+        6
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 4
+    },
+    {
+      "step": 8,
+      "expanded": 11109,
+      "depth": 51,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [
+        7,
+        9
+      ],
+      "ready": [
+        0,
+        1,
+        6,
+        8
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 5
+    },
+    {
+      "step": 9,
+      "expanded": 12124,
+      "depth": 54,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [
+        9
+      ],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 6,
+      "inputs": 6
+    },
+    {
+      "step": 10,
+      "expanded": 13167,
+      "depth": 61,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [
+        8,
+        9
+      ],
+      "ready": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 4
+    },
+    {
+      "step": 11,
+      "expanded": 14147,
+      "depth": 65,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 6,
+      "inputs": 6
+    },
+    {
+      "step": 12,
+      "expanded": 15225,
+      "depth": 70,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 6,
+      "inputs": 6
+    },
+    {
+      "step": 13,
+      "expanded": 16387,
+      "depth": 72,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 6,
+      "inputs": 6
+    },
+    {
+      "step": 14,
+      "expanded": 17906,
+      "depth": 74,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 6,
+      "inputs": 6
+    },
+    {
+      "step": 15,
+      "expanded": 19565,
+      "depth": 74,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 6,
+      "inputs": 6
+    },
+    {
+      "step": 16,
+      "expanded": 21091,
+      "depth": 80,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 6,
+      "inputs": 6
+    },
+    {
+      "step": 17,
+      "expanded": 22393,
+      "depth": 87,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 6,
+      "inputs": 6
+    },
+    {
+      "step": 18,
+      "expanded": 23541,
+      "depth": 94,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 6,
+      "inputs": 6
+    },
+    {
+      "step": 19,
+      "expanded": 24437,
+      "depth": 88,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 5
+    },
+    {
+      "step": 20,
+      "expanded": 25172,
+      "depth": 100,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [
+        9
+      ],
+      "ready": [
+        0,
+        1,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 5
+    },
+    {
+      "step": 21,
+      "expanded": 25823,
+      "depth": 95,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 5
+    },
+    {
+      "step": 22,
+      "expanded": 26425,
+      "depth": 102,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [
+        9
+      ],
+      "ready": [
+        0,
+        1,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 5
+    },
+    {
+      "step": 23,
+      "expanded": 26999,
+      "depth": 102,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 5
+    },
+    {
+      "step": 24,
+      "expanded": 27447,
+      "depth": 108,
+      "present": [
+        1,
+        3
+      ],
+      "missing": [
+        0,
+        2
+      ],
+      "rank_deficit": 2,
+      "held": [],
+      "ready": [
+        0,
+        1,
+        6,
+        10
+      ],
+      "clean_rank": 10,
+      "remaining": 7,
+      "inputs": 5
+    }
+  ]
+}

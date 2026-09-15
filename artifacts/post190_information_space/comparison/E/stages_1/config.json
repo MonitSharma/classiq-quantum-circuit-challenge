@@ -1,0 +1,14 @@
+{
+  "witness": "artifacts/post190_nist_variants_wide/y_candidate_0.json",
+  "side": "y",
+  "seconds": 3.75,
+  "beam": 64,
+  "steps": 1,
+  "seed": 0,
+  "dedup": "pareto",
+  "mix": true,
+  "mode": "information",
+  "aliases": 8,
+  "exposure_limit": 16,
+  "stage_width": 3
+}

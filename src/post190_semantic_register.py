@@ -175,9 +175,9 @@ def verify(q,places,goals):
     return dict(depth=q.depth(),cx=q.count_ops().get('cx',0),width=9,outputs=places,checked_inputs=64,inverse_phase_error=error)
 
 
-def search(w,side,seconds=30,beam=16,steps=24,seed=0,mix=False):
+def search(w,side,seconds=30,beam=16,steps=24,seed=0,mix=False,audit=None):
     products,goals=bank(w,side);rng=random.Random(seed);start=time.monotonic();expanded=0;rejected=0
-    frontier=[(INPUTS+(0,0,0),(0,)*9,[])];seen={};best=None;history=[]
+    frontier=[(INPUTS+(0,0,0),(0,)*9,[])];seen={};representatives={};best=None;history=[]
     for layer in range(steps):
         candidates=[]
         for values,times,ops in frontier:
@@ -197,9 +197,13 @@ def search(w,side,seconds=30,beam=16,steps=24,seed=0,mix=False):
                         if t in (p,r) or (other is not None and other in (p,r,t)):continue
                         tail=pre+([] if other is None else [('cx',(t,other))])+[('ccx',(p,r,t))];out=step(values,tail);nt=timing(times,tail);expanded+=1
                         key=span_key(out);depth=max(nt)
-                        if seen.get(key,100000)<=depth:continue
+                        if seen.get(key,100000)<=depth:
+                            if audit is not None:audit(representatives[key],(out,nt),products,goals)
+                            continue
                         if not closure(out,products,goals):rejected+=1;continue
-                        seen[key]=depth;pv=pivots([FULL,*out])
+                        seen[key]=depth
+                        if audit is not None:representatives[key]=(out,nt)
+                        pv=pivots([FULL,*out])
                         have=sum(contains(pv,z) for z in goals)
                         held=sum(contains(pv,z) for _,_,z in products)
                         ready=sum(contains(pv,a) and contains(pv,b) for a,b,_ in products)

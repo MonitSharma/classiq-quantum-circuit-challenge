@@ -1,5 +1,16 @@
 # Experiment history and failure notes
 
+## Information-space campaign: pruning flaw measured, no new complete encoder
+
+Read `docs/POST190_INFORMATION_SPACE_CAMPAIGN.md`. Legacy span dedup discarded
+1,108 of7,215 colliding states with better measured future exposure/materialization
+cost. Added full512-input semantics, physical/Pareto retention, affine frames,
+semantic hyperplane search, packed moves and saved-prefix repair. Bounded A–E,
+X14/Y13 and5–7-stage tests found no complete encoder. Best saved prefixes still
+have2/4 goals.16 focused tests pass. Protected190/857/18 remains unchanged;
+partial44/61-depth circuits are not usable loaders. All campaign jobs finished.
+
+
 ## Seeded register campaign: exact x14/y13, no new native best
 
 Read `docs/POST190_SEEDED_REGISTER_CAMPAIGN.md`. Independently recreated x15→14
