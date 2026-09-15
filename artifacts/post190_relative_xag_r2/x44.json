@@ -1,0 +1,60 @@
+{
+  "prefix": {
+    "source": "artifacts/post190_information_space/quotient_x/frontier.json",
+    "index": 0,
+    "side": "x",
+    "basis": [
+      9448278507109053219,
+      4611686019437261788,
+      2757713032549553798,
+      1537228673145644681,
+      1085102592571150095,
+      61989375646155580,
+      9916504963531580,
+      280375465148160,
+      1095216660735,
+      4294967295
+    ],
+    "goals": [
+      4332189896224538624,
+      15860806859641323523,
+      871833611957960700,
+      281474976645120
+    ],
+    "present": [
+      0,
+      3
+    ],
+    "missing": [
+      1,
+      2
+    ],
+    "times": [
+      33,
+      35,
+      20,
+      24,
+      42,
+      43,
+      29,
+      30,
+      40
+    ],
+    "prefix_depth": 43,
+    "prefix_hash": "a89ecb88a7cbfa7635e90806e5804631078e6a7a7580052b2c6bb908de36a54d"
+  },
+  "result": {
+    "status": "UNSAT",
+    "quotient_rank": 2,
+    "goal_quotients": [
+      "0x5594555616bd685",
+      "0x3166f0208f0f0f3"
+    ],
+    "useful_classes": [],
+    "base_forms": 1024,
+    "first_pairs_examined": 524800,
+    "first_distinct_products": 170688,
+    "second_pairs_examined": 0,
+    "elapsed": 0.5387642920250073
+  }
+}

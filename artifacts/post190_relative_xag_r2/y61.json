@@ -1,0 +1,60 @@
+{
+  "prefix": {
+    "source": "artifacts/post190_information_space/comparison_cached/B/frontier.json",
+    "index": 0,
+    "side": "y",
+    "basis": [
+      9378549567933952491,
+      4691415456008111400,
+      2459606910826071108,
+      1229892022040622967,
+      735895209793258038,
+      376424004955929286,
+      43069697330227916,
+      28766734545837516,
+      228251892942848,
+      4294967295
+    ],
+    "goals": [
+      228251892942848,
+      17803394873712640,
+      264398320955392,
+      18446744069414584320
+    ],
+    "present": [
+      0,
+      3
+    ],
+    "missing": [
+      1,
+      2
+    ],
+    "times": [
+      46,
+      60,
+      49,
+      59,
+      46,
+      57,
+      40,
+      47,
+      53
+    ],
+    "prefix_depth": 60,
+    "prefix_hash": "8d2f2be73c7467c84ae75f9a7f78844d553beb132cbb61f134417ecf0d26eb66"
+  },
+  "result": {
+    "status": "UNSAT",
+    "quotient_rank": 2,
+    "goal_quotients": [
+      "0x3f40171cc19fff",
+      "0x3fe00f007800"
+    ],
+    "useful_classes": [],
+    "base_forms": 1024,
+    "first_pairs_examined": 524800,
+    "first_distinct_products": 172974,
+    "second_pairs_examined": 0,
+    "elapsed": 0.5605885840486735
+  }
+}

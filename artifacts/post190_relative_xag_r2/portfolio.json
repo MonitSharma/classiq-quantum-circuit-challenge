@@ -1,0 +1,218 @@
+[
+  {
+    "source": "artifacts/post190_information_space/quotient_x/frontier.json",
+    "index": 0,
+    "side": "x",
+    "prefix_depth": 43,
+    "present": [
+      0,
+      3
+    ],
+    "result": {
+      "status": "UNSAT",
+      "quotient_rank": 2,
+      "goal_quotients": [
+        "0x5594555616bd685",
+        "0x3166f0208f0f0f3"
+      ],
+      "useful_classes": [],
+      "base_forms": 1024,
+      "first_pairs_examined": 524800,
+      "first_distinct_products": 170688,
+      "second_pairs_examined": 0,
+      "elapsed": 0.5764939580112696
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_x/frontier.json",
+    "index": 1,
+    "side": "x",
+    "prefix_depth": 44,
+    "present": [
+      0,
+      3
+    ],
+    "result": {
+      "status": "UNSAT",
+      "quotient_rank": 2,
+      "goal_quotients": [
+        "0x3502a3501fb2083",
+        "0x3166f0208f0f0f3"
+      ],
+      "useful_classes": [],
+      "base_forms": 1024,
+      "first_pairs_examined": 524800,
+      "first_distinct_products": 169922,
+      "second_pairs_examined": 0,
+      "elapsed": 0.6057680830126628
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_x/frontier.json",
+    "index": 2,
+    "side": "x",
+    "prefix_depth": 41,
+    "present": [
+      0,
+      3
+    ],
+    "result": {
+      "status": "UNSAT",
+      "quotient_rank": 2,
+      "goal_quotients": [
+        "0x3502a3501fb2083",
+        "0x3166f0208f0f0f3"
+      ],
+      "useful_classes": [],
+      "base_forms": 1024,
+      "first_pairs_examined": 524800,
+      "first_distinct_products": 173740,
+      "second_pairs_examined": 0,
+      "elapsed": 0.5790979579323903
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_y/frontier.json",
+    "index": 0,
+    "side": "y",
+    "prefix_depth": 38,
+    "present": [
+      1,
+      3
+    ],
+    "result": {
+      "status": "UNSAT",
+      "quotient_rank": 2,
+      "goal_quotients": [
+        "0x306708ff77ff",
+        "0xf8707ff0fff"
+      ],
+      "useful_classes": [],
+      "base_forms": 1024,
+      "first_pairs_examined": 524800,
+      "first_distinct_products": 172974,
+      "second_pairs_examined": 0,
+      "elapsed": 0.5629573330515996
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_y/frontier.json",
+    "index": 1,
+    "side": "y",
+    "prefix_depth": 38,
+    "present": [
+      1,
+      3
+    ],
+    "result": {
+      "status": "UNSAT",
+      "quotient_rank": 2,
+      "goal_quotients": [
+        "0x306708ff77ff",
+        "0xf8707ff0fff"
+      ],
+      "useful_classes": [],
+      "base_forms": 1024,
+      "first_pairs_examined": 524800,
+      "first_distinct_products": 172974,
+      "second_pairs_examined": 0,
+      "elapsed": 0.5538648749934509
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/quotient_y/frontier.json",
+    "index": 2,
+    "side": "y",
+    "prefix_depth": 39,
+    "present": [
+      1,
+      3
+    ],
+    "result": {
+      "status": "UNSAT",
+      "quotient_rank": 2,
+      "goal_quotients": [
+        "0x306708ff77ff",
+        "0xf8707ff0fff"
+      ],
+      "useful_classes": [],
+      "base_forms": 1024,
+      "first_pairs_examined": 524800,
+      "first_distinct_products": 173740,
+      "second_pairs_examined": 0,
+      "elapsed": 0.5375076669733971
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/comparison_cached/B/frontier.json",
+    "index": 0,
+    "side": "y",
+    "prefix_depth": 60,
+    "present": [
+      0,
+      3
+    ],
+    "result": {
+      "status": "UNSAT",
+      "quotient_rank": 2,
+      "goal_quotients": [
+        "0x3f40171cc19fff",
+        "0x3fe00f007800"
+      ],
+      "useful_classes": [],
+      "base_forms": 1024,
+      "first_pairs_examined": 524800,
+      "first_distinct_products": 172974,
+      "second_pairs_examined": 0,
+      "elapsed": 0.5244969589402899
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/comparison_cached/B/frontier.json",
+    "index": 1,
+    "side": "y",
+    "prefix_depth": 63,
+    "present": [
+      0,
+      3
+    ],
+    "result": {
+      "status": "UNSAT",
+      "quotient_rank": 2,
+      "goal_quotients": [
+        "0x3f40171cc19fff",
+        "0x3fe00f007800"
+      ],
+      "useful_classes": [],
+      "base_forms": 1024,
+      "first_pairs_examined": 524800,
+      "first_distinct_products": 172974,
+      "second_pairs_examined": 0,
+      "elapsed": 0.5310807910282165
+    }
+  },
+  {
+    "source": "artifacts/post190_information_space/comparison_cached/B/frontier.json",
+    "index": 2,
+    "side": "y",
+    "prefix_depth": 64,
+    "present": [
+      0,
+      3
+    ],
+    "result": {
+      "status": "UNSAT",
+      "quotient_rank": 2,
+      "goal_quotients": [
+        "0x3f40171cc19fff",
+        "0x3fe00f007800"
+      ],
+      "useful_classes": [],
+      "base_forms": 1024,
+      "first_pairs_examined": 524800,
+      "first_distinct_products": 172208,
+      "second_pairs_examined": 0,
+      "elapsed": 0.5408559170318767
+    }
+  }
+]

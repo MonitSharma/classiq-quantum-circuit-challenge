@@ -16,3 +16,19 @@ def solve(frontier, side, index=0, max_products=3, max_stages=3, seconds=60):
 
 
 __all__ = ['solve']
+
+
+if __name__ == '__main__':
+    import argparse, json
+    from pathlib import Path
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--frontier', required=True)
+    ap.add_argument('--side', choices=('x', 'y'), required=True)
+    ap.add_argument('--index', type=int, default=0)
+    ap.add_argument('--seconds', type=float, default=120)
+    ap.add_argument('--out', type=Path)
+    a = ap.parse_args()
+    result = solve(a.frontier, a.side, a.index, 2, 2, a.seconds)
+    print(json.dumps(result, indent=2))
+    if a.out:
+        a.out.write_text(json.dumps(result, indent=2))
