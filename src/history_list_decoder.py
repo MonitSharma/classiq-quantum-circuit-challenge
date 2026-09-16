@@ -16,6 +16,12 @@ class DecodeResult:
     processed: int
 
 
+def phase_weight(value: int) -> int:
+    """Hamming distance modulo the allowed shared global phase."""
+    weight = value.bit_count()
+    return min(weight, 4096 - weight)
+
+
 def decode(target: int, signals: Sequence[int], width: int = 64,
            order_name: str = "given") -> DecodeResult:
     """Keep the best unique residuals while processing independent signals."""
@@ -24,10 +30,9 @@ def decode(target: int, signals: Sequence[int], width: int = 64,
     beam = {target}
     for signal in signals:
         expanded = beam | {residual ^ signal for residual in beam}
-        beam = set(sorted(expanded, key=int.bit_count)[:width])
-    residual = min(beam, key=lambda value: min(value.bit_count(),
-                                               4096 - value.bit_count()))
-    distance = min(residual.bit_count(), 4096 - residual.bit_count())
+        beam = set(sorted(expanded, key=phase_weight)[:width])
+    residual = min(beam, key=phase_weight)
+    distance = phase_weight(residual)
     return DecodeResult(residual, distance, width, order_name,
                         len(signals))
 

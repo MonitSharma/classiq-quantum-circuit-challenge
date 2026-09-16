@@ -27,6 +27,11 @@ as exact semantic guidance but are too numerous and physically wide to use as
 a direct lowering plan. The initial guided control-pair smoke test regressed
 to decoder distance1097, so this proposal distribution is not yet validated.
 
+The decoder and layer-aware guidance fixes supersede that initial comparison:
+matched 3-second seeded 7/18 smokes both reached distance1001. Unguided
+evaluated77 states; guided evaluated1. The current guided shortlist is too
+expensive and shows no semantic gain, so serious search remains deferred.
+
 Latest: `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md` implements the deep-research
 report's physical XAG and solver-audit direction. Protected185/854/18 remains
 best. All18 wires may participate destructively; the six-clean-node restriction

@@ -114,7 +114,7 @@ class PhaseHistoryTests(unittest.TestCase):
         self.assertEqual(result.distance, 0)
 
     def test_history_list_decoder_is_global_phase_aware(self):
-        result = decode(TARGET, [TARGET ^ ALL_ONES], width=4)
+        result = decode(TARGET, [TARGET ^ ALL_ONES], width=1)
         self.assertEqual(result.distance, 0)
 
     def test_cz_history_tap_round_trip(self):

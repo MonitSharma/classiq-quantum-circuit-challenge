@@ -38,7 +38,10 @@ def collect_features(gates: Sequence[tuple], pair_limit: int = 8,
                 target_distance = min((value ^ target).bit_count(), (value ^ (target ^ ALL_ONES)).bit_count())
                 exact_hint = int(value in hints)
                 candidates.append((-exact_hint, hint_distance, target_distance, a, b, value))
-        for _, _, _, a, b, value in sorted(candidates)[:pair_limit]:
+        ranked = sorted(candidates)
+        exact = [row for row in ranked if row[0] == 0]
+        approximate = [row for row in ranked if row[0] != 0][:pair_limit]
+        for _, _, _, a, b, value in exact + approximate:
             signal_id = basis.add(value, step, a, f"cz:{a}:{b}")
             metadata.setdefault(signal_id, []).append(Feature("cz", step, a, b, value))
     return basis, metadata, snapshots

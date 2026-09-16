@@ -37,6 +37,13 @@ decoder distance1097, worse than the unguided v3 smoke's933; no exact hit or
 QASM candidate resulted. The control-pair ranking needs improvement before a
 serious multi-seed ablation.
 
+The corrected follow-up makes decoder beam pruning global-phase aware and
+chooses/scorers the actual nonlinear layer before inserting guided controls.
+Matched seeded 3-second 7/18 runs both reached decoded distance1001;
+unguided evaluated77 states while guided evaluated1. The former933/1097 smoke
+comparison is superseded. The guided operator remains too expensive and has
+not demonstrated semantic improvement.
+
 ## September16: deep-research destructive-XAG implementation and model repair
 
 Read `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md`. Implemented paid physical

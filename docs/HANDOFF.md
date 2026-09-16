@@ -33,6 +33,12 @@ decoder distance1097 (worse than the unguided933 smoke) with no exact hit.
 The current control-pair proposal heuristic should be redesigned before any
 long campaign.
 
+After decoder and layer-aware guidance fixes, matched 3-second seeded 7/18
+smokes reached distance1001 for both unguided and guided variants. Unguided
+evaluated77 states; guided evaluated1 because its shortlist/full-score path is
+expensive. The earlier933/1097 smoke scores are superseded. No long campaign
+is justified until proposal throughput and semantic gain improve.
+
 ## September 16: corrected deep-research implementation
 
 Read `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md` and the rewritten

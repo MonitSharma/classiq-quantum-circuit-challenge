@@ -10,7 +10,7 @@ import time
 from pathlib import Path
 
 from direct_e_v2 import layout, mutate, semantic, structured_seed
-from history_list_decoder import decode
+from history_list_decoder import decode, phase_weight
 from phase_features import collect_features, feature_taps
 from phase_history_search import ALL_ONES, TARGET, compile_u3_cx, build_phase_history_circuit
 
@@ -37,28 +37,39 @@ def score(layers: list[dict], pair_limit: int) -> tuple[tuple, dict]:
 
 
 def guided_mutate(layers: list[dict], rng: random.Random, guidance: list[int]) -> list[dict]:
-    proposed = mutate(layers, rng)
     if not guidance:
-        return proposed
-    wires = semantic(proposed)
-    ranked = []
-    for a in range(18):
-        for b in range(a + 1, 18):
-            product = wires[a] & wires[b]
-            ranked.append((min((product ^ node).bit_count()
-                               for node in guidance), a, b))
-    _, a, b = min(ranked)
-    candidates = [i for i, layer in enumerate(proposed) if layer["kind"] == "ccx"]
-    if not candidates:
-        return proposed
-    layer = proposed[rng.choice(candidates)]
+        return mutate(layers, rng)
+    proposed = [{"kind": layer["kind"], "gates": [list(g) for g in layer["gates"]]}
+                for layer in layers]
+    nonlinear = [i for i, layer in enumerate(proposed) if layer["kind"] == "ccx"]
+    if not nonlinear:
+        return mutate(layers, rng)
+    layer_index = rng.choice(nonlinear)
+    layer = proposed[layer_index]
     used = {wire for gate in layer["gates"] for wire in gate}
-    if a in used or b in used:
-        return proposed
-    free = [wire for wire in range(18) if wire not in used and wire not in (a, b)]
-    if free:
-        layer["gates"].append([a, b, rng.choice(free)])
-    return proposed
+    free = [wire for wire in range(18) if wire not in used]
+    if len(free) < 3:
+        return mutate(layers, rng)
+    wires = semantic(proposed[:layer_index])
+    ranked = []
+    for ai, a in enumerate(free):
+        for b in free[ai + 1:]:
+            product = wires[a] & wires[b]
+            gain = phase_weight(TARGET) - phase_weight(TARGET ^ product)
+            ranked.append((-gain, min((product ^ node).bit_count() for node in guidance), a, b))
+    candidates = sorted(ranked)[:8]
+    best = None
+    for _, _, a, b in candidates:
+        for target in free:
+            if target in (a, b):
+                continue
+            candidate = [{"kind": item["kind"], "gates": [list(g) for g in item["gates"]]}
+                         for item in proposed]
+            candidate[layer_index]["gates"].append([a, b, target])
+            key, _ = score(candidate, pair_limit=4)
+            if best is None or key < best[0]:
+                best = (key, candidate)
+    return best[1] if best else mutate(layers, rng)
 
 
 def run(out: Path, nonlin: int, affine: int, seconds: float, seed: int,
@@ -68,8 +79,10 @@ def run(out: Path, nonlin: int, affine: int, seconds: float, seed: int,
     rng = random.Random(seed)
     guidance = []
     if guidance_path:
-        guidance = [int(node["truth_table"])
-                    for node in json.loads(guidance_path.read_text())["nodes"]]
+        nodes = json.loads(guidance_path.read_text())["nodes"]
+        nodes.sort(key=lambda node: (not node["output_root"],
+                                     -node["fanout"], node["layer"], node["signal_id"]))
+        guidance = [int(node["truth_table"]) for node in nodes[:256]]
     layers = (structured_seed(nonlin, affine,
               json.loads(preconditioner.read_text())["substitution_ops"])
               if preconditioner else layout(nonlin, affine))
