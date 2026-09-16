@@ -1,0 +1,57 @@
+{
+  "status": "PRESCREEN_PASS",
+  "x_source": "artifacts/post190_nist_variants/x_candidate_0.json",
+  "y_source": "artifacts/post190_nist_variants_wide/y_candidate_0.json",
+  "x_and_nodes": 14,
+  "y_and_nodes": 13,
+  "total_and_nodes": 27,
+  "batch_capacity": 6,
+  "nonlinear_batches": 5,
+  "capacity_lower_bound": 5,
+  "capacity_optimal": true,
+  "batches": [
+    [
+      0,
+      1,
+      5,
+      14,
+      16,
+      19
+    ],
+    [
+      20,
+      2,
+      3,
+      6,
+      7,
+      10
+    ],
+    [
+      8,
+      11,
+      15,
+      21,
+      22,
+      24
+    ],
+    [
+      12,
+      17,
+      25,
+      4,
+      9,
+      23
+    ],
+    [
+      13,
+      18,
+      26
+    ]
+  ],
+  "forward_rccx_depth_estimate": 35,
+  "target_forward_encoder_depth_for_137": 49,
+  "remaining_affine_budget": 14,
+  "affine_frame_solver": "NOT_YET_IMPLEMENTED",
+  "native_compilation": "NOT_RUN_BY_THIS_PRESCREEN",
+  "all_64_side_inputs_verified": true
+}
