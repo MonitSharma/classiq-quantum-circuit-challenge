@@ -37,6 +37,11 @@ Because `ceil(27/6)=5`, this reaches the absolute capacity lower bound. At the
 logical RCCX estimate of seven native layers per batch, forward nonlinear
 depth is 35 layers.
 
+The audit was also repeated over the retained portfolio: four x14 candidates
+times eight y13 candidates, for 32 exact witness pairs. Every pair admits a
+five-batch capacity schedule, so candidate-0 × candidate-0 is not being used
+as a proxy for the entire x14+y13 family.
+
 ## Depth budget
 
 The preserved kernel estimate used by the proposal is about 38 native layers.
@@ -59,6 +64,8 @@ Implemented in `src/post190_joint_18wire_feasibility.py`:
 - exact all-64-input Boolean checks for both sides;
 - one joint symbol-space remapping;
 - exact bounded backtracking for a five-batch, six-RCCX-capacity schedule;
+- complete enumeration of the retained 4×8 witness-pair portfolio for that
+  capacity screen;
 - derivation of the 35-layer nonlinear estimate and 14-layer affine budget.
 
 Not implemented by this pre-screen:
@@ -71,8 +78,10 @@ Not implemented by this pre-screen:
 Consequently this is neither an UNSAT certificate nor a candidate oracle. It
 only confirms that the fixed Boolean witness pair is not rejected by the most
 basic joint nonlinear-capacity test. The next exact step, if pursued, is the
-symbolic affine-frame SAT model with A=8…14 and an external process bound via
-`src/run_bounded.py`.
+symbolic affine-frame SAT model with variable batch assignments, starting at
+A=14 and then probing A=15…18 if A=14 is UNSAT. It should use actual CNOT
+matchings and literal-versus-span endpoint modes, with an external process
+bound via `src/run_bounded.py`.
 
 ## Reproduction
 

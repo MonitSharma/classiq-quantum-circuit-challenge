@@ -8,6 +8,7 @@ alone does not prove a <=49-layer native encoder.
 """
 from __future__ import annotations
 import argparse, json
+import itertools
 from pathlib import Path
 from post190_xag_inplace_lower import outputs
 
@@ -49,7 +50,6 @@ def capacity_schedule(deps, capacity=6):
                 for batch in combinations(available,size):
                     chosen.append(list(batch)); out=search(done|set(batch),0)
                     if out:return out
-                if size < max_take:break
             return None
         answer=search(set(),0)
         if answer:return answer
@@ -85,7 +85,25 @@ def audit(xpath=XPATH,ypath=YPATH):
         'all_64_side_inputs_verified':True,
     }
 
+def portfolio(xdir=ROOT/'artifacts/post190_nist_variants_wide', ydir=ROOT/'artifacts/post190_nist_variants_wide'):
+    """Audit all retained x14/y13 witness pairs for the capacity screen."""
+    xp=[]; yp=[]
+    for p in sorted(xdir.glob('x_candidate_*.json')):
+        w=json.loads(p.read_text())
+        if w.get('k')==14: xp.append((p,w))
+    for p in sorted(ydir.glob('y_candidate_*.json')):
+        w=json.loads(p.read_text())
+        if w.get('k')==13: yp.append((p,w))
+    rows=[]
+    for (px,x),(py,y) in itertools.product(xp,yp):
+        gates=remap(x,0,6)+remap(y,6,20)
+        ds=dependencies(gates); bs=capacity_schedule(ds,6)
+        rows.append({'x_source':str(px.relative_to(ROOT)), 'y_source':str(py.relative_to(ROOT)),
+                     'batches':len(bs), 'schedule':bs})
+    return {'x_candidates':len(xp),'y_candidates':len(yp),'pairs':rows,
+            'all_capacity_optimal':all(r['batches']==5 for r in rows)}
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--outdir',type=Path,default=ROOT/'artifacts/post190_joint_18wire_feasibility');a=p.parse_args();a.outdir.mkdir(parents=True,exist_ok=True)
-    r=audit();(a.outdir/'report.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r,indent=2))
+    r=audit();r['portfolio']=portfolio();(a.outdir/'report.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r,indent=2))
 if __name__=='__main__':main()
