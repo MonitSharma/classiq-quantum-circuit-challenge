@@ -13,6 +13,18 @@ GF(2) classification over every transient wire truth table, retaining
 verification report, or leaderboard result came from the report. First test:
 history-span audit of already-saved Direct-E trajectories.
 
+## September 16: selective CZ features and Direct-E v3 smoke test
+
+`src/phase_features.py` adds a bounded historical phase dictionary containing
+historical Z signals plus a selective shortlist of pairwise products for CZ
+taps. Exact rank-product/factor matches are prioritized, followed by
+target-near pairs; all pair products are deliberately not inserted. The v3
+prototype in `src/direct_e_v3_history.py` connects this dictionary to Direct-E
+mutation and the existing exact phase-history builder. A seeded 3-second 7/18
+smoke run evaluated 93 states, reached historical rank50 and decoder distance
+933, and found no exact phase representation. It validates the integration
+only; no QASM candidate or depth improvement was produced.
+
 ## September16: deep-research destructive-XAG implementation and model repair
 
 Read `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md`. Implemented paid physical

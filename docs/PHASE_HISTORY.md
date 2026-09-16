@@ -41,6 +41,16 @@ Direct-E checkpoint already hides an exact history-tapped solution; it does not
 close newly generated history-aware trajectories. The deterministic Gaussian
 remainder is recorded for diagnostics only and is not a nearest-span metric.
 
+The standalone list decoder in `src/history_list_decoder.py` was calibrated on
+the seeded Direct-E 7/18 checkpoint. It uses order-dependent beam decoding over
+independent historical directions, with widths 64, 512 and 1024 and
+chronological, reverse, correlation-sorted and eight deterministic shuffled
+orders. The saved calibration is
+`artifacts/direct_e_v2_history_decoder_calibration/report.json`. Every tested
+order and width remained at decoded distance 657, matching the final-midpoint
+best. This is evidence against an obvious hidden improvement in that saved
+trajectory, not a lower bound on future trajectories.
+
 The audit replayed the preserved destructive histories without judging them by
 their old final-state affine residual. Ranks include the constant-one signal.
 The fused-tail history was reconstructed from its builder and includes its

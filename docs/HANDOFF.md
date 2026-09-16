@@ -16,6 +16,13 @@ The saved-trajectory audit is complete and negative: see
 historical rank39 but does not contain the target. Next: fix/retain the shared
 primitive timeline, then integrate the existing phase-history engine with
 Direct-E v2 rather than reimplementing it.
+The first bounded v3 smoke test is now implemented in
+`src/direct_e_v3_history.py`. It combines selective Z/CZ history features with
+the existing Direct-E mutation engine; a 3-second seeded 7/18 run evaluated
+93 states, reached historical rank50 and decoder distance933, and found no
+exact hit. This is an integration smoke result, not evidence of a useful
+search gradient. Transformed-coordinate XAG proposal guidance remains
+pending.
 
 ## September 16: corrected deep-research implementation
 

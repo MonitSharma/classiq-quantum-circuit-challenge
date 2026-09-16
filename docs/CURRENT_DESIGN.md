@@ -14,6 +14,13 @@ score new searches by target-guided historical decoding and native critical
 path, allowing extra CX. Asymmetric
 uncompute and dirty borrowing remain later stages, not current results.
 
+Prototype status: `src/phase_features.py` adds selective historical CZ
+features, and `src/direct_e_v3_history.py` uses them in bounded Direct-E
+search. The first 3-second 7/18 smoke run reached rank50 with decoded
+distance933 and no exact hit. Treat this as plumbing validation only; serious
+multi-seed search and transformed-coordinate XAG proposal guidance remain
+pending.
+
 Latest: `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md` implements the deep-research
 report's physical XAG and solver-audit direction. Protected185/854/18 remains
 best. All18 wires may participate destructively; the six-clean-node restriction

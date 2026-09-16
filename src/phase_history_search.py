@@ -372,14 +372,17 @@ def build_phase_history_circuit(
     gates: Sequence[Gate], taps: Iterable[dict], n_qubits: int = N_WIRES,
 ) -> QuantumCircuit:
     """Build forward, historical Z taps, and exact reverse trajectory."""
-    by_step: dict[int, list[int]] = {}
+    by_step: dict[int, list[dict]] = {}
     for tap in taps:
-        by_step.setdefault(int(tap["step"]), []).append(int(tap["wire"]))
+        by_step.setdefault(int(tap["step"]), []).append(tap)
     timeline = primitive_events(gates)
     circuit = QuantumCircuit(n_qubits)
     for step in range(len(timeline) + 1):
-        for wire in sorted(set(by_step.get(step, []))):
-            circuit.z(wire)
+        for tap in by_step.get(step, []):
+            if tap.get("kind", "z") == "cz":
+                circuit.cz(int(tap["wire"]), int(tap["other_wire"]))
+            else:
+                circuit.z(int(tap["wire"]))
         if step < len(timeline):
             _append_gate(circuit, timeline[step])
     for gate in reversed(timeline):

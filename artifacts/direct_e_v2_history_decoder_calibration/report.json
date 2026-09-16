@@ -1,0 +1,241 @@
+{
+  "status": "complete",
+  "checkpoint": "artifacts/direct_e_v2_seeded_n7_a18_s26185/best.json",
+  "final_midpoint_error": 657,
+  "historical_rank": 39,
+  "gaussian_remainder_weight": 1097,
+  "best_list_decoded_distance": 657,
+  "rows": [
+    {
+      "order": "given",
+      "width": 64,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "given",
+      "width": 512,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "given",
+      "width": 1024,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "reverse",
+      "width": 64,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "reverse",
+      "width": 512,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "reverse",
+      "width": 1024,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "correlation",
+      "width": 64,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "correlation",
+      "width": 512,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "correlation",
+      "width": 1024,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_00",
+      "width": 64,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_00",
+      "width": 512,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_00",
+      "width": 1024,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_01",
+      "width": 64,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_01",
+      "width": 512,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_01",
+      "width": 1024,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_02",
+      "width": 64,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_02",
+      "width": 512,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_02",
+      "width": 1024,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_03",
+      "width": 64,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_03",
+      "width": 512,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_03",
+      "width": 1024,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_04",
+      "width": 64,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_04",
+      "width": 512,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_04",
+      "width": 1024,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_05",
+      "width": 64,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_05",
+      "width": 512,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_05",
+      "width": 1024,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_06",
+      "width": 64,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_06",
+      "width": 512,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_06",
+      "width": 1024,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_07",
+      "width": 64,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_07",
+      "width": 512,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    },
+    {
+      "order": "shuffle_07",
+      "width": 1024,
+      "signals": 38,
+      "distance": 657,
+      "residual_weight": 657
+    }
+  ]
+}

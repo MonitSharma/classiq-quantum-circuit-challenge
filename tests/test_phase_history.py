@@ -12,6 +12,8 @@ from phase_history_search import (
     primitive_events,
     replay_history,
 )
+from history_list_decoder import decode
+from phase_features import collect_features, feature_taps
 from destructive_semantic_search import initial_wire_truth_tables
 
 
@@ -106,6 +108,21 @@ class PhaseHistoryTests(unittest.TestCase):
         names = [instruction.operation.name for instruction in circuit.data]
         # The internal tap is emitted after the first CX, before RCCX.
         self.assertEqual(names[:2], ["cx", "z"])
+
+    def test_history_list_decoder_keeps_best_unique_residuals(self):
+        result = decode(0b0110, [0b0011, 0b0101], width=4)
+        self.assertEqual(result.distance, 0)
+
+    def test_cz_history_tap_round_trip(self):
+        circuit = build_phase_history_circuit(
+            (), [{"kind": "cz", "step": 0, "wire": 0, "other_wire": 1}], 2
+        )
+        compiled = circuit.decompose().decompose()
+        for basis_index in range(4):
+            state = Statevector.from_int(basis_index, 4)
+            result = state.evolve(compiled)
+            expected_phase = -1 if (basis_index & 1) and (basis_index & 2) else 1
+            self.assertTrue(result.equiv(state * expected_phase), basis_index)
 
 
 if __name__ == "__main__":
