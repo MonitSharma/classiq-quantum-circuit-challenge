@@ -25,6 +25,19 @@ def rank(vectors):
             else:piv[p]=v;break
     return len(piv)
 
+def affine_direction(v):
+    """Remove the constant coordinate from a semantic coefficient vector.
+
+    Coordinate bit zero is the constant function in the 40-dimensional basis;
+    affine translations are therefore quotient directions, not an additional
+    linear direction for storage-rank accounting.
+    """
+    return v & ~1
+
+def rank_directions(vectors):
+    """Rank in the affine quotient V/<constant>, over GF(2)."""
+    return rank([affine_direction(v) for v in vectors])
+
 def remap(witness, input_offset, node_offset):
     result=[]
     for gate in witness['gates']:
@@ -69,7 +82,7 @@ def rank_capacity_profile(schedule, operand_vectors, width=18):
     ranks={12}
     rows=[]
     for batch in schedule:
-        c=rank([v for node in batch for v in operand_vectors[node]])
+        c=rank_directions([v for node in batch for v in operand_vectors[node]])
         incoming=sorted(ranks); outgoing=set()
         k=len(batch)
         for d in ranks:

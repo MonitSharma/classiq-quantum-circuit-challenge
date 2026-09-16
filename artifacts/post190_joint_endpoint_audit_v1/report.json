@@ -1,0 +1,14 @@
+{
+  "status": "AUDIT_PASS",
+  "endpoint_order": ["x0", "x1", "x2", "x4_xor_x5", "y0", "y1", "y2", "y5"],
+  "x_raw_convention": "x4 XOR x5",
+  "y_raw_convention": "y5",
+  "evidence": [
+    "src/post190_free_output_compose.py verifies x targets plus INPUTS[4] XOR INPUTS[5]",
+    "src/post190_semantic_register.py uses the same endpoint convention",
+    "src/post190_joint_18wire_storage_sat.py matches the same eight coefficient vectors",
+    "tests/test_post190_joint_18wire_storage_sat.py exhaustively compares all endpoint vectors"
+  ],
+  "two_stage_oracle_note": "src/two_stage_oracle.py documents the earlier physical raw-bit code convention (x4,y5); it is not the protected joint-storage endpoint",
+  "protected_artifacts_modified": false
+}

@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post190_joint_storage_census_v4.py",
+    "--outdir",
+    "artifacts/post190_joint_storage_census_v4_total",
+    "--skip-rank"
+  ],
+  "seconds": 28.581746833049692,
+  "limit_seconds": 60.0
+}

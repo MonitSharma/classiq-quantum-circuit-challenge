@@ -1,0 +1,12 @@
+{
+  "status": "externally_timed_out",
+  "solver_conclusion": null,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post190_joint_storage_census_v4.py",
+    "--outdir",
+    "artifacts/post190_joint_storage_census_v4_run2"
+  ],
+  "seconds": 60.009948958060704,
+  "limit_seconds": 60.0
+}

@@ -1,0 +1,467 @@
+{
+  "status": "EXACT_CENSUS_COMPLETE",
+  "node_count": 27,
+  "stage_count": 5,
+  "capacity": 6,
+  "width_patterns": 35,
+  "rows": [
+    {
+      "pattern": [
+        3,
+        6,
+        6,
+        6,
+        6
+      ],
+      "schedules": 1627036,
+      "rank_survivors": null,
+      "total_states": 27045,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        4,
+        5,
+        6,
+        6,
+        6
+      ],
+      "schedules": 2602404,
+      "rank_survivors": null,
+      "total_states": 31788,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        4,
+        6,
+        5,
+        6,
+        6
+      ],
+      "schedules": 2802914,
+      "rank_survivors": null,
+      "total_states": 32976,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        4,
+        6,
+        6,
+        5,
+        6
+      ],
+      "schedules": 3308844,
+      "rank_survivors": null,
+      "total_states": 28714,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        4,
+        6,
+        6,
+        6,
+        5
+      ],
+      "schedules": 5221450,
+      "rank_survivors": null,
+      "total_states": 28185,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        5,
+        4,
+        6,
+        6,
+        6
+      ],
+      "schedules": 2702944,
+      "rank_survivors": null,
+      "total_states": 32969,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        5,
+        5,
+        5,
+        6,
+        6
+      ],
+      "schedules": 3583700,
+      "rank_survivors": null,
+      "total_states": 34697,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        5,
+        5,
+        6,
+        5,
+        6
+      ],
+      "schedules": 4272420,
+      "rank_survivors": null,
+      "total_states": 30435,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        5,
+        5,
+        6,
+        6,
+        5
+      ],
+      "schedules": 6845332,
+      "rank_survivors": null,
+      "total_states": 29906,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        5,
+        6,
+        4,
+        6,
+        6
+      ],
+      "schedules": 3024284,
+      "rank_survivors": null,
+      "total_states": 33209,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        5,
+        6,
+        5,
+        5,
+        6
+      ],
+      "schedules": 4711100,
+      "rank_survivors": null,
+      "total_states": 29277,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        5,
+        6,
+        5,
+        6,
+        5
+      ],
+      "schedules": 7690822,
+      "rank_survivors": null,
+      "total_states": 28748,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        5,
+        6,
+        6,
+        4,
+        6
+      ],
+      "schedules": 3755404,
+      "rank_survivors": null,
+      "total_states": 25419,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        5,
+        6,
+        6,
+        5,
+        5
+      ],
+      "schedules": 9289361,
+      "rank_survivors": null,
+      "total_states": 24903,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        5,
+        6,
+        6,
+        6,
+        4
+      ],
+      "schedules": 6415779,
+      "rank_survivors": null,
+      "total_states": 24628,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        3,
+        6,
+        6,
+        6
+      ],
+      "schedules": 1803066,
+      "rank_survivors": null,
+      "total_states": 33980,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        4,
+        5,
+        6,
+        6
+      ],
+      "schedules": 3075144,
+      "rank_survivors": null,
+      "total_states": 35816,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        4,
+        6,
+        5,
+        6
+      ],
+      "schedules": 3682334,
+      "rank_survivors": null,
+      "total_states": 31582,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        4,
+        6,
+        6,
+        5
+      ],
+      "schedules": 5969803,
+      "rank_survivors": null,
+      "total_states": 31053,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        5,
+        4,
+        6,
+        6
+      ],
+      "schedules": 3211744,
+      "rank_survivors": null,
+      "total_states": 34632,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        5,
+        5,
+        5,
+        6
+      ],
+      "schedules": 5056060,
+      "rank_survivors": null,
+      "total_states": 30793,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        5,
+        5,
+        6,
+        5
+      ],
+      "schedules": 8383138,
+      "rank_survivors": null,
+      "total_states": 30264,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        5,
+        6,
+        4,
+        6
+      ],
+      "schedules": 4042384,
+      "rank_survivors": null,
+      "total_states": 27010,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        5,
+        6,
+        5,
+        5
+      ],
+      "schedules": 10164338,
+      "rank_survivors": null,
+      "total_states": 26494,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        5,
+        6,
+        6,
+        4
+      ],
+      "schedules": 7063012,
+      "rank_survivors": null,
+      "total_states": 26219,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        6,
+        3,
+        6,
+        6
+      ],
+      "schedules": 2031266,
+      "rank_survivors": null,
+      "total_states": 31630,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        6,
+        4,
+        5,
+        6
+      ],
+      "schedules": 4251514,
+      "rank_survivors": null,
+      "total_states": 27897,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        6,
+        4,
+        6,
+        5
+      ],
+      "schedules": 7121142,
+      "rank_survivors": null,
+      "total_states": 27368,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        6,
+        5,
+        4,
+        6
+      ],
+      "schedules": 4549684,
+      "rank_survivors": null,
+      "total_states": 24434,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        6,
+        5,
+        5,
+        5
+      ],
+      "schedules": 11618783,
+      "rank_survivors": null,
+      "total_states": 23918,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        6,
+        5,
+        6,
+        4
+      ],
+      "schedules": 8207149,
+      "rank_survivors": null,
+      "total_states": 23643,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        6,
+        6,
+        3,
+        6
+      ],
+      "schedules": 2474746,
+      "rank_survivors": null,
+      "total_states": 21430,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        6,
+        6,
+        4,
+        5
+      ],
+      "schedules": 9062706,
+      "rank_survivors": null,
+      "total_states": 20914,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        6,
+        6,
+        5,
+        4
+      ],
+      "schedules": 10235839,
+      "rank_survivors": null,
+      "total_states": 20645,
+      "rank_states": null
+    },
+    {
+      "pattern": [
+        6,
+        6,
+        6,
+        6,
+        3
+      ],
+      "schedules": 3944524,
+      "rank_survivors": null,
+      "total_states": 20518,
+      "rank_states": null
+    }
+  ],
+  "rank_definition": "GF(2) rank after removing semantic constant coordinate bit 0",
+  "rank_filter": "necessary only; survivors are not storage SAT witnesses",
+  "seconds": 28.091830499935895
+}
