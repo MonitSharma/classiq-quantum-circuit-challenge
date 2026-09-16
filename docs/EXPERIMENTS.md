@@ -1,5 +1,17 @@
 # Experiment history and failure notes
 
+## September 16: backward phase-root demands and paid recovery
+
+`POST129_PHASE_ROOTED_XAG.md` records the latest requested whole-function
+campaign. The new destructive compiler searches actual wire truth tables,
+phases exposed products immediately, charges affine frames and primitive
+arrival times, and permits paid recovery/recomputation. Across 165 bounded
+trials, the compact best deposits three roots in 40 forward layers; complete
+rollback reaches four in 109. No full destructive oracle was found.
+Separate independent-cone controls are exhaustive-verified at 1525/1335/18,
+1445/1394/18, and 1440/1396/18. These are architectural controls, not contenders
+or lower bounds. No protected artifact changed. Eleven focused tests pass.
+
 ## September 16: POST129 storage-aware XAG campaign
 
 `src/post129_space_depth_xag.py` exactly audited 140 discovered XAG files and

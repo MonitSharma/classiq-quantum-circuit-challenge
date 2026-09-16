@@ -1,5 +1,16 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+## Latest direction: backward phase-rooted destructive lowering
+
+Read `POST129_PHASE_ROOTED_XAG.md` before the historical directions below.
+The exact 62-AND graph has 11 output roots, nine terminal. The new compiler
+targets their operand exposure on 18 mutable wire functions, charges all
+physical operations, deposits Z/CZ phases, and restores using a literal inverse.
+Three-root/40-forward-layer and four-root/109-forward-layer checkpoints are
+partial only. The completed affine-preserving control is 1440/1396/18 and
+loses decisively to protected185. The next open implementation issue is cheap
+multi-step recovery of overwritten controls, not another split encoder sweep.
+
 ## POST129 storage-aware XAG result
 
 The exact XAG inventory and bounded six-pebble screen are recorded in

@@ -1,0 +1,322 @@
+[
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 157,
+    "seconds": 3.3186825830489397,
+    "seed": 0,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 189,
+    "seconds": 5.002027417067438,
+    "seed": 1,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 177,
+    "seconds": 4.748862292035483,
+    "seed": 2,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 185,
+    "seconds": 4.359482832951471,
+    "seed": 3,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 185,
+    "seconds": 4.60599904099945,
+    "seed": 4,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 165,
+    "seconds": 4.369820333900861,
+    "seed": 5,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 189,
+    "seconds": 4.703187791979872,
+    "seed": 6,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 157,
+    "seconds": 3.3426252499921247,
+    "seed": 7,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 161,
+    "seconds": 4.051987959071994,
+    "seed": 8,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 133,
+    "seconds": 2.2204144169809297,
+    "seed": 9,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 181,
+    "seconds": 4.344696916989051,
+    "seed": 10,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 141,
+    "seconds": 2.967629582970403,
+    "seed": 11,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 177,
+    "seconds": 4.297329000080936,
+    "seed": 12,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 185,
+    "seconds": 4.763445499935187,
+    "seed": 13,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 182,
+    "seconds": 5.000717667047866,
+    "seed": 14,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 149,
+    "seconds": 3.1292570830555633,
+    "seed": 15,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 153,
+    "seconds": 3.574691165937111,
+    "seed": 16,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 193,
+    "seconds": 4.993208582978696,
+    "seed": 17,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 156,
+    "seconds": 5.021491499966942,
+    "seed": 18,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 193,
+    "seconds": 4.981478958041407,
+    "seed": 19,
+    "phased_roots": 3,
+    "forward_native_depth": 84,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 4,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ]
+  }
+]

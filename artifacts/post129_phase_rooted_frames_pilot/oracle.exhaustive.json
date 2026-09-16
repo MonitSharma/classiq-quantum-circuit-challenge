@@ -1,0 +1,15 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post129_phase_rooted_frames_pilot/oracle.qasm",
+  "sha256": "b163cc65f8ed8836ff00873880bf932a040acf04ce1508142b9c9231d409aa8e",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 1445,
+  "cx_count": 1394,
+  "max_error": 1.4322307330201764e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 5.0317611545619446e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 2.881377935409546,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+  "challenge_width_eligible": true
+}

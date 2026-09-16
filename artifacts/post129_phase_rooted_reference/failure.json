@@ -1,0 +1,6 @@
+{
+  "status": "bounded planner search-size exception",
+  "max_states": 150000,
+  "scope": "shared cross-root clean-board reference",
+  "fallback": "post129_phase_rooted_reference_v2 independent-cone witnesses"
+}

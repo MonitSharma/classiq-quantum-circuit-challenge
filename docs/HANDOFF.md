@@ -1,5 +1,19 @@
 # Continuation handoff
 
+## September 16: latest phase-rooted destructive campaign
+
+Read `POST129_PHASE_ROOTED_XAG.md` first. The latest user request supersedes
+the side-encoder and six-pebble follow-ups below: compile backward from phase
+roots of exact `advanced_round4` on all 18 mutable physical wires. Implemented
+`src/post129_phase_rooted_xag.py`; 165 bounded destructive trials, including
+resumed and recovery probes, produced no complete logo trajectory. The compact
+checkpoint deposits three of 11 roots in 40 forward layers; full rollback
+reaches four in 109. These are partial traces, not oracle depths. Complete
+affine-preserving controls pass exhaustive verification but cost 1440–1525
+layers. Protected **185 / 854 / 18** is unchanged. Next: dependency-aware
+multi-step recovery from the three-root checkpoint, not another control sweep.
+Eleven focused tests pass. No optimization jobs or monitoring are scheduled.
+
 ## September 16: POST129 storage-aware XAG campaign
 
 Read `POST129_SPACE_DEPTH_XAG.md`. The phase-0 inventory evaluated 140 `.xag`

@@ -1,0 +1,57 @@
+[
+  {
+    "status": "time_limit",
+    "expanded": 24,
+    "seconds": 1.0090958749642596,
+    "seed": 0,
+    "phased_roots": 1,
+    "forward_native_depth": 16,
+    "exact": false,
+    "dirty_coordinate_targets": 1,
+    "recoveries": 0
+  },
+  {
+    "status": "time_limit",
+    "expanded": 28,
+    "seconds": 1.0106973750516772,
+    "seed": 1,
+    "phased_roots": 1,
+    "forward_native_depth": 16,
+    "exact": false,
+    "dirty_coordinate_targets": 1,
+    "recoveries": 0
+  },
+  {
+    "status": "time_limit",
+    "expanded": 26,
+    "seconds": 1.0075789160327986,
+    "seed": 2,
+    "phased_roots": 1,
+    "forward_native_depth": 16,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0
+  },
+  {
+    "status": "time_limit",
+    "expanded": 25,
+    "seconds": 1.030176458065398,
+    "seed": 3,
+    "phased_roots": 1,
+    "forward_native_depth": 16,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0
+  },
+  {
+    "status": "time_limit",
+    "expanded": 24,
+    "seconds": 1.0197766249766573,
+    "seed": 4,
+    "phased_roots": 1,
+    "forward_native_depth": 16,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0
+  }
+]

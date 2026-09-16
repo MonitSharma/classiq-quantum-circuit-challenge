@@ -4,6 +4,14 @@ Current protected best is now **185 / 854 / 18**, `artifacts/185/`, as confirmed
 
 Read `docs/HANDOFF.md`, `docs/EXPERIMENTS.md`, and `docs/CURRENT_DESIGN.md` before continuing. The user's objective is rank 1 in the Classiq challenge. Do not report that objective achieved based only on a local circuit improvement.
 
+Latest user steering: read `docs/POST129_PHASE_ROOTED_XAG.md`. Prioritize
+backward phase-rooted destructive lowering of exact `advanced_round4`, with
+paid native timing and recovery of overwritten controls. Three-root/40 and
+four-root/109 checkpoints are partial forward traces, not oracle depths.
+Complete independent-cone controls verified at 1440–1525 depth are not a
+competitive route or a bound on destructive XAGs. Do not restart the completed
+side-encoder, generic Direct-E, six-pebble, or independent-cone sweeps by default.
+
 Read `docs/POST185_AND_NETWORK_ROUTE.md` and
 `docs/POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md` first. Leaderboard CX counts
 suggest possible architectures but do not identify them; shared_balance's558

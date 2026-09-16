@@ -1,0 +1,30 @@
+{
+  "source": "artifacts/multiplicative_depth/optimized/advanced_round4.xag",
+  "sha256": "43db9eaad0ce1c19bdf395797243ad2c4eff7a7cf3e0448947e3850f4ae1d89e",
+  "nodes": 62,
+  "roots": [
+    28,
+    36,
+    47,
+    51,
+    54,
+    55,
+    64,
+    66,
+    68,
+    69,
+    74
+  ],
+  "terminal": [
+    28,
+    36,
+    51,
+    55,
+    64,
+    66,
+    68,
+    69,
+    74
+  ],
+  "compute_nodes": 53
+}

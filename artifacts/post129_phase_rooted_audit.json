@@ -1,0 +1,104 @@
+{
+  "protected_best": {
+    "sha256": "ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8",
+    "depth": 185,
+    "cx": 854,
+    "width": 18,
+    "unchanged": true
+  },
+  "campaigns": [
+    {
+      "directory": "artifacts/post129_phase_rooted_campaign",
+      "trials": 100,
+      "phased_roots_histogram": {
+        "1": 100
+      },
+      "saved_trace_forward_depth": 22,
+      "saved_trace_replay_pass": true,
+      "exact_candidates": 0
+    },
+    {
+      "directory": "artifacts/post129_phase_rooted_longer",
+      "trials": 10,
+      "phased_roots_histogram": {
+        "2": 3,
+        "1": 6,
+        "3": 1
+      },
+      "saved_trace_forward_depth": 40,
+      "saved_trace_replay_pass": true,
+      "exact_candidates": 0
+    },
+    {
+      "directory": "artifacts/post129_phase_rooted_pilot",
+      "trials": 5,
+      "phased_roots_histogram": {
+        "1": 5
+      },
+      "saved_trace_forward_depth": 16,
+      "saved_trace_replay_pass": true,
+      "exact_candidates": 0
+    },
+    {
+      "directory": "artifacts/post129_phase_rooted_reset",
+      "trials": 10,
+      "phased_roots_histogram": {
+        "4": 10
+      },
+      "saved_trace_forward_depth": 123,
+      "saved_trace_replay_pass": true,
+      "exact_candidates": 0
+    },
+    {
+      "directory": "artifacts/post129_phase_rooted_resumed",
+      "trials": 20,
+      "phased_roots_histogram": {
+        "3": 20
+      },
+      "saved_trace_forward_depth": 84,
+      "saved_trace_replay_pass": true,
+      "exact_candidates": 0
+    },
+    {
+      "directory": "artifacts/post129_phase_rooted_suffix",
+      "trials": 20,
+      "phased_roots_histogram": {
+        "1": 13,
+        "2": 7
+      },
+      "saved_trace_forward_depth": 30,
+      "saved_trace_replay_pass": true,
+      "exact_candidates": 0
+    }
+  ],
+  "verified_controls": [
+    {
+      "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post129_phase_rooted_frames_campaign/oracle.qasm",
+      "sha256": "bde09f1e430843fcd1c003c0efb3875b997b3535020245b26cb13253e81eb16f",
+      "depth": 1440,
+      "cx_count": 1396,
+      "width": 18,
+      "max_error": 1.581707433502977e-14,
+      "basis_inputs_checked": 4096
+    },
+    {
+      "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post129_phase_rooted_frames_pilot/oracle.qasm",
+      "sha256": "b163cc65f8ed8836ff00873880bf932a040acf04ce1508142b9c9231d409aa8e",
+      "depth": 1445,
+      "cx_count": 1394,
+      "width": 18,
+      "max_error": 1.4322307330201764e-14,
+      "basis_inputs_checked": 4096
+    },
+    {
+      "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post129_phase_rooted_reference_v2/oracle.qasm",
+      "sha256": "250ca9d26c93f04f3338f43b96770362596238f10d0a10a572c9fe7175fbb503",
+      "depth": 1525,
+      "cx_count": 1335,
+      "width": 18,
+      "max_error": 6.847349444919816e-14,
+      "basis_inputs_checked": 4096
+    }
+  ],
+  "destructive_trials": 165
+}

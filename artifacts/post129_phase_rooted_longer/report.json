@@ -1,0 +1,112 @@
+[
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 293,
+    "seconds": 6.130120833055116,
+    "seed": 0,
+    "phased_roots": 2,
+    "forward_native_depth": 31,
+    "exact": false,
+    "dirty_coordinate_targets": 1,
+    "recoveries": 2
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 253,
+    "seconds": 5.407674666959792,
+    "seed": 1,
+    "phased_roots": 1,
+    "forward_native_depth": 27,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 1
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 257,
+    "seconds": 5.919451583060436,
+    "seed": 2,
+    "phased_roots": 1,
+    "forward_native_depth": 28,
+    "exact": false,
+    "dirty_coordinate_targets": 1,
+    "recoveries": 1
+  },
+  {
+    "status": "time_limit",
+    "expanded": 271,
+    "seconds": 10.011032124981284,
+    "seed": 3,
+    "phased_roots": 1,
+    "forward_native_depth": 16,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0
+  },
+  {
+    "status": "time_limit",
+    "expanded": 271,
+    "seconds": 10.021642167004757,
+    "seed": 4,
+    "phased_roots": 1,
+    "forward_native_depth": 16,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0
+  },
+  {
+    "status": "time_limit",
+    "expanded": 259,
+    "seconds": 10.035161167033948,
+    "seed": 5,
+    "phased_roots": 1,
+    "forward_native_depth": 17,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0
+  },
+  {
+    "status": "time_limit",
+    "expanded": 311,
+    "seconds": 10.00172408297658,
+    "seed": 6,
+    "phased_roots": 2,
+    "forward_native_depth": 30,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 2
+  },
+  {
+    "status": "time_limit",
+    "expanded": 194,
+    "seconds": 10.124690458993427,
+    "seed": 7,
+    "phased_roots": 1,
+    "forward_native_depth": 17,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0
+  },
+  {
+    "status": "time_limit",
+    "expanded": 286,
+    "seconds": 10.000923958956264,
+    "seed": 8,
+    "phased_roots": 3,
+    "forward_native_depth": 40,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 3
+  },
+  {
+    "status": "time_limit",
+    "expanded": 329,
+    "seconds": 10.021721916040406,
+    "seed": 9,
+    "phased_roots": 2,
+    "forward_native_depth": 59,
+    "exact": false,
+    "dirty_coordinate_targets": 10,
+    "recoveries": 2
+  }
+]

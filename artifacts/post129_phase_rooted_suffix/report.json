@@ -1,0 +1,322 @@
+[
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 214,
+    "seconds": 4.564253083080985,
+    "seed": 0,
+    "phased_roots": 1,
+    "forward_native_depth": 32,
+    "exact": false,
+    "dirty_coordinate_targets": 3,
+    "recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      1,
+      -1
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 149,
+    "seconds": 5.02724579104688,
+    "seed": 1,
+    "phased_roots": 2,
+    "forward_native_depth": 30,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 2,
+    "nearest_root_pressure": [
+      0,
+      1,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 214,
+    "seconds": 4.8150977089535445,
+    "seed": 2,
+    "phased_roots": 1,
+    "forward_native_depth": 38,
+    "exact": false,
+    "dirty_coordinate_targets": 6,
+    "recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      1,
+      -1
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 130,
+    "seconds": 5.0128055840032175,
+    "seed": 3,
+    "phased_roots": 1,
+    "forward_native_depth": 17,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0,
+    "nearest_root_pressure": [
+      0,
+      3,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 127,
+    "seconds": 2.0853788329986855,
+    "seed": 4,
+    "phased_roots": 1,
+    "forward_native_depth": 26,
+    "exact": false,
+    "dirty_coordinate_targets": 3,
+    "recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      2,
+      -1
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 129,
+    "seconds": 5.01908379199449,
+    "seed": 5,
+    "phased_roots": 1,
+    "forward_native_depth": 17,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0,
+    "nearest_root_pressure": [
+      0,
+      3,
+      -1
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 184,
+    "seconds": 5.007313624955714,
+    "seed": 6,
+    "phased_roots": 2,
+    "forward_native_depth": 30,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 2,
+    "nearest_root_pressure": [
+      0,
+      1,
+      -1
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 163,
+    "seconds": 5.002550999983214,
+    "seed": 7,
+    "phased_roots": 2,
+    "forward_native_depth": 45,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 3,
+    "nearest_root_pressure": [
+      0,
+      2,
+      0
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 212,
+    "seconds": 5.0127921249950305,
+    "seed": 8,
+    "phased_roots": 1,
+    "forward_native_depth": 27,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      1,
+      -1
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 166,
+    "seconds": 5.005407499964349,
+    "seed": 9,
+    "phased_roots": 2,
+    "forward_native_depth": 45,
+    "exact": false,
+    "dirty_coordinate_targets": 1,
+    "recoveries": 3,
+    "nearest_root_pressure": [
+      0,
+      2,
+      0
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 172,
+    "seconds": 5.002208458958194,
+    "seed": 10,
+    "phased_roots": 1,
+    "forward_native_depth": 16,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0,
+    "nearest_root_pressure": [
+      0,
+      3,
+      0
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 125,
+    "seconds": 5.003720749984495,
+    "seed": 11,
+    "phased_roots": 1,
+    "forward_native_depth": 17,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0,
+    "nearest_root_pressure": [
+      0,
+      3,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 124,
+    "seconds": 3.271452874992974,
+    "seed": 12,
+    "phased_roots": 1,
+    "forward_native_depth": 28,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      1,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 133,
+    "seconds": 3.235324417008087,
+    "seed": 13,
+    "phased_roots": 2,
+    "forward_native_depth": 69,
+    "exact": false,
+    "dirty_coordinate_targets": 6,
+    "recoveries": 3,
+    "nearest_root_pressure": [
+      0,
+      1,
+      -1
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 148,
+    "seconds": 5.028027541935444,
+    "seed": 14,
+    "phased_roots": 1,
+    "forward_native_depth": 17,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0,
+    "nearest_root_pressure": [
+      0,
+      3,
+      -1
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 123,
+    "seconds": 5.016326083103195,
+    "seed": 15,
+    "phased_roots": 1,
+    "forward_native_depth": 16,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0,
+    "nearest_root_pressure": [
+      0,
+      3,
+      0
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 152,
+    "seconds": 5.020914167049341,
+    "seed": 16,
+    "phased_roots": 2,
+    "forward_native_depth": 90,
+    "exact": false,
+    "dirty_coordinate_targets": 14,
+    "recoveries": 3,
+    "nearest_root_pressure": [
+      0,
+      1,
+      -1
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 141,
+    "seconds": 5.024813583004288,
+    "seed": 17,
+    "phased_roots": 2,
+    "forward_native_depth": 44,
+    "exact": false,
+    "dirty_coordinate_targets": 2,
+    "recoveries": 3,
+    "nearest_root_pressure": [
+      0,
+      2,
+      0
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 166,
+    "seconds": 3.6163762499345466,
+    "seed": 18,
+    "phased_roots": 1,
+    "forward_native_depth": 111,
+    "exact": false,
+    "dirty_coordinate_targets": 12,
+    "recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      1,
+      -1
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 128,
+    "seconds": 5.031355625018477,
+    "seed": 19,
+    "phased_roots": 1,
+    "forward_native_depth": 17,
+    "exact": false,
+    "dirty_coordinate_targets": 0,
+    "recoveries": 0,
+    "nearest_root_pressure": [
+      0,
+      3,
+      -1
+    ]
+  }
+]
