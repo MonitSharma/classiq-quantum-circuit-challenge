@@ -1,5 +1,17 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+## New research direction: history-tapped destructive trajectory
+
+The attached deep-research assessment is recorded in
+`POST185_DEEP_RESEARCH_REPORT.md`. It supports stopping broad polishing of the
+protected coordinate-loader graph and testing whether Direct-E trajectories
+contain the logo across their transient wire history. The proposed semantic
+condition is `target ∈ span({1, w[t,q]})`, with provenance-preserving phase taps,
+followed by exact restoration. This is not yet implemented or proven for the
+logo. Audit existing trajectories first; then score new searches by exact
+history residual and native critical path, allowing extra CX. Asymmetric
+uncompute and dirty borrowing remain later stages, not current results.
+
 Latest: `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md` implements the deep-research
 report's physical XAG and solver-audit direction. Protected185/854/18 remains
 best. All18 wires may participate destructively; the six-clean-node restriction

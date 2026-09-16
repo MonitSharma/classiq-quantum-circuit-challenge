@@ -1,5 +1,18 @@
 # Continuation handoff
 
+## September 16: attached deep-research assessment
+
+Read `POST185_DEEP_RESEARCH_REPORT.md`. The attached report independently
+profiles and replays the protected185 QASM, but produced no new circuit. Its
+useful conclusion is that fixed-endpoint reordering has only a restricted
+174-layer floor and that the next high-upside experiment is a history-aware
+destructive 18-wire compiler: phase taps may use transient wire truth tables,
+not only final midpoint wires. This is a hypothesis and campaign direction,
+not a global lower bound or a rank-one result. Web citations, live leaderboard
+claims and challenge-date claims in the attachment remain unvalidated here.
+First action: audit saved Direct-E trajectories for target inclusion in the
+GF(2) span of all transient wire functions before launching a new large search.
+
 ## September 16: corrected deep-research implementation
 
 Read `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md` and the rewritten

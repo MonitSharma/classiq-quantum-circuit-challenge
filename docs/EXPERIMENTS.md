@@ -1,5 +1,18 @@
 # Experiment history and failure notes
 
+## September 16: attached report assessment; no new oracle
+
+`POST185_DEEP_RESEARCH_REPORT.md` records the attached deep-research report's
+findings and separates them from instructions. Its protected-QASM profile is
+consistent with local facts: 1,617 gates, 854 CX, 763 U3, and a 174-operation
+maximum wire load. Those figures constrain only reordering of the unchanged
+graph/multiset; they are not oracle lower bounds. The report's main actionable
+hypothesis is to extend Direct-E from final-midpoint affine classification to
+GF(2) classification over every transient wire truth table, retaining
+`(time, wire)` phase-tap provenance and optimizing native depth. No candidate,
+verification report, or leaderboard result came from the report. First test:
+history-span audit of already-saved Direct-E trajectories.
+
 ## September16: deep-research destructive-XAG implementation and model repair
 
 Read `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md`. Implemented paid physical

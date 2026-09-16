@@ -1,8 +1,25 @@
 # Sub-140 search checkpoint
 
-The user's immediate target is now **below 140**, followed by further depth
-reduction and rank one. The protected full oracle remains **196 / 858 / 18**.
-No result below 196 or official rank-one result is claimed here.
+## Next architecture candidate: history-span phase synthesis
+
+The attached deep-research assessment (see `POST185_DEEP_RESEARCH_REPORT.md`)
+suggests a focused follow-up to the failed final-midpoint Direct-E searches.
+At each reversible prefix, collect all 18 exact wire functions into a GF(2)
+basis and test whether the logo target is represented by transient functions
+with recoverable phase-tap locations. This may succeed even when the final
+midpoint wires have a large nearest-affine residual. It is a proposed audit,
+not a result; the protected 185/854/18 package remains unchanged.
+
+Prioritize 7 nonlinear/18 affine and 8 nonlinear/12 affine trajectories, then
+native-lower exact hits. Score native per-wire load and critical path alongside
+semantic residual, and allow extra CX. Do not treat the symmetric RCCX ceiling
+as a hard rejection rule for promising candidates, but reject any promotion
+without exact standalone QASM verification and hash/package audit.
+
+This file is a historical sub-140 checkpoint. The active target remains
+**below 140**, followed by further depth reduction and rank one; the protected
+full oracle is now **185 / 854 / 18**. None of the historical experiments
+below produced a result below 196 or an official rank-one result.
 
 ## Boolean encoder searches
 
