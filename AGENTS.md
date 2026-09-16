@@ -5,12 +5,15 @@ Current protected best is now **185 / 854 / 18**, `artifacts/185/`, as confirmed
 Read `docs/HANDOFF.md`, `docs/EXPERIMENTS.md`, and `docs/CURRENT_DESIGN.md` before continuing. The user's objective is rank 1 in the Classiq challenge. Do not report that objective achieved based only on a local circuit improvement.
 
 Read `docs/POST185_ARCHITECTURE_FLOOR.md` before proposing another code or
-emitter change. It shows the packaged 185 is 6% above the `r + 2c <= n` layer
-bound for its own spectra, so local rewrites cannot reach rank one, and it closes
-loader-aware relabelling, raw-kernel-wire trades, and ANF loaders with built,
-verified counterexamples. The two directions it leaves open are a Boolean network
-with peak liveness at most six values above the twelve coordinates, and a
-parity-network emitter that holds its rotation rate at low spectral density.
+emitter change. Its `r + 2c <= n` result is a representation-specific floor for
+the measured parity-walk/UCR realization, not a universal two-stage bound. It
+records useful closures for loader-aware relabelling, raw-kernel-wire trades,
+and ANF loaders, but does not close the joint 18-wire x14+y13 route. That route
+has 27 exact AND nodes, 32/32 five-batch-capable witness pairs, and an active
+storage-aware/free-frame feasibility line; read
+`docs/POST190_JOINT_18WIRE_FEASIBILITY.md` before abandoning it. Liveness was
+already measured in prior MD/XAG work; the open XAG question is joint topology,
+storage, toggle count, control exposure, and affine materialization.
 
 The user's latest steering is to prioritize depth reductions over CNOT savings.
 Allow more CX when it helps depth; do not spend follow-up rounds primarily on

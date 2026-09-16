@@ -1,4 +1,4 @@
-# POST185: why 185 is the two-stage architecture's floor, not its plateau
+# POST185: measured floor of one two-stage realization
 
 Date: 2026-09-16. **Protected best is unchanged at 185 / 854 / 18.** Nothing in
 this round produced a shorter verified oracle. What it produced is a measurement
@@ -7,13 +7,20 @@ plausible-looking directions from the search space.
 
 ## 1. Decomposition of the protected 185
 
+The conclusions below are representation-specific measurements, not a proof
+that every two-stage class-code implementation has depth floor 185. The
+`r + 2c <= n` calculation and four-transition overhead apply to this
+parity-walk/UCR realization. Cross-boundary rewrites can overlap or change the
+decomposition, as shown by other preserved packages.
+
 The oracle is `load ‖ kernel ‖ unload`. The two loaders run on disjoint wires
 (y on `q[6:12] + q[12:15]`, x on `q[0:6] + q[15:18]`), so they are concurrent.
 
 | block | wires | rotations | CX | depth |
 |---|---:|---:|---:|---:|
 | loader (each side, each direction) | 9 | 174 / 175 | 198 | 78 raw, ~73 after rescheduling |
-| kernel | 8 | 90 | 157 | 71 raw, 38 after rescheduling |
+| kernel, pre-optimization representation | 8 | 90 | 157 | 71 raw |
+| saved protected kernel after rewrite/fusion | 8 | 63 | 87 | 38 |
 | whole oracle | 18 | — | 854 | 226 raw, **185** packaged |
 
 The rotation counts are exactly the spectra the architecture has to pay for:
@@ -21,7 +28,7 @@ The rotation counts are exactly the spectra the architecture has to pay for:
 of the kernel's integer-lifted monomial count. For the protected codes
 `S = (174, 175)` and `M = 90`.
 
-## 2. The scheduling bound
+## 2. The scheduling bound for this emitter model
 
 A layer of a width-`n` block can hold `r` rotations and `c` CX gates only if
 `r + 2c <= n`, and every rotation after a wire's first one needs a CX to move
@@ -38,10 +45,10 @@ gates the emitters actually use tightens it further: the loader's own gate
 multiset bounds it at `(174 + 2*198)/9 = 63` against 78 achieved (1.23x), and the
 kernel's at `(89 + 2*157)/8 = 50` against 71 raw (1.42x).
 
-**The protected oracle is not sitting on a plateau of missed local optimisations.
-It is sitting on its architecture's floor.** Rewrites, rescheduling, and CX
-tie-breakers cannot reach 137 from here; only a smaller `(S, M)` can, or a
-different architecture.
+The protected oracle is close to the measured floor of this emitter model.
+Rewrites, rescheduling, and CX tie-breakers did not reach 137 in the tested
+implementation; a smaller `(S, M)` or a different architecture is required.
+This is not a universal lower bound for all two-stage implementations.
 
 `src/post185_schedule_floor.py` anneals the label tables directly against that
 bound. Over all four admissible `xmask` values and six seeds, the best floor
@@ -147,21 +154,31 @@ rather than a code-and-kernel factorisation.
 That route is blocked here by register pressure, and the gap is large. The
 repository's own networks:
 
-| network | ANDs | multiplicative depth | level sizes | wires needed |
+| network | ANDs | multiplicative depth | level sizes | wires needed (metric) |
 |---|---:|---:|---|---:|
 | `advanced_round4.xag` | 62 | 8 | 15,11,12,10,7,4,2,1 | >= 31 |
 | `advanced_shared_rank.xag` | 65 | 8 | 15,12,13,11,9,3,1,1 | >= 30 |
-| `affine_balance_118.xag` | 81 | 6 | 20,20,15,13,10,3 | >= 35 |
+| `affine_balance_118.xag` | 81 | 6 | 20,20,15,13,10,3 | 35 (greedy schedule; not a lower bound) |
 | `affine_none.xag` | 90 | 6 | 31,20,16,12,9,2 | >= 27 |
 
-"Wires needed" is 12 coordinates plus the peak number of simultaneously live AND
-values under greedy liveness-first scheduling. Against 18 available wires, every
-network needs at least nine more. A multiplicative depth of 6 would compile to
-roughly `2 * 6 * 7 = 84` layers of relative-phase Toffolis plus linear layers —
-comfortably under 137 — so the *only* thing standing between this repository and
-that regime is a network narrow enough to schedule.
+"Wires needed" is 12 coordinates plus the peak number of simultaneously live
+AND values under the named greedy schedule. It is not a mathematical lower
+bound; the saved `quantum_feasibility.json` for `affine_balance_118.xag` reports
+an 11-value nonlinear live-width estimate under a different schedule. Likewise,
+MD=6 does not imply `2 * 6 * 7 = 84` native layers: logical level widths and
+affine materialization determine whether those nonlinear operations can share
+physical batches. The old six-live-value pebble control used 304 nonlinear
+toggles and demonstrates the gap.
 
 ## 7. Where to go next
+
+The repository has already optimized liveness as a secondary key in
+`affine_md_search.py` and has measured live width in the multiplicative-depth
+campaign. The genuinely open target is topology re-synthesis with storage,
+nonlinear toggles, control exposure, and affine materialization optimized
+together. The highest-priority concrete branch is the joint 18-wire x14+y13
+feasibility work in `POST190_JOINT_18WIRE_FEASIBILITY.md` and
+`src/post190_joint_18wire_freeframe_sat.py`.
 
 Two targets, in order of expected value.
 

@@ -1,12 +1,13 @@
 # Continuation handoff
 
-## September 16: the 185 oracle is at its architecture's scheduling floor
+## September 16: measured floor, with joint 18-wire route still open
 
 Read `docs/POST185_ARCHITECTURE_FLOOR.md`. Decomposed the protected oracle into
 `load ‖ kernel ‖ unload` and measured the spectra each block pays for: loader
 Walsh support 174/175, kernel integer-lift support 90. The `r + 2c <= n` layer
 bound caps a nine-wire loader at three rotations per layer and the eight-wire
-kernel at 8/3, giving a floor of 174.4 for these codes against the packaged 185.
+kernel at 8/3, giving a 174.4 floor for this representation of these codes
+against the packaged 185; it is not a universal two-stage lower bound.
 Annealing the labels against that bound (`src/post185_schedule_floor.py`) reaches
 148.5 at `S=(116,110)`, `M=126`, but building those codes gives 240, not 148:
 sparse spectra lower the CX-walk hit rate as fast as they lower the rotation
@@ -18,7 +19,11 @@ loaded bits for raw kernel wires multiplies the kernel spectrum by eight
 nonlinear monomials per side, far above the 78-layer rotation loader. A new
 balanced stage-assignment loader verifies exactly but only ties the fixed
 skeleton. Protected 185/854/18 is unchanged and `artifacts/185/` was not
-touched. Six focused tests pass. No submission or rank check.
+touched. The joint 18-wire x14+y13 route remains open: its exact 27-AND
+witnesses admit five capacity-optimal batches across all 32 retained pairs.
+See `docs/POST190_JOINT_18WIRE_FEASIBILITY.md`; storage-aware free-frame
+feasibility is the next priority. Six focused tests pass. No submission or rank
+check.
 
 ## September 16: Direct-E v2 and Quasar assessment
 

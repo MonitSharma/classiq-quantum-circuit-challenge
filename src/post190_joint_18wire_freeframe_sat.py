@@ -73,15 +73,15 @@ def semantic_screen(xpath=XPATH,ypath=YPATH):
     endpoint_in_span=rank(initial+nodes+endpoint)==final_rank
     # Eight literal endpoint rows are placeable in an 18-row affine frame when
     # their semantic rank is no larger than the available row rank (12+6).
-    literal_placeable=endpoint_in_span and len(set(endpoint))==8
-    return {'status':'RELAXED_ENDPOINT_PASS_STORAGE_UNMODELED' if literal_placeable else 'RELAXED_ENDPOINT_FAIL',
+    relaxed_endpoint_distinct_in_accumulated_span=endpoint_in_span and len(set(endpoint))==8
+    return {'status':'RELAXED_ENDPOINT_PASS_STORAGE_UNMODELED' if relaxed_endpoint_distinct_in_accumulated_span else 'RELAXED_ENDPOINT_FAIL',
             'x_source':str(xpath.relative_to(ROOT)),'y_source':str(ypath.relative_to(ROOT)),
             'x_and_nodes':len(xt),'y_and_nodes':len(yt),'total_and_nodes':len(nodes),
             'batches':batches,'nonlinear_batches':len(batches),'batch_capacity':6,
             'base_affine_rank':base_rank,'stage_affine_ranks':stage_ranks,
             'final_function_rank':final_rank,'endpoint_function_rank':endpoint_rank,
-            'literal_endpoint_distinct':len(set(endpoint))==8,
-            'literal_endpoint_placeable':literal_placeable,
+            'relaxed_endpoint_distinct':len(set(endpoint))==8,
+            'relaxed_endpoint_distinct_in_accumulated_span':relaxed_endpoint_distinct_in_accumulated_span,
             'endpoint_order':['x0','x1','x2','x_raw','y0','y1','y2','y_raw'],
             'model':'actual 4096-point semantic functions; endpoint/span diagnostic only',
             'warning':'This diagnostic does not model 18-row storage, row replacement, or frame invertibility across batches; it is not a SAT certificate.',

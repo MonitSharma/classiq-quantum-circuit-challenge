@@ -56,8 +56,8 @@
   ],
   "final_function_rank": 40,
   "endpoint_function_rank": 8,
-  "literal_endpoint_distinct": true,
-  "literal_endpoint_placeable": true,
+  "relaxed_endpoint_distinct": true,
+  "relaxed_endpoint_distinct_in_accumulated_span": true,
   "endpoint_order": [
     "x0",
     "x1",
