@@ -1,0 +1,62 @@
+{
+  "protected_sha256": "ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8",
+  "search_checkpoints": [
+    {
+      "checkpoint": "artifacts/direct_e_v2_greedy_control_n7_a18_s26185/best.json",
+      "sha256": "f7dbdf899b0044e1c5baaeb599482c9bc2a628a138aaed951f73fff635f84413",
+      "distance": 827,
+      "conditional_ceiling": 121
+    },
+    {
+      "checkpoint": "artifacts/direct_e_v2_n6_a26_s16185/best.json",
+      "sha256": "69bee98fe2e77f90ac0361e2103ead5c7bf3e2cdffaa2af54494f2704bd8064b",
+      "distance": 1091,
+      "conditional_ceiling": 131
+    },
+    {
+      "checkpoint": "artifacts/direct_e_v2_n7_a18_s16188/best.json",
+      "sha256": "47b27b4f31e29408202aa4bc8af4eca25442fdb4f97b05c879a28a8de4d57077",
+      "distance": 809,
+      "conditional_ceiling": 133
+    },
+    {
+      "checkpoint": "artifacts/direct_e_v2_n7_a19_s16186/best.json",
+      "sha256": "9fdefac4286c9c839ea9bf5b271f6fc674e547d21bab1c80295606b69a429514",
+      "distance": 827,
+      "conditional_ceiling": 137
+    },
+    {
+      "checkpoint": "artifacts/direct_e_v2_n8_a12_s16187/best.json",
+      "sha256": "00c1192a3ec3c6baa482785ef70a2c3c7873b268da93fff16802c5e7e18c8ea0",
+      "distance": 815,
+      "conditional_ceiling": 137
+    },
+    {
+      "checkpoint": "artifacts/direct_e_v2_seeded_n6_a26_s26186/best.json",
+      "sha256": "312cab54a33a838acde54d63b0de97a6f50f311d189cc79f87397b1cd51bb27c",
+      "distance": 685,
+      "conditional_ceiling": 63
+    },
+    {
+      "checkpoint": "artifacts/direct_e_v2_seeded_n7_a18_s26185/best.json",
+      "sha256": "9de2cb84f04241aa1fe607df2488c914cc1dcbf94d5c23c49224da47767f751a",
+      "distance": 657,
+      "conditional_ceiling": 135
+    },
+    {
+      "checkpoint": "artifacts/direct_e_v2_seeded_n8_a12_s26187/best.json",
+      "sha256": "27266e0f821fd11e3b19b299989c788118824b7d15c676b62daa637cac33bd2e",
+      "distance": 685,
+      "conditional_ceiling": 63
+    }
+  ],
+  "matching_exhaustive_reports": [
+    "artifacts/post185_quasar_v1/step3_native.exhaustive.json",
+    "artifacts/post185_quasar_v1/input_ibm_native.exhaustive.json",
+    "artifacts/post185_quasar_precise/step3_native.exhaustive.json",
+    "artifacts/post185_quasar_precise/input_ibm_native.exhaustive.json",
+    "artifacts/post185_quasar_precise_scheduled/recompiled.exhaustive.json",
+    "artifacts/post185_quasar_precise_scheduled/oracle_d187_cx853.exhaustive.json",
+    "artifacts/post185_quasar_precise_scheduled/oracle_d186_cx853.exhaustive.json"
+  ]
+}

@@ -1,5 +1,19 @@
 # Continuation handoff
 
+## September 16: Direct-E v2 and Quasar assessment
+
+Read `docs/POST185_DIRECT_E_V2.md`. Reproduced the user's ten-operation global
+affine transform from886 to264 ANF terms, with a saved inverse-checked witness.
+The existing RCCX already compiles to7 layers; the old9-layer direct-template
+number was a loose bound. Implemented free physical layers, parallel midpoint
+phase masks, exact nearest-parity fitness, paid affine seeding and SAT repairs.
+46,109 proposals under conditional135/137 budgets found no exact classifier;
+best still misses657 of4096 inputs. Quasar runs, but its verified result is
+187/853, rescheduled to186/853. Its decimal parser needed a recorded precision
+fix. Protected185/854/18 remains unchanged.15 focused/regression tests pass.
+A matched no-prefix control ends at827 errors versus657 with the affine seed.
+No jobs remain running. No new submission or rank-one result.
+
 ## September16: audit-before-testing literature search
 
 Read `docs/POST185_METHOD_SEARCH.md` before proposing another method. Audited

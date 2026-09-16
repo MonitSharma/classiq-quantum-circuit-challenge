@@ -1,5 +1,12 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+September16 Direct-E v2 follow-up: `docs/POST185_DIRECT_E_V2.md` records the
+reproduced886-to264 affine ANF witness, physical layer search with exact output
+parity fitness, and a first Quasar integration.46,109 proposals find no exact
+classifier within conditional135/137 budgets. Quasar yields verified186/853
+after rescheduling, so protected185/854/18 stays best. RCCX was already7 layers;
+the historical9 was a loose bound.15 focused/regression tests pass.
+
 Latest method audit: `docs/POST185_METHOD_SEARCH.md`. Primary-source research
 was checked against existing implementations before larger SAT phase-block and
 CZ-direction synthesis were attempted. Neither changes the185/854/18 best.

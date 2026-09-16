@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/direct_e_v2.py",
+    "--outdir",
+    "artifacts/direct_e_v2_repair_seeded",
+    "--repair",
+    "artifacts/direct_e_v2_seeded_n7_a18_s26185/best.json",
+    "--seconds",
+    "10",
+    "--free-count",
+    "2"
+  ],
+  "seconds": 10.664153833058663,
+  "limit_seconds": 50.0
+}

@@ -1,5 +1,20 @@
 # Experiment history and failure notes
 
+## September16: Direct-E v2, affine witness, and Quasar
+
+See `POST185_DIRECT_E_V2.md`. Independently reproduced a ten-operation global
+affine transform reducing ANF886 to264. Implemented the paid prefix, free first
+nonlinear layer, physical matching mutations, free midpoint phase mask, exact
+nearest-parity score, and restricted SAT repairs. Eight60-second pilots total
+46,109 proposals; closest classifier misses657 inputs, so no candidate QASM.
+A matched greedy-initialization control without the prefix ends at827 errors.
+Seven-layer RCCX is correct but already present in the old compiler. Quasar
+steps3/4 remove one CX yet produce187 layers; exact scheduling reaches186/853,
+still behind185/854. Its upstream decimal approximation was corrected in a
+separate recorded copy; corrected outputs verify at about2.4e-14 error.
+An exploration-step7 run times out externally at70 seconds. Solver timeouts
+are unresolved, not proofs of infeasibility.15 focused/regression tests pass.
+
 ## September16: HOPPS-inspired larger SAT blocks and CZ-direction synthesis
 
 Audited previous methods before implementation; see `POST185_METHOD_SEARCH.md`

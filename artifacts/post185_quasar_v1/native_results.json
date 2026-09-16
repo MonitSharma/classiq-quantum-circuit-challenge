@@ -1,0 +1,14 @@
+[
+  {
+    "source": "artifacts/post185_quasar_v1/input_ibm.qasm",
+    "native": "artifacts/post185_quasar_v1/input_ibm_native.qasm",
+    "depth": 186,
+    "cx": 854
+  },
+  {
+    "source": "artifacts/post185_quasar_v1/snapshots/step3.qasm",
+    "native": "artifacts/post185_quasar_v1/step3_native.qasm",
+    "depth": 187,
+    "cx": 853
+  }
+]

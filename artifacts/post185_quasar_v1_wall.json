@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post185_quasar_probe.py",
+    "--artifact",
+    "/tmp/classiq-quasar-20260916/quasar-artifact",
+    "--outdir",
+    "artifacts/post185_quasar_v1",
+    "--seconds",
+    "45",
+    "--step",
+    "3"
+  ],
+  "seconds": 6.924070000066422,
+  "limit_seconds": 75.0
+}

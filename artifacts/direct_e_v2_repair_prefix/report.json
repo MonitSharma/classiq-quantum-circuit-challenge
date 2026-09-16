@@ -1,0 +1,12 @@
+[
+  {
+    "status": "unknown",
+    "solve_seconds": 15.032903625047766,
+    "samples": 63,
+    "free_layers": [
+      22,
+      23
+    ],
+    "reason": "timeout"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post185_quasar_precise/input_ibm_native.qasm",
+  "sha256": "10740c22ce0696431d4a121357926d28f7bedc5ef9cb06ce689d495557713b1e",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 186,
+  "cx_count": 854,
+  "max_error": 2.3940971675366492e-14,
+  "ancilla_error": 2.3940971675366492e-14,
+  "discarded_amplitude_bound": 5.6446026683020773e-14,
+  "peak_sparse_support": 32,
+  "elapsed_seconds": 0.4839959144592285,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

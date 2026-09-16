@@ -1,0 +1,8 @@
+{
+  "source_sha256": "31bc5eca1953e96e4120fb2857a08b0779ed8b895f03d42a5db66ebca50c96a3",
+  "patched_sha256": "a4ff91da4fd7185c2dd85a2183502d90790de8192f8a73070bb34d097caf25ea",
+  "changes": [
+    "Remove Fraction.limit_denominator from numeric constants",
+    "Format decimal outputs with 17 significant digits"
+  ]
+}

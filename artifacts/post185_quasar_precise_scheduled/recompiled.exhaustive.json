@@ -1,0 +1,14 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/post185_quasar_precise_scheduled/recompiled.qasm",
+  "sha256": "5b32381298d3fad3b4ca4fdb9efa6811d33cfe51517f2f06c44314c374a8ed58",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 186,
+  "cx_count": 853,
+  "max_error": 2.3951792707764673e-14,
+  "ancilla_error": 2.3951792707764673e-14,
+  "discarded_amplitude_bound": 5.630551023379917e-14,
+  "peak_sparse_support": 32,
+  "elapsed_seconds": 0.4825468063354492,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

@@ -1,0 +1,289 @@
+[
+  {
+    "seed": "artifacts/direct_e_v2_affine_reproduced.json",
+    "initial_fit": {
+      "distance": 685,
+      "mask": 12288,
+      "constant": 0
+    },
+    "layers": [
+      {
+        "kind": "x",
+        "gates": [
+          [
+            2
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": [
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": [
+          [
+            11,
+            9
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": [
+          [
+            5,
+            0
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": [
+          [
+            3,
+            1
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": [
+          [
+            11,
+            10
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": [
+          [
+            5,
+            11
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": [
+          [
+            11,
+            4
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": [
+          [
+            5,
+            2
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": [
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": [
+          [
+            10,
+            11,
+            12
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": [
+          [
+            5,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": [
+          [
+            4,
+            13,
+            12
+          ]
+        ]
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": []
+      }
+    ]
+  },
+  {
+    "seed": "artifacts/direct_e_v2_identity_seed.json",
+    "initial_fit": {
+      "distance": 1097,
+      "mask": 0,
+      "constant": 0
+    },
+    "layers": [
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "cx",
+        "gates": []
+      },
+      {
+        "kind": "ccx",
+        "gates": []
+      }
+    ]
+  }
+]

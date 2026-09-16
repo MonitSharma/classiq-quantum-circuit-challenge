@@ -1,0 +1,18 @@
+{
+  "status": "externally_timed_out",
+  "solver_conclusion": null,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post185_quasar_probe.py",
+    "--artifact",
+    "/tmp/classiq-quasar-20260916/quasar-artifact",
+    "--outdir",
+    "artifacts/post185_quasar_v2",
+    "--seconds",
+    "40",
+    "--step",
+    "7"
+  ],
+  "seconds": 70.254755583941,
+  "limit_seconds": 70.0
+}
