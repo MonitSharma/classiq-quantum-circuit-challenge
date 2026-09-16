@@ -16,6 +16,15 @@ ROOT=Path(__file__).resolve().parents[1]
 XPATH=ROOT/'artifacts/post190_nist_variants/x_candidate_0.json'
 YPATH=ROOT/'artifacts/post190_nist_variants_wide/y_candidate_0.json'
 
+def rank(vectors):
+    piv={}
+    for v in vectors:
+        while v:
+            p=v.bit_length()-1
+            if p in piv:v^=piv[p]
+            else:piv[p]=v;break
+    return len(piv)
+
 def remap(witness, input_offset, node_offset):
     result=[]
     for gate in witness['gates']:
@@ -54,6 +63,24 @@ def capacity_schedule(deps, capacity=6):
         answer=search(set(),0)
         if answer:return answer
     raise AssertionError('no capacity schedule')
+
+def rank_capacity_profile(schedule, operand_vectors, width=18):
+    """Necessary rank-capacity DP; never labels physical schedules SAT."""
+    ranks={12}
+    rows=[]
+    for batch in schedule:
+        c=rank([v for node in batch for v in operand_vectors[node]])
+        incoming=sorted(ranks); outgoing=set()
+        k=len(batch)
+        for d in ranks:
+            if 2*k-c>width-d: continue
+            lo=max(d,c+k); hi=min(d+k,c+width-2*k)
+            outgoing.update(range(lo,hi+1))
+        rows.append({'width':k,'control_rank':c,'incoming_ranks':incoming,
+                     'outgoing_ranks':sorted(outgoing),'feasible':bool(outgoing),
+                     'spectators':width-3*k})
+        ranks=outgoing
+    return {'batches':rows,'feasible':bool(ranks),'final_ranks':sorted(ranks)}
 
 def audit(xpath=XPATH,ypath=YPATH):
     x=json.loads(xpath.read_text()); y=json.loads(ypath.read_text())
