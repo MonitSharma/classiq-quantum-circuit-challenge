@@ -153,3 +153,14 @@ PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 PYTHONPATH=src .venv/bin/python
 
 This command is an example for a changed recovery strategy; the existing
 bounded probes are completed, not pending or scheduled work.
+
+## Phase-completion audit
+
+The follow-up audit in `src/post185_phase_completion_search.py` replays the
+three saved phase-rooted checkpoints and tests the exact residual phase over
+the 4,096 reachable states against the GF(2) span of current-wire monomials.
+All three checkpoints require minimum degree **9**; none has an exact degree
+1–4 completion. The persistent report is
+`artifacts/post185_phase_completion_v1/report.json`. This supersedes root count
+as the primary progress metric for this route: the three-root 40-layer state
+is not a competitive low-degree phase-completion seed.

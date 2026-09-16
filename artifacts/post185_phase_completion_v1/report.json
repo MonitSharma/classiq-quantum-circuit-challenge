@@ -1,0 +1,228 @@
+{
+  "status": "complete",
+  "source": "artifacts/multiplicative_depth/optimized/advanced_round4.xag",
+  "checkpoints": [
+    {
+      "checkpoint": "artifacts/post129_phase_rooted_longer/best.json",
+      "phase_mask_bits": 3,
+      "forward_depth": 40,
+      "residual_weight": 1033,
+      "wire_count": 18,
+      "profile": [
+        {
+          "degree": 1,
+          "monomial_count": 18,
+          "rank": 19,
+          "residual_weight": 1033,
+          "exact": false
+        },
+        {
+          "degree": 2,
+          "monomial_count": 171,
+          "rank": 147,
+          "residual_weight": 1033,
+          "exact": false
+        },
+        {
+          "degree": 3,
+          "monomial_count": 987,
+          "rank": 614,
+          "residual_weight": 1033,
+          "exact": false
+        },
+        {
+          "degree": 4,
+          "monomial_count": 4047,
+          "rank": 1578,
+          "residual_weight": 1033,
+          "exact": false
+        },
+        {
+          "degree": 5,
+          "monomial_count": 12615,
+          "rank": 2758,
+          "residual_weight": 1073,
+          "exact": false
+        },
+        {
+          "degree": 6,
+          "monomial_count": 31179,
+          "rank": 3626,
+          "residual_weight": 1065,
+          "exact": false
+        },
+        {
+          "degree": 7,
+          "monomial_count": 63003,
+          "rank": 4001,
+          "residual_weight": 1176,
+          "exact": false
+        },
+        {
+          "degree": 8,
+          "monomial_count": 106761,
+          "rank": 4088,
+          "residual_weight": 464,
+          "exact": false
+        },
+        {
+          "degree": 9,
+          "monomial_count": 155381,
+          "rank": 4096,
+          "residual_weight": 0,
+          "exact": true
+        }
+      ],
+      "minimum_degree_found": 9,
+      "elapsed_seconds": 1.9091158750234172
+    },
+    {
+      "checkpoint": "artifacts/post129_phase_rooted_resumed/best.json",
+      "phase_mask_bits": 3,
+      "forward_depth": 84,
+      "residual_weight": 1033,
+      "wire_count": 18,
+      "profile": [
+        {
+          "degree": 1,
+          "monomial_count": 18,
+          "rank": 19,
+          "residual_weight": 1033,
+          "exact": false
+        },
+        {
+          "degree": 2,
+          "monomial_count": 171,
+          "rank": 142,
+          "residual_weight": 1033,
+          "exact": false
+        },
+        {
+          "degree": 3,
+          "monomial_count": 987,
+          "rank": 579,
+          "residual_weight": 1033,
+          "exact": false
+        },
+        {
+          "degree": 4,
+          "monomial_count": 4047,
+          "rank": 1488,
+          "residual_weight": 1033,
+          "exact": false
+        },
+        {
+          "degree": 5,
+          "monomial_count": 12615,
+          "rank": 2649,
+          "residual_weight": 1033,
+          "exact": false
+        },
+        {
+          "degree": 6,
+          "monomial_count": 31179,
+          "rank": 3562,
+          "residual_weight": 1033,
+          "exact": false
+        },
+        {
+          "degree": 7,
+          "monomial_count": 63003,
+          "rank": 3985,
+          "residual_weight": 1033,
+          "exact": false
+        },
+        {
+          "degree": 8,
+          "monomial_count": 106761,
+          "rank": 4087,
+          "residual_weight": 551,
+          "exact": false
+        },
+        {
+          "degree": 9,
+          "monomial_count": 155381,
+          "rank": 4096,
+          "residual_weight": 0,
+          "exact": true
+        }
+      ],
+      "minimum_degree_found": 9,
+      "elapsed_seconds": 0.9993964160094038
+    },
+    {
+      "checkpoint": "artifacts/post129_phase_rooted_reset/best.json",
+      "phase_mask_bits": 4,
+      "forward_depth": 123,
+      "residual_weight": 897,
+      "wire_count": 18,
+      "profile": [
+        {
+          "degree": 1,
+          "monomial_count": 18,
+          "rank": 19,
+          "residual_weight": 897,
+          "exact": false
+        },
+        {
+          "degree": 2,
+          "monomial_count": 171,
+          "rank": 155,
+          "residual_weight": 897,
+          "exact": false
+        },
+        {
+          "degree": 3,
+          "monomial_count": 987,
+          "rank": 676,
+          "residual_weight": 897,
+          "exact": false
+        },
+        {
+          "degree": 4,
+          "monomial_count": 4047,
+          "rank": 1749,
+          "residual_weight": 897,
+          "exact": false
+        },
+        {
+          "degree": 5,
+          "monomial_count": 12615,
+          "rank": 2971,
+          "residual_weight": 937,
+          "exact": false
+        },
+        {
+          "degree": 6,
+          "monomial_count": 31179,
+          "rank": 3755,
+          "residual_weight": 905,
+          "exact": false
+        },
+        {
+          "degree": 7,
+          "monomial_count": 63003,
+          "rank": 4038,
+          "residual_weight": 901,
+          "exact": false
+        },
+        {
+          "degree": 8,
+          "monomial_count": 106761,
+          "rank": 4092,
+          "residual_weight": 280,
+          "exact": false
+        },
+        {
+          "degree": 9,
+          "monomial_count": 155381,
+          "rank": 4096,
+          "residual_weight": 0,
+          "exact": true
+        }
+      ],
+      "minimum_degree_found": 9,
+      "elapsed_seconds": 1.4999530419008806
+    }
+  ]
+}

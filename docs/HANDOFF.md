@@ -49,6 +49,12 @@ The affine-frame SAT refinement in `src/post137_frame_storage_sat.py` uses
 explicit invertible 9x9 matrices and translations. Its first bounded screen
 timed out for x; y was sample-SAT but failed replay storage (peak 9), so no
 model was promoted.
+
+New steering prioritizes residual phase completion. The audit
+`src/post185_phase_completion_search.py` checks the saved rooted checkpoints;
+all three need degree-9 current-wire phase completion, with no exact degree-1
+through degree-4 representation. Report:
+`artifacts/post185_phase_completion_v1/report.json`.
 The six-slot condition is now enforced inside the affine-frame SAT model after
 every frame and batch. The first stricter screen timed out for both x and y;
 no storage-invalid model was promoted, and the result remains UNKNOWN.

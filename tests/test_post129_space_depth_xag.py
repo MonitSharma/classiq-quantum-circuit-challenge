@@ -72,6 +72,13 @@ class Post129Tests(unittest.TestCase):
         rows = tuple(VARS + [0, 0, 0])
         self.assertGreater(len(failing_points(rows, rows, wanted_tables())), 0)
 
+    def test_phase_completion_profile_finds_no_low_degree_completion_for_identity(self):
+        from post185_phase_completion_search import phase_profile
+        from post137_joint_encoder_cosynth import VARS
+        rows = VARS + [0, 0, 0]
+        profile = phase_profile(rows, VARS[0] & VARS[1], max_degree=1)
+        self.assertFalse(any(row['exact'] for row in profile))
+
 
 if __name__ == "__main__":
     unittest.main()
