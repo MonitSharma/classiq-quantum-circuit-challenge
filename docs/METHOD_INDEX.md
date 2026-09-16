@@ -1,5 +1,12 @@
 # Complete method and research index
 
+`POST185_AND_NETWORK_ROUTE.md` reads the leaderboard as an AND-network cost model,
+measures pebble budgets (width tracks multiplicative depth: 11 ancillas at MD 6,
+14-20 at MD 8), and closes scratch-free and cascade code loaders. It also
+identifies `shared_balance.xag` as matching rank one to within half a percent,
+and shows the blocker is the six-live-value width cap. It closes minimum
+multiplicative complexity as an objective with built, verified encoders.
+
 `POST185_ARCHITECTURE_FLOOR.md` is the September 16 floor analysis: the packaged
 185 sits 6% above the layer-capacity bound for its codes, the best bound over all
 codes is 148.5 but does not build, and three directions (loader-aware relabelling,

@@ -4,7 +4,18 @@ Current protected best is now **185 / 854 / 18**, `artifacts/185/`, as confirmed
 
 Read `docs/HANDOFF.md`, `docs/EXPERIMENTS.md`, and `docs/CURRENT_DESIGN.md` before continuing. The user's objective is rank 1 in the Classiq challenge. Do not report that objective achieved based only on a local circuit improvement.
 
-Read `docs/POST185_ARCHITECTURE_FLOOR.md` before proposing another code or
+Read `docs/POST185_AND_NETWORK_ROUTE.md` first: the leaderboard's CX counts are
+six per AND gate, so every top entry is a Boolean AND network, not a rotation
+lookup, and `shared_balance.xag` in this repository already matches rank one's
+cost profile. The only blocker is width -- at most six AND values may be live,
+and the exact networks need fourteen to sixteen. Do not cite the 5,131-layer
+result against this route; it is a compiler artifact. Do not pursue minimum
+multiplicative complexity; its encoders are built and measured, and they lose.
+Do not re-attempt scratch-free or cascade code loaders: minimum code degree is 5,
+so neither exists. The measured synthesis target is an exact XAG at AND depth 4-5
+with 60-120 gates -- width follows multiplicative depth, 11 ancillas at MD 6.
+
+Also read `docs/POST185_ARCHITECTURE_FLOOR.md` before proposing another code or
 emitter change. Its `r + 2c <= n` result is a representation-specific floor for
 the measured parity-walk/UCR realization, not a universal two-stage bound. It
 records useful closures for loader-aware relabelling, raw-kernel-wire trades,
