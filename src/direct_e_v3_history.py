@@ -9,7 +9,7 @@ import random
 import time
 from pathlib import Path
 
-from direct_e_v2 import layout, mutate, structured_seed
+from direct_e_v2 import layout, mutate, semantic, structured_seed
 from history_list_decoder import decode
 from phase_features import collect_features, feature_taps
 from phase_history_search import ALL_ONES, TARGET, compile_u3_cx, build_phase_history_circuit
@@ -36,10 +36,40 @@ def score(layers: list[dict], pair_limit: int) -> tuple[tuple, dict]:
                  "decoder_distance": decoded, "exact": solution is not None}
 
 
+def guided_mutate(layers: list[dict], rng: random.Random, guidance: list[int]) -> list[dict]:
+    proposed = mutate(layers, rng)
+    if not guidance:
+        return proposed
+    wires = semantic(proposed)
+    ranked = []
+    for a in range(18):
+        for b in range(a + 1, 18):
+            product = wires[a] & wires[b]
+            ranked.append((min((product ^ node).bit_count()
+                               for node in guidance), a, b))
+    _, a, b = min(ranked)
+    candidates = [i for i, layer in enumerate(proposed) if layer["kind"] == "ccx"]
+    if not candidates:
+        return proposed
+    layer = proposed[rng.choice(candidates)]
+    used = {wire for gate in layer["gates"] for wire in gate}
+    if a in used or b in used:
+        return proposed
+    free = [wire for wire in range(18) if wire not in used and wire not in (a, b)]
+    if free:
+        layer["gates"].append([a, b, rng.choice(free)])
+    return proposed
+
+
 def run(out: Path, nonlin: int, affine: int, seconds: float, seed: int,
-        pair_limit: int, preconditioner: Path | None = None) -> dict:
+        pair_limit: int, preconditioner: Path | None = None,
+        guidance_path: Path | None = None) -> dict:
     out.mkdir(parents=True, exist_ok=False)
     rng = random.Random(seed)
+    guidance = []
+    if guidance_path:
+        guidance = [int(node["truth_table"])
+                    for node in json.loads(guidance_path.read_text())["nodes"]]
     layers = (structured_seed(nonlin, affine,
               json.loads(preconditioner.read_text())["substitution_ops"])
               if preconditioner else layout(nonlin, affine))
@@ -49,7 +79,7 @@ def run(out: Path, nonlin: int, affine: int, seconds: float, seed: int,
     started = time.monotonic()
     iterations = 0
     while time.monotonic() - started < seconds:
-        proposed = mutate(layers, rng)
+        proposed = guided_mutate(layers, rng, guidance) if guidance else mutate(layers, rng)
         proposed_key, proposed_info = score(proposed, pair_limit)
         temperature = 1 + 8 * (1 - (iterations % 500) / 500)
         delta = (proposed_key[1] - current_key[1])
@@ -57,10 +87,18 @@ def run(out: Path, nonlin: int, affine: int, seconds: float, seed: int,
             layers, current_key, current = proposed, proposed_key, proposed_info
         if proposed_key < best_key:
             best_key, best, best_layers = proposed_key, proposed_info, proposed
+            (out / "best.json").write_text(json.dumps({
+                "iteration": iterations, "best_score": best_key,
+                "decoder_distance": best["decoder_distance"],
+                "historical_rank": best["historical_rank"],
+                "feature_count": best["feature_count"],
+                "layers": best_layers,
+            }, indent=2) + "\n")
         iterations += 1
     result = {"status": "complete", "nonlin": nonlin, "affine": affine,
               "seed": seed, "seconds": time.monotonic() - started,
               "iterations": iterations, "pair_limit": pair_limit,
+              "guidance": str(guidance_path) if guidance_path else None,
               "best_score": best_key, "historical_rank": best["historical_rank"],
               "feature_count": best["feature_count"], "exact": best["exact"]}
     if best["exact"]:
@@ -77,7 +115,11 @@ def run(out: Path, nonlin: int, affine: int, seconds: float, seed: int,
         qasm_path = out / f"direct_v3_d{circuit.depth()}_cx{circuit.count_ops().get('cx', 0)}.qasm"
         from qiskit import qasm2
         qasm_path.write_text(qasm2.dumps(circuit))
+        from exhaustive_verify import exhaustive
+        exhaustive(qasm_path)
+        verification = json.loads(qasm_path.with_suffix(".exhaustive.json").read_text())
         result["qasm"] = str(qasm_path)
+        result["verification"] = verification
     (out / "report.json").write_text(json.dumps(result, indent=2) + "\n")
     return result
 
@@ -91,9 +133,11 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=26185)
     parser.add_argument("--pair-limit", type=int, default=8)
     parser.add_argument("--preconditioner", type=Path)
+    parser.add_argument("--guidance", type=Path)
     args = parser.parse_args()
     print(json.dumps(run(args.outdir, args.nonlin, args.affine, args.seconds,
-                         args.seed, args.pair_limit, args.preconditioner), indent=2))
+                         args.seed, args.pair_limit, args.preconditioner,
+                         args.guidance), indent=2))
 
 
 if __name__ == "__main__":

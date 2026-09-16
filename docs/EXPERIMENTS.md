@@ -25,6 +25,18 @@ smoke run evaluated 93 states, reached historical rank50 and decoder distance
 933, and found no exact phase representation. It validates the integration
 only; no QASM candidate or depth improvement was produced.
 
+## September 16: transformed-coordinate XAG guidance prototype
+
+`src/build_transformed_xag_guidance.py` applies the verified ten-operation
+affine map to the target, builds an exact balanced ANF XAG for the transformed
+truth table, and maps 1,750 nonlinear node truth tables back to original-input
+coordinates. The network has multiplicative depth4 but estimated live width
+270, so it is a proposal dictionary rather than a lowering candidate. The
+first guided v3 3-second 7/18 smoke run evaluated 33 states and reached
+decoder distance1097, worse than the unguided v3 smoke's933; no exact hit or
+QASM candidate resulted. The control-pair ranking needs improvement before a
+serious multi-seed ablation.
+
 ## September16: deep-research destructive-XAG implementation and model repair
 
 Read `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md`. Implemented paid physical

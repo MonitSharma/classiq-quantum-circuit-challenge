@@ -113,6 +113,10 @@ class PhaseHistoryTests(unittest.TestCase):
         result = decode(0b0110, [0b0011, 0b0101], width=4)
         self.assertEqual(result.distance, 0)
 
+    def test_history_list_decoder_is_global_phase_aware(self):
+        result = decode(TARGET, [TARGET ^ ALL_ONES], width=4)
+        self.assertEqual(result.distance, 0)
+
     def test_cz_history_tap_round_trip(self):
         circuit = build_phase_history_circuit(
             (), [{"kind": "cz", "step": 0, "wire": 0, "other_wire": 1}], 2

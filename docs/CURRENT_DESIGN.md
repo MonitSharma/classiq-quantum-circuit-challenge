@@ -21,6 +21,12 @@ distance933 and no exact hit. Treat this as plumbing validation only; serious
 multi-seed search and transformed-coordinate XAG proposal guidance remain
 pending.
 
+The first transformed-XAG dictionary is available at
+`artifacts/direct_e_transformed_xag_guidance.json`. Its 1,750 nodes are useful
+as exact semantic guidance but are too numerous and physically wide to use as
+a direct lowering plan. The initial guided control-pair smoke test regressed
+to decoder distance1097, so this proposal distribution is not yet validated.
+
 Latest: `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md` implements the deep-research
 report's physical XAG and solver-audit direction. Protected185/854/18 remains
 best. All18 wires may participate destructively; the six-clean-node restriction

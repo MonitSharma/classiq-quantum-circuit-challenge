@@ -18,16 +18,16 @@ class Feature:
 
 
 def collect_features(gates: Sequence[tuple], pair_limit: int = 8,
-                     target: int = TARGET) -> tuple[HistoricalBasis, dict[int, Feature], list[tuple[int, ...]]]:
+                     target: int = TARGET) -> tuple[HistoricalBasis, dict[int, list[Feature]], list[tuple[int, ...]]]:
     """Collect all historical Z features and a selective CZ dictionary."""
     _, _, snapshots = replay_history(gates)
     basis = HistoricalBasis()
-    metadata: dict[int, Feature] = {}
+    metadata: dict[int, list[Feature]] = {}
     hints = rank_product_hints() + rank_factor_hints()
     for step, wires in enumerate(snapshots):
         for wire, value in enumerate(wires):
             signal_id = basis.add(value, step, wire, "z")
-            metadata.setdefault(signal_id, Feature("z", step, wire, None, value))
+            metadata.setdefault(signal_id, []).append(Feature("z", step, wire, None, value))
         candidates = []
         for a in range(len(wires)):
             for b in range(a + 1, len(wires)):
@@ -40,18 +40,19 @@ def collect_features(gates: Sequence[tuple], pair_limit: int = 8,
                 candidates.append((-exact_hint, hint_distance, target_distance, a, b, value))
         for _, _, _, a, b, value in sorted(candidates)[:pair_limit]:
             signal_id = basis.add(value, step, a, f"cz:{a}:{b}")
-            metadata.setdefault(signal_id, Feature("cz", step, a, b, value))
+            metadata.setdefault(signal_id, []).append(Feature("cz", step, a, b, value))
     return basis, metadata, snapshots
 
 
-def feature_taps(basis: HistoricalBasis, metadata: dict[int, Feature], target: int = TARGET) -> list[dict] | None:
+def feature_taps(basis: HistoricalBasis, metadata: dict[int, list[Feature]], target: int = TARGET) -> list[dict] | None:
     solution = basis.solve(target)
     if solution is None:
         return None
     mask, _ = solution
     taps = []
-    for signal_id, feature in metadata.items():
+    for signal_id, occurrences in metadata.items():
         if mask & (1 << signal_id):
+            feature = min(occurrences, key=lambda item: (item.kind != "z", item.step, item.wire, item.other_wire or -1))
             taps.append({"kind": feature.kind, "step": feature.step,
                          "wire": feature.wire, "other_wire": feature.other_wire,
                          "signal_id": signal_id})

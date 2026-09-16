@@ -25,8 +25,10 @@ def decode(target: int, signals: Sequence[int], width: int = 64,
     for signal in signals:
         expanded = beam | {residual ^ signal for residual in beam}
         beam = set(sorted(expanded, key=int.bit_count)[:width])
-    residual = min(beam, key=int.bit_count)
-    return DecodeResult(residual, residual.bit_count(), width, order_name,
+    residual = min(beam, key=lambda value: min(value.bit_count(),
+                                               4096 - value.bit_count()))
+    distance = min(residual.bit_count(), 4096 - residual.bit_count())
+    return DecodeResult(residual, distance, width, order_name,
                         len(signals))
 
 
