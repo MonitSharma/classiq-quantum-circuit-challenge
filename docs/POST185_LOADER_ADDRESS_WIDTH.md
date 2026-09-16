@@ -119,3 +119,43 @@ is to break the x/y symmetry in time rather than in wires:
   question, and it is the first thing to measure.
 
 Nothing in this note was submitted, and `artifacts/185` is untouched.
+
+## 6. Addendum: nonlinear frames cannot shrink the address beyond one variable
+
+Measured loader depth for narrower addresses: 3 variables → 28, 2 → 8.
+A 3-variable label after a two-batch Toffoli frame would give about
+`2*(14+28)+29 = 113`, so this was checked before building.
+
+It is impossible, even for nonlinear (Toffoli) data-wire bijections. If the
+3-bit label ignores a `d`-dimensional set of directions and the code is
+`(parity, label)`, every class restricted to one parity is a union of fibres
+of size `2^(d-1)`. For `d >= 2` every class must therefore split into two even
+parts. x class `[2,26]` has 25 members and y classes have odd sizes too, so no
+bijection works. Bijections preserve class sizes. `d = 1` is allowed (63-layer
+loader) but costs at least one RCCX batch (~7 layers) on both sides: roughly
+`2*(7+63)+29 = 169`, far from 127.
+
+## 7. Follow-up round (September 16): all negative, 185 unchanged
+
+New code: `src/post185_qcorr_oracle.py` (generic label->oracle pipeline, exhaustively
+verified control at 242), `src/post185_qcorr_search.py`, `src/post185_k10_anneal.py`,
+`src/post185_joint_label_anneal.py`, `src/post185_label_build.py`.
+
+- **Toffoli-corrected narrow lookup** (`label = U(coset) XOR q`, q a product of two
+  affine forms, up to three RCCX): exact GF(2) search finds **no** frame for
+  lookup addresses of 4 or 2 variables on either axis. A 5-variable address also
+  has no solution with node-constant labels.
+- **10-wire kernel with annealed labels**: best 122 ANF terms, degrees mostly 5–7,
+  against 25 for the 8-wire kernel. Dead.
+- **Integer-lifted loader tables** (ANF lift): Walsh support not reduced; loader 78.
+- **Joint label anneal** (encoder depth via `post224_relative_lookup.relative` +
+  kernel cost): relative encoders stay at **76–77** for every labeling. Kernel
+  cost drops 67 -> 64 (21 terms). In the same untuned pipeline the full oracle
+  goes 216 -> **214** (both exhaustively verified). The recorded 218 kernel recipe
+  (43-layer kernel) is much stronger than a plain ANF lift (61–64), so any label
+  change must be pushed through cube additions + beam + bridge rewrites; the
+  expected gain is a few layers, not 58.
+- **Beam phase-polynomial scheduler on the loader** (`post218_beam_phase.psynth`
+  on the 174 loader gadgets): depth **129**, far worse than the structured 77.
+- **Classiq synthesis of the level identity**: comparators need 20 qubits;
+  lookup-phase form raised an internal Classiq error. Not pursued.

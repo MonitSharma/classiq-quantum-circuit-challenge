@@ -1,0 +1,13 @@
+{
+  "source": "artifacts/multiplicative_depth/optimized/advanced_round4.xag",
+  "resume": "artifacts/post185_selective_recovery_wide/roots_4.json",
+  "resume_sha256": "8ae73cf360c2ceeb5a397bf102ee89e11901e9c4ed7f15c943c65b4ad71eb71d",
+  "trials": 6,
+  "seconds": 10.0,
+  "beam": 8,
+  "cap": 125,
+  "historical": false,
+  "orient": true,
+  "target_forms": true,
+  "compiler_sha256": "349adfaffc2135e00f8e50ad0124b4f1d2a3039c13ce498f4f34f22e06eae19d"
+}

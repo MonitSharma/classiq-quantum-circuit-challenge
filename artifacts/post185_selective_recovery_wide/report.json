@@ -1,0 +1,117 @@
+[
+  {
+    "status": "time_limit",
+    "expanded": 275,
+    "seconds": 15.049114375025965,
+    "seed": 0,
+    "phased_roots": 4,
+    "forward_native_depth": 107,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      3,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 65
+    }
+  },
+  {
+    "status": "time_limit",
+    "expanded": 228,
+    "seconds": 15.020362542010844,
+    "seed": 1,
+    "phased_roots": 4,
+    "forward_native_depth": 105,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      3,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 66
+    }
+  },
+  {
+    "status": "time_limit",
+    "expanded": 274,
+    "seconds": 15.006779459072277,
+    "seed": 2,
+    "phased_roots": 4,
+    "forward_native_depth": 107,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      3,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75
+    }
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 303,
+    "seconds": 14.39835833304096,
+    "seed": 3,
+    "phased_roots": 5,
+    "forward_native_depth": 145,
+    "exact": false,
+    "selective_recoveries": 3,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 66,
+      "5": 145
+    }
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 268,
+    "seconds": 15.034678915981203,
+    "seed": 4,
+    "phased_roots": 4,
+    "forward_native_depth": 157,
+    "exact": false,
+    "selective_recoveries": 2,
+    "nearest_root_pressure": [
+      0,
+      1,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 65
+    }
+  },
+  {
+    "status": "time_limit",
+    "expanded": 288,
+    "seconds": 15.01829150004778,
+    "seed": 5,
+    "phased_roots": 4,
+    "forward_native_depth": 107,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      3,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75
+    }
+  }
+]

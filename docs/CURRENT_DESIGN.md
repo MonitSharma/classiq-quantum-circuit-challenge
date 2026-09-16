@@ -1,5 +1,15 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+## Latest implementation: selective recovery and prepared destinations
+
+`POST185_SELECTIVE_RECOVERY.md` supersedes recovery-as-an-unimplemented-next-step.
+The compiler can recover selected controls, erase stored ANDs in changed
+frames, and form a useful affine destination before an RCCX. Four phase roots
+now fit in 65 forward layers, but only as a partial operator; five roots cost
+233 layers including restoration. Thirty-six trials found no complete logo.
+Protected185/854/18 remains unchanged. Further search needs a cost model for
+remaining phase computation and restoration, not only more deposited roots.
+
 ## Latest direction: backward phase-rooted destructive lowering
 
 Read `POST129_PHASE_ROOTED_XAG.md` before the historical directions below.

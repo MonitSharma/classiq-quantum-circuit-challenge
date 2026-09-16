@@ -1,0 +1,62 @@
+[
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 76,
+    "seconds": 2.5219828330446035,
+    "seed": 0,
+    "phased_roots": 4,
+    "forward_native_depth": 105,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      1,
+      3,
+      -1
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 85,
+    "seconds": 2.8688462920254096,
+    "seed": 1,
+    "phased_roots": 4,
+    "forward_native_depth": 88,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      1,
+      5,
+      0
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 85,
+    "seconds": 2.898610084084794,
+    "seed": 2,
+    "phased_roots": 4,
+    "forward_native_depth": 88,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      1,
+      5,
+      0
+    ]
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 96,
+    "seconds": 3.0391314160078764,
+    "seed": 3,
+    "phased_roots": 4,
+    "forward_native_depth": 88,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      1,
+      5,
+      0
+    ]
+  }
+]

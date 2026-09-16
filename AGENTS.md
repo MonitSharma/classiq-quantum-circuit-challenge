@@ -12,6 +12,13 @@ Complete independent-cone controls verified at 1440–1525 depth are not a
 competitive route or a bound on destructive XAGs. Do not restart the completed
 side-encoder, generic Direct-E, six-pebble, or independent-cone sweeps by default.
 
+Selective recovery is now implemented: read `docs/POST185_SELECTIVE_RECOVERY.md`.
+Its four-root/65 checkpoint is partial (112 native layers with restoration),
+and five roots already cost 233. No new complete oracle exists. Do not repeat
+the 36 completed probes or describe recovery as unimplemented. Current-wire
+residual degree 8 is diagnostic, not a universal bound. The cap-after-phase
+fix and the six historical 141-versus-140 overshoots are documented.
+
 Read `docs/POST185_AND_NETWORK_ROUTE.md` and
 `docs/POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md` first. Leaderboard CX counts
 suggest possible architectures but do not identify them; shared_balance's558

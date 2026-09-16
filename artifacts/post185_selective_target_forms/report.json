@@ -1,0 +1,116 @@
+[
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 227,
+    "seconds": 11.872852207976393,
+    "seed": 0,
+    "phased_roots": 5,
+    "forward_native_depth": 141,
+    "exact": false,
+    "selective_recoveries": 2,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75
+    }
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 226,
+    "seconds": 11.969321625074372,
+    "seed": 1,
+    "phased_roots": 5,
+    "forward_native_depth": 141,
+    "exact": false,
+    "selective_recoveries": 2,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75
+    }
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 227,
+    "seconds": 11.790471040992998,
+    "seed": 2,
+    "phased_roots": 5,
+    "forward_native_depth": 141,
+    "exact": false,
+    "selective_recoveries": 2,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75
+    }
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 186,
+    "seconds": 9.902153374976479,
+    "seed": 3,
+    "phased_roots": 5,
+    "forward_native_depth": 141,
+    "exact": false,
+    "selective_recoveries": 2,
+    "nearest_root_pressure": [
+      2,
+      2,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75
+    }
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 186,
+    "seconds": 9.599632582976483,
+    "seed": 4,
+    "phased_roots": 5,
+    "forward_native_depth": 141,
+    "exact": false,
+    "selective_recoveries": 2,
+    "nearest_root_pressure": [
+      2,
+      2,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75
+    }
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 186,
+    "seconds": 9.810615374939516,
+    "seed": 5,
+    "phased_roots": 5,
+    "forward_native_depth": 141,
+    "exact": false,
+    "selective_recoveries": 2,
+    "nearest_root_pressure": [
+      2,
+      2,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75
+    }
+  }
+]

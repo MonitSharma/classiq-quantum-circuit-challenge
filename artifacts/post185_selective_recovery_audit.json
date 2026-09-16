@@ -1,0 +1,300 @@
+{
+  "protected_sha256": "ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8",
+  "protected_unchanged": true,
+  "campaigns": [
+    {
+      "directory": "artifacts/post185_selective_algebraic_pilot",
+      "trials": 4,
+      "seconds": 14.067,
+      "phased_roots_histogram": {
+        "4": 4
+      },
+      "exact_candidates": 0,
+      "cap": 110,
+      "over_cap_trials": 0
+    },
+    {
+      "directory": "artifacts/post185_selective_oriented",
+      "trials": 4,
+      "seconds": 46.348,
+      "phased_roots_histogram": {
+        "5": 4
+      },
+      "exact_candidates": 0,
+      "cap": 150,
+      "over_cap_trials": 0
+    },
+    {
+      "directory": "artifacts/post185_selective_recovery_historical",
+      "trials": 3,
+      "seconds": 41.226,
+      "phased_roots_histogram": {
+        "4": 3
+      },
+      "exact_candidates": 0,
+      "cap": 180,
+      "over_cap_trials": 0
+    },
+    {
+      "directory": "artifacts/post185_selective_recovery_pilot",
+      "trials": 3,
+      "seconds": 30.231,
+      "phased_roots_histogram": {
+        "3": 3
+      },
+      "exact_candidates": 0,
+      "cap": 110,
+      "over_cap_trials": 0
+    },
+    {
+      "directory": "artifacts/post185_selective_recovery_wide",
+      "trials": 6,
+      "seconds": 89.528,
+      "phased_roots_histogram": {
+        "4": 5,
+        "5": 1
+      },
+      "exact_candidates": 0,
+      "cap": 160,
+      "over_cap_trials": 0
+    },
+    {
+      "directory": "artifacts/post185_selective_release_pilot",
+      "trials": 4,
+      "seconds": 11.329,
+      "phased_roots_histogram": {
+        "4": 4
+      },
+      "exact_candidates": 0,
+      "cap": 110,
+      "over_cap_trials": 0
+    },
+    {
+      "directory": "artifacts/post185_selective_resume_four",
+      "trials": 6,
+      "seconds": 37.641,
+      "phased_roots_histogram": {
+        "4": 6
+      },
+      "exact_candidates": 0,
+      "cap": 125,
+      "over_cap_trials": 0
+    },
+    {
+      "directory": "artifacts/post185_selective_target_forms",
+      "trials": 6,
+      "seconds": 64.945,
+      "phased_roots_histogram": {
+        "5": 6
+      },
+      "exact_candidates": 0,
+      "cap": 140,
+      "over_cap_trials": 6
+    }
+  ],
+  "traces": [
+    {
+      "path": "artifacts/post185_selective_algebraic_pilot/best.json",
+      "sha256": "7bfaeaeee4604f5b5c147db773b4626c2183e1ccfdfdb272ec728f2814b752ea",
+      "phased_roots": 4,
+      "forward_depth": 107,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_algebraic_pilot/roots_3.json",
+      "sha256": "061818b0de8a781e432c79b039e8fd4e2fc838ee3fea800f66c716d750673de5",
+      "phased_roots": 3,
+      "forward_depth": 40,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_algebraic_pilot/roots_4.json",
+      "sha256": "6adb935d2540b54659d0df8522b3b553c940ed1c6eb7258888447bd4be2cdba2",
+      "phased_roots": 4,
+      "forward_depth": 75,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_oriented/best.json",
+      "sha256": "2005de2b2129b9e9a19fc89c78c4dc16873d2348242dae4915e1416b2e1f273a",
+      "phased_roots": 5,
+      "forward_depth": 141,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_oriented/roots_3.json",
+      "sha256": "061818b0de8a781e432c79b039e8fd4e2fc838ee3fea800f66c716d750673de5",
+      "phased_roots": 3,
+      "forward_depth": 40,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_oriented/roots_4.json",
+      "sha256": "05e130425ff7bee6b32ae15faf71210a707a0d28a346d70d1f993cf6f6d83aaf",
+      "phased_roots": 4,
+      "forward_depth": 75,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_oriented/roots_5.json",
+      "sha256": "cfad128353268ee31193eaf7a990fe2768e2e16c64c7636b6d5a6f080ce13078",
+      "phased_roots": 5,
+      "forward_depth": 141,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_recovery_historical/best.json",
+      "sha256": "f17dd22476ac0d5e33da29311ae57e87e3a4ab33cb10643dc8f0e8dad7ae6400",
+      "phased_roots": 4,
+      "forward_depth": 133,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_recovery_historical/roots_3.json",
+      "sha256": "061818b0de8a781e432c79b039e8fd4e2fc838ee3fea800f66c716d750673de5",
+      "phased_roots": 3,
+      "forward_depth": 40,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_recovery_historical/roots_4.json",
+      "sha256": "6cf69af6f3f5f1ab208d18a1a0dfb5e96b3aa236f08f255faa1956b649c66053",
+      "phased_roots": 4,
+      "forward_depth": 75,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_recovery_pilot/best.json",
+      "sha256": "2babd94e2e5ce024395993bd9f7013ca9138f41d7295f55e538f71a6246d5a55",
+      "phased_roots": 3,
+      "forward_depth": 44,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_recovery_pilot/roots_3.json",
+      "sha256": "2babd94e2e5ce024395993bd9f7013ca9138f41d7295f55e538f71a6246d5a55",
+      "phased_roots": 3,
+      "forward_depth": 44,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_recovery_wide/best.json",
+      "sha256": "db7383aa03d6ad6c21032f00a34d93ab79b6c3adcb1d5403f14cf8e42c28ec78",
+      "phased_roots": 5,
+      "forward_depth": 145,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_recovery_wide/roots_3.json",
+      "sha256": "061818b0de8a781e432c79b039e8fd4e2fc838ee3fea800f66c716d750673de5",
+      "phased_roots": 3,
+      "forward_depth": 40,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_recovery_wide/roots_4.json",
+      "sha256": "8ae73cf360c2ceeb5a397bf102ee89e11901e9c4ed7f15c943c65b4ad71eb71d",
+      "phased_roots": 4,
+      "forward_depth": 65,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_recovery_wide/roots_5.json",
+      "sha256": "6ccfa9e051c12c0907b53fa5e6d2faca81d7bce90f0f816aa2e8aeba1118b48c",
+      "phased_roots": 5,
+      "forward_depth": 145,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_release_pilot/best.json",
+      "sha256": "dd4edf1f42e303ca9ea371d940c45173c515c7cf9b33688434107b547129a60b",
+      "phased_roots": 4,
+      "forward_depth": 105,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_release_pilot/roots_4.json",
+      "sha256": "76b70373339c5b41c619d0ebf566a42bfc50ac319a4fe5e2c7104d6e345b7cd7",
+      "phased_roots": 4,
+      "forward_depth": 88,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_resume_four/best.json",
+      "sha256": "779f557e84c84be6d0119844cae0e87042e5c8d8f5b1f00edcfaefb22d7112a7",
+      "phased_roots": 4,
+      "forward_depth": 125,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_resume_four/roots_4.json",
+      "sha256": "8ae73cf360c2ceeb5a397bf102ee89e11901e9c4ed7f15c943c65b4ad71eb71d",
+      "phased_roots": 4,
+      "forward_depth": 65,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_target_forms/best.json",
+      "sha256": "e3a0be0df5bfe904db04de081dc236deefe3615968ef2ed715650e86919b91ef",
+      "phased_roots": 5,
+      "forward_depth": 141,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_target_forms/roots_3.json",
+      "sha256": "061818b0de8a781e432c79b039e8fd4e2fc838ee3fea800f66c716d750673de5",
+      "phased_roots": 3,
+      "forward_depth": 40,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    },
+    {
+      "path": "artifacts/post185_selective_target_forms/roots_4.json",
+      "sha256": "05e130425ff7bee6b32ae15faf71210a707a0d28a346d70d1f993cf6f6d83aaf",
+      "phased_roots": 4,
+      "forward_depth": 75,
+      "boolean_phase_and_inverse_replay_inputs": 4096,
+      "logo_complete": false
+    }
+  ],
+  "native_partial_diagnostics": [
+    {
+      "trace": "artifacts/post185_selective_recovery_wide/roots_4.json",
+      "width": 18,
+      "depth": 112,
+      "cx": 154,
+      "logo_complete": false,
+      "quantum_exhaustive_verified": false
+    },
+    {
+      "trace": "artifacts/post185_selective_oriented/roots_5.json",
+      "width": 18,
+      "depth": 233,
+      "cx": 273,
+      "logo_complete": false,
+      "quantum_exhaustive_verified": false
+    }
+  ],
+  "total_trials": 36
+}

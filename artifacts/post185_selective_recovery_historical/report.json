@@ -1,0 +1,59 @@
+[
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 187,
+    "seconds": 11.170190374949016,
+    "seed": 0,
+    "phased_roots": 4,
+    "forward_native_depth": 133,
+    "exact": false,
+    "selective_recoveries": 2,
+    "nearest_root_pressure": [
+      0,
+      1,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75
+    }
+  },
+  {
+    "status": "time_limit",
+    "expanded": 217,
+    "seconds": 15.00441720802337,
+    "seed": 1,
+    "phased_roots": 4,
+    "forward_native_depth": 107,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      3,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75
+    }
+  },
+  {
+    "status": "time_limit",
+    "expanded": 206,
+    "seconds": 15.051701582968235,
+    "seed": 2,
+    "phased_roots": 4,
+    "forward_native_depth": 107,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      3,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75
+    }
+  }
+]

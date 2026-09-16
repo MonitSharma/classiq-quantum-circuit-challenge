@@ -1,0 +1,13 @@
+{
+  "source": "artifacts/multiplicative_depth/optimized/advanced_round4.xag",
+  "resume": "artifacts/post129_phase_rooted_longer/best.json",
+  "resume_sha256": "92d1c1676224abc3441d99506e3f757e18795438aad29dbe5309ca2fa7ded8ed",
+  "trials": 6,
+  "seconds": 15.0,
+  "beam": 6,
+  "cap": 140,
+  "historical": false,
+  "orient": true,
+  "target_forms": true,
+  "compiler_sha256": "52f46cdcb69553ee88abc281bad1d3a18c888025f971b2d55ebb496d04dbcd94"
+}

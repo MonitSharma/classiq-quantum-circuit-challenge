@@ -1,0 +1,59 @@
+{
+  "input": "/Users/monitsharma/Downloads/classiq/artifacts/185/two_stage_185.qasm",
+  "input_sha256": "ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8",
+  "baseline": {
+    "depth": 185,
+    "cx": 854,
+    "width": 18,
+    "gates": 1617
+  },
+  "mode": "binary SPARE engine; no qutrit/extra-wire rewrites",
+  "stages": [
+    {
+      "stage": "roundtrip",
+      "seconds": 0.18354279198683798,
+      "depth": 185,
+      "cx": 854,
+      "width": 18,
+      "gates": 1617,
+      "sha256": "1818d7ae0c2cc4feead8edda4bd31d47a327016f799f9bbc52b03d20de495773",
+      "exhaustive_verified": true
+    },
+    {
+      "stage": "merge",
+      "seconds": 0.22011854103766382,
+      "depth": 185,
+      "cx": 854,
+      "width": 18,
+      "gates": 1617,
+      "sha256": "1818d7ae0c2cc4feead8edda4bd31d47a327016f799f9bbc52b03d20de495773",
+      "exhaustive_verified": true
+    },
+    {
+      "stage": "control",
+      "seconds": 0.7698097079992294,
+      "depth": 297,
+      "cx": 854,
+      "width": 18,
+      "gates": 2164,
+      "sha256": "0415c54079db34c29942884162f97caf1daba4db41c275bbc032c915d8347f8c",
+      "exhaustive_verified": true
+    }
+  ],
+  "positive_control": {
+    "input": {
+      "depth": 21,
+      "cx": 13,
+      "width": 4,
+      "gates": 31
+    },
+    "output": {
+      "depth": 21,
+      "cx": 13,
+      "width": 4,
+      "gates": 31
+    },
+    "max_error": 0.0,
+    "annotation": "only q3 clean; q0,q1,q2 arbitrary"
+  }
+}

@@ -203,6 +203,7 @@ def resume_state(lower,path):
     phase=xor_mask(lower.parsed.output_affine_mask&((1<<13)-1),lower.signals)
     for i,root in enumerate(lower.roots):
         if data['phase_mask']>>i&1:phase^=lower.signals[root]
+    if 'semantic_phase_hex' in data:phase=int(data['semantic_phase_hex'],16)
     s=State(apply(lower.initial,ops),0,phase,data['phase_mask'],ops,
             clock_ops((0,)*18,ops),tuple(data['history']))
     replay(s,lower.initial,lower.target)

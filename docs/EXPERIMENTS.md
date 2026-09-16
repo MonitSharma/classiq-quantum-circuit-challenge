@@ -1,5 +1,17 @@
 # Experiment history and failure notes
 
+## September 16: selective recovery and affine destinations
+
+See `POST185_SELECTIVE_RECOVERY.md`: 36 new bounded trials implement and test
+control-specific inverse cones, semantic AND release, one-AND input recovery,
+and prepared affine targets. The four-root milestone improves from 109 to 65
+forward layers, but its full restored operator is only a partial phase at
+112/154/18. Five roots already cost 233 native layers. No full logo candidate
+or protected improvement results. Both new milestone residuals need degree 8
+in their current wire functions; this is not a general circuit lower bound.
+Nineteen focused tests pass. Cap overshoot in the six old target-form probes
+is recorded and fixed; no 140-layer result is claimed from them.
+
 ## September 16: backward phase-root demands and paid recovery
 
 `POST129_PHASE_ROOTED_XAG.md` records the latest requested whole-function

@@ -1,0 +1,28 @@
+{
+  "input": "/Users/monitsharma/Downloads/classiq/artifacts/185/two_stage_185.qasm",
+  "input_sha256": "ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8",
+  "baseline": {
+    "depth": 185,
+    "cx": 854,
+    "width": 18,
+    "gates": 1617
+  },
+  "mode": "binary SPARE engine; no qutrit/extra-wire rewrites",
+  "stages": [],
+  "positive_control": {
+    "input": {
+      "depth": 21,
+      "cx": 13,
+      "width": 4,
+      "gates": 31
+    },
+    "output": {
+      "depth": 35,
+      "cx": 17,
+      "width": 4,
+      "gates": 50
+    },
+    "max_error": 0.0,
+    "annotation": "only q3 clean; q0,q1,q2 arbitrary"
+  }
+}

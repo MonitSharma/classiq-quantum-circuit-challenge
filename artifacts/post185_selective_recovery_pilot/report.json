@@ -1,0 +1,47 @@
+[
+  {
+    "status": "time_limit",
+    "expanded": 140,
+    "seconds": 10.126763707958162,
+    "seed": 0,
+    "phased_roots": 3,
+    "forward_native_depth": 44,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      4,
+      0
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 134,
+    "seconds": 10.077845917083323,
+    "seed": 1,
+    "phased_roots": 3,
+    "forward_native_depth": 44,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      4,
+      0
+    ]
+  },
+  {
+    "status": "time_limit",
+    "expanded": 135,
+    "seconds": 10.026562249986455,
+    "seed": 2,
+    "phased_roots": 3,
+    "forward_native_depth": 44,
+    "exact": false,
+    "selective_recoveries": 1,
+    "nearest_root_pressure": [
+      0,
+      4,
+      0
+    ]
+  }
+]

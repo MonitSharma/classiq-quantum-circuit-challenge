@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "returncode": 1,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post185_spare_adapter.py",
+    "--source",
+    "/tmp/classiq-spare-source/SPARE-main",
+    "--deps",
+    "/tmp/classiq-spare-deps",
+    "--outdir",
+    "artifacts/post185_spare_binary"
+  ],
+  "seconds": 40.231903000036255,
+  "limit_seconds": 150.0
+}

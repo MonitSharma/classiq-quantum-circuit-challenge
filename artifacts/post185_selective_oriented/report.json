@@ -1,0 +1,82 @@
+[
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 200,
+    "seconds": 10.415270500001498,
+    "seed": 0,
+    "phased_roots": 5,
+    "forward_native_depth": 141,
+    "exact": false,
+    "selective_recoveries": 2,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75,
+      "5": 141
+    }
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 235,
+    "seconds": 13.685945290955715,
+    "seed": 1,
+    "phased_roots": 5,
+    "forward_native_depth": 141,
+    "exact": false,
+    "selective_recoveries": 2,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75,
+      "5": 141
+    }
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 215,
+    "seconds": 11.949116166913882,
+    "seed": 2,
+    "phased_roots": 5,
+    "forward_native_depth": 141,
+    "exact": false,
+    "selective_recoveries": 2,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75,
+      "5": 141
+    }
+  },
+  {
+    "status": "restricted_search_stalled",
+    "expanded": 195,
+    "seconds": 10.29720799997449,
+    "seed": 3,
+    "phased_roots": 5,
+    "forward_native_depth": 141,
+    "exact": false,
+    "selective_recoveries": 2,
+    "nearest_root_pressure": [
+      1,
+      2,
+      -1
+    ],
+    "minimum_depth_by_roots": {
+      "3": 40,
+      "4": 75,
+      "5": 141
+    }
+  }
+]

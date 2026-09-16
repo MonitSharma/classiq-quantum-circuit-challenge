@@ -1,5 +1,20 @@
 # Continuation handoff
 
+## September 16: selective recovery implemented and measured
+
+Read `POST185_SELECTIVE_RECOVERY.md` before repeating the earlier proposals.
+`src/post185_selective_recovery.py` implements inverse dependency cones,
+release using current logical controls, one-AND input recovery, and paid
+affine destination preparation. Input 9 at the three-root checkpoint recovers
+with two RCCX gates, increasing forward depth 40 to 44. The four-root milestone
+is now 65 forward layers (112 including compiled restoration); it is only a
+partial phase operator. The five-root milestone is already 233 compiled layers.
+Thirty-six bounded trials found no complete oracle; protected185 is unchanged.
+Residual completion degree is 8 at the new milestones, still not a cheap
+diagonal finish. Nineteen focused tests pass. A cap check after phase deposition
+is fixed; the old 140-cap target-form probes actually reached 141 and are flagged.
+All jobs are finished. Do not scale the same root-count beam blindly.
+
 ## September 16: latest phase-rooted destructive campaign
 
 Read `POST129_PHASE_ROOTED_XAG.md` first. The latest user request supersedes
