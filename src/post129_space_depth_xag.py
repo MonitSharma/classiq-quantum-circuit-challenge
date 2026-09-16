@@ -62,17 +62,17 @@ def no_recompute_screen(nodes: list[AndNode], output: int, restarts: int = 64) -
                 return (len(live) + keep - unlock * 0.25, -unlock, rng.random(), node)
             node = min(ready, key=key)
             done.add(node); order.append(node)
-            if consumers[node] and node not in roots:
+            if consumers[node]:
                 live.add(node)
             for parent in deps[node]:
                 remaining[parent].discard(node)
                 if not remaining[parent] and parent in live:
                     live.remove(parent)
-        peak = max((len(set(order[:i+1]) & set()), 0) for i in range(0)) if False else 0
+        peak = 0
         # Replay the order to measure exact liveness, including immediate root phase.
         live, remaining = set(), [set(x) for x in consumers]
         for node in order:
-            if consumers[node] and node not in roots:
+            if consumers[node]:
                 live.add(node)
             for parent in deps[node]:
                 remaining[parent].discard(node)

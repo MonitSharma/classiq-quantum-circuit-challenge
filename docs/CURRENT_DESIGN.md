@@ -8,6 +8,12 @@ live values under the no-recompute screen; three bounded recomputation probes
 returned UNKNOWN at 20,000 states. This route remains open but now requires
 storage-aware synthesis rather than lowering the existing minimum-AND graphs.
 
+The corrected six-pebble semantics and five-batch physical-row CEGIS are
+recorded in `POST129_SPACE_DEPTH_XAG.md`. The CEGIS now scores candidates in
+the requested exactness/affine/batch/liveness/toggle order and exposes native
+affine-frame lowering plus preserved-kernel composition. No exact encoder was
+found in the bounded screens, so no native candidate exists yet.
+
 ## New research direction: history-tapped destructive trajectory
 
 The attached deep-research assessment is recorded in

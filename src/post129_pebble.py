@@ -10,7 +10,12 @@ from pathlib import Path
 from post129_space_depth_xag import BASE, MAX_NONLINEAR_LIVE, dependencies, load
 
 
-def solve(path: Path, max_states: int = 250_000) -> dict:
+def can_toggle(node: int, live: int, dep_masks: list[int]) -> bool:
+    """Return whether compute/uncompute of a node is dependency-legal."""
+    return dep_masks[node] & ~live == 0
+
+
+def solve(path: Path, max_states: int = 250_000, limit: int = MAX_NONLINEAR_LIVE) -> dict:
     nodes, output = load(path)
     deps = dependencies(nodes)
     n = len(nodes)
@@ -40,17 +45,18 @@ def solve(path: Path, max_states: int = 250_000) -> dict:
                 actions.append(action)
                 cursor = previous
             actions.reverse()
-            return {"status": "SAT", "peak_live": MAX_NONLINEAR_LIVE,
+            return {"status": "SAT", "peak_live_limit": limit,
                     "toggle_count": toggles, "expanded_states": expanded,
                     "actions": actions}
         candidates = []
         for node in range(n):
             bit = 1 << node
-            if not live & bit and dep_masks[node] & ~live == 0 and live.bit_count() < MAX_NONLINEAR_LIVE:
+            allowed = can_toggle(node, live, dep_masks)
+            if not live & bit and allowed and live.bit_count() < limit:
                 next_live = live | bit
                 next_phased = phased | (bit & roots)
                 candidates.append((next_live, next_phased, f"COMPUTE({BASE + node})"))
-            if live & bit and consumers[node] & live == 0:
+            if live & bit and allowed:
                 candidates.append((live ^ bit, phased, f"UNCOMPUTE({BASE + node})"))
         for next_live, next_phased, action in candidates:
             next_state = (next_live, next_phased, 0)
@@ -60,7 +66,7 @@ def solve(path: Path, max_states: int = 250_000) -> dict:
                 parent[next_state] = (state, action)
                 heapq.heappush(queue, (next_toggles + heuristic(next_live, next_phased), next_toggles, next_state))
     return {"status": "UNKNOWN", "expanded_states": expanded,
-            "max_states": max_states, "peak_limit": MAX_NONLINEAR_LIVE}
+            "max_states": max_states, "peak_limit": limit}
 
 
 def main() -> None:
@@ -68,8 +74,9 @@ def main() -> None:
     parser.add_argument("--xag", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--max-states", type=int, default=250_000)
+    parser.add_argument("--limit", type=int, default=MAX_NONLINEAR_LIVE)
     args = parser.parse_args()
-    result = solve(args.xag, args.max_states)
+    result = solve(args.xag, args.max_states, args.limit)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result, indent=2))

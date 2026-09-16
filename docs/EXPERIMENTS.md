@@ -12,6 +12,37 @@ candidate was produced. See `POST129_SPACE_DEPTH_XAG.md` and the saved
 inventory/pebble reports. The next useful work is co-synthesis of storage,
 affine exposure and nonlinear batch depth.
 
+The five-batch x/y physical-row CEGIS
+(`src/post137_joint_encoder_cosynth.py`) uses variable RCCX topology directly
+on two 9-row side states. It now performs sample screening, full 64-input
+replay with counterexample addition, requested lexicographic scoring, native
+affine-frame materialization, and preserved-kernel composition for exact
+encoders. Short affine-budget 8/10/12/14 probes found no exact encoder; full
+oracle verification therefore was not triggered.
+
+The existing bounded Z3 reversible-register solver was screened at five
+stages and a nominal 59-layer ceiling. Sampled x/y models failed the full
+64-input replay; all-64-input runs timed out at two seconds. No solver model
+was promoted. The next constrained formulation should seed from beam paths
+and include explicit six-slot liveness constraints.
+
+`src/post137_seeded_solver.py` now seeds that backend with residual-support
+counterexamples from storage-feasible beam paths. The first one-second seeded
+screen returned UNKNOWN for both sides after 45/37 constraints; no model was
+promoted.
+
+The affine-frame SAT refinement uses explicit invertible 9x9 matrices and
+translations. Its first bounded screen timed out for x; y was sample-SAT but
+failed replay storage (peak 9), so no model was promoted.
+Storage is now constrained inside the SAT model after each frame and batch.
+The stricter first screen timed out for both sides, with no sample-SAT model
+escaping the six-slot condition.
+
+That six-slot gate is now active in the physical-row beam: nonlinear rows are
+counted after every batch against the affine input span, and over-limit paths
+are discarded before joint pairing. Seed239 reached residual 96 while staying
+within the gate (x peak 6, y peak 4); no exact model was promoted.
+
 ## September 16: attached report assessment; no new oracle
 
 `POST185_DEEP_RESEARCH_REPORT.md` records the attached deep-research report's

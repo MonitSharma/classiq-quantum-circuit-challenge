@@ -11,6 +11,34 @@ returned UNKNOWN, not UNSAT. No native candidate was produced. The next XAG
 campaign must co-synthesize liveness, affine exposure, phase-root timing and
 batch depth; do not infer infeasibility from these cutoffs.
 
+The corrected pebble implementation now permits dependency-legal parent
+removal while a child remains live. Recomputed no-recompute screens are
+slightly more conservative. The five-batch physical-row CEGIS is in
+`src/post137_joint_encoder_cosynth.py`; it adds full-domain counterexamples,
+uses the requested lexicographic score, and exposes affine-frame lowering plus
+preserved-kernel composition. Short affine-budget 8/10/12/14 probes found no
+exact encoder, so this remains a semantic screen rather than a native
+candidate.
+
+The latest beam refinement now prunes any path exceeding six nonlinear
+physical storage rows after a batch. Seed239 stayed within the limit (x peak
+6, y peak 4) and reached combined residual 96, but remains non-exact.
+
+The five-stage bounded Z3 backend was screened separately: sampled models did
+not survive 64-input replay, while all-64-input runs timed out at two seconds
+for both sides. Treat this as solver timeout/unknown, not a negative proof.
+`src/post137_seeded_solver.py` now carries full-domain residual-support
+counterexamples from storage-feasible beam paths into that backend. A short
+seeded screen returned UNKNOWN for both sides after 45/37 constraints.
+
+The affine-frame SAT refinement in `src/post137_frame_storage_sat.py` uses
+explicit invertible 9x9 matrices and translations. Its first bounded screen
+timed out for x; y was sample-SAT but failed replay storage (peak 9), so no
+model was promoted.
+The six-slot condition is now enforced inside the affine-frame SAT model after
+every frame and batch. The first stricter screen timed out for both x and y;
+no storage-invalid model was promoted, and the result remains UNKNOWN.
+
 ## September 16: attached deep-research assessment
 
 Read `POST185_DEEP_RESEARCH_REPORT.md`. The attached report independently
