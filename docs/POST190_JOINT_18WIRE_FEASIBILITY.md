@@ -83,6 +83,21 @@ A=14 and then probing A=15…18 if A=14 is UNSAT. It should use actual CNOT
 matchings and literal-versus-span endpoint modes, with an external process
 bound via `src/run_bounded.py`.
 
+## Free-frame diagnostic follow-up
+
+`src/post190_joint_18wire_freeframe_sat.py` records a semantic endpoint
+diagnostic using actual 4096-point functions. It confirms that the eight
+requested endpoint functions are distinct and lie in the affine span of the
+full set of generated functions. It also demonstrates why that is not yet a
+free-frame SAT model: the full symbolic function set has rank 40, while only 18
+physical rows exist. A valid dirty computation may replace old row directions,
+so the solver must model row replacement and future-use preservation rather
+than simply accumulating every node in one span.
+
+Accordingly its status is deliberately named
+`RELAXED_ENDPOINT_PASS_STORAGE_UNMODELED`, not `FREEFRAME_SAT`. No UNSAT or
+SAT conclusion about the 18-wire architecture is drawn from it.
+
 ## Reproduction
 
 From the workspace root:

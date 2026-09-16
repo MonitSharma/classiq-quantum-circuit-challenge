@@ -1,5 +1,10 @@
 # Complete method and research index
 
+`POST185_ARCHITECTURE_FLOOR.md` is the September 16 floor analysis: the packaged
+185 sits 6% above the layer-capacity bound for its codes, the best bound over all
+codes is 148.5 but does not build, and three directions (loader-aware relabelling,
+raw kernel wires, ANF loaders) are closed with measurements.
+
 **Current, September16:185/854/18**, `artifacts/185/`. Older “current best”
 paragraphs below are historical. Read HANDOFF for protected replay.
 `POST185_METHOD_SEARCH.md` is the latest audit-before-testing index: literature

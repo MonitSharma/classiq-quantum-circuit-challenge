@@ -4,6 +4,14 @@ Current protected best is now **185 / 854 / 18**, `artifacts/185/`, as confirmed
 
 Read `docs/HANDOFF.md`, `docs/EXPERIMENTS.md`, and `docs/CURRENT_DESIGN.md` before continuing. The user's objective is rank 1 in the Classiq challenge. Do not report that objective achieved based only on a local circuit improvement.
 
+Read `docs/POST185_ARCHITECTURE_FLOOR.md` before proposing another code or
+emitter change. It shows the packaged 185 is 6% above the `r + 2c <= n` layer
+bound for its own spectra, so local rewrites cannot reach rank one, and it closes
+loader-aware relabelling, raw-kernel-wire trades, and ANF loaders with built,
+verified counterexamples. The two directions it leaves open are a Boolean network
+with peak liveness at most six values above the twelve coordinates, and a
+parity-network emitter that holds its rotation rate at low spectral density.
+
 The user's latest steering is to prioritize depth reductions over CNOT savings.
 Allow more CX when it helps depth; do not spend follow-up rounds primarily on
 CX tie-breakers. The 188/853 and 195/859 alternatives are historical experiments.

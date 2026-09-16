@@ -1,5 +1,14 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+September 16 floor analysis: `docs/POST185_ARCHITECTURE_FLOOR.md`. The packaged
+185 is 6% above the `r + 2c <= n` scheduling bound for its own codes (174.4), so
+the remaining depth is not recoverable by rewrites or rescheduling. The best
+bound over all class codes is 148.5, but codes that reach it build to 240 because
+a sparser spectrum costs proportionally more CX per rotation. Loaded-bits-for-raw
+-wires, ANF loaders, and loader-aware relabelling are all closed there. The two
+open targets are a Boolean network with peak liveness <= 6 above the coordinates,
+and a parity-network emitter that keeps its rate at low spectral density.
+
 September16 Direct-E v2 follow-up: `docs/POST185_DIRECT_E_V2.md` records the
 reproduced886-to264 affine ANF witness, physical layer search with exact output
 parity fitness, and a first Quasar integration.46,109 proposals find no exact

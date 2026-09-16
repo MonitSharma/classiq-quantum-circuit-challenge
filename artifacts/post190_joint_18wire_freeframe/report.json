@@ -1,0 +1,80 @@
+{
+  "status": "RELAXED_ENDPOINT_PASS_STORAGE_UNMODELED",
+  "x_source": "artifacts/post190_nist_variants/x_candidate_0.json",
+  "y_source": "artifacts/post190_nist_variants_wide/y_candidate_0.json",
+  "x_and_nodes": 14,
+  "y_and_nodes": 13,
+  "total_and_nodes": 27,
+  "batches": [
+    [
+      0,
+      1,
+      5,
+      14,
+      16,
+      19
+    ],
+    [
+      20,
+      2,
+      3,
+      6,
+      7,
+      10
+    ],
+    [
+      8,
+      11,
+      15,
+      21,
+      22,
+      24
+    ],
+    [
+      12,
+      17,
+      25,
+      4,
+      9,
+      23
+    ],
+    [
+      13,
+      18,
+      26
+    ]
+  ],
+  "nonlinear_batches": 5,
+  "batch_capacity": 6,
+  "base_affine_rank": 13,
+  "stage_affine_ranks": [
+    19,
+    25,
+    31,
+    37,
+    40
+  ],
+  "final_function_rank": 40,
+  "endpoint_function_rank": 8,
+  "literal_endpoint_distinct": true,
+  "literal_endpoint_placeable": true,
+  "endpoint_order": [
+    "x0",
+    "x1",
+    "x2",
+    "x_raw",
+    "y0",
+    "y1",
+    "y2",
+    "y_raw"
+  ],
+  "model": "actual 4096-point semantic functions; endpoint/span diagnostic only",
+  "warning": "This diagnostic does not model 18-row storage, row replacement, or frame invertibility across batches; it is not a SAT certificate.",
+  "native_cnot_depth": "not modeled",
+  "kernel_permutation": "endpoint literal mode; physical kernel map not compiled",
+  "affine_dependency_control": {
+    "semantic_rank": 2,
+    "formal_symbol_rank": 3,
+    "passes": true
+  }
+}
