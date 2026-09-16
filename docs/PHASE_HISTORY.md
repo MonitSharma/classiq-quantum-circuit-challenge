@@ -30,6 +30,17 @@ must still pass `src/exhaustive_verify.py`.
 
 ## Initial trajectory audit
 
+The Direct-E v2 history audit is now persisted by
+`src/direct_e_history_audit.py` in
+`artifacts/direct_e_v2_history_audit/report.json`. All eight saved Direct-E
+checkpoints were replayed through the existing `HistoricalBasis`; none contains
+the logo in its complete historical span. The strongest saved trajectory is
+the seeded 7-nonlinear/18-affine run: final-midpoint error 657, historical rank
+39, and no exact membership. The audit closes the question of whether an old
+Direct-E checkpoint already hides an exact history-tapped solution; it does not
+close newly generated history-aware trajectories. The deterministic Gaussian
+remainder is recorded for diagnostics only and is not a nearest-span metric.
+
 The audit replayed the preserved destructive histories without judging them by
 their old final-state affine residual. Ranks include the constant-one signal.
 The fused-tail history was reconstructed from its builder and includes its

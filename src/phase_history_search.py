@@ -247,6 +247,28 @@ def apply_gate_semantic(wires: tuple[int, ...], gate: Gate) -> tuple[int, ...]:
     raise ValueError(f"unsupported semantic gate: {gate}")
 
 
+def primitive_events(gates: Sequence[Gate]) -> tuple[Gate, ...]:
+    """Normalize macro gates to the timeline used for history taps.
+
+    A parallel ``layer`` remains one event, while an affine macro expands to
+    its three physical primitives.  Keeping this expansion in one helper
+    prevents semantic provenance step IDs from disagreeing with the emitted
+    quantum circuit's tap boundaries.
+    """
+    events: list[Gate] = []
+    for gate in gates:
+        if gate[0] == "affine":
+            _, a, mix, b, target = gate
+            events.extend((
+                ("cx", mix, a),
+                ("rccx", a, b, target),
+                ("cx", mix, a),
+            ))
+        else:
+            events.append(gate)
+    return tuple(events)
+
+
 def replay_history(
     gates: Sequence[Gate], initial: tuple[int, ...] | None = None,
 ) -> tuple[tuple[int, ...], HistoricalBasis, list[tuple[int, ...]]]:
@@ -257,7 +279,7 @@ def replay_history(
         basis.add(value, 0, wire, "initial")
     snapshots = [wires]
     step = 0
-    for gate in gates:
+    for gate in primitive_events(gates):
         if gate[0] == "layer":
             step += 1
             before = wires
@@ -271,33 +293,25 @@ def replay_history(
                     basis.add(wires[target], step, target, primitive[0])
             snapshots.append(wires)
             continue
-        primitives = (
-            (("cx", gate[2], gate[1]), ("rccx", gate[1], gate[3], gate[4]),
-             ("cx", gate[2], gate[1]))
-            if gate[0] == "affine" else (gate,)
-        )
-        for primitive in primitives:
-            step += 1
-            before = wires
-            wires = apply_gate_semantic(wires, primitive)
-            if wires == before:
-                snapshots.append(wires)
-                continue
-            gate = primitive
-            if gate[0] == "x":
-                touched_targets = (gate[1],)
-            elif gate[0] == "cx":
-                touched_targets = (gate[2],)
-            elif gate[0] == "rccx":
-                touched_targets = (gate[3],)
-            elif gate[0] in {"rc3x", "rcccx"}:
-                touched_targets = (gate[4],)
-            else:
-                raise ValueError(f"unsupported semantic gate: {gate}")
-            for wire in touched_targets:
-                basis.add(wires[wire], step, wire, gate[0])
+        step += 1
+        before = wires
+        wires = apply_gate_semantic(wires, gate)
+        if wires == before:
             snapshots.append(wires)
-        continue
+            continue
+        if gate[0] == "x":
+            touched_targets = (gate[1],)
+        elif gate[0] == "cx":
+            touched_targets = (gate[2],)
+        elif gate[0] == "rccx":
+            touched_targets = (gate[3],)
+        elif gate[0] in {"rc3x", "rcccx"}:
+            touched_targets = (gate[4],)
+        else:
+            raise ValueError(f"unsupported semantic gate: {gate}")
+        for wire in touched_targets:
+            basis.add(wires[wire], step, wire, gate[0])
+        snapshots.append(wires)
     return wires, basis, snapshots
 
 
@@ -361,13 +375,14 @@ def build_phase_history_circuit(
     by_step: dict[int, list[int]] = {}
     for tap in taps:
         by_step.setdefault(int(tap["step"]), []).append(int(tap["wire"]))
+    timeline = primitive_events(gates)
     circuit = QuantumCircuit(n_qubits)
-    for step in range(len(gates) + 1):
+    for step in range(len(timeline) + 1):
         for wire in sorted(set(by_step.get(step, []))):
             circuit.z(wire)
-        if step < len(gates):
-            _append_gate(circuit, gates[step])
-    for gate in reversed(gates):
+        if step < len(timeline):
+            _append_gate(circuit, timeline[step])
+    for gate in reversed(timeline):
         _append_gate(circuit, gate, inverse=True)
     return circuit
 

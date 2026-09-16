@@ -9,6 +9,7 @@ from phase_history_search import (
     TARGET,
     apply_gate_semantic,
     build_phase_history_circuit,
+    primitive_events,
     replay_history,
 )
 from destructive_semantic_search import initial_wire_truth_tables
@@ -95,6 +96,16 @@ class PhaseHistoryTests(unittest.TestCase):
         self.assertEqual(final[12], initial[12] ^ ((initial[0] ^ initial[1]) & initial[2]))
         self.assertEqual(len(snapshots), 4)
         self.assertGreaterEqual(basis.rank, 14)
+
+    def test_affine_tap_uses_same_internal_timeline_as_builder(self):
+        gates = (("affine", 0, 1, 2, 12),)
+        self.assertEqual(len(primitive_events(gates)), 3)
+        circuit = build_phase_history_circuit(
+            gates, [{"step": 1, "wire": 0}], 18
+        )
+        names = [instruction.operation.name for instruction in circuit.data]
+        # The internal tap is emitted after the first CX, before RCCX.
+        self.assertEqual(names[:2], ["cx", "z"])
 
 
 if __name__ == "__main__":

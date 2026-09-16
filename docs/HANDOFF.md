@@ -10,8 +10,12 @@ destructive 18-wire compiler: phase taps may use transient wire truth tables,
 not only final midpoint wires. This is a hypothesis and campaign direction,
 not a global lower bound or a rank-one result. Web citations, live leaderboard
 claims and challenge-date claims in the attachment remain unvalidated here.
-First action: audit saved Direct-E trajectories for target inclusion in the
-GF(2) span of all transient wire functions before launching a new large search.
+The saved-trajectory audit is complete and negative: see
+`artifacts/direct_e_v2_history_audit/report.json` and
+`src/direct_e_history_audit.py`. The strongest seeded 7/18 run reaches
+historical rank39 but does not contain the target. Next: fix/retain the shared
+primitive timeline, then integrate the existing phase-history engine with
+Direct-E v2 rather than reimplementing it.
 
 ## September 16: corrected deep-research implementation
 

@@ -7,9 +7,11 @@ The attached deep-research assessment is recorded in
 protected coordinate-loader graph and testing whether Direct-E trajectories
 contain the logo across their transient wire history. The proposed semantic
 condition is `target ∈ span({1, w[t,q]})`, with provenance-preserving phase taps,
-followed by exact restoration. This is not yet implemented or proven for the
-logo. Audit existing trajectories first; then score new searches by exact
-history residual and native critical path, allowing extra CX. Asymmetric
+followed by exact restoration. The existing phase-history engine already
+implements this semantic and its tap machinery; the eight-checkpoint Direct-E
+audit is complete and negative. The missing work is integration with Direct-E:
+score new searches by target-guided historical decoding and native critical
+path, allowing extra CX. Asymmetric
 uncompute and dirty borrowing remain later stages, not current results.
 
 Latest: `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md` implements the deep-research

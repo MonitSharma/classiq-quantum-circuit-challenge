@@ -37,22 +37,27 @@ The report identifies a specific restriction in `direct_e_v2.py`: it seeks the
 target as an affine combination of the final 18 midpoint wire functions. For
 a reversible trajectory with intermediate wire functions `w[t,q]`, diagonal
 phase taps can instead implement a target in the GF(2) span of all historical
-functions, provided the full state is restored. This is the main new
-experiment worth implementing.
+functions, provided the full state is restored. This is the main integration
+experiment worth implementing. The repository's existing `PHASE_HISTORY.md`
+and `src/phase_history_search.py` already provide the historical basis,
+provenance recovery, phase-tap construction, and exact verification path; the
+missing work is connecting those pieces to Direct-E's physical trajectory and
+improving its target-guided proposal distribution.
 
 ## Recommended implementation sequence
 
 1. Freeze `artifacts/185/` and retain exact serialized-QASM verification.
-2. Build a history-span audit for saved Direct-E trajectories. At every
-   prefix, add all 18 exact 4,096-point wire truth tables to a GF(2) basis and
-   record rank, target residual, and provenance `(time, wire)`.
-3. If a saved trajectory spans the target, recover phase taps, lower the
+2. The saved-trajectory history audit is complete and negative. The eight
+   results are persisted in `artifacts/direct_e_v2_history_audit/report.json`.
+   The strongest seeded 7/18 trajectory has historical rank 39 but does not
+   contain the target.
+3. If a future trajectory spans the target, recover phase taps, lower the
    literal inverse construction, and measure native U3/CX depth.
-4. Otherwise fork Direct-E v2 into a history-aware search. Score target
+4. Fork Direct-E v2 into a history-aware search. Score target
    residual first, then native slot/per-wire critical-path lower bounds and
    phase-tap cost. Permit extra CX and do not reject candidates solely from
    the isolated seven-layer RCCX accounting.
-5. Revisit 7-nonlinear/18-affine and 8-nonlinear/12-affine budgets first;
+5. Revisit seeded 7-nonlinear/18-affine and 8-nonlinear/12-affine budgets first;
    test nine nonlinear rounds only after the history audit gives evidence.
 6. Only after an exact forward candidate exists, investigate asymmetric
    reachable-state uncomputation. Use dirty-ancilla borrowing only for
@@ -81,4 +86,3 @@ Quasar/MPO/BDD/ESOP sweep. Bona-style borrowing, ShallowGrow-like recursive
 composition, and new uncomputation literature are secondary experiments only
 after the history-aware route produces an exact, materially shallower forward
 trajectory.
-
