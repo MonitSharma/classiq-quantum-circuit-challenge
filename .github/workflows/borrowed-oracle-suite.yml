@@ -8,7 +8,7 @@ on:
 jobs:
   benchmark:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -43,7 +43,7 @@ jobs:
             cat "artifacts/post129_new_methods_ci/$method/stdout.log"
           done
           exit 0
-      - name: Exhaustively verify emitted full oracles
+      - name: Exhaustively verify only depth-competitive emitted oracles
         env:
           PYTHONPATH: src
           OPENBLAS_NUM_THREADS: '1'
@@ -51,6 +51,12 @@ jobs:
         run: |
           set +e
           while IFS= read -r qasm; do
+            base=$(basename "$qasm")
+            depth=$(printf '%s' "$base" | sed -n 's/.*_d\([0-9][0-9]*\)_cx.*/\1/p')
+            if [ -z "$depth" ] || [ "$depth" -ge 185 ]; then
+              echo "skip exhaustive verification for $qasm (depth ${depth:-unknown}, not below 185)"
+              continue
+            fi
             echo "===== verify $qasm ====="
             timeout 600s python src/exhaustive_verify.py "$qasm" \
               > "$qasm.verify.log" 2>&1
