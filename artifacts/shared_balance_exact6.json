@@ -1,0 +1,9 @@
+{
+  "status": "unknown",
+  "limit": 6,
+  "horizon": 212,
+  "nodes": 81,
+  "seconds": 20.04520483291708,
+  "scope": "Frozen inputs, named clean node pebbles, at most the stated toggle horizon",
+  "reason": "timeout"
+}

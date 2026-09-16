@@ -1,0 +1,159 @@
+{
+  "status": "restricted_search_stalled",
+  "seconds": 4.536876374972053,
+  "expanded": 492,
+  "guard_rejections": 115954,
+  "xag": "artifacts/multiplicative_depth/optimized/advanced_shared_balance.xag",
+  "completed_nodes": 8,
+  "phased_roots": 0,
+  "exact_phase": false,
+  "forward_native_depth": 10,
+  "history": [
+    {
+      "node": 51,
+      "target": 12,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            9
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 40,
+      "target": 14,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 13,
+      "target": 15,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            10
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 69,
+      "target": 16,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 14,
+      "target": 13,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 53,
+      "alias": true
+    },
+    {
+      "node": 35,
+      "target": 17,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            4
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 57,
+      "alias": true
+    }
+  ],
+  "ops": [
+    [
+      "x",
+      [
+        9
+      ]
+    ],
+    [
+      "ccx",
+      [
+        5,
+        9,
+        12
+      ]
+    ],
+    [
+      "ccx",
+      [
+        2,
+        3,
+        14
+      ]
+    ],
+    [
+      "x",
+      [
+        10
+      ]
+    ],
+    [
+      "ccx",
+      [
+        10,
+        11,
+        15
+      ]
+    ],
+    [
+      "x",
+      [
+        0
+      ]
+    ],
+    [
+      "ccx",
+      [
+        0,
+        8,
+        16
+      ]
+    ],
+    [
+      "ccx",
+      [
+        6,
+        7,
+        13
+      ]
+    ],
+    [
+      "x",
+      [
+        4
+      ]
+    ],
+    [
+      "ccx",
+      [
+        4,
+        5,
+        17
+      ]
+    ]
+  ]
+}

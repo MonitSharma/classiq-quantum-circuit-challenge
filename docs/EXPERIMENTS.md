@@ -1,5 +1,22 @@
 # Experiment history and failure notes
 
+## September16: deep-research destructive-XAG implementation and model repair
+
+Read `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md`. Implemented paid physical
+affine control exposure, dirty coordinate targets, intermediate Z/CZ phase taps,
+and literal inverse restoration for known exact whole-logo XAGs. Synthetic
+zero-clean-ancilla cases pass full matrix checks. Eight bounded logo probes
+produce no complete oracle; the depth-capped shared_balance trace evaluates32
+distinct nodes within66 forward layers and uses8 dirty coordinate targets, but
+phases no complete output root. This is partial search data, not a depth gain.
+Repaired six joint-storage modeling/replay defects and corrected x raw tags.
+The old0.13-second UNSAT is invalid; corrected original and12 additional fixed
+cases return UNSAT, without a family-wide conclusion. Exact six-clean-pebble
+search at212 toggles times out; the forced11-pebble plan is SAT and its23-wire
+native circuit verifies all4096 inputs at692/728, explicitly width-ineligible.
+Leaderboard fingerprints, universal six-value limits and degree/MD lower-bound
+overclaims are corrected. Protected185/854/18 stays unchanged.
+
 ## September16: Direct-E v2, affine witness, and Quasar
 
 See `POST185_DIRECT_E_V2.md`. Independently reproduced a ten-operation global

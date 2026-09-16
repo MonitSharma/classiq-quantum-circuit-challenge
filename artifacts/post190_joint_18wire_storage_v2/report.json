@@ -1,0 +1,49 @@
+{
+  "status": "UNSAT",
+  "seconds": 0.4245664579793811,
+  "timeout_ms": 30000,
+  "schedule": [
+    [
+      0,
+      1,
+      5,
+      14,
+      16,
+      19
+    ],
+    [
+      20,
+      2,
+      3,
+      6,
+      7,
+      10
+    ],
+    [
+      8,
+      11,
+      15,
+      21,
+      22,
+      24
+    ],
+    [
+      12,
+      17,
+      25,
+      4,
+      9,
+      23
+    ],
+    [
+      13,
+      18,
+      26
+    ]
+  ],
+  "endpoint_mode": "literal",
+  "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+  "width": 18,
+  "inputs": 12,
+  "revision": "corrected-v2"
+}

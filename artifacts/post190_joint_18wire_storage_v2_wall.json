@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post190_joint_18wire_storage_sat.py",
+    "--timeout-ms",
+    "30000",
+    "--outdir",
+    "artifacts/post190_joint_18wire_storage_v2"
+  ],
+  "seconds": 6.05958570796065,
+  "limit_seconds": 95.0
+}

@@ -1,4 +1,4 @@
-"""Compile an exact logo XAG into an 18-wire oracle by strict-LIFO pebbling.
+"""Compile an exact logo XAG using a heuristic clean-node pebble plan.
 
 Two corrections to `src/xag_to_inplace_layers.py`, whose 5,131-layer result closed
 this route:
@@ -12,13 +12,13 @@ this route:
    sum to 134 nodes against 62 distinct gates -- so the roots are visited without
    clearing the board in between.
 
-The board is a stack and only its top is ever released. That is always legal: a
-value's operands were pushed before it and nothing above it remains, so repeating
-its relative-phase Toffoli is well defined. Relative phases cancel because every
-gate between a value's two toggles is diagonal.
+The planner may release a value whose operands are available and recompute it
+later. Matched compute/release operations see the same logical controls and
+opposite target transitions; their relative phases cancel. Intervening gates
+need not be diagonal. Emitted oracles still require quantum verification.
 
-Eighteen wires must keep the twelve coordinates inside their span, so at most six
-AND values may be live; `--limit` is that budget.
+This compiler freezes twelve input wires, leaving six clean nodes at width18.
+Larger limits are width-ineligible diagnostics, not challenge candidates.
 """
 import argparse
 import itertools
@@ -140,7 +140,8 @@ def build(parsed, limit, order=None):
     roots, linear, constant = output_parts(parsed)
     graph = XAGGraph(parsed.nodes)
     ops, marks = plan(graph, roots, limit, order)
-    qc = QuantumCircuit(18)
+    # Larger limits are diagnostic only and cannot be challenge submissions.
+    qc = QuantumCircuit(max(18,12+limit))
     if constant:
         qc.global_phase += math.pi
     for w in linear:
@@ -183,8 +184,8 @@ def search(path, limit, seeds=24, seed=0):
             qc, n = build(parsed, limit, order)
         except (ValueError, RecursionError):
             continue
-        native = transpile(qc, basis_gates=['u3', 'cx'], qubits_initially_zero=False,
-                           optimization_level=3, seed_transpiler=0)
+        from distributed_frame_search import native as lower_native
+        native = lower_native(qc)
         key = (native.depth(), native.count_ops().get('cx', 0))
         if best is None or key < best[0]:
             best = (key, native, order, n)
@@ -202,7 +203,7 @@ if __name__ == '__main__':
     best = search(a.xag, a.limit, a.seeds)
     if best is None:
         raise SystemExit(json.dumps(dict(xag=str(a.xag), limit=a.limit,
-                                         result='no LIFO pebbling at this budget')))
+                                         result='heuristic planner found no schedule at this budget')))
     (depth, cx), native, order, toggles = best
     print(json.dumps(dict(xag=str(a.xag), limit=a.limit, depth=depth, cx=cx,
                           toggles=toggles, and_gates=len(parsed_nodes)

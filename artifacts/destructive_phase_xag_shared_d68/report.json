@@ -1,0 +1,753 @@
+{
+  "status": "search_limit",
+  "seconds": 30.01442575000692,
+  "expanded": 377,
+  "guard_rejections": 0,
+  "xag": "artifacts/multiplicative_depth/optimized/shared_balance.xag",
+  "xag_sha256": "558494b0fdf6207f6c55f26bd928cf6f35b35a64fcf491c81c6ee58e57e0e0e3",
+  "and_nodes": 81,
+  "completed_nodes": 32,
+  "relaxed": true,
+  "max_forward": 68,
+  "phased_roots": 0,
+  "exact_phase": false,
+  "forward_native_depth": 66,
+  "dirty_coordinate_targets": 8,
+  "warning": "Restricted constructive search; a stall is not UNSAT",
+  "ops": [
+    [
+      "ccx",
+      [
+        6,
+        7,
+        16
+      ]
+    ],
+    [
+      "ccx",
+      [
+        7,
+        8,
+        13
+      ]
+    ],
+    [
+      "ccx",
+      [
+        4,
+        5,
+        12
+      ]
+    ],
+    [
+      "x",
+      [
+        11
+      ]
+    ],
+    [
+      "ccx",
+      [
+        9,
+        11,
+        15
+      ]
+    ],
+    [
+      "ccx",
+      [
+        2,
+        3,
+        17
+      ]
+    ],
+    [
+      "ccx",
+      [
+        0,
+        1,
+        14
+      ]
+    ],
+    [
+      "ccx",
+      [
+        10,
+        11,
+        14
+      ]
+    ],
+    [
+      "x",
+      [
+        10
+      ]
+    ],
+    [
+      "x",
+      [
+        11
+      ]
+    ],
+    [
+      "ccx",
+      [
+        10,
+        11,
+        14
+      ]
+    ],
+    [
+      "x",
+      [
+        0
+      ]
+    ],
+    [
+      "ccx",
+      [
+        0,
+        17,
+        14
+      ]
+    ],
+    [
+      "x",
+      [
+        0
+      ]
+    ],
+    [
+      "ccx",
+      [
+        0,
+        17,
+        14
+      ]
+    ],
+    [
+      "ccx",
+      [
+        6,
+        15,
+        14
+      ]
+    ],
+    [
+      "x",
+      [
+        6
+      ]
+    ],
+    [
+      "ccx",
+      [
+        6,
+        15,
+        14
+      ]
+    ],
+    [
+      "x",
+      [
+        0
+      ]
+    ],
+    [
+      "x",
+      [
+        3
+      ]
+    ],
+    [
+      "ccx",
+      [
+        0,
+        3,
+        14
+      ]
+    ],
+    [
+      "x",
+      [
+        3
+      ]
+    ],
+    [
+      "ccx",
+      [
+        0,
+        3,
+        14
+      ]
+    ],
+    [
+      "cx",
+      [
+        12,
+        5
+      ]
+    ],
+    [
+      "cx",
+      [
+        13,
+        7
+      ]
+    ],
+    [
+      "ccx",
+      [
+        5,
+        7,
+        4
+      ]
+    ],
+    [
+      "x",
+      [
+        9
+      ]
+    ],
+    [
+      "x",
+      [
+        16
+      ]
+    ],
+    [
+      "ccx",
+      [
+        9,
+        16,
+        4
+      ]
+    ],
+    [
+      "cx",
+      [
+        5,
+        12
+      ]
+    ],
+    [
+      "ccx",
+      [
+        12,
+        9,
+        4
+      ]
+    ],
+    [
+      "ccx",
+      [
+        8,
+        10,
+        4
+      ]
+    ],
+    [
+      "cx",
+      [
+        13,
+        7
+      ]
+    ],
+    [
+      "cx",
+      [
+        8,
+        10
+      ]
+    ],
+    [
+      "x",
+      [
+        10
+      ]
+    ],
+    [
+      "ccx",
+      [
+        7,
+        10,
+        4
+      ]
+    ],
+    [
+      "x",
+      [
+        6
+      ]
+    ],
+    [
+      "ccx",
+      [
+        6,
+        13,
+        4
+      ]
+    ],
+    [
+      "cx",
+      [
+        9,
+        8
+      ]
+    ],
+    [
+      "x",
+      [
+        16
+      ]
+    ],
+    [
+      "ccx",
+      [
+        16,
+        8,
+        4
+      ]
+    ],
+    [
+      "cx",
+      [
+        8,
+        9
+      ]
+    ],
+    [
+      "cx",
+      [
+        10,
+        9
+      ]
+    ],
+    [
+      "x",
+      [
+        9
+      ]
+    ],
+    [
+      "x",
+      [
+        16
+      ]
+    ],
+    [
+      "ccx",
+      [
+        9,
+        16,
+        4
+      ]
+    ],
+    [
+      "ccx",
+      [
+        1,
+        2,
+        12
+      ]
+    ],
+    [
+      "x",
+      [
+        2
+      ]
+    ],
+    [
+      "ccx",
+      [
+        1,
+        2,
+        12
+      ]
+    ],
+    [
+      "x",
+      [
+        11
+      ]
+    ],
+    [
+      "ccx",
+      [
+        11,
+        5,
+        12
+      ]
+    ],
+    [
+      "ccx",
+      [
+        15,
+        5,
+        12
+      ]
+    ]
+  ],
+  "history": [
+    {
+      "node": 16,
+      "target": 16,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 42,
+      "target": 13,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 18,
+      "target": 12,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 35,
+      "target": 15,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            11
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 49,
+      "target": 17,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 63,
+      "target": 14,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 37,
+      "alias": true
+    },
+    {
+      "node": 91,
+      "alias": true
+    },
+    {
+      "node": 38,
+      "alias": true
+    },
+    {
+      "node": 25,
+      "alias": true
+    },
+    {
+      "node": 28,
+      "target": 14,
+      "dirty": true,
+      "pre": []
+    },
+    {
+      "node": 19,
+      "target": 14,
+      "dirty": true,
+      "pre": [
+        [
+          "x",
+          [
+            10
+          ]
+        ],
+        [
+          "x",
+          [
+            11
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 23,
+      "alias": true
+    },
+    {
+      "node": 50,
+      "target": 14,
+      "dirty": true,
+      "pre": [
+        [
+          "x",
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 69,
+      "target": 14,
+      "dirty": true,
+      "pre": [
+        [
+          "x",
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 26,
+      "alias": true
+    },
+    {
+      "node": 36,
+      "target": 14,
+      "dirty": true,
+      "pre": []
+    },
+    {
+      "node": 72,
+      "target": 14,
+      "dirty": true,
+      "pre": [
+        [
+          "x",
+          [
+            6
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 13,
+      "target": 14,
+      "dirty": true,
+      "pre": [
+        [
+          "x",
+          [
+            0
+          ]
+        ],
+        [
+          "x",
+          [
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 33,
+      "target": 14,
+      "dirty": true,
+      "pre": [
+        [
+          "x",
+          [
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 39,
+      "target": 4,
+      "dirty": true,
+      "pre": [
+        [
+          "cx",
+          [
+            12,
+            5
+          ]
+        ],
+        [
+          "cx",
+          [
+            13,
+            7
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 76,
+      "target": 4,
+      "dirty": true,
+      "pre": [
+        [
+          "x",
+          [
+            9
+          ]
+        ],
+        [
+          "x",
+          [
+            16
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 29,
+      "target": 4,
+      "dirty": true,
+      "pre": [
+        [
+          "cx",
+          [
+            5,
+            12
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 71,
+      "target": 4,
+      "dirty": true,
+      "pre": []
+    },
+    {
+      "node": 70,
+      "target": 4,
+      "dirty": true,
+      "pre": [
+        [
+          "cx",
+          [
+            13,
+            7
+          ]
+        ],
+        [
+          "cx",
+          [
+            8,
+            10
+          ]
+        ],
+        [
+          "x",
+          [
+            10
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 43,
+      "target": 4,
+      "dirty": true,
+      "pre": [
+        [
+          "x",
+          [
+            6
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 17,
+      "target": 4,
+      "dirty": true,
+      "pre": [
+        [
+          "cx",
+          [
+            9,
+            8
+          ]
+        ],
+        [
+          "x",
+          [
+            16
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 52,
+      "target": 4,
+      "dirty": true,
+      "pre": [
+        [
+          "cx",
+          [
+            8,
+            9
+          ]
+        ],
+        [
+          "cx",
+          [
+            10,
+            9
+          ]
+        ],
+        [
+          "x",
+          [
+            9
+          ]
+        ],
+        [
+          "x",
+          [
+            16
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 82,
+      "target": 12,
+      "dirty": true,
+      "pre": []
+    },
+    {
+      "node": 15,
+      "target": 12,
+      "dirty": true,
+      "pre": [
+        [
+          "x",
+          [
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 46,
+      "target": 12,
+      "dirty": true,
+      "pre": [
+        [
+          "x",
+          [
+            11
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 53,
+      "target": 12,
+      "dirty": true,
+      "pre": []
+    }
+  ]
+}

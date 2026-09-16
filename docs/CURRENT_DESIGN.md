@@ -1,13 +1,17 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
-September 16 floor analysis: `docs/POST185_ARCHITECTURE_FLOOR.md`. The packaged
-185 is 6% above the `r + 2c <= n` scheduling bound for its own codes (174.4), so
-the remaining depth is not recoverable by rewrites or rescheduling. The best
-bound over all class codes is 148.5, but codes that reach it build to 240 because
-a sparser spectrum costs proportionally more CX per rotation. Loaded-bits-for-raw
--wires, ANF loaders, and loader-aware relabelling are all closed there. The two
-open targets are a Boolean network with peak liveness <= 6 above the coordinates,
-and a parity-network emitter that keeps its rate at low spectral density.
+Latest: `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md` implements the deep-research
+report's physical XAG and solver-audit direction. Protected185/854/18 remains
+best. All18 wires may participate destructively; the six-clean-node restriction
+is compiler-specific. Current whole-logo searches have not completed. The joint
+storage solver's old UNSAT is invalid; corrected fixed-schedule results do not
+close its witness/schedule family. Read the corrected AND-network note before
+using leaderboard counts, liveness or degree-search results as evidence.
+
+The `r + 2c <= n` analysis in `POST185_ARCHITECTURE_FLOOR.md` is specific to its
+parity-walk/UCR realization. Its174.4 estimate is not a universal oracle bound;
+148.5 is the best bound proxy found by a finite label search, not a proved
+optimum over all codes. Tested emitters at those codes did not improve185.
 
 September16 Direct-E v2 follow-up: `docs/POST185_DIRECT_E_V2.md` records the
 reproduced886-to264 affine ANF witness, physical layer search with exact output

@@ -1,0 +1,229 @@
+{
+  "status": "restricted_search_stalled",
+  "seconds": 11.447956084040925,
+  "expanded": 785,
+  "guard_rejections": 320632,
+  "xag": "artifacts/multiplicative_depth/optimized/shared_balance.xag",
+  "completed_nodes": 13,
+  "phased_roots": 0,
+  "exact_phase": false,
+  "forward_native_depth": 17,
+  "history": [
+    {
+      "node": 37,
+      "target": 12,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            4
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 71,
+      "target": 13,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            10
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 33,
+      "target": 15,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 15,
+      "target": 14,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 13,
+      "alias": true
+    },
+    {
+      "node": 35,
+      "target": 16,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            11
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 82,
+      "alias": true
+    },
+    {
+      "node": 18,
+      "alias": true
+    },
+    {
+      "node": 91,
+      "alias": true
+    },
+    {
+      "node": 42,
+      "target": 17,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 23,
+      "alias": true
+    },
+    {
+      "node": 38,
+      "alias": true
+    },
+    {
+      "node": 70,
+      "target": 13,
+      "dirty": true,
+      "pre": [
+        [
+          "cx",
+          [
+            10,
+            8
+          ]
+        ],
+        [
+          "x",
+          [
+            8
+          ]
+        ]
+      ]
+    }
+  ],
+  "ops": [
+    [
+      "x",
+      [
+        4
+      ]
+    ],
+    [
+      "ccx",
+      [
+        4,
+        5,
+        12
+      ]
+    ],
+    [
+      "x",
+      [
+        10
+      ]
+    ],
+    [
+      "ccx",
+      [
+        8,
+        10,
+        13
+      ]
+    ],
+    [
+      "x",
+      [
+        0
+      ]
+    ],
+    [
+      "ccx",
+      [
+        0,
+        3,
+        15
+      ]
+    ],
+    [
+      "x",
+      [
+        2
+      ]
+    ],
+    [
+      "ccx",
+      [
+        1,
+        2,
+        14
+      ]
+    ],
+    [
+      "x",
+      [
+        11
+      ]
+    ],
+    [
+      "ccx",
+      [
+        9,
+        11,
+        16
+      ]
+    ],
+    [
+      "ccx",
+      [
+        7,
+        8,
+        17
+      ]
+    ],
+    [
+      "cx",
+      [
+        10,
+        8
+      ]
+    ],
+    [
+      "x",
+      [
+        8
+      ]
+    ],
+    [
+      "ccx",
+      [
+        7,
+        8,
+        13
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/xag_pebble_exact.py",
+    "--xag",
+    "artifacts/multiplicative_depth/optimized/shared_balance.xag",
+    "--out",
+    "artifacts/shared_balance_exact6.json",
+    "--limit",
+    "6",
+    "--horizon",
+    "212",
+    "--seconds",
+    "20"
+  ],
+  "seconds": 23.05265679198783,
+  "limit_seconds": 80.0
+}

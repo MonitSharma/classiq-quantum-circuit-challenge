@@ -1,52 +1,22 @@
 # Continuation handoff
 
-## September 16: width-constrained synthesis attempted; width tracks AND depth
+## September 16: corrected deep-research implementation
 
-Read `docs/POST185_AND_NETWORK_ROUTE.md` sections 6-7. Pebbling every exact XAG
-into an 18-wire oracle (`src/post185_xag_pebble.py`, one shared pass and a Z per
-root instead of an accumulator) gives the first real width numbers: the smallest
-working ancilla budget is 11 for `shared_balance` (81 ANDs, MD 6, 212 toggles)
-and 14-20 for the 62-65 gate MD-8 networks. **Width tracks multiplicative depth,
-not AND count**, so the synthesis target sharpens from "at most six live values"
-to **AND depth 4-5 at 60-120 gates**; the only MD-4 network on record has 5,096
-gates. Two constructions that would have removed the width problem are closed.
-A scratch-free loader needs degree-3 code bits, and annealing the per-address
-label directly -- strictly more freedom than the class-constant labelings every
-earlier search used, since a code only has to determine the class -- still gives
-minimum degree **5**. A quadratic cascade (`t2=Q2(y)`, `t1=Q1(y,t2)`,
-`t0=Q0(y,t2,t1)`, degrees 2/4/8) reaches residual 1-2, never 0, and would
-serialise onto three wires anyway. The structural reason is recorded: the twelve
-coordinate wires must keep spanning the coordinates, so they can never hold a
-usable AND value, while a rotation loader is happy to host parities on them --
-nine wires of parallelism at zero scratch against an AND loader's three. The AND
-route pays for the whole twelve-input function at once, not inside the class-code
-factorisation. Seventeen focused tests pass; protected 185/854/18 unchanged;
-nothing submitted.
-
-## September 16: the leaderboard says AND network, and width is the gap
-
-Read `docs/POST185_AND_NETWORK_ROUTE.md`. Reading the top five entries' CX counts
-as six per AND gate (a relative-phase Toffoli computed and uncomputed) divides
-them into 57-59, 93.5 and 123 AND operations, and their depth/CX ratios split
-into 0.24 and 0.50 -- the AND-count versus AND-depth trade. All five are direct
-Boolean AND networks; our 854 CX at ratio 0.217 is a rotation lookup, a different
-regime. `artifacts/multiplicative_depth/optimized/shared_balance.xag` is exact,
-has 81 AND gates, AND depth 6 and only 36 routing CX, predicting 558 CX against
-rank one's 561 and about 137 layers: rank one's circuit is a network already on
-disk. What blocks it is width: eighteen wires must keep the twelve coordinates in
-their span, so at most six AND values may be live, and every exact network here
-needs fourteen to sixteen. Rank order tracks width, not size. Two corrections:
-`affine_none.xag` and `affine_balance_118.xag` are not exact for the logo; and
-`src/xag_to_inplace_layers.py`'s 5,131 layers is a compiler artifact worth 4.3x
-the minimum, from rebuilding each of eleven root cones and then wrapping the
-result in E-Z-E-dagger, when the output is an affine form whose constant is a
-global phase and whose linear terms are free Z gates. New closure: the NIST
-minimum-multiplicative-complexity code witnesses are now built and verified
-(`src/post185_and_loader.py`) at 256/245 and 283/265 against the 78/198 rotation
-loader they were meant to replace -- fourteen AND gates but popcount-four to -six
-affine operands, and the CNOT routing dominates. Minimum AND count is the wrong
-objective. Twelve focused tests pass; protected 185/854/18 unchanged; nothing
-submitted.
+Read `POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md` and the rewritten
+`POST185_AND_NETWORK_ROUTE.md`. Leaderboard architecture identification,
+universal six-live-node limits, degree/cascade impossibility, and width-from-MD
+claims were unsupported and are superseded. The old note is archived.
+Implemented physical destructive XAG lowering, paid affine exposure, intermediate
+Z/CZ phase taps and literal inverse; synthetic no-clean-ancilla dirty-coordinate
+cases pass. Full logo searches remain incomplete. Fixed joint storage solver
+operand remapping, x4 XOR x5 endpoint, all-zero initial rows, XOR replay,
+schedule replay, and inverse checks. The original0.13-second UNSAT is invalid;
+the corrected fixed schedule separately returns UNSAT in0.42 seconds. Broader
+fixed-schedule probes remain scoped, not family-wide conclusions. Protected
+185/854/18 is unchanged.30 focused/regression tests pass and all8 saved physical
+traces independently replay; no jobs remain running. The old212-toggle pebbler now has full4096-input quantum
+verification at23 wires/692 depth/728 CX, explicitly width-ineligible. Exact
+six-pebble feasibility at212 toggles timed out. Rank one remains unfinished.
 
 ## September 16: measured floor, with joint 18-wire route still open
 

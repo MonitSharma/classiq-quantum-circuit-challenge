@@ -4,16 +4,18 @@ Current protected best is now **185 / 854 / 18**, `artifacts/185/`, as confirmed
 
 Read `docs/HANDOFF.md`, `docs/EXPERIMENTS.md`, and `docs/CURRENT_DESIGN.md` before continuing. The user's objective is rank 1 in the Classiq challenge. Do not report that objective achieved based only on a local circuit improvement.
 
-Read `docs/POST185_AND_NETWORK_ROUTE.md` first: the leaderboard's CX counts are
-six per AND gate, so every top entry is a Boolean AND network, not a rotation
-lookup, and `shared_balance.xag` in this repository already matches rank one's
-cost profile. The only blocker is width -- at most six AND values may be live,
-and the exact networks need fourteen to sixteen. Do not cite the 5,131-layer
-result against this route; it is a compiler artifact. Do not pursue minimum
-multiplicative complexity; its encoders are built and measured, and they lose.
-Do not re-attempt scratch-free or cascade code loaders: minimum code degree is 5,
-so neither exists. The measured synthesis target is an exact XAG at AND depth 4-5
-with 60-120 gates -- width follows multiplicative depth, 11 ancillas at MD 6.
+Read `docs/POST185_AND_NETWORK_ROUTE.md` and
+`docs/POST185_DESTRUCTIVE_XAG_IMPLEMENTATION.md` first. Leaderboard CX counts
+suggest possible architectures but do not identify them; shared_balance's558
+proxy is not a compiled rank-one circuit. Six clean AND targets is a restriction
+of the input-preserving compiler, not a universal18-wire bound. The current
+pebbler found11 scratch for shared_balance; it did not prove optimality. Width
+does not follow from multiplicative depth alone. Degree/cascade annealing
+failures are heuristic, not impossibility proofs. Prioritize destructive physical
+lowering of exact XAGs and corrected joint18-wire storage feasibility, with
+native depth and exact phase verification. Do not cite5,131 layers against the
+whole XAG route or restart minimum-AND side-loader sweeps; their built witnesses
+lose through affine-routing cost. See the new report for bounded search results.
 
 Also read `docs/POST185_ARCHITECTURE_FLOOR.md` before proposing another code or
 emitter change. Its `r + 2c <= n` result is a representation-specific floor for

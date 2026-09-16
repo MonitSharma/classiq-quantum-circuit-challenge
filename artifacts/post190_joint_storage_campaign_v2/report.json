@@ -1,0 +1,626 @@
+[
+  {
+    "status": "UNSAT",
+    "seconds": 0.3318105419166386,
+    "timeout_ms": 3000,
+    "schedule": [
+      [
+        0,
+        1,
+        5,
+        14,
+        16,
+        19
+      ],
+      [
+        20,
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      [
+        8,
+        11,
+        15,
+        21,
+        22,
+        24
+      ],
+      [
+        12,
+        17,
+        25,
+        4,
+        9,
+        23
+      ],
+      [
+        13,
+        18,
+        26
+      ]
+    ],
+    "endpoint_mode": "literal",
+    "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+    "width": 18,
+    "inputs": 12,
+    "revision": "corrected-v2",
+    "x_source": "artifacts/post190_nist_variants_wide/x_candidate_0.json",
+    "y_source": "artifacts/post190_nist_variants_wide/y_candidate_0.json",
+    "semantic_rank": 40
+  },
+  {
+    "status": "UNSAT",
+    "seconds": 0.3183325841091573,
+    "timeout_ms": 3000,
+    "schedule": [
+      [
+        0,
+        1,
+        5,
+        14,
+        16,
+        19
+      ],
+      [
+        20,
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      [
+        8,
+        11,
+        15,
+        21,
+        22,
+        24
+      ],
+      [
+        12,
+        17,
+        25,
+        4,
+        9,
+        23
+      ],
+      [
+        13,
+        18,
+        26
+      ]
+    ],
+    "endpoint_mode": "literal",
+    "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+    "width": 18,
+    "inputs": 12,
+    "revision": "corrected-v2",
+    "x_source": "artifacts/post190_nist_variants_wide/x_candidate_0.json",
+    "y_source": "artifacts/post190_nist_variants_wide/y_candidate_7.json",
+    "semantic_rank": 40
+  },
+  {
+    "status": "UNSAT",
+    "seconds": 0.3292792499996722,
+    "timeout_ms": 3000,
+    "schedule": [
+      [
+        0,
+        1,
+        5,
+        14,
+        16,
+        19
+      ],
+      [
+        20,
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      [
+        8,
+        11,
+        15,
+        21,
+        22,
+        24
+      ],
+      [
+        12,
+        17,
+        25,
+        4,
+        9,
+        23
+      ],
+      [
+        13,
+        18,
+        26
+      ]
+    ],
+    "endpoint_mode": "literal",
+    "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+    "width": 18,
+    "inputs": 12,
+    "revision": "corrected-v2",
+    "x_source": "artifacts/post190_nist_variants_wide/x_candidate_1.json",
+    "y_source": "artifacts/post190_nist_variants_wide/y_candidate_0.json",
+    "semantic_rank": 40
+  },
+  {
+    "status": "UNSAT",
+    "seconds": 0.3341826250543818,
+    "timeout_ms": 3000,
+    "schedule": [
+      [
+        0,
+        1,
+        5,
+        14,
+        16,
+        19
+      ],
+      [
+        20,
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      [
+        8,
+        11,
+        15,
+        21,
+        22,
+        24
+      ],
+      [
+        12,
+        17,
+        25,
+        4,
+        9,
+        23
+      ],
+      [
+        13,
+        18,
+        26
+      ]
+    ],
+    "endpoint_mode": "literal",
+    "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+    "width": 18,
+    "inputs": 12,
+    "revision": "corrected-v2",
+    "x_source": "artifacts/post190_nist_variants_wide/x_candidate_1.json",
+    "y_source": "artifacts/post190_nist_variants_wide/y_candidate_7.json",
+    "semantic_rank": 40
+  },
+  {
+    "status": "UNSAT",
+    "seconds": 0.3418824579566717,
+    "timeout_ms": 3000,
+    "schedule": [
+      [
+        0,
+        1,
+        5,
+        14,
+        16,
+        19
+      ],
+      [
+        20,
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      [
+        8,
+        11,
+        15,
+        21,
+        22,
+        24
+      ],
+      [
+        12,
+        17,
+        25,
+        4,
+        9,
+        23
+      ],
+      [
+        13,
+        18,
+        26
+      ]
+    ],
+    "endpoint_mode": "literal",
+    "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+    "width": 18,
+    "inputs": 12,
+    "revision": "corrected-v2",
+    "x_source": "artifacts/post190_nist_variants_wide/x_candidate_2.json",
+    "y_source": "artifacts/post190_nist_variants_wide/y_candidate_0.json",
+    "semantic_rank": 40
+  },
+  {
+    "status": "UNSAT",
+    "seconds": 0.347729624947533,
+    "timeout_ms": 3000,
+    "schedule": [
+      [
+        0,
+        1,
+        5,
+        14,
+        16,
+        19
+      ],
+      [
+        20,
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      [
+        8,
+        11,
+        15,
+        21,
+        22,
+        24
+      ],
+      [
+        12,
+        17,
+        25,
+        4,
+        9,
+        23
+      ],
+      [
+        13,
+        18,
+        26
+      ]
+    ],
+    "endpoint_mode": "literal",
+    "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+    "width": 18,
+    "inputs": 12,
+    "revision": "corrected-v2",
+    "x_source": "artifacts/post190_nist_variants_wide/x_candidate_2.json",
+    "y_source": "artifacts/post190_nist_variants_wide/y_candidate_7.json",
+    "semantic_rank": 40
+  },
+  {
+    "status": "UNSAT",
+    "seconds": 0.35893283307086676,
+    "timeout_ms": 3000,
+    "schedule": [
+      [
+        0,
+        1,
+        5,
+        14,
+        16,
+        19
+      ],
+      [
+        20,
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      [
+        8,
+        11,
+        15,
+        21,
+        22,
+        24
+      ],
+      [
+        12,
+        17,
+        25,
+        4,
+        9,
+        23
+      ],
+      [
+        13,
+        18,
+        26
+      ]
+    ],
+    "endpoint_mode": "literal",
+    "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+    "width": 18,
+    "inputs": 12,
+    "revision": "corrected-v2",
+    "x_source": "artifacts/post190_nist_variants_wide/x_candidate_3.json",
+    "y_source": "artifacts/post190_nist_variants_wide/y_candidate_0.json",
+    "semantic_rank": 40
+  },
+  {
+    "status": "UNSAT",
+    "seconds": 0.36969754204619676,
+    "timeout_ms": 3000,
+    "schedule": [
+      [
+        0,
+        1,
+        5,
+        14,
+        16,
+        19
+      ],
+      [
+        20,
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      [
+        8,
+        11,
+        15,
+        21,
+        22,
+        24
+      ],
+      [
+        12,
+        17,
+        25,
+        4,
+        9,
+        23
+      ],
+      [
+        13,
+        18,
+        26
+      ]
+    ],
+    "endpoint_mode": "literal",
+    "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+    "width": 18,
+    "inputs": 12,
+    "revision": "corrected-v2",
+    "x_source": "artifacts/post190_nist_variants_wide/x_candidate_3.json",
+    "y_source": "artifacts/post190_nist_variants_wide/y_candidate_7.json",
+    "semantic_rank": 40
+  },
+  {
+    "status": "UNSAT",
+    "seconds": 0.35843954200390726,
+    "timeout_ms": 3000,
+    "schedule": [
+      [
+        6,
+        5,
+        14,
+        7,
+        20,
+        24
+      ],
+      [
+        1,
+        22,
+        8,
+        0,
+        10,
+        19
+      ],
+      [
+        3,
+        16,
+        2,
+        11,
+        15,
+        21
+      ],
+      [
+        23,
+        25,
+        4,
+        17,
+        12,
+        9
+      ],
+      [
+        18,
+        13,
+        26
+      ]
+    ],
+    "endpoint_mode": "literal",
+    "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+    "width": 18,
+    "inputs": 12,
+    "revision": "corrected-v2",
+    "x_source": "/Users/monitsharma/Downloads/classiq/artifacts/post190_nist_variants/x_candidate_0.json",
+    "y_source": "/Users/monitsharma/Downloads/classiq/artifacts/post190_nist_variants_wide/y_candidate_0.json",
+    "semantic_rank": 40
+  },
+  {
+    "status": "UNSAT",
+    "seconds": 0.3825993749778718,
+    "timeout_ms": 3000,
+    "schedule": [
+      [
+        7,
+        0,
+        15,
+        16,
+        10,
+        19
+      ],
+      [
+        1,
+        20,
+        5,
+        21,
+        24,
+        11
+      ],
+      [
+        2,
+        22,
+        3,
+        14,
+        12,
+        6
+      ],
+      [
+        23,
+        25,
+        8,
+        17,
+        13,
+        4
+      ],
+      [
+        9,
+        18,
+        26
+      ]
+    ],
+    "endpoint_mode": "literal",
+    "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+    "width": 18,
+    "inputs": 12,
+    "revision": "corrected-v2",
+    "x_source": "/Users/monitsharma/Downloads/classiq/artifacts/post190_nist_variants/x_candidate_0.json",
+    "y_source": "/Users/monitsharma/Downloads/classiq/artifacts/post190_nist_variants_wide/y_candidate_0.json",
+    "semantic_rank": 40
+  },
+  {
+    "status": "UNSAT",
+    "seconds": 0.3694248750107363,
+    "timeout_ms": 3000,
+    "schedule": [
+      [
+        0,
+        19,
+        16,
+        7,
+        5,
+        24
+      ],
+      [
+        11,
+        25,
+        1,
+        14,
+        15,
+        21
+      ],
+      [
+        10,
+        6,
+        3,
+        17,
+        2,
+        20
+      ],
+      [
+        12,
+        22,
+        18,
+        4,
+        8,
+        26
+      ],
+      [
+        23,
+        9,
+        13
+      ]
+    ],
+    "endpoint_mode": "literal",
+    "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+    "width": 18,
+    "inputs": 12,
+    "revision": "corrected-v2",
+    "x_source": "/Users/monitsharma/Downloads/classiq/artifacts/post190_nist_variants/x_candidate_0.json",
+    "y_source": "/Users/monitsharma/Downloads/classiq/artifacts/post190_nist_variants_wide/y_candidate_0.json",
+    "semantic_rank": 40
+  },
+  {
+    "status": "UNSAT",
+    "seconds": 0.36250183393713087,
+    "timeout_ms": 3000,
+    "schedule": [
+      [
+        20,
+        2,
+        24,
+        7,
+        15,
+        10
+      ],
+      [
+        11,
+        19,
+        1,
+        0,
+        5,
+        14
+      ],
+      [
+        21,
+        22,
+        17,
+        16,
+        3,
+        6
+      ],
+      [
+        23,
+        8,
+        25,
+        4,
+        12,
+        18
+      ],
+      [
+        9,
+        26,
+        13
+      ]
+    ],
+    "endpoint_mode": "literal",
+    "model": "40-bit semantic rows; 6 explicit invertible affine frames",
+    "width": 18,
+    "inputs": 12,
+    "revision": "corrected-v2",
+    "x_source": "/Users/monitsharma/Downloads/classiq/artifacts/post190_nist_variants/x_candidate_0.json",
+    "y_source": "/Users/monitsharma/Downloads/classiq/artifacts/post190_nist_variants_wide/y_candidate_0.json",
+    "semantic_rank": 40
+  }
+]

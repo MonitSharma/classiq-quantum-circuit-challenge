@@ -1,0 +1,196 @@
+{
+  "status": "restricted_search_stalled",
+  "seconds": 0.9197942500468343,
+  "expanded": 58,
+  "guard_rejections": 24241,
+  "xag": "artifacts/multiplicative_depth/optimized/shared_balance.xag",
+  "xag_sha256": "558494b0fdf6207f6c55f26bd928cf6f35b35a64fcf491c81c6ee58e57e0e0e3",
+  "and_nodes": 81,
+  "completed_nodes": 10,
+  "phased_roots": 0,
+  "exact_phase": false,
+  "forward_native_depth": 8,
+  "dirty_coordinate_targets": 0,
+  "warning": "Restricted constructive search; a stall is not UNSAT",
+  "ops": [
+    [
+      "x",
+      [
+        2
+      ]
+    ],
+    [
+      "x",
+      [
+        3
+      ]
+    ],
+    [
+      "ccx",
+      [
+        2,
+        3,
+        16
+      ]
+    ],
+    [
+      "ccx",
+      [
+        4,
+        5,
+        15
+      ]
+    ],
+    [
+      "x",
+      [
+        0
+      ]
+    ],
+    [
+      "ccx",
+      [
+        0,
+        8,
+        13
+      ]
+    ],
+    [
+      "x",
+      [
+        9
+      ]
+    ],
+    [
+      "ccx",
+      [
+        7,
+        9,
+        12
+      ]
+    ],
+    [
+      "x",
+      [
+        10
+      ]
+    ],
+    [
+      "ccx",
+      [
+        10,
+        11,
+        17
+      ]
+    ],
+    [
+      "x",
+      [
+        1
+      ]
+    ],
+    [
+      "ccx",
+      [
+        0,
+        1,
+        14
+      ]
+    ]
+  ],
+  "history": [
+    {
+      "node": 25,
+      "target": 16,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            2
+          ]
+        ],
+        [
+          "x",
+          [
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 18,
+      "target": 15,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 58,
+      "target": 13,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 65,
+      "target": 12,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            9
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 19,
+      "target": 17,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            10
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 28,
+      "alias": true
+    },
+    {
+      "node": 49,
+      "alias": true
+    },
+    {
+      "node": 37,
+      "alias": true
+    },
+    {
+      "node": 26,
+      "target": 14,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 63,
+      "alias": true
+    }
+  ]
+}

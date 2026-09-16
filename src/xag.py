@@ -72,8 +72,9 @@ def linear_best(q,a,b,wire):
  const=[-1 in a,-1 in b]
  if not forms[0] or not forms[1] or forms[0]==forms[1]:raise ValueError('dependent forms')
  choices=[]
+ width=max(18,max(wire.values(),default=-1)+1)
  for p0 in sorted(forms[0]):
-  f0=set(forms[0]);f1=set(forms[1]);pre=QuantumCircuit(18)
+  f0=set(forms[0]);f1=set(forms[1]);pre=QuantumCircuit(width)
   for c in sorted(f0-{p0}):
    pre.cx(c,p0)
    if p0 in f1:
@@ -81,7 +82,7 @@ def linear_best(q,a,b,wire):
     else:f1.add(c)
   candidates=f1-{p0}
   for r0 in sorted(candidates):
-   ppre=QuantumCircuit(18);ppre.compose(pre,inplace=True)
+   ppre=QuantumCircuit(width);ppre.compose(pre,inplace=True)
    for c in sorted(f1-{r0}):ppre.cx(c,r0)
    if const[0]:ppre.x(p0)
    if const[1]:ppre.x(r0)

@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "returncode": 0,
+  "command": [
+    "/Users/monitsharma/Downloads/classiq/.venv/bin/python",
+    "src/post190_joint_storage_campaign_v2.py",
+    "--outdir",
+    "artifacts/post190_joint_storage_campaign_v2"
+  ],
+  "seconds": 66.2811087500304,
+  "limit_seconds": 140.0
+}

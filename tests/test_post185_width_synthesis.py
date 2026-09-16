@@ -22,8 +22,8 @@ def protected_codes():
             'x': ([xl[(par(x, 48), ts.COLCLS[x])] for x in range(64)], ts.COLCLS, 48)}
 
 
-def test_no_scratch_free_code_exists():
-    """A zero-scratch loader needs degree <= 3; the best valid code is degree 5."""
+def test_bounded_label_search_does_not_find_degree_three():
+    """Regression of a finite search; not an impossibility or minimum-degree proof."""
     for side, (start, cls, mask) in protected_codes().items():
         best = W.min_degree(cls, mask, start, steps=4000, seeds=2)
         assert best is not None
@@ -45,7 +45,7 @@ def test_conflicts_detects_an_invalid_code():
     assert W.conflicts(broken, cls, raw) > 0
 
 
-def test_narrowest_network_still_needs_far_more_than_six_ancillas():
+def test_current_planner_fails_at_six_and_finds_eleven():
     parsed = load_xag(XAGS / 'shared_balance.xag')
     graph = XAGGraph(parsed.nodes)
     roots, _, _ = P.output_parts(parsed)

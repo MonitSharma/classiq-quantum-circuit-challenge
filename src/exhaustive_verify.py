@@ -5,9 +5,11 @@ import numpy as np
 from qiskit import qasm2
 from search import logo
 
-def exhaustive(path):
+def exhaustive(path, max_width=18):
  source=Path(path).read_text();q=qasm2.loads(source)
- assert 12<=q.num_qubits<=18 and set(q.count_ops())<={'u3','cx'}
+ # Width overrides are explicitly for oversized diagnostic circuits. Default
+ # submission verification retains the challenge's strict 18-wire limit.
+ assert 12<=q.num_qubits<=max_width<=30 and set(q.count_ops())<={'u3','cx'}
  n=4096;indices=np.arange(n,dtype=np.int32)[:,None];amp=np.ones((n,1),complex)
  dropped=np.zeros(n);peak=1;start=time.time();tol=2e-15
  def compress(idx,a):
@@ -50,5 +52,7 @@ def exhaustive(path):
  leak=float(np.max(np.abs(amp)*(indices>=4096),initial=0));bound=float(dropped.max())
  assert err+bound<1e-10,(err,bound)
  report=dict(qasm=str(Path(path).resolve()),sha256=hashlib.sha256(source.encode()).hexdigest(),basis_inputs_checked=n,width=q.num_qubits,depth=q.depth(),cx_count=q.count_ops().get('cx',0),max_error=err,ancilla_error=leak,discarded_amplitude_bound=bound,peak_sparse_support=peak,elapsed_seconds=time.time()-start,verification='Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions')
+ report['challenge_width_eligible']=q.num_qubits<=18
+ if max_width>18:report['diagnostic_width_limit']=max_width
  Path(path).with_suffix('.exhaustive.json').write_text(json.dumps(report,indent=2));print(json.dumps(report,indent=2),flush=True)
 if __name__=='__main__':exhaustive(sys.argv[1])

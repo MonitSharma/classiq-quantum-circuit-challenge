@@ -55,8 +55,8 @@ def semantic_screen(xpath=XPATH,ypath=YPATH):
     nodes=xt+yt
     all_functions=initial+nodes
     # A free affine frame can expose any member of the current semantic span.
-    # Dirty RCCX updates add each node to that span; target choice does not
-    # change the span, while the six-target cap is enforced by the batches.
+    # This accumulated span is a relaxation only: a dirty target update can
+    # replace a direction and lose old affine information.
     base_rank=rank(initial)
     final_rank=rank(all_functions)
     deps=dependencies(remap(x,0,6)+remap(y,6,20))
@@ -65,8 +65,8 @@ def semantic_screen(xpath=XPATH,ypath=YPATH):
     for batch in batches:
         prefix.extend(nodes[i] for i in batch)
         stage_ranks.append(rank(initial+prefix))
-    # The protected two-stage layout uses x4 and y5 as the raw half tags.
-    endpoint=xo+[truth(lambda z,i=i:bool((z>>(i+0))&1)) for i in [4]]
+    # Protected raw masks: x4 XOR x5, and y5.
+    endpoint=xo+[truth(lambda z: bool(((z>>4)^(z>>5))&1))]
     endpoint += yo+[truth(lambda z,i=i:bool((z>>(i+6))&1)) for i in [5]]
     endpoint_rank=rank(endpoint)
     endpoint_in_span=rank(initial+nodes+endpoint)==final_rank

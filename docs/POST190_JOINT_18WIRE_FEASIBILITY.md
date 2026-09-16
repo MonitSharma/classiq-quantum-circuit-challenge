@@ -100,6 +100,10 @@ SAT conclusion about the 18-wire architecture is drawn from it.
 
 ## First storage-aware free-frame result
 
+**Superseded correctness warning (September16):** the original0.13-second
+UNSAT below was produced by a defective model and must not be used as evidence.
+See the corrected follow-up after this historical paragraph.
+
 `src/post190_joint_18wire_storage_sat.py` implements the next, stricter model
 for candidate-0 and the first recorded five-batch schedule. It uses 40-bit
 semantic coordinates, six explicit invertible 18×18 affine frames, canonical
@@ -114,6 +118,39 @@ and then the remaining witness portfolio; only an exhaustive UNSAT over those
 cases could close the fixed x14+y13 family.
 
 Artifact: `artifacts/post190_joint_18wire_storage/report.json`.
+
+## Corrected storage model and bounded portfolio probes
+
+The v2 fix repairs six defects in `post190_joint_18wire_storage_sat.py`:
+
+- Already-global operand indices were passed through the local side mapper again.
+- The x raw endpoint omitted x5; it must be x4 XOR x5.
+- The initial-row expression required j==bit and j==bit-1 simultaneously, so
+  every input row was zero.
+- Independent frame replay used integer sum rather than GF(2) XOR.
+- Replay ignored the actual supplied schedule in favor of the module constant.
+- Replay did not independently check extracted frame/inverse products.
+
+The semantic endpoint diagnostic's x raw tag and misleading accumulated-span
+comment were also corrected. Tests compare every operand product and endpoint
+with actual4096-input truth tables. Formal coordinates have verified rank40 for
+each probed witness pair, so the formal-symbol model is exact for that pair's
+affine forms. Small known-feasible dirty and clean cases return SAT; a missing
+nonlinear direction returns UNSAT. These replace the regression test that
+simply asserted the old erroneous UNSAT result.
+
+The corrected original fixed schedule returns UNSAT in0.42 seconds. A separate
+campaign tests eight witness pairs (two y choices for each of four x choices)
+with their saved schedules and four additional legal five-batch schedules for
+the initial pair. All12 are UNSAT, with solver checks about0.32–0.38 seconds.
+These results exclude those exact once-per-node batch models, with arbitrary
+invertible affine frames. They do not exclude every schedule, all32 pairs,
+recomputation, different Boolean networks, or a more general destructive circuit.
+No CNOT-depth optimum or native encoder follows from these probes.
+
+Artifacts: `artifacts/post190_joint_18wire_storage_v2/`,
+`artifacts/post190_joint_storage_campaign_v2/`, and their external wall reports.
+Both processes completed. The original artifact is preserved as invalid history.
 
 ## Reproduction
 

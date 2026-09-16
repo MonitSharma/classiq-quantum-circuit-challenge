@@ -1,0 +1,171 @@
+{
+  "status": "restricted_search_stalled",
+  "seconds": 4.8214974999427795,
+  "expanded": 513,
+  "guard_rejections": 127554,
+  "xag": "artifacts/multiplicative_depth/optimized/advanced_round2.xag",
+  "completed_nodes": 8,
+  "phased_roots": 0,
+  "exact_phase": false,
+  "forward_native_depth": 8,
+  "history": [
+    {
+      "node": 47,
+      "target": 12,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            4
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 23,
+      "target": 13,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            0
+          ]
+        ],
+        [
+          "x",
+          [
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 31,
+      "target": 16,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 17,
+      "target": 15,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 13,
+      "alias": true
+    },
+    {
+      "node": 34,
+      "alias": true
+    },
+    {
+      "node": 70,
+      "target": 17,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            10
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 56,
+      "target": 14,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            2
+          ]
+        ]
+      ]
+    }
+  ],
+  "ops": [
+    [
+      "x",
+      [
+        4
+      ]
+    ],
+    [
+      "ccx",
+      [
+        4,
+        5,
+        12
+      ]
+    ],
+    [
+      "x",
+      [
+        0
+      ]
+    ],
+    [
+      "x",
+      [
+        3
+      ]
+    ],
+    [
+      "ccx",
+      [
+        0,
+        3,
+        13
+      ]
+    ],
+    [
+      "ccx",
+      [
+        6,
+        7,
+        16
+      ]
+    ],
+    [
+      "ccx",
+      [
+        9,
+        11,
+        15
+      ]
+    ],
+    [
+      "x",
+      [
+        10
+      ]
+    ],
+    [
+      "ccx",
+      [
+        9,
+        10,
+        17
+      ]
+    ],
+    [
+      "x",
+      [
+        2
+      ]
+    ],
+    [
+      "ccx",
+      [
+        0,
+        2,
+        14
+      ]
+    ]
+  ]
+}

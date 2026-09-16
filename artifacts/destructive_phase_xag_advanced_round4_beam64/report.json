@@ -1,0 +1,146 @@
+{
+  "status": "restricted_search_stalled",
+  "seconds": 4.143833290901966,
+  "expanded": 461,
+  "guard_rejections": 99253,
+  "xag": "artifacts/multiplicative_depth/optimized/advanced_round4.xag",
+  "completed_nodes": 8,
+  "phased_roots": 0,
+  "exact_phase": false,
+  "forward_native_depth": 10,
+  "history": [
+    {
+      "node": 18,
+      "target": 14,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 30,
+      "target": 13,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 70,
+      "target": 16,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 38,
+      "target": 17,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            11
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 37,
+      "target": 15,
+      "dirty": false,
+      "pre": [
+        [
+          "x",
+          [
+            9
+          ]
+        ]
+      ]
+    },
+    {
+      "node": 29,
+      "alias": true
+    },
+    {
+      "node": 52,
+      "target": 12,
+      "dirty": false,
+      "pre": []
+    },
+    {
+      "node": 42,
+      "alias": true
+    }
+  ],
+  "ops": [
+    [
+      "ccx",
+      [
+        3,
+        4,
+        14
+      ]
+    ],
+    [
+      "ccx",
+      [
+        6,
+        7,
+        13
+      ]
+    ],
+    [
+      "x",
+      [
+        0
+      ]
+    ],
+    [
+      "ccx",
+      [
+        0,
+        8,
+        16
+      ]
+    ],
+    [
+      "x",
+      [
+        11
+      ]
+    ],
+    [
+      "ccx",
+      [
+        10,
+        11,
+        17
+      ]
+    ],
+    [
+      "x",
+      [
+        9
+      ]
+    ],
+    [
+      "ccx",
+      [
+        5,
+        9,
+        15
+      ]
+    ],
+    [
+      "ccx",
+      [
+        4,
+        5,
+        12
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "qasm": "/Users/monitsharma/Downloads/classiq/artifacts/shared_balance_pebble_23wire_diagnostic/diagnostic.qasm",
+  "sha256": "e76f34608f544780e0940cbfd04707c3d0c37855aaed365d481cab3f84a928dd",
+  "basis_inputs_checked": 4096,
+  "width": 23,
+  "depth": 692,
+  "cx_count": 728,
+  "max_error": 1.9955004229856578e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.0160496878525703e-13,
+  "peak_sparse_support": 256,
+  "elapsed_seconds": 5.480470180511475,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+  "challenge_width_eligible": false,
+  "diagnostic_width_limit": 23
+}

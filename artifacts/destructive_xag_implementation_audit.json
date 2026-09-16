@@ -1,0 +1,55 @@
+{
+  "protected_sha256": "ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8",
+  "physical_trace_replays": [
+    {
+      "report": "artifacts/destructive_phase_xag_advanced_round2_beam64/report.json",
+      "sha256": "3fe74f2ac571f311aea195844f109d1a1fed1d7a916974eaad2a197a14a926e0",
+      "exact_phase": false,
+      "restoration": true
+    },
+    {
+      "report": "artifacts/destructive_phase_xag_advanced_round4_beam64/report.json",
+      "sha256": "10589c4f42280d23fac708fa586feaf7c92131591c17b28a461bdf565fdb1eb7",
+      "exact_phase": false,
+      "restoration": true
+    },
+    {
+      "report": "artifacts/destructive_phase_xag_advanced_shared_balance_beam64/report.json",
+      "sha256": "1ef71be2ab8f02fbc729fa2b6fedf1be8816bcda442f84abc4faf57109860d21",
+      "exact_phase": false,
+      "restoration": true
+    },
+    {
+      "report": "artifacts/destructive_phase_xag_round4_relaxed_v1/report.json",
+      "sha256": "735653f2fe26f566113b0526bef1ccc31230b799a5cebbbb0d015f8fe4446498",
+      "exact_phase": false,
+      "restoration": true
+    },
+    {
+      "report": "artifacts/destructive_phase_xag_shared_balance_beam64/report.json",
+      "sha256": "08a69c2c2d2663a36c83beaa05a747f9ba3cfc5beb0f01614c85c12f7ac4cf47",
+      "exact_phase": false,
+      "restoration": true
+    },
+    {
+      "report": "artifacts/destructive_phase_xag_shared_d68/report.json",
+      "sha256": "6980089a587a9a9a15a3499761e0e17b083a5b167da6c6da27553a60b4355241",
+      "exact_phase": false,
+      "restoration": true
+    },
+    {
+      "report": "artifacts/destructive_phase_xag_shared_relaxed_v1/report.json",
+      "sha256": "4d7e5736d394abca38b077ee3c3abdedc85efe21a789e4772dede8518e5193f0",
+      "exact_phase": false,
+      "restoration": true
+    },
+    {
+      "report": "artifacts/destructive_phase_xag_shared_v1/report.json",
+      "sha256": "4c110002675d3bff51ecac7dcc4af0c11dc4044f29c932dcb7c2a02d73bcf392",
+      "exact_phase": false,
+      "restoration": true
+    }
+  ],
+  "oversized_diagnostic_sha256": "e76f34608f544780e0940cbfd04707c3d0c37855aaed365d481cab3f84a928dd",
+  "oversized_diagnostic_eligible": false
+}
