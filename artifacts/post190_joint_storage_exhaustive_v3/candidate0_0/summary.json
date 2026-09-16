@@ -1,0 +1,14 @@
+{
+  "status": "LIMITED",
+  "counts": {
+    "total": 1001,
+    "sat": 0,
+    "unsat": 999,
+    "unknown": 1
+  },
+  "timeout_ms": 1000,
+  "elapsed": 5736.518098457949,
+  "solve_seconds_min": 0.3403083340963349,
+  "solve_seconds_max": 1.2881502090021968,
+  "first_sat": null
+}

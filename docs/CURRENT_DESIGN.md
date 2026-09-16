@@ -1,5 +1,13 @@
 # Protected baseline: parallel lookup and shared disk comparison
 
+## POST129 storage-aware XAG result
+
+The exact XAG inventory and bounded six-pebble screen are recorded in
+`POST129_SPACE_DEPTH_XAG.md`. Existing exact graphs do not fit six nonlinear
+live values under the no-recompute screen; three bounded recomputation probes
+returned UNKNOWN at 20,000 states. This route remains open but now requires
+storage-aware synthesis rather than lowering the existing minimum-AND graphs.
+
 ## New research direction: history-tapped destructive trajectory
 
 The attached deep-research assessment is recorded in

@@ -1,5 +1,16 @@
 # Continuation handoff
 
+## September 16: POST129 storage-aware XAG campaign
+
+Read `POST129_SPACE_DEPTH_XAG.md`. The phase-0 inventory evaluated 140 `.xag`
+files exactly and found 10 exact logo graphs. Existing exact candidates need
+17–25 nonlinear live values in the no-recompute screen, versus the six-value
+18-wire target. Bounded six-pebble searches for shared_balance,
+advanced_round4, and advanced_round2 reached their 20,000-state limits and
+returned UNKNOWN, not UNSAT. No native candidate was produced. The next XAG
+campaign must co-synthesize liveness, affine exposure, phase-root timing and
+batch depth; do not infer infeasibility from these cutoffs.
+
 ## September 16: attached deep-research assessment
 
 Read `POST185_DEEP_RESEARCH_REPORT.md`. The attached report independently

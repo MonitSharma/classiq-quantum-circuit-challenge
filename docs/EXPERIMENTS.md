@@ -1,5 +1,17 @@
 # Experiment history and failure notes
 
+## September 16: POST129 storage-aware XAG campaign
+
+`src/post129_space_depth_xag.py` exactly audited 140 discovered XAG files and
+found 10 exact logo graphs. Recomputed AND/MD/layer/fanout/full affine
+dependency metrics show no-recompute live estimates of 17–25 nonlinear values
+for the main candidates, above the six-value 18-wire target. The bounded
+reversible solver `src/post129_pebble.py` tested three exact graphs with a
+20,000-state cap; all returned UNKNOWN, not UNSAT. No schedule or QASM
+candidate was produced. See `POST129_SPACE_DEPTH_XAG.md` and the saved
+inventory/pebble reports. The next useful work is co-synthesis of storage,
+affine exposure and nonlinear batch depth.
+
 ## September 16: attached report assessment; no new oracle
 
 `POST185_DEEP_RESEARCH_REPORT.md` records the attached deep-research report's
