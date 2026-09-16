@@ -98,6 +98,23 @@ Accordingly its status is deliberately named
 `RELAXED_ENDPOINT_PASS_STORAGE_UNMODELED`, not `FREEFRAME_SAT`. No UNSAT or
 SAT conclusion about the 18-wire architecture is drawn from it.
 
+## First storage-aware free-frame result
+
+`src/post190_joint_18wire_storage_sat.py` implements the next, stricter model
+for candidate-0 and the first recorded five-batch schedule. It uses 40-bit
+semantic coordinates, six explicit invertible 18×18 affine frames, canonical
+mutually disjoint RCCX placements, dirty-target updates, and literal endpoint
+descriptor rows. The solver returned **UNSAT in 0.13 seconds** with a 30-second
+solver bound.
+
+This is only a fixed-schedule result. It does not reject the other legal
+five-batch placements, the other 31 witness pairs, or a native CNOT-depth
+realization. The next valid expansion is to test alternative batch schedules
+and then the remaining witness portfolio; only an exhaustive UNSAT over those
+cases could close the fixed x14+y13 family.
+
+Artifact: `artifacts/post190_joint_18wire_storage/report.json`.
+
 ## Reproduction
 
 From the workspace root:

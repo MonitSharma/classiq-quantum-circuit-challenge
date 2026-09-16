@@ -147,9 +147,10 @@ freed assignment. Kept as a verified, reusable component, not an improvement.
 
 The September screenshot shows 137 / 561 at rank one and three entries clustered
 at 166-177 with **343-352 CX**. Our sparsest verified build is 870 CX. A cluster
-at ~348 CX is what a relative-phase Toffoli compute/uncompute of a ~58-AND
-network costs (`2 * 58 * 3 = 348`), which points at direct Boolean evaluation
-rather than a code-and-kernel factorisation.
+at ~348 CX is numerically compatible with a relative-phase-Toffoli-heavy
+direct Boolean construction of roughly 58 ANDs (`2 * 58 * 3 = 348`), but does
+not identify the private architecture or distinguish it from a code-and-kernel
+factorisation.
 
 That route is blocked here by register pressure, and the gap is large. The
 repository's own networks:
@@ -185,7 +186,9 @@ Two targets, in order of expected value.
 1. **A network with peak liveness <= 6 AND values above the 12 coordinates.**
    This is the direct route to the leaderboard's CX profile. Prior campaigns
    searched for low AND count and low multiplicative depth; none of them made
-   *width* the objective. Minimising peak liveness subject to a depth cap, or
+   liveness as a secondary criterion; none jointly optimized topology under a
+   hard physical-storage constraint together with nonlinear count and affine
+   materialization cost. Minimising peak liveness subject to a depth cap, or
    accepting more ANDs in exchange for a narrower frontier, is untried.
 
 2. **A parity-network emitter that keeps its rate on sparse spectra.** Section 3

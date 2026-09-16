@@ -1,10 +1,9 @@
-"""Exact unbounded-affine-frame feasibility screen for x14+y13 witnesses.
+"""Exact semantic accumulated-span diagnostic for x14+y13 witnesses.
 
-The free-frame model deliberately abstracts each inter-batch affine operation
-to an arbitrary affine map.  It is therefore an optimistic relaxation of a
-CNOT-depth model, but it uses actual 4096-point Boolean functions rather than
-formally independent node symbols.  A positive result is a seed for a later
-physical-frame SAT model; it is not a native circuit.
+This diagnostic uses actual 4096-point Boolean functions rather than formally
+independent node symbols. It is an accumulated-span check only; it does not
+model inter-batch row replacement, frame invertibility, or CNOT depth, and its
+positive result is not a native circuit or a free-frame SAT certificate.
 """
 from __future__ import annotations
 import argparse, itertools, json
@@ -71,8 +70,8 @@ def semantic_screen(xpath=XPATH,ypath=YPATH):
     endpoint += yo+[truth(lambda z,i=i:bool((z>>(i+6))&1)) for i in [5]]
     endpoint_rank=rank(endpoint)
     endpoint_in_span=rank(initial+nodes+endpoint)==final_rank
-    # Eight literal endpoint rows are placeable in an 18-row affine frame when
-    # their semantic rank is no larger than the available row rank (12+6).
+    # Eight endpoint functions are distinct within the accumulated semantic
+    # diagnostic. This does not establish simultaneous placeability on 18 rows.
     relaxed_endpoint_distinct_in_accumulated_span=endpoint_in_span and len(set(endpoint))==8
     return {'status':'RELAXED_ENDPOINT_PASS_STORAGE_UNMODELED' if relaxed_endpoint_distinct_in_accumulated_span else 'RELAXED_ENDPOINT_FAIL',
             'x_source':str(xpath.relative_to(ROOT)),'y_source':str(ypath.relative_to(ROOT)),
