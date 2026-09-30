@@ -1,0 +1,12 @@
+{
+  "qasm": "artifacts/524/full_mux_feature_linear_tket_524.qasm",
+  "sha256": "7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147",
+  "width": 18,
+  "depth": 524,
+  "cx_count": 950,
+  "random_dense_states": 5,
+  "max_error": 3.97574400431209e-15,
+  "ancilla_error": 8.377518036465253e-16,
+  "normalization_error": 2.2426505097428162e-14,
+  "verification": "Dense random inputs supported on all 4096 coordinates; probabilistic numerical check, not exhaustive operator proof"
+}

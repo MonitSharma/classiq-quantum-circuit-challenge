@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "src/post151_sa/try8.py", line 46, in <module>
+    DX = rebuild('x_loader_d44', xf, 'tx'); DY = rebuild('y_loader_d46_blkw', yf, 'ty')
+  File "<string>", line 18, in rebuild
+AssertionError: ('runs/rc_rc_6666_0_46_1.txt', 9, np.float64(0.29289321881345276))

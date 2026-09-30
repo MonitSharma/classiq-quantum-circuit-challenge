@@ -1,0 +1,14 @@
+{
+  "qasm": "artifacts/243_cx951/two_stage_243.qasm",
+  "sha256": "38f5948a44d21c923ae740e64b968336898448ee01a30e85d81c583fe3dff696",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 243,
+  "cx_count": 951,
+  "max_error": 6.872152775104525e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 8.382237936046724e-15,
+  "peak_sparse_support": 8,
+  "elapsed_seconds": 0.1634807586669922,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

@@ -1,0 +1,14 @@
+{
+  "source": "artifacts/528/full_mux_feature_linear_528.qasm",
+  "pass": "pytket.FullPeepholeOptimise",
+  "qasm": "artifacts/524/full_mux_feature_linear_tket_524.qasm",
+  "qmod": "artifacts/524/full_mux_feature_linear_tket_524.qmod",
+  "sha256": "7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147",
+  "depth": 524,
+  "cx": 950,
+  "width": 18,
+  "qubits_initially_zero": false,
+  "exhaustive_report": "artifacts/524/full_mux_feature_linear_tket_524.exhaustive.json",
+  "dense_report": "artifacts/524/full_mux_feature_linear_tket_524.verification.json",
+  "status": "exhaustively_verified"
+}

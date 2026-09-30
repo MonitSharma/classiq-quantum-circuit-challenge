@@ -1,0 +1,6 @@
+ycc_116_a 116 16000 2 0.02 SV - - 0 - PAIR=pair_ycc1.json
+ycc_116_b 116 16000 1 0.02 SV - - 0 - PAIR=pair_ycc1.json
+ycc_117_a 117 16000 2 0.02 SV - - 0 - PAIR=pair_ycc1.json
+ycc_117_b 117 16000 1 0.02 SV - - 0 - PAIR=pair_ycc1.json
+ycc_116_c 116 12000 3 0.02 SV - - 0 - PAIR=pair_ycc1.json
+ycc_116_d 116 12000 4 0.015 SV - - 0 - PAIR=pair_ycc1.json

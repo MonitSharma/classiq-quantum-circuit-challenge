@@ -1,0 +1,4 @@
+mC117w 117 40000 2 0.02 SV - - 0 - PAIR=pair_mC.json
+mA117w 117 40000 2 0.02 SV - - 0 - PAIR=pair_mA.json
+cC117w 117 40000 2 0.02 SV - - 0 - PAIR=pair_cC.json
+ch116w 116 40000 2 0.02 SV - - 0 -

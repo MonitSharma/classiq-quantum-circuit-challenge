@@ -1,0 +1,30 @@
+[
+  {
+    "name": "wide_co1_t115_w16000_s2",
+    "binary": "kbeam128",
+    "terms": 65,
+    "rc": 2,
+    "seconds": 64.70811191597022
+  },
+  {
+    "name": "wide_co5_t115_w16000_s2",
+    "binary": "kbeam128",
+    "terms": 65,
+    "rc": 2,
+    "seconds": 62.5471575409174
+  },
+  {
+    "name": "wide_co10_t115_w16000_s2",
+    "binary": "kbeam128",
+    "terms": 65,
+    "rc": 2,
+    "seconds": 72.2161359579768
+  },
+  {
+    "name": "wide_co35_t115_w16000_s2",
+    "binary": "kbeam128",
+    "terms": 66,
+    "rc": 2,
+    "seconds": 62.014978874940425
+  }
+]

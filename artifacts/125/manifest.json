@@ -1,0 +1,16 @@
+{
+  "name": "conditional_loader_125",
+  "depth": 125,
+  "cx_count": 626,
+  "width": 18,
+  "qasm": "conditional_loader_125.qasm",
+  "qmod": "conditional_loader_125.qmod",
+  "qasm_sha256": "81bbd224dc0359cfcd9871321498ee304d8dcbd04e1ac19a81eee8da8d628704",
+  "basis_inputs_checked": 4096,
+  "challenge_width_eligible": true,
+  "submitted": false,
+  "max_error": 3.8005145011052033e-14,
+  "source_package": "artifacts/post185_conditional_loader/beam125",
+  "method": "loader search optimised on code-span wire ready-time vector (x 45/45/47/47, y 37/42/46/47) + window-aware beam kernel at T=125",
+  "note": "Verified with src/exhaustive_verify.py on all 4096 inputs; replays from recipes to the same SHA."
+}

@@ -1,0 +1,50 @@
+P 89 cnt 45 21 23 0 NP 18
+depth 1 cand 24 kept 24 best 3/89 closed 0 nfrz 0 fsum 0 fz 385/28/0/119
+depth 2 cand 572 kept 572 best 6/89 closed 0 nfrz 0 fsum 0 fz 7075/346/0/3391
+depth 3 cand 13453 kept 6000 best 9/89 closed 0 nfrz 0 fsum 0 fz 171306/9690/0/117580
+depth 4 cand 124669 kept 6000 best 12/89 closed 0 nfrz 0 fsum 0 fz 899792/88875/0/1283776
+depth 5 cand 140973 kept 6000 best 14/89 closed 0 nfrz 0 fsum 0 fz 1091343/140268/0/2209861
+depth 6 cand 139279 kept 6000 best 17/89 closed 0 nfrz 0 fsum 0 fz 1165912/172494/0/3183754
+depth 7 cand 140890 kept 6000 best 20/89 closed 0 nfrz 0 fsum 0 fz 1234332/190793/0/4222684
+depth 8 cand 137047 kept 6000 best 23/89 closed 0 nfrz 0 fsum 0 fz 1304486/199094/0/5286071
+depth 9 cand 139516 kept 6000 best 26/89 closed 0 nfrz 0 fsum 0 fz 1373627/205235/0/6294202
+depth 10 cand 138142 kept 6000 best 28/89 closed 0 nfrz 0 fsum 0 fz 1435940/208605/0/7331583
+depth 11 cand 137711 kept 6000 best 31/89 closed 0 nfrz 0 fsum 0 fz 1511109/213203/0/8388817
+depth 12 cand 137354 kept 6000 best 33/89 closed 0 nfrz 0 fsum 0 fz 1597625/222905/0/9431945
+depth 13 cand 137142 kept 6000 best 35/89 closed 0 nfrz 0 fsum 0 fz 1661457/234880/0/10468418
+depth 14 cand 134772 kept 6000 best 38/89 closed 0 nfrz 0 fsum 0 fz 1753672/241205/0/11497259
+depth 15 cand 134332 kept 6000 best 40/89 closed 0 nfrz 0 fsum 0 fz 1860850/247255/0/12558862
+depth 16 cand 135860 kept 6000 best 44/89 closed 0 nfrz 0 fsum 0 fz 1975473/253260/0/13630794
+depth 17 cand 134925 kept 6000 best 46/89 closed 0 nfrz 0 fsum 0 fz 2078003/263326/0/14726716
+depth 18 cand 133423 kept 6000 best 48/89 closed 0 nfrz 0 fsum 0 fz 2179447/278691/0/15824901
+depth 19 cand 132260 kept 6000 best 50/89 closed 0 nfrz 0 fsum 0 fz 2291185/309145/0/16970455
+depth 20 cand 131716 kept 6000 best 53/89 closed 0 nfrz 0 fsum 0 fz 2406727/337600/0/18077431
+depth 21 cand 132477 kept 6000 best 55/89 closed 0 nfrz 0 fsum 0 fz 2503134/346840/0/19181674
+depth 22 cand 131709 kept 6000 best 57/89 closed 0 nfrz 0 fsum 0 fz 2657864/357878/0/20353121
+depth 23 cand 130300 kept 6000 best 59/89 closed 0 nfrz 0 fsum 0 fz 2852360/366035/0/21513426
+depth 24 cand 132524 kept 6000 best 61/89 closed 0 nfrz 0 fsum 0 fz 3040606/373901/0/22692102
+depth 25 cand 130461 kept 6000 best 63/89 closed 0 nfrz 0 fsum 0 fz 3196694/376482/0/23831094
+depth 26 cand 132666 kept 6000 best 66/89 closed 0 nfrz 0 fsum 0 fz 3369825/378896/0/25025497
+depth 27 cand 131501 kept 6000 best 67/89 closed 0 nfrz 0 fsum 0 fz 3559033/393150/0/26321983
+depth 28 cand 128392 kept 6000 best 68/89 closed 0 nfrz 0 fsum 0 fz 3887794/495220/0/27706340
+depth 29 cand 137462 kept 6000 best 69/89 closed 0 nfrz 0 fsum 0 fz 4106306/510998/0/29016238
+depth 30 cand 141233 kept 6000 best 69/89 closed 0 nfrz 0 fsum 0 fz 4388781/545965/0/30513765
+depth 31 cand 140521 kept 6000 best 69/89 closed 1 nfrz 0 fsum 0 fz 4959021/667064/0/32096582
+depth 32 cand 136872 kept 6000 best 70/89 closed 1 nfrz 0 fsum 0 fz 5586270/1158125/0/32935249
+depth 33 cand 130741 kept 6000 best 72/89 closed 1 nfrz 0 fsum 0 fz 6281185/1757374/0/33922486
+depth 34 cand 134878 kept 6000 best 75/89 closed 1 nfrz 1 fsum 34 fz 7105657/2405217/2971/35150978
+depth 35 cand 129316 kept 6000 best 77/89 closed 1 nfrz 1 fsum 35 fz 7509952/2732203/16198/36096748
+depth 36 cand 129085 kept 6000 best 79/89 closed 1 nfrz 1 fsum 34 fz 7717506/2816319/34305/36945186
+depth 37 cand 122590 kept 6000 best 81/89 closed 1 nfrz 1 fsum 34 fz 7989514/2850947/58719/37770413
+depth 38 cand 123299 kept 6000 best 83/89 closed 1 nfrz 1 fsum 34 fz 8171801/2852212/58719/38588834
+depth 39 cand 122760 kept 6000 best 85/89 closed 1 nfrz 1 fsum 34 fz 8420519/2853555/58801/39377526
+depth 40 cand 121399 kept 6000 best 87/89 closed 1 nfrz 1 fsum 34 fz 8789318/2853953/58839/40287778
+depth 41 cand 128814 kept 6000 best 89/89 closed 1 nfrz 1 fsum 34 fz 9169546/2854991/59247/41295994
+depth 42 cand 134295 kept 6000 best 89/89 closed 1 nfrz 2 fsum 77 fz 9470863/2855395/59475/42349486
+depth 43 cand 135766 kept 6000 best 89/89 closed 2 nfrz 3 fsum 120 fz 10051440/3203567/404554/43359905
+depth 44 cand 114060 kept 6000 best 89/89 closed 2 nfrz 3 fsum 120 fz 10496782/3573306/758981/44366404
+depth 45 cand 125576 kept 6000 best 89/89 closed 3 nfrz 2 fsum 78 fz 10804330/3854843/1040518/45202974
+CONT best at depth 46 obj 4004.657 lt: c12@43 c4@45 c2@35 c1@45
+CONT best at depth 46 obj 4004.657 lt: c4@45 c2@35 c1@45 c12@43
+depth 46 cand 133238 kept 6000 best 89/89 closed 3 nfrz 4 fsum 168 fz 11471807/4522320/1707995/46121107
+FRZ froz=298 nfrz=4 fsum=168 fmax=45 lt=44 45 43 35 45 45 44 44 43 

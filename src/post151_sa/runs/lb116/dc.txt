@@ -1,0 +1,4 @@
+c rc=0
+b rc=2
+d rc=2
+a rc=0

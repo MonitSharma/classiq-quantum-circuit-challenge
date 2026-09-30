@@ -1,0 +1,15 @@
+{
+  "qasm": "src/post151_sa/runs/fem_0924/restore_t116_w0_a40_s1_s1_m116.qasm",
+  "sha256": "e4e4b9c574d3861fef7ca96fadd19ab8c2953922e3d34445df4060956158ec8d",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 116,
+  "cx_count": 572,
+  "max_error": 3.779217590167623e-14,
+  "ancilla_error": 3.779217590167623e-14,
+  "discarded_amplitude_bound": 7.892294699694078e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 0.44664597511291504,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+  "challenge_width_eligible": true
+}

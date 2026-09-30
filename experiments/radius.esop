@@ -1,0 +1,25 @@
+# EXORCISM-4 output for command line arguments: "-Q 5 -V 0"
+# Minimization performed Tue Sep  8 12:13:04 2026
+# Initial statistics: Cubes = 21  Literals = 101  QCost = 656
+# Final   statistics: Cubes = 13  Literals = 59  QCost = 380
+# File reading and reordering time = 0.00 sec
+# Starting cover generation time   = 0.00 sec
+# Pure ESOP minimization time      = 0.00 sec
+.i 6
+.o 3
+.p 13
+.type esop
+---010 111
+---100 011
+-00110 011
+--010- 011
+11-001 010
+111101 111
+-11-01 100
+11110- 100
+--1-01 101
+001100 010
+1101-0 010
+010110 001
+0-1001 100
+.e

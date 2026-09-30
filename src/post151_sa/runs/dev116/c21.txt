@@ -1,0 +1,4 @@
+lbx6_116a 116 16000 2 0.02 SV - - 0 - PAIR=/work/work/src/post151_sa/pair_lbx6.json
+lbx6_116b 116 16000 1 0.02 SV - - 0 - PAIR=/work/work/src/post151_sa/pair_lbx6.json
+lbx6_117a 117 16000 2 0.02 SV - - 0 - PAIR=/work/work/src/post151_sa/pair_lbx6.json
+lbx6_117b 117 12000 1 0.02 SV - - 0 - PAIR=/work/work/src/post151_sa/pair_lbx6.json

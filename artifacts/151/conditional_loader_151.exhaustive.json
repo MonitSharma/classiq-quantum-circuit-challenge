@@ -1,0 +1,15 @@
+{
+  "qasm": "artifacts/post185_conditional_loader/bridge_search/candidate373_d151_cx637.qasm",
+  "sha256": "af6f2c21981c311ba0bb0ceb3f931b9b0ece0e235118d1c5e21320be0c5d0685",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 151,
+  "cx_count": 637,
+  "max_error": 2.4980018054066022e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 9.073031031567734e-15,
+  "peak_sparse_support": 16,
+  "elapsed_seconds": 0.13400483131408691,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+  "challenge_width_eligible": true
+}

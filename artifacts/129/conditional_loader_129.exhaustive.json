@@ -1,0 +1,15 @@
+{
+  "qasm": "artifacts/post185_conditional_loader/beam129/conditional_loader_129.qasm",
+  "sha256": "f5a7a4e1b3af2c14ee9384ea9840a4c41e57e8cad4e533834599a61d26a92def",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 129,
+  "cx_count": 651,
+  "max_error": 3.8196513529415655e-14,
+  "ancilla_error": 3.8196513529415655e-14,
+  "discarded_amplitude_bound": 7.47104466746812e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 0.4103078842163086,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+  "challenge_width_eligible": true
+}

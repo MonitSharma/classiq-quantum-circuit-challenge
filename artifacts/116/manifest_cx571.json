@@ -1,0 +1,25 @@
+{
+  "depth": 116,
+  "cx_count": 571,
+  "u3_count": 420,
+  "width": 18,
+  "basis_inputs_checked": 4096,
+  "dense_random_states": 5,
+  "sha256": {
+    "conditional_loader_116_cx571.qasm": "8e50e43b06cb11e24cfbea52a4d74606ac9000aea957755bdb8bb1a08a4029a1",
+    "conditional_loader_116_cx571.qmod": "c3fe7b730ed208326e718df3ae48ff62c6d4c7d5a2f61eed4a47532255917553",
+    "conditional_loader_116_cx571.exhaustive.json": "a7a6b425c306ba9394deaba2508ed3c17ddbdd0394c347f16f326bef6ebf4273",
+    "conditional_loader_116_cx571.verification.json": "9ab9fce94a4fc1ac4bff7348be821e26b3b9d3b93a4b3ca6d1401d60441db371"
+  },
+  "replay": "src/post151_sa/replay571.py",
+  "recipe": "artifacts/116/recipes/cx571",
+  "beam": {
+    "binary": "kbeam_typed_lb",
+    "width": 8000,
+    "seed": 1,
+    "model_target": 116,
+    "coordinate_basis": "starting wire rows"
+  },
+  "fixed_gate_set_reschedule115": "MILP infeasible; HiGHS status 2",
+  "submission_updated": false
+}

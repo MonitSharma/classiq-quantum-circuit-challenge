@@ -1,0 +1,17 @@
+{
+  "depth": 188,
+  "cx": 855,
+  "width": 18,
+  "qasm": "two_stage_188.qasm",
+  "qmod": "two_stage_188.qmod",
+  "sha256": "f8f7e73ad2d48daa31a29a354e2287347b90e59d460f9e7d271495850635e46e",
+  "kernel_sha256": "c1f784c64b7e8377413161ea23cb407bbe5f712d6843f6400f6444601e99da76",
+  "qmod_gate_match": true,
+  "qmod_gate_count": 1628,
+  "qmod_note": "Literal gate-level matching oracle; main includes a 12-Hadamard synthesis harness. Not cloud-resynthesized or submitted.",
+  "u3": 773,
+  "replay_script": "src/build_rescheduled_oracle.py",
+  "schedule_recipe": "schedule_recipe.json",
+  "source_package": "artifacts/191",
+  "status": "Exhaustively verified local improvement; not submitted"
+}

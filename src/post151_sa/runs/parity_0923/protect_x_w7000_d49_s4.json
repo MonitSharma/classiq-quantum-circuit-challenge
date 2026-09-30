@@ -1,0 +1,28 @@
+{
+  "tag": "protect_x_w7000_d49_s4",
+  "side": "x",
+  "returncode": 0,
+  "seconds": 71.71069866698235,
+  "depth": 49,
+  "ready": [
+    36,
+    42,
+    44,
+    49
+  ],
+  "wires": [
+    4,
+    5,
+    2,
+    6
+  ],
+  "coords": [
+    3,
+    1,
+    12,
+    4
+  ],
+  "max_dev": 4.440892098500626e-16,
+  "cx": 134,
+  "pickle": "runs/parity_0923/protect_x_w7000_d49_s4.pkl"
+}

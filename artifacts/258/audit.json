@@ -1,0 +1,29 @@
+{
+  "depth": 258,
+  "cx": 1188,
+  "u3": 1086,
+  "touches": [
+    168,
+    180,
+    150,
+    168,
+    182,
+    200,
+    200,
+    166,
+    160,
+    194,
+    172,
+    186,
+    210,
+    217,
+    225,
+    216,
+    229,
+    239
+  ],
+  "max_touch": 239,
+  "slot_floor": 193,
+  "qmod_max_parameter_difference": 0,
+  "replay_sha256": "b2a2e8ac6a6d7ee2c2e4ec11bcca4b4ba4fe54aab15b11c71236efcecdca3066"
+}

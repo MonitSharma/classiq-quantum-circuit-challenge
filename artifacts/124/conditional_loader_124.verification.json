@@ -1,0 +1,12 @@
+{
+  "qasm": "artifacts/124/conditional_loader_124.qasm",
+  "sha256": "3f10f107fed3e768c16416a5aa9392a2b3a551a995178bc9d3fd239b36e04de4",
+  "width": 18,
+  "depth": 124,
+  "cx_count": 632,
+  "random_dense_states": 3,
+  "max_error": 1.3301429787750426e-15,
+  "ancilla_error": 1.3301429787750426e-15,
+  "normalization_error": 2.220446049250313e-15,
+  "verification": "Dense random inputs supported on all 4096 coordinates; probabilistic numerical check, not exhaustive operator proof"
+}

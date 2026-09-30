@@ -1,0 +1,27 @@
+[
+  {
+    "name": "t117_w4000_s2_kbeam_wirehash",
+    "rc": 2,
+    "seconds": 16.587637583957985
+  },
+  {
+    "name": "t116_w4000_s2_kbeam_wirehash",
+    "rc": 2,
+    "seconds": 14.288032999960706
+  },
+  {
+    "name": "t116_w4000_s3_kbeam_wirehash",
+    "rc": 2,
+    "seconds": 14.311420541955158
+  },
+  {
+    "name": "t117_w16000_s2_kbeam_wirehash",
+    "rc": 2,
+    "seconds": 67.82633733283728
+  },
+  {
+    "name": "t116_w16000_s2_kbeam_wirehash",
+    "rc": 2,
+    "seconds": 56.021617042133585
+  }
+]

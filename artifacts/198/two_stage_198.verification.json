@@ -1,0 +1,12 @@
+{
+  "qasm": "artifacts/198/two_stage_198.qasm",
+  "sha256": "54502289740d096513f9a0df5556b9d990a2181bb28da8154959004566f29180",
+  "width": 18,
+  "depth": 198,
+  "cx_count": 858,
+  "random_dense_states": 5,
+  "max_error": 2.801793231903329e-16,
+  "ancilla_error": 6.396406903555341e-17,
+  "normalization_error": 8.43769498715119e-15,
+  "verification": "Dense random inputs supported on all 4096 coordinates; probabilistic numerical check, not exhaustive operator proof"
+}

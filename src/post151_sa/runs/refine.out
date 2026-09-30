@@ -1,0 +1,9 @@
+  runs/po_yF1_s6.txt depth 46 prof [39, 34, 45, 45, 45, 42, 45, 45, 46]
+Traceback (most recent call last):
+  File "src/post151_sa/refine.py", line 35, in <module>
+    sx = valuestable(DX); sy = valuestable(DY)
+  File "src/post151_sa/refine.py", line 10, in valuestable
+    g = full_gates(D); wt = [0]*9; lu = [False]*9; tgt = [-1]*9
+        ^^^^^^^^^^
+NameError: name 'full_gates' is not defined
+DONE

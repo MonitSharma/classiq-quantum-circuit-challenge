@@ -1,0 +1,11 @@
+[
+  {
+    "name": "alternating_co24_t115_w16000_s2_mu0.02_law0.8",
+    "binary": "kbeam_wirehash",
+    "terms": 63,
+    "mu": 0.02,
+    "law": 0.8,
+    "rc": 2,
+    "seconds": 83.25506212492473
+  }
+]

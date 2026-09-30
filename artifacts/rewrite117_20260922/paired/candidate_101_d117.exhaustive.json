@@ -1,0 +1,15 @@
+{
+  "qasm": "artifacts/rewrite117_20260922/paired/candidate_101_d117.qasm",
+  "sha256": "79b35a39b55bcbd706cfd899cd1fa1a8b7e1bb10c8439f9c2dc62f9fe13c34ba",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 117,
+  "cx_count": 578,
+  "max_error": 3.782905352730972e-14,
+  "ancilla_error": 3.782905352730972e-14,
+  "discarded_amplitude_bound": 7.696904884003463e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 0.2685048580169678,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+  "challenge_width_eligible": true
+}

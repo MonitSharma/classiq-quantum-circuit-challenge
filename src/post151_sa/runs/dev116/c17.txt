@@ -1,0 +1,8 @@
+q1_116 116 12000 2 0.02 SV - - 0 - PAIR=pair_q1.json
+q2_116 116 12000 2 0.02 SV - - 0 - PAIR=pair_q2.json
+q3_116 116 12000 2 0.02 SV - - 0 - PAIR=pair_q3.json
+q4_116 116 12000 2 0.02 SV - - 0 - PAIR=pair_q4.json
+q5_116 116 12000 2 0.02 SV - - 0 - PAIR=pair_q5.json
+q6_116 116 12000 2 0.02 SV - - 0 - PAIR=pair_q6.json
+q7_116 116 12000 2 0.02 SV - - 0 - PAIR=pair_q7.json
+q8_116 116 12000 2 0.02 SV - - 0 - PAIR=pair_q8.json

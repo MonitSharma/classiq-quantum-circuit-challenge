@@ -1,0 +1,11 @@
+  runs/po_y46_s15.txt depth 46 prof [43, 45, 45, 44, 45, 38, 46, 44, 38]
+rdy [38, 38, 43, 46, 35, 43, 44, 44]  s [38, 36, 43, 43, 28, 40, 42, 44]  tau0 28  md 52
+  seed 1 rc=2
+  seed 2 rc=2
+  seed 3 rc=2
+  seed 4 rc=2
+  seed 5 rc=2
+  seed 6 rc=2
+  seed 7 rc=2
+  seed 8 rc=2
+shard done, no solution

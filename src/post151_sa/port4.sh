@@ -1,0 +1,21 @@
+#!/bin/bash
+cd "$(dirname "$0")"
+export CLASS_CODES=../../artifacts/185/class_codes.json CLASSIQ_ROOT=../..
+PY=../../.venv/bin/python
+: > runs/port4.log
+run(){ # side tag binary maxd fzcap nseeds W K wcond wreach wcx env...
+  local side=$1 tag=$2 bin=$3 md=$4 fz=$5 ns=$6 W=$7 K=$8 wc_=$9 wr=${10} wcx=${11}
+  shift 11
+  env "$@" $PY -u lport.py "$side" ./c/$bin $md $fz $ns $W $K $wc_ $wr $wcx $tag 2>&1 \
+    | grep --line-buffered -v '^depth' >> runs/port4.log
+}
+run y yA lbeam4 46 0  14 5000 24 16 0.5 0.02 WFT=0.35 WFMAX=0.7 WREACH2=0.15 NP=18 WSPREAD=0.6 SPCAP=3 &
+run y yB lbeam4 46 0  14 5000 24 16 0.5 0.02 WFT=0.15 WFMAX=1.6 WREACH2=0.30 NP=24 WSPREAD=0.3 SPCAP=2 &
+run y yC lbeam4 45 0  14 6000 24 16 0.5 0.02 WFT=0.35 WFMAX=0.7 WREACH2=0.15 NP=18 WSPREAD=0.6 SPCAP=3 &
+run y yD lbeam5 54 45 14 5000 24 16 0.5 0.02 WFT=0.35 WFMAX=0.7 WREACH2=0.15 NP=18 WSPREAD=0.6 SPCAP=3 FZCAP=45 &
+run y yE lbeam4 48 0  14 6000 24 16 0.5 0.02 WFT=0.5  WFMAX=0.4 WREACH2=0.05 NP=14 WSPREAD=1.0 SPCAP=4 &
+run x xA lbeam4 44 0  14 5000 24 16 0.5 0.02 WFT=0.35 WFMAX=0.7 WREACH2=0.15 NP=18 WSPREAD=0.6 SPCAP=3 &
+run x xB lbeam4 43 0  14 6000 24 16 0.5 0.02 WFT=0.35 WFMAX=0.7 WREACH2=0.15 NP=18 WSPREAD=0.6 SPCAP=3 &
+run x xC lbeam4 44 0  14 5000 24 16 0.5 0.02 WFT=0.15 WFMAX=1.6 WREACH2=0.30 NP=24 WSPREAD=0.3 SPCAP=2 &
+wait
+echo PORT4_DONE >> runs/port4.log

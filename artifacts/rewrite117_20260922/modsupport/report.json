@@ -1,0 +1,258 @@
+[
+  {
+    "mask": 2,
+    "removable": false
+  },
+  {
+    "mask": 5,
+    "removable": true,
+    "terms": 69
+  },
+  {
+    "mask": 7,
+    "removable": false
+  },
+  {
+    "mask": 10,
+    "removable": true,
+    "terms": 70
+  },
+  {
+    "mask": 13,
+    "removable": false
+  },
+  {
+    "mask": 14,
+    "removable": true,
+    "terms": 70
+  },
+  {
+    "mask": 15,
+    "removable": true,
+    "terms": 69
+  },
+  {
+    "mask": 16,
+    "removable": false
+  },
+  {
+    "mask": 17,
+    "removable": false
+  },
+  {
+    "mask": 25,
+    "removable": false
+  },
+  {
+    "mask": 38,
+    "removable": false
+  },
+  {
+    "mask": 40,
+    "removable": false
+  },
+  {
+    "mask": 42,
+    "removable": false
+  },
+  {
+    "mask": 57,
+    "removable": false
+  },
+  {
+    "mask": 59,
+    "removable": false
+  },
+  {
+    "mask": 65,
+    "removable": false
+  },
+  {
+    "mask": 67,
+    "removable": false
+  },
+  {
+    "mask": 69,
+    "removable": false
+  },
+  {
+    "mask": 71,
+    "removable": false
+  },
+  {
+    "mask": 72,
+    "removable": false
+  },
+  {
+    "mask": 74,
+    "removable": false
+  },
+  {
+    "mask": 76,
+    "removable": false
+  },
+  {
+    "mask": 78,
+    "removable": false
+  },
+  {
+    "mask": 80,
+    "removable": false
+  },
+  {
+    "mask": 96,
+    "removable": false
+  },
+  {
+    "mask": 97,
+    "removable": false
+  },
+  {
+    "mask": 98,
+    "removable": false
+  },
+  {
+    "mask": 101,
+    "removable": false
+  },
+  {
+    "mask": 102,
+    "removable": false
+  },
+  {
+    "mask": 104,
+    "removable": false
+  },
+  {
+    "mask": 105,
+    "removable": false
+  },
+  {
+    "mask": 106,
+    "removable": false
+  },
+  {
+    "mask": 109,
+    "removable": false
+  },
+  {
+    "mask": 110,
+    "removable": false
+  },
+  {
+    "mask": 113,
+    "removable": false
+  },
+  {
+    "mask": 123,
+    "removable": false
+  },
+  {
+    "mask": 128,
+    "removable": false
+  },
+  {
+    "mask": 129,
+    "removable": false
+  },
+  {
+    "mask": 132,
+    "removable": false
+  },
+  {
+    "mask": 137,
+    "removable": false
+  },
+  {
+    "mask": 145,
+    "removable": false
+  },
+  {
+    "mask": 146,
+    "removable": false
+  },
+  {
+    "mask": 153,
+    "removable": false
+  },
+  {
+    "mask": 166,
+    "removable": false
+  },
+  {
+    "mask": 200,
+    "removable": false
+  },
+  {
+    "mask": 201,
+    "removable": false
+  },
+  {
+    "mask": 202,
+    "removable": false
+  },
+  {
+    "mask": 203,
+    "removable": false
+  },
+  {
+    "mask": 204,
+    "removable": false
+  },
+  {
+    "mask": 205,
+    "removable": false
+  },
+  {
+    "mask": 206,
+    "removable": false
+  },
+  {
+    "mask": 207,
+    "removable": false
+  },
+  {
+    "mask": 210,
+    "removable": false
+  },
+  {
+    "mask": 225,
+    "removable": false
+  },
+  {
+    "mask": 226,
+    "removable": false
+  },
+  {
+    "mask": 229,
+    "removable": false
+  },
+  {
+    "mask": 230,
+    "removable": false
+  },
+  {
+    "mask": 233,
+    "removable": false
+  },
+  {
+    "mask": 234,
+    "removable": false
+  },
+  {
+    "mask": 237,
+    "removable": false
+  },
+  {
+    "mask": 238,
+    "removable": false
+  },
+  {
+    "mask": 241,
+    "removable": false
+  },
+  {
+    "mask": 249,
+    "removable": false
+  }
+]

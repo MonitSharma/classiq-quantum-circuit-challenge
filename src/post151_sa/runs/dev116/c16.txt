@@ -1,0 +1,6 @@
+p5_116 116 16000 2 0.02 SV - - 0 - PAIR=pair_p5.json
+p4_116 116 16000 2 0.02 SV - - 0 - PAIR=pair_p4.json
+p1_116 116 16000 2 0.02 SV - - 0 - PAIR=pair_p1.json
+p3_116 116 16000 2 0.02 SV - - 0 - PAIR=pair_p3.json
+p2_116 116 16000 2 0.02 SV - - 0 - PAIR=pair_p2.json
+p6_116 116 16000 2 0.02 SV - - 0 - PAIR=pair_p6.json

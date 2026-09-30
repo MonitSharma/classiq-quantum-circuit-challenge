@@ -1,0 +1,23 @@
+[
+  {
+    "name": "wide_co13_t114_w4000_s2",
+    "binary": "kbeam128",
+    "terms": 72,
+    "rc": 2,
+    "seconds": 12.81637316592969
+  },
+  {
+    "name": "wide_co31_t114_w4000_s2",
+    "binary": "kbeam128",
+    "terms": 67,
+    "rc": 2,
+    "seconds": 13.73869466711767
+  },
+  {
+    "name": "wide_co43_t114_w4000_s2",
+    "binary": "kbeam128",
+    "terms": 70,
+    "rc": 2,
+    "seconds": 12.237306457944214
+  }
+]

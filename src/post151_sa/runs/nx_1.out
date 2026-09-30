@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "src/post151_sa/try8.py", line 46, in <module>
+    DX = rebuild('x_loader_d44', xf, 'tx'); DY = rebuild('y_loader_d46_blkw', yf, 'ty')
+  File "<string>", line 15, in rebuild
+  File "src/post151_sa/lbeval2.py", line 8, in load_beam
+    lines=open(path).read().split('\n'); d=int(lines[0].split()[0]); seq=[]
+          ~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/po_Lx2b_s4.txt'

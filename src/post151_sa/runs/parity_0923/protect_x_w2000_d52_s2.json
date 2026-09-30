@@ -1,0 +1,28 @@
+{
+  "tag": "protect_x_w2000_d52_s2",
+  "side": "x",
+  "returncode": 0,
+  "seconds": 22.328406625194475,
+  "depth": 48,
+  "ready": [
+    43,
+    44,
+    47,
+    48
+  ],
+  "wires": [
+    5,
+    6,
+    1,
+    7
+  ],
+  "coords": [
+    1,
+    12,
+    3,
+    4
+  ],
+  "max_dev": 5.551115123125783e-16,
+  "cx": 136,
+  "pickle": "runs/parity_0923/protect_x_w2000_d52_s2.pkl"
+}

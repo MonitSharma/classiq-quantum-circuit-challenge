@@ -1,0 +1,32 @@
+[
+  {
+    "name": "plateau_co2_t115_w16000_s2",
+    "rc": 2,
+    "seconds": 52.821226249914616
+  },
+  {
+    "name": "plateau_co0_t115_w16000_s2",
+    "rc": 2,
+    "seconds": 54.76005120808259
+  },
+  {
+    "name": "plateau_co30_t115_w16000_s2",
+    "rc": 2,
+    "seconds": 49.125701250042766
+  },
+  {
+    "name": "plateau_co15_t115_w16000_s2",
+    "rc": 2,
+    "seconds": 49.16987012489699
+  },
+  {
+    "name": "plateau_co12_t115_w16000_s2",
+    "rc": 2,
+    "seconds": 51.512467624852434
+  },
+  {
+    "name": "plateau_co4_t115_w16000_s2",
+    "rc": 2,
+    "seconds": 53.56767887505703
+  }
+]

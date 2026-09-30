@@ -1,0 +1,26 @@
+[
+  {
+    "name": "clifford",
+    "depth": 117,
+    "cx": 577,
+    "seconds": 0.18376529216766357
+  },
+  {
+    "name": "peephole",
+    "depth": 141,
+    "cx": 575,
+    "seconds": 5.692774708149955
+  },
+  {
+    "name": "paulipair",
+    "depth": 1722,
+    "cx": 2234,
+    "seconds": 1.0125228750985116
+  },
+  {
+    "name": "paulisets",
+    "depth": 1130,
+    "cx": 1024,
+    "seconds": 1.0413319999352098
+  }
+]

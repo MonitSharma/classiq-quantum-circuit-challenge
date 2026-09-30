@@ -1,0 +1,15 @@
+state 0 error 1.3205617855250143e-15
+state 1 error 1.2041070765171396e-15
+state 2 error 1.330735072961391e-15
+{
+  "qasm": "artifacts/123/conditional_loader_123.qasm",
+  "sha256": "cf922d5d73694ad55e70c9a29fb015bd89667f1ee8026a4e3bdf45b73fe43e8e",
+  "width": 18,
+  "depth": 123,
+  "cx_count": 627,
+  "random_dense_states": 3,
+  "max_error": 1.330735072961391e-15,
+  "ancilla_error": 1.330735072961391e-15,
+  "normalization_error": 1.9984014443252818e-15,
+  "verification": "Dense random inputs supported on all 4096 coordinates; probabilistic numerical check, not exhaustive operator proof"
+}

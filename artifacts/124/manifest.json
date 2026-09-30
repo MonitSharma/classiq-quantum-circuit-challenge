@@ -1,0 +1,16 @@
+{
+  "name": "conditional_loader_124",
+  "depth": 124,
+  "cx_count": 632,
+  "width": 18,
+  "qasm": "conditional_loader_124.qasm",
+  "qmod": "conditional_loader_124.qmod",
+  "qasm_sha256": "3f10f107fed3e768c16416a5aa9392a2b3a551a995178bc9d3fd239b36e04de4",
+  "basis_inputs_checked": 4096,
+  "challenge_width_eligible": true,
+  "submitted": false,
+  "max_error": 3.7866253194878235e-14,
+  "source_package": "artifacts/post185_conditional_loader",
+  "method": "same loaders as 125 (x 45/45/47/47, y 37/42/46/47) + window-aware beam kernel at T=124 with larger beam W=2500, mu=0.03",
+  "note": "Verified with src/exhaustive_verify.py on all 4096 inputs. T=124 was found feasible with the larger beam despite the 47-ready-time binding wires."
+}

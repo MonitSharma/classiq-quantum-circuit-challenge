@@ -1,0 +1,14 @@
+{
+  "qasm": "artifacts/528/full_mux_feature_linear_528.qasm",
+  "sha256": "f83b8695497cca51d13b29e90d6eff184d5cb6def7619511caca79f794192309",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 527,
+  "cx_count": 950,
+  "max_error": 1.4569324392801218e-14,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 2.3512639656557225e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 8.393311977386475,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions"
+}

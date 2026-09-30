@@ -1,0 +1,71 @@
+{
+  "qasm": "artifacts/524/full_mux_feature_linear_tket_524.qasm",
+  "input_depth": 524,
+  "input_cx": 950,
+  "windows": [
+    {
+      "start": 473,
+      "end": 482,
+      "status": "rejected_noncontiguous"
+    },
+    {
+      "start": 473,
+      "end": 487,
+      "status": "rejected_noncontiguous"
+    },
+    {
+      "start": 483,
+      "end": 487,
+      "status": "tested",
+      "gate_indices": [
+        1688,
+        1692
+      ],
+      "active": [
+        2,
+        3,
+        4
+      ],
+      "input_depth": 5,
+      "input_cx": 2,
+      "replacement_depth": 5,
+      "replacement_cx": 2,
+      "full_depth": 524,
+      "full_cx": 950,
+      "depth_delta": 0,
+      "cx_delta": 0
+    },
+    {
+      "start": 498,
+      "end": 504,
+      "status": "tested",
+      "gate_indices": [
+        1704,
+        1710
+      ],
+      "active": [
+        4,
+        12,
+        17
+      ],
+      "input_depth": 7,
+      "input_cx": 4,
+      "replacement_depth": 7,
+      "replacement_cx": 4,
+      "full_depth": 524,
+      "full_cx": 950,
+      "depth_delta": 0,
+      "cx_delta": 0
+    },
+    {
+      "start": 498,
+      "end": 507,
+      "status": "rejected_noncontiguous"
+    },
+    {
+      "start": 505,
+      "end": 507,
+      "status": "rejected_noncontiguous"
+    }
+  ]
+}

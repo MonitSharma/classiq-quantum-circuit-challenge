@@ -1,0 +1,21 @@
+{
+  "qasm": "artifacts/157/conditional_loader_157.qasm",
+  "sha256": "f7fa3ae906f310ecd8ea40c490df1d126637b4bc0277020313264dc9a9f3d377",
+  "width": 18,
+  "depth": 157,
+  "cx_count": 641,
+  "gate_count": 1064,
+  "notebook_target_matches_all_4096": true,
+  "notebook_format_metrics_pass": true,
+  "qmod_literal_gate_match": true,
+  "qmod_preparation_hadamards": 12,
+  "qmod_sha256": "cee395fbefb24f7dcb83f918d21f1d19393d5f3bc4eb4c2cdfea876fa8afd729",
+  "replay_byte_identical": false,
+  "replay_sha256": "6e1c08d90110432a3fbbeb5bfdc92292feb1940b27ee4ff286dd50658b854826",
+  "replay_gate_structure_identical": true,
+  "replay_max_parameter_difference": 4.440892098500626e-16,
+  "replay_exhaustive_pass": true,
+  "protected185_sha256": "ef933bc786bc25feb1fbd618fc8c45a0bdc8dce43879aacfcc6042daaca5bfc8",
+  "classiq_step6_status": "Not run to completion: sandbox Keychain error; escalated simulator request rejected by automatic approval review because external circuit upload needs explicit approval",
+  "submitted": false
+}

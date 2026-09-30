@@ -1,0 +1,15 @@
+{
+  "name": "conditional_loader_126",
+  "depth": 126,
+  "cx_count": 634,
+  "width": 18,
+  "qasm": "conditional_loader_126.qasm",
+  "qmod": "conditional_loader_126.qmod",
+  "qasm_sha256": "bbb6476e116844767347980c04eb9a73c8f766ce39e7edf94fba34852e2793f4",
+  "basis_inputs_checked": 4096,
+  "challenge_width_eligible": true,
+  "submitted": false,
+  "max_error": 3.8084297271422655e-14,
+  "source_package": "artifacts/post185_conditional_loader/beam126",
+  "method": "beam-search conditional loaders + beam-built kernel (post151_sa)"
+}

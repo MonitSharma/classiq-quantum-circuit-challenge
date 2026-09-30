@@ -1,0 +1,28 @@
+{
+  "qasm": "artifacts/529/full_mux_feature_linear_529.qasm",
+  "sha256": "9d07529b678b046085fa5c0a32b4774e04cb6ba3650e779e4200609e133bc477",
+  "depth": 529,
+  "cx": 1036,
+  "width": 18,
+  "matrix_rows": [
+    1,
+    6,
+    2,
+    8,
+    16,
+    32
+  ],
+  "assignment": [
+    12,
+    15,
+    14,
+    16,
+    17,
+    13
+  ],
+  "qubits_initially_zero": false,
+  "status": "exhaustively_verified",
+  "exhaustive_report": "artifacts/529/full_mux_feature_linear_529.exhaustive.json",
+  "dense_report": "artifacts/529/full_mux_feature_linear_529.verification.json",
+  "qmod": "artifacts/529/full_mux_feature_linear_529.qmod"
+}

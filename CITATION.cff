@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "A depth-111 phase oracle for the Classiq logo"
+abstract: >-
+  An 18-qubit U3/CX circuit of depth 111 (557 CX) implementing the phase oracle of the
+  Classiq Quantum Circuit Challenge, built from class codes, conditional loaders, a 63-term
+  phase kernel and exact scheduling. All circuits are verified exhaustively on 4,096 inputs.
+authors:
+  - family-names: Sharma
+    given-names: Monit
+type: software
+license: MIT
+date-released: 2026-09-25
+repository-code: "https://github.com/MonitSharma/classiq"
+keywords:
+  - quantum computing
+  - quantum circuit synthesis
+  - phase oracle
+  - circuit depth optimization

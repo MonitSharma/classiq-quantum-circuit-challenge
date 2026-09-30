@@ -1,0 +1,53 @@
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+build/
+dist/
+
+# C build products
+*.o
+*.d
+*.a
+*.so
+*.dylib
+
+# Solver output, logs and local scratch space
+*.log
+abc.history
+scratch/
+*.tgz
+
+# Large third-party checkouts and generated intermediates
+external/rqcopt-mpo/
+experiments/abc/
+*bdd_dirty_reversible.qasm*
+
+# C build outputs (make build-c)
+/src/post151_sa/c/*
+!/src/post151_sa/c/Makefile
+
+# Local development tools and generated output
+.claude/
+CLAUDE.md
+[Cc]laude*/
+*[Cc]laude*output*
+.codex/
+[Cc]odex*/
+CODEX.md
+*[Cc]odex*output*
+.cursor/
+.cursorrules
+.windsurf/
+.gemini/
+GEMINI.md
+.agents/
+.aider*
+.continue/

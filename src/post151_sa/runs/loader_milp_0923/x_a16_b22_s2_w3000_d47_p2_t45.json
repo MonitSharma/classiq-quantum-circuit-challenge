@@ -1,0 +1,7 @@
+{
+  "source": "runs/partial_parity_0923/x_a16_b22_s2_w3000_d47_p2.pkl",
+  "target": 45,
+  "original_depth": 47,
+  "seconds": 0.01905383402481675,
+  "success": false
+}

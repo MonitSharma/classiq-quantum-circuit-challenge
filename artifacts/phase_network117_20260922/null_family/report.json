@@ -1,0 +1,543 @@
+[
+  {
+    "index": 0,
+    "terms": 64,
+    "side": "x",
+    "missing": [
+      12,
+      15
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 9,
+    "alpha": -2,
+    "added": [
+      9,
+      73,
+      121,
+      185
+    ],
+    "removed": [
+      57,
+      137,
+      249
+    ]
+  },
+  {
+    "index": 1,
+    "terms": 63,
+    "side": "y",
+    "missing": [
+      6,
+      7
+    ],
+    "signs": [
+      1,
+      -1
+    ],
+    "other": 12,
+    "alpha": -1,
+    "added": [
+      193,
+      195,
+      197,
+      199
+    ],
+    "removed": [
+      201,
+      203,
+      205,
+      207
+    ]
+  },
+  {
+    "index": 2,
+    "terms": 63,
+    "side": "y",
+    "missing": [
+      6,
+      7
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 6,
+    "alpha": 1,
+    "added": [
+      100,
+      108
+    ],
+    "removed": [
+      102,
+      110
+    ]
+  },
+  {
+    "index": 3,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      6,
+      7
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 6,
+    "alpha": 2,
+    "added": [
+      100,
+      108
+    ],
+    "removed": [
+      104
+    ]
+  },
+  {
+    "index": 4,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      6,
+      7
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 6,
+    "alpha": 3,
+    "added": [
+      100,
+      108
+    ],
+    "removed": [
+      98
+    ]
+  },
+  {
+    "index": 5,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      6,
+      7
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 6,
+    "alpha": -4,
+    "added": [
+      100,
+      108
+    ],
+    "removed": [
+      96
+    ]
+  },
+  {
+    "index": 6,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      6,
+      7
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 6,
+    "alpha": -1,
+    "added": [
+      100,
+      108
+    ],
+    "removed": [
+      106
+    ]
+  },
+  {
+    "index": 7,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      6,
+      7
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 14,
+    "alpha": -1,
+    "added": [
+      224,
+      228,
+      232,
+      236
+    ],
+    "removed": [
+      230,
+      234,
+      238
+    ]
+  },
+  {
+    "index": 8,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      6,
+      13
+    ],
+    "signs": [
+      1,
+      -1
+    ],
+    "other": 4,
+    "alpha": -1,
+    "added": [
+      66,
+      70,
+      75,
+      79
+    ],
+    "removed": [
+      69,
+      72,
+      76
+    ]
+  },
+  {
+    "index": 9,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      6,
+      13
+    ],
+    "signs": [
+      1,
+      -1
+    ],
+    "other": 6,
+    "alpha": 1,
+    "added": [
+      107,
+      108,
+      111
+    ],
+    "removed": [
+      101,
+      102
+    ]
+  },
+  {
+    "index": 10,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      6,
+      13
+    ],
+    "signs": [
+      1,
+      -1
+    ],
+    "other": 6,
+    "alpha": 3,
+    "added": [
+      107,
+      108,
+      111
+    ],
+    "removed": [
+      97,
+      98
+    ]
+  },
+  {
+    "index": 11,
+    "terms": 63,
+    "side": "y",
+    "missing": [
+      6,
+      13
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 0,
+    "alpha": -2,
+    "added": [
+      3,
+      4,
+      9
+    ],
+    "removed": [
+      7,
+      10,
+      13
+    ]
+  },
+  {
+    "index": 12,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      6,
+      13
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 4,
+    "alpha": 1,
+    "added": [
+      64,
+      68,
+      73,
+      77
+    ],
+    "removed": [
+      67,
+      74,
+      78
+    ]
+  },
+  {
+    "index": 13,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      6,
+      13
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 6,
+    "alpha": -1,
+    "added": [
+      99,
+      100,
+      103
+    ],
+    "removed": [
+      106,
+      109
+    ]
+  },
+  {
+    "index": 14,
+    "terms": 63,
+    "side": "y",
+    "missing": [
+      6,
+      13
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 12,
+    "alpha": -1,
+    "added": [
+      192,
+      195,
+      196,
+      199
+    ],
+    "removed": [
+      201,
+      202,
+      205,
+      206
+    ]
+  },
+  {
+    "index": 15,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      7,
+      13
+    ],
+    "signs": [
+      1,
+      -1
+    ],
+    "other": 4,
+    "alpha": -1,
+    "added": [
+      66,
+      70,
+      73,
+      77
+    ],
+    "removed": [
+      67,
+      72,
+      76
+    ]
+  },
+  {
+    "index": 16,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      7,
+      13
+    ],
+    "signs": [
+      1,
+      -1
+    ],
+    "other": 6,
+    "alpha": 1,
+    "added": [
+      99,
+      103,
+      108
+    ],
+    "removed": [
+      102,
+      109
+    ]
+  },
+  {
+    "index": 17,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      7,
+      13
+    ],
+    "signs": [
+      1,
+      -1
+    ],
+    "other": 6,
+    "alpha": 3,
+    "added": [
+      99,
+      103,
+      108
+    ],
+    "removed": [
+      98,
+      105
+    ]
+  },
+  {
+    "index": 18,
+    "terms": 63,
+    "side": "y",
+    "missing": [
+      7,
+      13
+    ],
+    "signs": [
+      1,
+      -1
+    ],
+    "other": 12,
+    "alpha": 1,
+    "added": [
+      194,
+      195,
+      198,
+      199
+    ],
+    "removed": [
+      200,
+      201,
+      204,
+      205
+    ]
+  },
+  {
+    "index": 19,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      7,
+      13
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 0,
+    "alpha": 4,
+    "added": [
+      1,
+      4,
+      11
+    ],
+    "removed": [
+      5,
+      15
+    ]
+  },
+  {
+    "index": 20,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      7,
+      13
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 4,
+    "alpha": 1,
+    "added": [
+      64,
+      68,
+      75,
+      79
+    ],
+    "removed": [
+      69,
+      74,
+      78
+    ]
+  },
+  {
+    "index": 21,
+    "terms": 64,
+    "side": "y",
+    "missing": [
+      7,
+      13
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "other": 6,
+    "alpha": -1,
+    "added": [
+      100,
+      107,
+      111
+    ],
+    "removed": [
+      101,
+      106
+    ]
+  }
+]

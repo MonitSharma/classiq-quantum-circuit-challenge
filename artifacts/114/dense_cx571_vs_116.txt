@@ -1,0 +1,5 @@
+state 0 |overlap|=1.000000000000 maxdiff after phase 7.03e-17
+state 1 |overlap|=1.000000000000 maxdiff after phase 5.48e-17
+state 2 |overlap|=1.000000000000 maxdiff after phase 6.89e-17
+state 3 |overlap|=1.000000000000 maxdiff after phase 6.48e-17
+state 4 |overlap|=1.000000000000 maxdiff after phase 5.79e-17

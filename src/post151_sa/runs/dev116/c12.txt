@@ -1,0 +1,8 @@
+h1_116 116 16000 1 0.02 SV - - 0 - PAIR=pair_h1.json
+h2_116 116 16000 1 0.02 SV - - 0 - PAIR=pair_h2.json
+h3_116 116 16000 1 0.02 SV - - 0 - PAIR=pair_h3.json
+h4_116 116 16000 1 0.02 SV - - 0 - PAIR=pair_h4.json
+h1_115 115 16000 1 0.02 SV - - 0 - PAIR=pair_h1.json
+h5_116 116 16000 1 0.02 SV - - 0 - PAIR=pair_h5.json
+h2_115 115 16000 1 0.02 SV - - 0 - PAIR=pair_h2.json
+h4_115 115 16000 1 0.02 SV - - 0 - PAIR=pair_h4.json

@@ -1,0 +1,22 @@
+{
+  "depth": 116,
+  "cx_count": 573,
+  "u3_count": 420,
+  "width": 18,
+  "basis_inputs_checked": 4096,
+  "dense_random_states": 5,
+  "sha256": {
+    "conditional_loader_116.exhaustive.json": "b9b22fbdb256cb446ba82d3d5ab34b8c8a7a9e52cdf03e7ad4e37c1e282983a6",
+    "conditional_loader_116.qasm": "5f4e4162dc0880a11db275cb94b573a38f398f3b975c9fec55d7a2652872a570",
+    "conditional_loader_116.qmod": "527201c7e8ba365732763ab12c21d667f149267ea7afaf085113e288fc06a175",
+    "conditional_loader_116.verification.json": "dfaefb24ff89044cdb06e386d7707926b9eede27309bad4c4ae370fe0f026799"
+  },
+  "phase_source": "artifacts/phase_network117_20260922/alternating/co_24.npy",
+  "beam": {
+    "binary": "kbeam_wirehash",
+    "width": 16000,
+    "seed": 2,
+    "model_target": 116
+  },
+  "replay": "src/post151_sa/replay116.py"
+}

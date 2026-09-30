@@ -1,0 +1,17 @@
+{
+  "trials": 3261,
+  "accepted": 156,
+  "seconds": 150.4426589589566,
+  "retained": [
+    {
+      "score": [
+        117,
+        920,
+        2882
+      ],
+      "trial": 962,
+      "path": "artifacts/rewrite117_20260922/walk/candidate_962_d117.qasm",
+      "found116": false
+    }
+  ]
+}

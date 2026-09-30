@@ -1,0 +1,12 @@
+  runs/po_xE1_s6.txt depth 45 prof [45, 36, 44, 44, 43, 44, 43, 42, 43]
+  runs/po_yF1_s17.txt depth 46 prof [34, 45, 41, 43, 39, 46, 45, 44, 45]
+rdy [34, 39, 41, 46, 36, 42, 43, 45]  s [26, 37, 39, 44, 36, 42, 40, 42]  tau0 26  md 56
+  seed 1 rc=2
+  seed 2 rc=2
+  seed 3 rc=2
+  seed 4 rc=2
+  seed 5 rc=2
+  seed 6 rc=2
+  seed 7 rc=2
+  seed 8 rc=2
+shard done, no solution

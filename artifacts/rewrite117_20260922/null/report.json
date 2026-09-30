@@ -1,0 +1,758 @@
+[
+  {
+    "alpha": 0.125,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        -1,
+        17
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.125_0.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.125,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        -1,
+        17
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.125_1.qasm",
+    "depth": 118,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.125,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        83,
+        9
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.125_2.qasm",
+    "depth": 120,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.125,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        83,
+        9
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.125_3.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.125,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        138,
+        17
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.125_4.qasm",
+    "depth": 120,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.125,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        138,
+        17
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.125_5.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.125,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        -1,
+        17
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.125_6.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.125,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        -1,
+        17
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.125_7.qasm",
+    "depth": 118,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.125,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        83,
+        9
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.125_8.qasm",
+    "depth": 120,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.125,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        83,
+        9
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.125_9.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.125,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        138,
+        17
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.125_10.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.125,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        138,
+        17
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.125_11.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": -0.0625,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        -1,
+        17
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a-0.0625_0.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": -0.0625,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        -1,
+        17
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a-0.0625_1.qasm",
+    "depth": 118,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": -0.0625,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        83,
+        9
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a-0.0625_2.qasm",
+    "depth": 120,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": -0.0625,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        83,
+        9
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a-0.0625_3.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": -0.0625,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        138,
+        17
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a-0.0625_4.qasm",
+    "depth": 120,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": -0.0625,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        138,
+        17
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a-0.0625_5.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": -0.0625,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        -1,
+        17
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a-0.0625_6.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": -0.0625,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        -1,
+        17
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a-0.0625_7.qasm",
+    "depth": 118,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": -0.0625,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        83,
+        9
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a-0.0625_8.qasm",
+    "depth": 120,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": -0.0625,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        83,
+        9
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a-0.0625_9.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": -0.0625,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        138,
+        17
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a-0.0625_10.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": -0.0625,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        138,
+        17
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a-0.0625_11.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.0625,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        -1,
+        17
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.0625_0.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.0625,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        -1,
+        17
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.0625_1.qasm",
+    "depth": 118,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.0625,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        83,
+        9
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.0625_2.qasm",
+    "depth": 120,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.0625,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        83,
+        9
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.0625_3.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.0625,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        138,
+        17
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.0625_4.qasm",
+    "depth": 120,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.0625,
+    "slots": [
+      [
+        -1,
+        14
+      ],
+      [
+        138,
+        17
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.0625_5.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.0625,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        -1,
+        17
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.0625_6.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.0625,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        -1,
+        17
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.0625_7.qasm",
+    "depth": 118,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.0625,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        83,
+        9
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.0625_8.qasm",
+    "depth": 120,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.0625,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        83,
+        9
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.0625_9.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.0625,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        138,
+        17
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.0625_10.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  },
+  {
+    "alpha": 0.0625,
+    "slots": [
+      [
+        156,
+        14
+      ],
+      [
+        138,
+        17
+      ],
+      [
+        150,
+        14
+      ]
+    ],
+    "path": "artifacts/rewrite117_20260922/null/a0.0625_11.qasm",
+    "depth": 119,
+    "cx": 578,
+    "found116": false
+  }
+]

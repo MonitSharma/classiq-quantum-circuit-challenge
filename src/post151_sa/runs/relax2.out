@@ -1,0 +1,8 @@
+  runs/po_yF1_s6.txt depth 46 prof [39, 34, 45, 45, 45, 42, 45, 45, 46]
+rdy [34, 39, 42, 46, 35, 43, 44, 44] s [26, 37, 42, 43, 28, 40, 42, 44]
+  tighten wire 0 to 116: FEASIBLE (16000, 2, 'runs/r2_117_0_16000_2.txt')
+  tighten wire 1 to 116: FEASIBLE (16000, 2, 'runs/r2_117_1_16000_2.txt')
+  tighten wire 2 to 116: INFEASIBLE
+  tighten wire 3 to 116: FEASIBLE (16000, 2, 'runs/r2_117_3_16000_2.txt')
+  tighten wire 4 to 116: FEASIBLE (16000, 2, 'runs/r2_117_4_16000_2.txt')
+  tighten wire 5 to 116: INFEASIBLE

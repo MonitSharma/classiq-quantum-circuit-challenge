@@ -1,0 +1,32 @@
+{
+  "name": "safe_v2_normal_relaxed_t116_w8000_s1",
+  "target": 116,
+  "width": 8000,
+  "seed": 1,
+  "returncode": 0,
+  "seconds": 57.244492792058736,
+  "evaluation": {
+    "asm_depth": 116,
+    "asm_cx": 583,
+    "simp_cx": 571,
+    "simp_depth": 116,
+    "T116": true,
+    "sched_depth": 116,
+    "qasm": "../../artifacts/parity_preserved_20260923/safe_v2_normal_relaxed_t116_w8000_s1_m116.qasm"
+  },
+  "verification": {
+    "qasm": "artifacts/parity_preserved_20260923/safe_v2_normal_relaxed_t116_w8000_s1_m116.qasm",
+    "sha256": "8e50e43b06cb11e24cfbea52a4d74606ac9000aea957755bdb8bb1a08a4029a1",
+    "basis_inputs_checked": 4096,
+    "width": 18,
+    "depth": 116,
+    "cx_count": 571,
+    "max_error": 3.778881826003595e-14,
+    "ancilla_error": 3.778881826003595e-14,
+    "discarded_amplitude_bound": 7.775147034339167e-14,
+    "peak_sparse_support": 64,
+    "elapsed_seconds": 0.46836090087890625,
+    "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+    "challenge_width_eligible": true
+  }
+}

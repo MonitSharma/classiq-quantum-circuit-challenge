@@ -1,0 +1,5 @@
+sha256 f5a7a4e1b3af2c14ee9384ea9840a4c41e57e8cad4e533834599a61d26a92def
+state 0: max amp error 2.96e-17 (relative 1.90e-15), leakage 0.00e+00, |overlap| 1.000000000000, t 1.2s
+state 1: max amp error 3.16e-17 (relative 2.02e-15), leakage 0.00e+00, |overlap| 1.000000000000, t 0.9s
+state 2: max amp error 3.14e-17 (relative 2.01e-15), leakage 0.00e+00, |overlap| 1.000000000000, t 1.0s
+PASS 2.0206364052201327e-15 0

@@ -1,0 +1,6 @@
+p2_w12 116 12000 2 0.02 SV - - 0 - PAIR=pair_p2.json
+q1_w16 116 16000 2 0.02 SV - - 0 - PAIR=pair_q1.json
+q2_w16 116 16000 2 0.02 SV - - 0 - PAIR=pair_q2.json
+q4_w16 116 16000 2 0.02 SV - - 0 - PAIR=pair_q4.json
+q3_w16 116 16000 2 0.02 SV - - 0 - PAIR=pair_q3.json
+p2_s1 116 16000 1 0.02 SV - - 0 - PAIR=pair_p2.json

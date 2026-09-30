@@ -1,0 +1,15 @@
+{
+  "qasm": "artifacts/116/conditional_loader_116_cx570.qasm",
+  "sha256": "4710d2b9a4312bc658e3041b34dd48e2b434c7e188ab27bd563640ed67c57c65",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 116,
+  "cx_count": 570,
+  "max_error": 3.787189515295285e-14,
+  "ancilla_error": 3.787189515295285e-14,
+  "discarded_amplitude_bound": 7.792541507731459e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 0.4567086696624756,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+  "challenge_width_eligible": true
+}

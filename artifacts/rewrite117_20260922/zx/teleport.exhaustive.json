@@ -1,0 +1,15 @@
+{
+  "qasm": "artifacts/rewrite117_20260922/zx/teleport.qasm",
+  "sha256": "a05859e83c409d6325fd48f6462ef70884560ec1174079dd6d890123b474fa23",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 117,
+  "cx_count": 577,
+  "max_error": 6.06584079088825e-15,
+  "ancilla_error": 2.872648579006324e-15,
+  "discarded_amplitude_bound": 5.892082844474258e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 0.25130295753479004,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+  "challenge_width_eligible": true
+}

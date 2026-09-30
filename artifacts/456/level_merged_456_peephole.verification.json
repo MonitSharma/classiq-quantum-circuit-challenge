@@ -1,0 +1,12 @@
+{
+  "qasm": "artifacts/456/level_merged_456_peephole.qasm",
+  "sha256": "c8efac22a99fedfa5a989f8a4c82be7bb1349196f0bb5f784134f7b1973a9938",
+  "width": 18,
+  "depth": 458,
+  "cx_count": 1140,
+  "random_dense_states": 2,
+  "max_error": 5.187969492452669e-15,
+  "ancilla_error": 6.438164415931335e-16,
+  "normalization_error": 2.3314683517128287e-14,
+  "verification": "Dense random inputs supported on all 4096 coordinates; probabilistic numerical check, not exhaustive operator proof"
+}

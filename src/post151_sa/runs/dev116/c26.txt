@@ -1,0 +1,4 @@
+u1_116 116 16000 2 0.02 SV - - 0 - PAIR=pair_u1.json
+u2_116 116 16000 2 0.02 SV - - 0 - PAIR=pair_u2.json
+u3_116 116 16000 2 0.02 SV - - 0 - PAIR=pair_u3.json
+u4_116 116 16000 2 0.02 SV - - 0 - PAIR=pair_u4.json

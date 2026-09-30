@@ -1,0 +1,4 @@
+cxy1_116a 116 16000 2 0.02 SV - - 0 - PAIR=/work/work/src/post151_sa/pair_cxy1.json
+cxy1_116b 116 16000 1 0.02 SV - - 0 - PAIR=/work/work/src/post151_sa/pair_cxy1.json
+cxy1_116c 116 16000 3 0.015 SV - - 0 - PAIR=/work/work/src/post151_sa/pair_cxy1.json
+cxy1_117a 117 16000 2 0.02 SV - - 0 - PAIR=/work/work/src/post151_sa/pair_cxy1.json

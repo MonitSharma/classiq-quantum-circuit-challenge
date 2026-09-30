@@ -1,0 +1,23 @@
+{
+  "description": "Loader/kernel interface of the depth-112 circuit. For each of the eight code wires: the physical qubit, the loader side, the ready time (layer of the loader's last gate on that wire) and the value-fixed time (layer after which the wire already holds its final code bit). The unloader mirrors the loader, so a code wire with ready time r is free for the phase kernel in layers r+1 .. T-r.",
+  "T": 112,
+  "circuit": "artifacts/112/conditional_loader_112_cx573.qasm",
+  "loaders": {
+    "x": "artifacts/112/recipes/cx576/x_loader.pkl",
+    "y": "artifacts/112/recipes/cx576/y_loader_T2xpy.pkl"
+  },
+  "side_qubits": {
+    "x": [0, 1, 2, 3, 4, 5, 15, 16, 17],
+    "y": [6, 7, 8, 9, 10, 11, 12, 13, 14]
+  },
+  "code_wires": [
+    {"qubit": 12, "side": "y", "ready": 33, "value_fixed": 28},
+    {"qubit": 7,  "side": "y", "ready": 37, "value_fixed": 36},
+    {"qubit": 9,  "side": "y", "ready": 40, "value_fixed": 40},
+    {"qubit": 10, "side": "y", "ready": 45, "value_fixed": 42},
+    {"qubit": 2,  "side": "x", "ready": 39, "value_fixed": 39},
+    {"qubit": 5,  "side": "x", "ready": 41, "value_fixed": 38},
+    {"qubit": 17, "side": "x", "ready": 41, "value_fixed": 41},
+    {"qubit": 3,  "side": "x", "ready": 43, "value_fixed": 41}
+  ]
+}

@@ -1,0 +1,10383 @@
+{
+  "qasm": "artifacts/524/full_mux_feature_linear_tket_524.qasm",
+  "sha256": "7736b6dab26dd757575acab7135751e8d31f10da563cd96a9cc273135b8e6147",
+  "width": 18,
+  "depth": 524,
+  "cx_count": 950,
+  "gate_count": 1773,
+  "gate_family_counts": {
+    "diagonal": 213,
+    "general": 610,
+    "cx": 950
+  },
+  "critical_gate_count": 580,
+  "per_qubit": [
+    {
+      "qubit": 0,
+      "gate_count": 56,
+      "cx_count": 56,
+      "critical_gate_count": 25,
+      "first_level": 132,
+      "last_level": 515
+    },
+    {
+      "qubit": 1,
+      "gate_count": 52,
+      "cx_count": 52,
+      "critical_gate_count": 43,
+      "first_level": 131,
+      "last_level": 517
+    },
+    {
+      "qubit": 2,
+      "gate_count": 36,
+      "cx_count": 36,
+      "critical_gate_count": 11,
+      "first_level": 133,
+      "last_level": 521
+    },
+    {
+      "qubit": 3,
+      "gate_count": 58,
+      "cx_count": 50,
+      "critical_gate_count": 35,
+      "first_level": 133,
+      "last_level": 520
+    },
+    {
+      "qubit": 4,
+      "gate_count": 81,
+      "cx_count": 68,
+      "critical_gate_count": 29,
+      "first_level": 0,
+      "last_level": 522
+    },
+    {
+      "qubit": 5,
+      "gate_count": 25,
+      "cx_count": 22,
+      "critical_gate_count": 4,
+      "first_level": 137,
+      "last_level": 522
+    },
+    {
+      "qubit": 6,
+      "gate_count": 98,
+      "cx_count": 98,
+      "critical_gate_count": 8,
+      "first_level": 1,
+      "last_level": 513
+    },
+    {
+      "qubit": 7,
+      "gate_count": 100,
+      "cx_count": 100,
+      "critical_gate_count": 9,
+      "first_level": 1,
+      "last_level": 519
+    },
+    {
+      "qubit": 8,
+      "gate_count": 110,
+      "cx_count": 110,
+      "critical_gate_count": 19,
+      "first_level": 1,
+      "last_level": 521
+    },
+    {
+      "qubit": 9,
+      "gate_count": 106,
+      "cx_count": 106,
+      "critical_gate_count": 35,
+      "first_level": 1,
+      "last_level": 514
+    },
+    {
+      "qubit": 10,
+      "gate_count": 130,
+      "cx_count": 130,
+      "critical_gate_count": 67,
+      "first_level": 1,
+      "last_level": 520
+    },
+    {
+      "qubit": 11,
+      "gate_count": 115,
+      "cx_count": 114,
+      "critical_gate_count": 17,
+      "first_level": 0,
+      "last_level": 522
+    },
+    {
+      "qubit": 12,
+      "gate_count": 245,
+      "cx_count": 140,
+      "critical_gate_count": 37,
+      "first_level": 0,
+      "last_level": 523
+    },
+    {
+      "qubit": 13,
+      "gate_count": 321,
+      "cx_count": 166,
+      "critical_gate_count": 22,
+      "first_level": 0,
+      "last_level": 522
+    },
+    {
+      "qubit": 14,
+      "gate_count": 240,
+      "cx_count": 134,
+      "critical_gate_count": 43,
+      "first_level": 0,
+      "last_level": 516
+    },
+    {
+      "qubit": 15,
+      "gate_count": 225,
+      "cx_count": 128,
+      "critical_gate_count": 43,
+      "first_level": 0,
+      "last_level": 523
+    },
+    {
+      "qubit": 16,
+      "gate_count": 405,
+      "cx_count": 206,
+      "critical_gate_count": 394,
+      "first_level": 0,
+      "last_level": 517
+    },
+    {
+      "qubit": 17,
+      "gate_count": 320,
+      "cx_count": 184,
+      "critical_gate_count": 42,
+      "first_level": 0,
+      "last_level": 511
+    }
+  ],
+  "layers": [
+    {
+      "level": 0,
+      "gate_count": 8,
+      "cx": 0,
+      "u3": 8,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "diagonal": 2,
+        "general": 6
+      }
+    },
+    {
+      "level": 1,
+      "gate_count": 6,
+      "cx": 6,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 6
+      }
+    },
+    {
+      "level": 2,
+      "gate_count": 6,
+      "cx": 0,
+      "u3": 6,
+      "critical_gate_count": 1,
+      "qubits": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "general": 6
+      }
+    },
+    {
+      "level": 3,
+      "gate_count": 6,
+      "cx": 6,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 6
+      }
+    },
+    {
+      "level": 4,
+      "gate_count": 6,
+      "cx": 1,
+      "u3": 5,
+      "critical_gate_count": 1,
+      "qubits": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 5
+      }
+    },
+    {
+      "level": 5,
+      "gate_count": 6,
+      "cx": 5,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 5,
+        "general": 1
+      }
+    },
+    {
+      "level": 6,
+      "gate_count": 6,
+      "cx": 1,
+      "u3": 5,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 5
+      }
+    },
+    {
+      "level": 7,
+      "gate_count": 6,
+      "cx": 5,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 5,
+        "general": 1
+      }
+    },
+    {
+      "level": 8,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 9,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 10,
+      "gate_count": 6,
+      "cx": 4,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 2
+      }
+    },
+    {
+      "level": 11,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 12,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        12,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 13,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        12,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 14,
+      "gate_count": 6,
+      "cx": 4,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 2
+      }
+    },
+    {
+      "level": 15,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 16,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 17,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 18,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        12,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 19,
+      "gate_count": 4,
+      "cx": 4,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        9,
+        11,
+        12,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 4
+      }
+    },
+    {
+      "level": 20,
+      "gate_count": 5,
+      "cx": 1,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 4
+      }
+    },
+    {
+      "level": 21,
+      "gate_count": 4,
+      "cx": 4,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4
+      }
+    },
+    {
+      "level": 22,
+      "gate_count": 5,
+      "cx": 1,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        12,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 4
+      }
+    },
+    {
+      "level": 23,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        11,
+        12,
+        13,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 24,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 25,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 26,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        11,
+        12,
+        13,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 27,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        12,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 2
+      }
+    },
+    {
+      "level": 28,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        12,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 29,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 30,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        10,
+        11,
+        12,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 31,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 32,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 33,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 34,
+      "gate_count": 4,
+      "cx": 1,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        12,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 3
+      }
+    },
+    {
+      "level": 35,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        9,
+        12,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 36,
+      "gate_count": 4,
+      "cx": 1,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 3
+      }
+    },
+    {
+      "level": 37,
+      "gate_count": 4,
+      "cx": 4,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4
+      }
+    },
+    {
+      "level": 38,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 39,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        11,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 40,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 41,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 42,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        12,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 43,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        12,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 2
+      }
+    },
+    {
+      "level": 44,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        12,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 45,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 46,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 47,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 48,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 49,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 50,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 51,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 52,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 53,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        10,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 54,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        11,
+        12,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 55,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        9,
+        12,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 56,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 57,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 58,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 59,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 60,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 61,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 62,
+      "gate_count": 6,
+      "cx": 4,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 2
+      }
+    },
+    {
+      "level": 63,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 64,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 65,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 66,
+      "gate_count": 4,
+      "cx": 1,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        12,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 3
+      }
+    },
+    {
+      "level": 67,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        9,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 68,
+      "gate_count": 4,
+      "cx": 1,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 3
+      }
+    },
+    {
+      "level": 69,
+      "gate_count": 4,
+      "cx": 4,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4
+      }
+    },
+    {
+      "level": 70,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 71,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 72,
+      "gate_count": 2,
+      "cx": 0,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        16,
+        17
+      ],
+      "families": {
+        "general": 2
+      }
+    },
+    {
+      "level": 73,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 74,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        12,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 75,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        12,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 76,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        12,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 77,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 78,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 79,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 80,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 81,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 82,
+      "gate_count": 6,
+      "cx": 4,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 2
+      }
+    },
+    {
+      "level": 83,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 84,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 85,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        10,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 86,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 2
+      }
+    },
+    {
+      "level": 87,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 88,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 89,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 90,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 91,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 92,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 93,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        10,
+        12,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 94,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 95,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 96,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 97,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 98,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 99,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 100,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 101,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 102,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 2
+      }
+    },
+    {
+      "level": 103,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 104,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 105,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 106,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 107,
+      "gate_count": 4,
+      "cx": 1,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        12,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 3
+      }
+    },
+    {
+      "level": 108,
+      "gate_count": 5,
+      "cx": 4,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 1
+      }
+    },
+    {
+      "level": 109,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 110,
+      "gate_count": 6,
+      "cx": 4,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 2
+      }
+    },
+    {
+      "level": 111,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 112,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        11,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 113,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 114,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 115,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        11,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 116,
+      "gate_count": 4,
+      "cx": 1,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 3
+      }
+    },
+    {
+      "level": 117,
+      "gate_count": 4,
+      "cx": 4,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4
+      }
+    },
+    {
+      "level": 118,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 119,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 120,
+      "gate_count": 4,
+      "cx": 1,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        11,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 3
+      }
+    },
+    {
+      "level": 121,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 122,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 123,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        12,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 124,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        7,
+        9,
+        12,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 125,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        9,
+        10,
+        12,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 126,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        6,
+        10,
+        12,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 127,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 2,
+      "qubits": [
+        7,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 128,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 2,
+      "qubits": [
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 129,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 2,
+      "qubits": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 130,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 131,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 132,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 133,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        3,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 134,
+      "gate_count": 3,
+      "cx": 0,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "diagonal": 3
+      }
+    },
+    {
+      "level": 135,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 136,
+      "gate_count": 3,
+      "cx": 0,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "diagonal": 3
+      }
+    },
+    {
+      "level": 137,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        4,
+        5,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 138,
+      "gate_count": 3,
+      "cx": 0,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "diagonal": 3
+      }
+    },
+    {
+      "level": 139,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 140,
+      "gate_count": 3,
+      "cx": 0,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "diagonal": 3
+      }
+    },
+    {
+      "level": 141,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        3,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 142,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 143,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 144,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 145,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 146,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 147,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        3,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 148,
+      "gate_count": 3,
+      "cx": 0,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "diagonal": 3
+      }
+    },
+    {
+      "level": 149,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 150,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 151,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 152,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 153,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        5,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 154,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 155,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 156,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 157,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 158,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 159,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 160,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        5,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 161,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 162,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 163,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 164,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 165,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 166,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 167,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 168,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 169,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        5,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 170,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 171,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        3,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 172,
+      "gate_count": 3,
+      "cx": 0,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "diagonal": 3
+      }
+    },
+    {
+      "level": 173,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 174,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 175,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 176,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 177,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 178,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 179,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 180,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 181,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 182,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 183,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 184,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 185,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        5,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 186,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 187,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        3,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 188,
+      "gate_count": 3,
+      "cx": 0,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "diagonal": 3
+      }
+    },
+    {
+      "level": 189,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 190,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 191,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 192,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 193,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        5,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 194,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 195,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        3,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 196,
+      "gate_count": 3,
+      "cx": 0,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "diagonal": 3
+      }
+    },
+    {
+      "level": 197,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 198,
+      "gate_count": 2,
+      "cx": 0,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16
+      ],
+      "families": {
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 199,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 200,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 201,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        5,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 202,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 203,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 204,
+      "gate_count": 2,
+      "cx": 0,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16
+      ],
+      "families": {
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 205,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 206,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 207,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 208,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 209,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 210,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 211,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        3,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 212,
+      "gate_count": 3,
+      "cx": 0,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "diagonal": 3
+      }
+    },
+    {
+      "level": 213,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 214,
+      "gate_count": 2,
+      "cx": 0,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16
+      ],
+      "families": {
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 215,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 216,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 217,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        5,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 218,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 219,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 220,
+      "gate_count": 2,
+      "cx": 0,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16
+      ],
+      "families": {
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 221,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 222,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 223,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 224,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        5,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 225,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 226,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 227,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 228,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 229,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 230,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 231,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 232,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 233,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        5,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 234,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 235,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        3,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 236,
+      "gate_count": 3,
+      "cx": 0,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "diagonal": 3
+      }
+    },
+    {
+      "level": 237,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 238,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 239,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 240,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 241,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 242,
+      "gate_count": 2,
+      "cx": 0,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16
+      ],
+      "families": {
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 243,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 244,
+      "gate_count": 2,
+      "cx": 0,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16
+      ],
+      "families": {
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 245,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 246,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 247,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 248,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 249,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        5,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 250,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 251,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        3,
+        4,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 252,
+      "gate_count": 3,
+      "cx": 0,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "diagonal": 3
+      }
+    },
+    {
+      "level": 253,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 254,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 255,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        1,
+        4,
+        11,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 256,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 2
+      }
+    },
+    {
+      "level": 257,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        3,
+        5,
+        11,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 258,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        5,
+        11,
+        13
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 259,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        11,
+        13,
+        17
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 260,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        3,
+        4,
+        11,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 261,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        1,
+        3,
+        4,
+        12
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 262,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        15
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 263,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        3,
+        5,
+        12,
+        14
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 264,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        5,
+        12
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 265,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        5,
+        12
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 266,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        5,
+        12,
+        13
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 267,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        12,
+        13
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 268,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        12,
+        13
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 269,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        12,
+        13
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 270,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        5,
+        12,
+        13
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 271,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        12,
+        13,
+        15
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 272,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        13,
+        15
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 273,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        15
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 274,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        15
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 275,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        12,
+        15
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 276,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        15
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 277,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        15
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 278,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        15
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 279,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        14,
+        15
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 280,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 281,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        14
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 282,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 283,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        14,
+        15
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 284,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 285,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        14
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 286,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 287,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        14
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 288,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 289,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        5,
+        14
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 290,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 291,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        14
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 292,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 293,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        14
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 294,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 295,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        14
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 296,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 297,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        5,
+        14
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 298,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 299,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        13,
+        14
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 300,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 301,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        14
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 302,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        11,
+        14
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 303,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        4,
+        14
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 304,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 305,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        14,
+        15
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 306,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 307,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        14
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 308,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        14
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 309,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        14,
+        15
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 310,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        14,
+        15
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 311,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        15
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 312,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        15
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 313,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        12,
+        15
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 314,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        15
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 315,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        15
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 316,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        15
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 317,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        12,
+        15
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 318,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        12,
+        15
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 319,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        12,
+        14,
+        15
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 320,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        12
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 321,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        12
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 322,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        12
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 323,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        12
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 324,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        12
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 325,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        12
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 326,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        2,
+        3,
+        12
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 327,
+      "gate_count": 2,
+      "cx": 2,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        3,
+        12,
+        17
+      ],
+      "families": {
+        "cx": 2
+      }
+    },
+    {
+      "level": 328,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 2,
+      "qubits": [
+        0,
+        3,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 329,
+      "gate_count": 5,
+      "cx": 5,
+      "u3": 0,
+      "critical_gate_count": 2,
+      "qubits": [
+        3,
+        6,
+        7,
+        8,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 5
+      }
+    },
+    {
+      "level": 330,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 2,
+      "qubits": [
+        2,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 331,
+      "gate_count": 6,
+      "cx": 4,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        1,
+        6,
+        7,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 2
+      }
+    },
+    {
+      "level": 332,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 2,
+      "qubits": [
+        0,
+        9,
+        11,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 333,
+      "gate_count": 5,
+      "cx": 4,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 1
+      }
+    },
+    {
+      "level": 334,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 335,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 2
+      }
+    },
+    {
+      "level": 336,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        10,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 337,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 338,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        11,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 339,
+      "gate_count": 3,
+      "cx": 3,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        10,
+        11,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3
+      }
+    },
+    {
+      "level": 340,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 341,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 342,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        11,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 343,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        10,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 344,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 345,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 346,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 347,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 348,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 349,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 350,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 351,
+      "gate_count": 5,
+      "cx": 4,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 1
+      }
+    },
+    {
+      "level": 352,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 353,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 354,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 355,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 356,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 357,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 358,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 359,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        10,
+        12,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 360,
+      "gate_count": 5,
+      "cx": 4,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 1
+      }
+    },
+    {
+      "level": 361,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 362,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 363,
+      "gate_count": 6,
+      "cx": 4,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 2
+      }
+    },
+    {
+      "level": 364,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 365,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        9,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 366,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 367,
+      "gate_count": 5,
+      "cx": 4,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 1
+      }
+    },
+    {
+      "level": 368,
+      "gate_count": 5,
+      "cx": 1,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 4
+      }
+    },
+    {
+      "level": 369,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 370,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 371,
+      "gate_count": 5,
+      "cx": 4,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 1
+      }
+    },
+    {
+      "level": 372,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 373,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 374,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 375,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 376,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        10,
+        12,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 377,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 378,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 379,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 380,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 381,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        12,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 382,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 383,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        10,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 384,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        11,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 385,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 386,
+      "gate_count": 4,
+      "cx": 1,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        11,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 3
+      }
+    },
+    {
+      "level": 387,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        11,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 388,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 389,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        12,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 390,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        11,
+        12,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 391,
+      "gate_count": 4,
+      "cx": 1,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        12,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 3
+      }
+    },
+    {
+      "level": 392,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 393,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 394,
+      "gate_count": 6,
+      "cx": 4,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 2
+      }
+    },
+    {
+      "level": 395,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 396,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        12,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 397,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        12,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 398,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 399,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 400,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        10,
+        12,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 401,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        9,
+        12,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 402,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 403,
+      "gate_count": 5,
+      "cx": 4,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 1
+      }
+    },
+    {
+      "level": 404,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 405,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 406,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 407,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 408,
+      "gate_count": 5,
+      "cx": 4,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 1
+      }
+    },
+    {
+      "level": 409,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 410,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        8,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 411,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 412,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 413,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 414,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        12,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 415,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 416,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 417,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        13,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 2
+      }
+    },
+    {
+      "level": 418,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        11,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 419,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 420,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        12,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 421,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        12,
+        13,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 2
+      }
+    },
+    {
+      "level": 422,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        12,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 423,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        10,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 424,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 425,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 426,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 427,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        12,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 428,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 429,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 430,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        12,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 431,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        12,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 432,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        10,
+        12,
+        13,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 433,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 434,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 435,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        10,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 436,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        11,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 437,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        9,
+        12,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 438,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        9,
+        12,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 439,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        12,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 440,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 441,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        8,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 442,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        8,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 443,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 444,
+      "gate_count": 4,
+      "cx": 1,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        10,
+        12,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 3
+      }
+    },
+    {
+      "level": 445,
+      "gate_count": 4,
+      "cx": 4,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 4
+      }
+    },
+    {
+      "level": 446,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 1,
+      "qubits": [
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 447,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 1,
+      "qubits": [
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 448,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 2,
+      "qubits": [
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 449,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        7,
+        8,
+        9,
+        12,
+        13,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 450,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 2,
+      "qubits": [
+        6,
+        8,
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 451,
+      "gate_count": 5,
+      "cx": 3,
+      "u3": 2,
+      "critical_gate_count": 3,
+      "qubits": [
+        6,
+        8,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 2
+      }
+    },
+    {
+      "level": 452,
+      "gate_count": 6,
+      "cx": 3,
+      "u3": 3,
+      "critical_gate_count": 3,
+      "qubits": [
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 3
+      }
+    },
+    {
+      "level": 453,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 2,
+      "qubits": [
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 3
+      }
+    },
+    {
+      "level": 454,
+      "gate_count": 6,
+      "cx": 4,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 4,
+        "general": 2
+      }
+    },
+    {
+      "level": 455,
+      "gate_count": 6,
+      "cx": 2,
+      "u3": 4,
+      "critical_gate_count": 2,
+      "qubits": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 4
+      }
+    },
+    {
+      "level": 456,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        5,
+        8,
+        12,
+        13,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 457,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        10,
+        12,
+        13,
+        15
+      ],
+      "families": {
+        "cx": 1,
+        "general": 2
+      }
+    },
+    {
+      "level": 458,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        3,
+        7,
+        12,
+        13,
+        15
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 459,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        11,
+        12,
+        13,
+        15
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 460,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        5,
+        8,
+        12,
+        13,
+        15
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 461,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        7,
+        8,
+        12,
+        13,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 462,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 463,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        9,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 464,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        6,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 465,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 466,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 467,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 468,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        7,
+        14,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 469,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        7,
+        17
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 470,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        17
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 471,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 472,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        17
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 473,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        17
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 474,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        17
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 475,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        12,
+        17
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 476,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        17
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 477,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        17
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 478,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        17
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 479,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        12,
+        17
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 480,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        12,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 481,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        4
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 482,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        12
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 483,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        4
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 484,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        4
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 485,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        4
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 486,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        4
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 487,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 488,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        3
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 489,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 490,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        0,
+        3
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 491,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 492,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        1,
+        3
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 493,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        3
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 494,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        3,
+        4
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 495,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        4
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 496,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        2,
+        4
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 497,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        4
+      ],
+      "families": {
+        "general": 1
+      }
+    },
+    {
+      "level": 498,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        17
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 499,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        17
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 500,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        12,
+        17
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 501,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        17
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 502,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        4,
+        17
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 503,
+      "gate_count": 1,
+      "cx": 0,
+      "u3": 1,
+      "critical_gate_count": 1,
+      "qubits": [
+        17
+      ],
+      "families": {
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 504,
+      "gate_count": 1,
+      "cx": 1,
+      "u3": 0,
+      "critical_gate_count": 1,
+      "qubits": [
+        12,
+        17
+      ],
+      "families": {
+        "cx": 1
+      }
+    },
+    {
+      "level": 505,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        4,
+        12,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 506,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        4,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 507,
+      "gate_count": 2,
+      "cx": 1,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        4,
+        12,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 508,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        4,
+        7,
+        12,
+        17
+      ],
+      "families": {
+        "cx": 1,
+        "general": 2
+      }
+    },
+    {
+      "level": 509,
+      "gate_count": 4,
+      "cx": 3,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        2,
+        4,
+        5,
+        7,
+        12,
+        14,
+        17
+      ],
+      "families": {
+        "cx": 3,
+        "general": 1
+      }
+    },
+    {
+      "level": 510,
+      "gate_count": 5,
+      "cx": 2,
+      "u3": 3,
+      "critical_gate_count": 2,
+      "qubits": [
+        4,
+        7,
+        8,
+        12,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1,
+        "general": 2
+      }
+    },
+    {
+      "level": 511,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        3,
+        4,
+        13,
+        14,
+        16,
+        17
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 512,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        3,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "diagonal": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 513,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        1,
+        3,
+        6,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 514,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        3,
+        9,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 2
+      }
+    },
+    {
+      "level": 515,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        0,
+        3,
+        13,
+        14,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 1
+      }
+    },
+    {
+      "level": 516,
+      "gate_count": 4,
+      "cx": 1,
+      "u3": 3,
+      "critical_gate_count": 2,
+      "qubits": [
+        3,
+        13,
+        14,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 1,
+        "general": 3
+      }
+    },
+    {
+      "level": 517,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        1,
+        3,
+        8,
+        13,
+        15,
+        16
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 518,
+      "gate_count": 3,
+      "cx": 1,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        3,
+        11,
+        13,
+        15
+      ],
+      "families": {
+        "cx": 1,
+        "general": 2
+      }
+    },
+    {
+      "level": 519,
+      "gate_count": 3,
+      "cx": 2,
+      "u3": 1,
+      "critical_gate_count": 2,
+      "qubits": [
+        3,
+        4,
+        7,
+        13,
+        15
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1
+      }
+    },
+    {
+      "level": 520,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        3,
+        4,
+        10,
+        12,
+        13,
+        15
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 521,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        2,
+        4,
+        8,
+        12,
+        13,
+        15
+      ],
+      "families": {
+        "cx": 2,
+        "diagonal": 1,
+        "general": 1
+      }
+    },
+    {
+      "level": 522,
+      "gate_count": 4,
+      "cx": 2,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        4,
+        5,
+        11,
+        12,
+        13,
+        15
+      ],
+      "families": {
+        "cx": 2,
+        "general": 2
+      }
+    },
+    {
+      "level": 523,
+      "gate_count": 2,
+      "cx": 0,
+      "u3": 2,
+      "critical_gate_count": 2,
+      "qubits": [
+        12,
+        15
+      ],
+      "families": {
+        "general": 2
+      }
+    }
+  ],
+  "phase_regions": [
+    {
+      "start": 127,
+      "end": 257,
+      "depth": 131,
+      "cx": 196,
+      "gate_count": 363,
+      "qubits": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 473,
+      "end": 482,
+      "depth": 10,
+      "cx": 6,
+      "gate_count": 11,
+      "qubits": [
+        4,
+        12,
+        17
+      ]
+    },
+    {
+      "start": 293,
+      "end": 299,
+      "depth": 7,
+      "cx": 4,
+      "gate_count": 7,
+      "qubits": [
+        4,
+        5,
+        13,
+        14
+      ]
+    },
+    {
+      "start": 498,
+      "end": 504,
+      "depth": 7,
+      "cx": 4,
+      "gate_count": 7,
+      "qubits": [
+        4,
+        12,
+        17
+      ]
+    },
+    {
+      "start": 325,
+      "end": 329,
+      "depth": 5,
+      "cx": 13,
+      "gate_count": 13,
+      "qubits": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 319,
+      "end": 323,
+      "depth": 5,
+      "cx": 4,
+      "gate_count": 6,
+      "qubits": [
+        0,
+        3,
+        12,
+        14,
+        15
+      ]
+    },
+    {
+      "start": 273,
+      "end": 277,
+      "depth": 5,
+      "cx": 3,
+      "gate_count": 5,
+      "qubits": [
+        1,
+        12,
+        15
+      ]
+    },
+    {
+      "start": 281,
+      "end": 285,
+      "depth": 5,
+      "cx": 3,
+      "gate_count": 5,
+      "qubits": [
+        2,
+        14,
+        15
+      ]
+    },
+    {
+      "start": 287,
+      "end": 291,
+      "depth": 5,
+      "cx": 3,
+      "gate_count": 5,
+      "qubits": [
+        5,
+        13,
+        14
+      ]
+    },
+    {
+      "start": 303,
+      "end": 307,
+      "depth": 5,
+      "cx": 3,
+      "gate_count": 6,
+      "qubits": [
+        2,
+        4,
+        14,
+        15
+      ]
+    },
+    {
+      "start": 311,
+      "end": 315,
+      "depth": 5,
+      "cx": 3,
+      "gate_count": 5,
+      "qubits": [
+        1,
+        12,
+        15
+      ]
+    },
+    {
+      "start": 259,
+      "end": 262,
+      "depth": 4,
+      "cx": 10,
+      "gate_count": 11,
+      "qubits": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 468,
+      "end": 471,
+      "depth": 4,
+      "cx": 3,
+      "gate_count": 5,
+      "qubits": [
+        7,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 463,
+      "end": 465,
+      "depth": 3,
+      "cx": 3,
+      "gate_count": 6,
+      "qubits": [
+        6,
+        9,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "start": 484,
+      "end": 486,
+      "depth": 3,
+      "cx": 2,
+      "gate_count": 3,
+      "qubits": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "start": 268,
+      "end": 269,
+      "depth": 2,
+      "cx": 2,
+      "gate_count": 4,
+      "qubits": [
+        0,
+        4,
+        12,
+        13
+      ]
+    },
+    {
+      "start": 506,
+      "end": 507,
+      "depth": 2,
+      "cx": 2,
+      "gate_count": 4,
+      "qubits": [
+        4,
+        12,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 1,
+      "end": 1,
+      "depth": 1,
+      "cx": 6,
+      "gate_count": 6,
+      "qubits": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 3,
+      "end": 3,
+      "depth": 1,
+      "cx": 6,
+      "gate_count": 6,
+      "qubits": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 19,
+      "end": 19,
+      "depth": 1,
+      "cx": 4,
+      "gate_count": 4,
+      "qubits": [
+        6,
+        7,
+        9,
+        11,
+        12,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "start": 21,
+      "end": 21,
+      "depth": 1,
+      "cx": 4,
+      "gate_count": 4,
+      "qubits": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 37,
+      "end": 37,
+      "depth": 1,
+      "cx": 4,
+      "gate_count": 4,
+      "qubits": [
+        6,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 69,
+      "end": 69,
+      "depth": 1,
+      "cx": 4,
+      "gate_count": 4,
+      "qubits": [
+        6,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 117,
+      "end": 117,
+      "depth": 1,
+      "cx": 4,
+      "gate_count": 4,
+      "qubits": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 445,
+      "end": 445,
+      "depth": 1,
+      "cx": 4,
+      "gate_count": 4,
+      "qubits": [
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        16
+      ]
+    },
+    {
+      "start": 67,
+      "end": 67,
+      "depth": 1,
+      "cx": 3,
+      "gate_count": 3,
+      "qubits": [
+        6,
+        7,
+        9,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "start": 115,
+      "end": 115,
+      "depth": 1,
+      "cx": 3,
+      "gate_count": 3,
+      "qubits": [
+        6,
+        9,
+        11,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "start": 339,
+      "end": 339,
+      "depth": 1,
+      "cx": 3,
+      "gate_count": 3,
+      "qubits": [
+        9,
+        10,
+        11,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 73,
+      "end": 73,
+      "depth": 1,
+      "cx": 2,
+      "gate_count": 2,
+      "qubits": [
+        8,
+        10,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 121,
+      "end": 121,
+      "depth": 1,
+      "cx": 2,
+      "gate_count": 3,
+      "qubits": [
+        8,
+        10,
+        13,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 519,
+      "end": 519,
+      "depth": 1,
+      "cx": 2,
+      "gate_count": 3,
+      "qubits": [
+        3,
+        4,
+        7,
+        13,
+        15
+      ]
+    },
+    {
+      "start": 266,
+      "end": 266,
+      "depth": 1,
+      "cx": 1,
+      "gate_count": 2,
+      "qubits": [
+        5,
+        12,
+        13
+      ]
+    },
+    {
+      "start": 279,
+      "end": 279,
+      "depth": 1,
+      "cx": 1,
+      "gate_count": 1,
+      "qubits": [
+        14,
+        15
+      ]
+    },
+    {
+      "start": 301,
+      "end": 301,
+      "depth": 1,
+      "cx": 1,
+      "gate_count": 1,
+      "qubits": [
+        4,
+        14
+      ]
+    },
+    {
+      "start": 309,
+      "end": 309,
+      "depth": 1,
+      "cx": 1,
+      "gate_count": 1,
+      "qubits": [
+        14,
+        15
+      ]
+    },
+    {
+      "start": 317,
+      "end": 317,
+      "depth": 1,
+      "cx": 1,
+      "gate_count": 1,
+      "qubits": [
+        12,
+        15
+      ]
+    },
+    {
+      "start": 488,
+      "end": 488,
+      "depth": 1,
+      "cx": 1,
+      "gate_count": 1,
+      "qubits": [
+        1,
+        3
+      ]
+    },
+    {
+      "start": 490,
+      "end": 490,
+      "depth": 1,
+      "cx": 1,
+      "gate_count": 1,
+      "qubits": [
+        0,
+        3
+      ]
+    },
+    {
+      "start": 492,
+      "end": 492,
+      "depth": 1,
+      "cx": 1,
+      "gate_count": 1,
+      "qubits": [
+        1,
+        3
+      ]
+    },
+    {
+      "start": 494,
+      "end": 494,
+      "depth": 1,
+      "cx": 1,
+      "gate_count": 1,
+      "qubits": [
+        3,
+        4
+      ]
+    },
+    {
+      "start": 496,
+      "end": 496,
+      "depth": 1,
+      "cx": 1,
+      "gate_count": 1,
+      "qubits": [
+        2,
+        4
+      ]
+    }
+  ],
+  "top_windows": [
+    {
+      "start": 289,
+      "end": 328,
+      "depth": 40,
+      "gate_count": 49,
+      "cx": 30,
+      "critical_fraction": 0.8367346938775511,
+      "cx_density": 0.6122448979591837,
+      "priority": 20.4914618908788,
+      "qubits": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 463,
+      "end": 502,
+      "depth": 40,
+      "gate_count": 47,
+      "cx": 24,
+      "critical_fraction": 0.9787234042553191,
+      "cx_density": 0.5106382978723404,
+      "priority": 19.990946129470345,
+      "qubits": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 245,
+      "end": 284,
+      "depth": 40,
+      "gate_count": 84,
+      "cx": 50,
+      "critical_fraction": 0.47619047619047616,
+      "cx_density": 0.5952380952380952,
+      "priority": 11.337868480725623,
+      "qubits": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 123,
+      "end": 162,
+      "depth": 40,
+      "gate_count": 115,
+      "cx": 64,
+      "critical_fraction": 0.4260869565217391,
+      "cx_density": 0.5565217391304348,
+      "priority": 9.485066162570888,
+      "qubits": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 186,
+      "end": 225,
+      "depth": 40,
+      "gate_count": 106,
+      "cx": 56,
+      "critical_fraction": 0.37735849056603776,
+      "cx_density": 0.5283018867924528,
+      "priority": 7.97436810252759,
+      "qubits": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        13,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 419,
+      "end": 458,
+      "depth": 40,
+      "gate_count": 176,
+      "cx": 93,
+      "critical_fraction": 0.30113636363636365,
+      "cx_density": 0.5284090909090909,
+      "priority": 6.3649276859504145,
+      "qubits": [
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 16,
+      "end": 55,
+      "depth": 40,
+      "gate_count": 173,
+      "cx": 94,
+      "critical_fraction": 0.23121387283236994,
+      "cx_density": 0.5433526011560693,
+      "priority": 5.025226369073473,
+      "qubits": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 65,
+      "end": 104,
+      "depth": 40,
+      "gate_count": 179,
+      "cx": 97,
+      "critical_fraction": 0.22346368715083798,
+      "cx_density": 0.5418994413407822,
+      "priority": 4.843793889079617,
+      "qubits": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 353,
+      "end": 392,
+      "depth": 40,
+      "gate_count": 183,
+      "cx": 99,
+      "critical_fraction": 0.2185792349726776,
+      "cx_density": 0.5409836065573771,
+      "priority": 4.72991131416286,
+      "qubits": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "start": 507,
+      "end": 522,
+      "depth": 16,
+      "gate_count": 56,
+      "cx": 27,
+      "critical_fraction": 0.5714285714285714,
+      "cx_density": 0.48214285714285715,
+      "priority": 4.408163265306122,
+      "qubits": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    }
+  ]
+}

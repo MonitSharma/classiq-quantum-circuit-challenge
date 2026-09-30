@@ -1,0 +1,8 @@
+cA117 117 16000 1 0.02 SV - - 0 - PAIR=pair_cA.json
+cA116 116 16000 2 0.02 SV - - 0 - PAIR=pair_cA.json
+cB117 117 16000 1 0.02 SV - - 0 - PAIR=pair_cB.json
+cB116 116 16000 2 0.02 SV - - 0 - PAIR=pair_cB.json
+y3_117 117 16000 1 0.02 SV - - 0 - PAIR=pair_c_yF1s3.json
+y3_116 116 16000 2 0.02 SV - - 0 - PAIR=pair_c_yF1s3.json
+mB117 117 16000 1 0.02 SV - - 0 - PAIR=pair_mB.json
+mB116 116 16000 2 0.02 SV - - 0 - PAIR=pair_mB.json

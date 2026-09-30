@@ -1,0 +1,15 @@
+{
+  "qasm": "artifacts/post185_conditional_loader/commuting_resched2/oracle_d153_cx641.qasm",
+  "sha256": "11ad1a8a7fff902f4cd91e7b8a943edee963378ce002e654791a2d6ae5fd49d1",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 153,
+  "cx_count": 641,
+  "max_error": 1.785963591589615e-15,
+  "ancilla_error": 0.0,
+  "discarded_amplitude_bound": 1.5612117732692037e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 0.5440008640289307,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+  "challenge_width_eligible": true
+}

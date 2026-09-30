@@ -1,0 +1,12 @@
+{
+  "qasm": "submission/submission.qasm",
+  "sha256": "339c99e90a56a2aff4e7ce3f465879cd4a25acc8a1f82acb78a4534cd8108b1a",
+  "width": 18,
+  "depth": 111,
+  "cx_count": 557,
+  "random_dense_states": 5,
+  "max_error": 2.6356545478224107e-15,
+  "ancilla_error": 2.6356545478224107e-15,
+  "normalization_error": 8.43769498715119e-15,
+  "verification": "Dense random inputs supported on all 4096 coordinates; probabilistic numerical check"
+}

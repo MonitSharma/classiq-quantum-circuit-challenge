@@ -1,0 +1,17 @@
+{
+  "name": "conditional_loader_153",
+  "depth": 153,
+  "cx_count": 641,
+  "width": 18,
+  "qasm": "conditional_loader_153.qasm",
+  "qasm_sha256": "11ad1a8a7fff902f4cd91e7b8a943edee963378ce002e654791a2d6ae5fd49d1",
+  "basis_inputs_checked": 4096,
+  "challenge_width_eligible": true,
+  "submitted": false,
+  "source_package": "artifacts/post185_conditional_loader",
+  "method": "commuting-gate reschedule of conditional_loader_157 (fixed gate multiset, re-timed order)",
+  "reschedule_trials": 6000,
+  "reschedule_script": "src/post190_commuting_schedule.py",
+  "max_error": 1.785963591589615e-15,
+  "note": "Gate multiset identical to the 157 candidate; only the gate order was re-timed."
+}

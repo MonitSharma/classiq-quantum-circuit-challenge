@@ -1,0 +1,4 @@
+kb3_a 116 16000 2 0.02 SV - - 0 - PAIR=/work/work/src/post151_sa/pair_kb3.json
+kb11_a 116 16000 2 0.02 SV - - 0 - PAIR=/work/work/src/post151_sa/pair_kb11.json
+kb3y_a 116 16000 2 0.02 SV - - 0 - PAIR=/work/work/src/post151_sa/pair_kb3y.json
+kb3_b 116 16000 1 0.02 SV - - 0 - PAIR=/work/work/src/post151_sa/pair_kb3.json

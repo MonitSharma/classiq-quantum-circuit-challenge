@@ -1,0 +1,20 @@
+{
+  "description": "Loader/kernel interface of the depth-114 circuit. For each of the eight code wires: the physical qubit, the loader side, the ready time (layer of the loader's last gate on that wire) and the value-fixed time (layer after which the wire already holds its final code bit). The unloader mirrors the loader, so a code wire with ready time r is free for the phase kernel in layers r+1 .. T-r.",
+  "T": 114,
+  "circuit": "artifacts/114/conditional_loader_114_cx564.qasm",
+  "loaders": {
+    "x": "artifacts/114/recipes/cx564/x_loader_xg_r36_32_1_T1xL0_T2xL0px.pkl",
+    "y": "artifacts/114/recipes/cx564/y_loader_v34_1_yw005_3.pkl"
+  },
+  "side_qubits": {"x": [0, 1, 2, 3, 4, 5, 15, 16, 17], "y": [6, 7, 8, 9, 10, 11, 12, 13, 14]},
+  "code_wires": [
+    {"qubit": 1,  "side": "x", "ready": 35, "value_fixed": 28},
+    {"qubit": 17, "side": "x", "ready": 42, "value_fixed": 42},
+    {"qubit": 16, "side": "x", "ready": 43, "value_fixed": 40},
+    {"qubit": 0,  "side": "x", "ready": 44, "value_fixed": 42},
+    {"qubit": 9,  "side": "y", "ready": 39, "value_fixed": 39},
+    {"qubit": 11, "side": "y", "ready": 39, "value_fixed": 37},
+    {"qubit": 7,  "side": "y", "ready": 41, "value_fixed": 41},
+    {"qubit": 12, "side": "y", "ready": 45, "value_fixed": 42}
+  ]
+}

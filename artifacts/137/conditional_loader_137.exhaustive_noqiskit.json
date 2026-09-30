@@ -1,0 +1,15 @@
+{
+  "qasm": "/work/ev/c137.qasm",
+  "sha256": "4bff167dcb7635f4c8416b36aeb737d1ef49b801173b38de6f52c22579755784",
+  "basis_inputs_checked": 4096,
+  "width": 18,
+  "depth": 137,
+  "cx_count": 624,
+  "max_error": 3.7940125293154505e-14,
+  "ancilla_error": 3.7940125293154505e-14,
+  "discarded_amplitude_bound": 5.859251699926748e-14,
+  "peak_sparse_support": 64,
+  "elapsed_seconds": 0.3318479061126709,
+  "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+  "challenge_width_eligible": true
+}

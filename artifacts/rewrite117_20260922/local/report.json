@@ -1,0 +1,141 @@
+{
+  "trials": 3026327,
+  "replacements": 73,
+  "best": [
+    117,
+    916,
+    2877
+  ],
+  "history": [
+    {
+      "trial": 5095,
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "wires": [
+        0,
+        2,
+        15
+      ],
+      "selected": [
+        697,
+        713,
+        714,
+        731
+      ]
+    }
+  ],
+  "retained": [
+    {
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "path": "artifacts/rewrite117_20260922/local/candidate_5095_d117.qasm",
+      "found116": false
+    },
+    {
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "path": "artifacts/rewrite117_20260922/local/candidate_6978_d117.qasm",
+      "found116": false
+    },
+    {
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "path": "artifacts/rewrite117_20260922/local/candidate_8959_d117.qasm",
+      "found116": false
+    },
+    {
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "path": "artifacts/rewrite117_20260922/local/candidate_9172_d117.qasm",
+      "found116": false
+    },
+    {
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "path": "artifacts/rewrite117_20260922/local/candidate_9864_d117.qasm",
+      "found116": false
+    },
+    {
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "path": "artifacts/rewrite117_20260922/local/candidate_11729_d117.qasm",
+      "found116": false
+    },
+    {
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "path": "artifacts/rewrite117_20260922/local/candidate_12231_d117.qasm",
+      "found116": false
+    },
+    {
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "path": "artifacts/rewrite117_20260922/local/candidate_12821_d117.qasm",
+      "found116": false
+    },
+    {
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "path": "artifacts/rewrite117_20260922/local/candidate_12938_d117.qasm",
+      "found116": false
+    },
+    {
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "path": "artifacts/rewrite117_20260922/local/candidate_13453_d117.qasm",
+      "found116": false
+    },
+    {
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "path": "artifacts/rewrite117_20260922/local/candidate_17469_d117.qasm",
+      "found116": false
+    },
+    {
+      "score": [
+        117,
+        916,
+        2877
+      ],
+      "path": "artifacts/rewrite117_20260922/local/candidate_17867_d117.qasm",
+      "found116": false
+    }
+  ],
+  "seconds": 155.5190366669558
+}

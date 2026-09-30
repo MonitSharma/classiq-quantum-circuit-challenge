@@ -1,0 +1,15 @@
+{
+  "name": "conditional_loader_163",
+  "depth": 163,
+  "cx_count": 643,
+  "width": 18,
+  "qasm": "conditional_loader_163.qasm",
+  "qmod": "conditional_loader_163.qmod",
+  "qasm_sha256": "12c92c1935a3a628a2192a725f2a2941b844a78bfeeb205c191e5679d7cb5a19",
+  "qmod_sha256": "090d2500b1290f1481d70c871a59ba3a28ea3f7b4f15364af45c2e39d733732a",
+  "basis_inputs_checked": 4096,
+  "challenge_width_eligible": true,
+  "submitted": false,
+  "source_package": "artifacts/post185_conditional_loader",
+  "note": "Earlier conditional-loader checkpoint; superseded by the 157 and 153 candidates."
+}

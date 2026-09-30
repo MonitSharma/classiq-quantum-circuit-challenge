@@ -1,0 +1,56 @@
+[
+  {
+    "name": "co7_t117_w16000_s2",
+    "rc": 0,
+    "seconds": 82.52513008308597,
+    "evaluation": {
+      "asm_depth": 117,
+      "asm_cx": 586,
+      "simp_cx": 576,
+      "simp_depth": 117,
+      "T116": false
+    },
+    "verification": {
+      "qasm": "artifacts/phase_network117_20260922/block_network/co7_t117_w16000_s2_asm.qasm",
+      "sha256": "8deb22c238b7914d720c0b6036bec889c924489f5ca7e504fd807a5890a60f3b",
+      "basis_inputs_checked": 4096,
+      "width": 18,
+      "depth": 117,
+      "cx_count": 586,
+      "max_error": 3.773333803131236e-14,
+      "ancilla_error": 3.773333803131236e-14,
+      "discarded_amplitude_bound": 7.625629099996237e-14,
+      "peak_sparse_support": 64,
+      "elapsed_seconds": 0.3676621913909912,
+      "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+      "challenge_width_eligible": true
+    }
+  },
+  {
+    "name": "co3_t117_w16000_s2",
+    "rc": 0,
+    "seconds": 84.32227966585197,
+    "evaluation": {
+      "asm_depth": 117,
+      "asm_cx": 583,
+      "simp_cx": 573,
+      "simp_depth": 117,
+      "T116": false
+    },
+    "verification": {
+      "qasm": "artifacts/phase_network117_20260922/block_network/co3_t117_w16000_s2_asm.qasm",
+      "sha256": "7efd5968333c707bbba62b469acf7b36b338c07cb6f7217fcb9046be02408d51",
+      "basis_inputs_checked": 4096,
+      "width": 18,
+      "depth": 117,
+      "cx_count": 583,
+      "max_error": 3.774965438802977e-14,
+      "ancilla_error": 3.774965438802977e-14,
+      "discarded_amplitude_bound": 7.158274470349815e-14,
+      "peak_sparse_support": 64,
+      "elapsed_seconds": 0.3633251190185547,
+      "verification": "Exhaustive numerical verification of all 4096 clean-ancilla basis inputs, with one shared global phase; by linearity covers arbitrary superpositions",
+      "challenge_width_eligible": true
+    }
+  }
+]

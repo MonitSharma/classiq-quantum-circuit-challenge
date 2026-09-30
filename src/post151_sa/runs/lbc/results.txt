@@ -1,0 +1,28 @@
+ya1 y rc=0 ok=True code={2: 35, 8: 39, 1: 41, 4: 46} fix=0 depth=46
+ya2 y rc=2
+xa1 x rc=0 ok=True code={2: 35, 12: 43, 1: 44, 4: 45} fix=0 depth=45
+xa2 x rc=0 ok=True code={2: 34, 12: 42, 1: 45, 4: 46} fix=0 depth=46
+b0 y rc=2
+b1 x rc=0 ok=True code={2: 35, 12: 44, 4: 45, 1: 45} fix=0 depth=45
+b2 y rc=124
+b3 x rc=0 ok=True code={2: 35, 12: 43, 1: 43, 4: 45} fix=0 depth=45
+b4 y rc=2
+b5 x rc=0 ok=True code={2: 36, 12: 42, 1: 44, 4: 46} fix=0 depth=46
+b6 y rc=2
+b7 x rc=2
+b8 y rc=124
+b9 x rc=124
+b10 y rc=0 ok=True code={2: 35, 8: 38, 1: 42, 4: 47} fix=0 depth=47
+b11 x rc=0 ok=True code={2: 35, 1: 43, 12: 43, 4: 45} fix=0 depth=45
+c0 y rc=2
+c1 x rc=0 ok=True code={2: 35, 12: 42, 1: 44, 4: 46} fix=0 depth=46
+c2 y rc=2
+c3 x rc=2
+c4 y rc=0 ok=True code={8: 39, 10: 39, 1: 43, 4: 46} fix=0 depth=46
+c5 x rc=0 ok=True code={2: 35, 12: 43, 4: 45, 1: 45} fix=0 depth=45
+c6 y rc=2
+c7 x rc=0 ok=True code={3: 39, 4: 44, 1: 45, 12: 45} fix=0 depth=45
+c8 y rc=0 ok=True code={2: 34, 8: 39, 1: 43, 4: 46} fix=0 depth=46
+c9 x rc=2
+c10 y rc=2
+c11 x rc=2
